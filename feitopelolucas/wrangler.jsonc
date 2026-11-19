@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "feitopelolucas",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  },
+  // Descomente quando o domínio estiver ativo na Cloudflare:
+  // "routes": [
+  //   { "pattern": "feitopelolucas.com.br", "custom_domain": true },
+  //   { "pattern": "www.feitopelolucas.com.br", "custom_domain": true }
+  // ]
+}
