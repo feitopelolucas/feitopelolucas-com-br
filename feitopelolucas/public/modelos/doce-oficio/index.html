@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doce Ofício · Bolos por encomenda em Campinas</title>
+<meta name="description" content="Bolos de aniversário e de festa feitos por encomenda. Monte o seu bolo como numa receita, veja o valor e escolha a data de retirada.">
+<meta name="theme-color" content="#3b2a22">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Caveat:wght@500;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--cacau:#3b2a22;--morango:#c2405a;--baunilha:#fbf3e6;--folha:#fffdf7;--linha:#dfe7f2;--margem:#f0b7b7;--texto:#2f231d;--suave:#7a675d;--fio:#eadcc8}
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--baunilha);color:var(--texto);font:16.5px/1.6 "Work Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{margin:0;font-family:Lora,Georgia,serif;font-weight:600;line-height:1.1}
+  .mao{font-family:Caveat,cursive}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  button,input,select{font:inherit;color:inherit}
+  :focus-visible{outline:3px solid var(--morango);outline-offset:2px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+  .demo{background:var(--cacau);color:#eadccb;font-size:.8rem}
+  .demo .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:7px;padding-bottom:7px}
+  .demo a{color:#f6b9c4;font-weight:600;text-decoration:none}
+
+  .topo .wrap{display:flex;justify-content:space-between;align-items:center;height:76px}
+  .logo{font:700 2.1rem/1 Caveat;color:var(--cacau);text-decoration:none}
+  .logo span{color:var(--morango)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:8px;background:var(--cacau);color:#fff;font-weight:600;text-decoration:none;border:0;cursor:pointer}
+  .btn:hover{background:#2a1d17}
+  .btn:disabled{background:#b9a99c;cursor:not-allowed}
+
+  .abre .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center;padding-top:30px;padding-bottom:70px}
+  .abre .mao{font-size:1.7rem;color:var(--morango);margin:0 0 6px}
+  .abre h1{font-size:clamp(2.6rem,5.6vw,4.2rem);margin-bottom:18px}
+  .abre p{color:var(--suave);max-width:42ch;margin:0 0 28px;font-size:1.08rem}
+  .abre .fotos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .abre .fotos figure{margin:0}
+  .abre .fotos figure div{aspect-ratio:3/4;overflow:hidden;border-radius:6px}
+  .abre .fotos img{width:100%;height:100%;object-fit:cover}
+  .abre .fotos figcaption{font:600 1.35rem Caveat;margin-top:4px;color:var(--suave)}
+  @media (max-width:860px){.abre .wrap{grid-template-columns:1fr}}
+
+  section{padding:76px 0}
+  .cab h2{font-size:clamp(2rem,4vw,2.8rem)}
+  .cab p{color:var(--suave);margin:8px 0 28px;max-width:58ch}
+
+  /* Caderno */
+  .caderno-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:start}
+  @media (max-width:900px){.caderno-grid{grid-template-columns:1fr}}
+  .caderno{background:var(--folha);border-radius:4px;padding:30px 28px 30px 74px;position:relative;box-shadow:0 2px 0 #eadfcd,0 4px 0 #f6eee0,0 22px 40px -28px rgba(59,42,34,.55);
+    background-image:linear-gradient(90deg,transparent 54px,var(--margem) 54px,var(--margem) 56px,transparent 56px),repeating-linear-gradient(180deg,transparent 0 33px,var(--linha) 33px 34px)}
+  .passo{margin-bottom:26px}
+  .passo h3{font:700 1.8rem/1 Caveat;color:var(--morango);margin-bottom:10px;position:relative}
+  .passo h3 b{position:absolute;left:-46px;top:2px;width:30px;height:30px;border-radius:50%;border:2px solid var(--morango);display:grid;place-items:center;font-size:1.2rem}
+  .opcoes{display:flex;flex-wrap:wrap;gap:8px}
+  .op{position:relative}
+  .op input{position:absolute;opacity:0;pointer-events:none}
+  .op span{display:inline-flex;flex-direction:column;padding:10px 14px;border:1.5px solid var(--fio);border-radius:10px;background:#fff;cursor:pointer;min-width:120px;line-height:1.3}
+  .op small{color:var(--suave);font-size:.8rem}
+  .op input:checked+span{border-color:var(--cacau);background:var(--cacau);color:#fff}
+  .op input:checked+span small{color:#e7d6c8}
+  .op input:focus-visible+span{outline:3px solid var(--morango)}
+  .op input:disabled+span{opacity:.4;cursor:not-allowed}
+  .data input{min-height:48px;border:1.5px solid var(--fio);border-radius:10px;padding:0 12px;background:#fff}
+  .aviso-data{display:block;margin-top:6px;font-size:.88rem;color:var(--suave)}
+  .aviso-data.erro{color:var(--morango);font-weight:600}
+
+  .conta{position:sticky;top:16px;background:var(--cacau);color:#f4e7da;border-radius:6px;padding:26px}
+  .conta h3{color:#fff;font-size:1.5rem;margin-bottom:14px}
+  .conta .lin{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px dashed rgba(255,255,255,.18);font-size:.95rem}
+  .conta .tot{font-size:1.4rem;font-weight:600;color:#fff;border:0;padding-top:12px}
+  .conta .btn{width:100%;margin-top:16px;background:var(--morango)}
+  .conta .btn:hover{background:#a8344b}
+  .conta .btn:disabled{background:#6e5850;color:#cdb9a8;cursor:not-allowed}
+  .conta p{font-size:.85rem;color:#cdb9a8;margin:12px 0 0}
+
+  /* Vitrine */
+  .vitrine{background:#fff}
+  .bolos{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media (max-width:860px){.bolos{grid-template-columns:1fr 1fr}}
+  .bolos-car{--col:calc((100% - 42px)/4);--seta-top:34%}
+  @media (max-width:960px){.bolos-car{--col:calc((100% - 14px)/2)}}
+  .bolo figure{margin:0 0 10px;aspect-ratio:4/5;overflow:hidden;border-radius:6px}
+  .bolo img{width:100%;height:100%;object-fit:cover}
+  .bolo h3{font-size:1.1rem}
+  .bolo p{margin:2px 0 0;color:var(--suave);font-size:.9rem}
+
+  .sobre .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center}
+  .sobre figure{margin:0;aspect-ratio:1;overflow:hidden;border-radius:6px}
+  .sobre figure img{width:100%;height:100%;object-fit:cover}
+  .sobre p{color:#5d4a40}
+  .sobre .ass{font:700 2rem Caveat;color:var(--morango)}
+  @media (max-width:860px){.sobre .wrap{grid-template-columns:1fr}}
+
+  .regras{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media (max-width:760px){.regras{grid-template-columns:1fr}}
+  .regras div{background:var(--folha);border:1px solid var(--fio);border-radius:6px;padding:20px}
+  .regras h3{font-size:1.15rem;margin-bottom:6px}
+  .regras p{margin:0;color:var(--suave);font-size:.95rem}
+
+  footer{background:var(--cacau);color:#cdb9a8;padding:30px 0;font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+  /* Carrossel (deslize, setas e pontos) */
+  .carrossel{position:relative}
+  .carrossel .trilho{display:grid;grid-auto-flow:column;grid-auto-columns:var(--col,calc((100% - 28px)/3));gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+  .carrossel .trilho::-webkit-scrollbar{display:none}
+  .carrossel .trilho>*{scroll-snap-align:start;margin:0}
+  .carrossel .seta{position:absolute;top:var(--seta-top,38%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.94);color:#222;cursor:pointer;font-size:1.3rem;box-shadow:0 6px 16px rgba(0,0,0,.18);z-index:2}
+  .carrossel .seta:disabled{opacity:0;pointer-events:none}
+  .carrossel .ant{left:-12px}.carrossel .prox{right:-12px}
+  .carrossel .pontos{display:flex;justify-content:center;gap:6px;margin-top:16px}
+  .carrossel .pontos button{width:8px;height:8px;border-radius:99px;border:0;padding:0;background:rgba(0,0,0,.18);cursor:pointer;transition:width .2s}
+  .carrossel .pontos button[aria-current="true"]{width:24px;background:currentColor}
+  @media (max-width:760px){.carrossel .trilho{grid-auto-columns:var(--col-m,82%)}.carrossel .ant{left:4px}.carrossel .prox{right:4px}}
+</style>
+</head>
+<body>
+<div class="demo"><div class="wrap"><span>Modelo de demonstração. Confeitaria, preços e endereço são fictícios.</span><a href="/#site-doce-oficio">Quero um site assim →</a></div></div>
+
+<header class="topo"><div class="wrap"><a class="logo" href="#">Doce <span>Ofício</span></a><a class="btn" href="#montar">Encomendar</a></div></header>
+
+<main>
+  <div class="abre">
+    <div class="wrap">
+      <div>
+        <p class="mao">receita da casa nº 14</p>
+        <h1>Bolo de festa, feito para a sua festa.</h1>
+        <p>Massa, recheio e cobertura escolhidos por você, como quem escreve uma receita. Encomendas com pelo menos 3 dias de antecedência, retirada no Jardim Guanabara.</p>
+        <a class="btn" href="#montar">Montar meu bolo</a>
+      </div>
+      <div class="fotos">
+        <figure class="f1"><div><img src="/img/modelos/1606890737304-57a1ca8a5b62-g.jpg" alt="Bolo de chocolate de três camadas com cerejas" fetchpriority="high"></div><figcaption>floresta negra, 25 fatias</figcaption></figure>
+        <figure class="f2"><div><img src="/img/modelos/1604413191066-4dd20bedf486-g.jpg" alt="Bolo rosa decorado com flores de chantilly"></div><figcaption>aniversário da Lia</figcaption></figure>
+      </div>
+    </div>
+  </div>
+
+  <section id="montar">
+    <div class="wrap">
+      <div class="cab"><h2>Monte o seu bolo</h2><p>Siga os passos do caderno. O valor ao lado muda conforme você escolhe, e a encomenda vai escrita para o WhatsApp.</p></div>
+      <div class="caderno-grid">
+        <form class="caderno" id="form" onsubmit="return false">
+          <div class="passo"><h3><b>1</b>Tamanho</h3><div class="opcoes" id="o-tamanho"></div></div>
+          <div class="passo"><h3><b>2</b>Massa</h3><div class="opcoes" id="o-massa"></div></div>
+          <div class="passo"><h3><b>3</b>Recheios <small class="mao" style="font-size:1.2rem;color:var(--suave)">até dois</small></h3><div class="opcoes" id="o-recheio"></div></div>
+          <div class="passo"><h3><b>4</b>Cobertura</h3><div class="opcoes" id="o-cobertura"></div></div>
+          <div class="passo data"><h3><b>5</b>Data de retirada</h3><input type="date" id="data" aria-describedby="aviso-data"><span class="aviso-data" id="aviso-data"></span></div>
+        </form>
+        <aside class="conta" aria-live="polite">
+          <h3>Sua encomenda</h3>
+          <div id="conta"></div>
+          <button class="btn" id="enviar" disabled>Enviar encomenda</button>
+          <p>Reserva da data com 50% via Pix. O restante na retirada.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="vitrine">
+    <div class="wrap">
+      <div class="cab"><h2>Saíram do forno este mês</h2><p>Fotos dos bolos entregues, com o tamanho e o recheio de cada um.</p></div>
+      <div class="carrossel bolos-car" data-carrossel style="color:var(--morango)"><div class="trilho" tabindex="0" aria-label="Bolos entregues"><div class="bolo"><figure><img src="/img/modelos/1779885580435-949062b1abb3-g.jpg" alt="Bolo red velvet fatiado" loading="lazy"></figure><h3>Red velvet</h3><p>25 fatias · cream cheese</p></div><div class="bolo"><figure><img src="/img/modelos/1621303837174-89787a7d4729-g.jpg" alt="Bolo rosa com calda escorrida" loading="lazy"></figure><h3>Morango com drip</h3><p>40 fatias · ninho com morango</p></div><div class="bolo"><figure><img src="/img/modelos/1574936423169-82494c75f01f-g.jpg" alt="Bolo azul decorado" loading="lazy"></figure><h3>Azul de chantininho</h3><p>25 fatias · brigadeiro branco</p></div><div class="bolo"><figure><img src="/img/modelos/1540337706094-da10342c93d8-g.jpg" alt="Bolo de chocolate com ganache" loading="lazy"></figure><h3>Chocolate belga</h3><p>15 fatias · ganache meio amargo</p></div><div class="bolo"><figure><img src="/img/modelos/1615735487485-e52b9af610c1-g.jpg" alt="Fatia de bolo de morango" loading="lazy"></figure><h3>Morango fresco</h3><p>fatia do bolo de 25 · ninho e morango</p></div><div class="bolo"><figure><img src="/img/modelos/1517427294546-5aa121f68e8a-g.jpg" alt="Fatia de bolo de chocolate" loading="lazy"></figure><h3>Brigadeiro de panela</h3><p>fatia do bolo de 40 · chocolate</p></div><div class="bolo"><figure><img src="/img/modelos/1670843840225-2ffcaf483c01-g.jpg" alt="Bolo sendo cortado" loading="lazy"></figure><h3>Naked de frutas</h3><p>15 fatias · doce de leite</p></div></div><button class="seta ant" aria-label="Anterior">‹</button><button class="seta prox" aria-label="Próximo">›</button><div class="pontos"></div></div>
+    </div>
+  </section>
+
+  <section class="sobre">
+    <div class="wrap">
+      <figure><img src="/img/modelos/1786114352364-b354a97bfbce-g.jpg" alt="Confeiteira cobrindo um bolo" loading="lazy"></figure>
+      <div>
+        <h2 style="font-size:2.4rem;margin-bottom:14px">Uma cozinha, uma confeiteira.</h2>
+        <p>Faço no máximo seis bolos por semana. Por isso algumas datas fecham rápido, principalmente em dezembro e maio.</p>
+        <p>Não uso massa pronta nem recheio de balde. O brigadeiro é de panela e o chantininho é batido no dia.</p>
+        <p class="ass">Marina Albuquerque</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap regras">
+      <div><h3>Antecedência</h3><p>Mínimo de 3 dias. Bolos com mais de 40 fatias pedem uma semana.</p></div>
+      <div><h3>Retirada</h3><p>Rua Rosa de Gusmão, 210, Guanabara. Entregamos em Campinas por R$ 25.</p></div>
+      <div><h3>Transporte</h3><p>Leve o bolo no chão do carro, nunca no banco. Chantininho não gosta de sol.</p></div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>Doce Ofício · Campinas, SP</span><span>@doceoficio.bolos</span></div></footer>
+
+<script>
+  var WHATSAPP = "5519996515563";
+  var ANTECEDENCIA_DIAS = 3;
+  var DATAS_LOTADAS = ["2026-11-28", "2026-11-29", "2026-12-05", "2026-12-06", "2026-12-24"]; // AAAA-MM-DD
+  var TAMANHOS = [["15 fatias", "aro 15", 150], ["25 fatias", "aro 20", 220], ["40 fatias", "aro 25", 320], ["60 fatias", "dois andares", 480]];
+  var MASSAS = [["Baunilha", "", 0], ["Chocolate", "", 0], ["Red velvet", "+ R$ 30", 30], ["Nozes", "+ R$ 40", 40]];
+  var RECHEIOS = [["Brigadeiro", "", 0], ["Ninho", "", 0], ["Doce de leite", "", 0], ["Morango fresco", "+ R$ 25", 25], ["Ganache", "", 0], ["Maracujá", "", 0]];
+  var COBERTURAS = [["Chantininho", "", 0], ["Ganache", "+ R$ 20", 20], ["Naked", "sem cobertura lateral", -10], ["Pasta americana", "+ R$ 80", 80]];
+
+  function $(id) { return document.getElementById(id); }
+  function reais(v) { return "R$ " + v.toFixed(2).replace(".", ","); }
+  function opcoes(el, nome, lista, tipo) {
+    $(el).innerHTML = lista.map(function (o, i) {
+      return '<label class="op"><input type="' + tipo + '" name="' + nome + '" value="' + i + '"' + (tipo === "radio" && i === 1 ? " checked" : "") + "><span>" + o[0] + (o[1] ? "<small>" + o[1] + "</small>" : "") + "</span></label>";
+    }).join("");
+  }
+  opcoes("o-tamanho", "tamanho", TAMANHOS, "radio");
+  opcoes("o-massa", "massa", MASSAS, "radio");
+  opcoes("o-recheio", "recheio", RECHEIOS, "checkbox");
+  opcoes("o-cobertura", "cobertura", COBERTURAS, "radio");
+  document.querySelector('[name=massa][value="0"]').checked = true;
+  document.querySelector('[name=cobertura][value="0"]').checked = true;
+
+  function iso(d) { return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
+  var min = new Date(); min.setDate(min.getDate() + ANTECEDENCIA_DIAS);
+  $("data").min = iso(min);
+  var AVISO_PADRAO = "A partir de " + min.toLocaleDateString("pt-BR") + ". Datas lotadas: " + DATAS_LOTADAS.map(function (d) { return d.slice(8) + "/" + d.slice(5, 7); }).join(", ") + ".";
+  $("aviso-data").textContent = AVISO_PADRAO;
+
+  function sel(nome) { var c = document.querySelector("[name=" + nome + "]:checked"); return c ? +c.value : null; }
+  function recheios() { return [].slice.call(document.querySelectorAll("[name=recheio]:checked")).map(function (c) { return RECHEIOS[+c.value]; }); }
+  function dataOk() {
+    var v = $("data").value;
+    if (!v) return null;
+    if (v < $("data").min) return "Escolha uma data a partir de " + min.toLocaleDateString("pt-BR") + ".";
+    if (DATAS_LOTADAS.indexOf(v) >= 0) return "Esta data já está lotada. Escolha outra.";
+    if (new Date(v + "T12:00").getDay() === 1) return "Às segundas a cozinha fecha. Escolha outro dia.";
+    return "";
+  }
+  function atualizar() {
+    var r = recheios();
+    document.querySelectorAll("[name=recheio]").forEach(function (c) { c.disabled = !c.checked && r.length >= 2; });
+    var t = TAMANHOS[sel("tamanho")], m = MASSAS[sel("massa")], c = COBERTURAS[sel("cobertura")];
+    var extra = m[2] + c[2] + r.reduce(function (s, x) { return s + x[2]; }, 0);
+    var total = t[2] + extra;
+    var erroData = dataOk();
+    $("aviso-data").classList.toggle("erro", !!erroData);
+    $("aviso-data").textContent = erroData || AVISO_PADRAO;
+    $("conta").innerHTML =
+      '<div class="lin"><span>' + t[0] + "</span><span>" + reais(t[2]) + "</span></div>" +
+      '<div class="lin"><span>Massa ' + m[0].toLowerCase() + "</span><span>" + (m[2] ? "+ " + reais(m[2]) : "incluso") + "</span></div>" +
+      '<div class="lin"><span>' + (r.length ? r.map(function (x) { return x[0]; }).join(" e ") : "Escolha o recheio") + "</span><span>" + (r.some(function (x) { return x[2]; }) ? "+ " + reais(r.reduce(function (s, x) { return s + x[2]; }, 0)) : "") + "</span></div>" +
+      '<div class="lin"><span>Cobertura ' + c[0].toLowerCase() + "</span><span>" + (c[2] ? (c[2] > 0 ? "+ " : "− ") + reais(Math.abs(c[2])) : "incluso") + "</span></div>" +
+      '<div class="lin"><span>Retirada</span><span>' + ($("data").value && !erroData ? new Date($("data").value + "T12:00").toLocaleDateString("pt-BR", { weekday: "short", day: "2-digit", month: "2-digit" }) : "escolha a data") + "</span></div>" +
+      '<div class="lin tot"><span>Total</span><span>' + reais(total) + "</span></div>";
+    $("enviar").disabled = !r.length || erroData !== "";
+    return { t: t, m: m, c: c, r: r, total: total };
+  }
+  $("form").addEventListener("change", atualizar);
+  $("data").addEventListener("input", atualizar);
+  $("enviar").addEventListener("click", function () {
+    var e = atualizar();
+    var msg = ["Olá! Quero encomendar um bolo na Doce Ofício.", "",
+      "Tamanho: " + e.t[0] + " (" + e.t[1] + ")", "Massa: " + e.m[0], "Recheio: " + e.r.map(function (x) { return x[0]; }).join(" e "),
+      "Cobertura: " + e.c[0], "Retirada: " + new Date($("data").value + "T12:00").toLocaleDateString("pt-BR"), "", "Valor estimado: " + reais(e.total)];
+    window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg.join("\n")), "_blank", "noopener");
+  });
+  atualizar();
+
+  /* Carrossel: deslize, setas e pontos */
+  document.querySelectorAll("[data-carrossel]").forEach(function (c) {
+    var t = c.querySelector(".trilho"), s = t.children, p = c.querySelector(".pontos"), a = c.querySelector(".ant"), n = c.querySelector(".prox");
+    function passo() { return s.length > 1 ? s[1].offsetLeft - s[0].offsetLeft : t.clientWidth; }
+    function visiveis() { return Math.max(1, Math.round(t.clientWidth / passo())); }
+    function atual() { return Math.round(t.scrollLeft / passo()); }
+    function total() { return Math.max(1, s.length - visiveis() + 1); }
+    function ir(i) { i = Math.max(0, Math.min(total() - 1, i)); t.scrollTo({ left: i * passo(), behavior: "smooth" }); }
+    function marcar() {
+      var at = atual(), tt = total();
+      if (p) {
+        if (p.children.length !== tt) p.innerHTML = Array.from({ length: tt }, function (_, i) { return '<button aria-label="Ir para ' + (i + 1) + '"></button>'; }).join("");
+        [].forEach.call(p.children, function (b, i) { b.setAttribute("aria-current", i === at); });
+      }
+      if (a) a.disabled = at <= 0;
+      if (n) n.disabled = at >= tt - 1;
+    }
+    if (a) a.onclick = function () { ir(atual() - 1); };
+    if (n) n.onclick = function () { ir(atual() + 1); };
+    if (p) p.addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) ir([].indexOf.call(p.children, b)); });
+    t.addEventListener("scroll", function () { clearTimeout(t._m); t._m = setTimeout(marcar, 80); });
+    t.addEventListener("keydown", function (e) { if (e.key === "ArrowRight") ir(atual() + 1); if (e.key === "ArrowLeft") ir(atual() - 1); });
+    window.addEventListener("resize", marcar);
+    marcar();
+  });
+</script>
+</body>
+</html>

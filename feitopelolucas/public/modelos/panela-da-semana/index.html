@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panela da Semana · Marmitas caseiras congeladas</title>
+<meta name="description" content="Comida caseira congelada em kits de 5, 10 ou 20 marmitas. Monte o kit com os sabores da semana e receba no domingo.">
+<meta name="theme-color" content="#2d3a2e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&display=swap" rel="stylesheet">
+<style>
+  :root{--lousa:#2d3a2e;--lousa-2:#24302a;--giz:#f1f0e6;--giz-am:#f2d27a;--tomate:#d8532f;--creme:#f7f2e8;--papel:#fff;--texto:#232a24;--suave:#66706a;--fio:#e3dccd}
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--creme);color:var(--texto);font:16.5px/1.55 "Nunito Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{margin:0;line-height:1.05}
+  .giz{font-family:"Cabin Sketch",cursive;font-weight:400}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  button,select{font:inherit;color:inherit}
+  :focus-visible{outline:3px solid var(--tomate);outline-offset:2px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+  .demo{background:#141a15;color:#cfd6cf;font-size:.8rem}
+  .demo .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:7px;padding-bottom:7px}
+  .demo a{color:var(--giz-am);font-weight:700;text-decoration:none}
+
+  .topo .wrap{display:flex;justify-content:space-between;align-items:center;height:70px}
+  .logo{font:700 1.7rem "Cabin Sketch";text-decoration:none;color:var(--lousa)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:10px;background:var(--tomate);color:#fff;font-weight:800;text-decoration:none;border:0;cursor:pointer}
+  .btn:hover{background:#bd4424}
+  .btn:disabled{background:#c2b8a8;cursor:not-allowed}
+
+  .abre .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding-top:24px;padding-bottom:64px}
+  .abre h1{font-size:clamp(2.6rem,5.4vw,4.2rem);font-weight:800;letter-spacing:-.02em;margin-bottom:16px}
+  .abre h1 span{color:var(--tomate)}
+  .abre p{color:var(--suave);max-width:42ch;margin:0 0 26px;font-size:1.08rem}
+  .prazo{display:inline-flex;gap:10px;align-items:center;margin-top:22px;padding:10px 14px;border-radius:10px;background:#fff;border:1px solid var(--fio);font-weight:600}
+  .prazo b{color:var(--tomate)}
+  .abre figure{margin:0;aspect-ratio:5/4;border-radius:14px;overflow:hidden}
+  .abre figure img{width:100%;height:100%;object-fit:cover}
+  @media (max-width:860px){.abre .wrap{grid-template-columns:1fr}}
+
+  /* Lousa */
+  .lousa-sec{background:var(--lousa);color:var(--giz);padding:70px 0;
+    background-image:radial-gradient(rgba(255,255,255,.035) 1px,transparent 1px),radial-gradient(rgba(255,255,255,.02) 1px,transparent 1px);background-size:4px 4px,7px 7px}
+  .lousa-sec h2{font-size:clamp(2.4rem,5vw,3.4rem);margin-bottom:8px}
+  .lousa-sec .sub{color:#c8cfc4;margin:0 0 30px}
+  .dias{display:flex;gap:6px;margin-bottom:22px;flex-wrap:wrap}
+  .dias button{border:1.5px solid rgba(241,240,230,.4);background:transparent;color:var(--giz);border-radius:999px;padding:6px 16px;cursor:pointer;font:400 1.15rem "Cabin Sketch"}
+  .dias button[aria-pressed="true"]{background:var(--giz);color:var(--lousa)}
+  .quadro{border:10px solid #7a5a3a;border-radius:4px;padding:26px 28px;box-shadow:inset 0 0 50px rgba(0,0,0,.35)}
+  .quadro h3{font:700 1.9rem "Cabin Sketch";color:var(--giz-am);margin-bottom:12px}
+  .quadro ul{list-style:none;margin:0;padding:0;font:400 1.4rem/1.5 "Cabin Sketch"}
+  .quadro li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed rgba(241,240,230,.25);padding:6px 0}
+  .quadro .nota{margin:16px 0 0;font:400 1.1rem "Cabin Sketch";color:#c8cfc4}
+
+  section{padding:76px 0}
+  .cab h2{font-size:clamp(2rem,4.4vw,3rem);font-weight:800;letter-spacing:-.02em}
+  .cab p{color:var(--suave);margin:8px 0 28px;max-width:58ch}
+
+  /* Kits */
+  .kits{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:30px}
+  @media (max-width:700px){.kits{grid-template-columns:1fr}}
+  .kit{border:2px solid var(--fio);background:#fff;border-radius:14px;padding:18px;text-align:left;cursor:pointer}
+  .kit b{display:block;font-size:1.5rem;font-weight:800}
+  .kit span{color:var(--suave)}
+  .kit strong{display:block;margin-top:8px;font-size:1.1rem}
+  .kit[aria-pressed="true"]{border-color:var(--lousa);background:var(--lousa);color:#fff}
+  .kit[aria-pressed="true"] span{color:#c8cfc4}
+
+  .montar{display:grid;grid-template-columns:1.5fr 1fr;gap:26px;align-items:start}
+  @media (max-width:900px){.montar{grid-template-columns:1fr}}
+  .sabores{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  @media (max-width:560px){.sabores{grid-template-columns:1fr}}
+  .sabor{background:#fff;border:1px solid var(--fio);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+  .sabor figure{margin:0;aspect-ratio:16/10;overflow:hidden}
+  .sabor figure img{width:100%;height:100%;object-fit:cover}
+  .sabor .c{padding:14px 16px;display:flex;flex-direction:column;gap:4px;flex:1}
+  .sabor h3{font-size:1.08rem;font-weight:800}
+  .sabor p{margin:0;color:var(--suave);font-size:.9rem}
+  .sabor .pe{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px}
+  .sabor .kcal{font-size:.82rem;color:var(--suave)}
+  .qtd{display:flex;align-items:center;border:1px solid var(--fio);border-radius:10px}
+  .qtd button{width:40px;height:40px;border:0;background:none;font-size:1.2rem;font-weight:800;cursor:pointer}
+  .qtd button:disabled{color:#cfc6b6;cursor:not-allowed}
+  .qtd span{min-width:24px;text-align:center;font-weight:800}
+
+  .resumo{position:sticky;top:16px;background:#fff;border:1px solid var(--fio);border-radius:14px;padding:22px}
+  .barra{height:10px;border-radius:99px;background:#efe8da;overflow:hidden;margin:10px 0 6px}
+  .barra i{display:block;height:100%;background:var(--tomate);width:0;transition:width .2s}
+  .resumo .lin{display:flex;justify-content:space-between;padding:6px 0;font-size:.95rem}
+  .resumo .tot{border-top:1px solid var(--fio);margin-top:6px;padding-top:10px;font-weight:800;font-size:1.2rem}
+  .resumo select{width:100%;min-height:46px;border:1px solid var(--fio);border-radius:10px;padding:0 10px;margin-top:6px;background:#fff}
+  .resumo label{display:block;margin-top:12px;font-weight:700;font-size:.9rem}
+  .resumo .btn{width:100%;margin-top:16px}
+  .resumo small{display:block;color:var(--suave);margin-top:10px}
+
+  .como{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media (max-width:760px){.como{grid-template-columns:1fr}}
+  .como figure{margin:0 0 12px;aspect-ratio:4/3;border-radius:12px;overflow:hidden}
+  .como img{width:100%;height:100%;object-fit:cover}
+  .como h3{font-size:1.15rem;font-weight:800;margin-bottom:4px}
+  .como p{margin:0;color:var(--suave)}
+
+  footer{background:var(--lousa-2);color:#c8cfc4;padding:30px 0;font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="demo"><div class="wrap"><span>Modelo de demonstração. Marmitaria, preços e endereço são fictícios.</span><a href="/#site-panela-da-semana">Quero um site assim →</a></div></div>
+
+<header class="topo"><div class="wrap"><a class="logo" href="#">Panela da Semana</a><a class="btn" href="#kit">Montar kit</a></div></header>
+
+<main>
+  <div class="abre">
+    <div class="wrap">
+      <div>
+        <h1>Comida de casa, <span>pronta no congelador.</span></h1>
+        <p>Feijão de panela, arroz soltinho e mistura do dia, congelados no mesmo dia em que foram feitos. Kits de 5, 10 ou 20 marmitas, entregues no domingo.</p>
+        <a class="btn" href="#kit">Montar meu kit</a>
+        <div class="prazo" aria-live="polite">Pedidos para este domingo até quinta, 18h · <b id="falta"></b></div>
+      </div>
+      <figure><img src="/img/modelos/1543352632-5a4b24e4d2a6-g.jpg" alt="Três marmitas de vidro com arroz, legumes e frango" fetchpriority="high"></figure>
+    </div>
+  </div>
+
+  <div class="lousa-sec">
+    <div class="wrap">
+      <h2 class="giz">A lousa da semana</h2>
+      <p class="sub">Para quem passa aqui no almoço: o prato do dia, servido quente, de segunda a sexta.</p>
+      <div class="dias" id="dias" role="group" aria-label="Dia da semana"></div>
+      <div class="quadro"><h3 id="dia-nome"></h3><ul id="dia-pratos"></ul><p class="nota">Prato feito R$ 24 · Marmita para levar R$ 22 · Suco do dia R$ 7</p></div>
+    </div>
+  </div>
+
+  <section id="kit">
+    <div class="wrap">
+      <div class="cab"><h2>Monte seu kit de congelados</h2><p>Escolha o tamanho do kit e distribua as marmitas entre os sabores. Quanto maior o kit, menor o preço de cada marmita.</p></div>
+      <div class="kits" id="kits"></div>
+      <div class="montar">
+        <div class="sabores" id="sabores"></div>
+        <aside class="resumo" aria-live="polite">
+          <b id="r-titulo"></b>
+          <div class="barra"><i id="r-barra"></i></div>
+          <small id="r-falta" style="margin:0"></small>
+          <div id="r-linhas"></div>
+          <label for="r-bairro">Entrega no domingo</label>
+          <select id="r-bairro"></select>
+          <button class="btn" id="enviar" disabled>Enviar pedido</button>
+          <small>Pagamento por Pix na confirmação. Marmitas duram 60 dias no congelador.</small>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="cab"><h2>Como fazemos</h2></div>
+      <div class="como">
+        <div><figure><img src="/img/modelos/1636647511603-f46efb36c327-g.jpg" alt="Cozinheira mexendo uma panela" loading="lazy"></figure><h3>Cozinha de verdade</h3><p>Panela grande, tempero de alho e cebola refogados. Nada de caldo pronto.</p></div>
+        <div><figure><img src="/img/modelos/1667499745120-f9bcef8f584e-g.jpg" alt="Marmitas sendo montadas em bandejas" loading="lazy"></figure><h3>Porcionado na hora</h3><p>Cada marmita tem 450 g: 150 g de arroz, 100 g de feijão e 200 g de mistura.</p></div>
+        <div><figure><img src="/img/modelos/1682496178113-6275890f1fd7-g.jpg" alt="Panela de sopa no fogão" loading="lazy"></figure><h3>Congelado rápido</h3><p>Ultracongelador a −30 °C, para o arroz não virar papa quando você esquentar.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>Panela da Semana · Rua Dr. Quirino, 1.180 · Centro · Campinas, SP</span><span>Almoço seg a sex, 11h às 14h30</span></div></footer>
+
+<script>
+  var WHATSAPP = "5519996515563";
+  var KITS = [[5, 21.9], [10, 19.9], [20, 17.9]]; // quantidade, preço por marmita
+  var SABORES = [
+    ["Frango grelhado com arroz e legumes", "peito de frango, arroz branco, cenoura e brócolis", 520, "1516714435131-44d6b64dc6a2"],
+    ["Arroz, feijão e carne de panela", "acém cozido devagar, com batata", 610, "1721314678207-8b7bd43e677b"],
+    ["Marmita fit de frango", "arroz integral, frango em cubos e salada cozida", 430, "1666819691716-827f78d892f3"],
+    ["Escondidinho de carne seca", "purê de mandioca gratinado", 580, "1543353071-c953d88f7033"],
+    ["Strogonoff de frango", "com arroz e batata palha à parte", 640, ""],
+    ["Feijoada leve", "sem embutidos, com couve e laranja", 590, ""]
+  ];
+  var BAIRROS = [["Retirar na loja", 0], ["Centro", 8], ["Cambuí", 10], ["Taquaral", 12], ["Barão Geraldo", 18]];
+  var SEMANA = {
+    "Segunda": ["Bife acebolado", "Arroz, feijão e salada", "Purê de batata"],
+    "Terça": ["Frango assado com ervas", "Arroz, feijão e farofa", "Abobrinha refogada"],
+    "Quarta": ["Feijoada leve", "Arroz, couve e laranja", "Torresmo à parte"],
+    "Quinta": ["Carne de panela", "Arroz, feijão e mandioca", "Salada de folhas"],
+    "Sexta": ["Peixe empanado", "Arroz, feijão e purê", "Vinagrete"]
+  };
+
+  function $(id) { return document.getElementById(id); }
+  function reais(v) { return "R$ " + v.toFixed(2).replace(".", ","); }
+  var kit = 1, qtd = SABORES.map(function () { return 0; });
+
+  /* Lousa */
+  var nomes = Object.keys(SEMANA), hoje = new Date().getDay(), atual = nomes[Math.min(Math.max(hoje - 1, 0), 4)];
+  function lousa() {
+    $("dias").innerHTML = nomes.map(function (n) { return '<button aria-pressed="' + (n === atual) + '">' + n + "</button>"; }).join("");
+    $("dia-nome").textContent = atual;
+    $("dia-pratos").innerHTML = SEMANA[atual].map(function (p) { return "<li><span>" + p + "</span></li>"; }).join("");
+  }
+  $("dias").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) { atual = b.textContent; lousa(); } });
+  lousa();
+
+  /* Prazo até quinta 18h */
+  function prazo() {
+    var a = new Date(), q = new Date(a); q.setHours(18, 0, 0, 0);
+    var d = (4 - a.getDay() + 7) % 7; q.setDate(a.getDate() + d);
+    if (q < a) q.setDate(q.getDate() + 7);
+    var h = Math.floor((q - a) / 3600000);
+    $("falta").textContent = h >= 48 ? "faltam " + Math.floor(h / 24) + " dias" : h >= 1 ? "faltam " + h + " horas" : "últimos minutos";
+  }
+  prazo();
+
+  /* Kits */
+  function pintarKits() {
+    $("kits").innerHTML = KITS.map(function (k, i) {
+      return '<button class="kit" data-k="' + i + '" aria-pressed="' + (i === kit) + '"><b>' + k[0] + " marmitas</b><span>" + reais(k[1]) + " cada</span><strong>" + reais(k[0] * k[1]) + "</strong></button>";
+    }).join("");
+  }
+  $("kits").addEventListener("click", function (e) {
+    var b = e.target.closest(".kit"); if (!b) return;
+    kit = +b.dataset.k;
+    var max = KITS[kit][0], soma = 0;
+    qtd = qtd.map(function (q) { var n = Math.min(q, max - soma); soma += n; return n; });
+    pintarKits(); atualizar();
+  });
+  $("sabores").innerHTML = SABORES.map(function (s, i) {
+    return '<article class="sabor">' + (s[3] ? '<figure><img src="/img/modelos/' + s[3] + '-g.jpg" alt="' + s[0] + '" loading="lazy"></figure>' : "") +
+      '<div class="c"><h3>' + s[0] + "</h3><p>" + s[1] + '</p><div class="pe"><span class="kcal">' + s[2] + ' kcal</span><div class="qtd"><button data-i="' + i + '" data-d="-1" aria-label="Menos ' + s[0] + '">−</button><span id="q' + i + '">0</span><button data-i="' + i + '" data-d="1" aria-label="Mais ' + s[0] + '">+</button></div></div></div></article>';
+  }).join("");
+  $("sabores").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-i]"); if (!b) return;
+    var i = +b.dataset.i; qtd[i] = Math.max(0, qtd[i] + +b.dataset.d); atualizar();
+  });
+  $("r-bairro").innerHTML = BAIRROS.map(function (b, i) { return '<option value="' + i + '">' + b[0] + (b[1] ? " · " + reais(b[1]) : "") + "</option>"; }).join("");
+  $("r-bairro").addEventListener("change", atualizar);
+
+  function atualizar() {
+    var max = KITS[kit][0], soma = qtd.reduce(function (a, b) { return a + b; }, 0), b = BAIRROS[+$("r-bairro").value];
+    SABORES.forEach(function (s, i) {
+      $("q" + i).textContent = qtd[i];
+      $("q" + i).previousElementSibling.disabled = qtd[i] === 0;
+      $("q" + i).nextElementSibling.disabled = soma >= max;
+    });
+    $("r-titulo").textContent = "Kit de " + max + " · " + soma + " de " + max + " escolhidas";
+    $("r-barra").style.width = (soma / max * 100) + "%";
+    $("r-falta").textContent = soma < max ? "Faltam " + (max - soma) + " marmitas." : "Kit completo.";
+    var sub = max * KITS[kit][1];
+    $("r-linhas").innerHTML = qtd.map(function (q, i) { return q ? '<div class="lin"><span>' + q + "× " + SABORES[i][0] + "</span></div>" : ""; }).join("") +
+      '<div class="lin"><span>Kit</span><span>' + reais(sub) + '</span></div><div class="lin"><span>Entrega</span><span>' + (b[1] ? reais(b[1]) : "retirada") + '</span></div>' +
+      '<div class="lin tot"><span>Total</span><span>' + reais(sub + b[1]) + "</span></div>";
+    $("enviar").disabled = soma !== max;
+  }
+  $("enviar").addEventListener("click", function () {
+    var b = BAIRROS[+$("r-bairro").value], max = KITS[kit][0];
+    var msg = ["Olá! Quero um kit de " + max + " marmitas da Panela da Semana.", ""]
+      .concat(qtd.map(function (q, i) { return q ? q + "x " + SABORES[i][0] : ""; }).filter(Boolean))
+      .concat(["", "Entrega: " + b[0], "Total: " + reais(max * KITS[kit][1] + b[1])]);
+    window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg.join("\n")), "_blank", "noopener");
+  });
+  pintarKits(); atualizar();
+</script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Júlia Mendes · Psicóloga em Campinas e online</title>
+<meta name="description" content="Psicoterapia para adultos, presencial em Campinas ou online. Abordagem, valores e como funciona a primeira sessão.">
+<meta name="theme-color" content="#4b5a4a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Mrs+Saint+Delafield&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--salvia:#4b5a4a;--salvia-claro:#e6ebe2;--linho:#f7f4ee;--papel:#fffdf9;--texto:#2b2e29;--suave:#6d716a;--fio:#e2ddd3}
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--linho);color:var(--texto);font:18px/1.75 Newsreader,Georgia,serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{margin:0;font-weight:400;line-height:1.15}
+  .sans{font-family:Figtree,system-ui,sans-serif}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  :focus-visible{outline:2px solid var(--salvia);outline-offset:3px}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  .estreito{max-width:680px;margin:0 auto}
+  .demo{background:var(--texto);color:#d7d8d2;font:13px/1.4 Figtree}
+  .demo .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:7px;padding-bottom:7px}
+  .demo a{color:#c5d4c0;font-weight:600;text-decoration:none}
+
+  .topo .wrap{display:flex;justify-content:space-between;align-items:baseline;padding-top:28px;padding-bottom:20px;gap:16px;flex-wrap:wrap}
+  .nome{font-size:1.4rem;text-decoration:none}
+  .nome small{display:block;font:500 .78rem Figtree;letter-spacing:.14em;text-transform:uppercase;color:var(--suave)}
+  .topo nav{display:flex;gap:22px;font:500 .9rem Figtree}
+  .topo nav a{text-decoration:none;color:var(--suave)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;border-radius:999px;background:var(--salvia);color:#fff;font:500 1rem Figtree;text-decoration:none}
+  .btn:hover{background:#3b483a}
+
+  .abre{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center;padding:40px 0 80px}
+  .abre figure{margin:0;aspect-ratio:4/5;overflow:hidden;border-radius:4px}
+  .abre figure img{width:100%;height:100%;object-fit:cover}
+  .abre h1{font-size:clamp(2.2rem,4.6vw,3.4rem);margin-bottom:18px}
+  .abre h1 i{color:var(--salvia)}
+  .abre p{color:#4d514a;margin:0 0 26px}
+  @media (max-width:820px){.abre{grid-template-columns:1fr}.abre figure{max-width:380px}}
+
+  /* Carta */
+  .carta-sec{background:var(--salvia-claro);padding:80px 0}
+  .carta{background:var(--papel);padding:56px 60px 50px;box-shadow:0 30px 50px -40px rgba(43,46,41,.6);border:1px solid var(--fio)}
+  .carta .local{text-align:right;color:var(--suave);font-style:italic;margin:0 0 30px}
+  .carta p{margin:0 0 18px}
+  .carta .ass{font:400 3.2rem/1 "Mrs Saint Delafield",cursive;color:var(--salvia);margin:24px 0 0}
+  .carta .crp{font:500 .8rem Figtree;letter-spacing:.1em;text-transform:uppercase;color:var(--suave)}
+  @media (max-width:600px){.carta{padding:34px 24px}}
+
+  section{padding:80px 0}
+  section h2{font-size:2.2rem;margin-bottom:22px}
+  .lista-temas{columns:2;column-gap:40px;padding:0;margin:0;list-style:none}
+  .lista-temas li{padding:8px 0;border-bottom:1px solid var(--fio);break-inside:avoid}
+  @media (max-width:600px){.lista-temas{columns:1}}
+
+  .formatos{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media (max-width:700px){.formatos{grid-template-columns:1fr}}
+  .formatos div{background:var(--papel);border:1px solid var(--fio);padding:26px}
+  .formatos h3{font-size:1.5rem;margin-bottom:6px}
+  .formatos p{margin:0;color:var(--suave);font-size:1rem}
+  .consultorio{display:grid;grid-template-columns:1.2fr 1fr;gap:34px;align-items:center;margin-top:34px}
+  .consultorio figure{margin:0;aspect-ratio:4/3;overflow:hidden;border-radius:4px}
+  .consultorio img{width:100%;height:100%;object-fit:cover}
+  .consultorio p{color:var(--suave);font-size:1rem;margin:0}
+  @media (max-width:700px){.consultorio{grid-template-columns:1fr}}
+
+  .valores{width:100%;border-collapse:collapse;font-size:1.05rem}
+  .valores td{padding:16px 0;border-bottom:1px solid var(--fio)}
+  .valores td:last-child{text-align:right;white-space:nowrap}
+  .valores small{display:block;color:var(--suave);font:400 .9rem Figtree}
+
+  details{border-bottom:1px solid var(--fio)}
+  summary{cursor:pointer;list-style:none;padding:18px 0;font-size:1.2rem;display:flex;justify-content:space-between;gap:12px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--salvia)}
+  details[open] summary::after{content:"–"}
+  details p{margin:0 0 18px;color:#4d514a}
+
+  .contato{background:var(--salvia);color:#eef2ec;text-align:center}
+  .contato h2{color:#fff}
+  .contato p{max-width:48ch;margin:0 auto 26px;color:#dbe3d7}
+  .contato .btn{background:#fff;color:var(--salvia)}
+  .urgencia{font:400 .92rem Figtree;color:#dbe3d7;margin-top:26px!important}
+
+  footer{padding:24px 0;font:13px Figtree;color:var(--suave)}
+  footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="demo"><div class="wrap"><span>Modelo de demonstração. Profissional, registro e valores são fictícios.</span><a href="/#site-julia-mendes-psicologa">Quero um site assim →</a></div></div>
+
+<header class="topo"><div class="wrap">
+  <a class="nome" href="#">Júlia Mendes<small>Psicóloga · CRP 06/000000</small></a>
+  <nav aria-label="Seções"><a href="#carta">Sobre</a><a href="#formatos">Atendimento</a><a href="#valores">Valores</a><a href="#duvidas">Dúvidas</a></nav>
+</div></header>
+
+<main>
+  <div class="wrap abre">
+    <figure><img src="/img/modelos/1525786210598-d527194d3e9a-g.jpg" alt="Júlia Mendes, psicóloga" fetchpriority="high"></figure>
+    <div>
+      <h1>Um lugar para falar <i>sem precisar ter certeza</i> do que dizer.</h1>
+      <p>Atendo adultos em psicoterapia individual, no consultório no Cambuí ou por vídeo. Ansiedade, luto, mudanças de vida e relações costumam ser o começo da conversa.</p>
+      <a class="btn wa" data-msg="Olá, Júlia. Gostaria de saber se há horário para começar a terapia.">Perguntar sobre horários</a>
+    </div>
+  </div>
+
+  <div class="carta-sec" id="carta">
+    <div class="wrap">
+      <div class="carta estreito">
+        <p class="local">Campinas, numa terça-feira</p>
+        <p>Olá,</p>
+        <p>Se você chegou até aqui, talvez esteja pensando em começar terapia há algum tempo. Ou talvez alguém tenha sugerido e você ainda não sabe bem o que esperar. As duas coisas são comuns.</p>
+        <p>Sou psicóloga desde 2014 e trabalho com a terapia cognitivo-comportamental. Na prática, isso quer dizer que a gente conversa sobre o que está acontecendo agora, entende de onde vêm os pensamentos que mais pesam e testa, aos poucos, outros jeitos de lidar com eles.</p>
+        <p>Não tenho respostas prontas e não vou te dizer o que fazer. Vou te ajudar a perceber o que você já sabe e ainda não conseguiu usar.</p>
+        <p>A primeira sessão serve para nos conhecermos. Se não fizer sentido para você, tudo bem: posso indicar outros colegas.</p>
+        <p class="ass">Júlia Mendes</p>
+        <p class="crp">Psicóloga · CRP 06/000000 · Especialista em TCC</p>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap estreito">
+      <h2>O que costuma trazer as pessoas</h2>
+      <ul class="lista-temas">
+        <li>Ansiedade e crises de pânico</li><li>Luto e perdas</li><li>Mudança de cidade ou de carreira</li><li>Conflitos no relacionamento</li>
+        <li>Esgotamento no trabalho</li><li>Dificuldade para dormir</li><li>Autoestima</li><li>Decisões difíceis</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="formatos" style="padding-top:0">
+    <div class="wrap estreito">
+      <h2>Como atendo</h2>
+      <div class="formatos">
+        <div><h3>Presencial</h3><p>Rua Coronel Quirino, 1.050, sala 32, Cambuí. Terças, quintas e sábados pela manhã.</p></div>
+        <div><h3>Online</h3><p>Por vídeo, em plataforma segura, para todo o Brasil. Segundas, quartas e sextas.</p></div>
+      </div>
+      <div class="consultorio">
+        <figure><img src="/img/modelos/1754037783933-c25ff9f68f87-g.jpg" alt="Poltrona e luz natural no consultório" loading="lazy"></figure>
+        <p>O consultório tem isolamento acústico e uma janela para o jardim. Chegando, é só aguardar na sala de espera: eu vou te buscar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="valores" style="padding-top:0">
+    <div class="wrap estreito">
+      <h2>Valores</h2>
+      <table class="valores">
+        <tr><td>Sessão individual<small>50 minutos, semanal</small></td><td>R$ 220</td></tr>
+        <tr><td>Pacote mensal<small>4 sessões, pago no início do mês</small></td><td>R$ 800</td></tr>
+        <tr><td>Primeira sessão<small>conversa inicial, sem compromisso de continuar</small></td><td>R$ 220</td></tr>
+      </table>
+      <p class="sans" style="color:var(--suave);font-size:.92rem;margin-top:14px">Emito recibo para reembolso do plano de saúde. Não atendo pelo convênio diretamente.</p>
+    </div>
+  </section>
+
+  <section id="duvidas" style="padding-top:0">
+    <div class="wrap estreito">
+      <h2>Dúvidas sobre a primeira sessão</h2>
+      <details><summary>Preciso saber o que vou falar?</summary><p>Não. Muita gente começa dizendo "não sei por onde começar". Eu faço perguntas e a conversa anda.</p></details>
+      <details><summary>Quanto tempo dura a terapia?</summary><p>Depende do que você traz. Combinamos juntos e revisamos a cada três meses se está fazendo sentido.</p></details>
+      <details><summary>O que eu falar fica entre nós?</summary><p>Sim. O sigilo é parte do Código de Ética da profissão. As exceções são raras e previstas em lei, e eu explico na primeira sessão.</p></details>
+      <details><summary>Atendimento online funciona?</summary><p>Funciona e segue as normas do Conselho Federal de Psicologia. Só precisa de um lugar reservado e de internet estável.</p></details>
+    </div>
+  </section>
+
+  <section class="contato">
+    <div class="wrap">
+      <h2>Quer começar?</h2>
+      <p>Mande uma mensagem dizendo se prefere presencial ou online e os períodos em que pode. Respondo em até um dia útil.</p>
+      <a class="btn wa" data-msg="Olá, Júlia. Gostaria de começar a terapia. Prefiro atendimento (presencial/online) no período da (manhã/tarde/noite).">Escrever para a Júlia</a>
+      <p class="urgencia">Este canal não é para emergências. Se você estiver em crise, ligue 188 (CVV, 24 horas) ou procure o pronto-socorro mais próximo.</p>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>Júlia Mendes · Psicóloga · CRP 06/000000 (fictício)</span><span>Rua Coronel Quirino, 1.050, sala 32 · Cambuí · Campinas, SP</span></div></footer>
+
+<script>
+  var WHATSAPP = "5519996515563";
+  document.querySelectorAll(".wa").forEach(function (a) { a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(a.dataset.msg); a.target = "_blank"; a.rel = "noopener"; });
+</script>
+</body>
+</html>

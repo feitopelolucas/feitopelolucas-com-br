@@ -78,7 +78,7 @@
   .lista{display:grid;gap:10px}
   @media (min-width:760px){.lista{grid-template-columns:1fr 1fr;gap:12px 20px}}
   .item{display:grid;grid-template-columns:88px 1fr auto;gap:14px;align-items:center;padding:10px;background:var(--papel);border:1px solid var(--borda);border-radius:14px}
-  .item.sem-foto{grid-template-columns:1fr auto;padding:14px}
+  .item.sem-foto::before{content:"";width:88px}
   .item img{width:88px;height:88px;border-radius:10px;object-fit:cover;background:#e9dfcf}
   .item h3{font-size:1.02rem;font-weight:700}
   .item p{margin:2px 0 4px;color:var(--suave);font-size:.88rem}

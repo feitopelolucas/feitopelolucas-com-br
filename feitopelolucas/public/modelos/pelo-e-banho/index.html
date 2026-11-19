@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pelo & Banho · Banho e tosa no Taquaral</title>
+<meta name="description" content="Banho, tosa higiênica e tosa completa para cães e gatos. Calcule o valor pelo porte e pelo tipo de pelo e agende com leva e traz.">
+<meta name="theme-color" content="#24507a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{--azul:#24507a;--azul-2:#1a3d5e;--amarelo:#f6c945;--carteira:#e9f1e4;--carteira-2:#cfe0c6;--creme:#f8f6f0;--texto:#1b2633;--suave:#5d6a77;--fio:#dde3e8}
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--creme);color:var(--texto);font:16.5px/1.55 "Bricolage Grotesque",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{margin:0;line-height:1.02;font-weight:800;letter-spacing:-.02em}
+  .mono{font-family:"Courier Prime",monospace}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  button,input,select,textarea{font:inherit;color:inherit}
+  :focus-visible{outline:3px solid var(--amarelo);outline-offset:2px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+  .demo{background:var(--texto);color:#cfd8e2;font-size:.8rem}
+  .demo .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:7px;padding-bottom:7px}
+  .demo a{color:var(--amarelo);font-weight:600;text-decoration:none}
+
+  .topo{background:var(--azul);color:#fff}
+  .topo .wrap{display:flex;justify-content:space-between;align-items:center;height:68px}
+  .logo{font-weight:800;font-size:1.5rem;text-decoration:none}
+  .logo span{color:var(--amarelo)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:12px;background:var(--amarelo);color:var(--texto);font-weight:700;text-decoration:none;border:0;cursor:pointer}
+  .btn:hover{background:#ecba2a}
+  .btn.azul{background:var(--azul);color:#fff}
+  .btn.azul:hover{background:var(--azul-2)}
+
+  .abre{background:var(--azul);color:#fff;overflow:hidden}
+  .abre .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;padding-top:40px}
+  .abre h1{font-size:clamp(2.8rem,6.4vw,5rem);margin-bottom:16px}
+  .abre h1 span{color:var(--amarelo)}
+  .abre p{color:#d3e0ec;max-width:40ch;margin:0 0 26px;font-size:1.08rem}
+  .abre .txt{padding-bottom:60px}
+  .abre figure{margin:0;align-self:stretch;position:relative;min-height:440px;border-radius:24px 24px 0 0;overflow:hidden}
+  .abre figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .selos{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px;font-size:.88rem}
+  .selos span{border:1.5px solid rgba(255,255,255,.35);border-radius:999px;padding:5px 12px}
+  @media (max-width:860px){.abre .wrap{grid-template-columns:1fr}.abre figure{min-height:300px}.abre .txt{padding-bottom:0}}
+
+  section{padding:76px 0}
+  .cab h2{font-size:clamp(2rem,4.4vw,3rem)}
+  .cab p{color:var(--suave);margin:8px 0 28px;max-width:56ch}
+
+  /* Calculadora */
+  .calc{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:start}
+  @media (max-width:900px){.calc{grid-template-columns:1fr}}
+  .bloco{background:#fff;border:1px solid var(--fio);border-radius:18px;padding:22px;margin-bottom:16px}
+  .bloco h3{font-size:1.2rem;margin-bottom:12px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{position:relative}
+  .chip input{position:absolute;opacity:0;pointer-events:none}
+  .chip span{display:inline-flex;flex-direction:column;align-items:flex-start;padding:10px 14px;border:1.5px solid var(--fio);border-radius:12px;cursor:pointer;line-height:1.25;min-width:96px}
+  .chip small{color:var(--suave);font-size:.78rem}
+  .chip input:checked+span{background:var(--azul);border-color:var(--azul);color:#fff}
+  .chip input:checked+span small{color:#c6d7e8}
+  .chip input:focus-visible+span{outline:3px solid var(--amarelo)}
+
+  /* Carteirinha */
+  .carteira{background:var(--carteira);border-radius:14px;padding:22px;position:sticky;top:16px;box-shadow:0 20px 34px -24px rgba(27,38,51,.6);border:1px solid var(--carteira-2);
+    background-image:radial-gradient(circle at 100% 0,rgba(255,255,255,.6),transparent 40%)}
+  .carteira .cab-c{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--texto);padding-bottom:10px;margin-bottom:14px}
+  .carteira .cab-c b{font:700 .85rem "Courier Prime";letter-spacing:.12em;text-transform:uppercase}
+  .carteira .pata{width:38px;height:38px}
+  .campo{display:grid;gap:4px;margin-bottom:10px}
+  .campo label,.campo legend{font:700 .74rem "Courier Prime";letter-spacing:.08em;text-transform:uppercase;color:#3d5341}
+  .campo input,.campo textarea{border:0;border-bottom:1.5px dashed #6b8a70;background:transparent;font:400 1.05rem "Courier Prime";padding:4px 0;min-height:34px}
+  .campo textarea{resize:vertical;min-height:52px}
+  .campo input:focus,.campo textarea:focus{outline:none;border-bottom-style:solid;border-color:var(--azul)}
+  fieldset.campo{border:0;padding:0;margin:0 0 10px}
+  .vacinas{display:flex;gap:14px;flex-wrap:wrap;font:400 .95rem "Courier Prime"}
+  .vacinas input{accent-color:var(--azul)}
+  .valor{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--texto);margin-top:12px;padding-top:12px}
+  .valor b{font-size:2rem;letter-spacing:-.02em}
+  .valor small{color:#3d5341}
+  .carteira .btn{width:100%;margin-top:14px}
+  .erro{color:#b42318;font-size:.85rem;font-weight:700;min-height:1.2em}
+
+  /* Tabela */
+  .tabela{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--fio)}
+  .tabela th,.tabela td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--fio);font-size:.95rem}
+  .tabela th{background:#f0f4f8;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--suave)}
+  .tabela td:not(:first-child),.tabela th:not(:first-child){text-align:right}
+  .tab-wrap{overflow-x:auto}
+
+  .galeria{--col:calc((100% - 42px)/4);--col-m:62%}
+  .galeria figure{margin:0;position:relative;aspect-ratio:3/4;border-radius:14px;overflow:hidden}
+  .galeria img{width:100%;height:100%;object-fit:cover}
+  .galeria figcaption{position:absolute;left:8px;bottom:8px;background:#fff;border-radius:999px;padding:3px 10px;font-size:.8rem;font-weight:700}
+
+  .cuidados{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media (max-width:760px){.cuidados{grid-template-columns:1fr}}
+  .cuidados div{background:#fff;border-radius:16px;padding:20px;border:1px solid var(--fio)}
+  .cuidados h3{font-size:1.15rem;margin-bottom:6px}
+  .cuidados p{margin:0;color:var(--suave);font-size:.95rem}
+
+  footer{background:var(--azul-2);color:#c6d7e8;padding:34px 0;font-size:.92rem}
+  footer .wrap{display:grid;gap:16px}
+  @media (min-width:760px){footer .wrap{grid-template-columns:repeat(3,1fr)}}
+  footer b{color:#fff;display:block;margin-bottom:4px}
+
+  /* Carrossel (deslize, setas e pontos) */
+  .carrossel{position:relative}
+  .carrossel .trilho{display:grid;grid-auto-flow:column;grid-auto-columns:var(--col,calc((100% - 28px)/3));gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+  .carrossel .trilho::-webkit-scrollbar{display:none}
+  .carrossel .trilho>*{scroll-snap-align:start;margin:0}
+  .carrossel .seta{position:absolute;top:var(--seta-top,38%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.94);color:#222;cursor:pointer;font-size:1.3rem;box-shadow:0 6px 16px rgba(0,0,0,.18);z-index:2}
+  .carrossel .seta:disabled{opacity:0;pointer-events:none}
+  .carrossel .ant{left:-12px}.carrossel .prox{right:-12px}
+  .carrossel .pontos{display:flex;justify-content:center;gap:6px;margin-top:16px}
+  .carrossel .pontos button{width:8px;height:8px;border-radius:99px;border:0;padding:0;background:rgba(0,0,0,.18);cursor:pointer;transition:width .2s}
+  .carrossel .pontos button[aria-current="true"]{width:24px;background:currentColor}
+  @media (max-width:760px){.carrossel .trilho{grid-auto-columns:var(--col-m,82%)}.carrossel .ant{left:4px}.carrossel .prox{right:4px}}
+</style>
+</head>
+<body>
+<div class="demo"><div class="wrap"><span>Modelo de demonstração. Pet shop, preços e endereço são fictícios.</span><a href="/#site-pelo-e-banho">Quero um site assim →</a></div></div>
+
+<header class="topo"><div class="wrap"><a class="logo" href="#">Pelo <span>&amp;</span> Banho</a><a class="btn" href="#agendar">Agendar banho</a></div></header>
+
+<main>
+  <div class="abre">
+    <div class="wrap">
+      <div class="txt">
+        <h1>Banho sem pressa, <span>tosa sem susto.</span></h1>
+        <p>Atendemos um pet por vez em cada mesa, com secador silencioso e sem caixa de contenção. Calcule o valor pelo porte e agende com leva e traz.</p>
+        <a class="btn" href="#agendar">Calcular e agendar</a>
+        <div class="selos"><span>Leva e traz</span><span>Fotos pelo WhatsApp</span><span>Gatos às quartas</span></div>
+      </div>
+      <figure><img src="/img/modelos/1719464454959-9cf304ef4774-g.jpg" alt="Tosadora aparando o pelo de um cachorro branco" fetchpriority="high"></figure>
+    </div>
+  </div>
+
+  <section id="agendar">
+    <div class="wrap">
+      <div class="cab"><h2>Quanto fica o banho do seu pet</h2><p>Escolha o porte, o pelo e o serviço. Depois preencha a carteirinha: ela vai junto na mensagem para a gente já saber quem vem.</p></div>
+      <div class="calc">
+        <form id="form" onsubmit="return false">
+          <div class="bloco"><h3>Porte</h3><div class="chips" id="c-porte"></div></div>
+          <div class="bloco"><h3>Pelo</h3><div class="chips" id="c-pelo"></div></div>
+          <div class="bloco"><h3>Serviço</h3><div class="chips" id="c-servico"></div></div>
+          <div class="bloco"><h3>Extras</h3><div class="chips" id="c-extra"></div></div>
+          <div class="bloco"><h3>Leva e traz</h3><div class="chips" id="c-bairro"></div></div>
+        </form>
+        <aside class="carteira">
+          <div class="cab-c"><b>Carteirinha do pet</b>
+            <svg class="pata" viewBox="0 0 40 40" aria-hidden="true"><g fill="#24507a"><ellipse cx="20" cy="26" rx="9" ry="7.5"/><ellipse cx="10" cy="16" rx="3.6" ry="4.6"/><ellipse cx="16.5" cy="10" rx="3.6" ry="4.6"/><ellipse cx="23.5" cy="10" rx="3.6" ry="4.6"/><ellipse cx="30" cy="16" rx="3.6" ry="4.6"/></g></svg>
+          </div>
+          <div class="campo"><label for="p-nome">Nome do pet</label><input id="p-nome" autocomplete="off"></div>
+          <div class="campo"><label for="p-raca">Raça e idade</label><input id="p-raca" placeholder="Ex.: shih-tzu, 4 anos"></div>
+          <fieldset class="campo"><legend>Vacinas em dia</legend><div class="vacinas"><label><input type="checkbox" id="v-v10"> V10</label><label><input type="checkbox" id="v-raiva"> Antirrábica</label><label><input type="checkbox" id="v-gripe"> Gripe</label></div></fieldset>
+          <div class="campo"><label for="p-obs">Observações</label><textarea id="p-obs" placeholder="Ex.: tem medo de secador, pele sensível"></textarea></div>
+          <div class="valor"><small id="v-tempo"></small><b id="v-total">R$ 0</b></div>
+          <p class="erro" id="erro" role="alert"></p>
+          <button class="btn azul" id="enviar">Pedir horário</button>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="cab"><h2>Tabela completa</h2><p>Banho inclui corte de unhas, limpeza de ouvidos e perfume (só se você quiser).</p></div>
+      <div class="tab-wrap"><table class="tabela" id="tabela"></table></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="cab"><h2>Saíram cheirosos esta semana</h2></div>
+      <div class="carrossel galeria" data-carrossel style="color:var(--azul)"><div class="trilho" tabindex="0" aria-label="Pets atendidos">
+        <figure><img src="/img/modelos/1611173622933-91942d394b04-p.jpg" alt="Lulu da pomerânia enrolado em toalha rosa" loading="lazy"><figcaption>Pipoca</figcaption></figure>
+        <figure><img src="/img/modelos/1772437883387-8076cf660c65-p.jpg" alt="Cachorro branco de bandana" loading="lazy"><figcaption>Floquinho</figcaption></figure>
+        <figure><img src="/img/modelos/1583534778255-5d67d3dcf95d-p.jpg" alt="Dachshund na banheira" loading="lazy"><figcaption>Salsicha</figcaption></figure>
+        <figure><img src="/img/modelos/1709777571247-39ad71a2d86e-p.jpg" alt="Shih-tzu depois da tosa" loading="lazy"><figcaption>Mel</figcaption></figure>
+        <figure><img src="/img/modelos/1537151608828-ea2b11777ee8-p.jpg" alt="Corgi depois do banho" loading="lazy"><figcaption>Biscoito</figcaption></figure>
+        <figure><img src="/img/modelos/1647002380358-fc70ed2f04e0-p.jpg" alt="Cachorro sentado na banheira" loading="lazy"><figcaption>Thor</figcaption></figure>
+        <figure><img src="/img/modelos/1528846104175-4fd300ee59da-p.jpg" alt="Tosador escovando um cachorro" loading="lazy"><figcaption>Bento</figcaption></figure>
+      </div><button class="seta ant" aria-label="Anterior">‹</button><button class="seta prox" aria-label="Próximo">›</button><div class="pontos"></div></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap cuidados">
+      <div><h3>Primeira vez?</h3><p>Traga a carteira de vacinação. Sem V10 e antirrábica em dia não conseguimos atender, para a segurança de todos.</p></div>
+      <div><h3>Quanto tempo leva</h3><p>De 1h a 3h, conforme o porte e a tosa. Avisamos pelo WhatsApp quando estiver pronto, com foto.</p></div>
+      <div><h3>Pulgas e carrapatos</h3><p>Se o pet chegar com pulgas, fazemos banho antipulgas e cobramos R$ 20 a mais. Avisamos antes.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  <div><b>Pelo &amp; Banho</b>Av. Dr. Heitor Penteado, 905 · Taquaral · Campinas, SP</div>
+  <div><b>Horário</b>Ter a sáb, 8h às 18h · Gatos às quartas</div>
+  <div><b>Contato</b><a class="wa" data-msg="Olá! Tenho uma dúvida sobre o Pelo & Banho.">WhatsApp</a> · @peloebanho</div>
+</div></footer>
+
+<script>
+  var WHATSAPP = "5519996515563";
+  var PORTES = [["Mini", "até 4 kg"], ["Pequeno", "4 a 10 kg"], ["Médio", "10 a 20 kg"], ["Grande", "20 a 35 kg"], ["Gigante", "mais de 35 kg"]];
+  var PELOS = [["Curto", "labrador, pinscher"], ["Longo", "shih-tzu, lulu"]];
+  // Preço por porte (mini..gigante) para pelo curto; pelo longo soma o adicional
+  var SERVICOS = [
+    { nome: "Banho", precos: [45, 55, 70, 90, 120], longo: 10, min: [60, 60, 75, 90, 120] },
+    { nome: "Banho e tosa higiênica", precos: [60, 70, 90, 115, 150], longo: 15, min: [75, 75, 90, 105, 135] },
+    { nome: "Banho e tosa completa", precos: [80, 95, 120, 150, 190], longo: 20, min: [105, 120, 135, 150, 180] }
+  ];
+  var EXTRAS = [["Hidratação", 20], ["Escovação de dentes", 15], ["Desembolo", 25]];
+  var BAIRROS = [["Eu levo e busco", 0], ["Taquaral", 10], ["Cambuí", 15], ["Castelo", 15], ["Barão Geraldo", 25]];
+
+  function $(id) { return document.getElementById(id); }
+  function reais(v) { return "R$ " + v.toFixed(2).replace(".", ","); }
+  function chips(el, nome, lista, tipo, sub) {
+    $(el).innerHTML = lista.map(function (o, i) {
+      return '<label class="chip"><input type="' + tipo + '" name="' + nome + '" value="' + i + '"' + (tipo === "radio" && i === 0 ? " checked" : "") + "><span>" + (o.nome || o[0]) + (sub ? "<small>" + sub(o) + "</small>" : "") + "</span></label>";
+    }).join("");
+  }
+  chips("c-porte", "porte", PORTES, "radio", function (o) { return o[1]; });
+  chips("c-pelo", "pelo", PELOS, "radio", function (o) { return o[1]; });
+  chips("c-servico", "servico", SERVICOS, "radio");
+  chips("c-extra", "extra", EXTRAS, "checkbox", function (o) { return "+ " + reais(o[1]); });
+  chips("c-bairro", "bairro", BAIRROS, "radio", function (o) { return o[1] ? "+ " + reais(o[1]) : "sem taxa"; });
+
+  function v(n) { return +document.querySelector("[name=" + n + "]:checked").value; }
+  function calcular() {
+    var p = v("porte"), longo = v("pelo") === 1, s = SERVICOS[v("servico")], b = BAIRROS[v("bairro")];
+    var ex = [].slice.call(document.querySelectorAll("[name=extra]:checked")).map(function (c) { return EXTRAS[+c.value]; });
+    var total = s.precos[p] + (longo ? s.longo : 0) + ex.reduce(function (a, x) { return a + x[1]; }, 0) + b[1];
+    var min = s.min[p] + (longo ? 15 : 0);
+    $("v-total").textContent = reais(total);
+    $("v-tempo").textContent = "cerca de " + (min >= 60 ? Math.floor(min / 60) + "h" + (min % 60 ? String(min % 60).padStart(2, "0") : "") : min + " min");
+    return { p: PORTES[p][0], pelo: PELOS[v("pelo")][0], s: s.nome, ex: ex, b: b, total: total };
+  }
+  $("form").addEventListener("change", calcular);
+
+  $("tabela").innerHTML = "<thead><tr><th>Serviço (pelo curto)</th>" + PORTES.map(function (p) { return "<th>" + p[0] + "</th>"; }).join("") + "</tr></thead><tbody>" +
+    SERVICOS.map(function (s) { return "<tr><td>" + s.nome + "</td>" + s.precos.map(function (x) { return "<td>" + reais(x) + "</td>"; }).join("") + "</tr>"; }).join("") +
+    '<tr><td colspan="6" style="text-align:left;color:#5d6a77">Pelo longo: + R$ 10 a R$ 20, conforme o serviço.</td></tr></tbody>';
+
+  $("enviar").addEventListener("click", function () {
+    var nome = $("p-nome").value.trim();
+    var vac = [["V10", "v-v10"], ["Antirrábica", "v-raiva"], ["Gripe", "v-gripe"]].filter(function (x) { return $(x[1]).checked; }).map(function (x) { return x[0]; });
+    if (!nome) { $("erro").textContent = "Escreva o nome do pet na carteirinha."; $("p-nome").focus(); return; }
+    if (vac.indexOf("V10") < 0 || vac.indexOf("Antirrábica") < 0) { $("erro").textContent = "Precisamos da V10 e da antirrábica em dia para atender."; return; }
+    $("erro").textContent = "";
+    var c = calcular(), obs = $("p-obs").value.trim();
+    var msg = ["Olá! Quero agendar no Pelo & Banho.", "", "Pet: " + nome + ($("p-raca").value.trim() ? " (" + $("p-raca").value.trim() + ")" : ""),
+      "Porte: " + c.p + " · pelo " + c.pelo.toLowerCase(), "Serviço: " + c.s];
+    if (c.ex.length) msg.push("Extras: " + c.ex.map(function (x) { return x[0]; }).join(", "));
+    msg.push("Leva e traz: " + (c.b[1] ? c.b[0] : "não, eu levo"), "Vacinas: " + vac.join(", "));
+    if (obs) msg.push("Observações: " + obs);
+    msg.push("", "Valor estimado: " + reais(c.total));
+    window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg.join("\n")), "_blank", "noopener");
+  });
+  document.querySelectorAll(".wa").forEach(function (a) { a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(a.dataset.msg); a.target = "_blank"; a.rel = "noopener"; });
+  calcular();
+
+  /* Carrossel: deslize, setas e pontos */
+  document.querySelectorAll("[data-carrossel]").forEach(function (c) {
+    var t = c.querySelector(".trilho"), s = t.children, p = c.querySelector(".pontos"), a = c.querySelector(".ant"), n = c.querySelector(".prox");
+    function passo() { return s.length > 1 ? s[1].offsetLeft - s[0].offsetLeft : t.clientWidth; }
+    function visiveis() { return Math.max(1, Math.round(t.clientWidth / passo())); }
+    function atual() { return Math.round(t.scrollLeft / passo()); }
+    function total() { return Math.max(1, s.length - visiveis() + 1); }
+    function ir(i) { i = Math.max(0, Math.min(total() - 1, i)); t.scrollTo({ left: i * passo(), behavior: "smooth" }); }
+    function marcar() {
+      var at = atual(), tt = total();
+      if (p) {
+        if (p.children.length !== tt) p.innerHTML = Array.from({ length: tt }, function (_, i) { return '<button aria-label="Ir para ' + (i + 1) + '"></button>'; }).join("");
+        [].forEach.call(p.children, function (b, i) { b.setAttribute("aria-current", i === at); });
+      }
+      if (a) a.disabled = at <= 0;
+      if (n) n.disabled = at >= tt - 1;
+    }
+    if (a) a.onclick = function () { ir(atual() - 1); };
+    if (n) n.onclick = function () { ir(atual() + 1); };
+    if (p) p.addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) ir([].indexOf.call(p.children, b)); });
+    t.addEventListener("scroll", function () { clearTimeout(t._m); t._m = setTimeout(marcar, 80); });
+    t.addEventListener("keydown", function (e) { if (e.key === "ArrowRight") ir(atual() + 1); if (e.key === "ArrowLeft") ir(atual() - 1); });
+    window.addEventListener("resize", marcar);
+    marcar();
+  });
+</script>
+</body>
+</html>

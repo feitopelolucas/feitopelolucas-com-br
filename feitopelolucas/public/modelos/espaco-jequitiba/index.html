@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Espaço Jequitibá · Salão de festas e buffet em Valinhos</title>
+<meta name="description" content="Salão para até 200 convidados com buffet próprio. Veja as datas livres na agenda, escolha o pacote e receba o orçamento pelo WhatsApp.">
+<meta name="theme-color" content="#2f3b2a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&family=Homemade+Apple&display=swap" rel="stylesheet">
+<style>
+  :root{--musgo:#2f3b2a;--musgo-2:#232c20;--ouro:#b8955a;--linho:#f6f1e7;--papel:#fffdf8;--texto:#262a22;--suave:#6b6d62;--fio:#e3dccd;--tinta:#8a2b2b}
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--linho);color:var(--texto);font:16.5px/1.6 Jost,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{margin:0;font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.02}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  button,select{font:inherit;color:inherit}
+  :focus-visible{outline:3px solid var(--ouro);outline-offset:2px}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 18px}
+  .demo{background:#141912;color:#cfd3c7;font-size:.8rem}
+  .demo .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:7px;padding-bottom:7px}
+  .demo a{color:var(--ouro);font-weight:600;text-decoration:none}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;border-radius:0;background:var(--musgo);color:#fff;font-weight:500;letter-spacing:.08em;text-transform:uppercase;font-size:.88rem;text-decoration:none;border:0;cursor:pointer}
+  .btn:hover{background:var(--musgo-2)}
+  .btn:disabled{background:#a9ab9e;cursor:not-allowed}
+  .btn.ouro{background:var(--ouro);color:var(--musgo-2)}
+
+  .capa{position:relative;color:#fff;min-height:620px;display:flex;flex-direction:column}
+  .slides{position:absolute;inset:0;overflow:hidden}
+  .slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.6s ease}
+  .slides img.on{opacity:1}
+  .capa::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,25,18,.55),rgba(20,25,18,.2) 40%,rgba(20,25,18,.85))}
+  .capa>*:not(.slides){position:relative;z-index:1;width:100%}
+  .slide-pontos{position:absolute!important;right:24px;bottom:24px;width:auto!important;display:flex;gap:6px;z-index:2}
+  .slide-pontos i{width:26px;height:3px;background:rgba(255,255,255,.4)}
+  .slide-pontos i.on{background:#fff}
+  .capa .barra{display:flex;justify-content:space-between;align-items:center;padding-top:22px}
+  .logo{font:600 1.7rem "Cormorant Garamond";text-decoration:none}
+  .capa .conteudo{margin-top:auto;padding-bottom:60px}
+  .capa h1{font-size:clamp(3rem,7vw,5.6rem);font-weight:500;max-width:12ch;margin-bottom:16px}
+  .capa h1 i{color:#e7cf9f}
+  .capa p{max-width:44ch;color:#e6e4dc;font-size:1.1rem;margin:0 0 24px}
+
+  .numeros{background:var(--musgo);color:#d8dccf}
+  .numeros .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+  .numeros div{padding:22px 16px;border-right:1px solid rgba(255,255,255,.12)}
+  .numeros div:last-child{border:0}
+  .numeros b{display:block;font:600 2rem "Cormorant Garamond";color:#fff}
+  @media (max-width:700px){.numeros .wrap{grid-template-columns:1fr 1fr}}
+
+  section{padding:80px 0}
+  .cab{text-align:center;margin-bottom:34px}
+  .cab .k{font-size:.8rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ouro);margin:0 0 8px}
+  .cab h2{font-size:clamp(2.4rem,5vw,3.4rem)}
+  .cab p{color:var(--suave);margin:10px auto 0;max-width:56ch}
+
+  /* Agenda */
+  .agenda-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:start}
+  @media (max-width:900px){.agenda-grid{grid-template-columns:1fr}}
+  .agenda{background:var(--papel);border:1px solid var(--fio);padding:24px;box-shadow:0 22px 40px -30px rgba(35,44,32,.6)}
+  .agenda .mes{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+  .agenda .mes h3{font-size:2rem}
+  .agenda .mes button{width:42px;height:42px;border:1px solid var(--fio);background:#fff;cursor:pointer;font-size:1.2rem}
+  .agenda .mes button:disabled{opacity:.35;cursor:not-allowed}
+  .dias-sem,.dias{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+  .dias-sem span{font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:var(--suave);text-align:center;padding-bottom:6px}
+  .dia{aspect-ratio:1;border:1px solid var(--fio);background:#fff;cursor:pointer;position:relative;font:500 1.05rem Jost;display:grid;place-items:center}
+  .dia.vazio{border:0;background:none;cursor:default}
+  .dia:disabled{cursor:not-allowed;color:#b8b4a8;background:#faf8f3}
+  .dia.ocupado::after{content:"";position:absolute;left:12%;right:12%;top:50%;height:2px;background:var(--tinta);transform:rotate(-24deg)}
+  .dia.ocupado{color:#9a8f86}
+  .dia.fds{background:#fbf6ea}
+  .dia[aria-pressed="true"]{background:var(--musgo);color:#fff;border-color:var(--musgo)}
+  .legenda{display:flex;gap:18px;flex-wrap:wrap;font-size:.85rem;color:var(--suave);margin-top:14px}
+  .legenda i{display:inline-block;width:14px;height:14px;border:1px solid var(--fio);vertical-align:-2px;margin-right:6px;background:#fff}
+  .legenda .lo{position:relative}
+  .legenda .lo::after{content:"";position:absolute;left:1px;right:1px;top:6px;height:2px;background:var(--tinta);transform:rotate(-24deg)}
+  .escrito{font:400 1.1rem "Homemade Apple",cursive;color:var(--tinta);margin-top:12px;min-height:1.6em}
+
+  .orc{background:#fff;border:1px solid var(--fio);padding:24px;position:sticky;top:16px}
+  .orc label{display:block;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--suave);margin:14px 0 6px}
+  .orc label:first-child{margin-top:0}
+  .orc select{width:100%;min-height:48px;border:1px solid var(--fio);background:#fff;padding:0 10px}
+  .orc .tot{border-top:1px solid var(--fio);margin-top:18px;padding-top:14px;display:flex;justify-content:space-between;align-items:baseline}
+  .orc .tot b{font:600 2rem "Cormorant Garamond"}
+  .orc small{display:block;color:var(--suave);margin-top:4px}
+  .orc .btn{width:100%;margin-top:16px}
+
+  /* Pacotes */
+  .pacotes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media (max-width:860px){.pacotes{grid-template-columns:1fr}}
+  .pac{background:#fff;border:1px solid var(--fio)}
+  .pac figure{margin:0;aspect-ratio:4/3;overflow:hidden}
+  .pac img{width:100%;height:100%;object-fit:cover}
+  .pac div{padding:20px}
+  .pac h3{font-size:1.8rem}
+  .pac .pp{color:var(--ouro);font-weight:600;margin:2px 0 10px}
+  .pac ul{margin:0;padding-left:18px;color:var(--suave);font-size:.95rem}
+
+  .galeria{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  .galeria figure{margin:0;aspect-ratio:1;overflow:hidden}
+  .galeria img{width:100%;height:100%;object-fit:cover}
+  @media (max-width:760px){.galeria{grid-template-columns:1fr 1fr}}
+
+  footer{background:var(--musgo-2);color:#c3c8b8;padding:34px 0;font-size:.92rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="demo"><div class="wrap"><span>Modelo de demonstração. Espaço, datas e preços são fictícios.</span><a href="/#site-espaco-jequitiba">Quero um site assim →</a></div></div>
+
+<header class="capa">
+  <div class="slides" aria-hidden="true">
+    <img class="on" src="/img/modelos/1768851142332-75f3d1b47452-g.jpg" alt="" fetchpriority="high">
+    <img src="/img/modelos/1670529776258-aed0041eb4f9-g.jpg" alt="" loading="lazy">
+    <img src="/img/modelos/1519167758481-83f550bb49b3-g.jpg" alt="" loading="lazy">
+  </div>
+  <div class="slide-pontos" id="slide-pontos" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+  <div class="wrap barra"><a class="logo" href="#">Espaço Jequitibá</a><a class="btn ouro" href="#agenda">Ver datas livres</a></div>
+  <div class="wrap conteudo">
+    <h1>Festa grande, <i>cuidado de casa.</i></h1>
+    <p>Salão envidraçado no meio das árvores, buffet próprio e equipe que fica do começo ao fim. Veja na agenda se a sua data está livre.</p>
+    <a class="btn ouro" href="#agenda">Consultar a agenda</a>
+  </div>
+</header>
+
+<div class="numeros"><div class="wrap"><div><b>200</b>convidados sentados</div><div><b>1.800 m²</b>de área verde</div><div><b>120</b>vagas de estacionamento</div><div><b>Desde 2006</b>em Valinhos</div></div></div>
+
+<main>
+  <section id="agenda">
+    <div class="wrap">
+      <div class="cab"><p class="k">Agenda</p><h2>Datas livres</h2><p>As datas riscadas já estão reservadas. Toque numa data livre e monte o orçamento ao lado.</p></div>
+      <div class="agenda-grid">
+        <div class="agenda">
+          <div class="mes"><button id="ant" aria-label="Mês anterior">‹</button><h3 id="mes-nome"></h3><button id="prox" aria-label="Próximo mês">›</button></div>
+          <div class="dias-sem"><span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span></div>
+          <div class="dias" id="dias"></div>
+          <div class="legenda"><span><i></i>Livre</span><span><i class="lo"></i>Reservada</span><span><i style="background:#fbf6ea"></i>Fim de semana</span></div>
+          <p class="escrito" id="escrito" aria-live="polite"></p>
+        </div>
+        <aside class="orc" aria-live="polite">
+          <label for="o-tipo">Tipo de festa</label>
+          <select id="o-tipo"><option>Aniversário</option><option>Casamento</option><option>Bodas</option><option>Formatura</option><option>Confraternização de empresa</option></select>
+          <label for="o-conv">Convidados</label>
+          <select id="o-conv"><option value="50">Até 50</option><option value="80" selected>Até 80</option><option value="120">Até 120</option><option value="160">Até 160</option><option value="200">Até 200</option></select>
+          <label for="o-pac">Pacote</label>
+          <select id="o-pac"></select>
+          <div class="tot"><span>Estimativa</span><b id="o-total"></b></div>
+          <small id="o-pp"></small>
+          <button class="btn" id="enviar" disabled>Escolha uma data</button>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="cab"><p class="k">Buffet</p><h2>Pacotes</h2><p>Todos incluem salão por 5 horas, mesas, cadeiras, toalhas, louça, garçons e limpeza.</p></div>
+      <div class="pacotes" id="pacotes"></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap galeria">
+      <figure><img src="/img/modelos/1519167758481-83f550bb49b3-p.jpg" alt="Mesa posta para jantar" loading="lazy"></figure>
+      <figure><img src="/img/modelos/1670529776258-aed0041eb4f9-p.jpg" alt="Salão com mesas decoradas" loading="lazy"></figure>
+      <figure><img src="/img/modelos/1773409414133-9c5d141cb4c5-p.jpg" alt="Convidados se servindo no buffet" loading="lazy"></figure>
+      <figure><img src="/img/modelos/1620735692151-26a7e0748429-p.jpg" alt="Mesas brancas montadas" loading="lazy"></figure>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>Espaço Jequitibá · Estrada da Cachoeira, 3.200 · Valinhos, SP</span><span>Visitas com hora marcada · ter a sáb</span></div></footer>
+
+<script>
+  var WHATSAPP = "5519996515563";
+  // Datas já reservadas (AAAA-MM-DD). Na versão real, o dono atualiza esta lista ou uma planilha.
+  var RESERVADAS = ["2026-11-21", "2026-11-22", "2026-11-28", "2026-12-05", "2026-12-06", "2026-12-12", "2026-12-13", "2026-12-19", "2026-12-20", "2027-01-09", "2027-01-16", "2027-01-23", "2027-02-06", "2027-02-13"];
+  var PACOTES = [
+    { nome: "Essencial", pp: 95, foto: "1555244162-803834f70033", itens: ["Salgados fritos e assados", "Prato quente com dois acompanhamentos", "Refrigerante e suco"] },
+    { nome: "Completo", pp: 140, foto: "1576842546422-60562b9242ae", itens: ["Entrada de frios", "Dois pratos quentes e massa", "Bebidas e cerveja", "Mesa de doces"] },
+    { nome: "Jantar", pp: 210, foto: "1464366400600-7168b8af9bc3", itens: ["Jantar servido à francesa", "Bar com drinks", "Bolo e doces finos", "Coordenação no dia"] }
+  ];
+  var MESES_A_FRENTE = 5;
+  function $(id) { return document.getElementById(id); }
+  function reais(v) { return v.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 }); }
+  function iso(d) { return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
+
+  var hoje = new Date(); hoje.setHours(0, 0, 0, 0);
+  var mes = 0, escolhida = null;
+  function calendario() {
+    var base = new Date(hoje.getFullYear(), hoje.getMonth() + mes, 1);
+    var mn = base.toLocaleDateString("pt-BR", { month: "long", year: "numeric" }); $("mes-nome").textContent = mn.charAt(0).toUpperCase() + mn.slice(1);
+    $("ant").disabled = mes === 0; $("prox").disabled = mes >= MESES_A_FRENTE;
+    var html = "", ultimo = new Date(base.getFullYear(), base.getMonth() + 1, 0).getDate();
+    for (var v = 0; v < base.getDay(); v++) html += '<span class="dia vazio"></span>';
+    for (var d = 1; d <= ultimo; d++) {
+      var dt = new Date(base.getFullYear(), base.getMonth(), d), k = iso(dt);
+      var ocup = RESERVADAS.indexOf(k) >= 0, passado = dt < hoje, fds = dt.getDay() === 0 || dt.getDay() === 6;
+      html += '<button class="dia' + (ocup ? " ocupado" : "") + (fds ? " fds" : "") + '" data-d="' + k + '"' + (ocup || passado ? " disabled" : "") + ' aria-pressed="' + (k === escolhida) + '" aria-label="' + dt.toLocaleDateString("pt-BR") + (ocup ? ", reservada" : "") + '">' + d + "</button>";
+    }
+    $("dias").innerHTML = html;
+  }
+  $("ant").onclick = function () { mes--; calendario(); };
+  $("prox").onclick = function () { mes++; calendario(); };
+  $("dias").addEventListener("click", function (e) {
+    var b = e.target.closest(".dia[data-d]"); if (!b || b.disabled) return;
+    escolhida = b.dataset.d; calendario(); orcamento();
+  });
+
+  $("o-pac").innerHTML = PACOTES.map(function (p, i) { return '<option value="' + i + '"' + (i === 1 ? " selected" : "") + ">" + p.nome + " · " + reais(p.pp) + " por pessoa</option>"; }).join("");
+  $("pacotes").innerHTML = PACOTES.map(function (p) {
+    return '<article class="pac"><figure><img src="/img/modelos/' + p.foto + '-g.jpg" alt="Buffet do pacote ' + p.nome + '" loading="lazy"></figure><div><h3>' + p.nome + '</h3><p class="pp">' + reais(p.pp) + " por pessoa</p><ul>" + p.itens.map(function (i) { return "<li>" + i + "</li>"; }).join("") + "</ul></div></article>";
+  }).join("");
+
+  function dataTxt() { return new Date(escolhida + "T12:00").toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long" }); }
+  function orcamento() {
+    var p = PACOTES[+$("o-pac").value], conv = +$("o-conv").value;
+    var fds = escolhida && [0, 6].indexOf(new Date(escolhida + "T12:00").getDay()) >= 0;
+    var total = p.pp * conv * (fds ? 1 : 0.85);
+    $("o-total").textContent = reais(total);
+    $("o-pp").textContent = conv + " convidados × " + reais(p.pp) + (escolhida && !fds ? " · 15% de desconto em dia de semana" : "");
+    $("escrito").textContent = escolhida ? "reservar: " + dataTxt() : "";
+    $("enviar").disabled = !escolhida;
+    $("enviar").textContent = escolhida ? "Pedir orçamento" : "Escolha uma data";
+    return { p: p, conv: conv, total: total };
+  }
+  ["o-tipo", "o-conv", "o-pac"].forEach(function (id) { $(id).addEventListener("change", orcamento); });
+  $("enviar").addEventListener("click", function () {
+    var o = orcamento();
+    var msg = ["Olá! Quero um orçamento no Espaço Jequitibá.", "", "Data: " + dataTxt(), "Festa: " + $("o-tipo").value, "Convidados: até " + o.conv, "Pacote: " + o.p.nome, "Estimativa do site: " + reais(o.total)];
+    window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg.join("\n")), "_blank", "noopener");
+  });
+  calendario(); orcamento();
+
+  /* Capa: troca de foto a cada 5 segundos (desligado para quem pede menos movimento) */
+  if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var fotos = document.querySelectorAll(".slides img"), pts = document.querySelectorAll("#slide-pontos i"), k = 0;
+    setInterval(function () {
+      fotos[k].classList.remove("on"); pts[k].classList.remove("on");
+      k = (k + 1) % fotos.length;
+      fotos[k].classList.add("on"); pts[k].classList.add("on");
+    }, 5000);
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pistão Auto Center · Mecânica geral na Vila Industrial</title>
+<meta name="description" content="Mecânica geral, freios, suspensão, troca de óleo e ar-condicionado. Peça orçamento preenchendo a ordem de serviço e acompanhe o seu carro pelo número da OS.">
+<meta name="theme-color" content="#16191d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--grafite:#16191d;--grafite-2:#22272d;--laranja:#f26b1d;--laranja-2:#d4570e;--carbono:#e9eef8;--carbono-tinta:#2c3e7a;--cinza:#f2f2ef;--texto:#1a1d21;--suave:#5e6670;--fio:#d9dcdf;--ok:#2f8f4e}
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--cinza);color:var(--texto);font:16.5px/1.55 "IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{margin:0;font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;line-height:1;letter-spacing:.01em}
+  .mono{font-family:"IBM Plex Mono",monospace}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  button,input,select,textarea{font:inherit;color:inherit}
+  :focus-visible{outline:3px solid var(--laranja);outline-offset:2px}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 18px}
+  .demo{background:#000;color:#b9c0c8;font-size:.8rem}
+  .demo .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:7px;padding-bottom:7px}
+  .demo a{color:var(--laranja);font-weight:600;text-decoration:none}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:4px;background:var(--laranja);color:#fff;font:600 1rem Oswald;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer}
+  .btn:hover{background:var(--laranja-2)}
+  .btn.esc{background:var(--grafite);color:#fff}
+
+  .topo{background:var(--grafite);color:#fff}
+  .topo .wrap{display:flex;justify-content:space-between;align-items:center;height:70px;gap:16px}
+  .logo{font:700 1.6rem Oswald;text-transform:uppercase;text-decoration:none;letter-spacing:.04em}
+  .logo span{color:var(--laranja)}
+  .topo .tel{font-family:"IBM Plex Mono";color:#c2c9d1;font-size:.92rem}
+
+  .abre{background:var(--grafite);color:#fff;position:relative;overflow:hidden}
+  .abre>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35}
+  .abre .wrap{position:relative;padding-top:70px;padding-bottom:80px}
+  .abre h1{font-size:clamp(2.8rem,7vw,5.4rem);max-width:13ch;margin-bottom:18px}
+  .abre h1 span{color:var(--laranja)}
+  .abre p{max-width:46ch;color:#d1d6dc;font-size:1.1rem;margin:0 0 26px}
+  .abre .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .selos{display:flex;gap:24px;flex-wrap:wrap;margin-top:40px;font-size:.92rem;color:#c2c9d1}
+  .selos b{display:block;font:600 1.6rem Oswald;color:#fff}
+
+  section{padding:76px 0}
+  .cab h2{font-size:clamp(2rem,4.4vw,3rem)}
+  .cab p{color:var(--suave);margin:8px 0 28px;max-width:58ch}
+
+  /* Consulta OS */
+  .consulta{background:#fff;border:1px solid var(--fio);border-radius:6px;padding:26px;display:grid;grid-template-columns:1fr 1.4fr;gap:30px;align-items:start}
+  @media (max-width:860px){.consulta{grid-template-columns:1fr}}
+  .consulta>*,.os-grid>*{min-width:0}
+  .consulta form{display:flex;gap:8px}
+  .consulta input{flex:1;min-width:0;min-height:50px;border:1.5px solid var(--fio);border-radius:4px;padding:0 12px;font-family:"IBM Plex Mono";text-transform:uppercase}
+  .consulta .dica{font-size:.85rem;color:var(--suave);margin-top:8px}
+  .etapas{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+  .etapas li{padding:12px 8px 0;border-top:4px solid var(--fio);font-size:.85rem;color:var(--suave)}
+  .etapas li.feito{border-color:var(--ok);color:var(--texto)}
+  .etapas li.agora{border-color:var(--laranja);color:var(--texto);font-weight:600}
+  .res h3{font-size:1.4rem;margin-bottom:6px}
+  .res p{margin:0 0 14px;color:var(--suave)}
+  .res .vazio{color:var(--suave)}
+  @media (max-width:560px){.etapas{grid-template-columns:1fr}.etapas li{border-top:0;border-left:4px solid var(--fio);padding:6px 10px}}
+
+  /* OS em papel carbono */
+  .os-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:start}
+  @media (max-width:900px){.os-grid{grid-template-columns:1fr}}
+  .os{background:var(--carbono);border:1px solid #c9d3e8;padding:26px;position:relative;box-shadow:6px 6px 0 #d6deef}
+  .os .cabos{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2px solid var(--carbono-tinta);padding-bottom:12px;margin-bottom:16px;color:var(--carbono-tinta)}
+  .os .cabos b{font:700 1.3rem Oswald;text-transform:uppercase}
+  .os .cabos span{font:600 .95rem "IBM Plex Mono"}
+  .linha{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:12px}
+  @media (max-width:560px){.linha{grid-template-columns:1fr 1fr}}
+  .f{display:grid;gap:2px;min-width:0}
+  .f input,.f select,.f textarea{width:100%}
+  .f label,.f legend{font:600 .72rem "IBM Plex Mono";text-transform:uppercase;letter-spacing:.08em;color:var(--carbono-tinta)}
+  .f input,.f select,.f textarea{border:0;border-bottom:1.5px solid #9aa9cf;background:transparent;font:400 1.02rem "IBM Plex Mono";color:var(--carbono-tinta);padding:4px 0;min-height:34px}
+  .f textarea{resize:vertical;min-height:60px}
+  .f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--carbono-tinta)}
+  fieldset.f{border:0;padding:0;margin:0 0 12px}
+  .checks{display:grid;grid-template-columns:repeat(2,1fr);gap:4px 14px;font:400 .95rem "IBM Plex Mono";color:var(--carbono-tinta);margin-top:4px}
+  .checks input{accent-color:var(--carbono-tinta)}
+  .os .erro{color:#b42318;font-weight:600;font-size:.88rem;min-height:1.2em;margin:4px 0}
+  .os .btn{width:100%;margin-top:6px}
+  .lado figure{margin:0 0 14px;aspect-ratio:4/3;overflow:hidden;border-radius:6px}
+  .lado img{width:100%;height:100%;object-fit:cover}
+  .lado ul{margin:0;padding-left:18px;color:var(--suave)}
+
+  /* Tabela */
+  .tab-wrap{overflow-x:auto;background:#fff;border:1px solid var(--fio);border-radius:6px}
+  table{width:100%;border-collapse:collapse;min-width:560px}
+  th,td{padding:13px 16px;border-bottom:1px solid var(--fio);text-align:left}
+  th{font:600 .8rem Oswald;letter-spacing:.08em;text-transform:uppercase;color:var(--suave);background:#fafafa}
+  td:not(:first-child),th:not(:first-child){text-align:right;font-family:"IBM Plex Mono"}
+  tr:last-child td{border-bottom:0}
+
+  .fotos{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .fotos figure{margin:0;aspect-ratio:1;overflow:hidden;border-radius:6px;position:relative}
+  .fotos img{width:100%;height:100%;object-fit:cover}
+  .fotos figcaption{position:absolute;left:0;bottom:0;background:var(--grafite);color:#fff;font:600 .78rem Oswald;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px}
+  @media (max-width:760px){.fotos{grid-template-columns:1fr 1fr}}
+
+  .garantia{background:var(--grafite);color:#d1d6dc}
+  .garantia .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .garantia h3{color:#fff;font-size:1.4rem;margin-bottom:8px}
+  .garantia p{margin:0}
+  @media (max-width:760px){.garantia .wrap{grid-template-columns:1fr}}
+
+  footer{background:#0d0f12;color:#9aa3ad;padding:28px 0;font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="demo"><div class="wrap"><span>Modelo de demonstração. Oficina, preços e endereço são fictícios.</span><a href="/#site-oficina-pistao">Quero um site assim →</a></div></div>
+
+<header class="topo"><div class="wrap"><a class="logo" href="#">Pistão <span>Auto Center</span></a><span class="tel">Seg a sex 8h–18h · Sáb 8h–12h</span></div></header>
+
+<main>
+  <div class="abre">
+    <img src="/img/modelos/1615906655593-ad0386982a0f-g.jpg" alt="" fetchpriority="high">
+    <div class="wrap">
+      <h1>Orçamento antes, <span>serviço depois.</span></h1>
+      <p>Nenhum parafuso é mexido sem você aprovar o valor por escrito. Mande a ordem de serviço pelo site e acompanhe o carro pelo número da OS.</p>
+      <div class="acoes"><a class="btn" href="#orcamento">Pedir orçamento</a><a class="btn esc" href="#consulta" style="background:#fff;color:var(--grafite)">Consultar minha OS</a></div>
+      <div class="selos"><span><b>22 anos</b>no mesmo endereço</span><span><b>90 dias</b>de garantia no serviço</span><span><b>4 elevadores</b>e alinhamento 3D</span></div>
+    </div>
+  </div>
+
+  <section id="consulta">
+    <div class="wrap">
+      <div class="cab"><h2>Como está o meu carro?</h2><p>Digite o número da OS que está no seu canhoto. Atualizamos a cada etapa.</p></div>
+      <div class="consulta">
+        <div>
+          <form id="f-consulta"><input id="num-os" placeholder="Ex.: 2041" aria-label="Número da OS" inputmode="numeric"><button class="btn" type="submit">Ver</button></form>
+          <p class="dica">Na demonstração, experimente 2041, 2043 ou 2046.</p>
+        </div>
+        <div class="res" id="res" aria-live="polite"><p class="vazio">O andamento aparece aqui.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="orcamento" style="padding-top:0">
+    <div class="wrap">
+      <div class="cab"><h2>Ordem de serviço</h2><p>Preencha como faria no balcão. A gente responde pelo WhatsApp com o valor e o prazo.</p></div>
+      <div class="os-grid">
+        <form class="os" id="f-os" novalidate>
+          <div class="cabos"><b>Ordem de serviço</b><span id="os-num"></span></div>
+          <div class="linha">
+            <div class="f"><label for="o-placa">Placa</label><input id="o-placa" maxlength="8" placeholder="ABC1D23" style="text-transform:uppercase"></div>
+            <div class="f"><label for="o-modelo">Modelo</label><input id="o-modelo" placeholder="Onix 1.0"></div>
+            <div class="f"><label for="o-ano">Ano</label><input id="o-ano" inputmode="numeric" maxlength="4"></div>
+            <div class="f"><label for="o-km">Km</label><input id="o-km" inputmode="numeric"></div>
+          </div>
+          <fieldset class="f"><legend>O que está acontecendo</legend>
+            <div class="checks" id="checks"></div>
+          </fieldset>
+          <div class="f" style="margin-bottom:12px"><label for="o-desc">Descreva com suas palavras</label><textarea id="o-desc" placeholder="Ex.: barulho na roda dianteira quando passo em lombada"></textarea></div>
+          <div class="linha" style="grid-template-columns:1fr 1fr">
+            <div class="f"><label for="o-nome">Seu nome</label><input id="o-nome" autocomplete="name"></div>
+            <div class="f"><label for="o-quando">Pode trazer</label><select id="o-quando"><option>Esta semana</option><option>Hoje, é urgente</option><option>Semana que vem</option><option>Preciso de guincho</option></select></div>
+          </div>
+          <p class="erro" id="erro" role="alert"></p>
+          <button class="btn" type="submit">Enviar ordem de serviço</button>
+        </form>
+        <div class="lado">
+          <figure><img src="/img/modelos/1625047509248-ec889cbff17f-g.jpg" alt="Mecânico inspecionando o motor" loading="lazy"></figure>
+          <ul>
+            <li>Diagnóstico com scanner: R$ 120, abatido se você fizer o serviço aqui.</li>
+            <li>Peça original ou equivalente: você escolhe no orçamento.</li>
+            <li>As peças trocadas voltam com você no porta-malas.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="cab"><h2>Preços dos mais pedidos</h2><p>Mão de obra e peças comuns, por tipo de motor. Valores podem mudar conforme o modelo.</p></div>
+      <div class="tab-wrap"><table>
+        <thead><tr><th>Serviço</th><th>1.0</th><th>1.4 a 1.6</th><th>2.0</th></tr></thead>
+        <tbody>
+          <tr><td>Troca de óleo e filtro</td><td>R$ 189</td><td>R$ 219</td><td>R$ 289</td></tr>
+          <tr><td>Alinhamento e balanceamento</td><td>R$ 120</td><td>R$ 120</td><td>R$ 150</td></tr>
+          <tr><td>Pastilhas de freio dianteiras</td><td>R$ 260</td><td>R$ 290</td><td>R$ 380</td></tr>
+          <tr><td>Higienização do ar-condicionado</td><td>R$ 140</td><td>R$ 140</td><td>R$ 160</td></tr>
+          <tr><td>Revisão completa</td><td>R$ 590</td><td>R$ 690</td><td>R$ 890</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap fotos">
+      <figure><img src="/img/modelos/1771340742493-52fbd5476ccb-p.jpg" alt="Troca de óleo" loading="lazy"><figcaption>Troca de óleo</figcaption></figure>
+      <figure><img src="/img/modelos/1645445522156-9ac06bc7a767-p.jpg" alt="Troca de pneu" loading="lazy"><figcaption>Pneus</figcaption></figure>
+      <figure><img src="/img/modelos/1775590766345-c117265f0c1b-p.jpg" alt="Mecânico com chave inglesa" loading="lazy"><figcaption>Suspensão</figcaption></figure>
+      <figure><img src="/img/modelos/1767681092416-bccf9410bda4-p.jpg" alt="Carros nos elevadores da oficina" loading="lazy"><figcaption>Os elevadores</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="garantia">
+    <div class="wrap">
+      <div><h3>Garantia por escrito</h3><p>90 dias ou 5.000 km no serviço, o que vier primeiro. Peças seguem a garantia do fabricante.</p></div>
+      <div><h3>Carro reserva</h3><p>Para serviços acima de dois dias, emprestamos um carro reserva mediante disponibilidade.</p></div>
+      <div><h3>Pagamento</h3><p>Pix, débito ou crédito em até 6 vezes sem juros acima de R$ 600.</p></div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>Pistão Auto Center · Rua Sales de Oliveira, 1.780 · Vila Industrial · Campinas, SP</span><span>CNPJ 00.000.000/0001-00 (fictício)</span></div></footer>
+
+<script>
+  var WHATSAPP = "5519996515563";
+  var PROBLEMAS = ["Barulho", "Luz no painel", "Freio", "Suspensão", "Ar-condicionado", "Troca de óleo", "Revisão", "Embreagem", "Superaquecendo", "Não liga"];
+  var ETAPAS = ["Recebido", "Diagnóstico", "Aguardando peça", "Em serviço", "Pronto"];
+  // Exemplos de OS para a demonstração (na versão real, viriam de uma planilha ou banco de dados)
+  var ORDENS = {
+    "2041": { carro: "Onix 1.0 · FHK-2B41", etapa: 4, nota: "Pronto para retirada. Troca de pastilhas e alinhamento feitos." },
+    "2043": { carro: "HB20 1.6 · EZT-9A10", etapa: 2, nota: "Bomba d'água encomendada, chega amanhã às 10h." },
+    "2046": { carro: "Strada 1.4 · GBA-4C77", etapa: 1, nota: "Em diagnóstico. Ligamos até as 16h com o orçamento." }
+  };
+  function $(id) { return document.getElementById(id); }
+  $("checks").innerHTML = PROBLEMAS.map(function (p) { return '<label><input type="checkbox" value="' + p + '"> ' + p + "</label>"; }).join("");
+  $("os-num").textContent = "Nº " + (2050 + new Date().getDate());
+
+  $("f-consulta").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var n = $("num-os").value.replace(/\D/g, ""), o = ORDENS[n];
+    if (!o) { $("res").innerHTML = '<p class="vazio">Não achamos a OS ' + (n || "") + '. Confira o número no canhoto ou fale com a gente.</p>'; return; }
+    $("res").innerHTML = "<h3>OS " + n + " · " + o.carro + "</h3><p>" + o.nota + '</p><ol class="etapas">' + ETAPAS.map(function (et, i) {
+      return '<li class="' + (i < o.etapa ? "feito" : i === o.etapa ? "agora" : "") + '">' + et + "</li>";
+    }).join("") + "</ol>";
+  });
+
+  $("f-os").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var placa = $("o-placa").value.trim().toUpperCase(), modelo = $("o-modelo").value.trim(), nome = $("o-nome").value.trim();
+    var probs = [].slice.call(document.querySelectorAll("#checks input:checked")).map(function (c) { return c.value; });
+    var desc = $("o-desc").value.trim();
+    if (!placa || !modelo) { $("erro").textContent = "Preencha a placa e o modelo do carro."; return; }
+    if (!probs.length && !desc) { $("erro").textContent = "Marque o problema ou descreva com suas palavras."; return; }
+    if (!nome) { $("erro").textContent = "Escreva o seu nome."; return; }
+    $("erro").textContent = "";
+    var msg = ["Olá! Ordem de serviço pelo site da Pistão.", "", "Carro: " + modelo + ($("o-ano").value ? " " + $("o-ano").value : "") + " · placa " + placa + ($("o-km").value ? " · " + $("o-km").value + " km" : "")];
+    if (probs.length) msg.push("Problema: " + probs.join(", "));
+    if (desc) msg.push("Descrição: " + desc);
+    msg.push("Pode trazer: " + $("o-quando").value, "Nome: " + nome);
+    window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg.join("\n")), "_blank", "noopener");
+  });
+</script>
+</body>
+</html>

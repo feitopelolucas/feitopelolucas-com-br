@@ -57,7 +57,7 @@
   .cat-cab::after{content:"";flex:1;height:1px;background:var(--borda)}
   .cat>p{margin:0 0 6px;color:var(--suave);font-style:italic;font-family:Alegreya,serif}
   .item{display:grid;grid-template-columns:76px 1fr auto;align-items:center;gap:14px;padding:14px 0;border-bottom:1px dashed var(--borda)}
-  .item.sem-foto{grid-template-columns:1fr auto}
+  .item.sem-foto::before{content:"";width:76px}
   .item img{width:76px;height:76px;border-radius:50%;object-fit:cover;background:var(--vinho-claro);border:3px solid var(--papel);box-shadow:0 2px 0 var(--borda)}
   .item h3{font-size:1.08rem;font-weight:700}
   .item p{margin:1px 0 3px;color:var(--suave);font-size:.94rem}

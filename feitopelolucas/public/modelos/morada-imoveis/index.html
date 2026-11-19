@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morada Imóveis · Casas e apartamentos em Campinas</title>
+<meta name="description" content="Imóveis para alugar e comprar em Campinas. Filtre por bairro e quartos, veja as fotos e marque a visita pelo WhatsApp com o código do imóvel.">
+<meta name="theme-color" content="#173a35">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--verde:#173a35;--verde-2:#0f2a26;--latao:#c7a356;--areia:#f5f1ea;--papel:#fff;--texto:#1b2422;--suave:#5e6b67;--fio:#e2ddd2}
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--areia);color:var(--texto);font:16px/1.55 "Inter Tight",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{margin:0;font-family:Fraunces,Georgia,serif;font-weight:500;line-height:1.08}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  button,select{font:inherit;color:inherit}
+  :focus-visible{outline:3px solid var(--latao);outline-offset:2px}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+  .demo{background:#000;color:#c9d2cf;font-size:.8rem}
+  .demo .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:7px;padding-bottom:7px}
+  .demo a{color:var(--latao);font-weight:600;text-decoration:none}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:6px;background:var(--verde);color:#fff;font-weight:600;text-decoration:none;border:0;cursor:pointer}
+  .btn:hover{background:var(--verde-2)}
+  .btn.latao{background:var(--latao);color:var(--verde-2)}
+
+  .topo{background:var(--verde);color:#fff}
+  .topo .wrap{display:flex;justify-content:space-between;align-items:center;height:70px}
+  .logo{font:600 1.5rem Fraunces;text-decoration:none}
+  .logo small{display:block;font:500 .7rem "Inter Tight";letter-spacing:.2em;text-transform:uppercase;color:var(--latao)}
+  .topo .creci{font-size:.85rem;color:#b8c8c4}
+
+  .abre{background:var(--verde);color:#fff;padding:40px 0 0}
+  .abre h1{font-size:clamp(2.4rem,5vw,3.8rem);max-width:18ch;margin-bottom:14px}
+  .abre p{color:#c8d6d2;max-width:52ch;margin:0 0 28px}
+  .filtros{background:#fff;color:var(--texto);border-radius:10px 10px 0 0;padding:18px;display:grid;grid-template-columns:repeat(4,1fr) auto;gap:12px;align-items:end}
+  .filtros label{font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--suave);display:block;margin-bottom:4px}
+  .filtros select{width:100%;min-height:46px;border:1px solid var(--fio);border-radius:6px;padding:0 10px;background:#fff}
+  .seg{display:flex;border:1px solid var(--fio);border-radius:6px;overflow:hidden}
+  .seg button{flex:1;min-height:44px;border:0;background:#fff;cursor:pointer;font-weight:600}
+  .seg button[aria-pressed="true"]{background:var(--verde);color:#fff}
+  @media (max-width:860px){.filtros{grid-template-columns:1fr 1fr}.filtros .btn{grid-column:1/-1}}
+
+  .lista-sec{padding:34px 0 70px}
+  .contagem{color:var(--suave);margin:0 0 18px}
+  .lista{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+  @media (max-width:960px){.lista{grid-template-columns:1fr 1fr}}
+  @media (max-width:600px){.lista{grid-template-columns:1fr}}
+  .card{background:var(--papel);border:1px solid var(--fio);border-radius:10px;overflow:hidden;text-align:left;padding:0;cursor:pointer;display:block;width:100%}
+  .card figure{margin:0;aspect-ratio:4/3;position:relative;overflow:hidden}
+  .card figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .card:hover figure img{transform:scale(1.03)}
+  .etiqueta{position:absolute;top:12px;left:12px;background:var(--verde);color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:4px}
+  .ficha{padding:16px 18px 18px}
+  .ficha .cod{font:600 .78rem "Inter Tight";letter-spacing:.14em;color:var(--latao)}
+  .ficha h3{font-size:1.3rem;margin:4px 0 10px}
+  .ficha dl{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:0 0 12px;border-top:1px solid var(--fio);border-bottom:1px solid var(--fio)}
+  .ficha dl div{padding:8px 0;text-align:center;border-right:1px solid var(--fio)}
+  .ficha dl div:last-child{border:0}
+  .ficha dt{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--suave)}
+  .ficha dd{margin:0;font-weight:700}
+  .ficha .preco{font:600 1.35rem Fraunces}
+  .ficha .preco small{font:400 .85rem "Inter Tight";color:var(--suave)}
+  .nada{background:#fff;border:1px dashed var(--fio);border-radius:10px;padding:40px;text-align:center;color:var(--suave)}
+
+  /* Detalhe */
+  dialog{width:min(980px,100%);max-height:100%;padding:0;border:0;border-radius:12px;background:var(--areia);color:var(--texto)}
+  dialog::backdrop{background:rgba(10,24,22,.7)}
+  .det-topo{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:#fff;border-bottom:1px solid var(--fio);position:sticky;top:0;z-index:1}
+  .det-topo button{width:42px;height:42px;border:0;border-radius:8px;background:var(--areia);font-size:1.4rem;cursor:pointer}
+  .det-car{--col:100%;--col-m:100%;--seta-top:calc(50% - 30px)}
+  .det-car .ant{left:12px}.det-car .prox{right:12px}
+  .det-car .pontos{margin:10px 0 0}
+  .det-car figure{aspect-ratio:16/9;position:relative;overflow:hidden}
+  .det-car img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .det-corpo{padding:22px;display:grid;grid-template-columns:1.4fr 1fr;gap:26px}
+  .det-corpo h2{font-size:1.9rem;margin-bottom:8px}
+  .det-corpo p{color:var(--suave);margin:0 0 14px}
+  .det-corpo ul{margin:0;padding-left:18px}
+  .caixa{background:#fff;border:1px solid var(--fio);border-radius:10px;padding:18px}
+  .caixa .lin{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--fio)}
+  .caixa .lin:last-of-type{border:0}
+  .caixa .btn{width:100%;margin-top:14px}
+  @media (max-width:760px){.det-corpo{grid-template-columns:1fr}}
+
+  .sobre{background:#fff;padding:70px 0}
+  .sobre .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .sobre h3{font-size:1.4rem;margin-bottom:8px}
+  .sobre p{margin:0;color:var(--suave)}
+  @media (max-width:760px){.sobre .wrap{grid-template-columns:1fr}}
+  footer{background:var(--verde-2);color:#b8c8c4;padding:28px 0;font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+  /* Carrossel (deslize, setas e pontos) */
+  .carrossel{position:relative}
+  .carrossel .trilho{display:grid;grid-auto-flow:column;grid-auto-columns:var(--col,calc((100% - 28px)/3));gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+  .carrossel .trilho::-webkit-scrollbar{display:none}
+  .carrossel .trilho>*{scroll-snap-align:start;margin:0}
+  .carrossel .seta{position:absolute;top:var(--seta-top,38%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.94);color:#222;cursor:pointer;font-size:1.3rem;box-shadow:0 6px 16px rgba(0,0,0,.18);z-index:2}
+  .carrossel .seta:disabled{opacity:0;pointer-events:none}
+  .carrossel .ant{left:-12px}.carrossel .prox{right:-12px}
+  .carrossel .pontos{display:flex;justify-content:center;gap:6px;margin-top:16px}
+  .carrossel .pontos button{width:8px;height:8px;border-radius:99px;border:0;padding:0;background:rgba(0,0,0,.18);cursor:pointer;transition:width .2s}
+  .carrossel .pontos button[aria-current="true"]{width:24px;background:currentColor}
+  @media (max-width:760px){.carrossel .trilho{grid-auto-columns:var(--col-m,82%)}.carrossel .ant{left:4px}.carrossel .prox{right:4px}}
+</style>
+</head>
+<body>
+<div class="demo"><div class="wrap"><span>Modelo de demonstração. Imobiliária, imóveis e preços são fictícios.</span><a href="/#site-morada-imoveis">Quero um site assim →</a></div></div>
+
+<header class="topo"><div class="wrap"><a class="logo" href="#">Morada<small>Imóveis</small></a><span class="creci">CRECI-SP 00000-J (fictício)</span></div></header>
+
+<main>
+  <div class="abre">
+    <div class="wrap">
+      <h1>Imóveis que a gente visitou antes de anunciar.</h1>
+      <p>Todo imóvel desta lista foi fotografado por nós, com a planta conferida e a documentação vista. Filtre e marque a visita direto com o corretor.</p>
+      <form class="filtros" id="filtros" onsubmit="return false">
+        <div><label>Negócio</label><div class="seg" id="negocio"><button type="button" data-v="aluguel" aria-pressed="true">Alugar</button><button type="button" data-v="venda" aria-pressed="false">Comprar</button></div></div>
+        <div><label for="f-tipo">Tipo</label><select id="f-tipo"><option value="">Todos</option><option>Apartamento</option><option>Casa</option><option>Estúdio</option></select></div>
+        <div><label for="f-bairro">Bairro</label><select id="f-bairro"><option value="">Todos</option></select></div>
+        <div><label for="f-quartos">Quartos</label><select id="f-quartos"><option value="0">Qualquer</option><option value="1">1 ou mais</option><option value="2">2 ou mais</option><option value="3">3 ou mais</option></select></div>
+        <button class="btn" type="button" id="limpar">Limpar</button>
+      </form>
+    </div>
+  </div>
+
+  <section class="lista-sec">
+    <div class="wrap">
+      <p class="contagem" id="contagem" aria-live="polite"></p>
+      <div class="lista" id="lista"></div>
+    </div>
+  </section>
+
+  <section class="sobre">
+    <div class="wrap">
+      <div><h3>Visita sem pressa</h3><p>Visitas de segunda a sábado, inclusive no fim da tarde. O corretor chega dez minutos antes para abrir e acender as luzes.</p></div>
+      <div><h3>Aluguel sem fiador</h3><p>Trabalhamos com seguro-fiança e título de capitalização. A análise sai em até 48 horas.</p></div>
+      <div><h3>Quer vender ou alugar?</h3><p>Avaliamos o seu imóvel de graça e fazemos as fotos. <a class="wa" data-msg="Olá! Quero anunciar meu imóvel com a Morada.">Fale com a gente</a>.</p></div>
+    </div>
+  </section>
+</main>
+
+<dialog id="det" aria-labelledby="det-titulo">
+  <div class="det-topo"><b id="det-cod"></b><button id="fechar" aria-label="Fechar">×</button></div>
+  <div class="carrossel det-car" data-carrossel style="color:var(--verde)"><div class="trilho" id="det-gal" tabindex="0" aria-label="Fotos do imóvel"></div><button class="seta ant" aria-label="Anterior">‹</button><button class="seta prox" aria-label="Próximo">›</button><div class="pontos"></div></div>
+  <div class="det-corpo">
+    <div><h2 id="det-titulo"></h2><p id="det-desc"></p><ul id="det-itens"></ul></div>
+    <div class="caixa"><div id="det-valores"></div><a class="btn" id="det-visita" target="_blank" rel="noopener">Quero visitar</a></div>
+  </div>
+</dialog>
+
+<footer><div class="wrap"><span>Morada Imóveis · Av. Norte-Sul, 2.010, sala 4 · Campinas, SP</span><span>Seg a sex 9h–18h · Sáb 9h–13h</span></div></footer>
+
+<script>
+  var WHATSAPP = "5519996515563";
+  // Cada imóvel: código, negócio, tipo, título, bairro, quartos, vagas, m², valor, extras, fotos, descrição, itens
+  var IMOVEIS = [
+    { cod: "A101", negocio: "aluguel", tipo: "Apartamento", titulo: "Apartamento de 2 quartos perto do Centro de Convivência", bairro: "Cambuí", quartos: 2, vagas: 1, m2: 68, valor: 2400, extra: [["Condomínio", 650], ["IPTU", 95]],
+      fotos: ["1587945566191-3b8273fb7c1f", "1502672260266-1c1ef2d93688", "1663811396777-05505d999151"], desc: "Sexto andar, sol da manhã, piso de madeira na sala e nos quartos. Prédio com portaria 24 horas.", itens: ["Armários na cozinha e nos quartos", "Varanda com rede de proteção", "Aceita pet"] },
+    { cod: "A102", negocio: "aluguel", tipo: "Estúdio", titulo: "Estúdio mobiliado a duas quadras da rodoviária", bairro: "Centro", quartos: 1, vagas: 0, m2: 32, valor: 1500, extra: [["Condomínio", 380], ["IPTU", 40]],
+      fotos: ["1522708323590-d24dbb6b0267", "1689043528099-2ba014dd7c64", "1564078516393-cf04bd966897"], desc: "Ideal para quem mora sozinho. Vem com cama, sofá, geladeira e fogão.", itens: ["Mobiliado", "Lavanderia coletiva", "Internet inclusa no condomínio"] },
+    { cod: "C201", negocio: "venda", tipo: "Casa", titulo: "Casa térrea com quintal em rua sem saída", bairro: "Barão Geraldo", quartos: 3, vagas: 2, m2: 160, valor: 890000, extra: [["IPTU anual", 2400]],
+      fotos: ["1523217582562-09d0def993a6", "1773578978637-c9771e7a9913", "1737233463795-34fccdfc67bb"], desc: "Terreno de 300 m², uma suíte, cozinha integrada à sala e quintal com espaço para horta.", itens: ["Suíte com closet", "Aquecimento solar", "Aceita financiamento"] },
+    { cod: "C202", negocio: "venda", tipo: "Casa", titulo: "Casa em condomínio com piscina", bairro: "Gramado", quartos: 4, vagas: 4, m2: 320, valor: 1650000, extra: [["Condomínio", 980], ["IPTU anual", 6200]],
+      fotos: ["1600596542815-ffad4c1539a9", "1560448204-e02f11c3d0e2", "1564078516393-cf04bd966897"], desc: "Duas suítes no térreo, área gourmet e piscina aquecida. Condomínio com segurança e área verde.", itens: ["Piscina aquecida", "Área gourmet", "Energia solar"] },
+    { cod: "A103", negocio: "venda", tipo: "Apartamento", titulo: "Apartamento de 3 quartos de frente para a lagoa", bairro: "Taquaral", quartos: 3, vagas: 2, m2: 96, valor: 720000, extra: [["Condomínio", 890], ["IPTU anual", 1900]],
+      fotos: ["1669236391740-92560fcf89f0", "1560448204-e02f11c3d0e2", "1689043528099-2ba014dd7c64"], desc: "Andar alto, vista para a lagoa, uma suíte. Prédio com piscina e salão de festas.", itens: ["Vista para a lagoa", "Lazer completo", "Documentação em dia"] },
+    { cod: "C203", negocio: "aluguel", tipo: "Casa", titulo: "Casa moderna com piscina e escritório", bairro: "Gramado", quartos: 3, vagas: 3, m2: 240, valor: 5800, extra: [["IPTU", 420]],
+      fotos: ["1580587771525-78b9dba3b914", "1773578978637-c9771e7a9913", "1737233463795-34fccdfc67bb"], desc: "Pé-direito duplo na sala, escritório com entrada independente e piscina com deck.", itens: ["Escritório separado", "Piscina com deck", "Sistema de alarme"] }
+  ];
+  var negocio = "aluguel";
+  function $(id) { return document.getElementById(id); }
+  function foto(id, t) { return "/img/modelos/" + id + "-" + (t || "g") + ".jpg"; }
+  function reais(v) { return v.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 }); }
+  function link(msg) { return "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg); }
+
+  var bairros = []; IMOVEIS.forEach(function (i) { if (bairros.indexOf(i.bairro) < 0) bairros.push(i.bairro); });
+  $("f-bairro").innerHTML += bairros.sort().map(function (b) { return "<option>" + b + "</option>"; }).join("");
+
+  function filtrar() {
+    var tipo = $("f-tipo").value, bairro = $("f-bairro").value, q = +$("f-quartos").value;
+    var l = IMOVEIS.filter(function (i) { return i.negocio === negocio && (!tipo || i.tipo === tipo) && (!bairro || i.bairro === bairro) && i.quartos >= q; });
+    $("contagem").textContent = l.length + (l.length === 1 ? " imóvel para " : " imóveis para ") + (negocio === "aluguel" ? "alugar" : "comprar");
+    $("lista").innerHTML = l.length ? l.map(function (i) {
+      return '<button class="card" data-cod="' + i.cod + '"><figure><img src="' + foto(i.fotos[0]) + '" alt="' + i.titulo + '" loading="lazy"><span class="etiqueta">' + (i.negocio === "aluguel" ? "Aluguel" : "Venda") + "</span></figure>" +
+        '<div class="ficha"><span class="cod">' + i.cod + " · " + i.bairro.toUpperCase() + "</span><h3>" + i.titulo + "</h3>" +
+        "<dl><div><dt>Quartos</dt><dd>" + i.quartos + "</dd></div><div><dt>Vagas</dt><dd>" + i.vagas + "</dd></div><div><dt>Área</dt><dd>" + i.m2 + " m²</dd></div></dl>" +
+        '<span class="preco">' + reais(i.valor) + (i.negocio === "aluguel" ? " <small>por mês</small>" : "") + "</span></div></button>";
+    }).join("") : '<div class="nada" style="grid-column:1/-1">Nenhum imóvel com esses filtros. Tente outro bairro ou menos quartos.</div>';
+  }
+  $("negocio").addEventListener("click", function (e) {
+    var b = e.target.closest("button"); if (!b) return;
+    negocio = b.dataset.v;
+    this.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+    filtrar();
+  });
+  $("filtros").addEventListener("change", filtrar);
+  $("limpar").addEventListener("click", function () { $("f-tipo").value = ""; $("f-bairro").value = ""; $("f-quartos").value = "0"; filtrar(); });
+
+  $("lista").addEventListener("click", function (e) {
+    var c = e.target.closest(".card"); if (!c) return;
+    var i = IMOVEIS.find(function (x) { return x.cod === c.dataset.cod; });
+    $("det-cod").textContent = "Código " + i.cod + " · " + i.bairro;
+    $("det-gal").innerHTML = i.fotos.map(function (f, n) { return '<figure><img src="' + foto(f) + '" alt="Foto ' + (n + 1) + " do imóvel " + i.cod + '"></figure>'; }).join("");
+    $("det-titulo").textContent = i.titulo;
+    $("det-desc").textContent = i.desc + " " + i.m2 + " m², " + i.quartos + (i.quartos === 1 ? " quarto" : " quartos") + ", " + i.vagas + (i.vagas === 1 ? " vaga." : " vagas.");
+    $("det-itens").innerHTML = i.itens.map(function (t) { return "<li>" + t + "</li>"; }).join("");
+    $("det-valores").innerHTML = '<div class="lin"><span>' + (i.negocio === "aluguel" ? "Aluguel" : "Valor") + "</span><b>" + reais(i.valor) + "</b></div>" +
+      i.extra.map(function (x) { return '<div class="lin"><span>' + x[0] + "</span><span>" + reais(x[1]) + "</span></div>"; }).join("");
+    $("det-visita").href = link("Olá! Quero visitar o imóvel " + i.cod + " (" + i.titulo + ", " + i.bairro + ").");
+    $("det").showModal();
+    $("det-gal").scrollLeft = 0;
+    window.dispatchEvent(new Event("resize"));
+  });
+  $("fechar").addEventListener("click", function () { $("det").close(); });
+  $("det").addEventListener("click", function (e) { if (e.target === this) this.close(); });
+  document.querySelectorAll(".wa").forEach(function (a) { a.href = link(a.dataset.msg); a.target = "_blank"; a.rel = "noopener"; });
+  filtrar();
+
+  /* Carrossel: deslize, setas e pontos */
+  document.querySelectorAll("[data-carrossel]").forEach(function (c) {
+    var t = c.querySelector(".trilho"), s = t.children, p = c.querySelector(".pontos"), a = c.querySelector(".ant"), n = c.querySelector(".prox");
+    function passo() { return s.length > 1 ? s[1].offsetLeft - s[0].offsetLeft : t.clientWidth; }
+    function visiveis() { return Math.max(1, Math.round(t.clientWidth / passo())); }
+    function atual() { return Math.round(t.scrollLeft / passo()); }
+    function total() { return Math.max(1, s.length - visiveis() + 1); }
+    function ir(i) { i = Math.max(0, Math.min(total() - 1, i)); t.scrollTo({ left: i * passo(), behavior: "smooth" }); }
+    function marcar() {
+      var at = atual(), tt = total();
+      if (p) {
+        if (p.children.length !== tt) p.innerHTML = Array.from({ length: tt }, function (_, i) { return '<button aria-label="Ir para ' + (i + 1) + '"></button>'; }).join("");
+        [].forEach.call(p.children, function (b, i) { b.setAttribute("aria-current", i === at); });
+      }
+      if (a) a.disabled = at <= 0;
+      if (n) n.disabled = at >= tt - 1;
+    }
+    if (a) a.onclick = function () { ir(atual() - 1); };
+    if (n) n.onclick = function () { ir(atual() + 1); };
+    if (p) p.addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) ir([].indexOf.call(p.children, b)); });
+    t.addEventListener("scroll", function () { clearTimeout(t._m); t._m = setTimeout(marcar, 80); });
+    t.addEventListener("keydown", function (e) { if (e.key === "ArrowRight") ir(atual() + 1); if (e.key === "ArrowLeft") ir(atual() - 1); });
+    window.addEventListener("resize", marcar);
+    marcar();
+  });
+</script>
+</body>
+</html>

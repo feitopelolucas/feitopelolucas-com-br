@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trio Sereno · Música ao vivo para casamentos e eventos</title>
+<meta name="description" content="Voz e violão, trio ou banda com DJ para casamentos, aniversários e eventos. Busque no repertório, escolha as músicas e peça o orçamento.">
+<meta name="theme-color" content="#121212">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+  :root{--palco:#121212;--palco-2:#1c1c1c;--fita:#e8e1c8;--papel:#f7f4ec;--neon:#ff5a3c;--texto:#f1ede4;--suave:#a9a397;--fio:#2c2c2c}
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--palco);color:var(--texto);font:16.5px/1.6 "DM Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{margin:0;line-height:1;font-weight:700;letter-spacing:-.02em}
+  .marcador{font-family:"Permanent Marker",cursive;font-weight:400;letter-spacing:0}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  button,input,select{font:inherit;color:inherit}
+  :focus-visible{outline:3px solid var(--neon);outline-offset:2px}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 18px}
+  .demo{background:#000;color:#a9a397;font-size:.8rem}
+  .demo .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:7px;padding-bottom:7px}
+  .demo a{color:var(--neon);font-weight:700;text-decoration:none}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:999px;background:var(--neon);color:#120a07;font-weight:700;text-decoration:none;border:0;cursor:pointer}
+  .btn:hover{background:#ff7659}
+  .btn.borda{background:transparent;color:var(--texto);border:1.5px solid var(--texto)}
+
+  .capa{position:relative;min-height:640px;display:flex;flex-direction:column}
+  .capa>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+  .capa::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,18,18,.6),rgba(18,18,18,.1) 40%,rgba(18,18,18,1))}
+  .capa>*:not(img){position:relative;z-index:1;width:100%}
+  .capa .barra{display:flex;justify-content:space-between;align-items:center;padding-top:22px}
+  .logo{font:400 1.8rem "Permanent Marker";text-decoration:none}
+  .capa .conteudo{margin-top:auto;padding-bottom:64px}
+  .capa h1{font-size:clamp(3rem,8vw,6.2rem);max-width:11ch;margin-bottom:16px}
+  .capa p{max-width:46ch;color:#d9d3c6;font-size:1.1rem;margin:0 0 26px}
+  .capa .acoes{display:flex;gap:12px;flex-wrap:wrap}
+
+  section{padding:80px 0}
+  .cab h2{font-size:clamp(2.2rem,5vw,3.4rem)}
+  .cab p{color:var(--suave);margin:10px 0 30px;max-width:56ch}
+
+  /* Formações */
+  .formacoes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media (max-width:860px){.formacoes{grid-template-columns:1fr}}
+  .form{background:var(--palco-2);border:1px solid var(--fio);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+  .form figure{margin:0;aspect-ratio:4/3;overflow:hidden}
+  .form img{width:100%;height:100%;object-fit:cover}
+  .form div{padding:20px;display:flex;flex-direction:column;flex:1}
+  .form h3{font-size:1.5rem}
+  .form p{color:var(--suave);margin:6px 0 12px}
+  .form b{margin-top:auto;font-size:1.15rem}
+  .form b small{font-weight:400;color:var(--suave)}
+
+  /* Setlist */
+  .set-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:start}
+  @media (max-width:900px){.set-grid{grid-template-columns:1fr}}
+  .busca{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+  .busca input{flex:1;min-width:200px;min-height:48px;border-radius:999px;border:1.5px solid var(--fio);background:var(--palco-2);padding:0 18px}
+  .momentos{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+  .momentos button{border:1.5px solid var(--fio);background:transparent;border-radius:999px;padding:6px 14px;cursor:pointer;font-size:.9rem}
+  .momentos button[aria-pressed="true"]{background:var(--texto);color:var(--palco);border-color:var(--texto)}
+  .musicas{list-style:none;margin:0;padding:0;max-height:520px;overflow-y:auto;border-top:1px solid var(--fio)}
+  .musicas li{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;padding:10px 4px;border-bottom:1px solid var(--fio)}
+  .musicas small{color:var(--suave);display:block}
+  .musicas .tag{font-size:.75rem;border:1px solid var(--fio);border-radius:999px;padding:2px 8px;color:var(--suave);white-space:nowrap}
+  .musicas button{width:36px;height:36px;border-radius:50%;border:1.5px solid var(--fio);background:none;cursor:pointer;font-size:1.1rem}
+  .musicas button[aria-pressed="true"]{background:var(--neon);border-color:var(--neon);color:#120a07}
+  .vazio{color:var(--suave);padding:16px 4px}
+
+  .folha{background:var(--papel);color:#1b1b1b;padding:30px 26px 26px;position:sticky;top:16px;box-shadow:0 24px 40px -20px rgba(0,0,0,.8)}
+  .folha::before{content:"";position:absolute;top:-12px;left:50%;width:120px;height:26px;margin-left:-60px;background:rgba(232,225,200,.85)}
+  .folha h3{font:400 1.8rem "Permanent Marker";margin-bottom:12px}
+  .folha ol{margin:0 0 14px;padding-left:26px;font:400 1.05rem/1.7 "Special Elite",monospace;min-height:120px}
+  .folha .vaz{font:400 1rem "Special Elite";color:#777}
+  .folha label{display:block;font-weight:700;font-size:.85rem;margin-top:12px}
+  .folha select{width:100%;min-height:44px;border:1px solid #ccc5b3;background:#fff;color:#1b1b1b;padding:0 10px;margin-top:4px}
+  .folha .tot{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid #1b1b1b;margin-top:16px;padding-top:10px}
+  .folha .tot b{font:400 1.6rem "Permanent Marker"}
+  .folha .btn{width:100%;margin-top:14px}
+
+  .fotos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .fotos figure{margin:0;aspect-ratio:4/3;overflow:hidden;border-radius:8px}
+  .fotos img{width:100%;height:100%;object-fit:cover}
+  @media (max-width:700px){.fotos{grid-template-columns:1fr 1fr}}
+
+  .duvidas{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media (max-width:760px){.duvidas{grid-template-columns:1fr}}
+  .duvidas h3{font-size:1.2rem;margin-bottom:6px}
+  .duvidas p{margin:0;color:var(--suave)}
+  footer{border-top:1px solid var(--fio);color:var(--suave);padding:26px 0;font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="demo"><div class="wrap"><span>Modelo de demonstração. Grupo, repertório e preços são fictícios.</span><a href="/#site-trio-sereno">Quero um site assim →</a></div></div>
+
+<header class="capa">
+  <img src="/img/modelos/1632054553195-bfd7034fee25-g.jpg" alt="" fetchpriority="high">
+  <div class="wrap barra"><a class="logo" href="#">Trio Sereno</a><a class="btn borda" href="#setlist">Repertório</a></div>
+  <div class="wrap conteudo">
+    <h1>A música certa na hora do sim.</h1>
+    <p>Voz, violão e percussão para cerimônias, e banda com DJ para a festa. São 340 músicas no repertório: escolha as suas e monte o setlist do seu evento.</p>
+    <div class="acoes"><a class="btn" href="#setlist">Montar meu setlist</a><a class="btn borda" href="#formacoes">Formações e valores</a></div>
+  </div>
+</header>
+
+<main>
+  <section id="formacoes">
+    <div class="wrap">
+      <div class="cab"><h2>Formações</h2><p>Valores para Campinas e região, com som e iluminação básica inclusos.</p></div>
+      <div class="formacoes" id="lista-form"></div>
+    </div>
+  </section>
+
+  <section id="setlist" style="padding-top:0">
+    <div class="wrap">
+      <div class="cab"><h2>Monte o setlist</h2><p>Busque por música ou artista e toque no + para colocar na folha. O setlist vai junto com o pedido de orçamento.</p></div>
+      <div class="set-grid">
+        <div>
+          <div class="busca"><input id="busca" type="search" placeholder="Buscar música ou artista" aria-label="Buscar no repertório"></div>
+          <div class="momentos" id="momentos" role="group" aria-label="Momento do evento"></div>
+          <ul class="musicas" id="musicas" aria-live="polite"></ul>
+        </div>
+        <aside class="folha">
+          <h3>Setlist</h3>
+          <ol id="escolhidas"></ol>
+          <label for="f-form">Formação</label>
+          <select id="f-form"></select>
+          <label for="f-horas">Duração</label>
+          <select id="f-horas"><option value="2">2 horas</option><option value="3" selected>3 horas</option><option value="4">4 horas</option><option value="5">5 horas</option></select>
+          <div class="tot"><span>Estimativa</span><b id="total"></b></div>
+          <button class="btn" id="enviar">Pedir orçamento</button>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap fotos">
+      <figure><img src="/img/modelos/1566808907623-51b8fc382454-p.jpg" alt="Banda no palco" loading="lazy"></figure>
+      <figure><img src="/img/modelos/1526749464606-83091e34a261-p.jpg" alt="Baterista tocando" loading="lazy"></figure>
+      <figure><img src="/img/modelos/1774814305802-12849b9ccc89-p.jpg" alt="DJ com mesa de som" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap duvidas">
+      <div><h3>Música fora do repertório</h3><p>Aprendemos até três músicas novas por evento, sem custo, se o pedido vier com 30 dias de antecedência.</p></div>
+      <div><h3>Som e energia</h3><p>Levamos som para até 250 pessoas. Precisamos de duas tomadas 220 V a menos de 10 metros do palco.</p></div>
+      <div><h3>Reserva da data</h3><p>40% para reservar, o restante até uma semana antes. Contrato por escrito.</p></div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>Trio Sereno · Campinas e região</span><span>@triosereno</span></div></footer>
+
+<script>
+  var WHATSAPP = "5519996515563";
+  var FORMACOES = [
+    { nome: "Voz e violão", desc: "Para cerimônia e coquetel, em espaços pequenos.", hora: 450, foto: "1525201548942-d8732f6617a0" },
+    { nome: "Trio", desc: "Voz, violão e percussão. O nosso formato mais pedido.", hora: 750, foto: "1550219363-d0adfaa43d0f" },
+    { nome: "Banda e DJ", desc: "Banda de cinco músicos e DJ nos intervalos.", hora: 1600, foto: "1618107095181-e3ba0f53ee59" }
+  ];
+  // Música | artista | momento
+  var REPERTORIO = [
+    ["Velha infância", "Tribalistas", "Cerimônia"], ["Trem-bala", "Ana Vilela", "Cerimônia"], ["A thousand years", "Christina Perri", "Cerimônia"],
+    ["Canon em ré", "Pachelbel", "Cerimônia"], ["Eu sei que vou te amar", "Tom Jobim", "Cerimônia"], ["Perfect", "Ed Sheeran", "Cerimônia"],
+    ["Garota de Ipanema", "Tom Jobim", "Coquetel"], ["Mas que nada", "Jorge Ben Jor", "Coquetel"], ["Fly me to the moon", "Frank Sinatra", "Coquetel"],
+    ["Ain't no sunshine", "Bill Withers", "Coquetel"], ["Sozinho", "Caetano Veloso", "Coquetel"], ["Pra você guardei o amor", "Nando Reis", "Coquetel"],
+    ["País tropical", "Jorge Ben Jor", "Festa"], ["Evidências", "Chitãozinho & Xororó", "Festa"], ["I wanna dance with somebody", "Whitney Houston", "Festa"],
+    ["Uptown funk", "Bruno Mars", "Festa"], ["Anunciação", "Alceu Valença", "Festa"], ["Dancing queen", "ABBA", "Festa"], ["Ai se eu te pego", "Michel Teló", "Festa"]
+  ];
+  var MOMENTOS = ["Todos", "Cerimônia", "Coquetel", "Festa"];
+  var momento = "Todos", escolhidas = [];
+  function $(id) { return document.getElementById(id); }
+  function reais(v) { return v.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 }); }
+  function norm(s) { return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); }
+
+  $("lista-form").innerHTML = FORMACOES.map(function (f) {
+    return '<article class="form"><figure><img src="/img/modelos/' + f.foto + '-g.jpg" alt="' + f.nome + '" loading="lazy"></figure><div><h3>' + f.nome + "</h3><p>" + f.desc + "</p><b>" + reais(f.hora) + " <small>por hora · mínimo 2 h</small></b></div></article>";
+  }).join("");
+  $("f-form").innerHTML = FORMACOES.map(function (f, i) { return '<option value="' + i + '"' + (i === 1 ? " selected" : "") + ">" + f.nome + "</option>"; }).join("");
+  $("momentos").innerHTML = MOMENTOS.map(function (m) { return '<button aria-pressed="' + (m === momento) + '">' + m + "</button>"; }).join("");
+
+  function listar() {
+    var q = norm($("busca").value.trim());
+    var l = REPERTORIO.map(function (m, i) { return { m: m, i: i }; }).filter(function (x) {
+      return (momento === "Todos" || x.m[2] === momento) && (!q || norm(x.m[0] + " " + x.m[1]).indexOf(q) >= 0);
+    });
+    $("musicas").innerHTML = l.length ? l.map(function (x) {
+      var on = escolhidas.indexOf(x.i) >= 0;
+      return "<li><span>" + x.m[0] + "<small>" + x.m[1] + '</small></span><span class="tag">' + x.m[2] + '</span><button data-i="' + x.i + '" aria-pressed="' + on + '" aria-label="' + (on ? "Tirar " : "Pôr ") + x.m[0] + ' no setlist">' + (on ? "✓" : "+") + "</button></li>";
+    }).join("") : '<li class="vazio">Não está na lista. Peça mesmo assim: aprendemos músicas novas.</li>';
+  }
+  function folha() {
+    $("escolhidas").innerHTML = escolhidas.length ? escolhidas.map(function (i) { return "<li>" + REPERTORIO[i][0] + "</li>"; }).join("") : '<li class="vaz" style="list-style:none;margin-left:-26px">nenhuma música ainda</li>';
+    var f = FORMACOES[+$("f-form").value], h = +$("f-horas").value;
+    $("total").textContent = reais(f.hora * h);
+  }
+  $("busca").addEventListener("input", listar);
+  $("momentos").addEventListener("click", function (e) {
+    var b = e.target.closest("button"); if (!b) return;
+    momento = b.textContent;
+    this.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+    listar();
+  });
+  $("musicas").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-i]"); if (!b) return;
+    var i = +b.dataset.i, k = escolhidas.indexOf(i);
+    if (k >= 0) escolhidas.splice(k, 1); else escolhidas.push(i);
+    listar(); folha();
+  });
+  ["f-form", "f-horas"].forEach(function (id) { $(id).addEventListener("change", folha); });
+  $("enviar").addEventListener("click", function () {
+    var f = FORMACOES[+$("f-form").value], h = +$("f-horas").value;
+    var msg = ["Olá! Quero um orçamento do Trio Sereno.", "", "Formação: " + f.nome, "Duração: " + h + " horas", "Estimativa do site: " + reais(f.hora * h)];
+    if (escolhidas.length) msg = msg.concat(["", "Setlist:"], escolhidas.map(function (i, n) { return (n + 1) + ". " + REPERTORIO[i][0] + " (" + REPERTORIO[i][1] + ")"; }));
+    msg.push("", "Data e local do evento: ");
+    window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg.join("\n")), "_blank", "noopener");
+  });
+  listar(); folha();
+</script>
+</body>
+</html>

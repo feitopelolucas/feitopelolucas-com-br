@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Babel Idiomas · Inglês e espanhol para adultos</title>
+<meta name="description" content="Turmas de até 8 alunos de inglês e espanhol. Faça o teste de nível em 2 minutos, veja os horários da sua turma e agende uma aula experimental.">
+<meta name="theme-color" content="#1d2f6f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Kalam:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root{--anil:#1d2f6f;--anil-2:#142255;--vermelho:#d23b2f;--papel:#fdfcf8;--quadric:#e7ecf6;--creme:#f4f2ec;--texto:#1b1f2a;--suave:#5f6577;--fio:#dfe2ea}
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--creme);color:var(--texto);font:17px/1.6 "Source Serif 4",Georgia,serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{margin:0;font-family:"Space Grotesk",sans-serif;font-weight:700;line-height:1.05;letter-spacing:-.015em}
+  .sans{font-family:"Space Grotesk",sans-serif}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  button{font:inherit;color:inherit}
+  :focus-visible{outline:3px solid var(--vermelho);outline-offset:2px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+  .demo{background:var(--anil-2);color:#c9d0ea;font:13px/1.4 "Space Grotesk"}
+  .demo .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:7px;padding-bottom:7px}
+  .demo a{color:#ffb4ac;font-weight:600;text-decoration:none}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:6px;background:var(--anil);color:#fff;font:600 1rem "Space Grotesk";text-decoration:none;border:0;cursor:pointer}
+  .btn:hover{background:var(--anil-2)}
+  .btn.verm{background:var(--vermelho)}
+  .btn.verm:hover{background:#b02f24}
+
+  .topo .wrap{display:flex;justify-content:space-between;align-items:center;height:72px}
+  .logo{font:700 1.5rem "Space Grotesk";text-decoration:none;color:var(--anil)}
+  .logo span{color:var(--vermelho)}
+  .topo nav{display:flex;gap:22px;font:500 .95rem "Space Grotesk"}
+  .topo nav a{text-decoration:none;color:var(--suave)}
+  @media (max-width:720px){.topo nav{display:none}}
+
+  .abre .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center;padding-top:24px;padding-bottom:70px}
+  .abre h1{font-size:clamp(2.6rem,5.6vw,4.2rem);margin-bottom:18px;color:var(--anil)}
+  .abre h1 em{font-style:normal;color:var(--vermelho)}
+  .abre p{color:var(--suave);max-width:44ch;margin:0 0 26px;font-size:1.1rem}
+  .abre figure{margin:0;aspect-ratio:5/4;border-radius:8px;overflow:hidden}
+  .abre figure img{width:100%;height:100%;object-fit:cover}
+  @media (max-width:860px){.abre .wrap{grid-template-columns:1fr}}
+
+  section{padding:76px 0}
+  .cab h2{font-size:clamp(2rem,4.4vw,3rem);color:var(--anil)}
+  .cab p{color:var(--suave);margin:8px 0 28px;max-width:58ch}
+
+  /* Prova */
+  .prova{background:var(--papel);border:1px solid var(--fio);border-radius:4px;padding:34px 34px 30px;max-width:820px;margin:0 auto;position:relative;
+    background-image:linear-gradient(var(--quadric) 1px,transparent 1px),linear-gradient(90deg,var(--quadric) 1px,transparent 1px);background-size:24px 24px;box-shadow:0 22px 40px -28px rgba(29,47,111,.5)}
+  .prova .cabec{display:grid;grid-template-columns:1fr auto;gap:12px;border-bottom:2px solid var(--texto);padding-bottom:12px;margin-bottom:20px;background:var(--papel)}
+  .prova .cabec b{font:700 1.2rem "Space Grotesk";text-transform:uppercase;letter-spacing:.06em}
+  .prova .cabec span{font:400 .95rem "Space Grotesk";color:var(--suave)}
+  .q{margin-bottom:20px;background:var(--papel);padding:4px 0}
+  .q p{margin:0 0 8px;font-weight:600}
+  .q p b{font-family:"Space Grotesk";color:var(--anil);margin-right:6px}
+  .alts{display:grid;grid-template-columns:repeat(2,1fr);gap:6px 18px}
+  @media (max-width:560px){.alts{grid-template-columns:1fr}}
+  .alts label{display:flex;gap:8px;align-items:center;cursor:pointer;padding:4px 0}
+  .alts input{accent-color:var(--anil);width:18px;height:18px}
+  .q.certo p::after{content:" ✓";color:#2f8f4e;font-family:Kalam;font-size:1.3rem}
+  .q.errado p::after{content:" ✗";color:var(--vermelho);font-family:Kalam;font-size:1.3rem}
+  .nota-final{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;border-top:2px solid var(--texto);padding-top:18px;margin-top:6px;background:var(--papel)}
+  .nota-final .n{width:110px;height:110px;border:3px solid var(--vermelho);border-radius:50%;display:grid;place-items:center;font:700 2.8rem Kalam;color:var(--vermelho)}
+  .nota-final h3{font-size:1.5rem;color:var(--anil)}
+  .nota-final p{margin:4px 0 12px;color:var(--suave)}
+  .prova .acoes{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;background:var(--papel)}
+
+  /* Grade */
+  .grade-wrap{overflow-x:auto;background:#fff;border:1px solid var(--fio);border-radius:8px}
+  table{width:100%;border-collapse:collapse;min-width:640px;font-family:"Space Grotesk"}
+  th,td{padding:13px 14px;border-bottom:1px solid var(--fio);text-align:left;font-size:.95rem}
+  th{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--suave);background:#f8f9fc}
+  tr.sua{background:#fff4e8}
+  tr.sua td:first-child{box-shadow:inset 4px 0 0 var(--vermelho)}
+  .vagas{font-weight:600}
+  .vagas.poucas{color:var(--vermelho)}
+
+  .metodo{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media (max-width:860px){.metodo{grid-template-columns:1fr}}
+  .metodo figure{margin:0 0 12px;aspect-ratio:4/3;overflow:hidden;border-radius:8px}
+  .metodo img{width:100%;height:100%;object-fit:cover}
+  .metodo h3{font-size:1.25rem;margin-bottom:6px;color:var(--anil)}
+  .metodo p{margin:0;color:var(--suave)}
+
+  .precos{background:var(--anil);color:#dfe4f5}
+  .precos .cab h2{color:#fff}
+  .precos .cab p{color:#c0c8e6}
+  .planos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media (max-width:860px){.planos{grid-template-columns:1fr}}
+  .plano{border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:24px}
+  .plano h3{color:#fff;font-size:1.3rem}
+  .plano b{display:block;font:700 2.4rem "Space Grotesk";color:#fff;margin:10px 0 2px}
+  .plano p{margin:0;font-size:.95rem}
+
+  footer{background:var(--anil-2);color:#b8c1e2;padding:28px 0;font:14px "Space Grotesk"}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="demo"><div class="wrap"><span>Modelo de demonstração. Escola, turmas e preços são fictícios.</span><a href="/#site-babel-idiomas">Quero um site assim →</a></div></div>
+
+<header class="topo"><div class="wrap"><a class="logo" href="#">Babel<span>.</span></a><nav aria-label="Seções"><a href="#teste">Teste de nível</a><a href="#turmas">Turmas</a><a href="#precos">Mensalidade</a></nav><a class="btn" href="#teste">Fazer o teste</a></div></header>
+
+<main>
+  <div class="abre">
+    <div class="wrap">
+      <div>
+        <h1>Inglês para quem já desistiu <em>uma vez.</em></h1>
+        <p>Turmas de até 8 adultos, duas vezes por semana, com professor que fala português quando precisa. Comece pelo teste de nível: são 6 perguntas e dois minutos.</p>
+        <a class="btn verm" href="#teste">Descobrir meu nível</a>
+      </div>
+      <figure><img src="/img/modelos/1758270704763-22072a90d3b6-g.jpg" alt="Alunos adultos conversando em sala de aula" fetchpriority="high"></figure>
+    </div>
+  </div>
+
+  <section id="teste">
+    <div class="wrap">
+      <div class="cab" style="text-align:center"><h2>Teste de nível</h2><p style="margin-left:auto;margin-right:auto">Responda sem consultar nada. Se não souber, deixe em branco: o resultado fica mais certo.</p></div>
+      <form class="prova" id="prova" onsubmit="return false">
+        <div class="cabec"><b>Avaliação de inglês</b><span>Babel Idiomas · 6 questões</span></div>
+        <div id="questoes"></div>
+        <div class="acoes"><button class="btn" id="corrigir">Corrigir minha prova</button></div>
+        <div class="nota-final" id="resultado" hidden>
+          <div class="n" id="nota"></div>
+          <div><h3 id="nivel"></h3><p id="nivel-desc"></p><a class="btn verm" id="exp" target="_blank" rel="noopener">Agendar aula experimental</a></div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="turmas" style="padding-top:0">
+    <div class="wrap">
+      <div class="cab"><h2>Turmas abertas</h2><p>Depois do teste, a sua turma aparece destacada.</p></div>
+      <div class="grade-wrap"><table id="grade"></table></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="cab"><h2>Como é a aula</h2></div>
+      <div class="metodo">
+        <div><figure><img src="/img/modelos/1758270704262-ecc82b23dc37-g.jpg" alt="Professor explicando para a turma" loading="lazy"></figure><h3>Fala desde o primeiro dia</h3><p>70% da aula é conversa em dupla ou em grupo. Gramática entra quando faz falta.</p></div>
+        <div><figure><img src="/img/modelos/1668092547528-62bdec358652-g.jpg" alt="Aluna escrevendo no caderno" loading="lazy"></figure><h3>Caderno, não apostila</h3><p>Material próprio, impresso por unidade. Sem livro de R$ 400 por semestre.</p></div>
+        <div><figure><img src="/img/modelos/1655337690727-5224680c8c07-g.jpg" alt="Grupo de alunos estudando juntos" loading="lazy"></figure><h3>Reposição sem drama</h3><p>Perdeu uma aula? Assista em outra turma do mesmo nível na mesma semana.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="precos" id="precos">
+    <div class="wrap">
+      <div class="cab"><h2>Mensalidade</h2><p>Sem taxa de matrícula. Material incluso.</p></div>
+      <div class="planos">
+        <div class="plano"><h3>Turma</h3><b>R$ 349</b><p>por mês · 2 aulas de 1h20 por semana</p></div>
+        <div class="plano"><h3>Dupla</h3><b>R$ 590</b><p>por mês · você e mais uma pessoa, horário combinado</p></div>
+        <div class="plano"><h3>Particular</h3><b>R$ 140</b><p>por aula · presencial ou online</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>Babel Idiomas · Rua Dr. Emílio Ribas, 640 · Cambuí · Campinas, SP</span><span>Seg a sex 8h–21h30 · Sáb 8h–13h</span></div></footer>
+
+<script>
+  var WHATSAPP = "5519996515563";
+  // Pergunta | alternativas | índice da certa
+  var QUESTOES = [
+    ["She ___ to work by bus every day.", ["go", "goes", "going", "is go"], 1],
+    ["I ___ never been to London.", ["has", "am", "have", "was"], 2],
+    ["If it rains tomorrow, we ___ stay home.", ["will", "would", "are", "did"], 0],
+    ["He asked me where ___.", ["did I live", "I lived", "do I live", "I am live"], 1],
+    ["By the time we arrived, the movie ___.", ["has started", "had started", "starts", "was start"], 1],
+    ["I wish I ___ more time to study last year.", ["have", "had had", "would have", "has"], 1]
+  ];
+  var NIVEIS = [
+    { min: 0, nome: "Básico 1", desc: "Você vai começar do começo, com calma. É a turma mais procurada." },
+    { min: 2, nome: "Básico 2", desc: "Você já reconhece o presente e o passado. Agora é ganhar vocabulário e soltar a fala." },
+    { min: 4, nome: "Intermediário", desc: "Você se vira bem. A turma foca em conversa, filmes e situações de trabalho." },
+    { min: 6, nome: "Avançado", desc: "Você já domina a gramática. A turma é de conversação e escrita." }
+  ];
+  var TURMAS = [
+    ["Básico 1", "Seg e qua", "19h00", 3], ["Básico 1", "Ter e qui", "7h00", 5], ["Básico 2", "Seg e qua", "20h30", 2],
+    ["Básico 2", "Sábado", "9h00", 4], ["Intermediário", "Ter e qui", "19h00", 1], ["Intermediário", "Seg e qua", "12h15", 6], ["Avançado", "Ter e qui", "20h30", 3]
+  ];
+  var nivelAtual = null;
+  function $(id) { return document.getElementById(id); }
+  $("questoes").innerHTML = QUESTOES.map(function (q, i) {
+    return '<div class="q" id="q' + i + '"><p><b>' + (i + 1) + ".</b>" + q[0] + '</p><div class="alts">' + q[1].map(function (a, j) {
+      return '<label><input type="radio" name="q' + i + '" value="' + j + '"> ' + String.fromCharCode(97 + j) + ") " + a + "</label>";
+    }).join("") + "</div></div>";
+  }).join("");
+  function grade() {
+    $("grade").innerHTML = "<thead><tr><th>Nível</th><th>Dias</th><th>Horário</th><th>Vagas</th></tr></thead><tbody>" + TURMAS.map(function (t) {
+      return '<tr class="' + (t[0] === nivelAtual ? "sua" : "") + '"><td>' + t[0] + (t[0] === nivelAtual ? " · seu nível" : "") + "</td><td>" + t[1] + "</td><td>" + t[2] + '</td><td class="vagas' + (t[3] <= 2 ? " poucas" : "") + '">' + t[3] + (t[3] === 1 ? " vaga" : " vagas") + "</td></tr>";
+    }).join("") + "</tbody>";
+  }
+  $("corrigir").addEventListener("click", function () {
+    var pts = 0;
+    QUESTOES.forEach(function (q, i) {
+      var m = document.querySelector("[name=q" + i + "]:checked"), ok = m && +m.value === q[2];
+      if (ok) pts++;
+      $("q" + i).className = "q " + (ok ? "certo" : "errado");
+    });
+    var n = NIVEIS.filter(function (x) { return pts >= x.min; }).pop();
+    nivelAtual = n.nome;
+    $("nota").textContent = pts + "/6";
+    $("nivel").textContent = "Seu nível: " + n.nome;
+    $("nivel-desc").textContent = n.desc;
+    $("exp").href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Olá! Fiz o teste da Babel Idiomas e acertei " + pts + " de 6 (nível " + n.nome + "). Quero agendar uma aula experimental.");
+    $("resultado").hidden = false;
+    grade();
+  });
+  grade();
+</script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forno Velho · Pizza de forno a lenha</title>
+<meta name="description" content="Pizza de forno a lenha com massa de fermentação natural. Monte meio a meio, escolha a borda e peça pelo WhatsApp.">
+<meta name="theme-color" content="#1f1813">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--forno:#1f1813;--forno-2:#2b211a;--papelao:#c9a173;--papelao-2:#b58c5c;--molho:#c0321f;--manjericao:#3f7a3a;--queijo:#f6e7c1;--creme:#f7efe2;--texto:#231a14;--suave:#6f6052;--fio:#e3d4bd}
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--creme);color:var(--texto);font:17px/1.5 "Barlow Semi Condensed",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{margin:0;font-family:"Abril Fatface",Georgia,serif;font-weight:400;line-height:1}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  button,select{font:inherit;color:inherit}
+  :focus-visible{outline:3px solid var(--molho);outline-offset:2px}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 18px}
+  .demo{background:#000;color:#cbbba8;font-size:.82rem}
+  .demo .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:7px;padding-bottom:7px}
+  .demo a{color:#f2b36b;font-weight:600;text-decoration:none}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:6px;background:var(--molho);color:#fff;font-weight:700;text-decoration:none;border:0;cursor:pointer;letter-spacing:.02em}
+  .btn:hover{background:#a2291a}
+  .btn:disabled{background:#bba893;cursor:not-allowed}
+
+  .capa{background:var(--forno);color:var(--creme)}
+  .capa .barra{display:flex;justify-content:space-between;align-items:center;height:70px}
+  .logo{font:400 1.8rem "Abril Fatface";text-decoration:none}
+  .capa .barra span{color:#cbbba8;font-size:.95rem}
+  .capa .grade{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center;padding:30px 0 70px}
+  .capa h1{font-size:clamp(3rem,7vw,5.6rem);margin-bottom:18px}
+  .capa h1 span{color:#f2b36b}
+  .capa p{color:#d8c8b4;max-width:40ch;margin:0 0 26px;font-size:1.12rem}
+  .capa .fotos{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .capa .fotos figure{margin:0;aspect-ratio:4/5;overflow:hidden;border-radius:6px}
+  .capa .fotos img{width:100%;height:100%;object-fit:cover}
+  @media (max-width:860px){.capa .grade{grid-template-columns:1fr}}
+
+  section{padding:76px 0}
+  .cab h2{font-size:clamp(2.2rem,4.6vw,3.2rem)}
+  .cab p{color:var(--suave);margin:8px 0 28px;max-width:56ch}
+
+  /* Montagem */
+  .montar{display:grid;grid-template-columns:1fr 1.1fr;gap:34px;align-items:start}
+  @media (max-width:900px){.montar{grid-template-columns:1fr}}
+  .caixa{background:var(--papelao);border-radius:6px;padding:26px;position:sticky;top:16px;box-shadow:inset 0 0 0 10px var(--papelao-2),0 20px 34px -22px rgba(0,0,0,.6)}
+  .caixa .tampa{font:700 .9rem "Barlow Semi Condensed";letter-spacing:.2em;text-transform:uppercase;color:#5b4026;text-align:center;margin-bottom:12px}
+  .disco{width:min(100%,340px);aspect-ratio:1;margin:0 auto;border-radius:50%;background:#d8a35a;padding:16px;box-shadow:0 0 0 4px #a8742f inset}
+  .disco .rec{width:100%;height:100%;border-radius:50%;background:var(--queijo);position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
+  .disco .rec div{display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;font:400 1.25rem/1.1 "Abril Fatface";color:var(--molho)}
+  .disco .rec div+div{border-left:3px dashed rgba(192,50,31,.35)}
+  .disco .rec.inteira{grid-template-columns:1fr}
+  .caixa .info{text-align:center;color:#3b2a1a;margin-top:14px;font-weight:600}
+  .caixa .preco{font:400 2.2rem "Abril Fatface";text-align:center;color:var(--texto)}
+
+  .passo{margin-bottom:22px}
+  .passo h3{font:700 1rem "Barlow Semi Condensed";letter-spacing:.12em;text-transform:uppercase;color:var(--suave);margin-bottom:8px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{position:relative}
+  .chip input{position:absolute;opacity:0;pointer-events:none}
+  .chip span{display:inline-flex;flex-direction:column;padding:9px 14px;border:1.5px solid var(--fio);border-radius:8px;background:#fff;cursor:pointer;line-height:1.2}
+  .chip small{color:var(--suave);font-size:.82rem}
+  .chip input:checked+span{background:var(--forno);border-color:var(--forno);color:#fff}
+  .chip input:checked+span small{color:#cbbba8}
+  .chip input:focus-visible+span{outline:3px solid var(--molho)}
+  select{width:100%;min-height:48px;border:1.5px solid var(--fio);border-radius:8px;background:#fff;padding:0 10px}
+  .duas{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .regra{font-size:.9rem;color:var(--suave);margin-top:6px}
+
+  .pedido{margin-top:20px;background:#fff;border:1px solid var(--fio);border-radius:8px;padding:18px}
+  .pedido h3{font-size:1.4rem;margin-bottom:10px}
+  .pedido ul{list-style:none;margin:0 0 10px;padding:0}
+  .pedido li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dashed var(--fio)}
+  .pedido li button{border:0;background:none;color:var(--molho);cursor:pointer;font-weight:600}
+  .pedido .tot{display:flex;justify-content:space-between;font-weight:700;font-size:1.2rem;margin:10px 0}
+  .pedido .btn{width:100%}
+
+  /* Cardápio */
+  .sabores{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media (max-width:860px){.sabores{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.sabores{grid-template-columns:1fr}}
+  .sabor{background:#fff;border-radius:8px;overflow:hidden;border:1px solid var(--fio);display:flex;flex-direction:column}
+  .sabor figure{margin:0;aspect-ratio:4/3;overflow:hidden;background:#eadcc6}
+  .sabor img{width:100%;height:100%;object-fit:cover}
+  .sabor .c{padding:14px 16px;flex:1}
+  .sabor h3{font-size:1.35rem;margin-bottom:4px}
+  .sabor p{margin:0;color:var(--suave);font-size:.95rem}
+  .sabor .pr{margin-top:8px;font-weight:700}
+  .sabores{grid-template-columns:repeat(4,1fr)}
+  @media (max-width:960px){.sabores{grid-template-columns:1fr 1fr}}
+  .mais{list-style:none;margin:0;padding:0;columns:2;column-gap:40px}
+  .mais li{display:flex;align-items:baseline;gap:8px;padding:10px 0;break-inside:avoid}
+  .mais li i{flex:1;border-bottom:2px dotted var(--fio)}
+  @media (max-width:700px){.mais{columns:1}}
+
+  /* Faixa de fotos em movimento */
+  .esteira{background:var(--forno);padding:0 0 70px;overflow:hidden}
+  .esteira p{color:#cbbba8;text-align:center;margin:0 0 18px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:.85rem}
+  .esteira .fita{display:flex;gap:12px;width:max-content;animation:anda 48s linear infinite}
+  .esteira:hover .fita{animation-play-state:paused}
+  .esteira figure{margin:0;width:260px;aspect-ratio:1;border-radius:50%;overflow:hidden;flex:none;border:6px solid #3a2d23}
+  .esteira img{width:100%;height:100%;object-fit:cover}
+  @keyframes anda{to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion:reduce){.esteira .fita{animation:none;flex-wrap:wrap;width:auto;justify-content:center}}
+  .forno{background:var(--forno);color:var(--creme)}
+  .forno .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .forno figure{margin:0;aspect-ratio:1;overflow:hidden;border-radius:6px}
+  .forno img{width:100%;height:100%;object-fit:cover}
+  .forno .txt{grid-column:1/-1;max-width:640px;margin-bottom:10px}
+  .forno h2{font-size:2.6rem;margin-bottom:10px}
+  .forno p{color:#d8c8b4;margin:0}
+  @media (max-width:760px){.forno .wrap{grid-template-columns:1fr 1fr}.forno figure:last-child{display:none}}
+
+  footer{background:var(--forno-2);color:#cbbba8;padding:28px 0;font-size:.92rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="demo"><div class="wrap"><span>Modelo de demonstração. Pizzaria, preços e endereço são fictícios.</span><a href="/#site-forno-velho">Quero um site assim →</a></div></div>
+
+<header class="capa">
+  <div class="wrap">
+    <div class="barra"><a class="logo" href="#">Forno Velho</a><span>Ter a dom · 18h às 23h30</span></div>
+    <div class="grade">
+      <div>
+        <h1>Lenha de eucalipto, <span>massa de 48 horas.</span></h1>
+        <p>A massa descansa dois dias antes de ir ao forno, que trabalha a 420 °C. Sai em 90 segundos, com a borda estufada e a base fina.</p>
+        <a class="btn" href="#montar">Montar minha pizza</a>
+      </div>
+      <div class="fotos">
+        <figure><img src="/img/modelos/1763647836753-e06fe1f8707b-g.jpg" alt="Pizzas assando no forno a lenha" fetchpriority="high"></figure>
+        <figure><img src="/img/modelos/1759311944061-db7b99b3e205-g.jpg" alt="Pizza saindo do forno"></figure>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="montar">
+    <div class="wrap">
+      <div class="cab"><h2>Monte meio a meio</h2><p>Escolha o tamanho, um ou dois sabores e a borda. No meio a meio, vale o preço do sabor mais caro.</p></div>
+      <div class="montar">
+        <aside class="caixa" aria-live="polite">
+          <p class="tampa">Forno Velho · pizza de lenha</p>
+          <div class="disco"><div class="rec" id="disco"></div></div>
+          <p class="info" id="info"></p>
+          <p class="preco" id="preco"></p>
+        </aside>
+        <div>
+          <form id="form" onsubmit="return false">
+            <div class="passo"><h3>Tamanho</h3><div class="chips" id="c-tam"></div></div>
+            <div class="passo"><h3>Sabores</h3>
+              <div class="duas"><select id="s1" aria-label="Primeiro sabor"></select><select id="s2" aria-label="Segundo sabor"></select></div>
+              <p class="regra">Para pizza inteira, deixe o segundo sabor como "Inteira".</p>
+            </div>
+            <div class="passo"><h3>Borda</h3><div class="chips" id="c-borda"></div></div>
+            <button class="btn" id="add">Pôr no pedido</button>
+          </form>
+          <div class="pedido" id="pedido" hidden>
+            <h3>Seu pedido</h3>
+            <ul id="lista"></ul>
+            <label for="bairro" style="font-weight:600">Entrega</label>
+            <select id="bairro"></select>
+            <div class="tot"><span>Total</span><span id="total"></span></div>
+            <button class="btn" id="enviar">Enviar pelo WhatsApp</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="cab"><h2>Cardápio</h2><p>Preço da pizza grande, com 8 fatias. Molho de tomate pelado e muçarela de búfala em todas.</p></div>
+      <div class="sabores" id="sabores"></div>
+      <h3 style="font-size:1.8rem;margin:40px 0 8px">Mais sabores</h3>
+      <ul class="mais" id="mais"></ul>
+    </div>
+  </section>
+
+  <section class="forno">
+    <div class="wrap">
+      <div class="txt"><h2>O forno tem 31 anos.</h2><p>Veio da antiga cantina do bairro e foi remontado tijolo por tijolo. Quem cuida dele é o Seu Antônio, que acende a lenha às quatro da tarde.</p></div>
+      <figure><img src="/img/modelos/1651981075280-9a9e01acbff0-g.jpg" alt="Pizzaiolo abrindo a massa" loading="lazy"></figure>
+      <figure><img src="/img/modelos/1579751626657-72bc17010498-g.jpg" alt="Pizza sobre a mesa de madeira" loading="lazy"></figure>
+      <figure><img src="/img/modelos/1555072956-7758afb20e8f-g.jpg" alt="Mão pegando uma fatia de pizza" loading="lazy"></figure>
+    </div>
+  </section>
+  <div class="esteira" aria-label="Pizzas que saíram do forno">
+    <p>Saindo do forno agora</p>
+    <div class="fita" id="fita"></div>
+  </div>
+</main>
+<footer><div class="wrap"><span>Forno Velho · Rua Barão de Jaguara, 1.420 · Centro · Campinas, SP</span><span>Salão para 60 pessoas · delivery próprio</span></div></footer>
+
+<script>
+  var WHATSAPP = "5519996515563";
+  var TAMANHOS = [["Broto", "4 fatias", 0.55], ["Média", "6 fatias", 0.8], ["Grande", "8 fatias", 1], ["Gigante", "12 fatias", 1.35]];
+  // Sabor | descrição | preço da grande | foto
+  var SABORES = [
+    ["Margherita", "tomate, muçarela de búfala e manjericão", 62, "1513104890138-7c749659a591"],
+    ["Calabresa", "calabresa artesanal, cebola roxa e azeitona", 58, "1692737580547-b45bb4a02356"],
+    ["Rúcula e tomate seco", "muçarela, rúcula fresca e tomate seco", 68, "1593560708920-61dd98c46a4e"],
+    ["Linguiça e cogumelos", "linguiça de pernil e cogumelo paris", 72, "1604382354936-07c5d9983bd3"],
+    ["Portuguesa", "presunto, ovo, cebola, ervilha e azeitona", 66, ""],
+    ["Frango com catupiry", "frango desfiado e catupiry original", 64, ""],
+    ["Quatro queijos", "muçarela, gorgonzola, parmesão e provolone", 70, ""],
+    ["Chocolate com morango", "doce, chocolate ao leite e morango", 66, ""]
+  ];
+  var BORDAS = [["Tradicional", 0], ["Catupiry", 12], ["Cheddar", 12]];
+  var BAIRROS = [["Retirar no balcão", 0], ["Centro", 6], ["Cambuí", 8], ["Guanabara", 8], ["Taquaral", 10]];
+  var pedido = [];
+
+  function $(id) { return document.getElementById(id); }
+  function reais(v) { return "R$ " + v.toFixed(2).replace(".", ","); }
+  function arred(v) { return Math.round(v * 2) / 2; }
+  $("c-tam").innerHTML = TAMANHOS.map(function (t, i) { return '<label class="chip"><input type="radio" name="tam" value="' + i + '"' + (i === 2 ? " checked" : "") + "><span>" + t[0] + "<small>" + t[1] + "</small></span></label>"; }).join("");
+  $("c-borda").innerHTML = BORDAS.map(function (b, i) { return '<label class="chip"><input type="radio" name="borda" value="' + i + '"' + (i === 0 ? " checked" : "") + "><span>" + b[0] + "<small>" + (b[1] ? "+ " + reais(b[1]) : "sem custo") + "</small></span></label>"; }).join("");
+  $("s1").innerHTML = SABORES.map(function (s, i) { return '<option value="' + i + '">' + s[0] + "</option>"; }).join("");
+  $("s2").innerHTML = '<option value="">Inteira</option>' + SABORES.map(function (s, i) { return '<option value="' + i + '">½ ' + s[0] + "</option>"; }).join("");
+  $("bairro").innerHTML = BAIRROS.map(function (b, i) { return '<option value="' + i + '">' + b[0] + (b[1] ? " · " + reais(b[1]) : "") + "</option>"; }).join("");
+
+  function atual() {
+    var t = TAMANHOS[+document.querySelector("[name=tam]:checked").value], b = BORDAS[+document.querySelector("[name=borda]:checked").value];
+    var a = SABORES[+$("s1").value], c = $("s2").value === "" ? null : SABORES[+$("s2").value];
+    if (c === a) c = null;
+    var base = Math.max(a[2], c ? c[2] : 0);
+    return { t: t, b: b, a: a, c: c, preco: arred(base * t[2]) + b[1] };
+  }
+  function pintar() {
+    var p = atual();
+    $("disco").className = "rec" + (p.c ? "" : " inteira");
+    $("disco").innerHTML = "<div>" + p.a[0] + "</div>" + (p.c ? "<div>" + p.c[0] + "</div>" : "");
+    $("info").textContent = p.t[0] + " · " + p.t[1] + " · borda " + p.b[0].toLowerCase();
+    $("preco").textContent = reais(p.preco);
+  }
+  $("form").addEventListener("change", pintar);
+
+  function nomePizza(p) { return p.t[0] + " " + (p.c ? "½ " + p.a[0] + " / ½ " + p.c[0] : p.a[0]) + (p.b[1] ? ", borda " + p.b[0].toLowerCase() : ""); }
+  function totalPedido() { return pedido.reduce(function (s, p) { return s + p.preco; }, 0) + BAIRROS[+$("bairro").value][1]; }
+  function pintarPedido() {
+    $("pedido").hidden = !pedido.length;
+    $("lista").innerHTML = pedido.map(function (p, i) { return "<li><span>" + nomePizza(p) + "</span><span>" + reais(p.preco) + ' <button data-r="' + i + '" aria-label="Remover">×</button></span></li>'; }).join("");
+    $("total").textContent = reais(totalPedido());
+  }
+  $("add").addEventListener("click", function () { pedido.push(atual()); pintarPedido(); });
+  $("lista").addEventListener("click", function (e) { var b = e.target.closest("[data-r]"); if (b) { pedido.splice(+b.dataset.r, 1); pintarPedido(); } });
+  $("bairro").addEventListener("change", pintarPedido);
+  $("enviar").addEventListener("click", function () {
+    var b = BAIRROS[+$("bairro").value];
+    var msg = ["Olá! Pedido para a Forno Velho:", ""].concat(pedido.map(function (p) { return "• " + nomePizza(p) + " (" + reais(p.preco) + ")"; }))
+      .concat(["", "Entrega: " + (b[1] ? b[0] + " (" + reais(b[1]) + ")" : "retirada no balcão"), "Total: " + reais(totalPedido())]);
+    window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg.join("\n")), "_blank", "noopener");
+  });
+
+  // Sabores com foto ficam na grade; os sem foto viram uma lista de texto logo abaixo, para a grade nunca desalinhar.
+  $("sabores").innerHTML = SABORES.filter(function (s) { return s[3]; }).map(function (s) {
+    return '<article class="sabor"><figure><img src="/img/modelos/' + s[3] + '-g.jpg" alt="Pizza ' + s[0] + '" loading="lazy"></figure><div class="c"><h3>' + s[0] + "</h3><p>" + s[1] + '</p><p class="pr">' + reais(s[2]) + "</p></div></article>";
+  }).join("");
+  $("mais").innerHTML = SABORES.filter(function (s) { return !s[3]; }).map(function (s) {
+    return "<li><span><b>" + s[0] + "</b> · " + s[1] + "</span><i></i><b>" + reais(s[2]) + "</b></li>";
+  }).join("");
+  var ESTEIRA = ["1513104890138-7c749659a591", "1565299624946-b28f40a0ae38", "1692737580547-b45bb4a02356", "1604382354936-07c5d9983bd3", "1593560708920-61dd98c46a4e", "1759311944061-db7b99b3e205", "1579751626657-72bc17010498"];
+  // A lista vai duas vezes para a faixa girar sem emenda
+  $("fita").innerHTML = ESTEIRA.concat(ESTEIRA).map(function (f, i) { return '<figure' + (i >= ESTEIRA.length ? ' aria-hidden="true"' : "") + '><img src="/img/modelos/' + f + '-p.jpg" alt="" loading="lazy"></figure>'; }).join("");
+  pintar();
+</script>
+</body>
+</html>
