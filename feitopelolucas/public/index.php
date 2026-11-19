@@ -571,7 +571,7 @@ $ano = date('Y');
           <span class="price"><?= vendido($s) ? '—' : precoHtml($s) ?></span>
         </div>
         <p><?= e($s['resumo']) ?></p>
-        <p class="meta"><?= e($s['categoria']) ?><?= encomenda($s) ? ' · feito com os seus dados' : (!empty($s['exclusivo']) ? ' · exclusivo' : '') ?></p>
+        <p class="meta"><?= e($s['categoria']) ?><?= !empty($s['exclusivo']) ? ' · exclusivo' : '' ?></p>
       </a>
       <?php endforeach; ?>
     </div>

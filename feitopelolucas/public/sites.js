@@ -376,7 +376,7 @@ window.SITES = [
     id: "doce-oficio",
     nome: "Doce Ofício",
     categoria: "Restaurante",
-    resumo: "Confeitaria por encomenda, com o bolo montado como uma receita.",
+    resumo: "Confeitaria de bolos de festa, com o bolo montado como uma receita.",
     descricao: "O cliente monta o bolo num caderno de receitas: tamanho, massa, até dois recheios e cobertura, com o valor mudando a cada escolha. A data de retirada respeita a antecedência mínima e as datas lotadas. Tem carrossel dos bolos entregues. O exemplo é de uma confeitaria fictícia.",
     preco: 1490,
     status: "encomenda",
@@ -386,7 +386,7 @@ window.SITES = [
     cores: ["#3b2a22", "#c2405a"],
     recursos: ["Montagem passo a passo", "Preço que muda na hora", "Antecedência e datas lotadas", "Carrossel de bolos", "Encomenda pelo WhatsApp"],
     en: {
-      resumo: "Made-to-order bakery, with the cake built like a recipe.",
+      resumo: "Party cake bakery, with the cake built like a recipe.",
       descricao: "Customers build the cake in a recipe notebook: size, sponge, up to two fillings and frosting, with the price changing at each choice. The pick-up date respects the minimum notice and the fully booked dates. It has a carousel of delivered cakes. The example is a fictional bakery.",
       recursos: ["Step-by-step cake builder", "Price that updates instantly", "Minimum notice and booked dates", "Carousel of cakes", "Order through WhatsApp"],
     },

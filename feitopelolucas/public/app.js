@@ -110,7 +110,7 @@
           <div class="cover">${cover(s)}${stamp(s)}</div>
           <div class="item-line"><h3>${esc(s.nome)}</h3><span class="price">${isSold(s) ? "—" : priceHtml(s)}</span></div>
           <p>${esc(tx(s, "resumo"))}</p>
-          <p class="meta">${esc(cat(s.categoria))}${isOrder(s) ? T().feitoDados : s.exclusivo ? T().exclusivo : ""}</p>
+          <p class="meta">${esc(cat(s.categoria))}${s.exclusivo ? T().exclusivo : ""}</p>
         </button>`
       )
       .join("");
