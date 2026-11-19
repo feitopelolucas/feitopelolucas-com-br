@@ -3,40 +3,203 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Feito pelo Lucas</title>
-<meta name="description" content="Projetos, jogos e sites feitos pelo Lucas.">
+<title>Feito pelo Lucas — sites, aplicativos e jogos</title>
+<meta name="description" content="Sites prontos à venda, aplicativos para celular, programas para computador e jogos. Feitos pelo Lucas.">
+<meta property="og:title" content="Feito pelo Lucas — sites, aplicativos e jogos">
+<meta property="og:description" content="Sites prontos à venda, aplicativos, programas para computador e jogos.">
+<meta property="og:image" content="/img/fossilcrown.png">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16130f" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<header class="wrap nav">
-  <a class="logo" href="/">feito<span>pelo</span>lucas</a>
-  <nav><a href="#projetos">Projetos</a><a href="#contato">Contato</a></nav>
+
+<header class="wrap top">
+  <a class="name" href="/">Feito pelo Lucas</a>
+  <nav>
+    <a href="#servicos">O que eu faço</a>
+    <a href="#catalogo">Sites à venda</a>
+    <a href="#contato">Contato</a>
+  </nav>
 </header>
 
-<main class="wrap">
-  <section class="hero">
-    <p class="tag">Olá, eu sou o Lucas 👋</p>
-    <h1>Eu faço sites, jogos e ferramentas.</h1>
-    <p class="lead">Tudo por aqui foi feito por mim. Dá uma olhada nos projetos.</p>
-    <a class="btn" href="#projetos">Ver projetos</a>
+<main>
+  <section class="wrap intro">
+    <div class="intro-main">
+    <h1>Eu faço sites, aplicativos <br>e <i>jogos</i>.</h1>
+    <div class="intro-text">
+      <p>Sou o Lucas. Desenvolvo sites, aplicativos para celular, programas para computador e jogos. Alguns sites já estão prontos e à venda nesta página; os demais projetos são feitos sob medida, de acordo com a necessidade do seu negócio.</p>
+      <p class="meta" id="meta"></p>
+    </div>
+    </div>
+    <figure class="portrait">
+      <img src="/img/lucas.jpg" alt="Foto do Lucas, de óculos, terno preto e gravata-borboleta dourada" width="640" height="640">
+      <figcaption>Lucas</figcaption>
+    </figure>
   </section>
 
-  <section id="projetos">
-    <h2>Projetos</h2>
-    <div class="grid">
-      <article class="card"><h3>Projeto 1</h3><p>Descrição curta do projeto.</p></article>
-      <article class="card"><h3>Projeto 2</h3><p>Descrição curta do projeto.</p></article>
-      <article class="card"><h3>Projeto 3</h3><p>Descrição curta do projeto.</p></article>
+  <section id="servicos" class="wrap services">
+    <h2>O que eu faço</h2>
+    <div class="service">
+      <span class="num">01</span>
+      <h3>Sites</h3>
+      <p>Para quem precisa estar na internet: restaurantes, clínicas, escritórios, lojas e portfólios. Você pode <a href="#catalogo">escolher um site pronto</a>, que eu adapto à sua marca, ou encomendar um projeto do zero.</p>
+      <a class="ask" data-msg="Olá, Lucas! Gostaria de um orçamento para um site.">Pedir orçamento</a>
+    </div>
+    <div class="service">
+      <span class="num">02</span>
+      <h3>Aplicativos para celular</h3>
+      <p>Aplicativos que funcionam em Android e iPhone: catálogo de produtos, pedidos, área do cliente, cartão fidelidade e controle interno da equipe. Não é preciso passar por loja de aplicativos: o usuário abre um link e instala o aplicativo diretamente na tela inicial do celular. As atualizações são automáticas, sem necessidade de baixar nada novamente.</p>
+      <a class="ask" data-msg="Olá, Lucas! Gostaria de um orçamento para um aplicativo de celular.">Pedir orçamento</a>
+    </div>
+    <div class="service">
+      <span class="num">03</span>
+      <h3>Programas para computador</h3>
+      <p>Sistemas para Windows que organizam a rotina do seu negócio. Um exemplo é a agenda para consultório: cadastro de pacientes, marcação de horários por profissional, lembretes pelo WhatsApp e histórico de atendimentos. Também desenvolvo sistemas de controle de estoque, caixa e cadastro de clientes.</p>
+      <a class="ask" data-msg="Olá, Lucas! Gostaria de um orçamento para um programa de computador.">Pedir orçamento</a>
+    </div>
+    <div class="service">
+      <span class="num">04</span>
+      <h3>Jogos</h3>
+      <p>Jogos para PC e navegador, do protótipo ao lançamento. O Fossil Crown, apresentado logo abaixo, é um jogo que fiz sozinho e que já está disponível.</p>
+      <a class="ask" data-msg="Olá, Lucas! Gostaria de conversar sobre um jogo.">Pedir orçamento</a>
     </div>
   </section>
 
-  <section id="contato">
-    <h2>Contato</h2>
-    <p>Quer falar comigo? <a href="mailto:contato@feitopelolucas.com.br">contato@feitopelolucas.com.br</a></p>
+  <section class="wrap showcase">
+    <a class="showcase-img" href="https://fossilcrown.com" target="_blank" rel="noopener">
+      <img src="/img/fossilcrown.png" alt="Capa do jogo Fossil Crown, com dinossauros num rancho e um vulcão ao fundo" width="920" height="430" loading="lazy">
+    </a>
+    <div class="showcase-text">
+      <p class="meta">Jogo · PC · projeto próprio · não está à venda</p>
+      <h2>Fossil Crown</h2>
+      <p>Um jogo <i>idle</i> de dinossauros para PC. O rancho fica em uma faixa na parte inferior da tela enquanto você usa o computador: é possível criar dinossauros, chocar ovos, enviá-los em expedições e subir no ranking da arena. É gratuito e não oferece vantagens pagas.</p>
+      <p>Fiz tudo sozinho: o jogo, o servidor do ranking, as atualizações automáticas e o site.</p>
+      <p>O Fossil Crown não está à venda. Ele está aqui para mostrar o tipo de projeto que eu consigo tocar do começo ao fim.</p>
+      <a class="link" href="https://fossilcrown.com" target="_blank" rel="noopener">fossilcrown.com ↗</a>
+    </div>
+  </section>
+
+  <section id="catalogo" class="wrap catalog">
+    <div class="catalog-head">
+      <div>
+        <h2>Sites à venda</h2>
+        <p class="sub">Escolha um modelo e eu faço o seu sob encomenda, com o seu nome, as suas cores, as suas fotos e os seus textos, publicado no seu endereço.</p>
+      </div>
+      <div class="filters" id="filters" aria-label="Filtrar por tipo de negócio"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>Nenhum site nesta categoria no momento.</p>
+  </section>
+
+  <section id="como" class="wrap how">
+    <h2>Como funciona a compra de um site</h2>
+    <ol>
+      <li><b>Você escolhe um site</b> e entra em contato comigo. Se estiver em dúvida entre dois modelos, posso indicar qual combina mais com o seu negócio.</li>
+      <li><b>Combinamos o pagamento.</b> Pix ou transferência: metade no início e metade quando o site estiver no ar.</li>
+      <li><b>Você me envia o material</b>: logotipo, fotos, textos, telefone e endereço. Se não tiver os textos prontos, eu ajudo a escrevê-los.</li>
+      <li><b>Eu adapto e publico</b> o site no seu domínio. O prazo costuma ser de uma semana após o recebimento do material.</li>
+    </ol>
+    <p class="note">Aplicativos, programas e jogos são feitos sob medida; portanto, o prazo e o preço dependem de cada projeto. Conte-me a sua ideia e eu envio um orçamento.</p>
+
+    <div class="terms">
+      <div>
+        <h3>Incluído no preço do site</h3>
+        <ul>
+          <li>Troca de nome, logotipo, cores, fotos e textos</li>
+          <li>Botão de WhatsApp e seus contatos</li>
+          <li>Configuração do domínio</li>
+          <li>Pequenos ajustes durante 30 dias após a entrega</li>
+          <li>Os arquivos do site, que passam a ser seus</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Por conta do cliente</h3>
+        <ul>
+          <li>O registro do domínio (um .com.br custa cerca de R$ 40 por ano)</li>
+          <li>Novas páginas ou funcionalidades, orçadas à parte</li>
+          <li>Fotos profissionais, caso deseje</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap faq">
+    <h2>Perguntas frequentes</h2>
+    <dl>
+      <dt>Outra pessoa pode ter um site igual ao meu?</dt>
+      <dd>Não. Todos os sites são feitos sob encomenda: o modelo mostra o estilo e o que o site faz, e eu monto o seu com o seu nome, as suas cores e as suas informações. Dois clientes podem partir do mesmo modelo, mas cada um recebe um site com a cara do próprio negócio.</dd>
+      <dt>Há cobrança de mensalidade?</dt>
+      <dd>Para sites, não. Você paga apenas o domínio e, na maioria dos casos, a hospedagem é gratuita. Aplicativos e sistemas que dependem de servidor podem ter um custo mensal, que informo antes do início do projeto.</dd>
+      <dt>O aplicativo fica na Play Store ou na App Store?</dt>
+      <dd>Não. Ele fica disponível em um endereço na internet, e qualquer pessoa pode instalá-lo na tela inicial do celular com poucos toques. Assim, você não paga taxas de loja, não depende de aprovação e qualquer alteração chega imediatamente a todos os usuários.</dd>
+      <dt>A agenda do consultório funciona sem internet?</dt>
+      <dd>Sim, se for necessário. Ela pode funcionar apenas no computador da recepção ou ser acessada por vários computadores e pelo celular. Tudo depende da necessidade do consultório.</dd>
+      <dt>Você faz projetos que não estão listados aqui?</dt>
+      <dd>Provavelmente sim. Entre em contato e conte-me do que você precisa.</dd>
+    </dl>
+  </section>
+
+  <section id="contato" class="wrap contact">
+    <h2>Vamos conversar?</h2>
+    <p>Costumo responder no mesmo dia.</p>
+    <p class="contact-links">
+      <a id="cta-whats" href="#" target="_blank" rel="noopener">WhatsApp</a>
+      <a id="cta-mail" href="#">E-mail</a>
+    </p>
   </section>
 </main>
 
-<footer class="wrap foot">© <span id="y"></span> Feito pelo Lucas</footer>
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+<footer class="wrap foot">
+  <span>Feito pelo Lucas, <span id="y"></span>.</span>
+  <a href="#">Voltar ao topo ↑</a>
+</footer>
+
+<dialog id="modal" class="modal" aria-labelledby="m-title">
+  <button class="modal-close" id="m-close" aria-label="Fechar">Fechar</button>
+  <div class="modal-media" id="m-media"></div>
+  <div class="modal-body">
+    <p class="meta" id="m-meta"></p>
+    <h3 id="m-title"></h3>
+    <p id="m-desc"></p>
+    <p class="m-label">O que está incluso</p>
+    <ul class="m-features" id="m-features"></ul>
+    <div class="modal-foot">
+      <p class="m-price" id="m-price"></p>
+      <div class="modal-actions">
+        <a class="link" id="m-demo" target="_blank" rel="noopener">Ver funcionando</a>
+        <a class="btn" href="#m-pedido" id="m-ir">Quero um assim</a>
+      </div>
+    </div>
+
+    <form class="pedido" id="m-pedido" novalidate>
+      <p class="m-label">Peça o seu</p>
+      <p class="pedido-intro">Conte o básico sobre o seu negócio. A mensagem chega pronta no meu WhatsApp, e eu respondo com as próximas etapas. Preencha só o que já souber.</p>
+      <div class="campos">
+        <label>Seu nome<input id="p-nome" type="text" autocomplete="name" required></label>
+        <label>Nome do negócio<input id="p-negocio" type="text" autocomplete="organization" required></label>
+        <label>O que o negócio faz<input id="p-ramo" type="text" placeholder="Ex.: pizzaria, estúdio de pilates"></label>
+        <label>Cidade<input id="p-cidade" type="text" autocomplete="address-level2"></label>
+        <label class="largo">Cores que quer usar<input id="p-cores" type="text" placeholder="Ex.: verde-escuro e creme, ou as cores do meu logotipo"></label>
+        <label class="largo">Informações para o site<textarea id="p-info" rows="4" placeholder="Serviços ou produtos, preços, horários, endereço, Instagram…"></textarea></label>
+      </div>
+      <fieldset class="tenho">
+        <legend>Já tenho</legend>
+        <label><input type="checkbox" value="logotipo"> Logotipo</label>
+        <label><input type="checkbox" value="fotos"> Fotos</label>
+        <label><input type="checkbox" value="textos"> Textos</label>
+        <label><input type="checkbox" value="domínio"> Domínio</label>
+      </fieldset>
+      <p class="pedido-erro" id="p-erro" role="alert"></p>
+      <button class="btn" type="submit">Enviar pelo WhatsApp</button>
+    </form>
+  </div>
+</dialog>
+
+<script src="/sites.js"></script>
+<script src="/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cantinho do Sabor · Cardápio e reservas</title>
+<meta name="description" content="Salgados fritos na hora, sucos e doces caseiros no Cambuí, em Campinas. Monte o pedido para retirar ou peça uma reserva pelo WhatsApp.">
+<meta name="theme-color" content="#6e1d1b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,700;0,800;1,500&family=Alegreya+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --vinho:#6e1d1b;--vinho-esc:#521412;--vinho-claro:#f2dfd7;
+    --creme:#f6eee0;--papel:#fffaf2;--texto:#2a1d18;--suave:#6e5d52;--borda:#e3d3bb;--cinza:#a39587;--erro:#b3261e;--ouro:#c98a1b;
+  }
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  body{margin:0;background:var(--creme);color:var(--texto);font:17px/1.5 "Alegreya Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{margin:0;line-height:1.1}
+  .serif{font-family:Alegreya,Georgia,serif}
+  img{display:block;max-width:100%}
+  button,input,textarea{font:inherit}
+  :focus-visible{outline:3px solid var(--ouro);outline-offset:2px}
+  .wrap{max-width:760px;margin:0 auto;padding:0 18px}
+
+  .demo{background:var(--texto);color:#e6d9c7;font-size:.8rem}
+  .demo .wrap{max-width:1080px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:7px;padding-bottom:7px}
+  .demo a{color:#f3c56b;font-weight:700;text-decoration:none}
+
+  /* Capa */
+  header{background:var(--vinho);color:var(--creme)}
+  .capa{position:relative;height:clamp(220px,38vw,340px);overflow:hidden}
+  .capa img{width:100%;height:100%;object-fit:cover}
+  .capa::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(110,29,27,0) 35%,rgba(110,29,27,1) 100%)}
+  .cab{position:relative;margin-top:-86px;z-index:1;padding-bottom:0}
+  .selo{display:inline-block;padding:4px 12px;border:1.5px solid rgba(246,238,224,.6);border-radius:999px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+  header h1{font-family:Alegreya,Georgia,serif;font-size:clamp(2.4rem,7vw,3.4rem);font-weight:800}
+  header h1 i{font-weight:500;color:#f3c56b}
+  .linha-info{display:flex;flex-wrap:wrap;gap:4px 16px;margin:10px 0 0;font-size:.98rem;color:#f0dccd}
+  .linha-info b{color:#fff}
+  .abas{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:24px}
+  .abas a{display:flex;align-items:center;justify-content:center;min-height:54px;border-radius:14px 14px 0 0;color:var(--creme);font-weight:800;text-decoration:none;background:rgba(255,255,255,.1);letter-spacing:.01em}
+  .abas a[aria-current="page"]{background:var(--creme);color:var(--vinho-esc)}
+
+  .painel[hidden]{display:none}
+
+  /* Cardápio */
+  .cats{position:sticky;top:0;z-index:10;background:rgba(246,238,224,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--borda)}
+  .cats .wrap{display:flex;gap:8px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
+  .cats a{flex:none;display:inline-flex;align-items:center;min-height:42px;padding:0 16px;border-radius:999px;border:1px solid var(--borda);color:var(--vinho-esc);font-weight:700;text-decoration:none;background:var(--papel)}
+  .cats a:hover{background:var(--vinho-claro)}
+  #painel-cardapio main{padding-bottom:120px}
+  .cat{padding-top:30px;scroll-margin-top:70px}
+  .cat-cab{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+  .cat-cab h2{font-family:Alegreya,serif;font-size:1.7rem;font-weight:800;color:var(--vinho)}
+  .cat-cab::after{content:"";flex:1;height:1px;background:var(--borda)}
+  .cat>p{margin:0 0 6px;color:var(--suave);font-style:italic;font-family:Alegreya,serif}
+  .item{display:grid;grid-template-columns:76px 1fr auto;align-items:center;gap:14px;padding:14px 0;border-bottom:1px dashed var(--borda)}
+  .item.sem-foto{grid-template-columns:1fr auto}
+  .item img{width:76px;height:76px;border-radius:50%;object-fit:cover;background:var(--vinho-claro);border:3px solid var(--papel);box-shadow:0 2px 0 var(--borda)}
+  .item h3{font-size:1.08rem;font-weight:700}
+  .item p{margin:1px 0 3px;color:var(--suave);font-size:.94rem}
+  .preco{font-weight:800;color:var(--vinho-esc)}
+  .item.off h3,.item.off .preco{color:var(--cinza)}
+  .item.off img{filter:grayscale(1);opacity:.6}
+  .indisp{padding:6px 10px;border-radius:8px;background:#ebe1d2;color:var(--suave);font-size:.8rem;font-weight:700;text-align:center;line-height:1.2}
+  .qtd{display:flex;align-items:center;gap:2px;border:1px solid var(--borda);border-radius:12px;background:var(--papel)}
+  .qtd button{width:42px;height:42px;border:0;background:none;color:var(--vinho);font-size:1.3rem;font-weight:800;cursor:pointer;border-radius:10px}
+  .qtd button:disabled{color:#cdbfb0;cursor:not-allowed}
+  .qtd span{min-width:22px;text-align:center;font-weight:800}
+
+  .resumo{margin-top:34px;padding:22px;background:var(--papel);border:1px solid var(--borda);border-radius:18px;scroll-margin-top:70px;box-shadow:0 10px 30px -22px rgba(82,20,18,.5)}
+  .resumo h2{font-family:Alegreya,serif;font-size:1.5rem;font-weight:800;margin-bottom:12px}
+  .resumo ul{list-style:none;padding:0;margin:0 0 12px}
+  .resumo li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dashed var(--borda)}
+  .vazio{color:var(--suave);margin:0 0 12px}
+  .total{display:flex;justify-content:space-between;font-size:1.25rem;font-weight:800;margin:6px 0 14px}
+  .total[hidden]{display:none}
+  .retirada{margin:0 0 14px;color:var(--suave);font-size:.94rem}
+  .botao{display:flex;align-items:center;justify-content:center;width:100%;min-height:56px;border:0;border-radius:14px;background:var(--vinho);color:#fff;font-weight:800;font-size:1.04rem;cursor:pointer}
+  .botao:hover{background:var(--vinho-esc)}
+  .botao:disabled{background:#c9b8ac;cursor:not-allowed}
+  .aviso{margin:12px 0 0;font-size:.88rem;color:var(--suave);text-align:center}
+  .barra{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:20;max-width:736px;margin:0 auto;background:var(--vinho);color:#fff;padding:10px 10px 10px 18px;border-radius:16px;display:flex;justify-content:space-between;align-items:center;gap:12px;box-shadow:0 12px 28px rgba(60,15,12,.35)}
+  .barra[hidden]{display:none}
+  .barra strong{font-size:1.05rem}
+  .barra a{display:inline-flex;align-items:center;min-height:46px;padding:0 18px;border-radius:12px;background:var(--creme);color:var(--vinho-esc);font-weight:800;text-decoration:none}
+
+  /* Casa */
+  .casa{margin-top:56px;display:grid;gap:18px}
+  @media (min-width:700px){.casa{grid-template-columns:1.1fr 1fr;align-items:center}}
+  .casa figure{margin:0;border-radius:18px;overflow:hidden;aspect-ratio:4/3}
+  .casa figure img{width:100%;height:100%;object-fit:cover}
+  .casa h2{font-family:Alegreya,serif;font-size:1.7rem;font-weight:800;color:var(--vinho);margin-bottom:8px}
+  .casa p{margin:0 0 10px;color:var(--suave)}
+  .assinatura{font-family:Alegreya,serif;font-style:italic;color:var(--texto)}
+
+  /* Reservas */
+  #painel-reserva main{padding:26px 0 56px}
+  .reserva-grid{display:grid;gap:26px}
+  @media (min-width:760px){#painel-reserva .wrap{max-width:1000px}.reserva-grid{grid-template-columns:1fr 1.15fr;align-items:start}}
+  .salao{border-radius:18px;overflow:hidden;background:var(--papel);border:1px solid var(--borda)}
+  .salao img{width:100%;aspect-ratio:4/3;object-fit:cover}
+  .salao .txt{padding:18px 20px}
+  .salao h2{font-family:Alegreya,serif;font-size:1.45rem;color:var(--vinho);margin-bottom:10px}
+  .destaque{margin:0 0 20px;padding:14px 16px;border-radius:14px;background:var(--vinho-claro);border-left:5px solid var(--vinho);color:var(--vinho-esc);font-weight:700;font-size:.95rem}
+  .info{display:grid;gap:6px;font-size:.98rem}
+  .info b{color:var(--vinho-esc)}
+  .regras h3{font-size:1rem;font-weight:800;margin:8px 0 4px;color:var(--vinho-esc)}
+  .regras ul{margin:0;padding-left:20px}
+  form{display:grid;gap:18px}
+  .campo{display:grid;gap:6px}
+  label{font-weight:700}
+  .opc{font-weight:400;color:var(--suave)}
+  input,textarea{width:100%;min-height:52px;padding:12px 14px;border:1.5px solid var(--borda);border-radius:12px;background:var(--papel);color:var(--texto);font-size:1.05rem}
+  textarea{min-height:96px;resize:vertical}
+  input:focus,textarea:focus{border-color:var(--vinho);outline:none;box-shadow:0 0 0 3px rgba(110,29,27,.15)}
+  .dica{font-size:.86rem;color:var(--suave)}
+  .erro{color:var(--erro);font-size:.92rem;font-weight:700}
+  .erro:empty{display:none}
+  .invalido{border-color:var(--erro)!important}
+  .duas{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:380px){.duas{grid-template-columns:1fr}}
+  .resumo-erro{color:var(--erro);font-weight:700;text-align:center;margin:0}
+  .resumo-erro:empty{display:none}
+
+  footer{background:var(--texto);color:#cdbfae;padding:34px 0 40px;font-size:.94rem;margin-top:40px}
+  footer .wrap{display:grid;gap:18px}
+  @media (min-width:640px){footer .wrap{grid-template-columns:repeat(3,1fr)}}
+  footer h4{margin:0 0 6px;color:#fff;font-family:Alegreya,serif;font-size:1.1rem}
+  footer p{margin:0 0 3px}
+  footer a{color:#f3c56b}
+  #painel-cardapio:not([hidden]) ~ footer{padding-bottom:110px}
+</style>
+</head>
+<body>
+
+<div class="demo"><div class="wrap"><span>Modelo de demonstração. Lanchonete, preços e endereço são fictícios.</span><a href="/#site-cantinho-do-sabor">Quero um site assim →</a></div></div>
+
+<header>
+  <div class="capa"><img src="/img/modelos/1765894711215-ba5b1bd6d1f7-g.jpg" alt="Balcão do Cantinho do Sabor" fetchpriority="high"></div>
+  <div class="wrap cab">
+    <span class="selo">Desde 1998 · Cambuí</span>
+    <h1>Cantinho <i>do</i> Sabor</h1>
+    <div class="linha-info"><span><b>Seg a sáb</b>, das 10h às 20h</span><span>Retirada no balcão</span><span>Rua Maria Monteiro, 812</span></div>
+    <nav class="abas" aria-label="Seções">
+      <a href="#cardapio" id="aba-cardapio">Cardápio</a>
+      <a href="#reserva" id="aba-reserva">Reservar mesa</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= CARDÁPIO ================= -->
+<div class="painel" id="painel-cardapio">
+  <nav class="cats" aria-label="Categorias"><div class="wrap" id="nav"></div></nav>
+  <main class="wrap">
+    <div id="cardapio"></div>
+
+    <section class="resumo" id="resumo" aria-labelledby="resumo-titulo">
+      <h2 id="resumo-titulo">Seu pedido</h2>
+      <p class="vazio" id="vazio">Nenhum item escolhido ainda. Use o botão + para adicionar.</p>
+      <ul id="lista"></ul>
+      <div class="total" id="total-linha" hidden><span>Total</span><span id="total"></span></div>
+      <p class="retirada">Retirada no balcão, em cerca de 20 minutos. Não fazemos entrega.</p>
+      <button class="botao" id="enviar" disabled>Enviar pedido pelo WhatsApp</button>
+      <p class="aviso">A casa confirma a disponibilidade e o total antes de preparar.</p>
+    </section>
+
+    <section class="casa">
+      <figure><img src="/img/modelos/1709380146558-bbc94b0f05f8-g.jpg" alt="Vitrine de salgados e doces" loading="lazy"></figure>
+      <div>
+        <h2>Massa feita de manhã, fritura na hora.</h2>
+        <p>A massa dos risoles e das coxinhas é aberta todo dia às sete. O salgado só vai para o óleo quando o pedido chega, por isso pode levar uns minutos a mais.</p>
+        <p>Os doces são da Dona Cida, que faz o bolo de cenoura do mesmo jeito há vinte e poucos anos.</p>
+        <p class="assinatura">Marta e Jorge Albuquerque</p>
+      </div>
+    </section>
+  </main>
+  <div class="barra" id="barra" hidden>
+    <strong id="barra-txt"></strong>
+    <a href="#resumo" id="ver-pedido">Ver pedido</a>
+  </div>
+</div>
+
+<!-- ================= RESERVAS ================= -->
+<div class="painel" id="painel-reserva" hidden>
+  <main class="wrap">
+    <div class="reserva-grid">
+      <aside class="salao">
+        <img src="/img/modelos/1757450317518-9d385619f5ee-g.jpg" alt="Bandeja de doces da casa" loading="lazy">
+        <div class="txt">
+          <h2>Mesas para o café da tarde</h2>
+          <div class="info" id="info"></div>
+        </div>
+      </aside>
+      <div>
+        <p class="destaque">Isto é um pedido de reserva. Ela só fica confirmada quando a casa responder pelo WhatsApp.</p>
+        <form id="form" novalidate>
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input id="nome" type="text" autocomplete="name" aria-describedby="erro-nome">
+            <span class="erro" id="erro-nome" role="alert"></span>
+          </div>
+          <div class="duas">
+            <div class="campo">
+              <label for="data">Data</label>
+              <input id="data" type="date" aria-describedby="dica-data erro-data">
+              <span class="dica" id="dica-data"></span>
+              <span class="erro" id="erro-data" role="alert"></span>
+            </div>
+            <div class="campo">
+              <label for="hora">Horário</label>
+              <input id="hora" type="time" step="900" aria-describedby="dica-hora erro-hora">
+              <span class="dica" id="dica-hora"></span>
+              <span class="erro" id="erro-hora" role="alert"></span>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="pessoas">Número de pessoas</label>
+            <input id="pessoas" type="number" inputmode="numeric" min="1" step="1" aria-describedby="dica-pessoas erro-pessoas">
+            <span class="dica" id="dica-pessoas"></span>
+            <span class="erro" id="erro-pessoas" role="alert"></span>
+          </div>
+          <div class="campo">
+            <label for="obs">Observação <span class="opc">(opcional)</span></label>
+            <textarea id="obs" maxlength="300" placeholder="Ex.: aniversário, cadeira para criança"></textarea>
+          </div>
+          <p class="resumo-erro" id="resumo-erro" role="alert"></p>
+          <button class="botao" type="submit">Enviar pedido de reserva</button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div><h4>Cantinho do Sabor</h4><p>Rua Maria Monteiro, 812 · Cambuí</p><p>Campinas, SP</p></div>
+    <div><h4>Horário</h4><p>Segunda a sábado, 10h às 20h</p><p>Domingo fechado</p></div>
+    <div><h4>Contato</h4><p><a id="wa-rodape" href="#" target="_blank" rel="noopener">WhatsApp</a></p><p><a href="https://instagram.com/" target="_blank" rel="noopener">@cantinhodosabor</a></p></div>
+  </div>
+</footer>
+
+<script>
+/* ======================================================================
+   DADOS GERAIS
+   ====================================================================== */
+var NEGOCIO = "Cantinho do Sabor";
+var WHATSAPP = "5519996515563"; // código do país + DDD + número, só dígitos
+
+/* ======================================================================
+   CARDÁPIO: edite aqui o nome, a descrição, o preço e a disponibilidade.
+   - preco: em centavos (R$ 9,00 = 900)
+   - disponivel: true (aparece para pedir) ou false (aparece "Indisponível hoje")
+   - foto: código da foto (opcional). Sem foto, o item aparece só com o texto.
+   ====================================================================== */
+var CARDAPIO = [
+  { categoria: "Salgados", nome: "Risole de carne",           descricao: "Patinho moído, cebola e azeitona", preco: 900, disponivel: true,  foto: "1769254870299-338bfd99aabd" },
+  { categoria: "Salgados", nome: "Risole de queijo",          descricao: "Muçarela derretida",             preco: 850, disponivel: true,  foto: "1769254870299-338bfd99aabd" },
+  { categoria: "Salgados", nome: "Coxinha de frango",        descricao: "Frango desfiado com catupiry",   preco: 700, disponivel: true,  foto: "" },
+  { categoria: "Salgados", nome: "Pão de queijo (5 un.)",    descricao: "Assado na hora, com queijo canastra", preco: 900, disponivel: true,  foto: "1559141680-d0bd7bc5af84" },
+  { categoria: "Salgados", nome: "Esfiha de carne",          descricao: "Aberta, com limão",              preco: 650, disponivel: false, foto: "" },
+  { categoria: "Bebidas",  nome: "Suco de laranja 300 ml",   descricao: "Espremido na hora",              preco: 700, disponivel: true,  foto: "1613478223719-2ab802602423" },
+  { categoria: "Bebidas",  nome: "Refrigerante lata 350 ml", descricao: "Gelado",                         preco: 600, disponivel: true,  foto: "" },
+  { categoria: "Bebidas",  nome: "Água mineral 500 ml",      descricao: "Com ou sem gás",                 preco: 400, disponivel: true,  foto: "" },
+  { categoria: "Doces",    nome: "Bolo de cenoura fatia",    descricao: "Com cobertura de chocolate",     preco: 850, disponivel: false, foto: "1676300186098-9b5ae9916e3c" },
+  { categoria: "Doces",    nome: "Brigadeiro",               descricao: "Unidade, de colher ou enrolado", preco: 350, disponivel: true,  foto: "1549007994-cb92caebd54b" }
+];
+var FRASE_CATEGORIA = { Salgados: "Fritos ou assados na hora do pedido.", Bebidas: "Sucos sem açúcar, adoçamos a gosto.", Doces: "Feitos aqui, em pouca quantidade." };
+var MAXIMO_POR_ITEM = 20;
+
+/* ======================================================================
+   RESERVAS: edite aqui horários, dias, máximo de pessoas e regras.
+   - DIAS_ACEITOS: 0 = domingo, 1 = segunda ... 6 = sábado
+   - HORA_INICIO e HORA_FIM: formato "HH:MM" (o fim também é aceito)
+   - ANTECEDENCIA_MINUTOS: 0 se não houver antecedência mínima
+   - REGRAS_DA_CASA: deixe a lista vazia [] se não houver regras
+   ====================================================================== */
+var DIAS_ACEITOS = [1, 2, 3, 4, 5, 6];
+var HORA_INICIO = "15:00";
+var HORA_FIM = "19:00";
+var MAXIMO_PESSOAS = 8;
+var ANTECEDENCIA_MINUTOS = 120;
+var REGRAS_DA_CASA = ["Tolerância de 15 minutos.", "Bolo de aniversário pode vir de fora, avise na observação."];
+
+(function () {
+  function $(id) { return document.getElementById(id); }
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function reais(c) { return "R$ " + (c / 100).toFixed(2).replace(".", ","); }
+  function slug(s) { return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-"); }
+  function foto(id) { return "/img/modelos/" + id + "-p.jpg"; }
+  function abrirWhats(texto) { window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(texto), "_blank", "noopener"); }
+  $("wa-rodape").href = "https://wa.me/" + WHATSAPP;
+
+  /* ---------- Abas ---------- */
+  function mostrarAba() {
+    var reserva = location.hash === "#reserva";
+    $("painel-cardapio").hidden = reserva;
+    $("painel-reserva").hidden = !reserva;
+    $("aba-cardapio").setAttribute("aria-current", reserva ? "false" : "page");
+    $("aba-reserva").setAttribute("aria-current", reserva ? "page" : "false");
+  }
+  window.addEventListener("hashchange", function () {
+    if (location.hash === "#reserva" || location.hash === "#cardapio" || location.hash === "") mostrarAba();
+  });
+  mostrarAba();
+
+  /* ---------- Cardápio ---------- */
+  var qtd = CARDAPIO.map(function () { return 0; });
+  var categorias = [];
+  CARDAPIO.forEach(function (it) { if (categorias.indexOf(it.categoria) < 0) categorias.push(it.categoria); });
+
+  $("nav").innerHTML = categorias.map(function (c) {
+    return '<a href="#cat-' + slug(c) + '" data-rolar="cat-' + slug(c) + '">' + esc(c) + "</a>";
+  }).join("");
+  $("cardapio").innerHTML = categorias.map(function (c) {
+    return '<section class="cat" id="cat-' + slug(c) + '"><div class="cat-cab"><h2>' + esc(c) + "</h2></div>" +
+      (FRASE_CATEGORIA[c] ? "<p>" + esc(FRASE_CATEGORIA[c]) + "</p>" : "") +
+      CARDAPIO.map(function (it, i) {
+        if (it.categoria !== c) return "";
+        var controle = it.disponivel
+          ? '<div class="qtd"><button data-i="' + i + '" data-d="-1" aria-label="Diminuir ' + esc(it.nome) + '">−</button>' +
+            '<span id="q' + i + '" aria-live="polite">0</span>' +
+            '<button data-i="' + i + '" data-d="1" aria-label="Aumentar ' + esc(it.nome) + '">+</button></div>'
+          : '<span class="indisp">Indisponível<br>hoje</span>';
+        return '<div class="item' + (it.disponivel ? "" : " off") + (it.foto ? "" : " sem-foto") + '">' +
+          (it.foto ? '<img src="' + foto(it.foto) + '" alt="" loading="lazy">' : "") +
+          "<div><h3>" + esc(it.nome) + "</h3><p>" + esc(it.descricao) +
+          '</p><span class="preco">' + reais(it.preco) + "</span></div>" + controle + "</div>";
+      }).join("") + "</section>";
+  }).join("");
+
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest("[data-rolar], #ver-pedido");
+    if (!a) return;
+    e.preventDefault();
+    var alvo = a.id === "ver-pedido" ? "resumo" : a.dataset.rolar;
+    $(alvo).scrollIntoView({ behavior: "smooth" });
+  });
+
+  $("cardapio").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-i]");
+    if (!b) return;
+    var i = Number(b.dataset.i);
+    if (!CARDAPIO[i].disponivel) return;
+    qtd[i] = Math.max(0, Math.min(MAXIMO_POR_ITEM, qtd[i] + Number(b.dataset.d)));
+    atualizar();
+  });
+
+  function escolhidos() {
+    return CARDAPIO.map(function (it, i) { return { it: it, q: qtd[i] }; })
+      .filter(function (x) { return x.q > 0 && x.it.disponivel; });
+  }
+  function totalDe(l) { return l.reduce(function (s, x) { return s + x.it.preco * x.q; }, 0); }
+
+  function atualizar() {
+    var lista = escolhidos(), total = totalDe(lista);
+    var unidades = lista.reduce(function (s, x) { return s + x.q; }, 0);
+    CARDAPIO.forEach(function (it, i) {
+      var span = $("q" + i);
+      if (!span) return;
+      span.textContent = qtd[i];
+      span.previousElementSibling.disabled = qtd[i] <= 0;
+      span.nextElementSibling.disabled = qtd[i] >= MAXIMO_POR_ITEM;
+    });
+    $("lista").innerHTML = lista.map(function (x) {
+      return "<li><span>" + x.q + "× " + esc(x.it.nome) + "</span><span>" + reais(x.it.preco * x.q) + "</span></li>";
+    }).join("");
+    $("vazio").hidden = lista.length > 0;
+    $("total-linha").hidden = lista.length === 0;
+    $("total").textContent = reais(total);
+    $("enviar").disabled = lista.length === 0;
+    $("barra").hidden = lista.length === 0;
+    $("barra-txt").textContent = unidades + (unidades === 1 ? " item" : " itens") + " · " + reais(total);
+  }
+
+  $("enviar").addEventListener("click", function () {
+    var lista = escolhidos();
+    if (!lista.length) return;
+    abrirWhats("Olá! Gostaria de fazer um pedido no " + NEGOCIO + " para retirada no balcão:\n\n" +
+      lista.map(function (x) { return x.q + "x " + x.it.nome + " – " + reais(x.it.preco * x.q); }).join("\n") +
+      "\n\nTotal: " + reais(totalDe(lista)) +
+      "\n\nPodem confirmar a disponibilidade e o total?");
+  });
+  atualizar();
+
+  /* ---------- Reservas ---------- */
+  var NOMES_DIAS = ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"];
+  function minutos(hhmm) { var p = hhmm.split(":"); return Number(p[0]) * 60 + Number(p[1]); }
+  function horaBonita(hhmm) { var p = hhmm.split(":"); return Number(p[0]) + "h" + (p[1] !== "00" ? p[1] : ""); }
+  function doisDig(n) { return (n < 10 ? "0" : "") + n; }
+  function dataLocal(s) { var p = s.split("-"); return new Date(Number(p[0]), Number(p[1]) - 1, Number(p[2])); }
+  function hojeISO() { var d = new Date(); return d.getFullYear() + "-" + doisDig(d.getMonth() + 1) + "-" + doisDig(d.getDate()); }
+  function descreverDias() {
+    var d = DIAS_ACEITOS.slice().sort();
+    var seguidos = d.every(function (v, i) { return i === 0 || v === d[i - 1] + 1; });
+    if (seguidos && d.length > 2) return NOMES_DIAS[d[0]] + " a " + NOMES_DIAS[d[d.length - 1]];
+    return d.map(function (v) { return NOMES_DIAS[v]; }).join(", ");
+  }
+  var faixa = "entre " + horaBonita(HORA_INICIO) + " e " + horaBonita(HORA_FIM);
+  var antecedenciaTxt = ANTECEDENCIA_MINUTOS >= 60 && ANTECEDENCIA_MINUTOS % 60 === 0
+    ? (ANTECEDENCIA_MINUTOS / 60) + (ANTECEDENCIA_MINUTOS === 60 ? " hora" : " horas")
+    : ANTECEDENCIA_MINUTOS + " minutos";
+
+  var info = "<div><b>Dias:</b> " + descreverDias() + "</div>" +
+    "<div><b>Horários:</b> " + faixa + "</div>" +
+    "<div><b>Máximo:</b> " + MAXIMO_PESSOAS + " pessoas por mesa</div>" +
+    (ANTECEDENCIA_MINUTOS > 0 ? "<div><b>Antecedência mínima:</b> " + antecedenciaTxt + "</div>" : "");
+  if (REGRAS_DA_CASA.length) {
+    info += '<div class="regras"><h3>Regras da casa</h3><ul>' + REGRAS_DA_CASA.map(function (r) { return "<li>" + esc(r) + "</li>"; }).join("") + "</ul></div>";
+  }
+  $("info").innerHTML = info;
+
+  var campos = { nome: $("nome"), data: $("data"), hora: $("hora"), pessoas: $("pessoas"), obs: $("obs") };
+  campos.data.min = hojeISO();
+  campos.hora.min = HORA_INICIO;
+  campos.hora.max = HORA_FIM;
+  campos.pessoas.max = MAXIMO_PESSOAS;
+  $("dica-data").textContent = "De " + descreverDias() + ".";
+  $("dica-hora").textContent = "Entre " + horaBonita(HORA_INICIO) + " e " + horaBonita(HORA_FIM) + ".";
+  $("dica-pessoas").textContent = "De 1 a " + MAXIMO_PESSOAS + ".";
+
+  function validar() {
+    var erros = {}, nome = campos.nome.value.trim();
+    if (!nome) erros.nome = "Informe o seu nome.";
+    var data = campos.data.value, hora = campos.hora.value, d = null;
+    if (!data) erros.data = "Escolha uma data.";
+    else {
+      d = dataLocal(data);
+      if (data < hojeISO()) erros.data = "Escolha a data de hoje ou uma data futura.";
+      else if (DIAS_ACEITOS.indexOf(d.getDay()) < 0) erros.data = "Não recebemos reservas para " + NOMES_DIAS[d.getDay()] + ". Escolha de " + descreverDias() + ".";
+    }
+    if (!hora) erros.hora = "Escolha um horário.";
+    else if (minutos(hora) < minutos(HORA_INICIO) || minutos(hora) > minutos(HORA_FIM)) erros.hora = "Escolha um horário " + faixa + ".";
+    var pRaw = campos.pessoas.value.trim(), p = Number(pRaw);
+    if (!pRaw) erros.pessoas = "Informe o número de pessoas.";
+    else if (!Number.isInteger(p) || p < 1) erros.pessoas = "Informe pelo menos 1 pessoa.";
+    else if (p > MAXIMO_PESSOAS) erros.pessoas = "O máximo é de " + MAXIMO_PESSOAS + " pessoas por mesa.";
+    if (ANTECEDENCIA_MINUTOS > 0 && d && hora && !erros.data && !erros.hora) {
+      var quando = new Date(d.getFullYear(), d.getMonth(), d.getDate(), Number(hora.split(":")[0]), Number(hora.split(":")[1]));
+      if (quando.getTime() - Date.now() < ANTECEDENCIA_MINUTOS * 60000) erros.hora = "Faça o pedido com pelo menos " + antecedenciaTxt + " de antecedência.";
+    }
+    return { erros: erros, nome: nome, d: d, hora: hora, p: p };
+  }
+  function mostrar(erros) {
+    ["nome", "data", "hora", "pessoas"].forEach(function (k) {
+      $("erro-" + k).textContent = erros[k] || "";
+      campos[k].classList.toggle("invalido", !!erros[k]);
+      campos[k].setAttribute("aria-invalid", erros[k] ? "true" : "false");
+    });
+  }
+  var tentou = false;
+  Object.keys(campos).forEach(function (k) {
+    campos[k].addEventListener("input", function () { if (tentou) mostrar(validar().erros); });
+  });
+  $("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    tentou = true;
+    var r = validar();
+    mostrar(r.erros);
+    var chaves = Object.keys(r.erros);
+    $("resumo-erro").textContent = chaves.length ? "Corrija os campos destacados para continuar." : "";
+    if (chaves.length) { campos[["nome", "data", "hora", "pessoas"].find(function (k) { return r.erros[k]; })].focus(); return; }
+    var dataTxt = NOMES_DIAS[r.d.getDay()] + ", " + doisDig(r.d.getDate()) + "/" + doisDig(r.d.getMonth() + 1) + "/" + r.d.getFullYear();
+    var obs = campos.obs.value.trim();
+    abrirWhats("Olá! Gostaria de solicitar uma reserva no " + NEGOCIO + ".\n\n" +
+      "Nome: " + r.nome + "\n" +
+      "Data: " + dataTxt + "\n" +
+      "Horário: " + r.hora + "\n" +
+      "Pessoas: " + r.p + "\n" +
+      "Observação: " + (obs || "nenhuma") + "\n\n" +
+      "Aguardo a confirmação de vocês.");
+  });
+})();
+</script>
+</body>
+</html>

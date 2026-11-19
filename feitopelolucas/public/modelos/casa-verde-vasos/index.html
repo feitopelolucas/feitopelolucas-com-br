@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Casa Verde · Vasos de cerâmica feitos à mão</title>
+<meta name="description" content="Vasos de cerâmica torneados à mão, prato coletor e suporte de madeira. Pagamento online e entrega combinada pelo WhatsApp.">
+<meta name="theme-color" content="#2f4a3a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --verde:#2f4a3a;--verde-esc:#21362a;--verde-claro:#e3e9df;
+    --creme:#f4efe6;--papel:#fbf8f2;--texto:#1f241f;--suave:#646a62;--borda:#e1d9cb;
+    --terra:#b5653d;--cinza:#e7e0d3;--erro:#a8322d;
+  }
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  body{margin:0;background:var(--creme);color:var(--texto);font:16px/1.6 "Instrument Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:var(--verde)}
+  h1,h2,h3{margin:0;line-height:1.1;font-weight:400}
+  .serif{font-family:"Instrument Serif",Georgia,serif}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+  button{font:inherit}
+  :focus-visible{outline:3px solid #d29b3a;outline-offset:2px}
+
+  .aviso{background:var(--texto);color:#ebe5d8;font-size:.8rem;text-align:center;padding:8px 16px}
+  .aviso a{color:#e8c07a;font-weight:600}
+  .faixa{background:var(--verde);color:#e9efe5;font-size:.82rem;text-align:center;padding:7px 16px;letter-spacing:.02em}
+
+  .topo{position:sticky;top:0;z-index:10;background:rgba(251,248,242,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--borda)}
+  .topo .wrap{display:flex;justify-content:space-between;align-items:center;height:66px;gap:16px}
+  .logo{text-decoration:none;color:var(--texto);font:400 1.7rem/1 "Instrument Serif",serif;letter-spacing:-.01em}
+  .logo i{color:var(--terra)}
+  .menu{display:flex;gap:24px;font-size:.92rem;font-weight:500}
+  .menu a{color:var(--texto);text-decoration:none}
+  .menu a:hover{color:var(--terra)}
+  @media (max-width:680px){.menu{display:none}}
+  .sacola{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--borda);background:var(--papel);color:var(--texto);font-weight:600;text-decoration:none}
+  .sacola svg{width:19px;height:19px}
+  .sacola b{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 6px;border-radius:999px;background:var(--verde);color:#fff;font-size:.78rem}
+
+  main{padding:0 0 72px;min-height:70vh}
+  .pagina{padding-top:34px}
+  .titulo{font:400 clamp(2rem,4vw,2.6rem)/1.05 "Instrument Serif",serif;margin-bottom:4px}
+  .sub{color:var(--suave);margin:0 0 26px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:12px 24px;border:0;border-radius:999px;background:var(--verde);color:#fff;font-weight:600;text-decoration:none;cursor:pointer}
+  .btn:hover{background:var(--verde-esc)}
+  .btn:disabled{background:#a9b0a8;cursor:not-allowed}
+  .btn.claro{background:transparent;color:var(--verde-esc);border:1.5px solid var(--verde)}
+  .btn.largo{width:100%}
+
+  /* Capa da loja */
+  .capa{display:grid;grid-template-columns:1fr 1.15fr;gap:0;min-height:520px;background:var(--papel);border-bottom:1px solid var(--borda)}
+  .capa .txt{padding:64px 48px 56px max(18px,calc((100vw - 1120px)/2 + 18px));display:flex;flex-direction:column;justify-content:center}
+  .capa .kicker{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);font-weight:600;margin:0 0 14px}
+  .capa h1{font:400 clamp(2.6rem,5.4vw,4.4rem)/1 "Instrument Serif",serif;letter-spacing:-.01em;margin-bottom:18px}
+  .capa h1 i{color:var(--terra)}
+  .capa p{color:var(--suave);max-width:40ch;margin:0 0 28px;font-size:1.06rem}
+  .capa figure{margin:0;position:relative;min-height:340px}
+  .capa figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  @media (max-width:820px){.capa{grid-template-columns:1fr}.capa .txt{padding:40px 18px 34px;order:2}}
+
+  .garantias{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-bottom:1px solid var(--borda);background:var(--creme)}
+  .garantias div{padding:18px;font-size:.92rem;color:var(--suave);border-right:1px solid var(--borda)}
+  .garantias div:last-child{border-right:0}
+  .garantias b{display:block;color:var(--texto);font-weight:600}
+  @media (max-width:700px){.garantias{grid-template-columns:1fr}.garantias div{border-right:0;border-bottom:1px solid var(--borda)}}
+
+  /* Catálogo */
+  .grade{display:grid;grid-template-columns:repeat(2,1fr);gap:22px 14px}
+  @media (min-width:760px){.grade{grid-template-columns:repeat(3,1fr);gap:34px 22px}}
+  .card{display:block;text-decoration:none;color:inherit}
+  .arte{position:relative;aspect-ratio:4/5;background:var(--cinza);overflow:hidden;border-radius:4px}
+  .arte img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .card:hover .arte img{transform:scale(1.04)}
+  .selo{position:absolute;top:12px;left:12px;padding:4px 10px;border-radius:999px;background:var(--papel);color:var(--erro);font-size:.76rem;font-weight:700}
+  .card-txt{padding:12px 2px 0;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+  .card h3{font-size:1rem;font-weight:500;font-family:inherit}
+  .preco{font-weight:600;color:var(--texto);white-space:nowrap}
+  .card.off .arte img{filter:grayscale(.7);opacity:.7}
+  .esqueleto{border-radius:4px;background:linear-gradient(90deg,var(--cinza),#f2eee6,var(--cinza));background-size:200% 100%;animation:brilho 1.2s infinite}
+  .esqueleto.card-sk{aspect-ratio:4/5}
+  @keyframes brilho{to{background-position:-200% 0}}
+  .estado{text-align:center;padding:48px 16px;background:var(--papel);border:1px dashed var(--borda);border-radius:16px}
+  .estado p{margin:0 0 18px;color:var(--suave)}
+  .estado.erro p{color:var(--erro);font-weight:700}
+
+  /* Atelier */
+  .atelier{margin-top:80px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .atelier figure{margin:0;aspect-ratio:1;overflow:hidden;border-radius:4px}
+  .atelier figure img{width:100%;height:100%;object-fit:cover}
+  .atelier .txt{grid-column:1/-1;max-width:640px}
+  @media (min-width:860px){.atelier{grid-template-columns:1.1fr 1fr 1fr;align-items:end}.atelier .txt{grid-column:auto;padding-right:24px}}
+  .atelier h2{font:400 2.4rem/1.05 "Instrument Serif",serif;margin-bottom:14px}
+  .atelier p{color:var(--suave);margin:0 0 12px}
+  .atelier .ass{font:italic 400 1.3rem "Instrument Serif",serif;color:var(--texto)}
+
+  .cuidados{margin-top:72px;padding:34px;background:var(--verde);color:#e8eee4;border-radius:6px;display:grid;gap:22px}
+  @media (min-width:760px){.cuidados{grid-template-columns:repeat(3,1fr)}}
+  .cuidados h3{font:400 1.5rem "Instrument Serif",serif;color:#fff;margin-bottom:6px}
+  .cuidados p{margin:0;font-size:.95rem;color:#c9d3c4}
+
+  /* Produto */
+  .voltar{display:inline-block;margin-bottom:18px;font-weight:600;text-decoration:none}
+  .produto{display:grid;gap:28px}
+  @media (min-width:760px){.produto{grid-template-columns:1.1fr 1fr;gap:56px;align-items:start}}
+  .produto h1{font:400 clamp(2.2rem,4vw,3rem)/1.05 "Instrument Serif",serif;margin-bottom:10px}
+  .produto .desc{color:var(--suave);margin:0 0 16px}
+  .produto .preco{font-size:1.5rem;display:block;margin-bottom:22px}
+  .produto ul{margin:0 0 22px;padding:0;list-style:none;border-top:1px solid var(--borda)}
+  .produto li{padding:10px 0;border-bottom:1px solid var(--borda);font-size:.95rem}
+  .qtd{display:inline-flex;align-items:center;border:1px solid var(--borda);border-radius:999px;background:var(--papel);margin-bottom:16px}
+  .qtd button{width:46px;height:46px;border:0;background:none;font-size:1.25rem;font-weight:600;color:var(--verde-esc);cursor:pointer;border-radius:999px}
+  .qtd button:disabled{color:#b9b2a5;cursor:not-allowed}
+  .qtd span{min-width:34px;text-align:center;font-weight:600}
+  .info{margin-top:18px;padding:14px 16px;background:var(--verde-claro);border-radius:10px;font-size:.92rem;color:var(--verde-esc)}
+  .ok{margin-top:12px;color:var(--verde);font-weight:600;min-height:1.5em}
+
+  /* Carrinho */
+  .linhas{display:grid;gap:12px;margin-bottom:20px}
+  .linha{display:grid;grid-template-columns:84px 1fr;gap:16px;align-items:center;padding:12px;background:var(--papel);border:1px solid var(--borda);border-radius:10px}
+  .linha .arte{aspect-ratio:1}
+  .linha h3{font-size:1rem;font-weight:600;font-family:inherit}
+  .linha .unit{color:var(--suave);font-size:.88rem}
+  .linha-acoes{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:6px;flex-wrap:wrap}
+  .linha .qtd{margin:0}
+  .linha .qtd button{width:38px;height:38px}
+  .remover{border:0;background:none;color:var(--erro);font-weight:600;cursor:pointer;padding:8px 0;min-height:40px}
+  .resumo{background:var(--papel);border:1px solid var(--borda);border-radius:10px;padding:22px}
+  .total{display:flex;justify-content:space-between;align-items:baseline;font-size:1.2rem;font-weight:700;margin-bottom:14px}
+  .resumo .info{margin:0 0 16px}
+  .msg-erro{color:var(--erro);font-weight:700;margin:12px 0 0}
+  .simular{display:block;text-align:center;margin-top:14px;font-size:.86rem;color:var(--suave)}
+  @media (min-width:760px){.carrinho{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:start}}
+
+  /* Sucesso e cancelamento */
+  .final{max-width:520px;margin:20px auto;text-align:center;background:var(--papel);border:1px solid var(--borda);border-radius:14px;padding:38px 22px}
+  .final .icone{width:64px;height:64px;margin:0 auto 16px;border-radius:50%;display:grid;place-items:center;background:var(--verde-claro);color:var(--verde)}
+  .final .icone svg{width:32px;height:32px}
+  .final h1{font:400 2rem "Instrument Serif",serif;margin-bottom:10px}
+  .final p{color:var(--suave);margin:0 0 14px}
+  .final .num{font-family:ui-monospace,Consolas,monospace;font-weight:700;color:var(--texto);background:var(--creme);padding:2px 8px;border-radius:6px}
+  .final .acoes{display:grid;gap:10px;margin-top:22px}
+
+  footer{border-top:1px solid var(--borda);background:var(--papel);padding:40px 0 34px;color:var(--suave);font-size:.9rem}
+  footer .wrap{display:grid;gap:20px}
+  @media (min-width:760px){footer .wrap{grid-template-columns:1.5fr 1fr 1fr}}
+  footer h4{margin:0 0 6px;color:var(--texto);font-size:.78rem;text-transform:uppercase;letter-spacing:.12em}
+  footer p{margin:0 0 3px}
+  footer .logo{font-size:1.5rem;display:inline-block;margin-bottom:8px}
+</style>
+</head>
+<body>
+<div class="aviso">Loja de demonstração: nenhuma cobrança é feita e nenhum produto é enviado. <a href="/#site-casa-verde-vasos">Quero uma loja assim →</a></div>
+<div class="faixa">Peças torneadas à mão em Itu, SP · entrega combinada pelo WhatsApp</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="logo" href="#/">Casa <i>Verde</i></a>
+    <nav class="menu" aria-label="Seções"><a href="#/">Vasos</a><a href="#/" data-ir="atelier">O atelier</a><a href="#/" data-ir="cuidados">Cuidados</a></nav>
+    <a class="sacola" href="#/carrinho" aria-label="Abrir carrinho">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      Sacola <b id="contador">0</b>
+    </a>
+  </div>
+</header>
+
+<main id="app" aria-live="polite"></main>
+
+<footer>
+  <div class="wrap">
+    <div><a class="logo" href="#/">Casa <i>Verde</i></a><p>Vasos de cerâmica feitos à mão, em pequenas fornadas.</p><p>CNPJ 00.000.000/0001-00 (fictício)</p></div>
+    <div><h4>Atendimento</h4><p>Segunda a sexta, 9h às 17h</p><p><a id="wa-rodape" href="#" target="_blank" rel="noopener">WhatsApp</a></p></div>
+    <div><h4>Pagamento</h4><p>Cartão de crédito, em ambiente seguro da Stripe</p><p>Entrega combinada depois do pagamento</p></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Na versão real, este número e os produtos vêm da ficha aprovada; a lista de produtos vem do Supabase.
+  var WHATSAPP = "5519996515563";
+  var CHAVE = "casaverde-carrinho";
+  var MAX = 10;
+  var app = document.getElementById("app");
+  document.getElementById("wa-rodape").href = "https://wa.me/" + WHATSAPP;
+
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function reais(c) { return (c / 100).toLocaleString("pt-BR", { style: "currency", currency: "BRL" }); }
+  function img(id, w) { return "/img/modelos/" + id + (w <= 400 ? "-p" : "-g") + ".jpg"; }
+
+  /* ---------- Produtos (carregados de produtos.json, como viriam do banco) ---------- */
+  var produtos = null, pedidoProdutos = null;
+  function carregar() {
+    if (produtos) return Promise.resolve(produtos);
+    if (!pedidoProdutos) {
+      pedidoProdutos = fetch("produtos.json", { cache: "no-store" })
+        .then(function (r) { if (!r.ok) throw new Error("http " + r.status); return r.json(); })
+        .then(function (lista) { produtos = lista; return lista; })
+        .catch(function (e) { pedidoProdutos = null; throw e; });
+    }
+    return pedidoProdutos;
+  }
+  function porCodigo(c) { return (produtos || []).find(function (p) { return p.codigo === c; }); }
+
+  /* ---------- Carrinho: guarda só código e quantidade; o preço sempre vem da lista de produtos ---------- */
+  var memoria = {};
+  function lerCarrinho() {
+    try { var v = JSON.parse(localStorage.getItem(CHAVE) || "{}"); return v && typeof v === "object" ? v : {}; }
+    catch (e) { return memoria; }
+  }
+  function salvarCarrinho(c) {
+    memoria = c;
+    try { localStorage.setItem(CHAVE, JSON.stringify(c)); } catch (e) {}
+    atualizarContador();
+  }
+  function definir(codigo, qtd) {
+    var c = lerCarrinho();
+    qtd = Math.max(0, Math.min(MAX, qtd));
+    if (qtd === 0) delete c[codigo]; else c[codigo] = qtd;
+    salvarCarrinho(c);
+  }
+  function atualizarContador() {
+    var c = lerCarrinho(), n = 0;
+    Object.keys(c).forEach(function (k) { n += c[k]; });
+    document.getElementById("contador").textContent = n;
+  }
+
+  /* ---------- Foto do produto ---------- */
+  function arte(p, w) { return '<img src="' + img(p.foto, w || 700, Math.round((w || 700) * 1.25)) + '" alt="' + esc(p.nome) + '" loading="lazy">'; }
+
+  /* ---------- Estados ---------- */
+  function carregando(qtd) {
+    var s = '<div class="wrap pagina"><h1 class="titulo">Vasos e acessórios</h1><p class="sub">Carregando produtos…</p><div class="grade">';
+    for (var i = 0; i < qtd; i++) s += '<div class="esqueleto card-sk"></div>';
+    app.innerHTML = s + "</div></div>";
+  }
+  function erro(msg) {
+    app.innerHTML = '<div class="wrap pagina"><div class="estado erro"><p>' + esc(msg) + '</p><button class="btn" id="tentar">Tentar de novo</button></div></div>';
+    document.getElementById("tentar").onclick = rotear;
+  }
+
+  /* ---------- Telas ---------- */
+  var CAPA = '<section class="capa"><div class="txt"><p class="kicker">Fornada de novembro</p>' +
+    '<h1>Vasos que <i>respiram</i>, feitos um a um.</h1>' +
+    '<p>Cerâmica de baixa temperatura, torneada à mão no nosso atelier. A argila deixa a água passar devagar e a raiz agradece.</p>' +
+    '<div><a class="btn" href="#/" data-ir="vitrine">Ver os vasos</a></div></div>' +
+    '<figure><img src="' + img("1621512367176-03782e847fa2", 1400) + '" alt="Vasos de cerâmica com plantas" fetchpriority="high"></figure></section>' +
+    '<div class="garantias"><div><b>Pagamento seguro</b>Cartão pela Stripe, sem cadastro</div><div><b>Embalagem com papelão e palha</b>Chega inteiro ou trocamos</div><div><b>Peças únicas</b>Pequenas variações de cor e forma</div></div>';
+
+  var ATELIER = '<section class="atelier" id="atelier"><div class="txt"><h2>Um atelier pequeno, com um forno só.</h2>' +
+    '<p>Cada fornada sai com uns sessenta vasos. Quando uma peça racha no forno, ela não vai para a loja.</p>' +
+    '<p>Por isso alguns tamanhos ficam em falta por umas semanas. Vale perguntar no WhatsApp quando volta.</p><p class="ass">Ana Souza</p></div>' +
+    '<figure><img src="' + img("1609881583302-61548332039c", 700, 700) + '" alt="Vaso sendo torneado à mão" loading="lazy"></figure>' +
+    '<figure><img src="' + img("1778698993355-2c5f29edbfb9", 700, 700) + '" alt="Vasos secando antes de ir ao forno" loading="lazy"></figure></section>' +
+    '<section class="cuidados" id="cuidados"><div><h3>Rega</h3><p>A terracota seca mais rápido que o plástico. No verão, confira a terra a cada dois dias.</p></div>' +
+    '<div><h3>Limpeza</h3><p>As manchas brancas são sais da água. Saem com escova macia e um pouco de vinagre.</p></div>' +
+    '<div><h3>Área externa</h3><p>Pode ficar ao tempo. Em geada, recolha o vaso ou eleve do chão com o suporte.</p></div></section>';
+
+  function telaCatalogo() {
+    app.innerHTML = CAPA + '<div class="wrap pagina" id="vitrine"><div class="esqueleto" style="height:40px;width:40%;margin-bottom:24px"></div><div class="grade">' +
+      Array(6).fill('<div class="esqueleto card-sk"></div>').join("") + "</div></div>";
+    carregar().then(function (lista) {
+      var vitrine = document.getElementById("vitrine");
+      if (!lista.length) { vitrine.innerHTML = '<h2 class="titulo">Vasos e acessórios</h2><div class="estado"><p>Nenhum produto por aqui no momento.</p></div>'; return; }
+      vitrine.innerHTML = '<h2 class="titulo">Vasos e acessórios</h2><p class="sub">Seis peças, em três tamanhos e duas cores de argila.</p><div class="grade">' +
+        lista.map(function (p) {
+          return '<a class="card' + (p.disponivel ? "" : " off") + '" href="#/produto/' + esc(p.codigo) + '">' +
+            '<div class="arte">' + arte(p, 600) + (p.disponivel ? "" : '<span class="selo">Em falta</span>') + '</div>' +
+            '<div class="card-txt"><h3>' + esc(p.nome) + '</h3><span class="preco">' + reais(p.preco_centavos) + '</span></div></a>';
+        }).join("") + "</div>" + ATELIER;
+      if (alvoPendente) { var a = document.getElementById(alvoPendente); alvoPendente = null; if (a) a.scrollIntoView(); }
+    }).catch(function () { erro("Não conseguimos carregar os produtos."); });
+  }
+
+  function telaProduto(codigo) {
+    app.innerHTML = '<div class="wrap pagina"><div class="produto"><div class="esqueleto" style="aspect-ratio:4/5"></div><div><div class="esqueleto" style="height:36px;width:70%;margin-bottom:12px"></div><div class="esqueleto" style="height:18px;width:90%"></div></div></div></div>';
+    carregar().then(function () {
+      var p = porCodigo(codigo);
+      if (!p) { app.innerHTML = '<div class="wrap pagina"><div class="estado"><p>Produto não encontrado.</p><a class="btn" href="#/">Ver todos os produtos</a></div></div>'; return; }
+      var qtd = 1;
+      app.innerHTML = '<div class="wrap pagina"><a class="voltar" href="#/">← Todos os produtos</a><div class="produto">' +
+        '<div class="arte">' + arte(p, 1000) + (p.disponivel ? "" : '<span class="selo">Em falta</span>') + '</div>' +
+        '<div><h1>' + esc(p.nome) + '</h1><p class="desc">' + esc(p.descricao) + '</p><span class="preco">' + reais(p.preco_centavos) + '</span>' +
+        (p.detalhes ? "<ul>" + p.detalhes.map(function (d) { return "<li>" + esc(d) + "</li>"; }).join("") + "</ul>" : "") +
+        (p.disponivel
+          ? '<div class="qtd"><button id="menos" aria-label="Diminuir quantidade">−</button><span id="q">1</span><button id="mais" aria-label="Aumentar quantidade">+</button></div><button class="btn largo" id="add">Adicionar à sacola</button><p class="ok" id="ok" role="status"></p>'
+          : '<button class="btn largo" disabled>Em falta</button><p class="ok"><a href="https://wa.me/' + WHATSAPP + "?text=" + encodeURIComponent("Olá! Quando volta o " + p.nome + "?") + '" target="_blank" rel="noopener">Avise-me quando voltar</a></p>') +
+        '<div class="info">A entrega é combinada pelo WhatsApp depois do pagamento.</div></div></div></div>';
+      if (!p.disponivel) return;
+      var q = document.getElementById("q"), menos = document.getElementById("menos"), mais = document.getElementById("mais");
+      function pintar() { q.textContent = qtd; menos.disabled = qtd <= 1; mais.disabled = qtd >= MAX; }
+      menos.onclick = function () { qtd--; pintar(); };
+      mais.onclick = function () { qtd++; pintar(); };
+      pintar();
+      document.getElementById("add").onclick = function () {
+        var atual = lerCarrinho()[p.codigo] || 0, novo = Math.min(MAX, atual + qtd);
+        definir(p.codigo, novo);
+        document.getElementById("ok").innerHTML = (novo === MAX && atual + qtd > MAX ? "Limite de " + MAX + " unidades. " : "Adicionado. ") + '<a href="#/carrinho">Ver sacola</a>';
+      };
+    }).catch(function () { erro("Não conseguimos carregar os produtos."); });
+  }
+
+  function telaCarrinho() {
+    app.innerHTML = '<div class="wrap pagina"><h1 class="titulo">Sacola</h1><div class="esqueleto" style="height:96px;margin-top:16px"></div></div>';
+    carregar().then(function () {
+      var c = lerCarrinho();
+      var itens = Object.keys(c).map(function (k) { return { p: porCodigo(k), q: c[k] }; })
+        .filter(function (i) { return i.p && i.p.disponivel && i.q > 0; });
+      if (!itens.length) {
+        app.innerHTML = '<div class="wrap pagina"><h1 class="titulo">Sacola</h1><div class="estado" style="margin-top:16px"><p>Sua sacola está vazia.</p><a class="btn" href="#/">Ver os produtos</a></div></div>';
+        return;
+      }
+      var total = itens.reduce(function (s, i) { return s + i.p.preco_centavos * i.q; }, 0);
+      app.innerHTML = '<div class="wrap pagina"><h1 class="titulo">Sacola</h1><p class="sub">Confira os itens antes de pagar.</p><div class="carrinho"><div class="linhas">' +
+        itens.map(function (i) {
+          return '<div class="linha"><div class="arte">' + arte(i.p, 200) + '</div><div><h3>' + esc(i.p.nome) + '</h3>' +
+            '<span class="unit">' + reais(i.p.preco_centavos) + ' cada · <b>' + reais(i.p.preco_centavos * i.q) + '</b></span>' +
+            '<div class="linha-acoes"><div class="qtd"><button data-c="' + esc(i.p.codigo) + '" data-d="-1" aria-label="Diminuir quantidade"' + (i.q <= 1 ? " disabled" : "") + '>−</button><span>' + i.q + '</span>' +
+            '<button data-c="' + esc(i.p.codigo) + '" data-d="1" aria-label="Aumentar quantidade"' + (i.q >= MAX ? " disabled" : "") + '>+</button></div>' +
+            '<button class="remover" data-r="' + esc(i.p.codigo) + '">Remover</button></div></div></div>';
+        }).join("") +
+        '</div><div class="resumo"><div class="total"><span>Total</span><span>' + reais(total) + '</span></div>' +
+        '<div class="info">A entrega é combinada pelo WhatsApp depois do pagamento.</div>' +
+        '<button class="btn largo" id="pagar">Pagar ' + reais(total) + '</button><p class="msg-erro" id="erro-pag" hidden>Não foi possível iniciar o pagamento. Sua sacola continua salva.</p>' +
+        '<a class="simular" href="#/cancelado">Demonstração: ver a tela de pagamento cancelado</a></div></div></div>';
+      app.querySelectorAll("[data-d]").forEach(function (b) {
+        b.onclick = function () { definir(b.dataset.c, (lerCarrinho()[b.dataset.c] || 0) + Number(b.dataset.d)); telaCarrinho(); };
+      });
+      app.querySelectorAll("[data-r]").forEach(function (b) {
+        b.onclick = function () { definir(b.dataset.r, 0); telaCarrinho(); };
+      });
+      document.getElementById("pagar").onclick = function () {
+        // Na versão real: envia só códigos e quantidades para o servidor, que calcula o total com os preços do banco,
+        // grava o pedido como "aguardando pagamento" e devolve a URL do Checkout da Stripe.
+        var b = this;
+        b.disabled = true; b.textContent = "Abrindo o pagamento…";
+        setTimeout(function () {
+          var id = "CV-" + Math.random().toString(36).slice(2, 8).toUpperCase();
+          salvarCarrinho({});
+          location.hash = "#/sucesso?pedido=" + id;
+        }, 1200);
+      };
+    }).catch(function () { erro("Não conseguimos carregar a sacola."); });
+  }
+
+  function telaSucesso(pedido) {
+    // Esta tela não altera o status: na versão real, o pedido só vira "pago" pelo webhook da Stripe.
+    if (!pedido) { app.innerHTML = '<div class="wrap pagina"><div class="estado"><p>Nenhum pedido para mostrar.</p><a class="btn" href="#/">Ver os produtos</a></div></div>'; return; }
+    var msg = "Olá! Fiz o pedido " + pedido + " na Casa Verde e quero combinar a entrega.";
+    app.innerHTML = '<div class="wrap pagina"><div class="final"><div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>' +
+      '<h1>Recebemos seu pedido</h1><p>Número do pedido: <span class="num">' + esc(pedido) + '</span></p>' +
+      '<p>Assim que o pagamento for confirmado, vamos falar com você pelo WhatsApp para combinar a entrega.</p>' +
+      '<div class="acoes"><a class="btn" href="https://wa.me/' + WHATSAPP + "?text=" + encodeURIComponent(msg) + '" target="_blank" rel="noopener">Falar no WhatsApp</a><a class="btn claro" href="#/">Voltar à loja</a></div></div></div>';
+  }
+
+  function telaCancelado() {
+    app.innerHTML = '<div class="wrap pagina"><div class="final"><div class="icone" style="color:#a8322d;background:#f6e3e1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"/></svg></div>' +
+      '<h1>O pagamento não foi concluído</h1><p>Nenhuma cobrança foi feita. Sua sacola continua salva.</p>' +
+      '<div class="acoes"><a class="btn" href="#/carrinho">Voltar à sacola</a><a class="btn claro" href="#/">Continuar comprando</a></div></div></div>';
+  }
+
+  /* ---------- Rotas ---------- */
+  var alvoPendente = null;
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest("[data-ir]");
+    if (!a) return;
+    var alvo = document.getElementById(a.dataset.ir);
+    if (alvo) { e.preventDefault(); alvo.scrollIntoView({ behavior: "smooth" }); }
+    else alvoPendente = a.dataset.ir;
+  });
+  function rotear() {
+    var h = location.hash.replace(/^#/, "") || "/";
+    var caminho = h.split("?")[0], busca = new URLSearchParams(h.split("?")[1] || "");
+    var m;
+    if (caminho === "/" || caminho === "") telaCatalogo();
+    else if ((m = caminho.match(/^\/produto\/([A-Z]{3})$/))) telaProduto(m[1]);
+    else if (caminho === "/carrinho") telaCarrinho();
+    else if (caminho === "/sucesso") telaSucesso((busca.get("pedido") || "").replace(/[^A-Z0-9-]/g, ""));
+    else if (caminho === "/cancelado") telaCancelado();
+    else app.innerHTML = '<div class="wrap pagina"><div class="estado"><p>Página não encontrada.</p><a class="btn" href="#/">Ver os produtos</a></div></div>';
+    if (!alvoPendente) window.scrollTo(0, 0);
+  }
+  window.addEventListener("hashchange", rotear);
+  window.addEventListener("storage", atualizarContador);
+  atualizarContador();
+  rotear();
+})();
+</script>
+</body>
+</html>

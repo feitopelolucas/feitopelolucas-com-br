@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clínica Vida · Consultas médicas e odontológicas no Taquaral</title>
+<meta name="description" content="Clínica geral, pediatria, cardiologia, dermatologia, nutrição e odontologia no mesmo endereço. Veja quem atende hoje e marque pelo WhatsApp.">
+<meta name="theme-color" content="#123c46">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--petroleo:#123c46;--petroleo-2:#0c2c34;--salvia:#5f8a7a;--salvia-claro:#e5eee9;--areia:#f6f3ee;--branco:#fff;--texto:#16262b;--suave:#566a70;--borda:#dfe4e1;--destaque:#e8a33d}
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--areia);color:var(--texto);font:16.5px/1.6 "Public Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{margin:0;line-height:1.15;font-family:"Source Serif 4",Georgia,serif;font-weight:600}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--destaque);outline-offset:3px}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 18px}
+
+  .demo{background:var(--petroleo-2);color:#cfe0e0;font-size:.8rem}
+  .demo .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:7px;padding-bottom:7px}
+  .demo a{color:#f5c77e;font-weight:600;text-decoration:none}
+
+  .topo{background:var(--branco);border-bottom:1px solid var(--borda);position:sticky;top:0;z-index:10}
+  .topo .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;height:72px}
+  .marca{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .marca svg{width:34px;height:34px}
+  .marca b{display:block;font:600 1.25rem/1 "Source Serif 4",serif;color:var(--petroleo)}
+  .marca small{display:block;font-size:.76rem;color:var(--suave);letter-spacing:.04em}
+  .topo nav{display:flex;gap:26px;font-size:.93rem;font-weight:500}
+  .topo nav a{text-decoration:none;color:var(--suave)}
+  .topo nav a:hover{color:var(--petroleo)}
+  @media (max-width:900px){.topo nav{display:none}}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:8px;background:var(--petroleo);color:#fff;font-weight:600;text-decoration:none;border:0}
+  .btn:hover{background:var(--petroleo-2)}
+  .btn.claro{background:var(--branco);color:var(--petroleo);border:1.5px solid var(--petroleo)}
+  .btn svg{width:18px;height:18px}
+
+  /* Abertura */
+  .abre{background:var(--branco)}
+  .abre .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding-top:56px;padding-bottom:56px}
+  .abre .kicker{color:var(--salvia);font-weight:600;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;margin:0 0 14px}
+  .abre h1{font-size:clamp(2.2rem,4.6vw,3.4rem);color:var(--petroleo);margin-bottom:18px;letter-spacing:-.01em}
+  .abre p{color:var(--suave);font-size:1.08rem;margin:0 0 28px;max-width:46ch}
+  .abre .acoes{display:flex;gap:10px;flex-wrap:wrap}
+  .abre figure{margin:0;position:relative;aspect-ratio:5/4;border-radius:14px;overflow:hidden}
+  .abre figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hoje{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(255,255,255,.96);border-radius:12px;padding:16px 18px;box-shadow:0 12px 30px -16px rgba(12,44,52,.5)}
+  .hoje h2{font:600 .78rem "Public Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--salvia);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .hoje h2::before{content:"";width:8px;height:8px;border-radius:50%;background:#2fa36b;box-shadow:0 0 0 4px rgba(47,163,107,.18)}
+  .hoje ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 16px}
+  .hoje li{font-size:.9rem;line-height:1.3}
+  .hoje li b{display:block;color:var(--petroleo)}
+  .hoje li span{color:var(--suave);font-size:.84rem}
+  .hoje .fechado{grid-column:1/-1;color:var(--suave)}
+  @media (max-width:860px){.abre .wrap{grid-template-columns:1fr;padding-top:34px}.hoje ul{grid-template-columns:1fr}}
+
+  .numeros{background:var(--petroleo);color:#d8e6e5}
+  .numeros .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .numeros div{padding:22px 18px;border-right:1px solid rgba(255,255,255,.12)}
+  .numeros div:last-child{border:0}
+  .numeros b{display:block;font:600 1.7rem "Source Serif 4",serif;color:#fff}
+  @media (max-width:760px){.numeros .wrap{grid-template-columns:1fr 1fr}.numeros div:nth-child(2){border-right:0}}
+
+  section{padding:80px 0}
+  .cab-sec{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:32px;flex-wrap:wrap}
+  .cab-sec h2{font-size:clamp(1.8rem,3.4vw,2.4rem);color:var(--petroleo)}
+  .cab-sec p{margin:6px 0 0;color:var(--suave);max-width:52ch}
+
+  /* Quadro */
+  .tabela{overflow-x:auto;background:var(--branco);border:1px solid var(--borda);border-radius:12px}
+  table{width:100%;border-collapse:collapse;min-width:640px}
+  th,td{padding:14px 12px;text-align:center;border-bottom:1px solid var(--borda)}
+  th{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--suave);font-weight:600;background:#fafbfa}
+  td:first-child,th:first-child{text-align:left;padding-left:20px}
+  td:first-child b{display:block;color:var(--petroleo)}
+  td:first-child span{font-size:.85rem;color:var(--suave)}
+  tr:last-child td{border-bottom:0}
+  .col-hoje{background:var(--salvia-claro)}
+  th.col-hoje{color:var(--petroleo)}
+  .ponto{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--salvia)}
+  .traco{color:#b9c4c1}
+
+  /* Equipe */
+  .equipe-sec{background:var(--branco)}
+  .equipe{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 22px}
+  @media (max-width:900px){.equipe{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.equipe{grid-template-columns:1fr}}
+  .pessoa figure{margin:0 0 14px;aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:var(--salvia-claro);position:relative}
+  .pessoa figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+  .pessoa .esp{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--salvia);font-weight:600}
+  .pessoa h3{font-size:1.3rem;color:var(--petroleo);margin:2px 0 4px}
+  .pessoa .reg{font-size:.86rem;color:var(--suave);margin:0 0 6px}
+  .pessoa .dias{font-size:.92rem;margin:0 0 12px}
+  .pessoa a{font-weight:600;color:var(--petroleo);text-decoration:none;border-bottom:1.5px solid var(--salvia)}
+
+  /* Estrutura */
+  .estrutura{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:16px}
+  .estrutura figure{margin:0;border-radius:12px;overflow:hidden;position:relative;min-height:240px}
+  .estrutura figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .estrutura figcaption{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.94);padding:6px 12px;border-radius:6px;font-size:.85rem;font-weight:600;color:var(--petroleo)}
+  .estrutura figure:first-child{grid-row:span 2;min-height:500px}
+  @media (max-width:760px){.estrutura{grid-template-columns:1fr 1fr}.estrutura figure:first-child{grid-column:1/-1;grid-row:auto;min-height:280px}}
+
+  /* Antes de vir e convênios */
+  .duas{display:grid;grid-template-columns:1.1fr 1fr;gap:28px}
+  @media (max-width:860px){.duas{grid-template-columns:1fr}}
+  .bloco{background:var(--branco);border:1px solid var(--borda);border-radius:12px;padding:30px}
+  .bloco h2{font-size:1.6rem;color:var(--petroleo);margin-bottom:16px}
+  .bloco ol{margin:0;padding:0;list-style:none;counter-reset:n}
+  .bloco ol li{counter-increment:n;display:grid;grid-template-columns:36px 1fr;gap:10px;padding:10px 0;border-bottom:1px solid var(--borda)}
+  .bloco ol li:last-child{border:0}
+  .bloco ol li::before{content:counter(n);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--salvia-claro);color:var(--petroleo);font-weight:700;font-size:.85rem}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px;padding:0;list-style:none}
+  .chips li{padding:8px 14px;border:1px solid var(--borda);border-radius:999px;font-size:.92rem;font-weight:500;background:var(--areia)}
+  .bloco p{color:var(--suave);margin:0}
+
+  /* Endereço */
+  .onde{background:var(--petroleo);color:#d8e6e5}
+  .onde .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
+  .onde h2{color:#fff;font-size:2.2rem;margin-bottom:22px}
+  .onde dl{margin:0 0 26px;display:grid;grid-template-columns:auto 1fr;gap:12px 22px}
+  .onde dt{font-weight:600;color:#fff}
+  .onde dd{margin:0}
+  .onde .btn{background:#fff;color:var(--petroleo)}
+  .mapa{aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:#1d4c57;position:relative}
+  .mapa svg{width:100%;height:100%}
+  @media (max-width:860px){.onde .wrap{grid-template-columns:1fr}}
+
+  footer{background:var(--petroleo-2);color:#9fb6b8;font-size:.86rem;padding:26px 0}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+  .flut{position:fixed;right:16px;bottom:16px;z-index:20;display:inline-flex;align-items:center;gap:8px;min-height:52px;padding:0 20px;border-radius:999px;background:#1f9d55;color:#fff;font-weight:600;text-decoration:none;box-shadow:0 10px 24px rgba(12,44,52,.3)}
+  .flut svg{width:20px;height:20px}
+</style>
+</head>
+<body>
+
+<div class="demo"><div class="wrap"><span>Modelo de demonstração. Clínica, profissionais e endereço são fictícios.</span><a href="/#site-clinica-vida">Quero um site assim →</a></div></div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="9" fill="#123c46"/><path d="M17 9v16M9 17h16" stroke="#e5eee9" stroke-width="4" stroke-linecap="round"/></svg>
+      <span><b>Clínica Vida</b><small>Médica e odontológica</small></span>
+    </a>
+    <nav aria-label="Seções"><a href="#agenda">Agenda da semana</a><a href="#equipe">Profissionais</a><a href="#antes">Antes da consulta</a><a href="#onde">Endereço</a></nav>
+    <a class="btn wa" data-msg="Olá! Gostaria de marcar uma consulta na Clínica Vida.">Marcar consulta</a>
+  </div>
+</header>
+
+<main>
+  <section class="abre" style="padding:0">
+    <div class="wrap">
+      <div>
+        <p class="kicker">Taquaral · Campinas</p>
+        <h1>Seis especialidades no mesmo endereço, com hora marcada.</h1>
+        <p>Você escolhe o dia pelo quadro da semana, manda uma mensagem e chega no seu horário. Atendemos particular e os principais convênios da região.</p>
+        <div class="acoes">
+          <a class="btn wa" data-msg="Olá! Gostaria de marcar uma consulta na Clínica Vida.">Marcar pelo WhatsApp</a>
+          <a class="btn claro" href="#agenda">Ver a agenda da semana</a>
+        </div>
+      </div>
+      <figure>
+        <img src="/img/modelos/1631217868264-e5b90bb7e133-g.jpg" alt="Médica conversando com paciente no consultório" fetchpriority="high">
+        <div class="hoje" aria-live="polite">
+          <h2 id="hoje-titulo">Atendendo hoje</h2>
+          <ul id="hoje-lista"></ul>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <div class="numeros">
+    <div class="wrap">
+      <div><b>6</b>especialidades</div>
+      <div><b>7h às 19h</b>de segunda a sexta</div>
+      <div><b>Sábado</b>das 8h às 12h</div>
+      <div><b>14 anos</b>no mesmo endereço</div>
+    </div>
+  </div>
+
+  <section id="agenda">
+    <div class="wrap">
+      <div class="cab-sec">
+        <div><h2>Quem atende em cada dia</h2><p>A coluna de hoje aparece destacada. Os horários exatos são combinados pelo WhatsApp.</p></div>
+      </div>
+      <div class="tabela"><table id="quadro"></table></div>
+    </div>
+  </section>
+
+  <section class="equipe-sec" id="equipe">
+    <div class="wrap">
+      <div class="cab-sec">
+        <div><h2>Profissionais</h2><p>Cada profissional tem uma agenda própria. Toque no nome para marcar direto com quem você quer.</p></div>
+      </div>
+      <div class="equipe" id="equipe-lista"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cab-sec"><div><h2>A clínica por dentro</h2><p>Térreo com acesso sem degraus, seis consultórios e uma sala de procedimentos.</p></div></div>
+      <div class="estrutura">
+        <figure><img src="/img/modelos/1762625570087-6d98fca29531-g.jpg" alt="Recepção da clínica" loading="lazy"><figcaption>Recepção</figcaption></figure>
+        <figure><img src="/img/modelos/1629909613654-28e377c37b09-g.jpg" alt="Consultório odontológico" loading="lazy"><figcaption>Consultório odontológico</figcaption></figure>
+        <figure><img src="/img/modelos/1758691462126-2ee47c8bf9e7-g.jpg" alt="Consulta pediátrica" loading="lazy"><figcaption>Pediatria</figcaption></figure>
+        <figure><img src="/img/modelos/1758691461990-03b49d969495-g.jpg" alt="Médico preenchendo prontuário" loading="lazy"><figcaption>Prontuário eletrônico</figcaption></figure>
+        <figure><img src="/img/modelos/1700832082200-af7deeb63d9b-g.jpg" alt="Estetoscópio e medidor de pressão" loading="lazy"><figcaption>Sala de procedimentos</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="antes" style="padding-top:0">
+    <div class="wrap duas">
+      <div class="bloco">
+        <h2>Antes de vir</h2>
+        <ol>
+          <li>Traga um documento com foto e a carteirinha do convênio, se tiver.</li>
+          <li>Leve os exames dos últimos seis meses, mesmo os que parecem não ter relação.</li>
+          <li>Chegue dez minutos antes para o cadastro na recepção.</li>
+          <li>Precisa remarcar? Avise pelo WhatsApp com um dia de antecedência.</li>
+        </ol>
+      </div>
+      <div class="bloco">
+        <h2>Convênios</h2>
+        <ul class="chips"><li>Particular</li><li>Convênio A</li><li>Convênio B</li><li>Convênio C</li><li>Convênio D</li></ul>
+        <p>A lista muda de tempos em tempos. Não achou o seu? Pergunte pelo WhatsApp antes de marcar. Consultas particulares têm recibo para reembolso.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde">
+    <div class="wrap">
+      <div>
+        <h2>Endereço e horário</h2>
+        <dl>
+          <dt>Endereço</dt><dd>Av. Heitor Penteado, 1.280, sala 12 · Taquaral</dd>
+          <dt>Atendimento</dt><dd>Segunda a sexta, 7h às 19h<br>Sábado, 8h às 12h</dd>
+          <dt>Estacionamento</dt><dd>Conveniado no prédio ao lado</dd>
+          <dt>Telefone</dt><dd>(19) 0000-0000</dd>
+        </dl>
+        <a class="btn wa" data-msg="Olá! Gostaria de marcar uma consulta na Clínica Vida.">Marcar consulta</a>
+      </div>
+      <div class="mapa" aria-label="Mapa ilustrativo do endereço">
+        <svg viewBox="0 0 400 300" aria-hidden="true">
+          <rect width="400" height="300" fill="#1d4c57"/>
+          <g stroke="#2b6370" stroke-width="14"><path d="M-10 90H410M-10 210H410M110-10V310M290-10V310"/></g>
+          <g stroke="#3a7683" stroke-width="26"><path d="M-10 150L410 120"/></g>
+          <path d="M40 30h50v40H40zM140 30h120v40H140zM310 30h70v40h-70zM40 240h50v40H40zM140 240h120v40H140zM310 240h70v40h-70z" fill="#245a66"/>
+          <circle cx="200" cy="136" r="26" fill="#e8a33d" opacity=".25"/>
+          <path d="M200 112c-11 0-19 8-19 18 0 14 19 30 19 30s19-16 19-30c0-10-8-18-19-18z" fill="#e8a33d"/><circle cx="200" cy="130" r="6" fill="#123c46"/>
+          <text x="206" y="180" fill="#d8e6e5" font-family="Public Sans,sans-serif" font-size="12">Av. Heitor Penteado</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>Clínica Vida · Responsável técnica: Dra. Helena Prado, CRM 000000 (fictício)</span><span>CNPJ 00.000.000/0001-00</span></div></footer>
+
+<a class="flut wa" data-msg="Olá! Gostaria de marcar uma consulta na Clínica Vida." aria-label="Marcar pelo WhatsApp">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>
+  WhatsApp
+</a>
+
+<script>
+  var WHATSAPP = "5519996515563";
+  var DIAS = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+  var DIAS_LONGOS = ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"];
+  // Especialidade, profissional, registro, dias (0 = domingo ... 6 = sábado) e foto
+  var AGENDA = [
+    { esp: "Clínica geral", nome: "Dra. Helena Prado",  reg: "CRM-SP 000000", dias: [1, 2, 3, 4, 5, 6], foto: "1594824476967-48c8b964273f", sobre: "Acompanha adultos e idosos. Faz check-up e encaminhamento." },
+    { esp: "Pediatria",     nome: "Dr. Rafael Moura",   reg: "CRM-SP 000000", dias: [1, 3, 5],          foto: "1612349317150-e413f6a5b16d", sobre: "Atende do recém-nascido aos 14 anos. Puericultura e vacinas." },
+    { esp: "Cardiologia",   nome: "Dr. Paulo Esteves",  reg: "CRM-SP 000000", dias: [2, 4],             foto: "1637059824899-a441006a6875", sobre: "Consulta, eletrocardiograma e avaliação para atividade física." },
+    { esp: "Dermatologia",  nome: "Dra. Lívia Andrade", reg: "CRM-SP 000000", dias: [3, 6],             foto: "1770134223774-13b735e29201", sobre: "Dermatologia clínica, acne, manchas e mapeamento de pintas." },
+    { esp: "Nutrição",      nome: "Camila Rocha",       reg: "CRN-3 00000",   dias: [2, 5],             foto: "1659353888906-adb3e0041693", sobre: "Reeducação alimentar, gestantes e nutrição esportiva." },
+    { esp: "Odontologia",   nome: "Dr. Tiago Nunes",    reg: "CRO-SP 00000",  dias: [1, 2, 3, 4, 5],    foto: "1622253692010-333f2da6031d", sobre: "Clínico geral, limpeza, restauração e clareamento." }
+  ];
+  var hoje = new Date().getDay();
+  function link(msg) { return "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg); }
+  function foto(id, w) { return "/img/modelos/" + id + (w <= 400 ? "-p" : "-g") + ".jpg"; }
+
+  document.querySelectorAll(".wa").forEach(function (a) { a.href = link(a.dataset.msg); a.target = "_blank"; a.rel = "noopener"; });
+
+  var deHoje = AGENDA.filter(function (p) { return p.dias.indexOf(hoje) >= 0; });
+  document.getElementById("hoje-titulo").textContent = "Atendendo hoje, " + DIAS_LONGOS[hoje];
+  document.getElementById("hoje-lista").innerHTML = deHoje.length
+    ? deHoje.map(function (p) { return "<li><b>" + p.esp + "</b><span>" + p.nome + "</span></li>"; }).join("")
+    : '<li class="fechado">Aos domingos a clínica fica fechada. Mande sua mensagem e respondemos na segunda.</li>';
+
+  var cab = "<thead><tr><th>Especialidade</th>" + [1, 2, 3, 4, 5, 6].map(function (d) {
+    return '<th class="' + (d === hoje ? "col-hoje" : "") + '">' + DIAS[d] + (d === hoje ? " · hoje" : "") + "</th>";
+  }).join("") + "</tr></thead>";
+  document.getElementById("quadro").innerHTML = cab + "<tbody>" + AGENDA.map(function (p) {
+    return "<tr><td><b>" + p.esp + "</b><span>" + p.nome + "</span></td>" + [1, 2, 3, 4, 5, 6].map(function (d) {
+      var tem = p.dias.indexOf(d) >= 0;
+      return '<td class="' + (d === hoje ? "col-hoje" : "") + '">' + (tem ? '<span class="ponto" aria-label="atende"></span>' : '<span class="traco" aria-label="não atende">–</span>') + "</td>";
+    }).join("") + "</tr>";
+  }).join("") + "</tbody>";
+
+  document.getElementById("equipe-lista").innerHTML = AGENDA.map(function (p) {
+    return '<article class="pessoa"><figure><img src="' + foto(p.foto, 600) + '" alt="' + p.nome + '" loading="lazy"></figure>' +
+      '<span class="esp">' + p.esp + "</span><h3>" + p.nome + '</h3><p class="reg">' + p.reg + "</p>" +
+      '<p class="dias">' + p.sobre + "<br><b>Atende:</b> " + p.dias.map(function (d) { return DIAS[d]; }).join(", ") + "</p>" +
+      '<a href="' + link("Olá! Gostaria de marcar uma consulta com " + p.nome + " (" + p.esp + ").") + '" target="_blank" rel="noopener">Marcar com ' + p.nome.replace(/^Dra?\. /, "") + " →</a></article>";
+  }).join("");
+</script>
+</body>
+</html>

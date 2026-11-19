@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marina Costa · Fotografia</title>
+<meta name="description" content="Retratos, casamentos pequenos e fotografia de comida, com luz natural. Folhas de contato, valores e consulta de datas.">
+<meta name="theme-color" content="#1b1a19">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root{--papel:#f1eee8;--branco:#faf9f6;--tinta:#1b1a19;--suave:#6b6660;--fio:#d7d2c8;--lapis:#c2410c;--filme:#151413}
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--papel);color:var(--tinta);font:18px/1.6 Newsreader,Georgia,serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{margin:0;font-weight:400;line-height:1.1}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  :focus-visible{outline:2px solid var(--lapis);outline-offset:3px}
+  .mono{font-family:"IBM Plex Mono",monospace}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+  .demo{background:var(--tinta);color:#cfc9bf;font:13px/1.4 "IBM Plex Mono",monospace}
+  .demo .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .demo a{color:#f0b48a;text-decoration:none}
+
+  header .wrap{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-top:26px;padding-bottom:20px;flex-wrap:wrap}
+  .nome{font-size:1.5rem;text-decoration:none}
+  .nome span{color:var(--suave);font-style:italic}
+  header nav{display:flex;gap:26px;font:400 .85rem "IBM Plex Mono",monospace;text-transform:lowercase}
+  header nav a{text-decoration:none;color:var(--suave)}
+  header nav a:hover{color:var(--tinta)}
+
+  /* Abertura */
+  .abre{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:end;padding-top:30px;padding-bottom:70px}
+  .abre h1{font-size:clamp(2.6rem,5.6vw,4.6rem);letter-spacing:-.015em}
+  .abre h1 i{color:var(--suave)}
+  .abre p{margin:22px 0 0;color:var(--suave);max-width:44ch}
+  .abre figure{margin:0;position:relative}
+  .abre figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .abre figcaption{font:400 .78rem "IBM Plex Mono",monospace;color:var(--suave);margin-top:8px;display:flex;justify-content:space-between}
+  @media (max-width:820px){.abre{grid-template-columns:1fr}.abre figure{order:-1}}
+
+  /* Rolos */
+  .rolos{padding:20px 0 60px}
+  .sec-cab{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-top:1px solid var(--tinta);padding-top:14px;margin-bottom:34px;flex-wrap:wrap}
+  .sec-cab h2{font-size:2.2rem}
+  .sec-cab p{margin:0;font:400 .85rem "IBM Plex Mono",monospace;color:var(--suave)}
+  .rolo{margin-bottom:56px}
+  .rolo-cab{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-bottom:12px;flex-wrap:wrap}
+  .rolo-cab h3{font-size:1.5rem}
+  .rolo-cab span{font:400 .82rem "IBM Plex Mono",monospace;color:var(--suave)}
+  .tira{background:var(--filme);padding:22px 14px;position:relative;overflow-x:auto;scrollbar-width:thin}
+  .tira::before,.tira::after{content:"";position:absolute;left:0;right:0;height:10px;background:repeating-linear-gradient(90deg,transparent 0 10px,#e9e4da 10px 22px,transparent 22px 30px);opacity:.85}
+  .tira::before{top:6px}.tira::after{bottom:6px}
+  .quadros{display:grid;grid-template-columns:repeat(6,minmax(150px,1fr));gap:10px;min-width:920px}
+  .quadro{position:relative;border:0;padding:0;background:#2a2826;cursor:zoom-in;aspect-ratio:3/2;overflow:visible}
+  .quadro img{width:100%;height:100%;object-fit:cover;filter:saturate(.95)}
+  .quadro .n{position:absolute;left:0;bottom:-18px;font:500 .62rem "IBM Plex Mono",monospace;color:#d9a66d;letter-spacing:.06em}
+  .quadro.marcado::after{content:"";position:absolute;inset:-7px;border:2.5px solid var(--lapis);border-radius:50% 46% 52% 48% / 48% 52% 46% 50%;transform:rotate(-2deg);pointer-events:none}
+  .quadro:not(.marcado) img{opacity:.78}
+  .quadro:hover img{opacity:1}
+  .escolha{font:600 1.35rem Caveat,cursive;color:var(--lapis);margin:10px 0 0}
+
+  /* Sobre */
+  .sobre{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;padding:60px 0}
+  .sobre figure{margin:0}
+  .sobre figure img{width:100%;aspect-ratio:1;object-fit:cover;filter:grayscale(1)}
+  .sobre h2{font-size:2.4rem;margin-bottom:18px}
+  .sobre p{margin:0 0 14px;color:#3d3a36}
+  .sobre ul{margin:20px 0 0;padding:0;list-style:none;font:400 .86rem "IBM Plex Mono",monospace;color:var(--suave)}
+  .sobre li{padding:8px 0;border-top:1px solid var(--fio)}
+  @media (max-width:820px){.sobre{grid-template-columns:1fr}}
+
+  /* Valores */
+  .valores{padding:40px 0 70px}
+  table{width:100%;border-collapse:collapse}
+  th{text-align:left;font:500 .78rem "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.1em;color:var(--suave);padding:0 0 10px;border-bottom:1px solid var(--tinta)}
+  td{padding:18px 0;border-bottom:1px solid var(--fio);vertical-align:top}
+  td small{display:block;color:var(--suave);font-size:.92rem}
+  td:last-child,th:last-child{text-align:right;white-space:nowrap}
+  td:last-child{font-size:1.25rem}
+  .valores .nota{font:400 .84rem "IBM Plex Mono",monospace;color:var(--suave);margin:16px 0 0}
+
+  /* Contato */
+  .contato{background:var(--tinta);color:var(--papel);padding:80px 0}
+  .contato .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end}
+  .contato h2{font-size:clamp(2.4rem,5vw,3.8rem)}
+  .contato p{color:#bdb6aa;margin:16px 0 0;max-width:44ch}
+  .botao{display:inline-flex;align-items:center;gap:10px;min-height:54px;padding:0 26px;background:var(--papel);color:var(--tinta);text-decoration:none;font:500 .92rem "IBM Plex Mono",monospace}
+  .botao:hover{background:#fff}
+  .contato .dados{font:400 .88rem "IBM Plex Mono",monospace;color:#bdb6aa;margin-top:18px}
+  @media (max-width:820px){.contato .wrap{grid-template-columns:1fr}}
+
+  footer{background:var(--tinta);color:#7f786e;font:400 .78rem "IBM Plex Mono",monospace;padding:0 0 30px}
+  footer .wrap{border-top:1px solid #333;padding-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+  /* Ampliada */
+  dialog{max-width:min(1100px,94vw);max-height:94vh;padding:0;border:0;background:transparent;color:#eee}
+  dialog::backdrop{background:rgba(10,9,8,.94)}
+  dialog img{max-width:100%;max-height:84vh;margin:0 auto}
+  .ver-pe{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:10px;font:400 .82rem "IBM Plex Mono",monospace}
+  .ver-pe button{background:none;border:1px solid #666;color:#eee;padding:8px 14px;font:inherit;cursor:pointer}
+  .ver-pe button:hover{border-color:#eee}
+</style>
+</head>
+<body>
+
+<div class="demo"><div class="wrap"><span>Modelo de demonstração. Fotógrafa e valores são fictícios.</span><a href="/#site-portfolio-foto">Quero um site assim →</a></div></div>
+
+<header>
+  <div class="wrap">
+    <a class="nome" href="#">Marina Costa <span>/ fotografia</span></a>
+    <nav aria-label="Seções"><a href="#rolos">Rolos</a><a href="#sobre">Sobre</a><a href="#valores">Valores</a><a href="#contato">Contato</a></nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap abre">
+    <div>
+      <h1>Retratos, casamentos pequenos <i>e comida.</i></h1>
+      <p>Fotografo com luz natural sempre que dá. Abaixo estão as folhas de contato de alguns trabalhos, com as fotos que o cliente escolheu marcadas a lápis.</p>
+    </div>
+    <figure>
+      <img src="/img/modelos/1772989665252-7cb41ae759cc-g.jpg" alt="Retrato de mulher com sardas apoiada nos braços" fetchpriority="high">
+      <figcaption><span>Retrato · Campinas</span><span>35 mm · f/2 · luz da janela</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="wrap rolos" id="rolos">
+    <div class="sec-cab"><h2>Folhas de contato</h2><p>toque em um quadro para ampliar</p></div>
+    <div id="lista-rolos"></div>
+  </section>
+
+  <section class="wrap sobre" id="sobre">
+    <figure><img src="/img/modelos/1562901169-5bf47e283c3a-g.jpg" alt="Marina Costa" loading="lazy"></figure>
+    <div>
+      <h2>Sobre</h2>
+      <p>Comecei fotografando os pratos do restaurante da minha tia, em 2014, com uma câmera emprestada. Depois vieram os retratos dos cozinheiros, e daí os casamentos de quem trabalhava lá.</p>
+      <p>Trabalho sozinha e faço poucos trabalhos por mês. Assim consigo editar cada foto com calma e entregar em até 15 dias.</p>
+      <ul>
+        <li>Campinas e região, sem taxa de deslocamento até 40 km</li>
+        <li>Entrega por link, em alta resolução, com 1 ano de backup</li>
+        <li>Contrato e nota fiscal em todos os trabalhos</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="wrap valores" id="valores">
+    <div class="sec-cab"><h2>Valores</h2><p>todas as fotos tratadas, em alta resolução</p></div>
+    <table>
+      <thead><tr><th>Trabalho</th><th>Valor</th></tr></thead>
+      <tbody>
+        <tr><td>Retrato<small>1 hora, 1 pessoa, 20 fotos tratadas</small></td><td>R$ 450</td></tr>
+        <tr><td>Ensaio de casal ou família<small>2 horas, 40 fotos tratadas</small></td><td>R$ 650</td></tr>
+        <tr><td>Casamento civil<small>até 4 horas, cerimônia e almoço</small></td><td>R$ 1.800</td></tr>
+        <tr><td>Gastronomia<small>até 15 pratos, no restaurante</small></td><td>R$ 900</td></tr>
+      </tbody>
+    </table>
+    <p class="nota">Reserva da data com 30% do valor. O restante no dia do trabalho.</p>
+  </section>
+
+  <section class="contato" id="contato">
+    <div class="wrap">
+      <div>
+        <h2>Tem uma data em mente?</h2>
+        <p>Escreva contando a data, o local e o que você quer fotografar. Respondo com a disponibilidade em até um dia.</p>
+      </div>
+      <div>
+        <a class="botao wa" data-msg="Olá, Marina! Quero consultar uma data para fotos.">Escrever no WhatsApp</a>
+        <p class="dados">ola@marinacosta.foto · @marinacosta.foto</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>Marina Costa Fotografia · Campinas, SP</span><span>As fotos deste modelo são do banco Unsplash</span></div></footer>
+
+<dialog id="ver" aria-label="Foto ampliada">
+  <img id="ver-img" alt="">
+  <div class="ver-pe"><span id="ver-legenda"></span><span><button id="ver-ant" aria-label="Foto anterior">←</button> <button id="ver-prox" aria-label="Próxima foto">→</button> <button id="ver-fechar">fechar</button></span></div>
+</dialog>
+
+<script>
+  var WHATSAPP = "5519996515563";
+  // Cada rolo: título, descrição curta, fotos (código) e os quadros escolhidos pelo cliente (1 a 6)
+  var ROLOS = [
+    { titulo: "Rolo 01 · Retratos", sub: "Estúdio de cerâmica, manhã de sábado", escolhidas: [2, 5],
+      fotos: ["1544005313-94ddf0286df2", "1611013621103-91e10668a120", "1590605095243-072811dbe64c", "1609881583302-61548332039c", "1772989665252-7cb41ae759cc", "1614204424926-196a80bf0be8"] },
+    { titulo: "Rolo 02 · Casamento civil", sub: "Cartório e almoço para 30 pessoas", escolhidas: [1, 3, 6],
+      fotos: ["1591700331354-f7eea65d1ce8", "1672288336066-8cd91b57b510", "1521459893400-80c3a8926f5b", "1656105348010-78490938820a", "1698802060794-159ed8f814be", "1625038032515-308ab14d10b9"] },
+    { titulo: "Rolo 03 · Gastronomia", sub: "Cardápio de outono de um bistrô", escolhidas: [4],
+      fotos: ["1663530761401-15eefb544889", "1681270543584-8e541a1bb056", "1676471926534-d5c9771909fa", "1627858034922-72a657d6b3c2", "1676471932681-45fa972d848a", "1565895405227-31cffbe0cf86"] }
+  ];
+  function src(id, w) { return "/img/modelos/" + id + (w <= 400 ? "-p" : "-g") + ".jpg"; }
+  var todas = [];
+  document.getElementById("lista-rolos").innerHTML = ROLOS.map(function (r, ri) {
+    var q = r.fotos.map(function (f, i) {
+      var n = String(ri * 6 + i + 1).padStart(2, "0") + "A";
+      var marcado = r.escolhidas.indexOf(i + 1) >= 0;
+      var idx = todas.push({ foto: f, legenda: r.titulo + " · quadro " + n + (marcado ? " · escolhida" : "") }) - 1;
+      return '<button class="quadro' + (marcado ? " marcado" : "") + '" data-idx="' + idx + '" aria-label="Ampliar quadro ' + n + '">' +
+        '<img src="' + src(f, 360) + '" alt="" loading="lazy"><span class="n">▸ ' + n + "</span></button>";
+    }).join("");
+    return '<div class="rolo"><div class="rolo-cab"><h3>' + r.titulo + "</h3><span>" + r.sub + '</span></div><div class="tira"><div class="quadros">' + q +
+      '</div></div><p class="escolha">' + r.escolhidas.length + (r.escolhidas.length === 1 ? " escolhida" : " escolhidas") + " pelo cliente</p></div>";
+  }).join("");
+
+  var ver = document.getElementById("ver"), atual = 0;
+  function abrir(i) {
+    atual = (i + todas.length) % todas.length;
+    document.getElementById("ver-img").src = src(todas[atual].foto, 1600);
+    document.getElementById("ver-legenda").textContent = todas[atual].legenda;
+    if (!ver.open) ver.showModal();
+  }
+  document.getElementById("lista-rolos").addEventListener("click", function (e) {
+    var b = e.target.closest(".quadro");
+    if (b) abrir(Number(b.dataset.idx));
+  });
+  document.getElementById("ver-fechar").onclick = function () { ver.close(); };
+  document.getElementById("ver-ant").onclick = function () { abrir(atual - 1); };
+  document.getElementById("ver-prox").onclick = function () { abrir(atual + 1); };
+  ver.addEventListener("click", function (e) { if (e.target === ver) ver.close(); });
+  document.addEventListener("keydown", function (e) {
+    if (!ver.open) return;
+    if (e.key === "ArrowLeft") abrir(atual - 1);
+    if (e.key === "ArrowRight") abrir(atual + 1);
+  });
+  document.querySelectorAll(".wa").forEach(function (a) {
+    a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(a.dataset.msg);
+    a.target = "_blank"; a.rel = "noopener";
+  });
+</script>
+</body>
+</html>

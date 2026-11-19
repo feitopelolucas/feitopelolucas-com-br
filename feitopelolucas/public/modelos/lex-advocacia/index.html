@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moretti & Salles · Advogados associados</title>
+<meta name="description" content="Escritório de advocacia em família, trabalho, consumidor, contratos, imóveis e pequenas empresas. Primeira conversa com hora marcada.">
+<meta name="theme-color" content="#1c1917">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--papel:#f7f3ea;--papel-2:#efe8da;--tinta:#1c1917;--suave:#5f574d;--fio:#d6ccb9;--ouro:#8a6416;--ouro-claro:#b8892c}
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.7 "Libre Caslon Text",Georgia,serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{margin:0;font-weight:400;line-height:1.2}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  :focus-visible{outline:2px solid var(--ouro);outline-offset:3px}
+  .sans{font-family:"Libre Franklin",system-ui,sans-serif}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .estreito{max-width:720px}
+
+  .demo{background:var(--tinta);color:#d9d2c5;font:13px/1.4 "Libre Franklin",sans-serif}
+  .demo .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .demo a{color:#e2c27d;font-weight:600;text-decoration:none}
+
+  /* Timbre */
+  .timbre{border-bottom:1px solid var(--fio)}
+  .timbre .wrap{display:flex;justify-content:space-between;align-items:center;gap:18px;padding-top:26px;padding-bottom:22px;flex-wrap:wrap}
+  .brasao{display:flex;align-items:center;gap:14px;text-decoration:none}
+  @media (max-width:560px){.timbre nav{gap:8px 16px;flex-wrap:wrap;font-size:.78rem}}
+  .brasao .mono{display:grid;place-items:center;width:52px;height:52px;border:1px solid var(--tinta);font-size:1.15rem;letter-spacing:.02em}
+  .brasao b{display:block;font-weight:400;font-size:1.3rem;letter-spacing:.06em;text-transform:uppercase}
+  .brasao small{display:block;font:500 .74rem "Libre Franklin",sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--suave)}
+  .timbre nav{display:flex;gap:24px;font:500 .86rem "Libre Franklin",sans-serif;letter-spacing:.06em;text-transform:uppercase}
+  .timbre nav a{text-decoration:none;color:var(--suave)}
+  .timbre nav a:hover{color:var(--tinta)}
+
+  /* Abertura */
+  .abre{display:grid;grid-template-columns:1.05fr 1fr;border-bottom:1px solid var(--fio)}
+  .abre .txt{padding:72px 56px 72px max(22px,calc((100vw - 1080px)/2 + 22px))}
+  .abre .local{font:500 .78rem "Libre Franklin",sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--ouro);margin:0 0 22px}
+  .abre h1{font-size:clamp(2.2rem,4.4vw,3.3rem);letter-spacing:-.01em;margin-bottom:24px}
+  .abre h1 i{color:var(--ouro)}
+  .abre p{margin:0 0 16px;color:var(--suave);max-width:48ch}
+  .abre .nao{border-left:2px solid var(--ouro);padding-left:16px;font-style:italic;color:var(--tinta)}
+  .abre figure{margin:0;position:relative;min-height:420px}
+  .abre figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(.35) sepia(.2) contrast(1.05)}
+  .abre figure figcaption{position:absolute;right:16px;bottom:14px;color:#f3ecdf;font:italic .85rem "Libre Caslon Text",serif;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+  @media (max-width:860px){.abre{grid-template-columns:1fr}.abre .txt{padding:46px 22px}.abre figure{min-height:260px}}
+
+  .botao{display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:0 24px;background:var(--tinta);color:var(--papel);text-decoration:none;font:500 .92rem "Libre Franklin",sans-serif;letter-spacing:.04em;margin-top:12px}
+  .botao:hover{background:#3a332d}
+
+  section{padding:84px 0;border-bottom:1px solid var(--fio)}
+  .rotulo{font:500 .78rem "Libre Franklin",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--ouro);margin:0 0 10px}
+  section h2{font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:34px}
+
+  /* Artigos */
+  .artigos{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
+  .art{padding:22px 0;border-top:1px solid var(--fio);display:grid;grid-template-columns:72px 1fr;gap:18px}
+  .art .num{font-size:.95rem;color:var(--ouro);padding-top:3px}
+  .art h3{font-size:1.3rem;margin-bottom:6px}
+  .art p{margin:0;color:var(--suave);font-size:.98rem}
+  @media (max-width:760px){.artigos{grid-template-columns:1fr}}
+  .paragrafo{margin:40px 0 0;padding:24px 28px;background:var(--papel-2);font-style:italic}
+  .paragrafo b{font-style:normal}
+
+  /* Sócios */
+  .socios{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  @media (max-width:760px){.socios{grid-template-columns:1fr}}
+  .socio{display:grid;grid-template-columns:170px 1fr;gap:24px;align-items:start}
+  @media (max-width:480px){.socio{grid-template-columns:1fr}}
+  .socio figure{margin:0;aspect-ratio:3/4;overflow:hidden;background:var(--papel-2)}
+  .socio figure img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+  .socio .assin{font:italic 1.9rem/1 "Libre Caslon Text",serif;color:var(--ouro);margin:0 0 10px}
+  .socio h3{font-size:1.25rem}
+  .socio .oab{font:500 .8rem "Libre Franklin",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--suave);margin:2px 0 12px}
+  .socio p{margin:0 0 10px;color:var(--suave);font-size:.98rem}
+  .socio .form{font:.88rem/1.5 "Libre Franklin",sans-serif;color:var(--suave);border-top:1px solid var(--fio);padding-top:10px}
+
+  /* Escritos */
+  .escritos{display:grid;gap:0}
+  .escrito{display:grid;grid-template-columns:120px 1fr 200px;gap:26px;align-items:center;padding:24px 0;border-top:1px solid var(--fio);text-decoration:none}
+  .escrito:last-child{border-bottom:1px solid var(--fio)}
+  .escrito time{font:500 .82rem "Libre Franklin",sans-serif;letter-spacing:.06em;color:var(--suave);text-transform:uppercase}
+  .escrito h3{font-size:1.25rem;margin-bottom:4px}
+  .escrito:hover h3{text-decoration:underline;text-decoration-color:var(--ouro);text-underline-offset:4px}
+  .escrito p{margin:0;color:var(--suave);font-size:.96rem}
+  .escrito figure{margin:0;aspect-ratio:3/2;overflow:hidden}
+  .escrito figure img{width:100%;height:100%;object-fit:cover;filter:grayscale(.4) sepia(.15)}
+  @media (max-width:760px){.escrito{grid-template-columns:1fr}.escrito figure{order:-1}}
+
+  /* Como funciona a primeira conversa */
+  .passos{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;counter-reset:p}
+  .passo{counter-increment:p}
+  .passo::before{content:"§ " counter(p);display:block;color:var(--ouro);font-size:1.05rem;margin-bottom:10px}
+  .passo h3{font-size:1.2rem;margin-bottom:8px}
+  .passo p{margin:0;color:var(--suave);font-size:.98rem}
+  @media (max-width:760px){.passos{grid-template-columns:1fr;gap:26px}}
+
+  /* Endereço */
+  .endereco{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .endereco address{font-style:normal;font-size:1.2rem;line-height:1.8}
+  .endereco .sans{font-size:.92rem;color:var(--suave);margin:18px 0 0}
+  .endereco figure{margin:0;aspect-ratio:4/3;overflow:hidden}
+  .endereco figure img{width:100%;height:100%;object-fit:cover;filter:grayscale(.3) sepia(.15)}
+  @media (max-width:760px){.endereco{grid-template-columns:1fr}}
+
+  footer{padding:28px 0 40px;font:.84rem/1.6 "Libre Franklin",sans-serif;color:var(--suave)}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<div class="demo"><div class="wrap"><span>Modelo de demonstração. Escritório, advogados e endereço são fictícios.</span><a href="/#site-advocacia-pro">Quero um site assim →</a></div></div>
+
+<header class="timbre">
+  <div class="wrap">
+    <a class="brasao" href="#"><span class="mono">M&amp;S</span><span><b>Moretti &amp; Salles</b><small>Advogados associados</small></span></a>
+    <nav aria-label="Seções"><a href="#atuacao">Atuação</a><a href="#socios">Sócios</a><a href="#escritos">Escritos</a><a href="#endereco">Endereço</a></nav>
+  </div>
+</header>
+
+<main>
+  <div class="abre">
+    <div class="txt">
+      <p class="local">Campinas · desde 2011</p>
+      <h1>Do que tratamos, <i>e do que não tratamos.</i></h1>
+      <p>Somos um escritório pequeno, com dois sócios e seis áreas de trabalho. Preferimos dizer logo no começo o que fazemos bem, para que ninguém perca uma tarde vindo até aqui com um caso que deveria estar em outras mãos.</p>
+      <p class="nao">Não atuamos em direito penal nem em causas tributárias. Quando o seu caso for de uma dessas áreas, indicamos colegas de confiança.</p>
+      <a class="botao wa" data-msg="Olá! Gostaria de marcar uma primeira conversa com o escritório Moretti & Salles.">Marcar uma primeira conversa</a>
+    </div>
+    <figure>
+      <img src="/img/modelos/1505664194779-8beaceb93744-g.jpg" alt="Estante de livros jurídicos" fetchpriority="high">
+      <figcaption>A biblioteca do escritório</figcaption>
+    </figure>
+  </div>
+
+  <section id="atuacao">
+    <div class="wrap">
+      <p class="rotulo">Capítulo I</p>
+      <h2>Áreas de atuação</h2>
+      <div class="artigos">
+        <div class="art"><span class="num">Art. 1º</span><div><h3>Família</h3><p>Divórcio, guarda, pensão alimentícia, união estável e inventário.</p></div></div>
+        <div class="art"><span class="num">Art. 2º</span><div><h3>Trabalho</h3><p>Defesa de empregados e de pequenos empregadores, rescisões e acordos.</p></div></div>
+        <div class="art"><span class="num">Art. 3º</span><div><h3>Consumidor</h3><p>Cobranças indevidas, produtos com defeito e problemas com planos e bancos.</p></div></div>
+        <div class="art"><span class="num">Art. 4º</span><div><h3>Contratos</h3><p>Redação e revisão de contratos de prestação de serviço, sociedade e parceria. Ver também o art. 6º, quando o contrato envolver a abertura de uma empresa.</p></div></div>
+        <div class="art"><span class="num">Art. 5º</span><div><h3>Imóveis</h3><p>Compra e venda, locação, usucapião e regularização de documentos.</p></div></div>
+        <div class="art"><span class="num">Art. 6º</span><div><h3>Pequenas empresas</h3><p>Abertura, alteração de contrato social, entrada e saída de sócios.</p></div></div>
+      </div>
+      <p class="paragrafo"><b>Parágrafo único.</b> A primeira conversa serve para entendermos o caso. Os honorários são apresentados por escrito antes de qualquer contratação, com base na tabela da OAB/SP.</p>
+    </div>
+  </section>
+
+  <section id="socios">
+    <div class="wrap">
+      <p class="rotulo">Capítulo II</p>
+      <h2>Sócios</h2>
+      <div class="socios">
+        <article class="socio">
+          <figure><img src="/img/modelos/1573496359142-b8d87734a5a2-g.jpg" alt="Ana Moretti" loading="lazy"></figure>
+          <div>
+            <p class="assin">A. Moretti</p>
+            <h3>Ana Moretti</h3>
+            <p class="oab">OAB/SP 000.000</p>
+            <p>Atua em família e imóveis. Coordena os inventários e as regularizações do escritório.</p>
+            <p class="form">Graduada pela PUC-Campinas. Especialista em Direito de Família e Sucessões.</p>
+          </div>
+        </article>
+        <article class="socio">
+          <figure><img src="/img/modelos/1519085360753-af0119f7cbe7-g.jpg" alt="Ricardo Salles" loading="lazy"></figure>
+          <div>
+            <p class="assin">R. Salles</p>
+            <h3>Ricardo Salles</h3>
+            <p class="oab">OAB/SP 000.000</p>
+            <p>Atua em trabalho, contratos e pequenas empresas. Responde pelos acordos e pelas revisões contratuais.</p>
+            <p class="form">Graduado pela Unicamp. Especialista em Direito do Trabalho e Direito Empresarial.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="rotulo">Capítulo III</p>
+      <h2>Como é a primeira conversa</h2>
+      <div class="passos">
+        <div class="passo"><h3>Você marca pelo WhatsApp</h3><p>Conte em poucas linhas do que se trata. Respondemos no mesmo dia útil com um horário, aqui ou por vídeo.</p></div>
+        <div class="passo"><h3>Conversamos por até uma hora</h3><p>Traga os documentos que tiver. Ao final, dizemos com franqueza se o caso é para nós e quais são os caminhos.</p></div>
+        <div class="passo"><h3>Proposta por escrito</h3><p>Se fizer sentido seguir, você recebe a proposta de honorários por escrito e decide com calma.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="escritos">
+    <div class="wrap">
+      <p class="rotulo">Capítulo IV</p>
+      <h2>Escritos</h2>
+      <div class="escritos">
+        <a class="escrito" href="#escritos"><time datetime="2026-10-14">14 out. 2026</time><div><h3>O que muda na pensão quando a renda de quem paga diminui</h3><p>Um roteiro do que levar ao pedir a revisão do valor.</p></div><figure><img src="/img/modelos/1450101499163-c8848c66ca85-g.jpg" alt="" loading="lazy"></figure></a>
+        <a class="escrito" href="#escritos"><time datetime="2026-09-02">2 set. 2026</time><div><h3>Cinco cláusulas que faltam na maioria dos contratos de aluguel</h3><p>E o que costuma acontecer quando elas não estão lá.</p></div><figure><img src="/img/modelos/1562564055-71e051d33c19-g.jpg" alt="" loading="lazy"></figure></a>
+        <a class="escrito" href="#escritos"><time datetime="2026-07-21">21 jul. 2026</time><div><h3>Sócio quer sair da empresa: por onde começar</h3><p>A ordem dos documentos e das conversas.</p></div><figure><img src="/img/modelos/1479142506502-19b3a3b7ff33-g.jpg" alt="" loading="lazy"></figure></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="endereco" style="border-bottom:0">
+    <div class="wrap endereco">
+      <div>
+        <p class="rotulo">Endereço para correspondência</p>
+        <address>Rua Conceição, 233, 5º andar, conjunto 51<br>Centro · Campinas, SP · 13010-050</address>
+        <p class="sans">Segunda a sexta, das 9h às 18h, com hora marcada.<br>Atendimento também por vídeo.</p>
+        <a class="botao wa" data-msg="Olá! Gostaria de marcar uma primeira conversa com o escritório Moretti & Salles.">Marcar conversa</a>
+      </div>
+      <figure><img src="/img/modelos/1497366754035-f200968a6e72-g.jpg" alt="Corredor do escritório" loading="lazy"></figure>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>Moretti &amp; Salles Advogados Associados · Registro na OAB/SP nº 00.000 (fictício)</span><span>Este site tem caráter informativo, conforme o Provimento 205/2021 da OAB.</span></div></footer>
+
+<script>
+  var WHATSAPP = "5519996515563";
+  document.querySelectorAll(".wa").forEach(function (a) {
+    a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(a.dataset.msg);
+    a.target = "_blank"; a.rel = "noopener";
+  });
+</script>
+</body>
+</html>

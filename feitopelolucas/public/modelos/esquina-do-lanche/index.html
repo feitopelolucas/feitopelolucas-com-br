@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Esquina do Lanche · Delivery de lanches na Vila Nova</title>
+<meta name="description" content="Hambúrguer na chapa, porções e combos. Monte o pedido e envie pronto pelo WhatsApp. Todo dia, das 18h às 23h.">
+<meta name="theme-color" content="#17120e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --carvao:#17120e;--carvao-2:#241c16;--mostarda:#f3b52a;--mostarda-esc:#d99a0b;--tomate:#d2462c;
+    --fundo:#f6f0e4;--papel:#fffdf8;--texto:#1d1611;--suave:#6f6257;--borda:#e6dccb;--verde:#2f8f4e;
+  }
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--fundo);color:var(--texto);font:16px/1.5 Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{margin:0;line-height:1.05}
+  img{display:block;max-width:100%}
+  button,input,select,textarea{font:inherit;color:inherit}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--mostarda);outline-offset:2px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+  .display{font-family:"Archivo Black",Archivo,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:-.01em}
+
+  .demo{background:#000;color:#cfc6b8;font-size:.8rem}
+  .demo .wrap{display:flex;justify-content:space-between;gap:10px;padding-top:7px;padding-bottom:7px;flex-wrap:wrap}
+  .demo a{color:var(--mostarda);font-weight:600;text-decoration:none}
+
+  /* Topo */
+  .topo{position:relative;color:#fff;background:var(--carvao);overflow:hidden}
+  .topo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;opacity:.62}
+  .topo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(23,18,14,.96) 0%,rgba(23,18,14,.78) 42%,rgba(23,18,14,.1) 100%)}
+  .topo .wrap{position:relative;z-index:1;padding-top:22px;padding-bottom:64px}
+  .barra-topo{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:68px}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .logo b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--mostarda);color:var(--carvao);font:400 1rem "Archivo Black"}
+  .logo span{font:400 1.05rem/1 "Archivo Black";text-transform:uppercase}
+  .status{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.1);font-size:.85rem;font-weight:600;backdrop-filter:blur(4px)}
+  .status i{width:8px;height:8px;border-radius:50%;background:#9a9a9a}
+  .status.aberto i{background:#3ddc6f;box-shadow:0 0 0 4px rgba(61,220,111,.2)}
+  .topo h1{font-size:clamp(2.8rem,9vw,5.6rem);max-width:9ch}
+  .topo h1 em{font-style:normal;color:var(--mostarda)}
+  .topo .lead{max-width:34ch;font-size:1.12rem;color:#e9e0d3;margin:18px 0 28px}
+  .cta{display:inline-flex;align-items:center;gap:10px;min-height:54px;padding:0 24px;border-radius:12px;background:var(--mostarda);color:var(--carvao);font-weight:700;text-decoration:none}
+  .cta:hover{background:var(--mostarda-esc)}
+  .fatos{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:34px;font-size:.92rem;color:#d8cfc2}
+  .fatos b{color:#fff}
+
+  /* Categorias */
+  nav.cats{position:sticky;top:0;z-index:15;background:rgba(246,240,228,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--borda)}
+  nav.cats .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
+  nav.cats a{flex:none;display:inline-flex;align-items:center;min-height:42px;padding:0 16px;border-radius:999px;color:var(--carvao);font-weight:600;text-decoration:none;border:1px solid var(--borda);background:var(--papel)}
+  nav.cats a.ativo{background:var(--carvao);color:#fff;border-color:var(--carvao)}
+
+  main{padding-bottom:140px}
+  .cat{padding-top:44px;scroll-margin-top:66px}
+  .cat-cab{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:16px;border-bottom:3px solid var(--carvao);padding-bottom:10px}
+  .cat-cab h2{font-size:clamp(1.7rem,4vw,2.3rem)}
+  .cat-cab small{color:var(--suave);font-size:.9rem}
+
+  /* Combos: cartões grandes com foto */
+  .combos{display:grid;gap:16px}
+  @media (min-width:760px){.combos{grid-template-columns:repeat(3,1fr)}}
+  .combo{display:flex;flex-direction:column;background:var(--papel);border-radius:16px;overflow:hidden;border:1px solid var(--borda)}
+  .combo figure{margin:0;aspect-ratio:4/3;background:#2a211a;position:relative}
+  .combo figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .combo .tag{position:absolute;top:12px;left:12px;background:var(--tomate);color:#fff;font-size:.75rem;font-weight:700;padding:4px 10px;border-radius:6px;text-transform:uppercase;letter-spacing:.04em}
+  .combo .corpo{display:flex;flex-direction:column;gap:6px;padding:16px;flex:1}
+  .combo h3{font-size:1.15rem;font-weight:700}
+  .combo p{margin:0;color:var(--suave);font-size:.93rem}
+  .combo .pe{margin-top:auto;padding-top:12px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+
+  /* Lista com miniatura */
+  .lista{display:grid;gap:10px}
+  @media (min-width:760px){.lista{grid-template-columns:1fr 1fr;gap:12px 20px}}
+  .item{display:grid;grid-template-columns:88px 1fr auto;gap:14px;align-items:center;padding:10px;background:var(--papel);border:1px solid var(--borda);border-radius:14px}
+  .item.sem-foto{grid-template-columns:1fr auto;padding:14px}
+  .item img{width:88px;height:88px;border-radius:10px;object-fit:cover;background:#e9dfcf}
+  .item h3{font-size:1.02rem;font-weight:700}
+  .item p{margin:2px 0 4px;color:var(--suave);font-size:.88rem}
+  .preco{font-weight:700;font-size:1.02rem}
+  .confirmar{color:var(--tomate);font-weight:600;font-size:.88rem}
+
+  .qtd{display:flex;align-items:center;border-radius:10px;background:var(--fundo);border:1px solid var(--borda)}
+  .qtd button{width:40px;height:40px;border:0;background:none;font-size:1.25rem;font-weight:700;cursor:pointer;border-radius:9px}
+  .qtd button:hover:not(:disabled){background:#efe5d4}
+  .qtd button:disabled{color:#cbbfae;cursor:not-allowed}
+  .qtd span{min-width:22px;text-align:center;font-weight:700}
+  .qtd.tem{background:var(--mostarda);border-color:var(--mostarda)}
+  .qtd.tem button:hover:not(:disabled){background:var(--mostarda-esc)}
+
+  /* Entrega */
+  .entrega{margin-top:64px;background:var(--carvao);color:#f1e9dd;border-radius:22px;overflow:hidden;display:grid}
+  @media (min-width:860px){.entrega{grid-template-columns:1fr 1fr}}
+  .entrega figure{margin:0;min-height:260px;position:relative}
+  .entrega figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .entrega .txt{padding:34px 28px}
+  .entrega h2{font-size:2rem;margin-bottom:8px}
+  .entrega p{color:#cbbfae;margin:0 0 20px}
+  .taxas{width:100%;border-collapse:collapse;font-size:.98rem}
+  .taxas td{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .taxas td:last-child{text-align:right;font-weight:700;color:var(--mostarda)}
+  .entrega small{display:block;margin-top:14px;color:#a89a89}
+
+  footer{background:var(--carvao-2);color:#bfb2a2;padding:40px 0 140px;font-size:.92rem}
+  footer .wrap{display:grid;gap:26px}
+  @media (min-width:760px){footer .wrap{grid-template-columns:1.4fr 1fr 1fr}}
+  footer h4{margin:0 0 8px;color:#fff;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em}
+  footer p{margin:0 0 4px}
+  footer a{color:var(--mostarda)}
+
+  /* Carrinho */
+  .carrinho{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:0 12px calc(12px + env(safe-area-inset-bottom));pointer-events:none}
+  .carrinho .caixa{pointer-events:auto;max-width:720px;margin:0 auto;background:var(--carvao);color:#fff;border-radius:16px;padding:12px 12px 12px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;box-shadow:0 14px 30px rgba(0,0,0,.28);transform:translateY(130%);transition:transform .25s ease}
+  .carrinho.visivel .caixa{transform:none}
+  .carrinho small{display:block;color:#bfb2a2;font-size:.82rem}
+  .carrinho strong{font-size:1.2rem}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border:0;border-radius:12px;background:var(--mostarda);color:var(--carvao);font-weight:700;cursor:pointer}
+  .btn:hover{background:var(--mostarda-esc)}
+  .btn.largo{width:100%}
+
+  /* Janela */
+  dialog{width:min(560px,100%);max-height:100%;margin:auto auto 0;padding:0;border:0;border-radius:20px 20px 0 0;background:var(--fundo);color:var(--texto)}
+  @media (min-width:600px){dialog{margin:auto;border-radius:20px;max-height:calc(100% - 32px)}}
+  dialog::backdrop{background:rgba(15,10,6,.65)}
+  .modal-topo{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;padding:16px 18px;background:var(--fundo);border-bottom:1px solid var(--borda);z-index:1}
+  .modal-topo h2{font:400 1.25rem "Archivo Black";text-transform:uppercase}
+  .fechar{width:42px;height:42px;border:0;border-radius:10px;background:var(--papel);font-size:1.4rem;cursor:pointer}
+  .modal-corpo{padding:16px 18px calc(22px + env(safe-area-inset-bottom))}
+  .resumo{list-style:none;margin:0 0 16px;padding:12px 14px;background:var(--papel);border:1px solid var(--borda);border-radius:12px}
+  .resumo li{display:flex;justify-content:space-between;gap:10px;padding:4px 0}
+  .resumo .sub{color:var(--suave);font-size:.92rem}
+  .resumo .tot{border-top:1px dashed var(--borda);margin-top:6px;padding-top:8px;font-weight:700;font-size:1.08rem}
+  .campo{display:grid;gap:6px;margin-bottom:14px}
+  label,legend{font-weight:600}
+  .opc{font-weight:400;color:var(--suave)}
+  input[type=text],select,textarea{width:100%;min-height:50px;padding:10px 14px;border:1.5px solid var(--borda);border-radius:12px;background:var(--papel);font-size:1rem}
+  textarea{min-height:76px;resize:vertical}
+  input:focus,select:focus,textarea:focus{border-color:var(--carvao);outline:none}
+  fieldset{border:0;padding:0;margin:0 0 14px}
+  .pags{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:6px}
+  .pags label{display:flex;align-items:center;justify-content:center;text-align:center;min-height:50px;padding:0 8px;border:1.5px solid var(--borda);border-radius:12px;background:var(--papel);font-weight:600;font-size:.92rem;cursor:pointer}
+  .pags input{position:absolute;opacity:0;pointer-events:none}
+  .pags label:has(input:checked){border-color:var(--carvao);background:var(--carvao);color:#fff}
+  .pags label:has(input:focus-visible){outline:3px solid var(--mostarda)}
+  .erro{color:var(--tomate);font-size:.88rem;font-weight:600}
+  .erro:empty{display:none}
+  .invalido{border-color:var(--tomate)!important}
+  .nota{font-size:.84rem;color:var(--suave);text-align:center;margin:12px 0 0}
+</style>
+</head>
+<body>
+
+<div class="demo"><div class="wrap"><span>Modelo de demonstração. Lanchonete, preços e endereço são fictícios.</span><a href="/#site-esquina-do-lanche">Quero um site assim →</a></div></div>
+
+<header class="topo">
+  <img src="/img/modelos/1568901346375-23c9450c58cd-g.jpg" alt="" fetchpriority="high">
+  <div class="wrap">
+    <div class="barra-topo">
+      <a class="logo" href="#"><b>EL</b><span id="nome"></span></a>
+      <span class="status" id="status"><i></i><span></span></span>
+    </div>
+    <h1 class="display">Lanche de chapa, <em>do jeito antigo.</em></h1>
+    <p class="lead">Pão selado na manteiga, carne de 120 g moída aqui e batata cortada na hora. Monte o pedido e mande pronto no WhatsApp.</p>
+    <a class="cta" href="#combos">Ver o cardápio</a>
+    <div class="fatos">
+      <span><b>18h às 23h</b>, todo dia</span>
+      <span>Entrega em <b>35 a 50 min</b></span>
+      <span>Pix, cartão ou dinheiro</span>
+    </div>
+  </div>
+</header>
+
+<nav class="cats" aria-label="Categorias"><div class="wrap" id="nav"></div></nav>
+
+<main class="wrap">
+  <div id="cardapio"></div>
+
+  <section class="entrega" id="entrega" aria-labelledby="entrega-t">
+    <figure><img src="/img/modelos/1776142519748-2b897acaecd7-g.jpg" alt="Equipe trabalhando na cozinha da lanchonete" loading="lazy"></figure>
+    <div class="txt">
+      <h2 class="display" id="entrega-t">Onde a gente entrega</h2>
+      <p>A taxa entra no total do pedido. Fora desses bairros, dá para retirar no balcão.</p>
+      <table class="taxas" id="taxas"></table>
+      <small>Retirada no balcão: Rua Coronel Quirino, 412, esquina com a Rua Bento.</small>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h4 id="rod-nome"></h4>
+      <p>Rua Coronel Quirino, 412 · Vila Nova · Campinas, SP</p>
+      <p>CNPJ 00.000.000/0001-00 (fictício)</p>
+    </div>
+    <div>
+      <h4>Horário</h4>
+      <p>Todo dia, das 18h às 23h</p>
+      <p>Último pedido às 22h40</p>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <p><a class="wa-link" href="#">WhatsApp</a></p>
+      <p><a href="https://instagram.com/" target="_blank" rel="noopener">@esquinadolanche</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="carrinho" id="carrinho">
+  <div class="caixa">
+    <div><small id="qtd-itens">Nenhum item</small><strong id="total">R$ 0,00</strong></div>
+    <button class="btn" id="finalizar">Finalizar pedido</button>
+  </div>
+</div>
+
+<dialog id="janela" aria-labelledby="janela-titulo">
+  <div class="modal-topo"><h2 id="janela-titulo">Seu pedido</h2><button class="fechar" id="fechar" aria-label="Fechar">×</button></div>
+  <form class="modal-corpo" id="form" novalidate>
+    <ul class="resumo" id="resumo"></ul>
+    <div class="campo">
+      <label for="f-nome">Nome</label>
+      <input type="text" id="f-nome" autocomplete="name">
+      <span class="erro" id="e-nome"></span>
+    </div>
+    <div class="campo">
+      <label for="f-bairro">Bairro</label>
+      <select id="f-bairro"></select>
+      <span class="erro" id="e-bairro"></span>
+    </div>
+    <div class="campo" id="campo-endereco">
+      <label for="f-endereco">Endereço</label>
+      <input type="text" id="f-endereco" autocomplete="street-address" placeholder="Rua, número e complemento">
+      <span class="erro" id="e-endereco"></span>
+    </div>
+    <fieldset>
+      <legend>Pagamento</legend>
+      <div class="pags" id="pags"></div>
+      <span class="erro" id="e-pagamento"></span>
+    </fieldset>
+    <div class="campo" id="campo-troco" hidden>
+      <label for="f-troco">Troco para <span class="opc">(opcional)</span></label>
+      <input type="text" id="f-troco" inputmode="decimal" placeholder="Ex.: 100">
+    </div>
+    <div class="campo">
+      <label for="f-obs">Observação <span class="opc">(opcional)</span></label>
+      <textarea id="f-obs" maxlength="200" placeholder="Ex.: X-Salada sem cebola, ponto da carne bem passado"></textarea>
+    </div>
+    <button class="btn largo" type="submit">Enviar pelo WhatsApp</button>
+    <p class="nota">O pedido chega pronto para a lanchonete, que confirma pelo WhatsApp.</p>
+  </form>
+</dialog>
+
+<script>
+/* ===== TROQUE SÓ ESTE BLOCO ===== */
+const DADOS = {
+  nome: "Esquina do Lanche",
+  whatsapp: "5519996515563",
+  abre: "18:00",
+  fecha: "23:00",
+  pagamentos: ["Pix", "Cartão", "Dinheiro"],
+  // Bairro | taxa de entrega (0 = retirada)
+  bairros: `
+Retirar no balcão | 0
+Vila Nova | 5,00
+Centro | 6,00
+Jardim América | 7,50
+Bonfim | 8,00
+`,
+  // Categoria | Item | Descrição | Preço | Foto (código da foto, opcional)
+  cardapio: `
+Combos | Combo X-Salada | X-Salada, batata frita 400 g e refrigerante lata | 46,90 | 1561758033-d89a9ad46330
+Combos | Combo Dupla | 2 X-Burger e refrigerante 2 litros | 45,00 | 1644447295446-19b7e712a895
+Combos | Combo X-Tudo | X-Tudo, batata com cheddar e bacon e suco 500 ml | 65,90 | 1651981109119-47bb742c1576
+Lanches | X-Burger | Carne de 120 g e queijo prato no pão selado | 18,00 | 1572802419224-296b0aeee0d9
+Lanches | X-Salada | Carne, queijo, alface americana e tomate | 22,00 | 1568901346375-23c9450c58cd
+Lanches | X-Bacon | Carne, bacon em tiras e queijo | 25,00 | 1553979459-d2229ba7433b
+Lanches | X-Tudo | Duas carnes, bacon, ovo, presunto, queijo, alface e tomate | 32,00 | 1607013251379-e6eecfffe234
+Lanches | Misto quente | Presunto e queijo no pão de forma | 12,00 |
+Porções | Batata frita | 400 g, com sal e orégano | 24,00 | 1630384060421-cb20d0e0649d
+Porções | Batata cheddar e bacon | 400 g | 32,00 | 1700835880456-2e5519fa54d6
+Porções | Anéis de cebola | 300 g, empanados na hora | 26,00 | 1639024471283-03518883512d
+Porções | Calabresa acebolada | 400 g, com pão francês | 30,00 | 1792407988042-ef2950e597e4
+Bebidas | Suco natural | 500 ml, laranja ou limão | 9,00 | 1600271886742-f049cd451bba
+Bebidas | Refrigerante lata | 350 ml | 6,00 |
+Bebidas | Refrigerante 2 litros | Guaraná ou cola | 14,00 |
+Bebidas | Água mineral | 500 ml, com ou sem gás | 4,00 |
+`
+};
+/* ===== FIM DO BLOCO ===== */
+
+(function () {
+  var MAX = 20;
+  function $(id) { return document.getElementById(id); }
+  function reais(c) { return "R$ " + (c / 100).toFixed(2).replace(".", ","); }
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function slug(s) { return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-"); }
+  function centavos(t) { var m = /^(\d+)(?:,(\d{2}))?$/.exec((t || "").trim()); return m ? Number(m[1]) * 100 + Number(m[2] || 0) : null; }
+  function foto(id, w) { return "/img/modelos/" + id + (w <= 400 ? "-p" : "-g") + ".jpg"; }
+  function linhas(t) { return t.split("\n").map(function (l) { return l.trim(); }).filter(Boolean).map(function (l) { return l.split("|").map(function (x) { return x.trim(); }); }); }
+
+  var itens = linhas(DADOS.cardapio).map(function (p) {
+    return { categoria: p[0] || "Outros", nome: p[1] || "", descricao: p[2] || "", preco: centavos(p[3]), foto: p[4] || "" };
+  }).filter(function (it) { return it.nome; });
+  var bairros = linhas(DADOS.bairros).map(function (p) { return { nome: p[0], taxa: centavos(p[1]) || 0 }; });
+  var qtd = itens.map(function () { return 0; });
+
+  /* Topo */
+  $("nome").textContent = DADOS.nome;
+  $("rod-nome").textContent = DADOS.nome;
+  var waBase = "https://wa.me/" + DADOS.whatsapp;
+  document.querySelectorAll(".wa-link").forEach(function (a) { a.href = waBase; a.target = "_blank"; a.rel = "noopener"; });
+  (function status() {
+    var d = new Date(), m = d.getHours() * 60 + d.getMinutes();
+    var a = DADOS.abre.split(":"), f = DADOS.fecha.split(":");
+    var ini = +a[0] * 60 + +a[1], fim = +f[0] * 60 + +f[1];
+    var aberto = m >= ini && m < fim;
+    $("status").classList.toggle("aberto", aberto);
+    $("status").lastElementChild.textContent = aberto ? "Aberto agora · até as " + Number(f[0]) + "h" : "Fechado · abre às " + Number(a[0]) + "h";
+  })();
+
+  /* Cardápio */
+  var cats = [];
+  itens.forEach(function (it) { if (cats.indexOf(it.categoria) < 0) cats.push(it.categoria); });
+  $("nav").innerHTML = cats.map(function (c, i) { return '<a href="#' + slug(c) + '"' + (i === 0 ? ' class="ativo"' : "") + ">" + esc(c) + "</a>"; }).join("") + '<a href="#entrega">Entrega</a>';
+
+  function controle(i) {
+    return '<div class="qtd" id="c' + i + '"><button type="button" data-i="' + i + '" data-d="-1" aria-label="Tirar um ' + esc(itens[i].nome) + '">−</button>' +
+      '<span id="q' + i + '">0</span><button type="button" data-i="' + i + '" data-d="1" aria-label="Adicionar um ' + esc(itens[i].nome) + '">+</button></div>';
+  }
+  function precoHtml(it) { return it.preco === null ? '<span class="confirmar">Preço a confirmar</span>' : '<span class="preco">' + reais(it.preco) + "</span>"; }
+
+  $("cardapio").innerHTML = cats.map(function (c) {
+    var doGrupo = itens.map(function (it, i) { return { it: it, i: i }; }).filter(function (x) { return x.it.categoria === c; });
+    var combo = c === "Combos";
+    var corpo = doGrupo.map(function (x, n) {
+      var it = x.it, i = x.i, ctrl = it.preco === null ? "" : controle(i);
+      if (combo) {
+        return '<article class="combo">' + (it.foto ? '<figure><img src="' + foto(it.foto, 700) + '" alt="' + esc(it.nome) + '" loading="lazy">' + (n === 0 ? '<span class="tag">Mais pedido</span>' : "") + "</figure>" : "") +
+          '<div class="corpo"><h3>' + esc(it.nome) + "</h3><p>" + esc(it.descricao) + '</p><div class="pe">' + precoHtml(it) + ctrl + "</div></div></article>";
+      }
+      return '<div class="item' + (it.foto ? "" : " sem-foto") + '">' + (it.foto ? '<img src="' + foto(it.foto, 240) + '" alt="" loading="lazy">' : "") +
+        "<div><h3>" + esc(it.nome) + "</h3>" + (it.descricao ? "<p>" + esc(it.descricao) + "</p>" : "") + precoHtml(it) + "</div>" + ctrl + "</div>";
+    }).join("");
+    return '<section class="cat" id="' + slug(c) + '"><div class="cat-cab"><h2 class="display">' + esc(c) + "</h2><small>" + doGrupo.length + " opções</small></div>" +
+      '<div class="' + (combo ? "combos" : "lista") + '">' + corpo + "</div></section>";
+  }).join("");
+
+  /* Categoria ativa ao rolar */
+  var links = document.querySelectorAll("nav.cats a");
+  if ("IntersectionObserver" in window) {
+    var obs = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (a) { a.classList.toggle("ativo", a.getAttribute("href") === "#" + e.target.id); });
+      });
+    }, { rootMargin: "-40% 0px -55% 0px" });
+    document.querySelectorAll(".cat, #entrega").forEach(function (s) { obs.observe(s); });
+  }
+
+  $("cardapio").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-i]");
+    if (!b) return;
+    var i = Number(b.dataset.i);
+    qtd[i] = Math.max(0, Math.min(MAX, qtd[i] + Number(b.dataset.d)));
+    atualizar();
+  });
+
+  function escolhidos() { return itens.map(function (it, i) { return { it: it, q: qtd[i] }; }).filter(function (x) { return x.q > 0 && x.it.preco !== null; }); }
+  function totalDe(l) { return l.reduce(function (s, x) { return s + x.it.preco * x.q; }, 0); }
+  function atualizar() {
+    itens.forEach(function (it, i) {
+      var s = $("q" + i);
+      if (!s) return;
+      s.textContent = qtd[i];
+      s.previousElementSibling.disabled = qtd[i] === 0;
+      s.nextElementSibling.disabled = qtd[i] >= MAX;
+      $("c" + i).classList.toggle("tem", qtd[i] > 0);
+    });
+    var l = escolhidos(), n = l.reduce(function (s, x) { return s + x.q; }, 0);
+    $("qtd-itens").textContent = n ? n + (n === 1 ? " item" : " itens") + " no pedido" : "Nenhum item";
+    $("total").textContent = reais(totalDe(l));
+    $("carrinho").classList.toggle("visivel", n > 0);
+  }
+
+  /* Taxas */
+  $("taxas").innerHTML = bairros.filter(function (b) { return b.taxa > 0; }).map(function (b) {
+    return "<tr><td>" + esc(b.nome) + "</td><td>" + reais(b.taxa) + "</td></tr>";
+  }).join("");
+
+  /* Finalizar */
+  $("f-bairro").innerHTML = '<option value="">Escolha o bairro</option>' + bairros.map(function (b, i) {
+    return '<option value="' + i + '">' + esc(b.nome) + (b.taxa ? " · entrega " + reais(b.taxa) : "") + "</option>";
+  }).join("");
+  $("pags").innerHTML = DADOS.pagamentos.map(function (p) { return '<label><input type="radio" name="pag" value="' + esc(p) + '">' + esc(p) + "</label>"; }).join("");
+  $("pags").addEventListener("change", function () {
+    var sel = document.querySelector("input[name=pag]:checked");
+    $("campo-troco").hidden = !(sel && sel.value === "Dinheiro");
+  });
+
+  function bairroSel() { var v = $("f-bairro").value; return v === "" ? null : bairros[Number(v)]; }
+  function retirada() { var b = bairroSel(); return !!b && b.taxa === 0; }
+  function pintarResumo() {
+    var l = escolhidos(), b = bairroSel(), taxa = b ? b.taxa : 0;
+    $("resumo").innerHTML = l.map(function (x) {
+      return "<li><span>" + x.q + "× " + esc(x.it.nome) + "</span><span>" + reais(x.it.preco * x.q) + "</span></li>";
+    }).join("") +
+      '<li class="sub"><span>Entrega</span><span>' + (b ? (taxa ? reais(taxa) : "retirada") : "escolha o bairro") + "</span></li>" +
+      '<li class="tot"><span>Total</span><span>' + reais(totalDe(l) + taxa) + "</span></li>";
+    $("campo-endereco").hidden = retirada();
+  }
+  $("f-bairro").addEventListener("change", pintarResumo);
+  $("finalizar").addEventListener("click", function () { pintarResumo(); $("janela").showModal(); });
+  $("fechar").addEventListener("click", function () { $("janela").close(); });
+  $("janela").addEventListener("click", function (e) { if (e.target === this) this.close(); });
+
+  function erro(campo, msg) {
+    $("e-" + campo).textContent = msg || "";
+    var el = campo === "pagamento" ? null : $("f-" + campo);
+    if (el) el.classList.toggle("invalido", !!msg);
+    return !msg;
+  }
+  $("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var nome = $("f-nome").value.trim(), end = $("f-endereco").value.trim(), b = bairroSel();
+    var sel = document.querySelector("input[name=pag]:checked");
+    var ok = [
+      erro("nome", nome ? "" : "Informe o seu nome."),
+      erro("bairro", b ? "" : "Escolha o bairro ou a retirada."),
+      erro("endereco", retirada() || end ? "" : "Informe a rua e o número."),
+      erro("pagamento", sel ? "" : "Escolha a forma de pagamento.")
+    ].every(Boolean);
+    if (!ok) { var p = document.querySelector(".invalido") || $("pags"); p.scrollIntoView({ block: "center" }); return; }
+    var l = escolhidos();
+    var troco = sel.value === "Dinheiro" ? $("f-troco").value.replace(/[^\d,]/g, "") : "";
+    var obs = $("f-obs").value.trim();
+    var msg = ["*Pedido · " + DADOS.nome + "*", ""]
+      .concat(l.map(function (x) { return x.q + "x " + x.it.nome + " (" + reais(x.it.preco * x.q) + ")"; }))
+      .concat([
+        "",
+        "Itens: " + reais(totalDe(l)),
+        "Entrega: " + (b.taxa ? reais(b.taxa) : "retirada no balcão"),
+        "*Total: " + reais(totalDe(l) + b.taxa) + "*",
+        "",
+        "Nome: " + nome,
+        b.taxa ? "Endereço: " + end + " · " + b.nome : "Retirada no balcão",
+        "Pagamento: " + sel.value + (troco ? " (troco para R$ " + troco + ")" : "")
+      ]);
+    if (obs) msg.push("Observação: " + obs);
+    window.open(waBase + "?text=" + encodeURIComponent(msg.join("\n")), "_blank", "noopener");
+  });
+
+  atualizar();
+})();
+</script>
+</body>
+</html>
