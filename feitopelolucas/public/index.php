@@ -196,12 +196,12 @@ $SERVICOS = [
     ],
     [
         'titulo' => 'Aplicativos para celular',
-        'texto'  => 'Aplicativos que funcionam em Android e iPhone: catálogo de produtos, pedidos, área do cliente, cartão fidelidade e controle interno da equipe. Não é preciso passar por loja de aplicativos: o usuário abre um link e instala o aplicativo diretamente na tela inicial do celular. As atualizações são automáticas, sem necessidade de baixar nada novamente.',
+        'texto'  => 'Aplicativos que funcionam em Android e iPhone: catálogo de produtos, pedidos, área do cliente, cartão fidelidade e controle interno da equipe. Não é preciso passar por loja de aplicativos: o usuário abre um link e instala o aplicativo diretamente na tela inicial do celular. As atualizações são automáticas, sem necessidade de baixar nada novamente. A partir de R$ 2.500.',
         'msg'    => 'Olá, Lucas! Gostaria de um orçamento para um aplicativo de celular.',
     ],
     [
         'titulo' => 'Programas para computador',
-        'texto'  => 'Sistemas para Windows que organizam a rotina do seu negócio. Um exemplo é a agenda para consultório: cadastro de pacientes, marcação de horários por profissional, lembretes pelo WhatsApp e histórico de atendimentos. Também desenvolvo sistemas de controle de estoque, caixa e cadastro de clientes.',
+        'texto'  => 'Sistemas para Windows que organizam a rotina do seu negócio. Um exemplo é a agenda para consultório: cadastro de pacientes, marcação de horários por profissional, lembretes pelo WhatsApp e histórico de atendimentos. Também desenvolvo sistemas de controle de estoque, caixa e cadastro de clientes. A partir de R$ 3.500.',
         'msg'    => 'Olá, Lucas! Gostaria de um orçamento para um programa de computador.',
     ],
     [
@@ -530,7 +530,7 @@ $ano = date('Y');
     <p class="sub">Seis demonstrações que funcionam de verdade. Os negócios são fictícios e o que você digitar fica só no seu aparelho.</p>
     <div class="ex-grupo">
       <h3>Aplicativos para celular</h3>
-      <p class="meta">Abra no celular e instale na tela inicial, sem loja de aplicativos.</p>
+      <p class="meta">Abra no celular e instale na tela inicial, sem loja de aplicativos. A partir de R$ 2.500.</p>
       <a class="ex" href="/apps/cafe-do-largo/" target="_blank" rel="noopener">
         <img src="/apps/cafe-do-largo/icon.svg" alt="" width="48" height="48" loading="lazy">
         <span><b>Café do Largo</b><span>Cartão fidelidade de uma cafeteria: o cliente junta selos a cada café e ganha o próximo.</span></span>
@@ -549,7 +549,7 @@ $ano = date('Y');
     </div>
     <div class="ex-grupo">
       <h3>Programas para computador</h3>
-      <p class="meta">Demonstrações no navegador. A versão de verdade é instalada no Windows.</p>
+      <p class="meta">Demonstrações no navegador. A versão de verdade é instalada no Windows. A partir de R$ 3.500.</p>
       <a class="ex" href="/programas/agenda-consultorio/" target="_blank" rel="noopener">
         <img src="/programas/agenda-consultorio/icone.svg" alt="" width="48" height="48" loading="lazy">
         <span><b>Agenda Ipê</b><span>Agenda de consultório: horários por profissional, ficha do paciente e lembretes da véspera.</span></span>
@@ -627,7 +627,7 @@ $ano = date('Y');
       <li><b><?= e($negrito) ?></b><?= $resto[0] === ':' ? '' : ' ' ?><?= e($resto) ?></li>
       <?php endforeach; ?>
     </ol>
-    <p class="note">Aplicativos, programas e jogos são feitos sob medida; portanto, o prazo e o preço dependem de cada projeto. Conte-me a sua ideia e eu envio um orçamento.</p>
+    <p class="note">Aplicativos e programas são feitos sob medida: os valores acima são para a versão mais simples, e o preço final depende do que o seu negócio precisa. Jogos são orçados caso a caso. Conte-me a sua ideia e eu envio um orçamento.</p>
 
     <div class="terms">
       <div>
