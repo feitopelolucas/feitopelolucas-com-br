@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>PetLore · Banho &amp; Tosa · Parque Jambeiro, Campinas</title>
+<meta name="description" content="Prévia de site para a PetLore, banho e tosa no Parque Jambeiro, em Campinas.">
+<meta name="theme-color" content="#2e2142">
+<link rel="icon" href="fotos/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --fundo:#fff8f6; --rosa-claro:#ffe3ea; --rosa:#e9578a; --rosa-esc:#c93e70;
+    --lilas:#7b5cc4; --lilas-claro:#ece5fb; --agua:#2fa6b8; --agua-claro:#dff4f6;
+    --tinta:#2e2142; --tinta-2:#54476a; --suave:#857a96; --fio:#f0dde3; --branco:#fff;
+    --sombra:0 22px 44px -26px rgba(46,33,66,.55);
+  }
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--fundo);color:var(--tinta);font:16.5px/1.65 "Nunito",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{margin:0;font-family:"Fredoka","Nunito",sans-serif;font-weight:600;line-height:1.06;letter-spacing:-.01em}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--lilas);outline-offset:3px}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 18px}
+  .rotulo{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--rosa-esc)}
+  .rotulo svg{width:16px;height:16px}
+
+  /* Faixa de prévia */
+  .previa{background:var(--tinta);color:#e6def2;font-size:.82rem}
+  .previa .wrap{display:flex;justify-content:space-between;align-items:center;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:#ffb3cb;font-weight:700;text-decoration:none;white-space:nowrap}
+
+  /* Barra */
+  .barra{position:sticky;top:0;z-index:20;background:rgba(255,248,246,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--fio)}
+  .barra .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:70px}
+  .marca{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .marca img{width:46px;height:46px;border-radius:50%;box-shadow:0 0 0 3px var(--branco),0 0 0 4px var(--fio)}
+  .marca b{display:block;font:600 1.4rem/1 "Fredoka",sans-serif}
+  .marca small{display:block;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--suave);margin-top:3px}
+  .barra nav{display:flex;gap:26px;font-size:.95rem;font-weight:700}
+  .barra nav a{text-decoration:none;color:var(--tinta-2)}
+  .barra nav a:hover{color:var(--rosa-esc)}
+  @media (max-width:880px){.barra nav{display:none}}
+
+  .botao{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;padding:14px 24px;font:800 .97rem/1 "Nunito",sans-serif;text-decoration:none;cursor:pointer;transition:transform .15s,background .15s}
+  .botao:hover{transform:translateY(-2px)}
+  .botao.cheio{background:var(--rosa);color:#fff;box-shadow:0 10px 22px -12px rgba(201,62,112,.9)}
+  .botao.cheio:hover{background:var(--rosa-esc)}
+  .botao.linha{background:var(--branco);color:var(--tinta);box-shadow:inset 0 0 0 2px var(--tinta)}
+  .botao.peq{padding:11px 18px;font-size:.9rem}
+  .botao svg{width:19px;height:19px;flex:none}
+
+  /* Topo */
+  .topo{padding:58px 0 84px;overflow:hidden;position:relative}
+  .topo::before{content:"";position:absolute;right:-180px;top:-140px;width:560px;height:560px;border-radius:50%;background:var(--rosa-claro);z-index:-1}
+  .topo .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+  .topo h1{font-size:clamp(2.6rem,6vw,4.4rem);margin:16px 0 18px}
+  .topo h1 em{font-style:normal;color:var(--rosa);position:relative;white-space:nowrap}
+  .topo h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.04em;height:.16em;border-radius:9px;background:var(--lilas-claro);z-index:-1}
+  .lead{font-size:1.12rem;color:var(--tinta-2);max-width:31em;margin:0 0 28px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .nota{display:inline-flex;align-items:center;gap:10px;margin-top:30px;background:var(--branco);border:1px solid var(--fio);border-radius:999px;padding:9px 18px 9px 14px;font-size:.92rem;color:var(--tinta-2);text-decoration:none}
+  .nota b{font-size:1.1rem;color:var(--tinta)}
+  .nota .est{color:#f0a91f;letter-spacing:1px}
+
+  .vitrine{position:relative;padding:0 0 40px 34px}
+  .vitrine .foto{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:34px;box-shadow:var(--sombra);border:8px solid var(--branco)}
+  .ficha{position:absolute;left:-6px;bottom:0;width:250px;background:var(--branco);border-radius:16px;padding:16px 18px 14px;box-shadow:var(--sombra);font-size:.86rem;border-top:6px solid var(--lilas)}
+  .ficha .cab{display:flex;justify-content:space-between;align-items:baseline;font:600 1rem "Fredoka",sans-serif;margin-bottom:8px}
+  .ficha .cab span{font:700 .72rem "Nunito",sans-serif;color:var(--suave);letter-spacing:.08em}
+  .ficha ul{list-style:none;margin:0;padding:0}
+  .ficha li{display:flex;align-items:center;gap:9px;padding:5px 0;border-top:1px dashed var(--fio)}
+  .ficha li:first-child{border-top:0}
+  .ficha li i{width:17px;height:17px;border-radius:5px;background:var(--agua);display:grid;place-items:center;flex:none}
+  .ficha li i::after{content:"";width:8px;height:4px;border:solid #fff;border-width:0 0 2px 2px;transform:rotate(-45deg) translate(1px,-1px)}
+  .carimbo{position:absolute;right:12px;bottom:16px;transform:rotate(-12deg);border:2.5px solid var(--rosa);color:var(--rosa);border-radius:8px;padding:3px 9px;font:700 .82rem "Fredoka",sans-serif;letter-spacing:.08em;text-transform:uppercase;opacity:.9}
+  .agora{position:absolute;right:-6px;top:22px;background:var(--branco);border-radius:14px;padding:11px 15px;box-shadow:var(--sombra);font-size:.86rem;line-height:1.35}
+  .agora b{display:flex;align-items:center;gap:8px}
+  .agora b::before{content:"";width:9px;height:9px;border-radius:50%;background:#a59cb3}
+  .agora.aberto b::before{background:#2f9e5b;box-shadow:0 0 0 4px rgba(47,158,91,.18)}
+  .agora span{color:var(--suave)}
+  @media (max-width:880px){
+    .topo{padding:34px 0 60px}
+    .topo .wrap{grid-template-columns:1fr;gap:34px}
+    .vitrine{padding:0 0 70px 0}
+    .ficha{left:12px;width:232px}
+    .agora{right:12px;top:14px}
+  }
+
+  section{padding:88px 0}
+  [id]{scroll-margin-top:86px}
+  .cabeca{max-width:640px;margin-bottom:42px}
+  .cabeca h2{font-size:clamp(2.1rem,4.4vw,3rem);margin:12px 0 12px}
+  .cabeca p{margin:0;color:var(--tinta-2)}
+
+  /* Serviços */
+  .servicos{background:var(--branco);border-top:1px solid var(--fio);border-bottom:1px solid var(--fio)}
+  .grade-serv{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .serv{border-radius:24px;padding:28px 24px;background:var(--fundo);border:1px solid var(--fio)}
+  .serv:nth-child(3n+1){background:var(--rosa-claro);border-color:#fbd0dc}
+  .serv:nth-child(3n+2){background:var(--lilas-claro);border-color:#ddd2f6}
+  .serv:nth-child(3n){background:var(--agua-claro);border-color:#c5eaee}
+  .serv .ico{width:50px;height:50px;border-radius:16px;background:var(--branco);display:grid;place-items:center;margin-bottom:16px;color:var(--tinta)}
+  .serv .ico svg{width:26px;height:26px}
+  .serv h3{font-size:1.5rem;margin-bottom:8px}
+  .serv p{margin:0;color:var(--tinta-2);font-size:.97rem}
+  @media (max-width:900px){.grade-serv{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.grade-serv{grid-template-columns:1fr}}
+
+  /* Como funciona */
+  .passos{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:p}
+  .passo{position:relative;padding:26px 22px 24px;background:var(--branco);border:1px solid var(--fio);border-radius:22px}
+  .passo::before{counter-increment:p;content:counter(p);display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--tinta);color:#fff;font:600 1.2rem "Fredoka",sans-serif;margin-bottom:14px}
+  .passo:last-child::before{background:var(--rosa)}
+  .passo h3{font-size:1.25rem;margin-bottom:6px}
+  .passo p{margin:0;color:var(--tinta-2);font-size:.95rem}
+  @media (max-width:900px){.passos{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.passos{grid-template-columns:1fr}}
+
+  /* Galeria */
+  .galeria-sec{background:var(--branco);border-top:1px solid var(--fio);border-bottom:1px solid var(--fio)}
+  .galeria{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;align-items:start}
+  .galeria button{border:0;padding:0;background:none;cursor:zoom-in;border-radius:20px;overflow:hidden;position:relative;display:block;width:100%}
+  .galeria img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .5s}
+  .galeria button:hover img{transform:scale(1.05)}
+  .galeria button span{position:absolute;left:10px;bottom:10px;background:rgba(255,255,255,.94);color:var(--tinta);font-size:.78rem;font-weight:800;padding:5px 11px;border-radius:999px}
+  @media (max-width:900px){.galeria{grid-template-columns:repeat(3,1fr)}}
+  @media (max-width:620px){.galeria{grid-template-columns:1fr 1fr;gap:10px}}
+  .insta{margin-top:28px;font-size:.98rem;color:var(--suave)}
+  .insta a{color:var(--rosa-esc);font-weight:800}
+
+  dialog{border:0;padding:0;background:transparent;max-width:min(92vw,620px)}
+  dialog::backdrop{background:rgba(26,18,38,.86)}
+  dialog img{max-height:84vh;width:auto;border-radius:16px}
+  dialog .fechar{position:absolute;top:10px;right:10px;width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.94);font-size:1.4rem;cursor:pointer;color:var(--tinta)}
+
+  /* Grandões */
+  .grandoes{background:var(--tinta);color:#ece6f5}
+  .grandoes .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:52px;align-items:center}
+  .grandoes .rotulo{color:#ffb3cb}
+  .grandoes h2{font-size:clamp(2.2rem,4.6vw,3.2rem);margin:12px 0 16px;color:#fff}
+  .grandoes h2 em{font-style:normal;color:#ffb3cb}
+  .grandoes p{color:#d4cae3;margin:0 0 14px}
+  .grandoes ul{margin:0 0 28px;padding:0;list-style:none}
+  .grandoes li{padding:6px 0 6px 30px;position:relative}
+  .grandoes li::before{content:"";position:absolute;left:0;top:11px;width:16px;height:16px;border-radius:50%;background:var(--agua);box-shadow:0 0 0 4px rgba(47,166,184,.25)}
+  .trio{display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:1fr 1fr;gap:14px}
+  .trio img{width:100%;height:100%;object-fit:cover;border-radius:22px}
+  .trio img:first-child{grid-row:1/3;aspect-ratio:auto;min-height:420px}
+  @media (max-width:880px){.grandoes .wrap{grid-template-columns:1fr}.trio img:first-child{min-height:320px}}
+
+  /* Avaliações */
+  .depo{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .depo blockquote{margin:0;background:var(--branco);border:1px solid var(--fio);border-radius:24px;padding:26px 24px 22px;font:500 1.22rem/1.35 "Fredoka",sans-serif;position:relative}
+  .depo blockquote::before{content:"★★★★★";display:block;color:#f0a91f;font-size:.95rem;letter-spacing:2px;margin-bottom:10px}
+  .depo cite{display:block;margin-top:14px;font:normal 700 .82rem "Nunito",sans-serif;color:var(--suave)}
+  @media (max-width:860px){.depo{grid-template-columns:1fr}}
+
+  /* Horários e contato */
+  .info{padding-top:0}
+  .info .wrap{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .cartao{background:var(--branco);border:1px solid var(--fio);border-radius:26px;padding:32px 30px}
+  .cartao h2{font-size:2.2rem;margin:10px 0 20px}
+  .horas{width:100%;border-collapse:collapse;font-size:1rem}
+  .horas td{padding:11px 0;border-top:1px solid var(--fio)}
+  .horas tr:first-child td{border-top:0}
+  .horas td:last-child{text-align:right;font-weight:700}
+  .horas tr.hoje td{color:var(--rosa-esc);font-weight:800}
+  .horas tr.hoje td:first-child::after{content:" · hoje";font-weight:600;font-size:.85rem}
+  .obs{font-size:.88rem;color:var(--suave);margin:16px 0 0}
+  .contatos{list-style:none;margin:0 0 26px;padding:0}
+  .contatos li{display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-top:1px solid var(--fio)}
+  .contatos li:first-child{border-top:0}
+  .contatos .ico{width:42px;height:42px;flex:none;border-radius:14px;background:var(--rosa-claro);display:grid;place-items:center;color:var(--rosa-esc)}
+  .contatos svg{width:20px;height:20px}
+  .contatos small{display:block;font-size:.76rem;font-weight:800;color:var(--suave);letter-spacing:.08em;text-transform:uppercase}
+  .contatos a{font-weight:700;text-decoration:none}
+  .contatos a:hover{color:var(--rosa-esc)}
+  .mapa{grid-column:1/-1;border-radius:26px;overflow:hidden;border:1px solid var(--fio);background:var(--rosa-claro)}
+  .mapa iframe{display:block;width:100%;height:380px;border:0}
+  @media (max-width:860px){.info .wrap{grid-template-columns:1fr}.cartao{padding:26px 22px}.mapa iframe{height:300px}}
+
+  footer{padding:36px 0 110px;border-top:1px solid var(--fio);font-size:.9rem;color:var(--suave)}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--rosa-esc);font-weight:800;text-decoration:none}
+
+  .flutuante{position:fixed;right:16px;bottom:16px;z-index:30}
+  @media (min-width:881px){footer{padding-bottom:36px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · Este não é o site oficial da PetLore. É uma ideia de site montada por Lucas para apresentar ao pet shop.</span>
+    <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br →</a>
+  </div>
+</div>
+
+<header class="barra">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="PetLore, início">
+      <img src="fotos/logo.jpg" alt="" width="46" height="46">
+      <span><b>PetLore</b><small>Banho &amp; Tosa</small></span>
+    </a>
+    <nav aria-label="Seções">
+      <a href="#servicos">Serviços</a>
+      <a href="#como">Como funciona</a>
+      <a href="#clientes">Clientes</a>
+      <a href="#horarios">Horários</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="botao cheio peq whats" href="https://wa.me/5519991768236">Agendar</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="topo" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="rotulo"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="5.5" cy="10" r="2.2"/><circle cx="9.5" cy="5.5" r="2.2"/><circle cx="14.5" cy="5.5" r="2.2"/><circle cx="18.5" cy="10" r="2.2"/><path d="M12 11c-3 0-6 4.2-6 6.6 0 1.6 1.2 2.4 2.7 2.4 1.3 0 2.1-.7 3.3-.7s2 .7 3.3.7c1.5 0 2.7-.8 2.7-2.4C18 15.2 15 11 12 11Z"/></svg>Parque Jambeiro · Campinas</span>
+        <h1 id="titulo">Seu pet volta para casa <em>cheiroso</em> e de laço novo.</h1>
+        <p class="lead">Banho, tosa, hidratação e corte de unhas, feitos com calma e carinho. Cães de todos os tamanhos e gatos também. É só chamar no WhatsApp e marcar o horário.</p>
+        <div class="acoes">
+          <a class="botao cheio whats" href="https://wa.me/5519991768236">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>
+            Agendar pelo WhatsApp
+          </a>
+          <a class="botao linha" href="#clientes">Ver os clientes</a>
+        </div>
+        <a class="nota" href="#avaliacoes"><span class="est" aria-hidden="true">★★★★★</span><b>5,0</b> no Google · 114 avaliações</a>
+      </div>
+      <div class="vitrine">
+        <img class="foto" src="fotos/pet-06.jpg" alt="Poodle branco recém-tosado, com lacinho na cabeça" width="640" height="640">
+        <div class="agora" id="agora" aria-live="polite"><b>Horário de hoje</b><span>Consulte abaixo</span></div>
+        <div class="ficha" aria-label="Exemplo de ficha de atendimento">
+          <div class="cab">Ficha de banho <span>Nº 115</span></div>
+          <ul>
+            <li><i aria-hidden="true"></i>Banho e secagem</li>
+            <li><i aria-hidden="true"></i>Hidratação</li>
+            <li><i aria-hidden="true"></i>Corte de unhas</li>
+            <li><i aria-hidden="true"></i>Laço novo</li>
+          </ul>
+          <span class="carimbo" aria-hidden="true">Cheiroso!</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="servicos" id="servicos" aria-labelledby="t-serv">
+    <div class="wrap">
+      <div class="cabeca">
+        <span class="rotulo">Serviços</span>
+        <h2 id="t-serv">Tudo o que o seu pet precisa para sair bonito</h2>
+        <p>Pergunte pelo WhatsApp o valor para o porte e a pelagem do seu pet. Fique de olho também nas promoções do Instagram.</p>
+      </div>
+      <div class="grade-serv">
+        <article class="serv">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16v2a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6v-2Z"/><path d="M6 12V6a2 2 0 0 1 4 0"/><circle cx="14" cy="5" r="1"/><circle cx="17" cy="8" r="1"/></svg></div>
+          <h3>Banho</h3>
+          <p>Banho caprichado, secagem e escovação. Ele volta limpinho, macio e cheiroso.</p>
+        </article>
+        <article class="serv">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.1 8.1 20 20M8.1 15.9 20 4"/></svg></div>
+          <h3>Tosa</h3>
+          <p>Tosa higiênica, tosa completa e tosa em poodle, sempre do jeito que combina com o seu pet.</p>
+        </article>
+        <article class="serv">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></svg></div>
+          <h3>Hidratação</h3>
+          <p>Para pelos ressecados ou embaraçados. Deixa a pelagem macia e com brilho.</p>
+        </article>
+        <article class="serv">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20c-2-2-2-6 1-9l4-4 5 5-4 4c-3 3-4 6-6 4Z"/><path d="m14 5 2-2 5 5-2 2"/></svg></div>
+          <h3>Corte de unhas</h3>
+          <p>Unhas aparadas com cuidado, para o pet andar confortável e não arranhar ninguém.</p>
+        </article>
+        <article class="serv">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12 4 7v10l8-5Z"/><path d="m12 12 8-5v10l-8-5Z"/><circle cx="12" cy="12" r="1.6"/></svg></div>
+          <h3>Estética pet</h3>
+          <p>O toque final: laços, gravatinhas e aquele acabamento que rende foto no Instagram.</p>
+        </article>
+        <article class="serv">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4l3 4h8l3-4v8a7 7 0 0 1-14 0V4Z"/><path d="M9.5 13h.01M14.5 13h.01M11 16h2"/></svg></div>
+          <h3>Gatos também</h3>
+          <p>Banho e cuidados para gatos, com toda a paciência que eles merecem.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="como" aria-labelledby="t-como">
+    <div class="wrap">
+      <div class="cabeca">
+        <span class="rotulo">Como funciona</span>
+        <h2 id="t-como">Marcar é rapidinho</h2>
+        <p>Sem fila e sem espera: o horário fica reservado para o seu pet.</p>
+      </div>
+      <div class="passos">
+        <div class="passo"><h3>Chame no WhatsApp</h3><p>Conte o porte, a raça e o que o pet precisa.</p></div>
+        <div class="passo"><h3>Escolha o horário</h3><p>De segunda a sábado, no horário que for melhor para você.</p></div>
+        <div class="passo"><h3>Traga ou peça para buscar</h3><p>Tem serviço de buscar e levar em casa. Pergunte se atende o seu bairro.</p></div>
+        <div class="passo"><h3>Ele volta cheiroso</h3><p>Banho tomado, pelo macio e, se quiser, um laço novo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="galeria-sec" id="clientes" aria-labelledby="t-cli">
+    <div class="wrap">
+      <div class="cabeca">
+        <span class="rotulo">Clientes</span>
+        <h2 id="t-cli">Quem já passou por aqui</h2>
+        <p>Cada um sai de banho tomado e posa para a foto. Toque para ver maior.</p>
+      </div>
+      <div class="galeria" id="galeria">
+        <button type="button"><img src="fotos/pet-02.jpg" alt="Cachorro de pelo marrom comprido, com gravatinha, depois do banho" loading="lazy" width="360" height="480"><span>Gravatinha nova</span></button>
+        <button type="button"><img src="fotos/pet-03.jpg" alt="Cachorro branco tosado, com laço colorido" loading="lazy" width="360" height="480"><span>Tosa e laço</span></button>
+        <button type="button"><img src="fotos/pet-10.jpg" alt="Gato persa cinza no colo, depois do banho" loading="lazy" width="360" height="607"><span>Gatos também</span></button>
+        <button type="button"><img src="fotos/pet-07.jpg" alt="Cachorro de focinho curto, sentado e sorridente, no espaço de fotos" loading="lazy" width="360" height="480"><span>Pronto para a foto</span></button>
+        <button type="button"><img src="fotos/pet-11.jpg" alt="Cachorro de pelo creme com laço e gravatinha" loading="lazy" width="360" height="479"><span>Banho e laço</span></button>
+        <button type="button"><img src="fotos/pet-01.jpg" alt="Cachorro pequeno preto deitado no espaço de fotos" loading="lazy" width="360" height="480"><span>Banho tomado</span></button>
+        <button type="button"><img src="fotos/pet-09.jpg" alt="Cachorro branco com gravatinha azul" loading="lazy" width="360" height="480"><span>Gravatinha azul</span></button>
+        <button type="button"><img src="fotos/pet-12.jpg" alt="Cachorro de pelo longo branco e marrom, com laços azuis nas orelhas" loading="lazy" width="360" height="480"><span>Laços nas orelhas</span></button>
+        <button type="button"><img src="fotos/pet-04.jpg" alt="Cachorro de pelo preto com lacinho, na mesa de tosa" loading="lazy" width="360" height="480"><span>Pelo macio</span></button>
+        <button type="button"><img src="fotos/pet-06.jpg" alt="Poodle branco tosado, com lacinho" loading="lazy" width="640" height="640"><span>Tosa em poodle</span></button>
+        <button type="button"><img src="fotos/pet-05.jpg" alt="Golden retriever com lacinho, saindo do banho" loading="lazy" width="360" height="480"><span>Golden cheiroso</span></button>
+        <button type="button"><img src="fotos/pet-08.jpg" alt="Bulldog branco e caramelo deitado, relaxado depois do banho" loading="lazy" width="640" height="478"><span>Relaxado</span></button>
+      </div>
+      <p class="insta">Tem muito mais no Instagram: <a href="https://www.instagram.com/petlorebanhoetosa/" target="_blank" rel="noopener">@petlorebanhoetosa</a></p>
+    </div>
+  </section>
+
+  <section class="grandoes" aria-labelledby="t-grande">
+    <div class="wrap">
+      <div>
+        <span class="rotulo">Do pequeno ao gigante</span>
+        <h2 id="t-grande">Tamanho <em>não é problema</em>.</h2>
+        <p>Shih-tzu, poodle, golden, bulldog e até São Bernardo. Cada pet recebe o tempo e o cuidado que o porte e a pelagem pedem.</p>
+        <ul>
+          <li>Pelagem longa e densa sem nó</li>
+          <li>Secagem completa, até nos peludões</li>
+          <li>Paciência com quem tem medo do banho</li>
+        </ul>
+        <a class="botao cheio whats" href="https://wa.me/5519991768236">Agendar o banho do grandão</a>
+      </div>
+      <div class="trio">
+        <img src="fotos/sao-bernardo.jpg" alt="São Bernardo grande, de língua de fora, ao lado do tosador depois do banho" loading="lazy" width="636" height="1008">
+        <img src="fotos/pet-05.jpg" alt="Golden retriever saindo do banho" loading="lazy" width="360" height="480">
+        <img src="fotos/pet-08.jpg" alt="Bulldog deitado depois do banho" loading="lazy" width="640" height="478">
+      </div>
+    </div>
+  </section>
+
+  <section id="avaliacoes" aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="cabeca">
+        <span class="rotulo">Avaliações</span>
+        <h2 id="t-aval">Nota 5,0 com 114 avaliações</h2>
+        <p>O que os tutores contam no Google.</p>
+      </div>
+      <div class="depo">
+        <blockquote>“Além de tudo minha cachorrinha sempre volta super cheirosa.”<cite>Cliente · avaliação no Google</cite></blockquote>
+        <blockquote>“Ambiente maravilhoso, os pets ficam todos felizes quando chegam.”<cite>Cliente · avaliação no Google</cite></blockquote>
+        <blockquote>“Pessoas prestativas e carinhosas com os animais!”<cite>Cliente · avaliação no Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="info" aria-label="Horários e contato">
+    <div class="wrap">
+      <div class="cartao" id="horarios">
+        <span class="rotulo">Horários</span>
+        <h2>Quando atendemos</h2>
+        <table class="horas" id="horas">
+          <tbody>
+            <tr data-d="1"><td>Segunda</td><td>8h às 20h</td></tr>
+            <tr data-d="2"><td>Terça</td><td>8h às 20h</td></tr>
+            <tr data-d="3"><td>Quarta</td><td>8h às 20h</td></tr>
+            <tr data-d="4"><td>Quinta</td><td>8h às 20h</td></tr>
+            <tr data-d="5"><td>Sexta</td><td>8h às 20h</td></tr>
+            <tr data-d="6"><td>Sábado</td><td>8h às 18h</td></tr>
+            <tr data-d="0"><td>Domingo</td><td>Fechado</td></tr>
+          </tbody>
+        </table>
+        <p class="obs">Atendimento com hora marcada. Em feriados o horário pode mudar: confirme pelo WhatsApp.</p>
+      </div>
+      <div class="cartao" id="contato">
+        <span class="rotulo">Contato</span>
+        <h2>Vem pra PetLore</h2>
+        <ul class="contatos">
+          <li>
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg></span>
+            <div><small>WhatsApp</small><a class="whats" href="https://wa.me/5519991768236">(19) 99176-8236</a></div>
+          </li>
+          <li>
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+            <div><small>Instagram</small><a href="https://www.instagram.com/petlorebanhoetosa/" target="_blank" rel="noopener">@petlorebanhoetosa</a></div>
+          </li>
+          <li>
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+            <div><small>Onde estamos</small>R. Eduardo Nadruz, 187 · Parque Jambeiro<br>Campinas (SP)<br><a href="https://www.google.com/maps/dir/?api=1&amp;destination=PetLore+Banho+e+Tosa,+R.+Eduardo+Nadruz,+187,+Campinas" target="_blank" rel="noopener" style="color:var(--rosa-esc);font-size:.92rem">Como chegar →</a></div>
+          </li>
+        </ul>
+        <a class="botao cheio whats" href="https://wa.me/5519991768236">Agendar o banho</a>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: PetLore Banho e Tosa na R. Eduardo Nadruz, 187, Parque Jambeiro, Campinas" src="https://www.google.com/maps?q=PetLore+Banho+e+Tosa,+R.+Eduardo+Nadruz,+187+-+Parque+Jambeiro,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© PetLore Banho &amp; Tosa · Parque Jambeiro, Campinas</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="botao cheio flutuante whats" href="https://wa.me/5519991768236" aria-label="Agendar pelo WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>
+  Agendar
+</a>
+
+<dialog id="zoom" aria-label="Foto ampliada">
+  <button class="fechar" type="button" aria-label="Fechar">×</button>
+  <img alt="">
+</dialog>
+
+<script>
+(function () {
+  // Links do WhatsApp abrem em nova aba
+  document.querySelectorAll(".whats").forEach(function (a) { a.target = "_blank"; a.rel = "noopener"; });
+
+  // Horário de hoje (hora de Brasília)
+  var HORAS = { 0: null, 1: [8, 20], 2: [8, 20], 3: [8, 20], 4: [8, 20], 5: [8, 20], 6: [8, 18] };
+  var NOMES = ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"];
+  try {
+    var p = new Intl.DateTimeFormat("en-US", { timeZone: "America/Sao_Paulo", weekday: "short", hour: "numeric", minute: "numeric", hour12: false }).formatToParts(new Date());
+    var get = function (t) { return (p.find(function (x) { return x.type === t; }) || {}).value; };
+    var dia = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].indexOf(get("weekday"));
+    var agora = (parseInt(get("hour"), 10) % 24) + parseInt(get("minute"), 10) / 60;
+    var linha = document.querySelector('#horas tr[data-d="' + dia + '"]');
+    if (linha) linha.classList.add("hoje");
+    var caixa = document.getElementById("agora"), b = caixa.querySelector("b"), s = caixa.querySelector("span");
+    var h = HORAS[dia];
+    var proximo = function () {
+      for (var i = 1; i <= 7; i++) { var d = (dia + i) % 7; if (HORAS[d]) return "Abre " + (i === 1 ? "amanhã" : NOMES[d]) + " às " + HORAS[d][0] + "h"; }
+      return "";
+    };
+    if (!h) { b.textContent = "Hoje é domingo"; s.textContent = proximo(); }
+    else if (agora >= h[0] && agora < h[1]) { caixa.classList.add("aberto"); b.textContent = "Aberto agora"; s.textContent = "Hoje até as " + h[1] + "h"; }
+    else if (agora < h[0]) { b.textContent = "Abre hoje às " + h[0] + "h"; s.textContent = "Até as " + h[1] + "h"; }
+    else { b.textContent = "Fechado agora"; s.textContent = proximo(); }
+  } catch (e) {}
+
+  // Foto ampliada
+  var dlg = document.getElementById("zoom"), zimg = dlg.querySelector("img");
+  document.querySelectorAll("#galeria button").forEach(function (g) {
+    g.addEventListener("click", function () {
+      var i = g.querySelector("img"); zimg.src = i.src; zimg.alt = i.alt;
+      if (dlg.showModal) dlg.showModal();
+    });
+  });
+  dlg.querySelector(".fechar").addEventListener("click", function () { dlg.close(); });
+  dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
+})();
+</script>
+</body>
+</html>
