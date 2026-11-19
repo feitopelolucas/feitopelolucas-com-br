@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Studio Hair WG · Beleza, cuidado e autoestima · Cidade Nova, SBO</title>
+<meta name="description" content="Prévia de site para o Studio Hair WG, salão feminino e masculino no Cidade Nova, em Santa Bárbara d'Oeste.">
+<meta name="theme-color" content="#3a2a24">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --creme:#f7f0e8; --areia:#efe3d6; --rose:#e6cbbb; --terracota:#c4693f; --terracota-esc:#a8532c;
+    --cacau:#3a2a24; --cacau-2:#5b4339; --suave:#7d665b; --fio:#e0d0c2; --branco:#fffaf5;
+  }
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--creme);color:var(--cacau);font:16.5px/1.65 "Jost",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{margin:0;font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.05;letter-spacing:-.005em}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--terracota);outline-offset:3px}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 18px}
+  .rotulo{font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--terracota)}
+
+  /* Faixa de prévia */
+  .previa{background:var(--cacau);color:#e9dcd0;font-size:.82rem}
+  .previa .wrap{display:flex;justify-content:space-between;align-items:center;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:#f2b493;font-weight:600;text-decoration:none;white-space:nowrap}
+
+  /* Barra */
+  .barra{position:sticky;top:0;z-index:20;background:rgba(247,240,232,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--fio)}
+  .barra .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+  .marca{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .mono{width:42px;height:42px;border-radius:50%;background:var(--terracota);color:#fff;display:grid;place-items:center;font:italic 600 1.15rem/1 "Cormorant Garamond",serif;letter-spacing:-.02em}
+  .marca b{display:block;font:600 1.35rem/1 "Cormorant Garamond",serif}
+  .marca small{display:block;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--suave)}
+  .barra nav{display:flex;gap:26px;font-size:.93rem;font-weight:500}
+  .barra nav a{text-decoration:none;color:var(--cacau-2)}
+  .barra nav a:hover{color:var(--terracota)}
+  @media (max-width:860px){.barra nav{display:none}}
+
+  .botao{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;padding:13px 24px;font:600 .95rem/1 "Jost",sans-serif;text-decoration:none;cursor:pointer;transition:transform .15s,background .15s}
+  .botao:hover{transform:translateY(-1px)}
+  .botao.cheio{background:var(--terracota);color:#fff}
+  .botao.cheio:hover{background:var(--terracota-esc)}
+  .botao.linha{background:transparent;color:var(--cacau);box-shadow:inset 0 0 0 1.5px var(--cacau)}
+  .botao.peq{padding:10px 18px;font-size:.88rem}
+  .botao svg{width:18px;height:18px;flex:none}
+
+  /* Topo */
+  .topo{padding:56px 0 72px;overflow:hidden}
+  .topo .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+  .topo h1{font-size:clamp(2.7rem,6.2vw,4.6rem);margin:14px 0 18px}
+  .topo h1 em{color:var(--terracota);font-style:italic}
+  .topo p.lead{font-size:1.1rem;color:var(--cacau-2);max-width:30em;margin:0 0 28px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .selos{display:flex;gap:22px;flex-wrap:wrap;margin-top:34px;font-size:.9rem;color:var(--suave)}
+  .selos span{display:flex;align-items:center;gap:8px}
+  .selos i{width:7px;height:7px;border-radius:50%;background:var(--terracota)}
+  .colagem{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .colagem img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:18px;box-shadow:0 18px 40px -22px rgba(58,42,36,.55)}
+  .colagem img:first-child{border-radius:200px 200px 18px 18px}
+  .colagem img:last-child{margin-top:48px}
+  .agora{position:absolute;left:-14px;bottom:22px;background:var(--branco);border-radius:14px;padding:12px 16px;box-shadow:0 14px 34px -18px rgba(58,42,36,.6);font-size:.88rem;line-height:1.35}
+  .agora b{display:flex;align-items:center;gap:8px}
+  .agora b::before{content:"";width:9px;height:9px;border-radius:50%;background:#9a8a80}
+  .agora.aberto b::before{background:#3f9b5b;box-shadow:0 0 0 4px rgba(63,155,91,.18)}
+  .agora span{color:var(--suave)}
+  @media (max-width:860px){
+    .topo{padding:34px 0 56px}
+    .topo .wrap{grid-template-columns:1fr;gap:38px}
+    .agora{left:10px}
+  }
+
+  section{padding:84px 0}
+  [id]{scroll-margin-top:84px}
+  .cabeca{max-width:620px;margin-bottom:40px}
+  .cabeca h2{font-size:clamp(2.1rem,4.4vw,3.1rem);margin:10px 0 12px}
+  .cabeca p{margin:0;color:var(--cacau-2)}
+
+  /* Serviços */
+  .servicos{background:var(--branco);border-top:1px solid var(--fio);border-bottom:1px solid var(--fio)}
+  .grade-serv{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .serv{background:var(--creme);border:1px solid var(--fio);border-radius:20px;padding:26px 22px}
+  .serv .ico{width:46px;height:46px;border-radius:50%;background:var(--rose);display:grid;place-items:center;margin-bottom:18px;color:var(--terracota-esc)}
+  .serv .ico svg{width:22px;height:22px}
+  .serv h3{font-size:1.65rem;margin-bottom:12px}
+  .serv ul{list-style:none;margin:0;padding:0;font-size:.95rem;color:var(--cacau-2)}
+  .serv li{padding:7px 0;border-top:1px dashed var(--fio)}
+  .serv li:first-child{border-top:0}
+  @media (max-width:980px){.grade-serv{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.grade-serv{grid-template-columns:1fr}}
+
+  /* Trabalhos */
+  .filtros{display:flex;gap:8px;flex-wrap:wrap;margin:-14px 0 26px}
+  .filtros button{border:1px solid var(--fio);background:var(--branco);color:var(--cacau-2);border-radius:999px;padding:8px 16px;font:500 .88rem "Jost",sans-serif;cursor:pointer}
+  .filtros button[aria-pressed="true"]{background:var(--cacau);color:#fff;border-color:var(--cacau)}
+  .galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .galeria button{border:0;padding:0;background:none;cursor:zoom-in;border-radius:16px;overflow:hidden;position:relative}
+  .galeria img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .5s}
+  .galeria button:hover img{transform:scale(1.04)}
+  .galeria button span{position:absolute;left:12px;bottom:12px;background:rgba(255,250,245,.92);color:var(--cacau);font-size:.78rem;font-weight:600;padding:5px 11px;border-radius:999px}
+  @media (max-width:700px){.galeria{grid-template-columns:1fr 1fr;gap:10px}}
+  .insta{margin-top:26px;font-size:.95rem;color:var(--suave)}
+  .insta a{color:var(--terracota-esc);font-weight:600}
+
+  dialog{border:0;padding:0;background:transparent;max-width:min(92vw,560px)}
+  dialog::backdrop{background:rgba(30,20,16,.85)}
+  dialog img{max-height:84vh;width:auto;border-radius:14px}
+  dialog .fechar{position:absolute;top:10px;right:10px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,250,245,.92);font-size:1.4rem;cursor:pointer;color:var(--cacau)}
+
+  /* Festa */
+  .festa{background:var(--cacau);color:#f3e7dc}
+  .festa .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .festa h2{font-size:clamp(2.2rem,4.6vw,3.3rem);margin:10px 0 16px;color:#fff}
+  .festa h2 em{color:#f2b493}
+  .festa p{color:#dccbbd;margin:0 0 14px}
+  .festa .rotulo{color:#f2b493}
+  .festa ul{margin:0 0 28px;padding:0;list-style:none}
+  .festa li{padding:6px 0 6px 26px;position:relative}
+  .festa li::before{content:"✦";position:absolute;left:0;color:#f2b493}
+  .festa .fotos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .festa .fotos img{border-radius:18px;aspect-ratio:3/4;object-fit:cover;width:100%}
+  .festa .fotos img:first-child{margin-top:40px}
+  @media (max-width:860px){.festa .wrap{grid-template-columns:1fr}}
+
+  /* Horários e contato */
+  .info .wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .cartao{background:var(--branco);border:1px solid var(--fio);border-radius:22px;padding:32px 30px}
+  .cartao h2{font-size:2.3rem;margin:8px 0 20px}
+  .horas{width:100%;border-collapse:collapse;font-size:.98rem}
+  .horas td{padding:11px 0;border-top:1px solid var(--fio)}
+  .horas tr:first-child td{border-top:0}
+  .horas td:last-child{text-align:right;font-weight:500}
+  .horas tr.hoje td{color:var(--terracota-esc);font-weight:600}
+  .horas tr.hoje td:first-child::after{content:" · hoje";font-weight:500;font-size:.85rem}
+  .obs{font-size:.88rem;color:var(--suave);margin:16px 0 0}
+  .contatos{list-style:none;margin:0 0 26px;padding:0}
+  .contatos li{display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-top:1px solid var(--fio)}
+  .contatos li:first-child{border-top:0}
+  .contatos .ico{width:40px;height:40px;flex:none;border-radius:50%;background:var(--rose);display:grid;place-items:center;color:var(--terracota-esc)}
+  .contatos svg{width:19px;height:19px}
+  .contatos small{display:block;font-size:.78rem;color:var(--suave);letter-spacing:.06em;text-transform:uppercase}
+  .contatos a{font-weight:500;text-decoration:none}
+  .contatos a:hover{color:var(--terracota-esc)}
+  @media (max-width:860px){.info .wrap{grid-template-columns:1fr}.cartao{padding:26px 22px}}
+
+  footer{padding:36px 0 110px;border-top:1px solid var(--fio);font-size:.88rem;color:var(--suave)}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--terracota-esc);font-weight:600;text-decoration:none}
+
+  .flutuante{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 14px 30px -12px rgba(58,42,36,.6)}
+  @media (min-width:861px){footer{padding-bottom:36px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · Este não é o site oficial do Studio Hair WG. É uma ideia de site montada por Lucas para apresentar ao salão.</span>
+    <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br →</a>
+  </div>
+</div>
+
+<header class="barra">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Studio Hair WG, início">
+      <span class="mono" aria-hidden="true">WG</span>
+      <span><b>Studio Hair WG</b><small>Feminino &amp; Masculino</small></span>
+    </a>
+    <nav aria-label="Seções">
+      <a href="#servicos">Serviços</a>
+      <a href="#trabalhos">Trabalhos</a>
+      <a href="#festa">Penteados</a>
+      <a href="#horarios">Horários</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="botao cheio peq whats" href="https://wa.me/message/7OXCNOD77QPPG1">Agendar</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="topo" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="rotulo">Cidade Nova · Santa Bárbara d'Oeste</span>
+        <h1 id="titulo">Beleza, cuidado e <em>autoestima</em>.</h1>
+        <p class="lead">Corte, escova, cachos, mechas, penteados para festa, unhas e sobrancelha. Atendimento feminino e masculino, com horário marcado pelo WhatsApp.</p>
+        <div class="acoes">
+          <a class="botao cheio whats" href="https://wa.me/message/7OXCNOD77QPPG1">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>
+            Agendar pelo WhatsApp
+          </a>
+          <a class="botao linha" href="#trabalhos">Ver trabalhos</a>
+        </div>
+        <div class="selos">
+          <span><i></i>Feminino e masculino</span>
+          <span><i></i>Aberto de segunda a sábado</span>
+          <span><i></i>Domingo com hora marcada</span>
+        </div>
+      </div>
+      <div class="colagem">
+        <img src="fotos/trabalho-1.jpg" alt="Cabelo castanho com mechas e ondas modeladas, visto de costas no salão" width="640" height="640">
+        <img src="fotos/trabalho-2.jpg" alt="Penteado semipreso com cachos longos em cabelo grisalho" width="480" height="640">
+        <div class="agora" id="agora" aria-live="polite"><b>Horário de hoje</b><span>Consulte abaixo</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="servicos" id="servicos" aria-labelledby="t-serv">
+    <div class="wrap">
+      <div class="cabeca">
+        <span class="rotulo">Serviços</span>
+        <h2 id="t-serv">Do corte do dia a dia ao penteado da festa</h2>
+        <p>Tudo num lugar só, para ela e para ele. Pergunte pelo WhatsApp o valor e o melhor horário.</p>
+      </div>
+      <div class="grade-serv">
+        <article class="serv">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.1 8.1 20 20M8.1 15.9 20 4"/></svg></div>
+          <h3>Feminino</h3>
+          <ul>
+            <li>Corte e acabamento</li>
+            <li>Escova e modelagem</li>
+            <li>Mechas e coloração</li>
+            <li>Finalização de cachos</li>
+            <li>Hidratação</li>
+          </ul>
+        </article>
+        <article class="serv">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 8h16M7 8v10a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V8M9 4h6"/></svg></div>
+          <h3>Masculino</h3>
+          <ul>
+            <li>Corte masculino</li>
+            <li>Progressiva masculina</li>
+            <li>Hidratação capilar</li>
+            <li>Design de sobrancelha</li>
+            <li>Depilação nasal e de orelha</li>
+          </ul>
+        </article>
+        <article class="serv">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 21V10a3 3 0 0 1 6 0v11M9 14h6"/><path d="M10 6.5C10 4 12 3 12 3s2 1 2 3.5"/></svg></div>
+          <h3>Unhas</h3>
+          <ul>
+            <li>Mão</li>
+            <li>Pé</li>
+            <li>Pé e mão</li>
+            <li>Mão e pé masculino</li>
+          </ul>
+        </article>
+        <article class="serv">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 11c3-3 7-4 11-3"/><path d="M3 16c2.5 1.5 5 1.8 8 1.2"/><circle cx="16" cy="15" r="3"/></svg></div>
+          <h3>Sobrancelha</h3>
+          <ul>
+            <li>Design de sobrancelha</li>
+            <li>Feminino e masculino</li>
+            <li>Atendimento com hora marcada</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="trabalhos" aria-labelledby="t-trab">
+    <div class="wrap">
+      <div class="cabeca">
+        <span class="rotulo">Trabalhos</span>
+        <h2 id="t-trab">Feito aqui no salão</h2>
+        <p>Algumas clientes que passaram pela nossa cadeira. Toque na foto para ver maior.</p>
+      </div>
+      <div class="filtros" role="group" aria-label="Filtrar trabalhos">
+        <button type="button" data-f="todos" aria-pressed="true">Todos</button>
+        <button type="button" data-f="cachos" aria-pressed="false">Cachos e ondas</button>
+        <button type="button" data-f="liso" aria-pressed="false">Liso e escova</button>
+        <button type="button" data-f="festa" aria-pressed="false">Penteados</button>
+        <button type="button" data-f="corte" aria-pressed="false">Cortes curtos</button>
+      </div>
+      <div class="galeria" id="galeria">
+        <button type="button" data-t="cachos"><img src="fotos/trabalho-1.jpg" alt="Mechas castanhas com ondas modeladas" loading="lazy" width="640" height="640"><span>Mechas e ondas</span></button>
+        <button type="button" data-t="festa"><img src="fotos/trabalho-2.jpg" alt="Penteado semipreso com cachos em cabelo grisalho" loading="lazy" width="480" height="640"><span>Penteado</span></button>
+        <button type="button" data-t="liso"><img src="fotos/trabalho-3.jpg" alt="Cabelo longo, escuro e liso, com escova" loading="lazy" width="480" height="640"><span>Escova lisa</span></button>
+        <button type="button" data-t="corte"><img src="fotos/trabalho-4.jpg" alt="Corte curto com mechas, visto de costas" loading="lazy" width="480" height="640"><span>Corte curto</span></button>
+        <button type="button" data-t="cachos"><img src="fotos/trabalho-5.jpg" alt="Cabelo cacheado volumoso e definido" loading="lazy" width="480" height="640"><span>Cachos</span></button>
+        <button type="button" data-t="festa"><img src="fotos/trabalho-6.jpg" alt="Penteado com trança lateral e cabelo solto" loading="lazy" width="480" height="640"><span>Trança</span></button>
+        <button type="button" data-t="festa"><img src="fotos/trabalho-7.jpg" alt="Penteado de festa com cachos e acessório de flores" loading="lazy" width="480" height="640"><span>Penteado de festa</span></button>
+        <button type="button" data-t="cachos"><img src="fotos/trabalho-8.jpg" alt="Cabelo longo com cachos bem definidos" loading="lazy" width="480" height="640"><span>Cachos definidos</span></button>
+        <button type="button" data-t="corte cachos"><img src="fotos/trabalho-9.jpg" alt="Corte curto em cabelo cacheado" loading="lazy" width="480" height="640"><span>Curto cacheado</span></button>
+      </div>
+      <p class="insta">Tem muito mais no Instagram: <a href="https://www.instagram.com/studiohairwg/" target="_blank" rel="noopener">@studiohairwg</a></p>
+    </div>
+  </section>
+
+  <section class="festa" id="festa" aria-labelledby="t-festa">
+    <div class="wrap">
+      <div>
+        <span class="rotulo">Penteados para festa</span>
+        <h2 id="t-festa">Penteados que <em>marcam</em> a sua noite</h2>
+        <p>Casamento, formatura, debutante ou aquele aniversário especial. Cada penteado é feito sob medida, pensando no seu rosto, no vestido e no estilo da festa.</p>
+        <ul>
+          <li>Ondas glamourosas e cachos marcados</li>
+          <li>Semipresos, tranças e coques elegantes</li>
+          <li>Acessórios e acabamento que duram a noite toda</li>
+        </ul>
+        <a class="botao cheio whats" href="https://wa.me/message/7OXCNOD77QPPG1">Pedir orçamento do penteado</a>
+      </div>
+      <div class="fotos">
+        <img src="fotos/trabalho-7.jpg" alt="Penteado de festa com cachos e flores no cabelo" loading="lazy" width="480" height="640">
+        <img src="fotos/trabalho-6.jpg" alt="Penteado com trança lateral" loading="lazy" width="480" height="640">
+      </div>
+    </div>
+  </section>
+
+  <section class="info" aria-label="Horários e contato">
+    <div class="wrap">
+      <div class="cartao" id="horarios">
+        <span class="rotulo">Horários</span>
+        <h2>Quando atendemos</h2>
+        <table class="horas" id="horas">
+          <tbody>
+            <tr data-d="1"><td>Segunda</td><td>8h às 17h</td></tr>
+            <tr data-d="2"><td>Terça</td><td>7h às 18h</td></tr>
+            <tr data-d="3"><td>Quarta</td><td>7h às 18h</td></tr>
+            <tr data-d="4"><td>Quinta</td><td>7h às 18h</td></tr>
+            <tr data-d="5"><td>Sexta</td><td>6h às 20h</td></tr>
+            <tr data-d="6"><td>Sábado</td><td>6h às 18h</td></tr>
+            <tr data-d="0"><td>Domingo</td><td>Só com horário agendado</td></tr>
+          </tbody>
+        </table>
+        <p class="obs">Para garantir seu horário, agende antes pelo WhatsApp ou pelo telefone.</p>
+      </div>
+      <div class="cartao" id="contato">
+        <span class="rotulo">Contato</span>
+        <h2>Vem pro Studio</h2>
+        <ul class="contatos">
+          <li>
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg></span>
+            <div><small>WhatsApp</small><a class="whats" href="https://wa.me/message/7OXCNOD77QPPG1">Mandar mensagem</a></div>
+          </li>
+          <li>
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span>
+            <div><small>Telefone</small><a href="tel:+551934582637">(19) 3458-2637</a></div>
+          </li>
+          <li>
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+            <div><small>Instagram</small><a href="https://www.instagram.com/studiohairwg/" target="_blank" rel="noopener">@studiohairwg</a></div>
+          </li>
+          <li>
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+            <div><small>Onde estamos</small>Cidade Nova, Santa Bárbara d'Oeste (SP)<br><span style="color:var(--suave);font-size:.9rem">Endereço completo pelo WhatsApp</span></div>
+          </li>
+        </ul>
+        <a class="botao cheio whats" href="https://wa.me/message/7OXCNOD77QPPG1">Agendar meu horário</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Studio Hair WG · Cidade Nova, Santa Bárbara d'Oeste</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="botao cheio flutuante whats" href="https://wa.me/message/7OXCNOD77QPPG1" aria-label="Agendar pelo WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>
+  Agendar
+</a>
+
+<dialog id="zoom" aria-label="Foto ampliada">
+  <button class="fechar" type="button" aria-label="Fechar">×</button>
+  <img alt="">
+</dialog>
+
+<script>
+(function () {
+  // Links do WhatsApp abrem em nova aba
+  document.querySelectorAll(".whats").forEach(function (a) { a.target = "_blank"; a.rel = "noopener"; });
+
+  // Horário de hoje (hora de Brasília)
+  var HORAS = { 0: null, 1: [8, 17], 2: [7, 18], 3: [7, 18], 4: [7, 18], 5: [6, 20], 6: [6, 18] };
+  var NOMES = ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"];
+  try {
+    var p = new Intl.DateTimeFormat("en-US", { timeZone: "America/Sao_Paulo", weekday: "short", hour: "numeric", minute: "numeric", hour12: false }).formatToParts(new Date());
+    var get = function (t) { return (p.find(function (x) { return x.type === t; }) || {}).value; };
+    var dia = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].indexOf(get("weekday"));
+    var agora = (parseInt(get("hour"), 10) % 24) + parseInt(get("minute"), 10) / 60;
+    var linha = document.querySelector('#horas tr[data-d="' + dia + '"]');
+    if (linha) linha.classList.add("hoje");
+    var caixa = document.getElementById("agora"), b = caixa.querySelector("b"), s = caixa.querySelector("span");
+    var h = HORAS[dia];
+    if (!h) { b.textContent = "Hoje é domingo"; s.textContent = "Só com horário agendado"; }
+    else if (agora >= h[0] && agora < h[1]) { caixa.classList.add("aberto"); b.textContent = "Aberto agora"; s.textContent = "Hoje até as " + h[1] + "h"; }
+    else if (agora < h[0]) { b.textContent = "Abre hoje às " + h[0] + "h"; s.textContent = "Até as " + h[1] + "h"; }
+    else {
+      var prox = (dia + 1) % 7, ph = HORAS[prox];
+      b.textContent = "Fechado agora";
+      s.textContent = ph ? "Abre " + NOMES[prox] + " às " + ph[0] + "h" : "Abre segunda às 8h";
+    }
+  } catch (e) {}
+
+  // Filtros da galeria
+  var botoes = document.querySelectorAll(".filtros button");
+  botoes.forEach(function (bt) {
+    bt.addEventListener("click", function () {
+      var f = bt.dataset.f;
+      botoes.forEach(function (o) { o.setAttribute("aria-pressed", String(o === bt)); });
+      document.querySelectorAll("#galeria button").forEach(function (g) {
+        g.hidden = f !== "todos" && g.dataset.t.split(" ").indexOf(f) < 0;
+      });
+    });
+  });
+
+  // Foto ampliada
+  var dlg = document.getElementById("zoom"), zimg = dlg.querySelector("img");
+  document.querySelectorAll("#galeria button").forEach(function (g) {
+    g.addEventListener("click", function () {
+      var i = g.querySelector("img"); zimg.src = i.src; zimg.alt = i.alt;
+      if (dlg.showModal) dlg.showModal();
+    });
+  });
+  dlg.querySelector(".fechar").addEventListener("click", function () { dlg.close(); });
+  dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
+})();
+</script>
+</body>
+</html>
