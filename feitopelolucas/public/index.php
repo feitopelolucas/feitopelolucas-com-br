@@ -245,7 +245,7 @@ $POR_CONTA = [
 
 $FAQ = [
     'Outra pessoa pode ter um site igual ao meu?' =>
-        'Não. Todos os sites são feitos sob encomenda: o modelo mostra o estilo e o que o site faz, e eu monto o seu com o seu nome, as suas cores e as suas informações. Dois clientes podem partir do mesmo modelo, mas cada um recebe um site com a cara do próprio negócio.',
+        'Não. O modelo mostra o estilo e o que o site faz, e eu monto o seu com o seu nome, as suas cores e as suas informações. Dois clientes podem partir do mesmo modelo, mas cada um recebe um site com a cara do próprio negócio.',
     'Há cobrança de mensalidade?' =>
         'Para sites, não. Você paga apenas o domínio e, na maioria dos casos, a hospedagem é gratuita. Aplicativos e sistemas que dependem de servidor podem ter um custo mensal, que informo antes do início do projeto.',
     'O aplicativo fica na Play Store ou na App Store?' =>
@@ -308,7 +308,6 @@ function capa(array $s): string
 function selo(array $s): string
 {
     if (vendido($s))   return '<span class="stamp">Vendido</span>';
-    if (encomenda($s)) return '<span class="stamp encomenda">Sob encomenda</span>';
     return '';
 }
 
@@ -554,7 +553,7 @@ $ano = date('Y');
     <div class="catalog-head">
       <div>
         <h2>Sites à venda</h2>
-        <p class="sub">Escolha um modelo e eu faço o seu sob encomenda, com o seu nome, as suas cores, as suas fotos e os seus textos, publicado no seu endereço.</p>
+        <p class="sub">Escolha um modelo e eu faço o seu com o seu nome, as suas cores, as suas fotos e os seus textos, publicado no seu endereço.</p>
       </div>
       <nav class="filters" aria-label="Filtrar por tipo de negócio">
         <?php foreach ($categorias as $cat => $qtd): ?>
@@ -648,9 +647,7 @@ $ano = date('Y');
   <a class="modal-close" href="<?= e(url(['categoria' => $categoriaAtual], 'catalogo')) ?>" aria-label="Fechar">Fechar</a>
   <div class="modal-media"><?= capa($atual) ?><?= selo($atual) ?></div>
   <div class="modal-body">
-    <p class="meta"><?= e($atual['categoria']) ?><?= encomenda($atual)
-        ? ' · sob encomenda, feito com os seus dados'
-        : (!empty($atual['exclusivo']) ? ' · exclusivo: vendido uma única vez' : '') ?></p>
+    <p class="meta"><?= e($atual['categoria']) ?><?= !empty($atual['exclusivo']) ? ' · exclusivo: vendido uma única vez' : '' ?></p>
     <h3 id="m-title"><?= e($atual['nome']) ?></h3>
     <p><?= e($atual['descricao'] ?: $atual['resumo']) ?></p>
 

@@ -10,6 +10,8 @@
 <meta property="og:image" content="/img/fossilcrown.png">
 <meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#16130f" media="(prefers-color-scheme: dark)">
+<link rel="alternate" hreflang="pt-BR" href="https://feitopelolucas.com.br/">
+<link rel="alternate" hreflang="en" href="https://feitopelolucas.com.br/?lang=en">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -17,71 +19,92 @@
 <link rel="icon" href="/favicon-32.png?v=1" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=1">
 <link rel="stylesheet" href="/style.css">
+<script>
+  // Escolhe o idioma antes de desenhar a página, para não piscar em português.
+  (function () {
+    var q = new URLSearchParams(location.search).get("lang"), l = null;
+    try { l = localStorage.getItem("idioma"); } catch (e) {}
+    if (q === "en" || q === "pt") l = q;
+    if (!l) l = /^pt\b/i.test(navigator.language || "") ? "pt" : (navigator.language ? "en" : "pt");
+    document.documentElement.lang = l === "en" ? "en" : "pt-BR";
+    document.documentElement.dataset.idioma = l;
+  })();
+</script>
 </head>
 <body>
+
+<div class="lang-bar">
+  <div class="wrap">
+    <span class="lang-atual" id="lang-atual">Você está vendo o site em português</span>
+    <div class="lang-switch" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="pt" lang="pt-BR">Português</button>
+      <button type="button" data-lang="en" lang="en">English</button>
+    </div>
+  </div>
+</div>
 
 <header class="wrap top">
   <a class="name" href="/">Feito pelo Lucas</a>
   <nav>
-    <a href="#servicos">O que eu faço</a>
-    <a href="#catalogo">Sites à venda</a>
-    <a href="#contato">Contato</a>
+    <a href="#servicos" data-i18n="nav.servicos">O que eu faço</a>
+    <a href="#catalogo" data-i18n="nav.catalogo">Sites à venda</a>
+    <a href="#contato" data-i18n="nav.contato">Contato</a>
   </nav>
 </header>
 
 <main>
   <section class="wrap intro">
     <div class="intro-main">
-    <h1>Eu faço sites, aplicativos <br>e <i>jogos</i>.</h1>
+    <h1 data-i18n="intro.h1">Eu faço sites, aplicativos <br>e <i>jogos</i>.</h1>
     <div class="intro-text">
-      <p>Sou o Lucas. Desenvolvo sites, aplicativos para celular, programas para computador e jogos. Alguns sites já estão prontos e à venda nesta página; os demais projetos são feitos sob medida, de acordo com a necessidade do seu negócio.</p>
-      <p class="meta" id="meta"></p>
+      <p data-i18n="intro.p">Sou o Lucas. Desenvolvo sites, aplicativos para celular, programas para computador e jogos. Alguns sites já estão prontos e à venda nesta página; os demais projetos são feitos sob medida, de acordo com a necessidade do seu negócio.</p>
+      <p class="meta" data-i18n="intro.meta">Todos os modelos podem ser feitos com o seu nome, as suas cores e as suas informações.</p>
     </div>
     </div>
     <figure class="portrait">
-      <img src="/img/lucas.jpg" alt="Foto do Lucas, de óculos, terno preto e gravata-borboleta dourada" width="640" height="640">
+      <img src="/img/lucas.jpg" data-i18n-alt="intro.foto" alt="Foto do Lucas, de óculos, terno preto e gravata-borboleta dourada" width="640" height="640">
       <figcaption>Lucas</figcaption>
     </figure>
   </section>
 
   <section id="servicos" class="wrap services">
-    <h2>O que eu faço</h2>
+    <h2 data-i18n="serv.h2">O que eu faço</h2>
     <div class="service">
       <span class="num">01</span>
-      <h3>Sites</h3>
-      <p>Para quem precisa estar na internet: restaurantes, clínicas, escritórios, lojas e portfólios. Você pode <a href="#catalogo">escolher um site pronto</a>, que eu adapto à sua marca, ou encomendar um projeto do zero.</p>
-      <a class="ask" data-msg="Olá, Lucas! Gostaria de um orçamento para um site.">Pedir orçamento</a>
+      <h3 data-i18n="serv1.h3">Sites</h3>
+      <p data-i18n="serv1.p">Para quem precisa estar na internet: restaurantes, clínicas, escritórios, lojas e portfólios. Você pode <a href="#catalogo">escolher um site pronto</a>, que eu adapto à sua marca, ou encomendar um projeto do zero.</p>
+      <a class="ask" data-i18n="serv.ask" data-msg="Olá, Lucas! Gostaria de um orçamento para um site." data-msg-en="Hi, Lucas! I'd like a quote for a website.">Pedir orçamento</a>
     </div>
     <div class="service">
       <span class="num">02</span>
-      <h3>Aplicativos para celular</h3>
-      <p>Aplicativos que funcionam em Android e iPhone: catálogo de produtos, pedidos, área do cliente, cartão fidelidade e controle interno da equipe. Não é preciso passar por loja de aplicativos: o usuário abre um link e instala o aplicativo diretamente na tela inicial do celular. As atualizações são automáticas, sem necessidade de baixar nada novamente.</p>
-      <a class="ask" data-msg="Olá, Lucas! Gostaria de um orçamento para um aplicativo de celular.">Pedir orçamento</a>
+      <h3 data-i18n="serv2.h3">Aplicativos para celular</h3>
+      <p data-i18n="serv2.p">Aplicativos que funcionam em Android e iPhone: catálogo de produtos, pedidos, área do cliente, cartão fidelidade e controle interno da equipe. Não é preciso passar por loja de aplicativos: o usuário abre um link e instala o aplicativo diretamente na tela inicial do celular. As atualizações são automáticas, sem necessidade de baixar nada novamente.</p>
+      <a class="ask" data-i18n="serv.ask" data-msg="Olá, Lucas! Gostaria de um orçamento para um aplicativo de celular." data-msg-en="Hi, Lucas! I'd like a quote for a mobile app.">Pedir orçamento</a>
     </div>
     <div class="service">
       <span class="num">03</span>
-      <h3>Programas para computador</h3>
-      <p>Sistemas para Windows que organizam a rotina do seu negócio. Um exemplo é a agenda para consultório: cadastro de pacientes, marcação de horários por profissional, lembretes pelo WhatsApp e histórico de atendimentos. Também desenvolvo sistemas de controle de estoque, caixa e cadastro de clientes.</p>
-      <a class="ask" data-msg="Olá, Lucas! Gostaria de um orçamento para um programa de computador.">Pedir orçamento</a>
+      <h3 data-i18n="serv3.h3">Programas para computador</h3>
+      <p data-i18n="serv3.p">Sistemas para Windows que organizam a rotina do seu negócio. Um exemplo é a agenda para consultório: cadastro de pacientes, marcação de horários por profissional, lembretes pelo WhatsApp e histórico de atendimentos. Também desenvolvo sistemas de controle de estoque, caixa e cadastro de clientes.</p>
+      <a class="ask" data-i18n="serv.ask" data-msg="Olá, Lucas! Gostaria de um orçamento para um programa de computador." data-msg-en="Hi, Lucas! I'd like a quote for a desktop program.">Pedir orçamento</a>
     </div>
     <div class="service">
       <span class="num">04</span>
-      <h3>Jogos</h3>
-      <p>Jogos para PC e navegador, do protótipo ao lançamento. O Fossil Crown, apresentado logo abaixo, é um jogo que fiz sozinho e que já está disponível.</p>
-      <a class="ask" data-msg="Olá, Lucas! Gostaria de conversar sobre um jogo.">Pedir orçamento</a>
+      <h3 data-i18n="serv4.h3">Jogos</h3>
+      <p data-i18n="serv4.p">Jogos para PC e navegador, do protótipo ao lançamento. O Fossil Crown, apresentado logo abaixo, é um jogo que fiz sozinho e que já está disponível.</p>
+      <a class="ask" data-i18n="serv.ask" data-msg="Olá, Lucas! Gostaria de conversar sobre um jogo." data-msg-en="Hi, Lucas! I'd like to talk about a game.">Pedir orçamento</a>
     </div>
   </section>
 
   <section class="wrap showcase">
     <a class="showcase-img" href="https://fossilcrown.com" target="_blank" rel="noopener">
-      <img src="/img/fossilcrown.png" alt="Capa do jogo Fossil Crown, com dinossauros num rancho e um vulcão ao fundo" width="920" height="430" loading="lazy">
+      <img src="/img/fossilcrown.png" data-i18n-alt="fc.alt" alt="Capa do jogo Fossil Crown, com dinossauros num rancho e um vulcão ao fundo" width="920" height="430" loading="lazy">
     </a>
     <div class="showcase-text">
-      <p class="meta">Jogo · PC · projeto próprio · não está à venda</p>
+      <p class="meta" data-i18n="fc.meta">Jogo · PC · projeto próprio · não está à venda</p>
       <h2>Fossil Crown</h2>
-      <p>Um jogo <i>idle</i> de dinossauros para PC. O rancho fica em uma faixa na parte inferior da tela enquanto você usa o computador: é possível criar dinossauros, chocar ovos, enviá-los em expedições e subir no ranking da arena. É gratuito e não oferece vantagens pagas.</p>
-      <p>Fiz tudo sozinho: o jogo, o servidor do ranking, as atualizações automáticas e o site.</p>
-      <p>O Fossil Crown não está à venda. Ele está aqui para mostrar o tipo de projeto que eu consigo tocar do começo ao fim.</p>
+      <p data-i18n="fc.p1">Um jogo <i>idle</i> de dinossauros para PC. O rancho fica em uma faixa na parte inferior da tela enquanto você usa o computador: é possível criar dinossauros, chocar ovos, enviá-los em expedições e subir no ranking da arena. É gratuito e não oferece vantagens pagas.</p>
+      <p data-i18n="fc.p2">Fiz tudo sozinho: o jogo, o servidor do ranking, as atualizações automáticas e o site.</p>
+      <p data-i18n="fc.p3">O Fossil Crown não está à venda. Ele está aqui para mostrar o tipo de projeto que eu consigo tocar do começo ao fim.</p>
       <a class="link" href="https://fossilcrown.com" target="_blank" rel="noopener">fossilcrown.com ↗</a>
     </div>
   </section>
@@ -89,29 +112,29 @@
   <section id="catalogo" class="wrap catalog">
     <div class="catalog-head">
       <div>
-        <h2>Sites à venda</h2>
-        <p class="sub">Escolha um modelo e eu faço o seu sob encomenda, com o seu nome, as suas cores, as suas fotos e os seus textos, publicado no seu endereço.</p>
+        <h2 data-i18n="cat.h2">Sites à venda</h2>
+        <p class="sub" data-i18n="cat.sub">Escolha um modelo e eu faço o seu com o seu nome, as suas cores, as suas fotos e os seus textos, publicado no seu endereço.</p>
       </div>
-      <div class="filters" id="filters" aria-label="Filtrar por tipo de negócio"></div>
+      <div class="filters" id="filters" data-i18n-aria="cat.filtros" aria-label="Filtrar por tipo de negócio"></div>
     </div>
     <div class="grid" id="grid"></div>
-    <p class="empty" id="empty" hidden>Nenhum site nesta categoria no momento.</p>
+    <p class="empty" id="empty" hidden data-i18n="cat.vazio">Nenhum site nesta categoria no momento.</p>
   </section>
 
   <section id="como" class="wrap how">
-    <h2>Como funciona a compra de um site</h2>
+    <h2 data-i18n="como.h2">Como funciona a compra de um site</h2>
     <ol>
-      <li><b>Você escolhe um site</b> e entra em contato comigo. Se estiver em dúvida entre dois modelos, posso indicar qual combina mais com o seu negócio.</li>
-      <li><b>Combinamos o pagamento.</b> Pix ou transferência: metade no início e metade quando o site estiver no ar.</li>
-      <li><b>Você me envia o material</b>: logotipo, fotos, textos, telefone e endereço. Se não tiver os textos prontos, eu ajudo a escrevê-los.</li>
-      <li><b>Eu adapto e publico</b> o site no seu domínio. O prazo costuma ser de uma semana após o recebimento do material.</li>
+      <li data-i18n="como.1"><b>Você escolhe um site</b> e entra em contato comigo. Se estiver em dúvida entre dois modelos, posso indicar qual combina mais com o seu negócio.</li>
+      <li data-i18n="como.2"><b>Combinamos o pagamento.</b> Pix ou transferência: metade no início e metade quando o site estiver no ar.</li>
+      <li data-i18n="como.3"><b>Você me envia o material</b>: logotipo, fotos, textos, telefone e endereço. Se não tiver os textos prontos, eu ajudo a escrevê-los.</li>
+      <li data-i18n="como.4"><b>Eu adapto e publico</b> o site no seu domínio. O prazo costuma ser de uma semana após o recebimento do material.</li>
     </ol>
-    <p class="note">Aplicativos, programas e jogos são feitos sob medida; portanto, o prazo e o preço dependem de cada projeto. Conte-me a sua ideia e eu envio um orçamento.</p>
+    <p class="note" data-i18n="como.nota">Aplicativos, programas e jogos são feitos sob medida; portanto, o prazo e o preço dependem de cada projeto. Conte-me a sua ideia e eu envio um orçamento.</p>
 
     <div class="terms">
       <div>
-        <h3>Incluído no preço do site</h3>
-        <ul>
+        <h3 data-i18n="inc.h3">Incluído no preço do site</h3>
+        <ul data-i18n="inc.ul">
           <li>Troca de nome, logotipo, cores, fotos e textos</li>
           <li>Botão de WhatsApp e seus contatos</li>
           <li>Configuração do domínio</li>
@@ -120,8 +143,8 @@
         </ul>
       </div>
       <div>
-        <h3>Por conta do cliente</h3>
-        <ul>
+        <h3 data-i18n="cli.h3">Por conta do cliente</h3>
+        <ul data-i18n="cli.ul">
           <li>O registro do domínio (um .com.br custa cerca de R$ 40 por ano)</li>
           <li>Novas páginas ou funcionalidades, orçadas à parte</li>
           <li>Fotos profissionais, caso deseje</li>
@@ -131,10 +154,10 @@
   </section>
 
   <section class="wrap faq">
-    <h2>Perguntas frequentes</h2>
-    <dl>
+    <h2 data-i18n="faq.h2">Perguntas frequentes</h2>
+    <dl data-i18n="faq.dl">
       <dt>Outra pessoa pode ter um site igual ao meu?</dt>
-      <dd>Não. Todos os sites são feitos sob encomenda: o modelo mostra o estilo e o que o site faz, e eu monto o seu com o seu nome, as suas cores e as suas informações. Dois clientes podem partir do mesmo modelo, mas cada um recebe um site com a cara do próprio negócio.</dd>
+      <dd>Não. O modelo mostra o estilo e o que o site faz, e eu monto o seu com o seu nome, as suas cores e as suas informações. Dois clientes podem partir do mesmo modelo, mas cada um recebe um site com a cara do próprio negócio.</dd>
       <dt>Há cobrança de mensalidade?</dt>
       <dd>Para sites, não. Você paga apenas o domínio e, na maioria dos casos, a hospedagem é gratuita. Aplicativos e sistemas que dependem de servidor podem ter um custo mensal, que informo antes do início do projeto.</dd>
       <dt>O aplicativo fica na Play Store ou na App Store?</dt>
@@ -147,8 +170,8 @@
   </section>
 
   <section id="contato" class="wrap contact">
-    <h2>Vamos conversar?</h2>
-    <p>Costumo responder no mesmo dia.</p>
+    <h2 data-i18n="contato.h2">Vamos conversar?</h2>
+    <p data-i18n="contato.p">Costumo responder no mesmo dia.</p>
     <p class="contact-links">
       <a id="cta-whats" href="#" target="_blank" rel="noopener">WhatsApp</a>
       <a id="cta-mail" href="#">E-mail</a>
@@ -158,18 +181,19 @@
 
 <footer class="wrap foot">
   <span>Feito pelo Lucas, <span id="y"></span>.</span>
-  <a href="#">Voltar ao topo ↑</a>
+  <a href="#" data-i18n="rodape.topo">Voltar ao topo ↑</a>
 </footer>
 
 <dialog id="modal" class="modal" aria-labelledby="m-title">
-  <button class="modal-close" id="m-close" aria-label="Fechar">Fechar</button>
+  <button class="modal-close" id="m-close" data-i18n="m.fechar" data-i18n-aria="m.fechar" aria-label="Fechar">Fechar</button>
   <div class="modal-media" id="m-media"></div>
   <div class="modal-body">
     <p class="meta" id="m-meta"></p>
     <h3 id="m-title"></h3>
     <p id="m-desc"></p>
-    <p class="m-label">O que está incluso</p>
+    <p class="m-label" data-i18n="m.incluso">O que está incluso</p>
     <ul class="m-features" id="m-features"></ul>
+    <p class="m-aviso" id="m-aviso" hidden></p>
     <div class="modal-foot">
       <p class="m-price" id="m-price"></p>
       <div class="modal-actions">
@@ -179,30 +203,31 @@
     </div>
 
     <form class="pedido" id="m-pedido" novalidate>
-      <p class="m-label">Peça o seu</p>
-      <p class="pedido-intro">Conte o básico sobre o seu negócio. A mensagem chega pronta no meu WhatsApp, e eu respondo com as próximas etapas. Preencha só o que já souber.</p>
+      <p class="m-label" data-i18n="p.titulo">Peça o seu</p>
+      <p class="pedido-intro" data-i18n="p.intro">Conte o básico sobre o seu negócio. A mensagem chega pronta no meu WhatsApp, e eu respondo com as próximas etapas. Preencha só o que já souber.</p>
       <div class="campos">
-        <label>Seu nome<input id="p-nome" type="text" autocomplete="name" required></label>
-        <label>Nome do negócio<input id="p-negocio" type="text" autocomplete="organization" required></label>
-        <label>O que o negócio faz<input id="p-ramo" type="text" placeholder="Ex.: pizzaria, estúdio de pilates"></label>
-        <label>Cidade<input id="p-cidade" type="text" autocomplete="address-level2"></label>
-        <label class="largo">Cores que quer usar<input id="p-cores" type="text" placeholder="Ex.: verde-escuro e creme, ou as cores do meu logotipo"></label>
-        <label class="largo">Informações para o site<textarea id="p-info" rows="4" placeholder="Serviços ou produtos, preços, horários, endereço, Instagram…"></textarea></label>
+        <label><span data-i18n="p.nome">Seu nome</span><input id="p-nome" type="text" autocomplete="name" required></label>
+        <label><span data-i18n="p.negocio">Nome do negócio</span><input id="p-negocio" type="text" autocomplete="organization" required></label>
+        <label><span data-i18n="p.ramo">O que o negócio faz</span><input id="p-ramo" type="text" data-i18n-ph="p.ramo.ph" placeholder="Ex.: pizzaria, estúdio de pilates"></label>
+        <label><span data-i18n="p.cidade">Cidade</span><input id="p-cidade" type="text" autocomplete="address-level2"></label>
+        <label class="largo"><span data-i18n="p.cores">Cores que quer usar</span><input id="p-cores" type="text" data-i18n-ph="p.cores.ph" placeholder="Ex.: verde-escuro e creme, ou as cores do meu logotipo"></label>
+        <label class="largo"><span data-i18n="p.info">Informações para o site</span><textarea id="p-info" rows="4" data-i18n-ph="p.info.ph" placeholder="Serviços ou produtos, preços, horários, endereço, Instagram…"></textarea></label>
       </div>
       <fieldset class="tenho">
-        <legend>Já tenho</legend>
-        <label><input type="checkbox" value="logotipo"> Logotipo</label>
-        <label><input type="checkbox" value="fotos"> Fotos</label>
-        <label><input type="checkbox" value="textos"> Textos</label>
-        <label><input type="checkbox" value="domínio"> Domínio</label>
+        <legend data-i18n="p.tenho">Já tenho</legend>
+        <label><input type="checkbox" value="logotipo" data-en="logo"> <span data-i18n="p.logo">Logotipo</span></label>
+        <label><input type="checkbox" value="fotos" data-en="photos"> <span data-i18n="p.fotos">Fotos</span></label>
+        <label><input type="checkbox" value="textos" data-en="texts"> <span data-i18n="p.textos">Textos</span></label>
+        <label><input type="checkbox" value="domínio" data-en="domain"> <span data-i18n="p.dominio">Domínio</span></label>
       </fieldset>
       <p class="pedido-erro" id="p-erro" role="alert"></p>
-      <button class="btn" type="submit">Enviar pelo WhatsApp</button>
+      <button class="btn" type="submit" data-i18n="p.enviar">Enviar pelo WhatsApp</button>
     </form>
   </div>
 </dialog>
 
 <script src="/sites.js"></script>
+<script src="/i18n.js"></script>
 <script src="/app.js"></script>
 </body>
 </html>

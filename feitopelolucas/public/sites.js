@@ -18,6 +18,7 @@
  *               (coloque o arquivo dentro de public/img/). Sem imagem, aparece uma capa colorida.
  *   cores       (opcional) duas cores para a capa colorida quando não há imagem
  *   recursos    lista do que o site tem
+ *   en          (opcional) resumo, descricao e recursos em inglês, para o botão English
  *
  * OS SITES ABAIXO SÃO EXEMPLOS — troque pelos seus.
  */
@@ -42,6 +43,11 @@ window.SITES = [
     imagem: "/img/modelos/1686178827149-6d55c72d81df-g.jpg",
     cores: ["#1F6FEB"],
     recursos: ["Feito primeiro para o celular", "Botão de WhatsApp por serviço", "Botão fixo de WhatsApp", "Galeria de fotos", "Horário e contato", "Link para o Instagram"],
+    en: {
+      resumo: "One-page website for service providers who get clients through Instagram.",
+      descricao: "Made for businesses that advertise on Instagram and close deals on WhatsApp. It loads fast on phones, has a WhatsApp button on every service with the message already written, and a fixed button in the corner of the screen. The example is a fictional upholstery cleaning company.",
+      recursos: ["Built for phones first", "WhatsApp button for each service", "Fixed WhatsApp button", "Photo gallery", "Opening hours and contact", "Instagram link"],
+    },
   },
   {
     id: "casa-verde-vasos",
@@ -56,6 +62,11 @@ window.SITES = [
     imagem: "/img/modelos/1621512367176-03782e847fa2-g.jpg",
     cores: ["#2f5d46"],
     recursos: ["Catálogo de até 6 produtos", "Página de cada produto", "Carrinho salvo no celular", "Produtos em falta", "Pagamento pela Stripe", "Pedidos guardados no banco"],
+    en: {
+      resumo: "Small online store with a catalog, shopping cart and online payment.",
+      descricao: "A store for those who sell a few products and want to take payments without hassle. It has a catalog, a page for each product, a cart that stays saved on the phone, out-of-stock items, and order-received and payment-cancelled screens. In the real version, orders are stored in a database and payments go through Stripe. The demo simulates the payment and uses a fictional plant pot shop.",
+      recursos: ["Catalog of up to 6 products", "A page for each product", "Cart saved on the phone", "Out-of-stock items", "Payment through Stripe", "Orders stored in a database"],
+    },
   },
   {
     id: "cantinho-do-sabor",
@@ -70,6 +81,11 @@ window.SITES = [
     imagem: "/img/modelos/1765894711215-ba5b1bd6d1f7-g.jpg",
     cores: ["#7a1f1f"],
     recursos: ["Abre pelo QR code", "Categorias e preços", "Itens indisponíveis no dia", "Pedido de reserva validado", "Dias, horários e máximo de pessoas", "Tudo enviado pelo WhatsApp"],
+    en: {
+      resumo: "QR code menu and table booking requests, both through WhatsApp.",
+      descricao: "A page with two tabs. On the menu, customers pick items and send the order already written to WhatsApp, with the total calculated and the items unavailable that day marked. On the bookings tab, they enter name, date, time and number of people; before sending, the page checks the accepted days and times, the maximum group size and the minimum notice. To change a price or a time, you edit a single line. The example is a fictional snack bar.",
+      recursos: ["Opens from a QR code", "Categories and prices", "Items unavailable today", "Validated booking request", "Days, times and maximum group size", "Everything sent through WhatsApp"],
+    },
   },
   {
     id: "esquina-do-lanche",
@@ -84,6 +100,11 @@ window.SITES = [
     imagem: "/img/modelos/1568901346375-23c9450c58cd-g.jpg",
     cores: ["#2b211b"],
     recursos: ["Combos em destaque", "Carrinho fixo com o total", "Bairros de entrega", "Pagamento e troco", "Pedido escrito no WhatsApp", "Dados num bloco só"],
+    en: {
+      resumo: "Delivery ordering page with combo meals and delivery by neighborhood.",
+      descricao: "Made for snack bars that take delivery orders on WhatsApp. Customers build their order with plus and minus buttons, see the total in a fixed cart and, at checkout, enter their name, address, neighborhood, payment method and change needed. The order arrives written out, one detail per line. The whole menu and the store details live in a single block that's easy to edit. The example is a fictional snack bar.",
+      recursos: ["Featured combo meals", "Fixed cart with the total", "Delivery neighborhoods and fees", "Payment method and change", "Order written out on WhatsApp", "All details in one block"],
+    },
   },
   {
     id: "restaurante-sabor",
@@ -98,6 +119,11 @@ window.SITES = [
     imagem: "/img/modelos/1679711246825-1f2bd51b16d0-g.jpg",
     cores: ["#3a1c0f", "#c2410c"],
     recursos: ["Quadro do que está no fogo hoje", "Preparo contado hora a hora", "Preços do balcão e para levar", "Encomenda pelo WhatsApp", "Reserva de mesa", "Espaço para fotos"],
+    en: {
+      resumo: "Website for a barbecue restaurant, showing what's on the fire today and prices per kilo.",
+      descricao: "Made for steakhouses, barbecue places and restaurants with one strong main dish. It shows what's on the fire that day, tells the cooking process hour by hour, lists counter prices and takeaway orders, and sends table bookings to WhatsApp.",
+      recursos: ["Board of what's on the fire today", "Cooking told hour by hour", "Counter and takeaway prices", "Takeaway orders through WhatsApp", "Table booking", "Photo section"],
+    },
   },
   {
     id: "clinica-vida",
@@ -112,6 +138,11 @@ window.SITES = [
     imagem: "/img/modelos/1631217868264-e5b90bb7e133-g.jpg",
     cores: ["#0c4a6e", "#14b8a6"],
     recursos: ["Quem atende hoje", "Quadro semanal por especialidade", "Profissionais e registros", "Orientações antes da consulta", "Convênios aceitos", "Marcação pelo WhatsApp"],
+    en: {
+      resumo: "Website for clinics and medical offices, showing who sees patients each day.",
+      descricao: "It shows right away who is seeing patients today and has a weekly chart with the days of each specialty. It lists the professionals with their license numbers, what to do before the appointment, the health plans accepted, and booking through WhatsApp.",
+      recursos: ["Who sees patients today", "Weekly chart by specialty", "Professionals and license numbers", "Before-your-visit instructions", "Health plans accepted", "Booking through WhatsApp"],
+    },
   },
   {
     id: "advocacia-pro",
@@ -126,6 +157,11 @@ window.SITES = [
     imagem: "/img/modelos/1505664194779-8beaceb93744-g.jpg",
     cores: ["#1c1917", "#a16207"],
     recursos: ["Áreas em artigos numerados", "Sócios com assinatura e OAB", "Lista de artigos do escritório", "Primeira conversa pelo WhatsApp", "Visual de papel timbrado", "Texto sóbrio, sem promessas"],
+    en: {
+      resumo: "Understated website for law firms, written like a legal document.",
+      descricao: "Organized like a legal document: the practice areas appear as numbered articles, the partners sign the page and the firm's articles are listed as writings. It says clearly what the firm does and what it doesn't.",
+      recursos: ["Practice areas as numbered articles", "Partners with signature and bar number", "List of the firm's articles", "First conversation through WhatsApp", "Letterhead look", "Sober text, no promises"],
+    },
   },
   {
     id: "barbearia-navalha",
@@ -140,6 +176,11 @@ window.SITES = [
     imagem: "/img/modelos/1585747860715-2ba37e788b70-g.jpg",
     cores: ["#111827", "#b91c1c"],
     recursos: ["Tabela em quadro de letras", "Agenda por barbeiro", "Fila com e sem hora marcada", "Fotos dos cortes", "Horários e endereço"],
+    en: {
+      resumo: "Website for barbershops, with a letter-board price list and booking by barber.",
+      descricao: "The price list appears on a letter board, like the ones on the wall. Each barber has their own chair, their own days and a button to book directly with them. It explains how the queue works with and without an appointment.",
+      recursos: ["Price list on a letter board", "Booking by barber", "Queue with and without appointment", "Photos of haircuts", "Opening hours and address"],
+    },
   },
   {
     id: "portfolio-foto",
@@ -154,6 +195,11 @@ window.SITES = [
     imagem: "/img/modelos/1772989665252-7cb41ae759cc-g.jpg",
     cores: ["#27272a", "#71717a"],
     recursos: ["Trabalhos em tiras de filme", "Fotos escolhidas em destaque", "Foto ampliada ao tocar", "Tabela de valores", "Consulta de datas pelo WhatsApp"],
+    en: {
+      resumo: "Photography portfolio laid out like a contact sheet.",
+      descricao: "The work appears as film strips, with the photos the client picked circled in pencil. Each photo opens enlarged. It has the price list and a contact for checking available dates.",
+      recursos: ["Work shown as film strips", "Client's picks highlighted", "Tap to enlarge a photo", "Price list", "Date availability through WhatsApp"],
+    },
   },
   {
     id: "academia-forca",
@@ -168,6 +214,11 @@ window.SITES = [
     imagem: "/img/modelos/1689877020200-403d8542d95d-g.jpg",
     cores: ["#052e16", "#65a30d"],
     recursos: ["Grade de aulas do dia", "Próxima aula com contagem", "Grade de cada dia da semana", "Aula experimental com horário", "Modalidades e planos"],
+    en: {
+      resumo: "Website for gyms and studios, with the class schedule as the cover.",
+      descricao: "The first thing you see is today's schedule, with the next class and how long until it starts. You can browse the other days, learn about the classes and plans, and request a trial class with the day and time already chosen.",
+      recursos: ["Today's class schedule", "Next class with countdown", "Schedule for each weekday", "Trial class with a set time", "Classes and membership plans"],
+    },
   },
   {
     id: "flor-de-lis",
@@ -182,6 +233,11 @@ window.SITES = [
     imagem: "/img/modelos/1718568698986-eb9045432622-g.jpg",
     cores: ["#6d2e46"],
     recursos: ["Uma tela, feita para o celular", "Aberto ou fechado agora", "Carrossel de produtos com preço", "Pedido de cada produto no WhatsApp", "Horário do dia destacado"],
+    en: {
+      resumo: "Link-in-bio page with buttons, opening hours and a product carousel.",
+      descricao: "A single screen, made for the Instagram bio link. It shows whether the shop is open right now, the main buttons and a carousel with this week's products, each with its price and an order button for WhatsApp. The example is a fictional flower studio. It's the simplest and fastest template to deliver.",
+      recursos: ["One screen, made for phones", "Open or closed right now", "Product carousel with prices", "Order each product on WhatsApp", "Today's hours highlighted"],
+    },
   },
   {
     id: "julia-mendes-psicologa",
@@ -196,6 +252,11 @@ window.SITES = [
     imagem: "/img/modelos/1754037783933-c25ff9f68f87-g.jpg",
     cores: ["#4b5a4a"],
     recursos: ["Apresentação em forma de carta", "Presencial e online", "Valores e reembolso", "Dúvidas da primeira sessão", "Contato pelo WhatsApp"],
+    en: {
+      resumo: "Calm website for psychologists and therapists, written as a letter.",
+      descricao: "The introduction is a signed letter, with no catchphrases. It covers the issues treated, in-person and online sessions, the fee table, questions about the first session and a crisis hotline notice for emergencies, as the professional council requires. The example is a fictional psychologist.",
+      recursos: ["Introduction written as a letter", "In-person and online", "Fees and insurance reimbursement", "First-session questions", "Contact through WhatsApp"],
+    },
   },
   {
     id: "trio-sereno",
@@ -210,6 +271,11 @@ window.SITES = [
     imagem: "/img/modelos/1632054553195-bfd7034fee25-g.jpg",
     cores: ["#121212", "#ff5a3c"],
     recursos: ["Repertório com busca", "Filtro por momento do evento", "Setlist montado pelo cliente", "Formações e valores por hora", "Orçamento pelo WhatsApp"],
+    en: {
+      resumo: "Website for event musicians and bands, with a setlist built by the client.",
+      descricao: "Clients search the repertoire by song or artist, filter by moment (ceremony, cocktail hour, party) and build the setlist on a taped sheet of paper. They choose the lineup and the hours, see the estimate and send everything through WhatsApp. The example is a fictional group.",
+      recursos: ["Searchable repertoire", "Filter by moment of the event", "Setlist built by the client", "Lineups and hourly rates", "Quote request through WhatsApp"],
+    },
   },
   {
     id: "panela-da-semana",
@@ -224,6 +290,11 @@ window.SITES = [
     imagem: "/img/modelos/1543352632-5a4b24e4d2a6-g.jpg",
     cores: ["#2d3a2e", "#d8532f"],
     recursos: ["Lousa do prato do dia", "Kits de 5, 10 ou 20", "Montagem por sabor", "Prazo do pedido com contagem", "Entrega por bairro"],
+    en: {
+      resumo: "Home-style meal service with a chalkboard daily special and frozen meal kits.",
+      descricao: "It has the week's chalkboard, written in chalk, with each day's special. Customers choose a kit of 5, 10 or 20 meals and split it among the flavors; a bar shows how many are left. It shows the deadline for Sunday's order and the delivery fee by neighborhood. The example is a fictional meal service.",
+      recursos: ["Chalkboard daily special", "Kits of 5, 10 or 20", "Pick meals by flavor", "Order deadline countdown", "Delivery by neighborhood"],
+    },
   },
   {
     id: "atelie-cereja",
@@ -238,6 +309,11 @@ window.SITES = [
     imagem: "/img/modelos/1632345031435-8727f6897d53-g.jpg",
     cores: ["#5b1a2b"],
     recursos: ["Ficha que soma tempo e valor", "Cartela de cores clicável", "Escolha da profissional", "Carrossel de trabalhos", "Pedido de horário no WhatsApp"],
+    en: {
+      resumo: "Nail and hair salon with a service ticket and a color chart.",
+      descricao: "Clients tick the services and the paper ticket beside them adds up the time and the price. They pick a polish color from the chart, the professional and the day, and the message goes out ready. It has a carousel of work, the team and the house rules. The example is a fictional salon.",
+      recursos: ["Ticket that adds up time and price", "Clickable color chart", "Choice of professional", "Carousel of work", "Appointment request on WhatsApp"],
+    },
   },
   {
     id: "pelo-e-banho",
@@ -252,6 +328,11 @@ window.SITES = [
     imagem: "/img/modelos/1719464454959-9cf304ef4774-g.jpg",
     cores: ["#24507a", "#f6c945"],
     recursos: ["Preço por porte e pelo", "Carteirinha com vacinas", "Leva e traz por bairro", "Tabela completa", "Carrossel de pets atendidos"],
+    en: {
+      resumo: "Pet grooming shop with prices by size and a pet health card.",
+      descricao: "Owners choose the pet's size, coat type, service, extras and pick-up and drop-off, and see the price and time instantly. They fill in the pet's health card, which checks the vaccines before sending. It has the full price table and a carousel of pets groomed. The example is a fictional pet shop.",
+      recursos: ["Price by size and coat", "Health card with vaccines", "Pick-up and drop-off by neighborhood", "Full price table", "Carousel of pets groomed"],
+    },
   },
   {
     id: "forno-velho",
@@ -266,6 +347,11 @@ window.SITES = [
     imagem: "/img/modelos/1763647836753-e06fe1f8707b-g.jpg",
     cores: ["#1f1813", "#c0321f"],
     recursos: ["Meio a meio desenhado", "Preço pelo sabor mais caro", "Bordas e tamanhos", "Várias pizzas no pedido", "Faixa de fotos em movimento"],
+    en: {
+      resumo: "Pizzeria with half-and-half pizzas drawn inside the box.",
+      descricao: "Customers choose the size, one or two flavors and the crust, and see the pizza split inside the box. For half-and-half, the price of the more expensive flavor applies, as in most Brazilian pizzerias. They can add several pizzas to the order, pick delivery and send it. It has a menu with photos and a moving strip of pizzas. The example is a fictional pizzeria.",
+      recursos: ["Half-and-half drawn on screen", "Price of the more expensive flavor", "Crusts and sizes", "Several pizzas per order", "Moving strip of photos"],
+    },
   },
   {
     id: "prumo-contabil",
@@ -280,6 +366,11 @@ window.SITES = [
     imagem: "/img/modelos/1626266061368-46a8f578ddd6-g.jpg",
     cores: ["#0f3d2e"],
     recursos: ["Simulador de mensalidade", "Aviso de limite do MEI", "Vencimentos do mês", "Apresentação do contador", "Abertura de CNPJ"],
+    en: {
+      resumo: "Accounting firm with a monthly fee simulator and tax deadlines.",
+      descricao: "Clients enter their type of company, revenue and employees, and the website suggests a plan and the monthly fee, with warnings such as the revenue limit for micro-entrepreneurs (MEI). It shows the month's tax deadlines with the next one highlighted, and a tax payment slip as the cover image. The example is a fictional accounting firm.",
+      recursos: ["Monthly fee simulator", "MEI revenue limit warning", "This month's tax deadlines", "About the accountant", "Opening a company (CNPJ)"],
+    },
   },
   {
     id: "doce-oficio",
@@ -294,6 +385,11 @@ window.SITES = [
     imagem: "/img/modelos/1606890737304-57a1ca8a5b62-g.jpg",
     cores: ["#3b2a22", "#c2405a"],
     recursos: ["Montagem passo a passo", "Preço que muda na hora", "Antecedência e datas lotadas", "Carrossel de bolos", "Encomenda pelo WhatsApp"],
+    en: {
+      resumo: "Made-to-order bakery, with the cake built like a recipe.",
+      descricao: "Customers build the cake in a recipe notebook: size, sponge, up to two fillings and frosting, with the price changing at each choice. The pick-up date respects the minimum notice and the fully booked dates. It has a carousel of delivered cakes. The example is a fictional bakery.",
+      recursos: ["Step-by-step cake builder", "Price that updates instantly", "Minimum notice and booked dates", "Carousel of cakes", "Order through WhatsApp"],
+    },
   },
   {
     id: "oficina-pistao",
@@ -308,6 +404,11 @@ window.SITES = [
     imagem: "/img/modelos/1615906655593-ad0386982a0f-g.jpg",
     cores: ["#16191d", "#f26b1d"],
     recursos: ["Ordem de serviço pelo site", "Andamento pelo número da OS", "Preços por tipo de motor", "Fotos da oficina", "Garantia e pagamento"],
+    en: {
+      resumo: "Car repair shop with a work order form and car status by order number.",
+      descricao: "Customers fill in a carbon-copy work order: license plate, model, problem and when they can bring the car in. They can also check their car's progress by work order number, step by step. It has a price table by engine size and a written warranty. The example is a fictional repair shop.",
+      recursos: ["Work order through the website", "Progress by work order number", "Prices by engine size", "Photos of the shop", "Warranty and payment"],
+    },
   },
   {
     id: "babel-idiomas",
@@ -322,6 +423,11 @@ window.SITES = [
     imagem: "/img/modelos/1758270704763-22072a90d3b6-g.jpg",
     cores: ["#1d2f6f", "#d23b2f"],
     recursos: ["Teste de nível com correção", "Turma sugerida destacada", "Vagas por turma", "Método e mensalidades", "Aula experimental com o resultado"],
+    en: {
+      resumo: "Language school with a placement test graded instantly.",
+      descricao: "Students take a 6-question test and get it graded with right and wrong answers, a score and a suggested level. The class schedule highlights the classes at their level, with the seats left, and the trial class request goes out with their result. The example is a fictional school.",
+      recursos: ["Placement test with grading", "Suggested class highlighted", "Seats left per class", "Teaching method and monthly fees", "Trial class request with the result"],
+    },
   },
   {
     id: "espaco-jequitiba",
@@ -336,6 +442,11 @@ window.SITES = [
     imagem: "/img/modelos/1768851142332-75f3d1b47452-g.jpg",
     cores: ["#2f3b2a", "#b8955a"],
     recursos: ["Capa com fotos que se alternam", "Agenda com datas reservadas", "Orçamento por convidado", "Pacotes de buffet", "Pedido com a data escolhida"],
+    en: {
+      resumo: "Event venue with an availability calendar and a quote per guest.",
+      descricao: "The cover changes photos on its own. The calendar shows the coming months with booked dates crossed out; clients pick a free date, the type of party, the number of guests and the package, and see the estimate, with a discount on weekdays. The example is a fictional venue.",
+      recursos: ["Cover with rotating photos", "Calendar with booked dates", "Quote per guest", "Catering packages", "Request with the chosen date"],
+    },
   },
   {
     id: "morada-imoveis",
@@ -350,5 +461,10 @@ window.SITES = [
     imagem: "/img/modelos/1523217582562-09d0def993a6-g.jpg",
     cores: ["#173a35", "#c7a356"],
     recursos: ["Filtros de aluguel e venda", "Ficha de cada imóvel", "Carrossel de fotos", "Condomínio e IPTU", "Visita com o código do imóvel"],
+    en: {
+      resumo: "Real estate agency with filters, a listing sheet for each property and a photo carousel.",
+      descricao: "Clients switch between renting and buying and filter by type, neighborhood and bedrooms. Each property opens with a photo carousel, a description, condo fees and property tax, and the viewing button already includes the property code. It's the template with the most content to set up. The example is a fictional agency.",
+      recursos: ["Rent and buy filters", "Listing sheet for each property", "Photo carousel", "Condo fees and property tax", "Viewing request with the property code"],
+    },
   },
 ];
