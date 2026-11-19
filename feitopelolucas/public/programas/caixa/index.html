@@ -170,11 +170,11 @@
 
   function exemplo() {
     var clientes = [
-      { id: "c1", nome: "Maria Aparecida Lima", tel: "(19) 99812-1101", lim: 300, mov: [] },
-      { id: "c2", nome: "Seu Antônio Reis", tel: "(19) 99733-2202", lim: 200, mov: [] },
-      { id: "c3", nome: "Juliana Carvalho", tel: "(19) 98654-3303", lim: 150, mov: [] },
-      { id: "c4", nome: "Roberto Fonseca", tel: "(19) 99245-4404", lim: 250, mov: [] },
-      { id: "c5", nome: "Dona Neusa Prado", tel: "(19) 98170-5505", lim: 200, mov: [] },
+      { id: "c1", nome: "Maria Aparecida Lima", tel: "(19) 90000-1101", lim: 300, mov: [] },
+      { id: "c2", nome: "Seu Antônio Reis", tel: "(19) 90000-2202", lim: 200, mov: [] },
+      { id: "c3", nome: "Juliana Carvalho", tel: "(19) 90000-3303", lim: 150, mov: [] },
+      { id: "c4", nome: "Roberto Fonseca", tel: "(19) 90000-4404", lim: 250, mov: [] },
+      { id: "c5", nome: "Dona Neusa Prado", tel: "(19) 90000-5505", lim: 200, mov: [] },
     ];
     var d = function (n) { return Date.now() - n * 86400000; };
     clientes[0].mov = [{ t: d(12), v: 64.3, d: "Compra" }, { t: d(5), v: 38.7, d: "Compra" }, { t: d(3), v: -50, d: "Pagamento (Pix)" }];
@@ -324,7 +324,7 @@
   function mostrarCupom(v) {
     var L = 40, lin = function (a, b) { a = String(a); b = String(b); return a + " ".repeat(Math.max(1, L - a.length - b.length)) + b; };
     var c = v.cli && cli(v.cli);
-    var t = ["       EMPÓRIO DONA CIDA", "   Rua das Paineiras, 214 · Campinas", "-".repeat(L), lin("Venda " + v.n, new Date(v.t).toLocaleString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" })), "-".repeat(L)];
+    var t = ["       EMPÓRIO DONA CIDA", "   Rua das Paineiras · Campinas", "-".repeat(L), lin("Venda " + v.n, new Date(v.t).toLocaleString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" })), "-".repeat(L)];
     v.itens.forEach(function (it) { var p = prodCod(it.cod); t.push(p.nome.slice(0, L)); t.push(lin("  " + fmtQ(it) + " x " + brl(p.preco), brl(sub(it)))); });
     t.push("-".repeat(L), lin("TOTAL", brl(v.total)), lin("Pagamento", nomeForma(v.forma)));
     if (v.rec != null) { t.push(lin("Recebido", brl(v.rec)), lin("Troco", brl(v.rec - v.total))); }
