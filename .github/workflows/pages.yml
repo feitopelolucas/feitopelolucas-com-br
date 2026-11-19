@@ -32,6 +32,17 @@ jobs:
           rm -f _site/index.php _site/.assetsignore
           touch _site/.nojekyll
 
+      # Toda página precisa da camada de proteção (Content-Security-Policy).
+      # Se alguma ficar sem, a publicação para aqui e mostra qual é.
+      - name: Conferir a proteção das páginas
+        run: |
+          faltando=$(grep -rL 'http-equiv="Content-Security-Policy"' --include='*.html' _site || true)
+          if [ -n "$faltando" ]; then
+            echo "Páginas sem a meta Content-Security-Policy:"
+            echo "$faltando"
+            exit 1
+          fi
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3

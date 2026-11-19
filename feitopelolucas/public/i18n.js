@@ -108,6 +108,8 @@ window.I18N = {
   ui: {
     pt: {
       todos: "Todos",
+      verMais: function (n) { return "Ver mais " + n + " modelos"; },
+      verMenos: "Ver menos",
       vendido: "Vendido",
       apartir: "a partir de",
       fotoModelo: "Foto do modelo",
@@ -125,6 +127,8 @@ window.I18N = {
     },
     en: {
       todos: "All",
+      verMais: function (n) { return "See " + n + " more templates"; },
+      verMenos: "See less",
       vendido: "Sold",
       apartir: "from",
       fotoModelo: "Photo of the template",

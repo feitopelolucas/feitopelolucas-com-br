@@ -102,8 +102,22 @@
     render();
   });
 
+  // Em "Todos", só os sites com destaque aparecem; o resto fica atrás do botão "Ver mais"
+  let aberto = false;
+  const verMais = $("#ver-mais");
+  verMais.addEventListener("click", () => {
+    aberto = !aberto;
+    render();
+    if (!aberto) $("#grid").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
   function render() {
-    const list = ordered.filter((s) => current === "Todos" || s.categoria === current);
+    let list = ordered.filter((s) => current === "Todos" || s.categoria === current);
+    const escondidos = current === "Todos" ? list.filter((s) => !s.destaque).length : 0;
+    if (current === "Todos") list = [...list.filter((s) => s.destaque), ...(aberto ? list.filter((s) => !s.destaque) : [])];
+    verMais.hidden = escondidos === 0;
+    verMais.textContent = aberto ? T().verMenos : T().verMais(escondidos);
+    verMais.setAttribute("aria-expanded", aberto);
     $("#grid").innerHTML = list
       .map(
         (s) => `<button type="button" class="item${isSold(s) ? " sold" : ""}" data-id="${esc(s.id)}">

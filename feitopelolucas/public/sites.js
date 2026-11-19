@@ -15,6 +15,7 @@
  *   demo        (opcional) link da demonstração ao vivo
  *   imagem      (opcional) caminho de um print do site, ex.: "/img/restaurante.jpg"
  *               (coloque o arquivo dentro de public/img/). Sem imagem, aparece uma capa colorida.
+ *   destaque    (opcional) true para aparecer entre os 6 primeiros; os outros ficam no botão "Ver mais"
  *   cores       (opcional) duas cores para a capa colorida quando não há imagem
  *   recursos    lista do que o site tem
  *   en          (opcional) resumo, descricao e recursos em inglês, para o botão English
@@ -109,6 +110,7 @@ window.SITES = [
     descricao: "Feito para casas de carne, churrascarias e restaurantes com um prato principal forte. Mostra o que está no fogo no dia, conta o preparo hora a hora, traz a tabela de preços do balcão e da encomenda para levar, e leva a reserva para o WhatsApp.",
     preco: 1290,
     status: "encomenda",
+    destaque: true,
     demo: "/modelos/sabor-e-brasa/",
     imagem: "/img/modelos/1679711246825-1f2bd51b16d0-g.jpg",
     cores: ["#3a1c0f", "#c2410c"],
@@ -163,6 +165,7 @@ window.SITES = [
     descricao: "A tabela de preços aparece num quadro de letras, como os de parede. Cada barbeiro tem a sua cadeira, os seus dias e um botão para marcar direto com ele. Explica como funciona a fila com e sem hora marcada.",
     preco: 1200,
     status: "encomenda",
+    destaque: true,
     demo: "/modelos/navalha-barbearia/",
     imagem: "/img/modelos/1585747860715-2ba37e788b70-g.jpg",
     cores: ["#111827", "#b91c1c"],
@@ -199,6 +202,7 @@ window.SITES = [
     descricao: "A primeira coisa que aparece é a grade de hoje, com a próxima aula e o tempo que falta para ela. Dá para ver os outros dias, conhecer as modalidades e os planos, e pedir uma aula experimental já com o dia e o horário escolhidos.",
     preco: 1200,
     status: "encomenda",
+    destaque: true,
     demo: "/modelos/forca-fit/",
     imagem: "/img/modelos/1689877020200-403d8542d95d-g.jpg",
     cores: ["#052e16", "#65a30d"],
@@ -253,6 +257,7 @@ window.SITES = [
     descricao: "O cliente busca no repertório por música ou artista, filtra por momento (cerimônia, coquetel, festa) e monta o setlist numa folha de papel colada. Escolhe a formação e as horas, vê a estimativa e manda tudo pelo WhatsApp. O exemplo é de um grupo fictício.",
     preco: 1190,
     status: "encomenda",
+    destaque: true,
     demo: "/modelos/trio-sereno/",
     imagem: "/img/modelos/1632054553195-bfd7034fee25-g.jpg",
     cores: ["#121212", "#ff5a3c"],
@@ -271,6 +276,7 @@ window.SITES = [
     descricao: "Tem a lousa da semana, escrita a giz, com o prato de cada dia. O cliente escolhe um kit de 5, 10 ou 20 marmitas e distribui entre os sabores; a barra mostra quantas faltam. Mostra o prazo para o pedido do domingo e a taxa de entrega por bairro. O exemplo é de uma marmitaria fictícia.",
     preco: 1290,
     status: "encomenda",
+    destaque: true,
     demo: "/modelos/panela-da-semana/",
     imagem: "/img/modelos/1543352632-5a4b24e4d2a6-g.jpg",
     cores: ["#2d3a2e", "#d8532f"],
@@ -325,6 +331,7 @@ window.SITES = [
     descricao: "O cliente escolhe o tamanho, um ou dois sabores e a borda, e vê a pizza dividida dentro da caixa. No meio a meio vale o sabor mais caro, como na maioria das pizzarias. Junta várias pizzas no pedido, escolhe a entrega e envia. Tem cardápio com fotos e uma faixa de pizzas em movimento. O exemplo é de uma pizzaria fictícia.",
     preco: 1390,
     status: "encomenda",
+    destaque: true,
     demo: "/modelos/forno-velho/",
     imagem: "/img/modelos/1763647836753-e06fe1f8707b-g.jpg",
     cores: ["#1f1813", "#c0321f"],

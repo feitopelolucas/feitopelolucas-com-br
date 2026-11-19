@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Feito pelo Lucas — sites, aplicativos e jogos</title>
 <meta name="description" content="Modelos de site, aplicativos para celular, programas para computador e jogos. Feitos pelo Lucas, em Campinas.">
@@ -163,6 +164,7 @@
       <div class="filters" id="filters" data-i18n-aria="cat.filtros" aria-label="Filtrar por tipo de negócio"></div>
     </div>
     <div class="grid" id="grid"></div>
+    <div class="mais"><button type="button" class="btn" id="ver-mais" aria-controls="grid" aria-expanded="false" hidden></button></div>
     <p class="empty" id="empty" hidden data-i18n="cat.vazio">Nenhum site nesta categoria no momento.</p>
   </section>
 

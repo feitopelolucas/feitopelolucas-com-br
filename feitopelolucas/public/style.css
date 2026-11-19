@@ -83,6 +83,9 @@ h2{font-size:clamp(2.1rem,4.6vw,3.2rem);margin-bottom:28px}
 .filters sup{font:11px var(--mono);margin-left:2px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:48px 32px;align-items:start}
 @media (max-width:360px){.grid{grid-template-columns:1fr}}
+.mais{text-align:center;margin-top:48px}
+.mais .btn{border:0;font:inherit;font-weight:500;padding:13px 26px}
+.mais .btn[hidden]{display:none}
 .item{display:block;border:0;background:none;padding:0;text-align:left;font:inherit;color:inherit;cursor:pointer}
 .item:focus-visible{outline:2px solid var(--mark);outline-offset:6px}
 .cover{position:relative;aspect-ratio:4/3;overflow:hidden;border:1px solid var(--rule)}
