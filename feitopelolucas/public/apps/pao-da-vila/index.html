@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pão da Vila · Encomendas</title>
+<meta name="description" content="Aplicativo de demonstração: encomendas de padaria com horário de retirada, instalável no celular.">
+<meta name="theme-color" content="#8c3b1f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Pão da Vila">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+  :root{--fundo:#fbf3e6;--papel:#fffaf2;--tijolo:#8c3b1f;--tijolo2:#a94a27;--trigo:#f2c98a;--texto:#2e2018;--suave:#806b5c;--fio:#eedfc8;--verde:#42704a}
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html,body{margin:0;height:100%}
+  body{background:#e7d6bd;color:var(--texto);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+  button,select,input,textarea{font:inherit;color:inherit}
+  button{border:0;background:none;cursor:pointer}
+  :focus-visible{outline:3px solid var(--tijolo);outline-offset:2px}
+  .app{max-width:440px;min-height:100%;margin:0 auto;background:var(--fundo);display:flex;flex-direction:column;box-shadow:0 0 60px -20px rgba(80,40,20,.5)}
+  .demo{background:#000;color:#ddd2c6;font-size:.74rem;text-align:center;padding:6px 12px}
+  .demo a{color:var(--trigo);font-weight:700;text-decoration:none;white-space:nowrap}
+  header{background:var(--tijolo);color:#fff6ea;padding:16px 18px 18px;padding-top:max(16px,env(safe-area-inset-top))}
+  .topo{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .marca{font-family:Georgia,serif;font-size:1.4rem}
+  .marca small{display:block;font-family:system-ui,sans-serif;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#f5c9a8}
+  .instalar{background:var(--trigo);color:var(--tijolo);font-weight:700;font-size:.82rem;padding:8px 14px;border-radius:99px}
+  .status{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:.88rem;color:#ffe7d0}
+  .status i{width:8px;height:8px;border-radius:50%;background:#9fe0a8}
+  .status.fechado i{background:#e8a48a}
+
+  .cats{display:flex;gap:8px;overflow-x:auto;padding:14px 16px 4px;scrollbar-width:none;position:sticky;top:0;background:var(--fundo);z-index:3}
+  .cats button{padding:8px 14px;border-radius:99px;background:var(--papel);border:1px solid var(--fio);font-size:.88rem;font-weight:600;white-space:nowrap}
+  .cats button[aria-pressed="true"]{background:var(--texto);color:var(--fundo);border-color:var(--texto)}
+  main{flex:1;padding:8px 16px 110px}
+  .tela{display:grid;gap:12px}
+  h2.sec{margin:14px 2px 0;font-family:Georgia,serif;font-weight:400;font-size:1.25rem}
+  .sec-nota{margin:-6px 2px 0;font-size:.82rem;color:var(--suave)}
+
+  .prod{background:var(--papel);border:1px solid var(--fio);border-radius:16px;padding:14px 14px 14px 16px;display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:center}
+  .prod h3{margin:0;font-size:1rem}
+  .prod p{margin:0;font-size:.85rem;color:var(--suave);grid-column:1}
+  .prod .preco{font-weight:700;color:var(--tijolo)}
+  .prod .lado{grid-row:1/span 3;grid-column:2;display:grid;justify-items:end;gap:8px}
+  .prod .selo{font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--suave);background:var(--fundo);border-radius:6px;padding:3px 7px;justify-self:start;grid-column:1}
+  .prod.esgotado{opacity:.55}
+  .qtd{display:flex;align-items:center;border:1.5px solid var(--tijolo);border-radius:99px;overflow:hidden}
+  .qtd button{width:36px;height:36px;font-size:1.2rem;font-weight:700;color:var(--tijolo)}
+  .qtd span{min-width:24px;text-align:center;font-weight:700}
+  .add{background:var(--tijolo);color:#fff;border-radius:99px;padding:8px 16px;font-weight:700;font-size:.88rem}
+
+  .flutua{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(70px + env(safe-area-inset-bottom));width:calc(100% - 32px);max-width:408px;background:var(--texto);color:#fff;border-radius:14px;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;font-weight:700;z-index:6;box-shadow:0 14px 30px -14px rgba(0,0,0,.6)}
+  .flutua small{display:block;font-weight:400;color:#cdbcab;font-size:.8rem}
+
+  .caixa{background:var(--papel);border:1px solid var(--fio);border-radius:16px;padding:16px}
+  .caixa h3{margin:0 0 10px;font-size:1rem}
+  .linha{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-top:1px dashed var(--fio);font-size:.94rem}
+  .linha:first-of-type{border-top:0}
+  .linha.total{font-weight:700;font-size:1.05rem;border-top:1.5px solid var(--texto);margin-top:6px;padding-top:12px}
+  .campo{display:grid;gap:6px;margin-top:12px;font-size:.88rem;font-weight:600}
+  .campo select,.campo input,.campo textarea{width:100%;padding:12px;border-radius:12px;border:1px solid var(--fio);background:#fff;font-weight:400}
+  .duas{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .aviso{font-size:.84rem;color:var(--suave);margin:10px 0 0}
+  .erro{color:#a2321c;font-size:.88rem;font-weight:600;margin:10px 0 0}
+  .btn{display:block;width:100%;text-align:center;padding:15px 18px;border-radius:14px;font-weight:700;background:var(--verde);color:#fff;margin-top:14px}
+  .btn.claro{background:transparent;color:var(--tijolo);border:1.5px solid var(--tijolo)}
+  .vazio{text-align:center;color:var(--suave);padding:40px 16px}
+  .vazio b{display:block;color:var(--texto);font-size:1.05rem;margin-bottom:4px}
+
+  .ped{background:var(--papel);border:1px solid var(--fio);border-radius:16px;padding:14px 16px;display:grid;gap:6px}
+  .ped .cab{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .ped b{font-size:1rem}
+  .ped .est{font-size:.76rem;font-weight:700;padding:3px 8px;border-radius:99px;background:#e6efdf;color:var(--verde)}
+  .ped .est.passado{background:var(--fundo);color:var(--suave)}
+  .ped p{margin:0;font-size:.86rem;color:var(--suave)}
+  .ped button{justify-self:start;font-weight:700;color:var(--tijolo);font-size:.9rem;padding:4px 0}
+
+  nav.abas{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:440px;background:var(--papel);border-top:1px solid var(--fio);display:grid;grid-template-columns:repeat(3,1fr);padding-bottom:env(safe-area-inset-bottom);z-index:5}
+  nav.abas button{padding:10px 0 12px;display:grid;justify-items:center;gap:3px;font-size:.74rem;color:var(--suave);font-weight:600;position:relative}
+  nav.abas svg{width:24px;height:24px}
+  nav.abas button[aria-selected="true"]{color:var(--tijolo)}
+  .badge{position:absolute;top:4px;left:calc(50% + 6px);background:var(--tijolo);color:#fff;font-size:.68rem;min-width:18px;height:18px;border-radius:9px;display:grid;place-items:center;padding:0 5px}
+  .toast{position:fixed;left:50%;bottom:150px;transform:translate(-50%,20px);background:var(--texto);color:#fff;padding:12px 18px;border-radius:12px;font-size:.92rem;opacity:0;transition:.25s;pointer-events:none;z-index:30;max-width:90%;text-align:center}
+  .toast.on{opacity:1;transform:translate(-50%,0)}
+  .dica{background:#fde6c9;color:#6b3a12;border-radius:14px;padding:12px 14px;font-size:.86rem;margin-top:12px}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="demo">Aplicativo de demonstração. A padaria é fictícia e os pedidos vão para o WhatsApp do Lucas. <a class="wa" data-msg="Olá, Lucas! Vi o aplicativo de encomendas (Pão da Vila) e queria um assim para o meu negócio.">Quero um assim →</a></div>
+  <header>
+    <div class="topo">
+      <div class="marca"><small>Encomendas</small>Pão da Vila</div>
+      <button class="instalar" id="instalar" hidden>Instalar</button>
+    </div>
+    <div class="status" id="status"><i></i><span></span></div>
+  </header>
+
+  <section id="t-menu">
+    <div class="cats" id="cats"></div>
+    <main><div class="tela" id="menu"></div><div class="dica" id="dica-ios" hidden>Para instalar no iPhone: toque em <b>Compartilhar</b> e depois em <b>Adicionar à Tela de Início</b>.</div></main>
+  </section>
+
+  <section id="t-sacola" hidden>
+    <main><div class="tela" id="sacola"></div></main>
+  </section>
+
+  <section id="t-pedidos" hidden>
+    <main><div class="tela" id="pedidos"></div></main>
+  </section>
+
+  <button class="flutua" id="flutua" hidden><span><small id="f-qtd"></small>Ver sacola</span><span id="f-total"></span></button>
+
+  <nav class="abas" role="tablist">
+    <button role="tab" aria-selected="true" data-t="t-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 14c0-4.4 3.6-8 8-8s8 3.6 8 8c0 1.3-.8 2-2 2H6c-1.2 0-2-.7-2-2z"/><path d="M9 10c.6 1.5.6 3.5 0 5M15 10c.6 1.5.6 3.5 0 5"/><path d="M4 19h16"/></svg>Cardápio</button>
+    <button role="tab" aria-selected="false" data-t="t-sacola"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>Sacola<span class="badge" id="badge" hidden></span></button>
+    <button role="tab" aria-selected="false" data-t="t-pedidos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="3.5" width="14" height="17" rx="2"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg>Pedidos</button>
+  </nav>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function () {
+  var WHATSAPP = "5519996515563";
+  var CHAVE = "pao-da-vila";
+  var $ = function (s) { return document.querySelector(s); };
+  var brl = function (n) { return n.toLocaleString("pt-BR", { style: "currency", currency: "BRL" }); };
+  var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
+
+  // Para trocar um preço, um item ou a antecedência, basta mexer nesta lista.
+  // antecedencia = quantos dias antes o pedido precisa ser feito.
+  var PRODUTOS = [
+    { id: "frances", cat: "Pães", nome: "Pão francês", desc: "Pacote com 10 unidades, saindo do forno na hora marcada.", preco: 9, antecedencia: 0 },
+    { id: "natural", cat: "Pães", nome: "Pão de fermentação natural", desc: "Casca grossa e miolo úmido. Cerca de 700 g.", preco: 24, antecedencia: 1 },
+    { id: "forma", cat: "Pães", nome: "Pão de forma integral", desc: "Fatiado, sem conservantes. Dura 4 dias fora da geladeira.", preco: 15, antecedencia: 0 },
+    { id: "baguete", cat: "Pães", nome: "Baguete", desc: "Unidade.", preco: 8.5, antecedencia: 0, esgotado: true },
+    { id: "fuba", cat: "Bolos", nome: "Bolo de fubá cremoso", desc: "Forma de 24 cm, serve 10 fatias.", preco: 34, antecedencia: 1 },
+    { id: "cenoura", cat: "Bolos", nome: "Bolo de cenoura com chocolate", desc: "Forma de 24 cm, cobertura de brigadeiro mole.", preco: 39, antecedencia: 1 },
+    { id: "laranja", cat: "Bolos", nome: "Bolo de laranja", desc: "Com calda de laranja. Forma de 22 cm.", preco: 31, antecedencia: 1 },
+    { id: "coxinha", cat: "Festa", nome: "Mini coxinha", desc: "Cento, frita e entregue quentinha.", preco: 85, antecedencia: 2 },
+    { id: "paoqueijo", cat: "Festa", nome: "Mini pão de queijo", desc: "Cento, assado ou congelado para você assar.", preco: 62, antecedencia: 2 },
+    { id: "docinhos", cat: "Festa", nome: "Docinhos sortidos", desc: "Cento: brigadeiro, beijinho e casadinho.", preco: 115, antecedencia: 2 },
+  ];
+  // Dia da semana (0 = domingo): [abre, fecha]. null = fechado.
+  var HORARIO = { 0: [7, 12], 1: null, 2: [6, 19], 3: [6, 19], 4: [6, 19], 5: [6, 19], 6: [6, 18] };
+  var DIAS = ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"];
+
+  function ler() { try { return JSON.parse(localStorage.getItem(CHAVE)) || {}; } catch (e) { return {}; } }
+  var st = ler();
+  st.sacola = st.sacola || {};
+  st.pedidos = st.pedidos || [];
+  st.cliente = st.cliente || "";
+  function salvar() { try { localStorage.setItem(CHAVE, JSON.stringify(st)); } catch (e) {} }
+
+  var catAtual = "Pães";
+  var prod = function (id) { return PRODUTOS.filter(function (p) { return p.id === id; })[0]; };
+  function itens() { return Object.keys(st.sacola).filter(function (id) { return st.sacola[id] > 0 && prod(id); }).map(function (id) { return { p: prod(id), q: st.sacola[id] }; }); }
+  function total() { return itens().reduce(function (s, i) { return s + i.p.preco * i.q; }, 0); }
+  function qtdTotal() { return itens().reduce(function (s, i) { return s + i.q; }, 0); }
+
+  function statusLoja() {
+    var d = new Date(), h = HORARIO[d.getDay()], agora = d.getHours() + d.getMinutes() / 60;
+    var el = $("#status");
+    var aberto = h && agora >= h[0] && agora < h[1];
+    el.classList.toggle("fechado", !aberto);
+    el.querySelector("span").textContent = aberto ? "Aberto agora · fecha às " + h[1] + "h" : "Fechado agora · você já pode encomendar";
+  }
+
+  function desenharCats() {
+    var cats = PRODUTOS.map(function (p) { return p.cat; }).filter(function (c, i, a) { return a.indexOf(c) === i; });
+    $("#cats").innerHTML = cats.map(function (c) { return '<button aria-pressed="' + (c === catAtual) + '" data-c="' + c + '">' + c + "</button>"; }).join("");
+  }
+  $("#cats").addEventListener("click", function (e) {
+    var b = e.target.closest("button"); if (!b) return;
+    catAtual = b.dataset.c; desenharCats(); desenharMenu();
+  });
+
+  function controle(p) {
+    var q = st.sacola[p.id] || 0;
+    if (p.esgotado) return '<span class="selo">Acabou hoje</span>';
+    if (!q) return '<button class="add" data-mais="' + p.id + '">Adicionar</button>';
+    return '<div class="qtd"><button data-menos="' + p.id + '" aria-label="Menos">−</button><span>' + q + '</span><button data-mais="' + p.id + '" aria-label="Mais">+</button></div>';
+  }
+
+  function desenharMenu() {
+    var lista = PRODUTOS.filter(function (p) { return p.cat === catAtual; });
+    var nota = { "Pães": "Pão de fermentação natural: pedir com 1 dia de antecedência.", "Bolos": "Bolos: pedir com 1 dia de antecedência.", "Festa": "Salgados e doces de festa: pedir com 2 dias de antecedência." }[catAtual];
+    $("#menu").innerHTML = '<h2 class="sec">' + catAtual + '</h2><p class="sec-nota">' + nota + "</p>" + lista.map(function (p) {
+      return '<div class="prod' + (p.esgotado ? " esgotado" : "") + '"><h3>' + esc(p.nome) + "</h3><p>" + esc(p.desc) + '</p><span class="preco">' + brl(p.preco) + '</span><div class="lado">' + controle(p) + "</div></div>";
+    }).join("");
+    atualizarRodape();
+  }
+
+  function atualizarRodape() {
+    var n = qtdTotal();
+    $("#badge").hidden = !n; $("#badge").textContent = n;
+    var naSacola = !$("#t-sacola").hidden || !$("#t-pedidos").hidden;
+    $("#flutua").hidden = !n || naSacola;
+    $("#f-qtd").textContent = n + (n === 1 ? " item" : " itens");
+    $("#f-total").textContent = brl(total());
+  }
+
+  document.addEventListener("click", function (e) {
+    var mais = e.target.closest("[data-mais]"), menos = e.target.closest("[data-menos]");
+    if (!mais && !menos) return;
+    var id = (mais || menos).dataset[mais ? "mais" : "menos"];
+    st.sacola[id] = Math.max(0, (st.sacola[id] || 0) + (mais ? 1 : -1));
+    salvar();
+    if (!$("#t-menu").hidden) desenharMenu(); else desenharSacola();
+  });
+
+  // Datas de retirada possíveis, respeitando a antecedência e os dias fechados.
+  function datasPossiveis() {
+    var ant = Math.max.apply(null, itens().map(function (i) { return i.p.antecedencia; }).concat([0]));
+    var out = [], d = new Date(); d.setHours(0, 0, 0, 0);
+    for (var i = 0; out.length < 7 && i < 14; i++) {
+      var dia = new Date(d.getTime() + i * 86400000), h = HORARIO[dia.getDay()];
+      if (i < ant || !h) continue;
+      if (i === 0 && new Date().getHours() + 1 >= h[1]) continue;
+      out.push(dia);
+    }
+    return out;
+  }
+  function horasPossiveis(dia) {
+    var h = HORARIO[dia.getDay()], out = [];
+    var hoje = dia.toDateString() === new Date().toDateString();
+    for (var x = h[0]; x < h[1]; x++) { if (!hoje || x > new Date().getHours()) out.push(x); }
+    return out;
+  }
+  function rotuloDia(dia) {
+    var i = Math.round((dia - new Date(new Date().toDateString())) / 86400000);
+    var nome = i === 0 ? "Hoje" : i === 1 ? "Amanhã" : DIAS[dia.getDay()].replace(/^./, function (c) { return c.toUpperCase(); });
+    return nome + ", " + dia.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" });
+  }
+
+  function desenharSacola() {
+    var it = itens();
+    if (!it.length) {
+      $("#sacola").innerHTML = '<div class="vazio"><b>Sua sacola está vazia</b>Escolha pães, bolos ou salgados no cardápio.</div><button class="btn claro" data-ir="t-menu">Ver o cardápio</button>';
+      atualizarRodape(); return;
+    }
+    var datas = datasPossiveis();
+    var ant = Math.max.apply(null, it.map(function (i) { return i.p.antecedencia; }));
+    $("#sacola").innerHTML =
+      '<h2 class="sec">Sua sacola</h2><div class="caixa">' +
+      it.map(function (i) {
+        return '<div class="linha"><span>' + esc(i.p.nome) + '</span><div class="qtd"><button data-menos="' + i.p.id + '" aria-label="Menos">−</button><span>' + i.q + '</span><button data-mais="' + i.p.id + '" aria-label="Mais">+</button></div></div>';
+      }).join("") +
+      '<div class="linha total"><span>Total</span><span>' + brl(total()) + "</span></div></div>" +
+      '<div class="caixa"><h3>Retirada no balcão</h3>' +
+      (ant ? '<p class="aviso" style="margin-top:0">Por causa dos itens escolhidos, a retirada pode ser a partir de ' + (ant === 1 ? "amanhã" : ant + " dias") + ".</p>" : "") +
+      '<div class="duas"><label class="campo">Dia<select id="dia">' + datas.map(function (d, i) { return '<option value="' + i + '">' + rotuloDia(d) + "</option>"; }).join("") + '</select></label>' +
+      '<label class="campo">Horário<select id="hora"></select></label></div>' +
+      '<label class="campo">Seu nome<input id="cli" autocomplete="name" value="' + esc(st.cliente) + '" placeholder="Para chamar no balcão"></label>' +
+      '<label class="campo">Observação<textarea id="obs" rows="2" placeholder="Ex.: bolo sem cobertura, pão bem assado"></textarea></label>' +
+      '<p class="aviso">A padaria confirma o pedido pelo WhatsApp. O pagamento é feito na retirada.</p><p class="erro" id="erro" role="alert"></p>' +
+      '<button class="btn" id="enviar">Enviar pedido pelo WhatsApp</button></div>';
+    function horas() {
+      var d = datas[$("#dia").value];
+      $("#hora").innerHTML = horasPossiveis(d).map(function (h) { return '<option value="' + h + '">' + h + "h</option>"; }).join("");
+    }
+    $("#dia").addEventListener("change", horas); horas();
+    $("#enviar").addEventListener("click", enviar);
+    function enviar() {
+      var nome = $("#cli").value.trim();
+      if (!nome) { $("#erro").textContent = "Escreva seu nome para a padaria saber de quem é o pedido."; $("#cli").focus(); return; }
+      var d = datas[$("#dia").value], h = $("#hora").value, obs = $("#obs").value.trim();
+      var numero = "PV" + String(Date.now()).slice(-4);
+      var linhas = it.map(function (i) { return "• " + i.q + "x " + i.p.nome + " — " + brl(i.p.preco * i.q); });
+      var msg = "Olá, Pão da Vila! Quero fazer uma encomenda (pedido " + numero + "):\n\n" + linhas.join("\n") +
+        "\n\nTotal: " + brl(total()) + "\nRetirada: " + rotuloDia(d) + ", às " + h + "h\nNome: " + nome + (obs ? "\nObservação: " + obs : "");
+      st.pedidos.unshift({ n: numero, itens: it.map(function (i) { return [i.p.id, i.q]; }), total: total(), dia: d.getTime(), hora: +h, feito: Date.now() });
+      st.cliente = nome; st.sacola = {}; salvar();
+      window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
+      ir("t-pedidos"); aviso("Pedido " + numero + " enviado.");
+    }
+    atualizarRodape();
+  }
+
+  function desenharPedidos() {
+    if (!st.pedidos.length) {
+      $("#pedidos").innerHTML = '<div class="vazio"><b>Nenhum pedido ainda</b>Os pedidos que você enviar aparecem aqui, para repetir com um toque.</div>';
+      return;
+    }
+    var hoje = new Date(new Date().toDateString()).getTime();
+    $("#pedidos").innerHTML = '<h2 class="sec">Seus pedidos</h2>' + st.pedidos.map(function (p, i) {
+      var passado = p.dia < hoje;
+      var desc = p.itens.map(function (x) { var pr = prod(x[0]); return pr ? x[1] + "x " + pr.nome : ""; }).filter(Boolean).join(", ");
+      return '<div class="ped"><div class="cab"><b>Pedido ' + p.n + '</b><span class="est' + (passado ? " passado" : "") + '">' + (passado ? "Retirado" : "Aguardando retirada") + "</span></div>" +
+        "<p>" + esc(desc) + "</p><p>Retirada: " + rotuloDia(new Date(p.dia)) + ", às " + p.hora + "h · " + brl(p.total) + '</p><button data-repetir="' + i + '">Pedir de novo</button></div>';
+    }).join("");
+  }
+  $("#pedidos").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-repetir]"); if (!b) return;
+    st.pedidos[b.dataset.repetir].itens.forEach(function (x) { var p = prod(x[0]); if (p && !p.esgotado) st.sacola[x[0]] = x[1]; });
+    salvar(); ir("t-sacola"); aviso("Itens de volta na sacola.");
+  });
+
+  function ir(id) {
+    ["t-menu", "t-sacola", "t-pedidos"].forEach(function (t) { $("#" + t).hidden = t !== id; });
+    document.querySelectorAll("nav.abas button").forEach(function (b) { b.setAttribute("aria-selected", b.dataset.t === id); });
+    if (id === "t-menu") desenharMenu();
+    if (id === "t-sacola") desenharSacola();
+    if (id === "t-pedidos") desenharPedidos();
+    atualizarRodape(); window.scrollTo(0, 0);
+  }
+  document.querySelectorAll("nav.abas button").forEach(function (b) { b.addEventListener("click", function () { ir(b.dataset.t); }); });
+  $("#flutua").addEventListener("click", function () { ir("t-sacola"); });
+  document.addEventListener("click", function (e) { var b = e.target.closest("[data-ir]"); if (b) ir(b.dataset.ir); });
+
+  function aviso(t) {
+    var el = $("#toast"); el.textContent = t; el.classList.add("on");
+    clearTimeout(aviso.t); aviso.t = setTimeout(function () { el.classList.remove("on"); }, 2600);
+  }
+
+  document.querySelectorAll(".wa").forEach(function (a) {
+    a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(a.dataset.msg); a.target = "_blank"; a.rel = "noopener";
+  });
+
+  var pedido = null;
+  window.addEventListener("beforeinstallprompt", function (e) { e.preventDefault(); pedido = e; $("#instalar").hidden = false; });
+  $("#instalar").addEventListener("click", function () {
+    if (!pedido) return;
+    pedido.prompt(); pedido.userChoice.finally(function () { pedido = null; $("#instalar").hidden = true; });
+  });
+  window.addEventListener("appinstalled", function () { $("#instalar").hidden = true; aviso("Aplicativo instalado na tela inicial."); });
+  var instalado = window.matchMedia("(display-mode: standalone)").matches || navigator.standalone;
+  if (/iphone|ipad|ipod/i.test(navigator.userAgent) && !instalado) $("#dica-ios").hidden = false;
+  if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(function () {});
+
+  statusLoja(); desenharCats(); desenharMenu();
+})();
+</script>
+</body>
+</html>

@@ -45,7 +45,6 @@ $CONFIG = [
  *    preco       valor em reais (número)
  *    precoAntigo (opcional) valor riscado, para promoções
  *    status      "disponivel", "encomenda" ou "vendido"
- *    exclusivo   true = vendido uma única vez
  *    demo        (opcional) link da demonstração
  *    imagem      (opcional) print do site, ex.: "/img/restaurante.jpg"
  *    cores       (opcional) cores da capa quando não há imagem
@@ -61,7 +60,6 @@ $SITES = [
         'descricao' => 'Feito para quem divulga no Instagram e fecha negócio no WhatsApp. Abre rápido no celular, tem um botão de WhatsApp em cada serviço, com a mensagem já escrita, e um botão fixo no canto da tela. O exemplo é de uma empresa fictícia de higienização de estofados.',
         'preco' => 1200,
         'status' => 'encomenda',
-        'exclusivo' => false,
         'demo' => '/modelos/brisa-higienizacao/',
         'imagem' => '',
         'cores' => ['#1F6FEB'],
@@ -75,7 +73,6 @@ $SITES = [
         'descricao' => 'Loja para quem vende poucos produtos e quer receber pagamentos sem complicação. Tem catálogo, página de cada produto, carrinho que fica salvo no celular, produtos em falta e telas de pedido recebido e de pagamento cancelado. Na versão de verdade, os pedidos ficam guardados num banco de dados e o pagamento é feito pela Stripe. A demonstração simula o pagamento e usa uma loja fictícia de vasos.',
         'preco' => 1490,
         'status' => 'encomenda',
-        'exclusivo' => false,
         'demo' => '/modelos/casa-verde-vasos/',
         'imagem' => '',
         'cores' => ['#2f5d46'],
@@ -89,7 +86,6 @@ $SITES = [
         'descricao' => 'Uma página com duas abas. No cardápio, o cliente escolhe os itens e envia o pedido já escrito para o WhatsApp, com o total calculado e os itens indisponíveis no dia. Na aba de reservas, informa nome, data, horário e número de pessoas; a página confere os dias e horários aceitos, o máximo de pessoas e a antecedência mínima antes de enviar. Para mudar um preço ou um horário, basta editar uma linha. O exemplo é de uma lanchonete fictícia.',
         'preco' => 1200,
         'status' => 'encomenda',
-        'exclusivo' => false,
         'demo' => '/modelos/cantinho-do-sabor/',
         'imagem' => '',
         'cores' => ['#7a1f1f'],
@@ -103,7 +99,6 @@ $SITES = [
         'descricao' => 'Feita para lanchonetes que recebem pedidos de entrega pelo WhatsApp. O cliente monta o pedido com os botões de mais e menos, vê o total no carrinho fixo e, ao finalizar, informa nome, endereço, bairro, forma de pagamento e troco. O pedido chega escrito, uma informação por linha. Todo o cardápio e os dados da loja ficam num único bloco fácil de editar. O exemplo é de uma lanchonete fictícia.',
         'preco' => 1200,
         'status' => 'encomenda',
-        'exclusivo' => false,
         'demo' => '/modelos/esquina-do-lanche/',
         'imagem' => '',
         'cores' => ['#2b211b'],
@@ -117,7 +112,6 @@ $SITES = [
         'descricao' => 'Feito para casas de carne, churrascarias e restaurantes com um prato principal forte. Mostra o que está no fogo no dia, conta o preparo hora a hora, traz a tabela de preços do balcão e da encomenda para levar, e leva a reserva para o WhatsApp.',
         'preco' => 1290,
         'status' => 'encomenda',
-        'exclusivo' => true,
         'demo' => '/modelos/sabor-e-brasa/',
         'imagem' => '',
         'cores' => ['#3a1c0f', '#c2410c'],
@@ -131,7 +125,6 @@ $SITES = [
         'descricao' => 'Mostra logo de cara quem atende hoje e traz um quadro semanal com os dias de cada especialidade. Tem a lista de profissionais com registro, as orientações para antes da consulta, os convênios e a marcação pelo WhatsApp.',
         'preco' => 1490,
         'status' => 'encomenda',
-        'exclusivo' => true,
         'demo' => '/modelos/clinica-vida/',
         'imagem' => '',
         'cores' => ['#0c4a6e', '#14b8a6'],
@@ -145,7 +138,6 @@ $SITES = [
         'descricao' => 'Organizado como um documento jurídico: as áreas de atuação aparecem como artigos numerados, os sócios assinam a página e os textos do escritório ficam numa lista de escritos. Diz com clareza o que o escritório faz e o que não faz.',
         'preco' => 1690,
         'status' => 'encomenda',
-        'exclusivo' => true,
         'demo' => '/modelos/lex-advocacia/',
         'imagem' => '',
         'cores' => ['#1c1917', '#a16207'],
@@ -159,7 +151,6 @@ $SITES = [
         'descricao' => 'A tabela de preços aparece num quadro de letras, como os de parede. Cada barbeiro tem a sua cadeira, os seus dias e um botão para marcar direto com ele. Explica como funciona a fila com e sem hora marcada.',
         'preco' => 1200,
         'status' => 'encomenda',
-        'exclusivo' => false,
         'demo' => '/modelos/navalha-barbearia/',
         'imagem' => '',
         'cores' => ['#111827', '#b91c1c'],
@@ -173,7 +164,6 @@ $SITES = [
         'descricao' => 'Os trabalhos aparecem como tiras de filme, com as fotos escolhidas pelo cliente marcadas a lápis. Cada foto abre ampliada. Tem a tabela de valores e o contato para consultar datas.',
         'preco' => 1200,
         'status' => 'encomenda',
-        'exclusivo' => false,
         'demo' => '/modelos/lente-portfolio/',
         'imagem' => '',
         'cores' => ['#27272a', '#71717a'],
@@ -187,7 +177,6 @@ $SITES = [
         'descricao' => 'A primeira coisa que aparece é a grade de hoje, com a próxima aula e o tempo que falta para ela. Dá para ver os outros dias, conhecer as modalidades e os planos, e pedir uma aula experimental já com o dia e o horário escolhidos.',
         'preco' => 1200,
         'status' => 'encomenda',
-        'exclusivo' => true,
         'demo' => '/modelos/forca-fit/',
         'imagem' => '',
         'cores' => ['#052e16', '#65a30d'],
@@ -434,11 +423,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $atual) {
  * ------------------------------------------------------------------- */
 
 $titulo = $atual
-    ? $atual['nome'] . ' — site à venda · Feito pelo Lucas'
+    ? $atual['nome'] . ' — modelo de site · Feito pelo Lucas'
     : 'Feito pelo Lucas — sites, aplicativos e jogos';
 $descricao = $atual
     ? ($atual['resumo'] ?? '')
-    : 'Sites prontos à venda, aplicativos para celular, programas para computador e jogos. Feitos pelo Lucas.';
+    : 'Modelos de site, aplicativos para celular, programas para computador e jogos. Feitos pelo Lucas, em Campinas.';
 $canonica = $CONFIG['dominio'] . '/' . ($atual ? '?site=' . rawurlencode($atual['id']) : '');
 $ano = date('Y');
 
@@ -499,7 +488,7 @@ $ano = date('Y');
   <a class="name" href="./">Feito pelo Lucas</a>
   <nav>
     <a href="#servicos">O que eu faço</a>
-    <a href="#catalogo">Sites à venda</a>
+    <a href="#catalogo">Modelos de site</a>
     <a href="#contato">Contato</a>
   </nav>
 </header>
@@ -510,7 +499,7 @@ $ano = date('Y');
     <div class="intro-main">
       <h1>Eu faço sites, aplicativos <br>e <i>jogos</i>.</h1>
       <div class="intro-text">
-        <p>Sou o Lucas. Desenvolvo sites, aplicativos para celular, programas para computador e jogos. Alguns sites já estão prontos e à venda nesta página; os demais projetos são feitos sob medida, de acordo com a necessidade do seu negócio.</p>
+        <p>Sou o Lucas, de Campinas (SP), e mexo com computador e programação desde os 15 anos. Desenvolvo sites, aplicativos para celular, programas para computador e jogos. Nesta página há modelos de site para você escolher; os demais projetos são feitos sob medida, de acordo com a necessidade do seu negócio.</p>
         <p class="meta">Todos os modelos podem ser feitos com o seu nome, as suas cores e as suas informações.</p>
       </div>
     </div>
@@ -534,6 +523,50 @@ $ano = date('Y');
   </section>
 
   <!-- ===================== FOSSIL CROWN ===================== -->
+
+  <section id="exemplos" class="wrap examples">
+    <h2>Aplicativos e programas de exemplo</h2>
+    <p class="sub">Seis demonstrações que funcionam de verdade. Os negócios são fictícios e o que você digitar fica só no seu aparelho.</p>
+    <div class="ex-grupo">
+      <h3>Aplicativos para celular</h3>
+      <p class="meta">Abra no celular e instale na tela inicial, sem loja de aplicativos.</p>
+      <a class="ex" href="/apps/cafe-do-largo/" target="_blank" rel="noopener">
+        <img src="/apps/cafe-do-largo/icon.svg" alt="" width="48" height="48" loading="lazy">
+        <span><b>Café do Largo</b><span>Cartão fidelidade de uma cafeteria: o cliente junta selos a cada café e ganha o próximo.</span></span>
+        <span class="ex-abrir">Abrir ↗</span>
+      </a>
+      <a class="ex" href="/apps/pao-da-vila/" target="_blank" rel="noopener">
+        <img src="/apps/pao-da-vila/icon.svg" alt="" width="48" height="48" loading="lazy">
+        <span><b>Pão da Vila</b><span>Encomendas de padaria com horário de retirada, antecedência por produto e pedido pelo WhatsApp.</span></span>
+        <span class="ex-abrir">Abrir ↗</span>
+      </a>
+      <a class="ex" href="/apps/cozinha-em-dia/" target="_blank" rel="noopener">
+        <img src="/apps/cozinha-em-dia/icon.svg" alt="" width="48" height="48" loading="lazy">
+        <span><b>Cozinha em Dia</b><span>Rotina da equipe de uma cozinha: checklists, temperatura das geladeiras e recados de turno.</span></span>
+        <span class="ex-abrir">Abrir ↗</span>
+      </a>
+    </div>
+    <div class="ex-grupo">
+      <h3>Programas para computador</h3>
+      <p class="meta">Demonstrações no navegador. A versão de verdade é instalada no Windows.</p>
+      <a class="ex" href="/programas/agenda-consultorio/" target="_blank" rel="noopener">
+        <img src="/programas/agenda-consultorio/icone.svg" alt="" width="48" height="48" loading="lazy">
+        <span><b>Agenda Ipê</b><span>Agenda de consultório: horários por profissional, ficha do paciente e lembretes da véspera.</span></span>
+        <span class="ex-abrir">Abrir ↗</span>
+      </a>
+      <a class="ex" href="/programas/estoque/" target="_blank" rel="noopener">
+        <img src="/programas/estoque/icone.svg" alt="" width="48" height="48" loading="lazy">
+        <span><b>Estoque Fácil</b><span>Controle de estoque: entradas e saídas, estoque mínimo, lista de compras e relatório.</span></span>
+        <span class="ex-abrir">Abrir ↗</span>
+      </a>
+      <a class="ex" href="/programas/caixa/" target="_blank" rel="noopener">
+        <img src="/programas/caixa/icone.svg" alt="" width="48" height="48" loading="lazy">
+        <span><b>Caixa Certo</b><span>Frente de caixa com código de barras, troco, fiado na caderneta e fechamento do dia.</span></span>
+        <span class="ex-abrir">Abrir ↗</span>
+      </a>
+    </div>
+  </section>
+
   <section class="wrap showcase">
     <a class="showcase-img" href="https://fossilcrown.com" target="_blank" rel="noopener">
       <img src="/img/fossilcrown.png" alt="Capa do jogo Fossil Crown, com dinossauros num rancho e um vulcão ao fundo" width="920" height="430" loading="lazy">
@@ -552,7 +585,7 @@ $ano = date('Y');
   <section id="catalogo" class="wrap catalog">
     <div class="catalog-head">
       <div>
-        <h2>Sites à venda</h2>
+        <h2>Modelos de site</h2>
         <p class="sub">Escolha um modelo e eu faço o seu com o seu nome, as suas cores, as suas fotos e os seus textos, publicado no seu endereço.</p>
       </div>
       <nav class="filters" aria-label="Filtrar por tipo de negócio">
@@ -571,7 +604,7 @@ $ano = date('Y');
           <span class="price"><?= vendido($s) ? '—' : precoHtml($s) ?></span>
         </div>
         <p><?= e($s['resumo']) ?></p>
-        <p class="meta"><?= e($s['categoria']) ?><?= !empty($s['exclusivo']) ? ' · exclusivo' : '' ?></p>
+        <p class="meta"><?= e($s['categoria']) ?></p>
       </a>
       <?php endforeach; ?>
     </div>
@@ -647,7 +680,7 @@ $ano = date('Y');
   <a class="modal-close" href="<?= e(url(['categoria' => $categoriaAtual], 'catalogo')) ?>" aria-label="Fechar">Fechar</a>
   <div class="modal-media"><?= capa($atual) ?><?= selo($atual) ?></div>
   <div class="modal-body">
-    <p class="meta"><?= e($atual['categoria']) ?><?= !empty($atual['exclusivo']) ? ' · exclusivo: vendido uma única vez' : '' ?></p>
+    <p class="meta"><?= e($atual['categoria']) ?></p>
     <h3 id="m-title"><?= e($atual['nome']) ?></h3>
     <p><?= e($atual['descricao'] ?: $atual['resumo']) ?></p>
 

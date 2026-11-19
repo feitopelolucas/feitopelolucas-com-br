@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cozinha em Dia · Rotina da equipe</title>
+<meta name="description" content="Aplicativo de demonstração: checklists, temperaturas e recados de turno para a equipe de uma cozinha.">
+<meta name="theme-color" content="#173b33">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Cozinha em Dia">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+  :root{--fundo:#eef2ef;--papel:#fff;--verde:#173b33;--verde2:#245a4d;--ambar:#f0a830;--texto:#15241f;--suave:#61756d;--fio:#dbe4df;--ok:#2f7d5b;--ruim:#c0392b;--ruim-f:#fbe7e4}
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html,body{margin:0;height:100%}
+  body{background:#cfdad4;color:var(--texto);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+  button,select,input,textarea{font:inherit;color:inherit}
+  button{border:0;background:none;cursor:pointer}
+  :focus-visible{outline:3px solid var(--ambar);outline-offset:2px}
+  .app{max-width:440px;min-height:100%;margin:0 auto;background:var(--fundo);display:flex;flex-direction:column;box-shadow:0 0 60px -20px rgba(10,40,30,.5)}
+  .demo{background:#000;color:#d3ddd8;font-size:.74rem;text-align:center;padding:6px 12px}
+  .demo a{color:var(--ambar);font-weight:700;text-decoration:none;white-space:nowrap}
+  header{background:var(--verde);color:#eaf3ef;padding:16px 18px 18px;padding-top:max(16px,env(safe-area-inset-top))}
+  .topo{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .marca{font-weight:800;font-size:1.2rem;letter-spacing:-.01em}
+  .marca small{display:block;font-weight:600;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#9cc2b5}
+  .quem{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border-radius:99px;padding:5px 12px 5px 5px;font-size:.85rem;font-weight:600}
+  .av{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:.75rem;font-weight:800;color:#fff;flex:none}
+  .data{margin:14px 0 0;font-size:.9rem;color:#bcd5cc}
+  .instalar{background:var(--ambar);color:var(--verde);font-weight:700;font-size:.8rem;padding:7px 12px;border-radius:99px}
+
+  main{flex:1;padding:16px 16px 100px}
+  .tela{display:grid;gap:14px}
+  .bloco{background:var(--papel);border:1px solid var(--fio);border-radius:16px;overflow:hidden}
+  .bloco-cab{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px 10px}
+  .bloco-cab h2{margin:0;font-size:1.02rem}
+  .bloco-cab small{color:var(--suave);font-size:.8rem;display:block;font-weight:400}
+  .anel{width:44px;height:44px;flex:none}
+  .tarefa{display:flex;align-items:center;gap:12px;padding:12px 16px;border-top:1px solid var(--fio);width:100%;text-align:left}
+  .tarefa .cx{width:26px;height:26px;border-radius:8px;border:2px solid #b7c7c0;flex:none;display:grid;place-items:center;color:#fff}
+  .tarefa.feita .cx{background:var(--ok);border-color:var(--ok)}
+  .tarefa .cx svg{width:16px;height:16px}
+  .tarefa span{flex:1;font-size:.95rem}
+  .tarefa.feita span:not(.cx){color:var(--suave);text-decoration:line-through;text-decoration-color:#b7c7c0}
+  .tarefa small{font-size:.74rem;color:var(--suave);white-space:nowrap}
+
+  .temp{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:14px 16px;border-top:1px solid var(--fio);align-items:center}
+  .temp b{font-size:.95rem}
+  .temp .faixa{font-size:.78rem;color:var(--suave)}
+  .temp .val{grid-row:1/span 2;grid-column:2;font-size:1.4rem;font-weight:800;font-variant-numeric:tabular-nums}
+  .temp.ruim{background:var(--ruim-f)}
+  .temp.ruim .val{color:var(--ruim)}
+  .temp .ult{font-size:.76rem;color:var(--suave);grid-column:1}
+  .reg{display:flex;gap:8px;padding:12px 16px 16px;border-top:1px solid var(--fio);align-items:end}
+  .reg label{display:grid;gap:4px;font-size:.8rem;font-weight:600;color:var(--suave);flex:1}
+  .reg select,.reg input{width:100%;padding:11px;border-radius:10px;border:1px solid var(--fio);background:#fff;color:var(--texto)}
+  .reg label:nth-child(2){flex:0 0 76px}
+  .btn{padding:12px 16px;border-radius:12px;font-weight:700;background:var(--verde);color:#fff;white-space:nowrap}
+  .alerta{background:var(--ruim-f);border:1px solid #f1c3bd;color:#7d2219;border-radius:14px;padding:12px 14px;font-size:.88rem}
+  .alerta b{display:block}
+
+  .recado{padding:12px 16px;border-top:1px solid var(--fio);display:flex;gap:12px}
+  .recado p{margin:2px 0 0;font-size:.94rem}
+  .recado small{color:var(--suave);font-size:.78rem}
+  .recado.fixo{background:#fff7e6}
+  .novo-recado{display:grid;gap:8px;padding:12px 16px 16px;border-top:1px solid var(--fio)}
+  .novo-recado textarea{width:100%;padding:11px;border-radius:10px;border:1px solid var(--fio);resize:vertical}
+
+  .res{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .num{background:var(--papel);border:1px solid var(--fio);border-radius:16px;padding:14px}
+  .num strong{display:block;font-size:1.7rem;font-weight:800;font-variant-numeric:tabular-nums}
+  .num span{font-size:.82rem;color:var(--suave)}
+  .num.ruim strong{color:var(--ruim)}
+  .pend{padding:10px 16px;border-top:1px solid var(--fio);font-size:.92rem;display:flex;justify-content:space-between;gap:8px}
+  .pend small{color:var(--suave)}
+  .vazio{padding:14px 16px;color:var(--suave);font-size:.92rem;border-top:1px solid var(--fio)}
+  .link{color:var(--verde2);font-weight:700;text-align:center;padding:10px;font-size:.9rem}
+
+  nav.abas{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:440px;background:var(--papel);border-top:1px solid var(--fio);display:grid;grid-template-columns:repeat(4,1fr);padding-bottom:env(safe-area-inset-bottom);z-index:5}
+  nav.abas button{padding:10px 0 12px;display:grid;justify-items:center;gap:3px;font-size:.72rem;color:var(--suave);font-weight:600;position:relative}
+  nav.abas svg{width:23px;height:23px}
+  nav.abas button[aria-selected="true"]{color:var(--verde)}
+  nav.abas .ponto{position:absolute;top:7px;left:calc(50% + 8px);width:9px;height:9px;border-radius:50%;background:var(--ruim);border:2px solid #fff}
+
+  .entrar{position:fixed;inset:0;background:var(--verde);color:#eaf3ef;display:grid;place-items:center;padding:24px;z-index:20;overflow:auto}
+  .entrar div.box{max-width:360px;width:100%;display:grid;gap:12px}
+  .entrar h1{margin:0;font-size:1.6rem}
+  .entrar p{margin:0;color:#bcd5cc}
+  .pessoa{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.08);border-radius:14px;padding:12px;text-align:left;width:100%}
+  .pessoa b{display:block}
+  .pessoa small{color:#9cc2b5}
+  .toast{position:fixed;left:50%;bottom:92px;transform:translate(-50%,20px);background:var(--texto);color:#fff;padding:12px 18px;border-radius:12px;font-size:.92rem;opacity:0;transition:.25s;pointer-events:none;z-index:30;max-width:90%;text-align:center}
+  .toast.on{opacity:1;transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="demo">Aplicativo de demonstração. O restaurante e a equipe são fictícios; os dados ficam neste aparelho. <a class="wa" data-msg="Olá, Lucas! Vi o aplicativo de rotina da equipe (Cozinha em Dia) e queria um assim para o meu negócio.">Quero um assim →</a></div>
+  <header>
+    <div class="topo">
+      <div class="marca"><small>Cantina Rosmarino</small>Cozinha em Dia</div>
+      <button class="quem" id="trocar"><span class="av" id="av"></span><span id="quem-nome"></span></button>
+    </div>
+    <div class="topo"><p class="data" id="data"></p><button class="instalar" id="instalar" hidden>Instalar</button></div>
+  </header>
+
+  <main>
+    <section class="tela" id="t-hoje"></section>
+    <section class="tela" id="t-temp" hidden></section>
+    <section class="tela" id="t-rec" hidden></section>
+    <section class="tela" id="t-res" hidden></section>
+  </main>
+
+  <nav class="abas" role="tablist">
+    <button role="tab" aria-selected="true" data-t="t-hoje"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="4" width="14" height="17" rx="2.5"/><path d="M9 3h6v3H9zM8.5 11l2 2 4-4M8.5 17h7"/></svg>Hoje</button>
+    <button role="tab" aria-selected="false" data-t="t-temp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 14.5V5a2 2 0 0 1 4 0v9.5a4 4 0 1 1-4 0z"/><path d="M12 10v6"/></svg>Temperaturas<i class="ponto" id="ponto" hidden></i></button>
+    <button role="tab" aria-selected="false" data-t="t-rec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16v11H9l-5 4z"/></svg>Recados</button>
+    <button role="tab" aria-selected="false" data-t="t-res"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Resumo</button>
+  </nav>
+</div>
+
+<div class="entrar" id="entrar" hidden>
+  <div class="box">
+    <h1>Quem está no turno?</h1>
+    <p>Cada um entra com o próprio nome. Assim fica registrado quem fez cada tarefa e a que horas.</p>
+    <div id="pessoas" style="display:grid;gap:8px"></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function () {
+  var WHATSAPP = "5519996515563";
+  var CHAVE = "cozinha-em-dia";
+  var $ = function (s) { return document.querySelector(s); };
+  var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
+
+  var EQUIPE = [
+    { id: "marcia", nome: "Márcia", cargo: "Chefe de cozinha", cor: "#245a4d", gerente: true },
+    { id: "diego", nome: "Diego", cargo: "Cozinheiro", cor: "#b5651d" },
+    { id: "rafa", nome: "Rafaela", cargo: "Auxiliar de cozinha", cor: "#7a4a9a" },
+    { id: "joao", nome: "João", cargo: "Auxiliar de limpeza", cor: "#2d6aa0" },
+  ];
+  var LISTAS = [
+    { id: "abertura", nome: "Abertura", ate: "Até as 10h", itens: ["Ligar coifa e conferir gás", "Conferir validade do que vence hoje", "Tirar do freezer as carnes do almoço", "Higienizar bancadas e tábuas", "Montar a praça de saladas", "Conferir entrega do hortifrúti"] },
+    { id: "servico", nome: "Durante o serviço", ate: "Das 11h às 15h", itens: ["Trocar o óleo da fritadeira se escurecer", "Repor molhos e guarnições", "Anotar o que acabou no quadro"] },
+    { id: "fechamento", nome: "Fechamento", ate: "Antes de sair", itens: ["Etiquetar e guardar sobras com data", "Lavar e secar os equipamentos", "Limpar chão e ralos", "Desligar fogões, forno e coifa", "Fechar o registro do gás", "Levar o lixo e trancar a câmara fria"] },
+  ];
+  var EQUIP = [
+    { id: "g1", nome: "Geladeira de carnes", min: 0, max: 4 },
+    { id: "g2", nome: "Geladeira de hortifrúti", min: 0, max: 7 },
+    { id: "f1", nome: "Freezer", min: -25, max: -18 },
+    { id: "bm", nome: "Balcão térmico (quente)", min: 60, max: 90 },
+  ];
+
+  var hojeChave = new Date().toDateString();
+  function ler() { try { return JSON.parse(localStorage.getItem(CHAVE)) || null; } catch (e) { return null; } }
+  function salvar() { try { localStorage.setItem(CHAVE, JSON.stringify(st)); } catch (e) {} }
+  var hora = function (ms) { return new Date(ms).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }); };
+  var pessoa = function (id) { return EQUIPE.filter(function (p) { return p.id === id; })[0] || EQUIPE[0]; };
+
+  // Dia de exemplo: parte da abertura já feita, temperaturas de manhã e alguns recados.
+  function exemplo() {
+    var base = new Date(); base.setHours(7, 40, 0, 0); var t = base.getTime(), m = 60000;
+    return {
+      dia: hojeChave, eu: null,
+      feito: { "abertura:0": ["diego", t], "abertura:1": ["marcia", t + 12 * m], "abertura:3": ["rafa", t + 25 * m] },
+      temps: [
+        { e: "g1", v: 3, p: "diego", t: t + 5 * m }, { e: "g2", v: 5, p: "diego", t: t + 6 * m },
+        { e: "f1", v: -14, p: "diego", t: t + 7 * m }, { e: "bm", v: 0, p: "diego", t: t + 7 * m, desligado: true },
+      ],
+      recados: [
+        { p: "marcia", t: t - 14 * 60 * m, txt: "Fornecedor de queijo muda o dia de entrega para quarta a partir da semana que vem.", fixo: true },
+        { p: "joao", t: t - 2 * 60 * m, txt: "Ralo do fundo voltou a entupir. Já avisei o encanador, vem quinta de manhã." },
+        { p: "diego", t: t + 8 * m, txt: "Freezer marcando -14 °C de manhã. Porta estava mal fechada, já fechei. Conferir de novo às 11h." },
+      ],
+    };
+  }
+
+  var st = ler();
+  if (!st) st = exemplo();
+  // Virou o dia: checklists e temperaturas recomeçam, os recados ficam.
+  if (st.dia !== hojeChave) { st.dia = hojeChave; st.feito = {}; st.temps = []; salvar(); }
+
+  var CHECK = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M3.5 8.5l3 3 6-7"/></svg>';
+  function av(p, tam) { return '<span class="av" style="background:' + p.cor + (tam ? ";width:" + tam + "px;height:" + tam + "px" : "") + '">' + p.nome[0] + "</span>"; }
+  function anel(feitas, total) {
+    var r = 18, c = 2 * Math.PI * r, f = total ? feitas / total : 0;
+    return '<svg class="anel" viewBox="0 0 44 44"><circle cx="22" cy="22" r="' + r + '" fill="none" stroke="#dbe4df" stroke-width="5"/><circle cx="22" cy="22" r="' + r + '" fill="none" stroke="' + (f === 1 ? "#2f7d5b" : "#f0a830") + '" stroke-width="5" stroke-linecap="round" stroke-dasharray="' + c * f + " " + c + '" transform="rotate(-90 22 22)"/><text x="22" y="26" text-anchor="middle" font-size="11" font-weight="800" fill="#15241f">' + feitas + "/" + total + "</text></svg>";
+  }
+  function contar(l) { return l.itens.filter(function (_, i) { return st.feito[l.id + ":" + i]; }).length; }
+  function ultimas() {
+    var u = {}; st.temps.forEach(function (r) { if (!u[r.e] || r.t > u[r.e].t) u[r.e] = r; }); return u;
+  }
+  function foraDaFaixa(e, r) { return r && !r.desligado && (r.v < e.min || r.v > e.max); }
+  function alertas() { var u = ultimas(); return EQUIP.filter(function (e) { return foraDaFaixa(e, u[e.id]); }); }
+  function grau(v) { return (v > 0 ? "" : "") + String(v).replace(".", ",") + " °C"; }
+
+  function cabecalho() {
+    var p = pessoa(st.eu);
+    $("#av").outerHTML = av(p).replace('class="av"', 'class="av" id="av"');
+    $("#quem-nome").textContent = p.nome;
+    $("#data").textContent = new Date().toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long" }).replace(/^./, function (c) { return c.toUpperCase(); });
+    $("#ponto").hidden = !alertas().length;
+  }
+
+  function telaHoje() {
+    var al = alertas();
+    $("#t-hoje").innerHTML = (al.length ? '<button class="alerta" data-ir="t-temp" style="text-align:left"><b>Temperatura fora da faixa</b>' + al.map(function (e) { return e.nome; }).join(", ") + ". Toque para ver.</button>" : "") +
+      LISTAS.map(function (l) {
+        return '<div class="bloco"><div class="bloco-cab"><div><h2>' + l.nome + "</h2><small>" + l.ate + "</small></div>" + anel(contar(l), l.itens.length) + "</div>" +
+          l.itens.map(function (txt, i) {
+            var f = st.feito[l.id + ":" + i];
+            return '<button class="tarefa' + (f ? " feita" : "") + '" data-tarefa="' + l.id + ":" + i + '"><span class="cx">' + (f ? CHECK : "") + "</span><span>" + esc(txt) + "</span>" + (f ? "<small>" + pessoa(f[0]).nome + " · " + hora(f[1]) + "</small>" : "") + "</button>";
+          }).join("") + "</div>";
+      }).join("");
+  }
+
+  function telaTemp() {
+    var u = ultimas();
+    $("#t-temp").innerHTML = '<div class="bloco"><div class="bloco-cab"><div><h2>Equipamentos</h2><small>Registre pelo menos duas vezes por turno</small></div></div>' +
+      EQUIP.map(function (e) {
+        var r = u[e.id], ruim = foraDaFaixa(e, r);
+        return '<div class="temp' + (ruim ? " ruim" : "") + '"><b>' + e.nome + '</b><span class="val">' + (r ? (r.desligado ? "desl." : grau(r.v)) : "—") + '</span><span class="faixa">Faixa certa: ' + grau(e.min) + " a " + grau(e.max) + "</span>" +
+          (r ? '<span class="ult">' + (ruim ? "Fora da faixa · " : "") + pessoa(r.p).nome + " às " + hora(r.t) + "</span>" : '<span class="ult">Sem registro hoje</span>') + "</div>";
+      }).join("") +
+      '<form class="reg" id="f-temp"><label>Equipamento<select id="eq">' + EQUIP.map(function (e) { return '<option value="' + e.id + '">' + e.nome + "</option>"; }).join("") + '</select></label><label>°C<input id="tv" inputmode="decimal" placeholder="3,5" required></label><button class="btn">Anotar</button></form></div>' +
+      '<div class="bloco"><div class="bloco-cab"><h2>Registros de hoje</h2></div>' +
+      (st.temps.length ? st.temps.slice().reverse().map(function (r) {
+        var e = EQUIP.filter(function (x) { return x.id === r.e; })[0];
+        return '<div class="pend"><span>' + e.nome + " · <b>" + (r.desligado ? "desligado" : grau(r.v)) + "</b></span><small>" + pessoa(r.p).nome + ", " + hora(r.t) + "</small></div>";
+      }).join("") : '<p class="vazio">Nada anotado ainda.</p>') + "</div>";
+    $("#f-temp").addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var v = parseFloat($("#tv").value.replace(",", "."));
+      if (isNaN(v)) { aviso("Digite só o número, por exemplo 3,5 ou -18."); return; }
+      var eid = $("#eq").value, e = EQUIP.filter(function (x) { return x.id === eid; })[0];
+      st.temps.push({ e: eid, v: v, p: st.eu, t: Date.now() }); salvar();
+      if (v < e.min || v > e.max) {
+        if (navigator.vibrate) navigator.vibrate([60, 60, 60]);
+        aviso(e.nome + " fora da faixa. Avise a chefe e anote nos recados.");
+      } else aviso("Anotado: " + e.nome + ", " + grau(v) + ".");
+      cabecalho(); telaTemp();
+    });
+  }
+
+  function telaRec() {
+    var lista = st.recados.slice().sort(function (a, b) { return (b.fixo ? 1 : 0) - (a.fixo ? 1 : 0) || b.t - a.t; });
+    $("#t-rec").innerHTML = '<div class="bloco"><div class="bloco-cab"><div><h2>Mural do turno</h2><small>O que o próximo turno precisa saber</small></div></div>' +
+      lista.map(function (r) {
+        var p = pessoa(r.p), d = new Date(r.t), hoje = d.toDateString() === new Date().toDateString();
+        return '<div class="recado' + (r.fixo ? " fixo" : "") + '">' + av(p, 32) + "<div><small>" + p.nome + " · " + (hoje ? "hoje, " + hora(r.t) : d.toLocaleDateString("pt-BR", { day: "numeric", month: "short" }) + ", " + hora(r.t)) + (r.fixo ? " · fixado pela chefe" : "") + "</small><p>" + esc(r.txt) + "</p></div></div>";
+      }).join("") +
+      '<form class="novo-recado" id="f-rec"><textarea id="rt" rows="2" placeholder="Escreva um recado para a equipe" required maxlength="280"></textarea><button class="btn">Publicar recado</button></form></div>';
+    $("#f-rec").addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var t = $("#rt").value.trim(); if (!t) return;
+      st.recados.push({ p: st.eu, t: Date.now(), txt: t }); salvar(); telaRec(); aviso("Recado publicado.");
+    });
+  }
+
+  function telaRes() {
+    var total = 0, feitas = 0;
+    LISTAS.forEach(function (l) { total += l.itens.length; feitas += contar(l); });
+    var al = alertas();
+    var porPessoa = {};
+    Object.keys(st.feito).forEach(function (k) { var id = st.feito[k][0]; porPessoa[id] = (porPessoa[id] || 0) + 1; });
+    var pend = [];
+    LISTAS.forEach(function (l) { l.itens.forEach(function (txt, i) { if (!st.feito[l.id + ":" + i]) pend.push([l.nome, txt]); }); });
+    var g = pessoa(st.eu).gerente;
+    $("#t-res").innerHTML =
+      (g ? "" : '<div class="alerta" style="background:#fff7e6;border-color:#f3dcab;color:#6b4a0c">Esta tela é pensada para a chefe. Na versão real, só quem tem permissão vê o resumo.</div>') +
+      '<div class="res"><div class="num"><strong>' + Math.round((feitas / total) * 100) + '%</strong><span>das tarefas de hoje feitas</span></div>' +
+      '<div class="num' + (al.length ? " ruim" : "") + '"><strong>' + al.length + "</strong><span>" + (al.length === 1 ? "equipamento fora da faixa" : "equipamentos fora da faixa") + "</span></div>" +
+      '<div class="num"><strong>' + st.temps.length + '</strong><span>temperaturas anotadas</span></div>' +
+      '<div class="num"><strong>' + st.recados.length + "</strong><span>recados no mural</span></div></div>" +
+      '<div class="bloco"><div class="bloco-cab"><h2>Quem fez o quê hoje</h2></div>' +
+      EQUIPE.map(function (p) { return '<div class="pend"><span>' + p.nome + " <small>· " + p.cargo + "</small></span><b>" + (porPessoa[p.id] || 0) + "</b></div>"; }).join("") + "</div>" +
+      '<div class="bloco"><div class="bloco-cab"><h2>Ainda pendente</h2></div>' +
+      (pend.length ? pend.map(function (x) { return '<div class="pend"><span>' + esc(x[1]) + "</span><small>" + x[0] + "</small></div>"; }).join("") : '<p class="vazio">Tudo feito. Bom trabalho, equipe.</p>') + "</div>" +
+      '<button class="link" id="reset">Recomeçar a demonstração</button>';
+    $("#reset").addEventListener("click", function () { var eu = st.eu; st = exemplo(); st.eu = eu; salvar(); render(); aviso("Demonstração reiniciada."); });
+  }
+
+  function render() {
+    cabecalho();
+    var ativa = document.querySelector('nav.abas button[aria-selected="true"]').dataset.t;
+    ({ "t-hoje": telaHoje, "t-temp": telaTemp, "t-rec": telaRec, "t-res": telaRes })[ativa]();
+  }
+
+  function ir(id) {
+    document.querySelectorAll("nav.abas button").forEach(function (b) { b.setAttribute("aria-selected", b.dataset.t === id); });
+    document.querySelectorAll("main .tela").forEach(function (t) { t.hidden = t.id !== id; });
+    render(); window.scrollTo(0, 0);
+  }
+  document.querySelectorAll("nav.abas button").forEach(function (b) { b.addEventListener("click", function () { ir(b.dataset.t); }); });
+
+  document.addEventListener("click", function (e) {
+    var t = e.target.closest("[data-tarefa]");
+    if (t) {
+      var k = t.dataset.tarefa;
+      if (st.feito[k]) delete st.feito[k]; else { st.feito[k] = [st.eu, Date.now()]; if (navigator.vibrate) navigator.vibrate(20); }
+      salvar(); render(); return;
+    }
+    var irb = e.target.closest("[data-ir]"); if (irb) ir(irb.dataset.ir);
+  });
+
+  function escolher() {
+    $("#pessoas").innerHTML = EQUIPE.map(function (p) { return '<button class="pessoa" data-p="' + p.id + '">' + av(p, 40) + "<span><b>" + p.nome + "</b><small>" + p.cargo + "</small></span></button>"; }).join("");
+    $("#entrar").hidden = false;
+  }
+  $("#pessoas").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-p]"); if (!b) return;
+    st.eu = b.dataset.p; salvar(); $("#entrar").hidden = true; render();
+  });
+  $("#trocar").addEventListener("click", escolher);
+
+  function aviso(t) {
+    var el = $("#toast"); el.textContent = t; el.classList.add("on");
+    clearTimeout(aviso.t); aviso.t = setTimeout(function () { el.classList.remove("on"); }, 2800);
+  }
+  document.querySelectorAll(".wa").forEach(function (a) {
+    a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(a.dataset.msg); a.target = "_blank"; a.rel = "noopener";
+  });
+  var pedido = null;
+  window.addEventListener("beforeinstallprompt", function (e) { e.preventDefault(); pedido = e; $("#instalar").hidden = false; });
+  $("#instalar").addEventListener("click", function () {
+    if (!pedido) return;
+    pedido.prompt(); pedido.userChoice.finally(function () { pedido = null; $("#instalar").hidden = true; });
+  });
+  if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(function () {});
+
+  if (st.eu) render(); else { render(); escolher(); }
+})();
+</script>
+</body>
+</html>

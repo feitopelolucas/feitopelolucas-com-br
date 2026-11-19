@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caixa Certo · Programa de caixa e cadastro de clientes</title>
+<meta name="description" content="Demonstração de programa para Windows: frente de caixa com código de barras, troco, fiado na caderneta e fechamento do dia.">
+<link rel="icon" href="icone.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../programa.css">
+<style>
+  :root{--cor:#4338ca;--cor2:#3730a3;--cor-f:#eef0ff}
+  .pdv{display:grid;grid-template-columns:1fr 320px;gap:14px;height:100%}
+  .pdv-esq{display:flex;flex-direction:column;gap:10px;min-height:0}
+  .leitor{display:flex;gap:8px;align-items:center;background:#fff;border:2px solid var(--cor);border-radius:8px;padding:6px 6px 6px 12px;position:relative}
+  .leitor svg{width:22px;height:22px;color:var(--cor);flex:none}
+  .leitor input{flex:1;border:0;font-size:18px;padding:8px 4px;outline:none;min-width:0}
+  .sug{position:absolute;left:-2px;right:-2px;top:100%;background:#fff;border:1px solid var(--fio2);border-radius:0 0 8px 8px;box-shadow:0 10px 24px -10px rgba(0,0,0,.3);z-index:5;max-height:260px;overflow:auto}
+  .sug button{display:flex;justify-content:space-between;gap:10px;width:100%;border:0;background:none;text-align:left;padding:9px 12px;font-size:14px}
+  .sug button:hover,.sug button.on{background:var(--cor-f)}
+  .sug small{color:var(--suave)}
+  .dica-leitor{font-size:12px;color:var(--suave);margin:-4px 2px 0}
+  .itens{flex:1;min-height:0;overflow:auto;background:#fff;border:1px solid var(--fio);border-radius:6px}
+  .itens table.grade{border:0}
+  .itens .grade th{top:0}
+  .itens tr.ult td{background:#fffbe6}
+  .itens td b{white-space:nowrap}
+  .vazio-pdv{display:grid;place-items:center;height:100%;color:#9aa0a6;text-align:center;padding:30px;font-size:14px}
+  .vazio-pdv b{display:block;font-size:20px;color:#5f6368;font-weight:600;margin-bottom:4px}
+  .painel{display:flex;flex-direction:column;gap:10px}
+  .total{background:#1e1b4b;color:#fff;border-radius:8px;padding:16px 18px}
+  .total span{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#a5b4fc}
+  .total strong{display:block;font-size:40px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.1;margin-top:4px}
+  .total small{color:#c7d2fe}
+  .cli-box{background:#fff;border:1px solid var(--fio);border-radius:8px;padding:10px 12px;font-size:13px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .cli-box b{display:block}
+  .teclas{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .teclas .btn{justify-content:space-between;padding:10px 12px}
+  .teclas .btn.pri{grid-column:1/-1;font-size:16px;padding:14px}
+  .formas{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+  .formas button{border:1px solid var(--fio2);background:#fff;border-radius:6px;padding:10px 4px;font-size:12.5px;display:grid;justify-items:center;gap:4px}
+  .formas button[aria-pressed="true"]{border-color:var(--cor);background:var(--cor-f);color:var(--cor2);font-weight:600;box-shadow:0 0 0 1px var(--cor)}
+  .formas kbd{font:10.5px ui-monospace,Consolas,monospace;color:var(--suave)}
+  .grande{font-size:28px;font-weight:600;font-variant-numeric:tabular-nums}
+  .troco{background:var(--ok-f);color:var(--ok);border-radius:6px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;font-weight:600}
+  .troco.falta{background:var(--ruim-f);color:var(--ruim)}
+  .cupom{background:#fff;border:1px dashed #bbb;padding:14px 16px;font:12.5px/1.5 ui-monospace,Consolas,monospace;white-space:pre;overflow:auto;max-height:50vh}
+  @media (max-width:900px){.pdv{grid-template-columns:1fr}.formas{grid-template-columns:repeat(3,1fr)}}
+  @media print{body *{visibility:hidden}#d-cupom,#d-cupom *{visibility:visible}#d-cupom{position:absolute;inset:0;box-shadow:none}#d-cupom .dlg-pe,#d-cupom .dlg-tit{display:none}}
+</style>
+</head>
+<body>
+<div class="demo">Demonstração no navegador de um programa para Windows. A loja, os produtos e os clientes são fictícios; os dados ficam neste computador. <a class="wa" data-msg="Olá, Lucas! Vi o programa de caixa (Caixa Certo) e queria conversar sobre um para o meu negócio.">Quero um programa assim →</a></div>
+<div class="so-pc">Este é um programa de computador. Ele funciona no celular, mas foi pensado para o computador do caixa, com leitor de código de barras.</div>
+
+<div class="janela">
+  <div class="titulo"><img src="icone.svg" alt=""><span>Caixa Certo — Empório Dona Cida · Caixa 01</span><i><svg viewBox="0 0 10 10"><path d="M0 5h10" stroke="currentColor"/></svg></i><i><svg viewBox="0 0 10 10"><rect x=".5" y=".5" width="9" height="9" fill="none" stroke="currentColor"/></svg></i><i><svg viewBox="0 0 10 10"><path d="M0 0l10 10M10 0L0 10" stroke="currentColor"/></svg></i></div>
+  <div class="menu"><button>Arquivo</button><button>Venda</button><button>Cadastros</button><button>Relatórios</button><button>Ajuda</button></div>
+  <div class="corpo">
+    <aside class="lado">
+      <h4>Caixa</h4>
+      <button data-v="pdv" aria-current="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="9" width="14" height="8" rx="1.5"/><rect x="5.5" y="3" width="9" height="6" rx="1"/><path d="M7 13h6"/></svg><span>Frente de caixa</span></button>
+      <button data-v="vendas"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2.5h10v15l-2-1.3-1.5 1.3-1.5-1.3-1.5 1.3L7 16.2l-2 1.3z"/><path d="M8 7h4M8 10h4"/></svg><span>Vendas de hoje</span><small id="n-vendas"></small></button>
+      <button data-v="clientes"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="7" r="3"/><path d="M2.5 16.5c.7-3 2.8-4.5 5.5-4.5s4.8 1.5 5.5 4.5"/><path d="M13.5 4.5a3 3 0 0 1 0 5.5M15.5 12.5c1 .8 1.7 2 2 4"/></svg><span>Clientes e fiado</span><small id="n-fiado"></small></button>
+      <button data-v="produtos"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5v10M5.5 5v10M8 5v10M11 5v10M13 5v10M16.5 5v10"/></svg><span>Produtos e preços</span></button>
+    </aside>
+    <section class="area">
+      <div class="barra" id="barra"></div>
+      <div class="conteudo" id="conteudo"></div>
+    </section>
+  </div>
+  <div class="status"><span id="st-1">Operador: Cida</span><span id="st-2"></span><span class="espaco"></span><span>F6 cliente · F8 tirar item · F12 finalizar · Esc cancelar venda</span><span id="relogio"></span></div>
+</div>
+
+<dialog class="dlg" id="d-pag" style="width:min(560px,calc(100vw - 32px))">
+  <form method="dialog" id="f-pag">
+    <div class="dlg-tit">Finalizar venda <button type="button" data-fechar aria-label="Fechar">×</button></div>
+    <div class="dlg-corpo">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><span class="info">Total a pagar</span><span class="grande" id="pg-total"></span></div>
+      <div class="formas" id="formas"></div>
+      <label id="lbl-rec">Valor recebido em dinheiro<input class="campo" id="pg-rec" inputmode="decimal" style="font-size:20px"></label>
+      <div class="troco" id="pg-troco" hidden></div>
+      <p class="info" id="pg-info"></p>
+      <p class="erro" id="pg-erro"></p>
+    </div>
+    <div class="dlg-pe"><button type="button" data-fechar class="btn">Voltar</button><button class="btn pri" value="ok">Concluir venda <kbd>Enter</kbd></button></div>
+  </form>
+</dialog>
+
+<dialog class="dlg" id="d-cupom">
+  <form method="dialog">
+    <div class="dlg-tit">Venda concluída <button type="button" data-fechar aria-label="Fechar">×</button></div>
+    <div class="dlg-corpo"><div class="cupom" id="cupom"></div><p class="info">Cupom não fiscal. Na versão real, o programa pode emitir NFC-e pelo sistema da sua contabilidade.</p></div>
+    <div class="dlg-pe"><button class="btn" type="button" onclick="window.print()">Imprimir</button><button type="button" data-fechar class="btn pri" autofocus>Próxima venda</button></div>
+  </form>
+</dialog>
+
+<dialog class="dlg" id="d-cli">
+  <form method="dialog" id="f-cli">
+    <div class="dlg-tit"><span>Cliente da venda</span><button type="button" data-fechar aria-label="Fechar">×</button></div>
+    <div class="dlg-corpo">
+      <input class="busca" id="cli-busca" placeholder="Buscar pelo nome ou telefone" style="width:100%">
+      <div id="cli-lista" style="max-height:280px;overflow:auto"></div>
+    </div>
+    <div class="dlg-pe"><button class="btn" type="button" id="cli-tirar">Venda sem cliente</button><span class="espaco"></span><button type="button" data-fechar class="btn">Fechar</button></div>
+  </form>
+</dialog>
+
+<dialog class="dlg" id="d-novo-cli">
+  <form method="dialog" id="f-novo-cli">
+    <div class="dlg-tit">Novo cliente <button type="button" data-fechar aria-label="Fechar">×</button></div>
+    <div class="dlg-corpo">
+      <label>Nome<input class="campo" id="nc-nome"></label>
+      <div class="duas"><label>Telefone<input class="campo" id="nc-tel"></label><label>Limite do fiado (R$)<input class="campo" id="nc-lim" inputmode="decimal" value="200"></label></div>
+      <p class="erro" id="nc-erro"></p>
+    </div>
+    <div class="dlg-pe"><button type="button" data-fechar class="btn">Cancelar</button><button class="btn pri" value="ok">Cadastrar</button></div>
+  </form>
+</dialog>
+
+<dialog class="dlg" id="d-receber">
+  <form method="dialog" id="f-receber">
+    <div class="dlg-tit"><span id="rc-tit">Receber fiado</span><button type="button" data-fechar aria-label="Fechar">×</button></div>
+    <div class="dlg-corpo">
+      <div id="rc-hist"></div>
+      <div class="duas"><label>Valor recebido (R$)<input class="campo" id="rc-val" inputmode="decimal"></label><label>Forma<select class="campo" id="rc-forma"><option>Dinheiro</option><option>Pix</option><option>Débito</option></select></label></div>
+      <p class="erro" id="rc-erro"></p>
+    </div>
+    <div class="dlg-pe"><button type="button" data-fechar class="btn">Cancelar</button><button class="btn pri" value="ok">Dar baixa</button></div>
+  </form>
+</dialog>
+
+<dialog class="dlg" id="d-fecha">
+  <form method="dialog" id="f-fecha">
+    <div class="dlg-tit">Fechamento do caixa <button type="button" data-fechar aria-label="Fechar">×</button></div>
+    <div class="dlg-corpo">
+      <table class="grade" id="fc-tab"></table>
+      <label>Dinheiro contado na gaveta (R$)<input class="campo" id="fc-cont" inputmode="decimal" style="font-size:18px"></label>
+      <div class="troco" id="fc-dif" hidden></div>
+    </div>
+    <div class="dlg-pe"><button type="button" data-fechar class="btn">Fechar</button></div>
+  </form>
+</dialog>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function () {
+  var WHATSAPP = "5519996515563";
+  var CHAVE = "caixa-certo";
+  var FUNDO = 150;
+  var $ = function (s) { return document.querySelector(s); };
+  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
+  var brl = function (n) { return n.toLocaleString("pt-BR", { style: "currency", currency: "BRL" }); };
+  var num = function (s) { return parseFloat(String(s).trim().replace(/\./g, "").replace(",", ".")); };
+  var sem = function (s) { return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); };
+  var hojeChave = new Date().toDateString();
+  var FORMAS = [["dinheiro", "Dinheiro", "F1"], ["pix", "Pix", "F2"], ["debito", "Débito", "F3"], ["credito", "Crédito", "F4"], ["fiado", "Fiado", "F5"]];
+  var nomeForma = function (f) { return (FORMAS.filter(function (x) { return x[0] === f; })[0] || [f, f])[1]; };
+
+  var PRODUTOS = [
+    ["7891000100011", "Arroz tipo 1 5 kg", 27.9, "un"], ["7891000100028", "Feijão carioca 1 kg", 8.49, "un"], ["7891000100035", "Café torrado e moído 500 g", 19.9, "un"],
+    ["7891000100042", "Açúcar refinado 1 kg", 4.99, "un"], ["7891000100059", "Óleo de soja 900 ml", 7.49, "un"], ["7891000100066", "Leite integral 1 L", 5.29, "un"],
+    ["7891000100073", "Macarrão espaguete 500 g", 4.39, "un"], ["7891000100080", "Molho de tomate 300 g", 2.99, "un"], ["7891000100097", "Farinha de trigo 1 kg", 5.49, "un"],
+    ["7891000100103", "Sabão em pó 1,6 kg", 18.9, "un"], ["7891000100110", "Detergente 500 ml", 2.49, "un"], ["7891000100127", "Papel higiênico 12 rolos", 21.9, "un"],
+    ["7891000100134", "Refrigerante cola 2 L", 9.99, "un"], ["7891000100141", "Água mineral 1,5 L", 2.89, "un"], ["7891000100158", "Biscoito recheado 130 g", 2.79, "un"],
+    ["20", "Pão francês", 16.9, "kg"], ["21", "Banana prata", 6.99, "kg"], ["22", "Tomate", 8.49, "kg"], ["23", "Queijo muçarela fatiado", 54.9, "kg"], ["24", "Presunto fatiado", 39.9, "kg"],
+    ["30", "Ovos brancos (dúzia)", 11.9, "un"], ["31", "Pão de forma 500 g", 8.99, "un"],
+  ].map(function (p) { return { cod: p[0], nome: p[1], preco: p[2], un: p[3] }; });
+  var prodCod = function (c) { return PRODUTOS.filter(function (p) { return p.cod === c; })[0]; };
+
+  function exemplo() {
+    var clientes = [
+      { id: "c1", nome: "Maria Aparecida Lima", tel: "(19) 99812-1101", lim: 300, mov: [] },
+      { id: "c2", nome: "Seu Antônio Reis", tel: "(19) 99733-2202", lim: 200, mov: [] },
+      { id: "c3", nome: "Juliana Carvalho", tel: "(19) 98654-3303", lim: 150, mov: [] },
+      { id: "c4", nome: "Roberto Fonseca", tel: "(19) 99245-4404", lim: 250, mov: [] },
+      { id: "c5", nome: "Dona Neusa Prado", tel: "(19) 98170-5505", lim: 200, mov: [] },
+    ];
+    var d = function (n) { return Date.now() - n * 86400000; };
+    clientes[0].mov = [{ t: d(12), v: 64.3, d: "Compra" }, { t: d(5), v: 38.7, d: "Compra" }, { t: d(3), v: -50, d: "Pagamento (Pix)" }];
+    clientes[1].mov = [{ t: d(20), v: 112.4, d: "Compra" }, { t: d(9), v: 55.1, d: "Compra" }];
+    clientes[3].mov = [{ t: d(2), v: 27.9, d: "Compra" }];
+    clientes[4].mov = [{ t: d(31), v: 41.2, d: "Compra" }, { t: d(15), v: -41.2, d: "Pagamento (dinheiro)" }];
+    var vendas = [], base = new Date(); base.setHours(7, 12, 0, 0);
+    var formas = ["dinheiro", "pix", "debito", "dinheiro", "pix", "credito", "dinheiro", "pix", "debito", "fiado"];
+    for (var i = 0; i < 10; i++) {
+      var t = base.getTime() + i * 27 * 60000;
+      if (t > Date.now()) break;
+      var itens = [];
+      for (var k = 0; k < 2 + (i % 4); k++) { var p = PRODUTOS[(i * 5 + k * 7) % PRODUTOS.length]; itens.push({ cod: p.cod, q: p.un === "kg" ? 0.4 + ((i + k) % 3) * 0.25 : 1 + ((i + k) % 2) }); }
+      var tot = itens.reduce(function (s, x) { return s + Math.round(prodCod(x.cod).preco * x.q * 100) / 100; }, 0);
+      vendas.push({ n: 101 + i, t: t, itens: itens, total: Math.round(tot * 100) / 100, forma: formas[i], cli: formas[i] === "fiado" ? "c3" : null });
+      if (formas[i] === "fiado") clientes[2].mov.push({ t: t, v: Math.round(tot * 100) / 100, d: "Compra · venda " + (101 + i) });
+    }
+    return { dia: hojeChave, seq: 101 + vendas.length, vendas: vendas, clientes: clientes };
+  }
+
+  var db; try { db = JSON.parse(localStorage.getItem(CHAVE)); } catch (e) {}
+  if (!db) db = exemplo();
+  if (db.dia !== hojeChave) { db.dia = hojeChave; db.vendas = []; }
+  function salvar() { try { localStorage.setItem(CHAVE, JSON.stringify(db)); } catch (e) {} }
+
+  var vista = "pdv", venda = { itens: [], cli: null }, formaSel = "dinheiro", sugIdx = 0, buscaCli = "";
+  var cli = function (id) { return db.clientes.filter(function (c) { return c.id === id; })[0]; };
+  var saldo = function (c) { return Math.round(c.mov.reduce(function (s, m) { return s + m.v; }, 0) * 100) / 100; };
+  var sub = function (it) { return Math.round(prodCod(it.cod).preco * it.q * 100) / 100; };
+  var totalVenda = function () { return Math.round(venda.itens.reduce(function (s, it) { return s + sub(it); }, 0) * 100) / 100; };
+  var fmtQ = function (it) { var p = prodCod(it.cod); return p.un === "kg" ? it.q.toFixed(3).replace(".", ",") + " kg" : it.q + " un"; };
+
+  /* ---------- Frente de caixa ---------- */
+  function vPdv() {
+    $("#barra").innerHTML = '<h1>Frente de caixa</h1><span class="pill azul">Venda nº ' + db.seq + '</span><span class="espaco"></span><span class="pill">Caixa aberto às 07:00 · fundo de troco ' + brl(FUNDO) + "</span>";
+    $("#conteudo").innerHTML =
+      '<div class="pdv"><div class="pdv-esq"><div class="leitor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6v12M6 6v12M9.5 6v12M13 6v12M15.5 6v12M19 6v12M21 6v12"/></svg><input id="leitor" autocomplete="off" placeholder="Passe o código de barras ou digite o nome do produto"><div class="sug" id="sug" hidden></div></div>' +
+      '<p class="dica-leitor">Para vender mais de um, digite a quantidade e um asterisco antes: <b>3*café</b> ou <b>0,450*20</b> (450 g de pão).</p>' +
+      '<div class="itens" id="itens"></div></div>' +
+      '<div class="painel"><div class="total"><span>Total da venda</span><strong id="tot"></strong><small id="qtd-itens"></small></div>' +
+      '<div class="cli-box"><div><span class="info">Cliente</span><b id="cli-nome">Não identificado</b></div><button class="btn" data-cli>Escolher <kbd>F6</kbd></button></div>' +
+      '<div class="teclas"><button class="btn pri" data-finalizar>Finalizar venda <kbd>F12</kbd></button><button class="btn" data-tirar>Tirar último item <kbd>F8</kbd></button><button class="btn perigo" data-cancelar>Cancelar venda <kbd>Esc</kbd></button></div></div></div>';
+    desenharItens();
+    var inp = $("#leitor");
+    inp.addEventListener("input", sugestoes);
+    inp.addEventListener("keydown", function (e) {
+      var bs = $("#sug").hidden ? [] : document.querySelectorAll("#sug button");
+      if (e.key === "ArrowDown" && bs.length) { e.preventDefault(); sugIdx = (sugIdx + 1) % bs.length; marcarSug(); }
+      else if (e.key === "ArrowUp" && bs.length) { e.preventDefault(); sugIdx = (sugIdx - 1 + bs.length) % bs.length; marcarSug(); }
+      else if (e.key === "Enter") { e.preventDefault(); var vis = !$("#sug").hidden && bs.length && !prodCod(partes().termo); lancar(vis ? bs[sugIdx].dataset.cod : null); }
+    });
+    $("#sug").addEventListener("mousedown", function (e) { var b = e.target.closest("button"); if (b) { e.preventDefault(); lancar(b.dataset.cod); } });
+    inp.addEventListener("blur", function () { setTimeout(function () { var s = $("#sug"); if (s) s.hidden = true; }, 100); });
+    inp.focus();
+  }
+  function partes() {
+    var v = $("#leitor").value.trim(), m = v.match(/^(\d+(?:[.,]\d+)?)\s*\*\s*(.*)$/);
+    return m ? { q: num(m[1]), termo: m[2].trim() } : { q: null, termo: v };
+  }
+  function achar(termo) {
+    if (!termo) return [];
+    var exato = prodCod(termo); if (exato) return [exato];
+    var t = sem(termo);
+    return PRODUTOS.filter(function (p) { return sem(p.nome).indexOf(t) >= 0 || p.cod.indexOf(termo) === 0; }).slice(0, 8);
+  }
+  function sugestoes() {
+    var r = achar(partes().termo), s = $("#sug"); sugIdx = 0;
+    if (!r.length || (r.length === 1 && r[0].cod === partes().termo)) { s.hidden = true; s.innerHTML = ""; return; }
+    s.innerHTML = r.map(function (p) { return '<button type="button" data-cod="' + p.cod + '"><span>' + esc(p.nome) + " <small>" + p.cod + "</small></span><b>" + brl(p.preco) + (p.un === "kg" ? "/kg" : "") + "</b></button>"; }).join("");
+    s.hidden = false; marcarSug();
+  }
+  function marcarSug() { document.querySelectorAll("#sug button").forEach(function (b, i) { b.classList.toggle("on", i === sugIdx); }); }
+  function lancar(cod) {
+    var pt = partes(), p = cod ? prodCod(cod) : achar(pt.termo)[0];
+    if (!p) { if (pt.termo) aviso("Produto não encontrado: " + pt.termo); return; }
+    var q = pt.q || (p.un === "kg" ? 0.5 : 1);
+    if (!(q > 0) || q > 999) { aviso("Quantidade inválida."); return; }
+    if (p.un === "un") { q = Math.round(q); if (q < 1) { aviso(p.nome + " é vendido por unidade."); return; } }
+    var ult = venda.itens[venda.itens.length - 1];
+    if (ult && ult.cod === p.cod && p.un === "un" && !pt.q) ult.q += 1; else venda.itens.push({ cod: p.cod, q: q });
+    $("#leitor").value = ""; $("#sug").hidden = true; $("#sug").innerHTML = "";
+    if (!pt.q && p.un === "kg") aviso(p.nome + ": lançado 0,500 kg. Na loja, o peso vem direto da balança.");
+    desenharItens();
+  }
+  function desenharItens() {
+    var el = $("#itens"); if (!el) return;
+    el.innerHTML = venda.itens.length ? '<table class="grade"><thead><tr><th>#</th><th>Código</th><th>Descrição</th><th class="n">Qtd</th><th class="n">Preço</th><th class="n">Total</th><th class="acoes"></th></tr></thead><tbody>' +
+      venda.itens.map(function (it, i) { var p = prodCod(it.cod); return '<tr class="' + (i === venda.itens.length - 1 ? "ult" : "") + '"><td>' + (i + 1) + "</td><td>" + p.cod + "</td><td><b>" + esc(p.nome) + '</b></td><td class="n">' + fmtQ(it) + '</td><td class="n">' + brl(p.preco) + '</td><td class="n"><b>' + brl(sub(it)) + '</b></td><td class="acoes"><button data-rm="' + i + '">Tirar</button></td></tr>'; }).join("") + "</tbody></table>"
+      : '<div class="vazio-pdv"><div><b>Caixa livre</b>Passe o primeiro produto no leitor.</div></div>';
+    el.scrollTop = el.scrollHeight;
+    $("#tot").textContent = brl(totalVenda());
+    var n = venda.itens.length; $("#qtd-itens").textContent = n + (n === 1 ? " item" : " itens");
+    var c = venda.cli && cli(venda.cli);
+    $("#cli-nome").textContent = c ? c.nome + (saldo(c) > 0 ? " · deve " + brl(saldo(c)) : "") : "Não identificado";
+  }
+  function tirarUltimo() { if (venda.itens.length) { var it = venda.itens.pop(); desenharItens(); aviso("Tirado: " + prodCod(it.cod).nome); } }
+  function cancelarVenda() {
+    if (!venda.itens.length) return;
+    if (!confirm("Cancelar a venda inteira? Os " + venda.itens.length + " itens serão tirados.")) return;
+    venda = { itens: [], cli: null }; desenharItens(); aviso("Venda cancelada."); $("#leitor").focus();
+  }
+
+  /* ---------- Pagamento ---------- */
+  function abrirPagamento() {
+    if (!venda.itens.length) { aviso("Nenhum item na venda."); return; }
+    formaSel = "dinheiro";
+    $("#pg-total").textContent = brl(totalVenda()); $("#pg-rec").value = ""; $("#pg-erro").textContent = "";
+    desenharFormas(); $("#d-pag").showModal(); $("#pg-rec").focus();
+  }
+  function desenharFormas() {
+    $("#formas").innerHTML = FORMAS.map(function (f) { return '<button type="button" data-forma="' + f[0] + '" aria-pressed="' + (f[0] === formaSel) + '">' + f[1] + "<kbd>" + f[2] + "</kbd></button>"; }).join("");
+    $("#lbl-rec").hidden = formaSel !== "dinheiro";
+    var c = venda.cli && cli(venda.cli);
+    $("#pg-info").textContent = formaSel === "pix" ? "A maquininha ou o QR code do banco mostra o valor. Confirme quando o Pix cair." :
+      formaSel === "debito" || formaSel === "credito" ? "Passe o cartão na maquininha e conclua quando aprovar." :
+      formaSel === "fiado" ? (c ? "Vai para a caderneta de " + c.nome + ". Limite " + brl(c.lim) + ", já deve " + brl(saldo(c)) + "." : "Para vender fiado, escolha o cliente antes (F6).") : "";
+    troco();
+  }
+  function troco() {
+    var el = $("#pg-troco");
+    if (formaSel !== "dinheiro") { el.hidden = true; return; }
+    var r = num($("#pg-rec").value), t = totalVenda();
+    if (isNaN(r)) { el.hidden = true; return; }
+    el.hidden = false; el.classList.toggle("falta", r < t);
+    el.innerHTML = r < t ? "<span>Falta</span><span class=\"grande\">" + brl(t - r) + "</span>" : "<span>Troco</span><span class=\"grande\">" + brl(r - t) + "</span>";
+  }
+  $("#pg-rec").addEventListener("input", troco);
+  $("#formas").addEventListener("click", function (e) { var b = e.target.closest("[data-forma]"); if (b) { formaSel = b.dataset.forma; desenharFormas(); if (formaSel === "dinheiro") $("#pg-rec").focus(); } });
+  $("#d-pag").addEventListener("keydown", function (e) {
+    var i = ["F1", "F2", "F3", "F4", "F5"].indexOf(e.key);
+    if (i >= 0) { e.preventDefault(); formaSel = FORMAS[i][0]; desenharFormas(); }
+  });
+  $("#f-pag").addEventListener("submit", function (e) {
+    
+    var t = totalVenda(), r = num($("#pg-rec").value), c = venda.cli && cli(venda.cli), erro = "";
+    if (formaSel === "dinheiro" && !isNaN(r) && r < t) erro = "O valor recebido é menor que o total.";
+    if (formaSel === "fiado" && !c) erro = "Escolha o cliente antes de vender fiado (F6).";
+    if (formaSel === "fiado" && c && saldo(c) + t > c.lim) erro = c.nome + " passaria do limite de " + brl(c.lim) + ". Receba uma parte ou aumente o limite no cadastro.";
+    if (erro) { e.preventDefault(); $("#pg-erro").textContent = erro; return; }
+    var v = { n: db.seq++, t: Date.now(), itens: venda.itens, total: t, forma: formaSel, cli: venda.cli, rec: formaSel === "dinheiro" && !isNaN(r) ? r : null };
+    db.vendas.push(v);
+    if (formaSel === "fiado") c.mov.push({ t: v.t, v: t, d: "Compra · venda " + v.n });
+    salvar();
+    venda = { itens: [], cli: null };
+    mostrarCupom(v); render();
+  });
+  function mostrarCupom(v) {
+    var L = 40, lin = function (a, b) { a = String(a); b = String(b); return a + " ".repeat(Math.max(1, L - a.length - b.length)) + b; };
+    var c = v.cli && cli(v.cli);
+    var t = ["       EMPÓRIO DONA CIDA", "   Rua das Paineiras, 214 · Campinas", "-".repeat(L), lin("Venda " + v.n, new Date(v.t).toLocaleString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" })), "-".repeat(L)];
+    v.itens.forEach(function (it) { var p = prodCod(it.cod); t.push(p.nome.slice(0, L)); t.push(lin("  " + fmtQ(it) + " x " + brl(p.preco), brl(sub(it)))); });
+    t.push("-".repeat(L), lin("TOTAL", brl(v.total)), lin("Pagamento", nomeForma(v.forma)));
+    if (v.rec != null) { t.push(lin("Recebido", brl(v.rec)), lin("Troco", brl(v.rec - v.total))); }
+    if (c) t.push(lin("Cliente", c.nome.slice(0, 26)));
+    if (v.forma === "fiado") t.push(lin("Saldo na caderneta", brl(saldo(c))));
+    t.push("-".repeat(L), "        Obrigada e volte sempre!");
+    $("#cupom").textContent = t.join("\n");
+    $("#d-cupom").showModal();
+  }
+  $("#d-cupom").addEventListener("close", function () { var l = $("#leitor"); if (l) l.focus(); });
+
+  /* ---------- Escolher cliente ---------- */
+  function abrirCli() { buscaCli = ""; $("#cli-busca").value = ""; listaCli(); $("#d-cli").showModal(); $("#cli-busca").focus(); }
+  function listaCli() {
+    var q = sem(buscaCli);
+    var l = db.clientes.filter(function (c) { return !q || sem(c.nome + " " + c.tel).indexOf(q) >= 0; });
+    $("#cli-lista").innerHTML = '<table class="grade"><tbody>' + l.map(function (c) { var s = saldo(c); return '<tr><td><b>' + esc(c.nome) + "</b><br><small>" + esc(c.tel) + '</small></td><td class="n">' + (s > 0 ? '<span class="pill alerta">deve ' + brl(s) + "</span>" : '<span class="pill ok">em dia</span>') + '</td><td class="acoes"><button type="button" data-escolher="' + c.id + '">Escolher</button></td></tr>'; }).join("") + "</tbody></table>";
+  }
+  $("#cli-busca").addEventListener("input", function () { buscaCli = this.value; listaCli(); });
+  $("#cli-lista").addEventListener("click", function (e) { var b = e.target.closest("[data-escolher]"); if (b) { venda.cli = b.dataset.escolher; $("#d-cli").close(); desenharItens(); } });
+  $("#cli-tirar").addEventListener("click", function () { venda.cli = null; $("#d-cli").close(); desenharItens(); });
+  $("#d-cli").addEventListener("close", function () { var l = $("#leitor"); if (l) l.focus(); });
+
+  /* ---------- Vendas de hoje ---------- */
+  function vVendas() {
+    var vs = db.vendas.slice().reverse(), tot = db.vendas.reduce(function (s, v) { return s + v.total; }, 0);
+    var porForma = {}; db.vendas.forEach(function (v) { porForma[v.forma] = (porForma[v.forma] || 0) + v.total; });
+    $("#barra").innerHTML = '<h1>Vendas de hoje</h1><span class="pill">' + new Date().toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long" }) + '</span><span class="espaco"></span><button class="btn pri" id="fechar">Fechamento do caixa</button>';
+    $("#conteudo").innerHTML = '<div class="cards"><div class="card"><span>Total vendido</span><strong>' + brl(tot) + '</strong></div><div class="card"><span>Vendas</span><strong>' + db.vendas.length + '</strong></div><div class="card"><span>Ticket médio</span><strong>' + brl(db.vendas.length ? tot / db.vendas.length : 0) + "</strong></div>" +
+      FORMAS.map(function (f) { return '<div class="card"><span>' + f[1] + "</span><strong>" + brl(porForma[f[0]] || 0) + "</strong></div>"; }).join("") + "</div>" +
+      '<table class="grade"><thead><tr><th>Nº</th><th>Hora</th><th>Itens</th><th>Pagamento</th><th>Cliente</th><th class="n">Total</th><th class="acoes"></th></tr></thead><tbody>' +
+      vs.map(function (v) { var c = v.cli && cli(v.cli); return "<tr><td>" + v.n + "</td><td>" + new Date(v.t).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }) + "</td><td>" + v.itens.length + '</td><td><span class="pill ' + (v.forma === "fiado" ? "alerta" : "") + '">' + nomeForma(v.forma) + "</span></td><td>" + (c ? esc(c.nome) : "—") + '</td><td class="n"><b>' + brl(v.total) + '</b></td><td class="acoes"><button data-cupom="' + v.n + '">Cupom</button></td></tr>'; }).join("") +
+      "</tbody></table>" + (vs.length ? "" : '<p class="info">Nenhuma venda ainda hoje.</p>');
+    $("#fechar").addEventListener("click", function () {
+      var din = porForma.dinheiro || 0, rec = db.clientes.reduce(function (s, c) { return s + c.mov.filter(function (m) { return m.v < 0 && new Date(m.t).toDateString() === hojeChave && /dinheiro/i.test(m.d); }).reduce(function (a, m) { return a - m.v; }, 0); }, 0);
+      fechEsperado = FUNDO + din + rec;
+      $("#fc-tab").innerHTML = "<tbody><tr><td>Fundo de troco</td><td class=\"n\">" + brl(FUNDO) + "</td></tr><tr><td>Vendas em dinheiro</td><td class=\"n\">" + brl(din) + "</td></tr><tr><td>Fiado recebido em dinheiro</td><td class=\"n\">" + brl(rec) + "</td></tr><tr><td><b>Deve ter na gaveta</b></td><td class=\"n\"><b>" + brl(fechEsperado) + "</b></td></tr><tr><td>Pix, cartões (conferir no banco)</td><td class=\"n\">" + brl((porForma.pix || 0) + (porForma.debito || 0) + (porForma.credito || 0)) + "</td></tr><tr><td>Vendido fiado hoje</td><td class=\"n\">" + brl(porForma.fiado || 0) + "</td></tr></tbody>";
+      $("#fc-cont").value = ""; $("#fc-dif").hidden = true; $("#d-fecha").showModal(); $("#fc-cont").focus();
+    });
+  }
+  var fechEsperado = 0;
+  $("#fc-cont").addEventListener("input", function () {
+    var v = num(this.value), el = $("#fc-dif");
+    if (isNaN(v)) { el.hidden = true; return; }
+    var d = Math.round((v - fechEsperado) * 100) / 100; el.hidden = false; el.classList.toggle("falta", d < 0);
+    el.innerHTML = d === 0 ? "<span>Caixa bateu certinho</span><span>✓</span>" : "<span>" + (d > 0 ? "Sobrando" : "Faltando") + '</span><span class="grande">' + brl(Math.abs(d)) + "</span>";
+  });
+
+  /* ---------- Clientes e fiado ---------- */
+  function vClientes() {
+    var total = db.clientes.reduce(function (s, c) { return s + Math.max(saldo(c), 0); }, 0);
+    $("#barra").innerHTML = '<h1>Clientes e fiado</h1><span class="pill alerta">Total na caderneta: ' + brl(total) + '</span><span class="espaco"></span><button class="btn pri" id="novo-cli">Novo cliente</button>';
+    $("#conteudo").innerHTML = '<table class="grade"><thead><tr><th>Nome</th><th>Telefone</th><th class="n">Limite</th><th class="n">Deve</th><th>Compra mais antiga em aberto</th><th class="acoes"></th></tr></thead><tbody>' +
+      db.clientes.slice().sort(function (a, b) { return saldo(b) - saldo(a); }).map(function (c) {
+        var s = saldo(c), compras = c.mov.filter(function (m) { return m.v > 0; }), antiga = s > 0 && compras.length ? compras[0].t : 0, dias = antiga ? Math.floor((Date.now() - antiga) / 86400000) : 0;
+        return "<tr><td><b>" + esc(c.nome) + "</b></td><td>" + esc(c.tel) + '</td><td class="n">' + brl(c.lim) + '</td><td class="n">' + (s > 0 ? "<b>" + brl(s) + "</b>" : "—") + "</td><td>" + (antiga ? new Date(antiga).toLocaleDateString("pt-BR") + ' <span class="pill ' + (dias > 15 ? "ruim" : "") + '">' + dias + " dias</span>" : "") + '</td><td class="acoes">' + (s > 0 ? '<button data-receber="' + c.id + '">Receber</button><button data-cobrar="' + c.id + '">Mensagem de cobrança</button>' : '<button data-receber="' + c.id + '">Caderneta</button>') + "</td></tr>";
+      }).join("") + "</tbody></table>";
+    $("#novo-cli").addEventListener("click", function () { $("#nc-nome").value = ""; $("#nc-tel").value = ""; $("#nc-lim").value = "200"; $("#nc-erro").textContent = ""; $("#d-novo-cli").showModal(); $("#nc-nome").focus(); });
+  }
+  $("#f-novo-cli").addEventListener("submit", function (e) {
+    if (e.submitter && e.submitter.value !== "ok") return;
+    var n = $("#nc-nome").value.trim(), l = num($("#nc-lim").value);
+    if (!n || isNaN(l)) { e.preventDefault(); $("#nc-erro").textContent = "Preencha o nome e o limite."; return; }
+    db.clientes.push({ id: "c" + Date.now(), nome: n, tel: $("#nc-tel").value.trim(), lim: l, mov: [] }); salvar(); render(); aviso("Cliente cadastrado.");
+  });
+  var recCli = null;
+  document.addEventListener("click", function (e) {
+    var t;
+    if ((t = e.target.closest("[data-receber]"))) {
+      recCli = cli(t.dataset.receber); var s = saldo(recCli);
+      $("#rc-tit").textContent = "Caderneta de " + recCli.nome;
+      $("#rc-hist").innerHTML = '<table class="grade"><tbody>' + recCli.mov.slice().reverse().map(function (m) { return "<tr><td>" + new Date(m.t).toLocaleDateString("pt-BR") + "</td><td>" + esc(m.d) + '</td><td class="n" style="color:' + (m.v < 0 ? "var(--ok)" : "inherit") + '">' + (m.v < 0 ? "−" : "") + brl(Math.abs(m.v)) + "</td></tr>"; }).join("") + '<tr><td colspan="2"><b>Saldo devedor</b></td><td class="n"><b>' + brl(s) + "</b></td></tr></tbody></table>";
+      $("#rc-val").value = s > 0 ? String(s.toFixed(2)).replace(".", ",") : ""; $("#rc-erro").textContent = "";
+      $("#d-receber").showModal(); $("#rc-val").select();
+    } else if ((t = e.target.closest("[data-cobrar]"))) {
+      var c = cli(t.dataset.cobrar);
+      var msg = "Oi, " + c.nome.replace(/^(Seu|Dona) /, "").split(" ")[0] + "! Aqui é do Empório Dona Cida. Seu saldo na caderneta está em " + brl(saldo(c)) + ". Quando puder passar aqui, a gente acerta. Obrigada!";
+      (navigator.clipboard ? navigator.clipboard.writeText(msg) : Promise.reject()).then(function () { aviso("Mensagem copiada. Na versão real, ela abre direto no WhatsApp do cliente."); }, function () { aviso(msg); });
+    } else if ((t = e.target.closest("[data-cupom]"))) {
+      mostrarCupom(db.vendas.filter(function (v) { return v.n === +t.dataset.cupom; })[0]);
+    } else if ((t = e.target.closest("[data-rm]"))) { venda.itens.splice(+t.dataset.rm, 1); desenharItens(); $("#leitor").focus(); }
+    else if (e.target.closest("[data-cli]")) abrirCli();
+    else if (e.target.closest("[data-finalizar]")) abrirPagamento();
+    else if (e.target.closest("[data-tirar]")) tirarUltimo();
+    else if (e.target.closest("[data-cancelar]")) cancelarVenda();
+  });
+  $("#f-receber").addEventListener("submit", function (e) {
+    if (e.submitter && e.submitter.value !== "ok") return;
+    var v = num($("#rc-val").value), s = saldo(recCli);
+    if (!(v > 0) || v > s + 0.001) { e.preventDefault(); $("#rc-erro").textContent = s > 0 ? "Informe um valor entre R$ 0,01 e " + brl(s) + "." : "Este cliente não tem saldo em aberto."; return; }
+    recCli.mov.push({ t: Date.now(), v: -v, d: "Pagamento (" + $("#rc-forma").value.toLowerCase() + ")" }); salvar(); render();
+    aviso("Recebido " + brl(v) + " de " + recCli.nome + ". Saldo: " + brl(saldo(recCli)) + ".");
+  });
+
+  /* ---------- Produtos ---------- */
+  var buscaProd = "";
+  function vProdutos() {
+    $("#barra").innerHTML = '<h1>Produtos e preços</h1><input class="busca" id="bp" placeholder="Consultar preço" value="' + esc(buscaProd) + '">';
+    var q = sem(buscaProd);
+    $("#conteudo").innerHTML = '<table class="grade"><thead><tr><th>Código</th><th>Descrição</th><th>Unidade</th><th class="n">Preço</th></tr></thead><tbody>' +
+      PRODUTOS.filter(function (p) { return !q || sem(p.nome).indexOf(q) >= 0 || p.cod.indexOf(buscaProd) === 0; }).map(function (p) { return "<tr><td>" + p.cod + "</td><td>" + esc(p.nome) + "</td><td>" + p.un + '</td><td class="n">' + brl(p.preco) + "</td></tr>"; }).join("") + "</tbody></table>" +
+      '<p class="info" style="margin-top:10px">Os preços e o estoque podem vir do mesmo cadastro do programa de estoque.</p>';
+    var b = $("#bp"); b.addEventListener("input", function () { buscaProd = b.value; var p = b.selectionStart; render(); var n = $("#bp"); n.focus(); n.setSelectionRange(p, p); });
+  }
+
+  function render() {
+    document.querySelectorAll(".lado [data-v]").forEach(function (b) { b.setAttribute("aria-current", b.dataset.v === vista); });
+    ({ pdv: vPdv, vendas: vVendas, clientes: vClientes, produtos: vProdutos })[vista]();
+    $("#n-vendas").textContent = db.vendas.length;
+    var dev = db.clientes.filter(function (c) { return saldo(c) > 0; }).length;
+    $("#n-fiado").textContent = dev; $("#n-fiado").className = dev ? "alerta" : "";
+    $("#st-2").textContent = "Hoje: " + db.vendas.length + " vendas · " + brl(db.vendas.reduce(function (s, v) { return s + v.total; }, 0));
+  }
+  document.querySelector(".lado").addEventListener("click", function (e) { var b = e.target.closest("[data-v]"); if (b) { vista = b.dataset.v; render(); } });
+
+  document.addEventListener("keydown", function (e) {
+    if (document.querySelector("dialog[open]")) return;
+    if (vista !== "pdv" && ["F6", "F8", "F12"].indexOf(e.key) >= 0) { vista = "pdv"; render(); }
+    if (e.key === "F12") { e.preventDefault(); abrirPagamento(); }
+    else if (e.key === "F8") { e.preventDefault(); tirarUltimo(); }
+    else if (e.key === "F6") { e.preventDefault(); abrirCli(); }
+    else if (e.key === "Escape" && vista === "pdv") { var s = $("#sug"); if (s && !s.hidden) s.hidden = true; else cancelarVenda(); }
+  });
+
+  document.addEventListener("click", function (e) { var b = e.target.closest("[data-fechar]"); if (b) b.closest("dialog").close(); });
+  function aviso(t) { var el = $("#toast"); el.textContent = t; el.classList.add("on"); clearTimeout(aviso.t); aviso.t = setTimeout(function () { el.classList.remove("on"); }, 3200); }
+  function relogio() { $("#relogio").textContent = new Date().toLocaleString("pt-BR", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" }); }
+  setInterval(relogio, 30000); relogio();
+  document.querySelectorAll(".wa").forEach(function (a) { a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(a.dataset.msg); a.target = "_blank"; a.rel = "noopener"; });
+  render();
+})();
+</script>
+</body>
+</html>

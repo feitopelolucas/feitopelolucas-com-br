@@ -6,6 +6,13 @@
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "8787", "--directory", "feitopelolucas/public"],
       "port": 8787
+    },
+    {
+      "name": "site-alt",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8797", "--directory", "feitopelolucas/public"],
+      "port": 8797,
+      "autoPort": false
     }
   ]
 }

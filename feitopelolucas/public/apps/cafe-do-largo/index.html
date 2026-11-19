@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Café do Largo · Cartão fidelidade</title>
+<meta name="description" content="Aplicativo de demonstração: cartão fidelidade de uma cafeteria, instalável no celular.">
+<meta name="theme-color" content="#2b1d16">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Café do Largo">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+  :root{--fundo:#efe4d3;--papel:#fbf6ee;--cafe:#2b1d16;--cafe2:#4a3226;--ouro:#c98f2a;--ouro2:#e8b04a;--texto:#2b1d16;--suave:#7a6455;--fio:#e2d4c0;--ok:#3f7a4f}
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html,body{margin:0;height:100%}
+  body{background:#d9cbb6;color:var(--texto);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+  button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+  :focus-visible{outline:3px solid var(--ouro);outline-offset:2px}
+  .app{max-width:440px;min-height:100%;margin:0 auto;background:var(--fundo);display:flex;flex-direction:column;box-shadow:0 0 60px -20px rgba(43,29,22,.5)}
+  .demo{background:#000;color:#d8cfc6;font-size:.74rem;text-align:center;padding:6px 12px}
+  .demo a{color:var(--ouro2);font-weight:700;text-decoration:none;white-space:nowrap}
+
+  header{background:var(--cafe);color:var(--papel);padding:18px 20px 22px;padding-top:max(18px,env(safe-area-inset-top))}
+  .topo{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .marca{font-family:Georgia,serif;font-size:1.35rem;letter-spacing:.01em}
+  .marca small{display:block;font-family:system-ui,sans-serif;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#bfa58c}
+  .instalar{background:var(--ouro2);color:var(--cafe);font-weight:700;font-size:.82rem;padding:8px 14px;border-radius:99px}
+  .ola{margin:18px 0 0;font-size:1.05rem;color:#e9dccb}
+  .ola b{color:#fff}
+
+  main{flex:1;padding:18px 16px 96px}
+  .tela{display:grid;gap:16px}
+
+  .cartao{background:var(--papel);border-radius:18px;padding:20px;box-shadow:0 14px 30px -22px rgba(43,29,22,.7);border:1px solid var(--fio);position:relative;overflow:hidden}
+  .cartao::after{content:"";position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;border:12px dashed rgba(201,143,42,.18)}
+  .cartao h2{margin:0;font-family:Georgia,serif;font-weight:400;font-size:1.25rem}
+  .cartao p{margin:4px 0 0;color:var(--suave);font-size:.92rem}
+  .selos{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0 6px}
+  .selo{aspect-ratio:1;border-radius:50%;border:2px dashed #cdb89c;display:grid;place-items:center;color:#cdb89c;font-size:.8rem;font-weight:700}
+  .selo.cheio{border:0;background:var(--cafe);color:var(--ouro2)}
+  .selo.cheio svg{width:56%;height:56%}
+  .selo.novo{animation:carimbo .5s cubic-bezier(.2,1.6,.4,1)}
+  .selo.premio{border-color:var(--ouro);color:var(--ouro)}
+  @keyframes carimbo{0%{transform:scale(1.8) rotate(-18deg);opacity:0}100%{transform:none;opacity:1}}
+  .barra{height:8px;border-radius:9px;background:var(--fio);overflow:hidden;margin-top:14px}
+  .barra i{display:block;height:100%;background:linear-gradient(90deg,var(--ouro),var(--ouro2));transition:width .4s}
+  .falta{display:flex;justify-content:space-between;font-size:.85rem;color:var(--suave);margin-top:8px}
+
+  .premio-box{background:linear-gradient(135deg,#3b281e,#2b1d16);color:var(--papel);border-radius:18px;padding:20px;display:grid;gap:12px}
+  .premio-box h3{margin:0;font-family:Georgia,serif;font-weight:400;font-size:1.3rem;color:var(--ouro2)}
+  .premio-box p{margin:0;color:#e3d4c2;font-size:.92rem}
+
+  .codigo{background:var(--papel);border:1px solid var(--fio);border-radius:18px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .codigo span{font-size:.82rem;color:var(--suave)}
+  .codigo strong{display:block;font-family:ui-monospace,Consolas,monospace;font-size:1.9rem;letter-spacing:.18em;color:var(--cafe)}
+  .codigo svg{width:58px;height:58px;flex:none}
+
+  .btn{display:block;width:100%;text-align:center;padding:14px 18px;border-radius:14px;font-weight:700;background:var(--cafe);color:var(--papel)}
+  .btn.ouro{background:var(--ouro2);color:var(--cafe)}
+  .btn.linha{background:transparent;border:1.5px dashed var(--suave);color:var(--suave);font-weight:600;font-size:.9rem}
+  .nota{font-size:.8rem;color:var(--suave);text-align:center;margin:-6px 0 0}
+
+  .lista{background:var(--papel);border:1px solid var(--fio);border-radius:18px;overflow:hidden}
+  .lista h2{margin:0;padding:16px 18px 6px;font-family:Georgia,serif;font-weight:400;font-size:1.15rem}
+  .item{display:flex;gap:14px;align-items:center;padding:13px 18px;border-top:1px solid var(--fio)}
+  .item:first-of-type{border-top:0}
+  .ico{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;flex:none;background:var(--fundo);color:var(--cafe2)}
+  .ico svg{width:20px;height:20px}
+  .ico.ouro{background:#f6e3bd;color:#8a5d12}
+  .item div{flex:1;min-width:0}
+  .item b{display:block;font-size:.95rem}
+  .item small{color:var(--suave);font-size:.82rem}
+  .vazio{padding:18px;color:var(--suave);font-size:.92rem}
+
+  .nov{background:var(--papel);border:1px solid var(--fio);border-radius:18px;padding:18px}
+  .nov .tag{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ouro);font-weight:700}
+  .nov h3{margin:6px 0 4px;font-family:Georgia,serif;font-weight:400;font-size:1.2rem}
+  .nov p{margin:0;color:var(--suave);font-size:.92rem}
+  .horario{display:grid;grid-template-columns:1fr auto;gap:6px 12px;font-size:.92rem;margin-top:10px}
+  .horario .hoje{font-weight:700;color:var(--cafe)}
+
+  nav.abas{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:440px;background:var(--papel);border-top:1px solid var(--fio);display:grid;grid-template-columns:repeat(3,1fr);padding-bottom:env(safe-area-inset-bottom);z-index:5}
+  nav.abas button{padding:10px 0 12px;display:grid;justify-items:center;gap:3px;font-size:.74rem;color:var(--suave);font-weight:600}
+  nav.abas svg{width:24px;height:24px}
+  nav.abas button[aria-selected="true"]{color:var(--cafe)}
+  nav.abas button[aria-selected="true"] svg{color:var(--ouro)}
+
+  .boas{position:fixed;inset:0;background:var(--cafe);color:var(--papel);display:grid;place-items:center;padding:28px;z-index:20}
+  .boas form{max-width:340px;width:100%;display:grid;gap:14px;text-align:center}
+  .boas img{width:96px;height:96px;border-radius:24px;margin:0 auto 6px}
+  .boas h1{margin:0;font-family:Georgia,serif;font-weight:400;font-size:2rem}
+  .boas p{margin:0;color:#d8c6b2}
+  .boas input{width:100%;padding:14px 16px;border-radius:12px;border:0;font:inherit;text-align:center;background:var(--papel);color:var(--cafe)}
+
+  .toast{position:fixed;left:50%;bottom:92px;transform:translate(-50%,20px);background:var(--cafe);color:var(--papel);padding:12px 18px;border-radius:12px;font-size:.92rem;opacity:0;transition:.25s;pointer-events:none;z-index:30;max-width:90%;text-align:center}
+  .toast.on{opacity:1;transform:translate(-50%,0)}
+  .voucher{position:fixed;inset:0;background:rgba(20,12,8,.7);display:grid;place-items:center;padding:24px;z-index:25}
+  .voucher div{background:var(--papel);border-radius:22px;padding:26px 22px;max-width:340px;width:100%;text-align:center;display:grid;gap:10px}
+  .voucher h3{margin:0;font-family:Georgia,serif;font-weight:400;font-size:1.5rem}
+  .voucher strong{font-family:ui-monospace,Consolas,monospace;font-size:2.2rem;letter-spacing:.15em;background:var(--fundo);border:2px dashed var(--ouro);border-radius:14px;padding:12px}
+  .voucher p{margin:0;color:var(--suave);font-size:.9rem}
+  .dica{background:#f6e3bd;color:#5f400c;border-radius:14px;padding:12px 14px;font-size:.86rem}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="demo">Aplicativo de demonstração. A cafeteria é fictícia e os dados ficam só neste aparelho. <a class="wa" data-msg="Olá, Lucas! Vi o aplicativo de cartão fidelidade (Café do Largo) e queria um assim para o meu negócio.">Quero um assim →</a></div>
+  <header>
+    <div class="topo">
+      <div class="marca"><small>Cartão fidelidade</small>Café do Largo</div>
+      <button class="instalar" id="instalar" hidden>Instalar</button>
+    </div>
+    <p class="ola" id="ola"></p>
+  </header>
+
+  <main>
+    <!-- CARTÃO -->
+    <section class="tela" id="t-cartao">
+      <div class="dica" id="dica-ios" hidden>Para instalar no iPhone: toque em <b>Compartilhar</b> e depois em <b>Adicionar à Tela de Início</b>.</div>
+
+      <div class="premio-box" id="premio" hidden>
+        <h3>Seu café está liberado</h3>
+        <p>Você completou o cartão. O próximo café coado ou espresso é por nossa conta.</p>
+        <button class="btn ouro" id="usar">Usar o prêmio agora</button>
+      </div>
+
+      <div class="cartao">
+        <h2>A cada 8 cafés, o próximo é nosso</h2>
+        <p>Mostre o seu código no caixa e ganhe um selo por compra.</p>
+        <div class="selos" id="selos" aria-live="polite"></div>
+        <div class="barra"><i id="barra"></i></div>
+        <div class="falta"><span id="falta"></span><span id="total"></span></div>
+      </div>
+
+      <div class="codigo">
+        <div><span>Seu código no caixa</span><strong id="cod">0000</strong></div>
+        <svg viewBox="0 0 58 58" aria-hidden="true" id="cod-grafico"></svg>
+      </div>
+
+      <button class="btn linha" id="simular">Simular uma compra no caixa</button>
+      <p class="nota">Na versão real, quem dá o selo é o atendente, pelo aplicativo do balcão.</p>
+    </section>
+
+    <!-- HISTÓRICO -->
+    <section class="tela" id="t-hist" hidden>
+      <div class="lista"><h2>Seus selos e prêmios</h2><div id="hist"></div></div>
+    </section>
+
+    <!-- NOVIDADES -->
+    <section class="tela" id="t-nov" hidden>
+      <div class="nov"><span class="tag">Toda quinta</span><h3>Bolo de fubá com goiabada</h3><p>Sai do forno às 15h. Costuma acabar antes das 17h.</p></div>
+      <div class="nov"><span class="tag">Grão da vez</span><h3>Mantiqueira, torra média</h3><p>Notas de chocolate e caramelo. Vendemos o pacote de 250 g moído na hora, do jeito que você prepara em casa.</p></div>
+      <div class="nov"><span class="tag">Horário</span><h3>Quando estamos abertos</h3><div class="horario" id="horario"></div></div>
+      <button class="btn linha" id="recomecar">Recomeçar a demonstração</button>
+    </section>
+  </main>
+
+  <nav class="abas" role="tablist">
+    <button role="tab" aria-selected="true" data-t="t-cartao"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="3"/><circle cx="8.5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="15.5" cy="12" r="1.6"/></svg>Cartão</button>
+    <button role="tab" aria-selected="false" data-t="t-hist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Histórico</button>
+    <button role="tab" aria-selected="false" data-t="t-nov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 9h11v4a5.5 5.5 0 0 1-11 0z"/><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M4 20h13"/></svg>Novidades</button>
+  </nav>
+</div>
+
+<div class="boas" id="boas" hidden>
+  <form id="f-boas">
+    <img src="icon.svg" alt="">
+    <h1>Café do Largo</h1>
+    <p>Seu cartão fidelidade, sem papel para perder. Como podemos te chamar?</p>
+    <input id="nome" autocomplete="given-name" placeholder="Seu primeiro nome" maxlength="24" required>
+    <button class="btn ouro" type="submit">Criar meu cartão</button>
+  </form>
+</div>
+
+<div class="voucher" id="voucher" hidden>
+  <div>
+    <h3>Café por nossa conta</h3>
+    <p>Mostre esta tela no caixa. O código vale por 15 minutos.</p>
+    <strong id="v-cod"></strong>
+    <p id="v-hora"></p>
+    <button class="btn" id="v-ok">Pronto, já mostrei</button>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function () {
+  var WHATSAPP = "5519996515563";
+  var META = 8;
+  var CHAVE = "cafe-do-largo";
+  var $ = function (s) { return document.querySelector(s); };
+
+  function ler() { try { return JSON.parse(localStorage.getItem(CHAVE)) || null; } catch (e) { return null; } }
+  function salvar() { try { localStorage.setItem(CHAVE, JSON.stringify(st)); } catch (e) {} }
+
+  var CUP = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 8h12v4.5A5.5 5.5 0 0 1 10.5 18h-1A5.5 5.5 0 0 1 4 12.5z"/><path d="M16 9.5h1.5a2.5 2.5 0 0 1 0 5H16" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 20.5h14" stroke="currentColor" stroke-width="1.8"/></svg>';
+  var ICO_SELO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M8.5 12.5l2.3 2.3 4.7-5"/></svg>';
+  var ICO_PREMIO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 10h14v10H5zM3 7h18v3H3zM12 7v13M12 7c-2-4-6-3-5 0M12 7c2-4 6-3 5 0"/></svg>';
+
+  // Estado inicial de exemplo: um cliente que já veio algumas vezes.
+  function exemplo(nome) {
+    var agora = Date.now(), dia = 86400000;
+    return {
+      nome: nome,
+      codigo: String(1000 + Math.floor(Math.random() * 9000)),
+      eventos: [
+        { t: "selo", d: agora - 19 * dia }, { t: "selo", d: agora - 15 * dia }, { t: "selo", d: agora - 11 * dia },
+        { t: "selo", d: agora - 6 * dia }, { t: "selo", d: agora - 2 * dia },
+      ],
+    };
+  }
+
+  var st = ler();
+
+  function contagem() {
+    var selos = st.eventos.filter(function (e) { return e.t === "selo"; }).length;
+    var usados = st.eventos.filter(function (e) { return e.t === "premio"; }).length;
+    var noCartao = selos - usados * META;
+    return { selos: selos, usados: usados, noCartao: Math.min(noCartao, META), premio: noCartao >= META };
+  }
+
+  function quando(ms) {
+    var d = new Date(ms), hoje = new Date();
+    var dias = Math.round((new Date(hoje.toDateString()) - new Date(d.toDateString())) / 86400000);
+    var h = d.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
+    if (dias === 0) return "Hoje, " + h;
+    if (dias === 1) return "Ontem, " + h;
+    return d.toLocaleDateString("pt-BR", { day: "numeric", month: "short" }) + ", " + h;
+  }
+
+  // Desenho simples do código, só para o caixa reconhecer de longe.
+  function grafico(cod) {
+    var s = "", n = parseInt(cod, 10);
+    for (var i = 0; i < 25; i++) {
+      var liga = ((n >> (i % 13)) ^ (i * 7)) & 1;
+      if (i % 6 === 0) liga = 1;
+      if (liga) s += '<rect x="' + (4 + (i % 5) * 10) + '" y="' + (4 + Math.floor(i / 5) * 10) + '" width="9" height="9" rx="2" fill="#2b1d16"/>';
+    }
+    return s;
+  }
+
+  function desenhar(novo) {
+    var c = contagem();
+    $("#ola").innerHTML = "Olá, <b>" + st.nome.replace(/[<>&]/g, "") + "</b>. " + (c.premio ? "Tem café de graça te esperando." : "Bom te ver de novo.");
+    var h = "";
+    for (var i = 0; i < META; i++) {
+      if (i < c.noCartao) h += '<div class="selo cheio' + (novo && i === c.noCartao - 1 ? " novo" : "") + '" aria-label="Selo ' + (i + 1) + '">' + CUP + "</div>";
+      else h += '<div class="selo' + (i === META - 1 ? " premio" : "") + '">' + (i === META - 1 ? "grátis" : i + 1) + "</div>";
+    }
+    $("#selos").innerHTML = h;
+    $("#barra").style.width = (c.noCartao / META) * 100 + "%";
+    var faltam = META - c.noCartao;
+    $("#falta").textContent = c.premio ? "Cartão completo" : "Faltam " + faltam + (faltam === 1 ? " café" : " cafés");
+    $("#total").textContent = c.selos + " cafés no total";
+    $("#premio").hidden = !c.premio;
+    $("#simular").hidden = c.premio;
+    $("#cod").textContent = st.codigo;
+    $("#cod-grafico").innerHTML = grafico(st.codigo);
+
+    var ev = st.eventos.slice().reverse();
+    $("#hist").innerHTML = ev.length ? ev.map(function (e) {
+      return e.t === "selo"
+        ? '<div class="item"><span class="ico">' + ICO_SELO + "</span><div><b>Selo recebido</b><small>" + quando(e.d) + "</small></div></div>"
+        : '<div class="item"><span class="ico ouro">' + ICO_PREMIO + "</span><div><b>Café grátis usado</b><small>" + quando(e.d) + " · código " + e.c + "</small></div></div>";
+    }).join("") : '<p class="vazio">Nenhum selo ainda.</p>';
+  }
+
+  function horario() {
+    var dias = [["Domingo", "Fechado"], ["Segunda", "7h às 19h"], ["Terça", "7h às 19h"], ["Quarta", "7h às 19h"], ["Quinta", "7h às 19h"], ["Sexta", "7h às 19h"], ["Sábado", "8h às 14h"]];
+    var hoje = new Date().getDay();
+    $("#horario").innerHTML = [1, 2, 3, 4, 5, 6, 0].map(function (i) {
+      var c = i === hoje ? ' class="hoje"' : "";
+      return "<span" + c + ">" + dias[i][0] + (i === hoje ? " (hoje)" : "") + "</span><span" + c + ">" + dias[i][1] + "</span>";
+    }).join("");
+  }
+
+  function aviso(t) {
+    var el = $("#toast"); el.textContent = t; el.classList.add("on");
+    clearTimeout(aviso.t); aviso.t = setTimeout(function () { el.classList.remove("on"); }, 2600);
+  }
+
+  $("#simular").addEventListener("click", function () {
+    st.eventos.push({ t: "selo", d: Date.now() }); salvar();
+    var c = contagem();
+    desenhar(true);
+    if (navigator.vibrate) navigator.vibrate(30);
+    aviso(c.premio ? "Cartão completo! O próximo café é grátis." : "Selo recebido. Faltam " + (META - c.noCartao) + ".");
+  });
+
+  $("#usar").addEventListener("click", function () {
+    var cod = "CL-" + String(100 + Math.floor(Math.random() * 900));
+    var ate = new Date(Date.now() + 15 * 60000);
+    $("#v-cod").textContent = cod;
+    $("#v-hora").textContent = "Válido até " + ate.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
+    $("#voucher").hidden = false;
+    st.eventos.push({ t: "premio", d: Date.now(), c: cod }); salvar();
+  });
+  $("#v-ok").addEventListener("click", function () { $("#voucher").hidden = true; desenhar(); aviso("Bom café! Seu cartão novo já começou."); });
+
+  $("#recomecar").addEventListener("click", function () {
+    try { localStorage.removeItem(CHAVE); } catch (e) {}
+    st = null; abrirBoasVindas();
+  });
+
+  document.querySelectorAll("nav.abas button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      document.querySelectorAll("nav.abas button").forEach(function (x) { x.setAttribute("aria-selected", x === b); });
+      document.querySelectorAll("main .tela").forEach(function (t) { t.hidden = t.id !== b.dataset.t; });
+      window.scrollTo(0, 0);
+    });
+  });
+
+  function abrirBoasVindas() { $("#boas").hidden = false; setTimeout(function () { $("#nome").focus(); }, 50); }
+  $("#f-boas").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var n = $("#nome").value.trim();
+    if (!n) return;
+    st = exemplo(n); salvar();
+    $("#boas").hidden = true;
+    document.querySelector('nav.abas button[data-t="t-cartao"]').click();
+    desenhar();
+  });
+
+  document.querySelectorAll(".wa").forEach(function (a) {
+    a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(a.dataset.msg); a.target = "_blank"; a.rel = "noopener";
+  });
+
+  // Instalação na tela inicial
+  var pedido = null;
+  window.addEventListener("beforeinstallprompt", function (e) { e.preventDefault(); pedido = e; $("#instalar").hidden = false; });
+  $("#instalar").addEventListener("click", function () {
+    if (!pedido) return;
+    pedido.prompt();
+    pedido.userChoice.finally(function () { pedido = null; $("#instalar").hidden = true; });
+  });
+  window.addEventListener("appinstalled", function () { $("#instalar").hidden = true; aviso("Aplicativo instalado na tela inicial."); });
+  var instalado = window.matchMedia("(display-mode: standalone)").matches || navigator.standalone;
+  if (/iphone|ipad|ipod/i.test(navigator.userAgent) && !instalado) $("#dica-ios").hidden = false;
+
+  if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(function () {});
+
+  horario();
+  if (st) desenhar(); else abrirBoasVindas();
+})();
+</script>
+</body>
+</html>

@@ -110,7 +110,7 @@
           <div class="cover">${cover(s)}${stamp(s)}</div>
           <div class="item-line"><h3>${esc(s.nome)}</h3><span class="price">${isSold(s) ? "—" : priceHtml(s)}</span></div>
           <p>${esc(tx(s, "resumo"))}</p>
-          <p class="meta">${esc(cat(s.categoria))}${s.exclusivo ? T().exclusivo : ""}</p>
+          <p class="meta">${esc(cat(s.categoria))}</p>
         </button>`
       )
       .join("");
@@ -122,7 +122,7 @@
   let atual = null;
   function preencher(s) {
     $("#m-media").innerHTML = cover(s) + stamp(s);
-    $("#m-meta").textContent = cat(s.categoria) + (s.exclusivo ? T().metaExclusivo : "");
+    $("#m-meta").textContent = cat(s.categoria);
     $("#m-title").textContent = s.nome;
     $("#m-desc").textContent = tx(s, "descricao") || tx(s, "resumo");
     $("#m-features").innerHTML = (tx(s, "recursos") || []).map((r) => `<li>${esc(r)}</li>`).join("");

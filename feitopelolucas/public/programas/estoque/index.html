@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estoque Fácil · Programa de controle de estoque</title>
+<meta name="description" content="Demonstração de programa para Windows: controle de estoque com entradas, saídas, estoque mínimo e lista de compras.">
+<link rel="icon" href="icone.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../programa.css">
+<style>
+  :root{--cor:#b45309;--cor2:#92400e;--cor-f:#fdf1e3}
+  .filtros{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .chk{display:inline-flex;align-items:center;gap:6px;font-size:13px}
+  .barra-est{display:flex;align-items:center;gap:8px}
+  .barra-est i{display:block;width:70px;height:6px;border-radius:3px;background:#eee;overflow:hidden}
+  .barra-est i b{display:block;height:100%}
+  .grade tr.baixo td:first-child{box-shadow:inset 3px 0 var(--ruim)}
+  .grade td b{white-space:nowrap}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .bloco h3{margin:0 0 8px;font-size:14px}
+  .barras{background:#fff;border:1px solid var(--fio);border-radius:6px;padding:12px 14px;display:grid;gap:8px}
+  .barras div{display:grid;grid-template-columns:110px 1fr 100px;gap:10px;align-items:center;font-size:13px}
+  .barras span.b{height:14px;border-radius:3px;background:var(--cor)}
+  .barras .n{text-align:right;font-variant-numeric:tabular-nums}
+  .cab-print{display:none}
+  @media print{.cab-print{display:block;margin-bottom:12px}}
+  @media (max-width:900px){.cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="demo">Demonstração no navegador de um programa para Windows. A loja e os produtos são fictícios; os dados ficam neste computador. <a class="wa" data-msg="Olá, Lucas! Vi o programa de controle de estoque (Estoque Fácil) e queria conversar sobre um para o meu negócio.">Quero um programa assim →</a></div>
+<div class="so-pc">Este é um programa de computador. Ele funciona no celular, mas foi pensado para a tela grande do balcão.</div>
+
+<div class="janela">
+  <div class="titulo"><img src="icone.svg" alt=""><span>Estoque Fácil — Elétrica e Hidráulica Santa Rita</span><i><svg viewBox="0 0 10 10"><path d="M0 5h10" stroke="currentColor"/></svg></i><i><svg viewBox="0 0 10 10"><rect x=".5" y=".5" width="9" height="9" fill="none" stroke="currentColor"/></svg></i><i><svg viewBox="0 0 10 10"><path d="M0 0l10 10M10 0L0 10" stroke="currentColor"/></svg></i></div>
+  <div class="menu"><button>Arquivo</button><button>Cadastros</button><button>Movimentação</button><button>Relatórios</button><button>Ajuda</button></div>
+  <div class="corpo">
+    <aside class="lado">
+      <h4>Estoque</h4>
+      <button data-v="produtos" aria-current="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 2.5l7 3.5v8l-7 3.5-7-3.5V6z"/><path d="M3 6l7 3.5L17 6M10 9.5v8"/></svg><span>Produtos</span><small id="n-prod"></small></button>
+      <button data-v="movs"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h11l-3-3M16 13H5l3 3"/></svg><span>Movimentações</span></button>
+      <button data-v="compras"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4h2l2 9h9l1.5-6H6"/><circle cx="8" cy="16.5" r="1.2"/><circle cx="15" cy="16.5" r="1.2"/></svg><span>Lista de compras</span><small id="n-baixo"></small></button>
+      <button data-v="relatorio"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 17V9M9 17V4M14 17v-6M2 17h16"/></svg><span>Relatório</span></button>
+    </aside>
+    <section class="area">
+      <div class="barra" id="barra"></div>
+      <div class="conteudo" id="conteudo"></div>
+    </section>
+  </div>
+  <div class="status"><span id="st-1"></span><span id="st-2"></span><span class="espaco"></span><span>F2 novo produto · F3 entrada · F4 saída · Ctrl+F buscar</span></div>
+</div>
+
+<dialog class="dlg" id="d-prod">
+  <form method="dialog" id="f-prod">
+    <div class="dlg-tit"><span id="p-tit">Produto</span><button type="button" data-fechar aria-label="Fechar">×</button></div>
+    <div class="dlg-corpo">
+      <div class="duas"><label>Código<input class="campo" id="p-cod" maxlength="12"></label><label>Categoria<select class="campo" id="p-cat"></select></label></div>
+      <label>Descrição<input class="campo" id="p-nome" maxlength="60"></label>
+      <div class="duas"><label>Unidade<select class="campo" id="p-un"><option>un</option><option>m</option><option>rolo</option><option>barra</option><option>cx</option><option>pç</option></select></label><label>Fornecedor<input class="campo" id="p-forn"></label></div>
+      <div class="duas"><label>Custo (R$)<input class="campo" id="p-custo" inputmode="decimal"></label><label>Preço de venda (R$)<input class="campo" id="p-preco" inputmode="decimal"></label></div>
+      <div class="duas"><label>Estoque mínimo<input class="campo" id="p-min" inputmode="numeric"></label><label id="lbl-ini">Quantidade inicial<input class="campo" id="p-qtd" inputmode="numeric"></label></div>
+      <p class="info" id="p-margem"></p>
+      <p class="erro" id="p-erro"></p>
+    </div>
+    <div class="dlg-pe"><button type="button" data-fechar class="btn">Cancelar</button><button class="btn pri" value="ok">Salvar</button></div>
+  </form>
+</dialog>
+
+<dialog class="dlg" id="d-mov">
+  <form method="dialog" id="f-mov">
+    <div class="dlg-tit"><span id="m-tit">Movimentação</span><button type="button" data-fechar aria-label="Fechar">×</button></div>
+    <div class="dlg-corpo">
+      <label>Tipo<select class="campo" id="m-tipo"><option value="entrada">Entrada (compra, devolução de cliente)</option><option value="saida">Saída (venda, uso, perda)</option><option value="ajuste">Ajuste de inventário (contagem)</option></select></label>
+      <label>Produto<input class="campo" id="m-prod" list="lista-prod" autocomplete="off" placeholder="Código ou descrição"></label>
+      <datalist id="lista-prod"></datalist>
+      <p class="info" id="m-atual"></p>
+      <div class="duas"><label id="lbl-q">Quantidade<input class="campo" id="m-q" inputmode="numeric"></label><label>Documento / motivo<input class="campo" id="m-obs" placeholder="Ex.: NF 4512, venda balcão"></label></div>
+      <p class="erro" id="m-erro"></p>
+    </div>
+    <div class="dlg-pe"><button type="button" data-fechar class="btn">Cancelar</button><button class="btn pri" value="ok">Lançar</button></div>
+  </form>
+</dialog>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function () {
+  var WHATSAPP = "5519996515563";
+  var CHAVE = "estoque-facil";
+  var $ = function (s) { return document.querySelector(s); };
+  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
+  var brl = function (n) { return n.toLocaleString("pt-BR", { style: "currency", currency: "BRL" }); };
+  var num = function (s) { return parseFloat(String(s).replace(/\./g, "").replace(",", ".")); };
+  var sem = function (s) { return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); };
+  var CATS = ["Elétrica", "Hidráulica", "Iluminação", "Ferramentas"];
+  var DIA = 86400000;
+
+  function exemplo() {
+    var P = [
+      ["EL001", "Fio flexível 2,5 mm² azul", "Elétrica", "rolo", 189, 259, 6, 9, "Cabos Paulista"],
+      ["EL002", "Fio flexível 4 mm² preto", "Elétrica", "rolo", 298, 399, 3, 2, "Cabos Paulista"],
+      ["EL003", "Disjuntor DIN 20 A", "Elétrica", "un", 11.4, 19.9, 20, 34, "Distribuidora Volt"],
+      ["EL004", "Disjuntor DIN 32 A", "Elétrica", "un", 12.9, 22.9, 15, 8, "Distribuidora Volt"],
+      ["EL005", "Tomada 2P+T 10 A com placa", "Elétrica", "un", 6.8, 13.5, 30, 52, "Distribuidora Volt"],
+      ["EL006", "Interruptor simples com placa", "Elétrica", "un", 5.9, 11.9, 30, 41, "Distribuidora Volt"],
+      ["EL007", "Fita isolante 20 m", "Elétrica", "un", 4.2, 8.9, 24, 11, "Distribuidora Volt"],
+      ["EL008", "Chuveiro elétrico 5500 W", "Elétrica", "un", 68, 109, 4, 7, "Lorenzetti (representante)"],
+      ["HI001", "Tubo PVC soldável 25 mm (6 m)", "Hidráulica", "barra", 21.5, 34.9, 15, 22, "Tubos Campinas"],
+      ["HI002", "Joelho 90° soldável 25 mm", "Hidráulica", "un", 0.9, 2.2, 60, 140, "Tubos Campinas"],
+      ["HI003", "Registro de gaveta 3/4\"", "Hidráulica", "un", 32, 54.9, 6, 4, "Tubos Campinas"],
+      ["HI004", "Adesivo para PVC 175 g", "Hidráulica", "un", 11, 19.5, 12, 18, "Tubos Campinas"],
+      ["HI005", "Fita veda-rosca 18 mm x 25 m", "Hidráulica", "un", 3.1, 6.9, 30, 26, "Tubos Campinas"],
+      ["HI006", "Torneira de jardim 1/2\"", "Hidráulica", "un", 14, 26.9, 8, 13, "Tubos Campinas"],
+      ["IL001", "Lâmpada LED bulbo 9 W", "Iluminação", "un", 5.4, 11.9, 40, 63, "Luz & Cia"],
+      ["IL002", "Lâmpada LED bulbo 15 W", "Iluminação", "un", 8.9, 17.9, 25, 19, "Luz & Cia"],
+      ["IL003", "Plafon LED sobrepor 18 W", "Iluminação", "un", 22, 42.9, 8, 12, "Luz & Cia"],
+      ["IL004", "Refletor LED 50 W", "Iluminação", "un", 39, 69.9, 5, 0, "Luz & Cia"],
+      ["FE001", "Alicate universal 8\"", "Ferramentas", "un", 24, 44.9, 4, 6, "Ferramentas Tatuí"],
+      ["FE002", "Chave de teste neon", "Ferramentas", "un", 4.5, 9.9, 10, 15, "Ferramentas Tatuí"],
+      ["FE003", "Trena 5 m", "Ferramentas", "un", 12, 24.9, 6, 9, "Ferramentas Tatuí"],
+    ];
+    var prods = P.map(function (p) { return { cod: p[0], nome: p[1], cat: p[2], un: p[3], custo: p[4], preco: p[5], min: p[6], qtd: p[7], forn: p[8] }; });
+    var movs = [], agora = Date.now();
+    prods.forEach(function (p, i) {
+      for (var k = 0; k < 6; k++) {
+        var dias = ((i * 7 + k * 11) % 58) + 1, saida = (i + k) % 3 !== 0;
+        var q = saida ? 1 + ((i + k * 3) % 4) : Math.max(p.min, 5);
+        if (p.cod === "IL002" || p.cod === "FE003") { if (k > 1) continue; dias = 70 + k * 9; }
+        movs.push({ t: agora - dias * DIA - k * 3600000, cod: p.cod, tipo: saida ? "saida" : "entrada", q: q, obs: saida ? "Venda balcão" : "NF " + (4100 + i * 6 + k) });
+      }
+    });
+    movs.sort(function (a, b) { return a.t - b.t; });
+    return { prods: prods, movs: movs };
+  }
+
+  var db; try { db = JSON.parse(localStorage.getItem(CHAVE)); } catch (e) {}
+  if (!db) db = exemplo();
+  function salvar() { try { localStorage.setItem(CHAVE, JSON.stringify(db)); } catch (e) {} }
+
+  var vista = "produtos", busca = "", catF = "", soBaixo = false;
+  var prod = function (cod) { return db.prods.filter(function (p) { return p.cod === cod; })[0]; };
+  var baixo = function (p) { return p.qtd <= p.min; };
+  var sugerido = function (p) { return Math.max(p.min * 2 - p.qtd, 0); };
+  function situacao(p) {
+    if (p.qtd === 0) return '<span class="pill ruim">Em falta</span>';
+    if (baixo(p)) return '<span class="pill alerta">Abaixo do mínimo</span>';
+    return '<span class="pill ok">Ok</span>';
+  }
+  function barraEst(p) {
+    var f = Math.min(p.qtd / (p.min * 3 || 1), 1), cor = p.qtd === 0 || baixo(p) ? (p.qtd === 0 ? "#b42318" : "#d68a00") : "#1e7d4f";
+    return '<span class="barra-est"><i><b style="width:' + Math.max(f * 100, 3) + "%;background:" + cor + '"></b></i></span>';
+  }
+  function ultimaSaida(cod) { var m = db.movs.filter(function (x) { return x.cod === cod && x.tipo === "saida"; }); return m.length ? m[m.length - 1].t : 0; }
+
+  function vProdutos() {
+    $("#barra").innerHTML = '<h1>Produtos</h1><div class="filtros"><input class="busca" id="busca" placeholder="Buscar código ou descrição (Ctrl+F)" value="' + esc(busca) + '"><select class="campo" id="cat" style="width:auto"><option value="">Todas as categorias</option>' + CATS.map(function (c) { return "<option" + (c === catF ? " selected" : "") + ">" + c + "</option>"; }).join("") + '</select><label class="chk"><input type="checkbox" id="baixo"' + (soBaixo ? " checked" : "") + "> Só abaixo do mínimo</label></div>" +
+      '<span class="espaco"></span><button class="btn" data-mov="entrada">Entrada <kbd>F3</kbd></button><button class="btn" data-mov="saida">Saída <kbd>F4</kbd></button><button class="btn pri" data-novo>Novo produto <kbd>F2</kbd></button>';
+    var q = sem(busca);
+    var lista = db.prods.filter(function (p) { return (!q || sem(p.cod + " " + p.nome).indexOf(q) >= 0) && (!catF || p.cat === catF) && (!soBaixo || baixo(p)); });
+    $("#conteudo").innerHTML = '<table class="grade"><thead><tr><th>Código</th><th>Descrição</th><th>Categoria</th><th class="n">Estoque</th><th></th><th class="n">Mínimo</th><th class="n">Custo</th><th class="n">Preço</th><th class="n">Valor em estoque</th><th>Situação</th><th class="acoes"></th></tr></thead><tbody>' +
+      lista.map(function (p) {
+        return '<tr class="' + (baixo(p) ? "baixo" : "") + '"><td>' + esc(p.cod) + "</td><td><b>" + esc(p.nome) + "</b></td><td>" + p.cat + '</td><td class="n">' + p.qtd + " " + p.un + "</td><td>" + barraEst(p) + '</td><td class="n">' + p.min + '</td><td class="n">' + brl(p.custo) + '</td><td class="n">' + brl(p.preco) + '</td><td class="n">' + brl(p.custo * p.qtd) + "</td><td>" + situacao(p) + '</td><td class="acoes"><button data-mov="entrada" data-cod="' + p.cod + '">+ Entrada</button><button data-mov="saida" data-cod="' + p.cod + '">− Saída</button><button data-editar="' + p.cod + '">Editar</button></td></tr>';
+      }).join("") + "</tbody></table>" + (lista.length ? "" : '<p class="info">Nenhum produto com esses filtros.</p>');
+    var b = $("#busca");
+    b.addEventListener("input", function () { busca = b.value; var pos = b.selectionStart; render(); var nb = $("#busca"); nb.focus(); nb.setSelectionRange(pos, pos); });
+    $("#cat").addEventListener("change", function () { catF = this.value; render(); });
+    $("#baixo").addEventListener("change", function () { soBaixo = this.checked; render(); });
+  }
+
+  function vMovs() {
+    $("#barra").innerHTML = '<h1>Movimentações</h1><span class="pill">Últimos 90 dias</span><span class="espaco"></span><button class="btn" data-mov="entrada">Entrada <kbd>F3</kbd></button><button class="btn" data-mov="saida">Saída <kbd>F4</kbd></button><button class="btn" data-mov="ajuste">Ajuste de inventário</button>';
+    var lim = Date.now() - 90 * DIA;
+    var lista = db.movs.filter(function (m) { return m.t >= lim; }).slice().reverse();
+    var nomes = { entrada: '<span class="pill ok">Entrada</span>', saida: '<span class="pill azul">Saída</span>', ajuste: '<span class="pill alerta">Ajuste</span>' };
+    $("#conteudo").innerHTML = '<table class="grade"><thead><tr><th>Data</th><th>Tipo</th><th>Código</th><th>Produto</th><th class="n">Quantidade</th><th>Documento / motivo</th></tr></thead><tbody>' +
+      lista.map(function (m) {
+        var p = prod(m.cod) || { nome: "(excluído)", un: "" };
+        var q = m.tipo === "ajuste" ? (m.q >= 0 ? "+" : "") + m.q : m.tipo === "saida" ? "−" + m.q : "+" + m.q;
+        return "<tr><td>" + new Date(m.t).toLocaleString("pt-BR", { day: "2-digit", month: "2-digit", year: "2-digit", hour: "2-digit", minute: "2-digit" }) + "</td><td>" + nomes[m.tipo] + "</td><td>" + esc(m.cod) + "</td><td>" + esc(p.nome) + '</td><td class="n">' + q + " " + p.un + "</td><td>" + esc(m.obs) + "</td></tr>";
+      }).join("") + "</tbody></table>";
+  }
+
+  function vCompras() {
+    var lista = db.prods.filter(baixo);
+    var porForn = {};
+    lista.forEach(function (p) { (porForn[p.forn] = porForn[p.forn] || []).push(p); });
+    var total = lista.reduce(function (s, p) { return s + sugerido(p) * p.custo; }, 0);
+    $("#barra").innerHTML = '<h1>Lista de compras</h1><span class="pill">' + lista.length + " produtos abaixo do mínimo</span><span class=\"espaco\"></span><button class=\"btn\" id=\"copiar\">Copiar pedido por fornecedor</button><button class=\"btn pri\" onclick=\"window.print()\">Imprimir</button>";
+    $("#conteudo").innerHTML = '<div class="cab-print"><h2>Lista de compras — Elétrica e Hidráulica Santa Rita</h2><p>' + new Date().toLocaleDateString("pt-BR") + "</p></div>" +
+      '<p class="info nao-imprime" style="margin:0 0 12px">Quantidade sugerida = o suficiente para o estoque voltar ao dobro do mínimo. Dá para mudar a regra por produto.</p>' +
+      Object.keys(porForn).sort().map(function (f) {
+        var itens = porForn[f], sub = itens.reduce(function (s, p) { return s + sugerido(p) * p.custo; }, 0);
+        return '<h3 style="margin:14px 0 6px;font-size:14px">' + esc(f) + '</h3><table class="grade"><thead><tr><th>Código</th><th>Produto</th><th class="n">Em estoque</th><th class="n">Mínimo</th><th class="n">Comprar</th><th class="n">Custo un.</th><th class="n">Subtotal</th></tr></thead><tbody>' +
+          itens.map(function (p) { return "<tr><td>" + p.cod + "</td><td>" + esc(p.nome) + '</td><td class="n">' + p.qtd + '</td><td class="n">' + p.min + '</td><td class="n"><b>' + sugerido(p) + " " + p.un + '</b></td><td class="n">' + brl(p.custo) + '</td><td class="n">' + brl(sugerido(p) * p.custo) + "</td></tr>"; }).join("") +
+          '<tr><td colspan="6" class="n"><b>Total do fornecedor</b></td><td class="n"><b>' + brl(sub) + "</b></td></tr></tbody></table>";
+      }).join("") +
+      '<div class="cards" style="margin-top:14px"><div class="card"><span>Total estimado da compra</span><strong>' + brl(total) + "</strong></div></div>";
+    $("#copiar").addEventListener("click", function () {
+      var txt = Object.keys(porForn).sort().map(function (f) {
+        return "*" + f + "*\n" + porForn[f].map(function (p) { return "• " + sugerido(p) + " " + p.un + " — " + p.nome + " (" + p.cod + ")"; }).join("\n");
+      }).join("\n\n");
+      (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).then(function () { aviso("Pedido copiado. É só colar na conversa com cada fornecedor."); }, function () { aviso("Não foi possível copiar neste navegador."); });
+    });
+  }
+
+  function vRelatorio() {
+    var porCat = CATS.map(function (c) { return [c, db.prods.filter(function (p) { return p.cat === c; }).reduce(function (s, p) { return s + p.custo * p.qtd; }, 0)]; });
+    var maxV = Math.max.apply(null, porCat.map(function (x) { return x[1]; })) || 1;
+    var lim30 = Date.now() - 30 * DIA, vend = {};
+    db.movs.forEach(function (m) { if (m.tipo === "saida" && m.t >= lim30) vend[m.cod] = (vend[m.cod] || 0) + m.q; });
+    var top = Object.keys(vend).sort(function (a, b) { return vend[b] - vend[a]; }).slice(0, 6);
+    var parados = db.prods.filter(function (p) { var u = ultimaSaida(p.cod); return p.qtd > 0 && (!u || u < Date.now() - 60 * DIA); });
+    var totalCusto = db.prods.reduce(function (s, p) { return s + p.custo * p.qtd; }, 0), totalVenda = db.prods.reduce(function (s, p) { return s + p.preco * p.qtd; }, 0);
+    $("#barra").innerHTML = '<h1>Relatório do estoque</h1><span class="pill">' + new Date().toLocaleDateString("pt-BR") + '</span><span class="espaco"></span><button class="btn" onclick="window.print()">Imprimir</button>';
+    $("#conteudo").innerHTML =
+      '<div class="cards"><div class="card"><span>Valor em estoque (custo)</span><strong>' + brl(totalCusto) + '</strong></div><div class="card"><span>Valor em estoque (venda)</span><strong>' + brl(totalVenda) + '</strong></div><div class="card ok"><span>Margem média</span><strong>' + Math.round((totalVenda / totalCusto - 1) * 100) + '%</strong></div><div class="card ruim"><span>Produtos em falta</span><strong>' + db.prods.filter(function (p) { return p.qtd === 0; }).length + "</strong></div></div>" +
+      '<div class="cols"><div class="bloco"><h3>Valor em estoque por categoria</h3><div class="barras">' + porCat.map(function (x) { return "<div><span>" + x[0] + '</span><span class="b" style="width:' + Math.max((x[1] / maxV) * 100, 2) + '%"></span><span class="n">' + brl(x[1]) + "</span></div>"; }).join("") + "</div></div>" +
+      '<div class="bloco"><h3>Mais vendidos nos últimos 30 dias</h3><table class="grade"><tbody>' + (top.length ? top.map(function (c) { var p = prod(c); return p ? "<tr><td>" + esc(p.nome) + '</td><td class="n">' + vend[c] + " " + p.un + "</td></tr>" : ""; }).join("") : "<tr><td>Sem vendas no período.</td></tr>") + "</tbody></table></div></div>" +
+      '<div class="bloco" style="margin-top:14px"><h3>Parados há mais de 60 dias</h3><p class="info" style="margin:0 0 8px">Dinheiro empatado na prateleira. Bons candidatos a promoção.</p><table class="grade"><thead><tr><th>Produto</th><th class="n">Em estoque</th><th class="n">Valor parado</th><th>Última saída</th></tr></thead><tbody>' +
+      (parados.length ? parados.map(function (p) { var u = ultimaSaida(p.cod); return "<tr><td>" + esc(p.nome) + '</td><td class="n">' + p.qtd + " " + p.un + '</td><td class="n">' + brl(p.custo * p.qtd) + "</td><td>" + (u ? new Date(u).toLocaleDateString("pt-BR") : "nunca") + "</td></tr>"; }).join("") : "<tr><td colspan=4>Nenhum produto parado.</td></tr>") + "</tbody></table></div>";
+  }
+
+  function render() {
+    document.querySelectorAll(".lado [data-v]").forEach(function (b) { b.setAttribute("aria-current", b.dataset.v === vista); });
+    ({ produtos: vProdutos, movs: vMovs, compras: vCompras, relatorio: vRelatorio })[vista]();
+    var nb = db.prods.filter(baixo).length;
+    $("#n-prod").textContent = db.prods.length;
+    $("#n-baixo").textContent = nb; $("#n-baixo").className = nb ? "alerta" : "";
+    $("#st-1").textContent = db.prods.length + " produtos · " + nb + " abaixo do mínimo";
+    $("#st-2").textContent = "Valor em estoque: " + brl(db.prods.reduce(function (s, p) { return s + p.custo * p.qtd; }, 0));
+  }
+  document.querySelector(".lado").addEventListener("click", function (e) { var b = e.target.closest("[data-v]"); if (b) { vista = b.dataset.v; render(); } });
+
+  document.addEventListener("click", function (e) {
+    var t;
+    if ((t = e.target.closest("[data-mov]"))) abrirMov(t.dataset.mov, t.dataset.cod);
+    else if ((t = e.target.closest("[data-novo]"))) abrirProd();
+    else if ((t = e.target.closest("[data-editar]"))) abrirProd(t.dataset.editar);
+  });
+
+  /* ---------- Produto ---------- */
+  var editando = null;
+  $("#p-cat").innerHTML = CATS.map(function (c) { return "<option>" + c + "</option>"; }).join("");
+  function margem() {
+    var c = num($("#p-custo").value), p = num($("#p-preco").value);
+    $("#p-margem").textContent = c > 0 && p > 0 ? "Margem sobre o custo: " + Math.round((p / c - 1) * 100) + "% · lucro de " + brl(p - c) + " por unidade" : "";
+  }
+  $("#p-custo").addEventListener("input", margem); $("#p-preco").addEventListener("input", margem);
+  function abrirProd(cod) {
+    var p = cod ? prod(cod) : null; editando = p;
+    $("#p-tit").textContent = p ? "Editar produto" : "Novo produto";
+    $("#p-cod").value = p ? p.cod : ""; $("#p-cod").disabled = !!p;
+    $("#p-nome").value = p ? p.nome : ""; $("#p-cat").value = p ? p.cat : CATS[0]; $("#p-un").value = p ? p.un : "un";
+    $("#p-forn").value = p ? p.forn : ""; $("#p-custo").value = p ? String(p.custo).replace(".", ",") : ""; $("#p-preco").value = p ? String(p.preco).replace(".", ",") : "";
+    $("#p-min").value = p ? p.min : ""; $("#p-qtd").value = ""; $("#lbl-ini").hidden = !!p;
+    $("#p-erro").textContent = ""; margem();
+    $("#d-prod").showModal(); (p ? $("#p-nome") : $("#p-cod")).focus();
+  }
+  $("#f-prod").addEventListener("submit", function (e) {
+    if (e.submitter && e.submitter.value !== "ok") return;
+    var cod = $("#p-cod").value.trim().toUpperCase(), nome = $("#p-nome").value.trim(), custo = num($("#p-custo").value), preco = num($("#p-preco").value), min = parseInt($("#p-min").value, 10), ini = parseInt($("#p-qtd").value || "0", 10);
+    var erro = !cod ? "Informe o código." : !editando && prod(cod) ? "Já existe um produto com o código " + cod + "." : !nome ? "Informe a descrição." : !(custo >= 0) || !(preco > 0) ? "Confira o custo e o preço." : isNaN(min) || min < 0 ? "Informe o estoque mínimo." : isNaN(ini) || ini < 0 ? "Quantidade inicial inválida." : "";
+    if (erro) { e.preventDefault(); $("#p-erro").textContent = erro; return; }
+    var dados = { nome: nome, cat: $("#p-cat").value, un: $("#p-un").value, forn: $("#p-forn").value.trim() || "Sem fornecedor", custo: custo, preco: preco, min: min };
+    if (editando) { Object.assign(editando, dados); aviso("Produto atualizado."); }
+    else {
+      dados.cod = cod; dados.qtd = ini; db.prods.push(dados);
+      if (ini) db.movs.push({ t: Date.now(), cod: cod, tipo: "entrada", q: ini, obs: "Estoque inicial" });
+      aviso("Produto " + cod + " cadastrado.");
+    }
+    salvar(); render();
+  });
+
+  /* ---------- Movimentação ---------- */
+  function achar(txt) {
+    var t = txt.trim(); if (!t) return null;
+    var c = t.split(" — ")[0].toUpperCase();
+    return prod(c) || db.prods.filter(function (p) { return sem(p.nome) === sem(t); })[0] || null;
+  }
+  function infoMov() {
+    var p = achar($("#m-prod").value), tipo = $("#m-tipo").value;
+    $("#m-atual").textContent = p ? "Em estoque agora: " + p.qtd + " " + p.un + " (mínimo " + p.min + ")" : "";
+    $("#lbl-q").firstChild.textContent = tipo === "ajuste" ? "Quantidade contada" : "Quantidade";
+  }
+  $("#m-prod").addEventListener("input", infoMov); $("#m-tipo").addEventListener("change", infoMov);
+  function abrirMov(tipo, cod) {
+    $("#lista-prod").innerHTML = db.prods.map(function (p) { return '<option value="' + esc(p.cod + " — " + p.nome) + '">'; }).join("");
+    $("#m-tipo").value = tipo || "entrada";
+    var p = cod ? prod(cod) : null;
+    $("#m-prod").value = p ? p.cod + " — " + p.nome : ""; $("#m-q").value = ""; $("#m-obs").value = ""; $("#m-erro").textContent = "";
+    $("#m-tit").textContent = { entrada: "Entrada no estoque", saida: "Saída do estoque", ajuste: "Ajuste de inventário" }[$("#m-tipo").value];
+    infoMov(); $("#d-mov").showModal(); (p ? $("#m-q") : $("#m-prod")).focus();
+  }
+  $("#f-mov").addEventListener("submit", function (e) {
+    if (e.submitter && e.submitter.value !== "ok") return;
+    var p = achar($("#m-prod").value), tipo = $("#m-tipo").value, q = parseInt($("#m-q").value, 10);
+    var erro = !p ? "Escolha um produto da lista." : isNaN(q) || q < 0 || (tipo !== "ajuste" && q === 0) ? "Informe uma quantidade válida." : tipo === "saida" && q > p.qtd ? "Só há " + p.qtd + " " + p.un + " em estoque." : "";
+    if (erro) { e.preventDefault(); $("#m-erro").textContent = erro; return; }
+    var obs = $("#m-obs").value.trim();
+    if (tipo === "ajuste") { db.movs.push({ t: Date.now(), cod: p.cod, tipo: "ajuste", q: q - p.qtd, obs: obs || "Contagem de inventário" }); p.qtd = q; }
+    else { p.qtd += tipo === "entrada" ? q : -q; db.movs.push({ t: Date.now(), cod: p.cod, tipo: tipo, q: q, obs: obs || (tipo === "entrada" ? "Entrada" : "Saída") }); }
+    salvar(); render();
+    aviso(p.nome + ": agora " + p.qtd + " " + p.un + (baixo(p) ? ". Atenção: abaixo do mínimo." : "."));
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (document.querySelector("dialog[open]")) return;
+    if (e.key === "F2") { e.preventDefault(); abrirProd(); }
+    if (e.key === "F3") { e.preventDefault(); abrirMov("entrada"); }
+    if (e.key === "F4") { e.preventDefault(); abrirMov("saida"); }
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "f") { e.preventDefault(); vista = "produtos"; render(); $("#busca").focus(); }
+  });
+
+  document.addEventListener("click", function (e) { var b = e.target.closest("[data-fechar]"); if (b) b.closest("dialog").close(); });
+  function aviso(t) { var el = $("#toast"); el.textContent = t; el.classList.add("on"); clearTimeout(aviso.t); aviso.t = setTimeout(function () { el.classList.remove("on"); }, 3000); }
+  document.querySelectorAll(".wa").forEach(function (a) { a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(a.dataset.msg); a.target = "_blank"; a.rel = "noopener"; });
+  render();
+})();
+</script>
+</body>
+</html>

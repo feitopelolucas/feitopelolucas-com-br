@@ -8,15 +8,15 @@ window.I18N = {
   en: {
     // Página
     "titulo": "Feito pelo Lucas — websites, apps and games",
-    "descricao": "Ready-made websites for sale, mobile apps, desktop programs and games. Made by Lucas.",
+    "descricao": "Website templates, mobile apps, desktop programs and games. Made by Lucas, in Campinas, Brazil.",
     "lang.atual": "You are viewing the site in English",
 
     // Topo e abertura
     "nav.servicos": "What I do",
-    "nav.catalogo": "Websites for sale",
+    "nav.catalogo": "Website templates",
     "nav.contato": "Contact",
     "intro.h1": "I make websites, apps <br>and <i>games</i>.",
-    "intro.p": "I'm Lucas. I build websites, mobile apps, desktop programs and games. Some websites are already finished and for sale on this page; everything else is built to order, around what your business needs.",
+    "intro.p": "I'm Lucas, from Campinas, Brazil, and I've been tinkering with computers and programming since I was 15. I build websites, mobile apps, desktop programs and games. This page has website templates for you to choose from; everything else is built to order, around what your business needs.",
     "intro.meta": "Every template can be made with your name, your colors and your information.",
     "intro.foto": "Photo of Lucas wearing glasses, a black suit and a gold bow tie",
 
@@ -26,11 +26,26 @@ window.I18N = {
     "serv1.h3": "Websites",
     "serv1.p": "For anyone who needs to be online: restaurants, clinics, offices, shops and portfolios. You can <a href=\"#catalogo\">pick a ready-made website</a>, which I adapt to your brand, or order one built from scratch.",
     "serv2.h3": "Mobile apps",
-    "serv2.p": "Apps that work on Android and iPhone: product catalogs, orders, customer accounts, loyalty cards and internal tools for your team. There's no app store involved: people open a link and install the app straight to their phone's home screen. Updates happen automatically, with nothing to download again.",
+    "serv2.p": "Apps that work on Android and iPhone: product catalogs, orders, customer accounts, loyalty cards and internal tools for your team. There's no app store involved: people open a link and install the app straight to their phone's home screen. Updates happen automatically, with nothing to download again. <a href=\"#exemplos\">See three examples</a>.",
     "serv3.h3": "Desktop programs",
-    "serv3.p": "Windows software that organizes your business's day-to-day. One example is an appointment book for clinics: patient records, scheduling by professional, WhatsApp reminders and visit history. I also build systems for inventory, cash register and customer records.",
+    "serv3.p": "Windows software that organizes your business's day-to-day. One example is an appointment book for clinics: patient records, scheduling by professional, WhatsApp reminders and visit history. I also build systems for inventory, cash register and customer records. <a href=\"#exemplos\">See three examples</a>.",
     "serv4.h3": "Games",
     "serv4.p": "Games for PC and the browser, from prototype to launch. Fossil Crown, shown just below, is a game I made on my own and it's already out.",
+
+    // Exemplos
+    "ex.h2": "Example apps and programs",
+    "ex.sub": "Six demos that actually work. The businesses are fictional and anything you type stays on your device.",
+    "ex.h3a": "Mobile apps",
+    "ex.meta-a": "Open on your phone and install it to the home screen, no app store needed.",
+    "ex.h3p": "Desktop programs",
+    "ex.meta-p": "Demos in the browser. The real version is installed on Windows.",
+    "ex.abrir": "Open ↗",
+    "ex.a1": "A café's loyalty card: customers collect a stamp with every coffee and get the next one free.",
+    "ex.a2": "Bakery pre-orders with pickup times, lead time per product and orders sent through WhatsApp.",
+    "ex.a3": "A kitchen team's routine: checklists, fridge temperatures and shift notes.",
+    "ex.p1": "Clinic appointment book: schedules per professional, patient records and day-before reminders.",
+    "ex.p2": "Inventory control: stock in and out, minimum levels, shopping list and reports.",
+    "ex.p3": "Point of sale with barcodes, change, store credit for regulars and end-of-day closing.",
 
     // Fossil Crown
     "fc.alt": "Cover of the game Fossil Crown, with dinosaurs on a ranch and a volcano in the background",
@@ -40,7 +55,7 @@ window.I18N = {
     "fc.p3": "Fossil Crown is not for sale. It's here to show the kind of project I can take from start to finish.",
 
     // Catálogo
-    "cat.h2": "Websites for sale",
+    "cat.h2": "Website templates",
     "cat.sub": "Pick a template and I'll build yours with your name, colors, photos and text, published on your own domain.",
     "cat.filtros": "Filter by type of business",
     "cat.vazio": "No websites in this category right now.",
@@ -94,8 +109,6 @@ window.I18N = {
       todos: "Todos",
       vendido: "Vendido",
       apartir: "a partir de",
-      exclusivo: " · exclusivo",
-      metaExclusivo: " · exclusivo: vendido uma única vez",
       fotoModelo: "Foto do modelo",
       verFuncionando: "Ver funcionando ↗",
       emBreve: "Demonstração em breve",
@@ -113,8 +126,6 @@ window.I18N = {
       todos: "All",
       vendido: "Sold",
       apartir: "from",
-      exclusivo: " · exclusive",
-      metaExclusivo: " · exclusive: sold only once",
       fotoModelo: "Photo of the template",
       verFuncionando: "See it live ↗",
       emBreve: "Demo coming soon",

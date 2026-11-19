@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agenda Ipê · Programa de agenda para consultório</title>
+<meta name="description" content="Demonstração de programa para Windows: agenda de consultório com pacientes, horários por profissional e lembretes.">
+<link rel="icon" href="icone.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../programa.css">
+<style>
+  :root{--cor:#0f766e;--cor2:#0b5e58;--cor-f:#e2f3f1}
+  .semana{display:grid;grid-template-columns:62px repeat(6,minmax(110px,1fr));background:#fff;border:1px solid var(--fio);border-radius:6px;overflow:hidden;min-width:760px}
+  .semana .cab{position:sticky;top:-14px;z-index:2;background:#f7f7f7;border-bottom:1px solid var(--fio2);padding:8px;text-align:center;font-size:12.5px}
+  .semana .cab b{display:block;font-size:15px}
+  .semana .cab.hoje{background:var(--cor-f);color:var(--cor2)}
+  .semana .h{font-size:12px;color:var(--suave);text-align:right;padding:6px 8px;border-top:1px solid #eee}
+  .semana .c{border-top:1px solid #eee;border-left:1px solid #eee;min-height:52px;padding:3px;position:relative}
+  .semana .c.livre{cursor:pointer}
+  .semana .c.livre:hover::after{content:"+ marcar";position:absolute;inset:3px;border:1px dashed var(--cor);border-radius:4px;display:grid;place-items:center;color:var(--cor);font-size:12px;font-weight:600}
+  .semana .c.bloq{background:repeating-linear-gradient(-45deg,#fafafa 0 6px,#f2f2f2 6px 12px);font-size:11px;color:#999;display:grid;place-items:center}
+  .semana .c.hoje{background:#fbfefd}
+  .cons{display:block;width:100%;height:100%;text-align:left;border:0;border-radius:4px;padding:5px 7px;font-size:12.5px;line-height:1.25;background:#e8f0fa;border-left:3px solid #2563a8}
+  .cons b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600}
+  .cons small{color:var(--suave)}
+  .cons.confirmada{background:#e2f3f1;border-color:var(--cor)}
+  .cons.chegou{background:#fff3dc;border-color:#d68a00}
+  .cons.atendida{background:#f1f1f1;border-color:#9a9a9a;color:#666}
+  .cons.faltou{background:var(--ruim-f);border-color:var(--ruim)}
+  .legenda{display:flex;gap:14px;font-size:12px;color:var(--suave);margin-top:10px;flex-wrap:wrap}
+  .legenda i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+  .prof-cor{width:10px;height:10px;border-radius:50%;flex:none}
+  .ficha{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:13px}
+  .ficha dt{color:var(--suave)}
+  .ficha dd{margin:0}
+  .estados{display:flex;gap:6px;flex-wrap:wrap}
+  .estados button[aria-pressed="true"]{background:var(--cor);border-color:var(--cor2);color:#fff}
+</style>
+</head>
+<body>
+<div class="demo">Demonstração no navegador de um programa para Windows. Consultório, profissionais e pacientes são fictícios; os dados ficam neste computador. <a class="wa" data-msg="Olá, Lucas! Vi o programa de agenda para consultório (Agenda Ipê) e queria conversar sobre um para o meu consultório.">Quero um programa assim →</a></div>
+<div class="so-pc">Este é um programa de computador. Ele funciona no celular, mas foi pensado para a tela grande da recepção.</div>
+
+<div class="janela">
+  <div class="titulo"><img src="icone.svg" alt=""><span id="win-tit">Agenda Ipê — Espaço Ipê Saúde Integrada</span><i><svg viewBox="0 0 10 10"><path d="M0 5h10" stroke="currentColor"/></svg></i><i><svg viewBox="0 0 10 10"><rect x=".5" y=".5" width="9" height="9" fill="none" stroke="currentColor"/></svg></i><i><svg viewBox="0 0 10 10"><path d="M0 0l10 10M10 0L0 10" stroke="currentColor"/></svg></i></div>
+  <div class="menu"><button>Arquivo</button><button>Editar</button><button>Exibir</button><button>Relatórios</button><button>Ajuda</button></div>
+  <div class="corpo">
+    <aside class="lado">
+      <h4>Recepção</h4>
+      <button data-v="hoje" aria-current="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="14" height="13" rx="2"/><path d="M3 8h14M7 2.5v3M13 2.5v3"/></svg><span>Atendimentos de hoje</span><small id="n-hoje"></small></button>
+      <button data-v="semana"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="14" height="13" rx="2"/><path d="M3 8h14M8 8v9M12 8v9"/></svg><span>Agenda da semana</span></button>
+      <button data-v="pacientes"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="7" r="3.2"/><path d="M3.5 17c.8-3.3 3.3-5 6.5-5s5.7 1.7 6.5 5"/></svg><span>Pacientes</span><small id="n-pac"></small></button>
+      <button data-v="lembretes"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 9a5 5 0 0 1 10 0v4l1.5 2h-13L5 13z"/><path d="M8.5 17.5h3"/></svg><span>Lembretes de amanhã</span><small id="n-lem"></small></button>
+      <h4>Profissionais</h4>
+      <div id="profs"></div>
+    </aside>
+    <section class="area">
+      <div class="barra" id="barra"></div>
+      <div class="conteudo" id="conteudo"></div>
+    </section>
+  </div>
+  <div class="status"><span id="st-1"></span><span id="st-2"></span><span class="espaco"></span><span>F2 nova consulta · Ctrl+F buscar paciente</span><span id="relogio"></span></div>
+</div>
+
+<dialog class="dlg" id="d-nova">
+  <form method="dialog" id="f-nova">
+    <div class="dlg-tit">Nova consulta <button type="button" data-fechar aria-label="Fechar">×</button></div>
+    <div class="dlg-corpo">
+      <label>Paciente<input class="campo" id="n-pac-nome" list="lista-pac" autocomplete="off" placeholder="Digite o nome; se for novo, é cadastrado"></label>
+      <datalist id="lista-pac"></datalist>
+      <label id="lbl-tel" hidden>Telefone do paciente novo<input class="campo" id="n-tel" placeholder="(19) 90000-0000"></label>
+      <label>Profissional<select class="campo" id="n-prof"></select></label>
+      <div class="duas"><label>Dia<input class="campo" type="date" id="n-data"></label><label>Horário<select class="campo" id="n-hora"></select></label></div>
+      <label>Observação<input class="campo" id="n-obs" placeholder="Ex.: retorno, primeira consulta, trazer exames"></label>
+      <p class="erro" id="n-erro"></p>
+    </div>
+    <div class="dlg-pe"><button type="button" data-fechar class="btn">Cancelar</button><button class="btn pri" id="n-ok" value="ok">Marcar consulta</button></div>
+  </form>
+</dialog>
+
+<dialog class="dlg" id="d-cons">
+  <form method="dialog">
+    <div class="dlg-tit"><span id="c-tit">Consulta</span><button type="button" data-fechar aria-label="Fechar">×</button></div>
+    <div class="dlg-corpo">
+      <dl class="ficha" id="c-ficha"></dl>
+      <div><p class="info" style="margin-bottom:6px">Situação</p><div class="estados" id="c-estados"></div></div>
+      <div><p class="info" style="margin-bottom:6px">Lembrete que vai pelo WhatsApp na véspera</p><div class="msg" id="c-msg"></div></div>
+    </div>
+    <div class="dlg-pe"><button class="btn perigo" type="button" id="c-cancelar">Desmarcar</button><span class="espaco"></span><button type="button" data-fechar class="btn">Fechar</button></div>
+  </form>
+</dialog>
+
+<dialog class="dlg" id="d-pac">
+  <form method="dialog">
+    <div class="dlg-tit"><span id="p-tit">Paciente</span><button type="button" data-fechar aria-label="Fechar">×</button></div>
+    <div class="dlg-corpo"><dl class="ficha" id="p-ficha"></dl><div id="p-hist"></div></div>
+    <div class="dlg-pe"><button class="btn" type="button" id="p-marcar">Marcar consulta</button><span class="espaco"></span><button type="button" data-fechar class="btn pri">Fechar</button></div>
+  </form>
+</dialog>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function () {
+  var WHATSAPP = "5519996515563";
+  var CHAVE = "agenda-ipe";
+  var $ = function (s) { return document.querySelector(s); };
+  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
+  var pad = function (n) { return (n < 10 ? "0" : "") + n; };
+  var iso = function (d) { return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); };
+  var deIso = function (s) { var p = s.split("-"); return new Date(+p[0], p[1] - 1, +p[2]); };
+  var somaDias = function (d, n) { var x = new Date(d); x.setDate(x.getDate() + n); return x; };
+  var DIAS = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+  var HORAS = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
+  var hojeIso = iso(new Date());
+
+  var PROFS = [
+    { id: "renata", nome: "Dra. Renata Viana", area: "Fisioterapia", cor: "#0f766e" },
+    { id: "caio", nome: "Caio Bertolini", area: "Nutrição", cor: "#b45309" },
+    { id: "lia", nome: "Lia Morimoto", area: "Psicologia", cor: "#7c3aed" },
+  ];
+  var ESTADOS = [["marcada", "Marcada"], ["confirmada", "Confirmada"], ["chegou", "Chegou"], ["atendida", "Atendida"], ["faltou", "Faltou"]];
+  var rotulo = function (s) { return (ESTADOS.filter(function (e) { return e[0] === s; })[0] || [s, s])[1]; };
+  var pillClasse = { marcada: "azul", confirmada: "ok", chegou: "alerta", atendida: "", faltou: "ruim" };
+
+  function livreNaRegra(d, h) { var w = d.getDay(); return w !== 0 && h !== 12 && !(w === 6 && h >= 12); }
+
+  function exemplo() {
+    var nomes = [["Ana Paula Ferraz", "(19) 98812-0001", "1984-03-12", "Unimed"], ["Benedito Souza", "(19) 99701-0002", "1951-11-02", "Particular"], ["Camila Torres", "(19) 98234-0003", "1996-07-21", "Particular"], ["Diego Matsuda", "(19) 99155-0004", "1989-01-30", "SulAmérica"], ["Eliane Rocha", "(19) 98870-0005", "1972-09-14", "Unimed"], ["Fábio Lourenço", "(19) 99620-0006", "1979-05-05", "Particular"], ["Gabriela Nunes", "(19) 98106-0007", "2001-12-19", "Bradesco Saúde"], ["Heitor Campos", "(19) 99348-0008", "1966-02-08", "Particular"], ["Isabela Prado", "(19) 98452-0009", "1993-06-27", "Unimed"], ["Jorge Almeida", "(19) 99083-0010", "1958-10-10", "Particular"], ["Karina Duarte", "(19) 98761-0011", "1987-04-03", "SulAmérica"], ["Luís Henrique Sá", "(19) 99510-0012", "1999-08-16", "Particular"]];
+    var pac = nomes.map(function (n, i) { return { id: "p" + (i + 1), nome: n[0], tel: n[1], nasc: n[2], conv: n[3] }; });
+    var cons = [], seg = somaDias(new Date(), 1 - (new Date().getDay() || 7)), k = 0;
+    for (var dd = -7; dd < 12; dd++) {
+      var d = somaDias(seg, dd);
+      HORAS.forEach(function (h, hi) {
+        PROFS.forEach(function (p, pi) {
+          if (!livreNaRegra(d, h)) return;
+          var r = (((dd * 31 + hi * 7 + pi * 13 + 5) % 10) + 10) % 10;
+          if (r > 5) return;
+          var data = iso(d), passado = data < hojeIso;
+          var st = passado ? (r === 0 ? "faltou" : "atendida") : data === hojeIso ? (h < new Date().getHours() ? "atendida" : r < 3 ? "confirmada" : "marcada") : r < 2 ? "confirmada" : "marcada";
+          cons.push({ id: "c" + (++k), pac: pac[(((dd * 5 + hi * 3 + pi * 7) % pac.length) + pac.length) % pac.length].id, prof: p.id, data: data, h: h, st: st, obs: r === 4 ? "Retorno" : r === 1 ? "Primeira consulta" : "" });
+        });
+      });
+    }
+    return { pac: pac, cons: cons, seq: k };
+  }
+
+  var db;
+  try { db = JSON.parse(localStorage.getItem(CHAVE)); } catch (e) {}
+  if (!db) db = exemplo();
+  function salvar() { try { localStorage.setItem(CHAVE, JSON.stringify(db)); } catch (e) {} }
+
+  var vista = "hoje", profAtual = "renata", inicioSemana = somaDias(new Date(), 1 - (new Date().getDay() || 7)), buscaPac = "";
+  var pac = function (id) { return db.pac.filter(function (p) { return p.id === id; })[0] || { nome: "?" }; };
+  var prof = function (id) { return PROFS.filter(function (p) { return p.id === id; })[0]; };
+  var ativas = function () { return db.cons.filter(function (c) { return c.st !== "cancelada"; }); };
+  var dataLonga = function (s) { return deIso(s).toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long" }); };
+  var idade = function (n) { if (!n) return ""; var a = new Date().getFullYear() - +n.slice(0, 4); return a + " anos"; };
+
+  function lembrete(c) {
+    var p = pac(c.pac), pr = prof(c.prof);
+    return "Olá, " + p.nome.split(" ")[0] + "! Passando para lembrar da sua consulta de " + pr.area.toLowerCase() + " com " + pr.nome + " " +
+      (c.data === iso(somaDias(new Date(), 1)) ? "amanhã" : "em " + dataLonga(c.data)) + ", às " + c.h + "h, no Espaço Ipê.\n\nResponda 1 para confirmar ou 2 se precisar remarcar.";
+  }
+
+  /* ---------- Vistas ---------- */
+  function vHoje() {
+    var lista = ativas().filter(function (c) { return c.data === hojeIso; }).sort(function (a, b) { return a.h - b.h || a.prof.localeCompare(b.prof); });
+    var cont = function (s) { return lista.filter(function (c) { return c.st === s; }).length; };
+    $("#barra").innerHTML = '<h1>Atendimentos de hoje</h1><span class="pill">' + dataLonga(hojeIso) + '</span><span class="espaco"></span><button class="btn pri" data-nova>Nova consulta <kbd>F2</kbd></button>';
+    $("#conteudo").innerHTML =
+      '<div class="cards"><div class="card"><span>Consultas hoje</span><strong>' + lista.length + '</strong></div><div class="card ok"><span>Confirmadas</span><strong>' + cont("confirmada") + '</strong></div><div class="card"><span>Na recepção agora</span><strong>' + cont("chegou") + '</strong></div><div class="card"><span>Atendidas</span><strong>' + cont("atendida") + "</strong></div></div>" +
+      (lista.length ? '<table class="grade"><thead><tr><th>Hora</th><th>Paciente</th><th>Profissional</th><th>Observação</th><th>Situação</th><th class="acoes">Ações rápidas</th></tr></thead><tbody>' +
+        lista.map(function (c) {
+          var p = pac(c.pac), pr = prof(c.prof);
+          return '<tr><td class="n">' + c.h + 'h</td><td><a href="#" data-pac="' + p.id + '">' + esc(p.nome) + '</a></td><td><span style="display:inline-flex;align-items:center;gap:6px"><i class="prof-cor" style="background:' + pr.cor + '"></i>' + pr.nome + "</span></td><td>" + esc(c.obs) + '</td><td><span class="pill ' + pillClasse[c.st] + '">' + rotulo(c.st) + '</span></td><td class="acoes">' +
+            (c.st === "marcada" || c.st === "confirmada" ? '<button data-st="chegou" data-c="' + c.id + '">Chegou</button>' : "") +
+            (c.st === "chegou" ? '<button data-st="atendida" data-c="' + c.id + '">Atendido</button>' : "") +
+            (c.st !== "atendida" && c.st !== "faltou" ? '<button data-st="faltou" data-c="' + c.id + '">Faltou</button>' : "") +
+            '<button data-abrir="' + c.id + '">Abrir</button></td></tr>';
+        }).join("") + "</tbody></table>" : '<p class="info">Nenhuma consulta hoje.</p>');
+  }
+
+  function vSemana() {
+    var fim = somaDias(inicioSemana, 5), pr = prof(profAtual);
+    $("#barra").innerHTML = '<h1>Agenda da semana</h1><select class="campo" id="sel-prof" style="width:auto">' + PROFS.map(function (p) { return '<option value="' + p.id + '"' + (p.id === profAtual ? " selected" : "") + ">" + p.nome + " · " + p.area + "</option>"; }).join("") + '</select><span class="espaco"></span>' +
+      '<button class="btn" data-sem="-1">◀</button><button class="btn" data-sem="0">Esta semana</button><button class="btn" data-sem="1">▶</button>' +
+      '<span class="pill">' + inicioSemana.toLocaleDateString("pt-BR", { day: "numeric", month: "short" }) + " a " + fim.toLocaleDateString("pt-BR", { day: "numeric", month: "short" }) + "</span>";
+    var dias = [0, 1, 2, 3, 4, 5].map(function (i) { return somaDias(inicioSemana, i); });
+    var mapa = {};
+    ativas().forEach(function (c) { if (c.prof === profAtual) mapa[c.data + "|" + c.h] = c; });
+    var h = '<div class="semana"><div class="cab"></div>' + dias.map(function (d) {
+      return '<div class="cab' + (iso(d) === hojeIso ? " hoje" : "") + '">' + DIAS[d.getDay()] + "<b>" + d.getDate() + "</b></div>";
+    }).join("");
+    HORAS.forEach(function (hr) {
+      h += '<div class="h">' + hr + ":00</div>";
+      dias.forEach(function (d) {
+        var data = iso(d), c = mapa[data + "|" + hr], hoje = data === hojeIso ? " hoje" : "";
+        if (!livreNaRegra(d, hr)) h += '<div class="c bloq' + hoje + '">' + (hr === 12 ? "almoço" : "") + "</div>";
+        else if (c) h += '<div class="c' + hoje + '"><button class="cons ' + c.st + '" data-abrir="' + c.id + '"><b>' + esc(pac(c.pac).nome) + "</b><small>" + rotulo(c.st) + (c.obs ? " · " + esc(c.obs) : "") + "</small></button></div>";
+        else h += '<div class="c livre' + hoje + '" data-livre="' + data + "|" + hr + '" title="Marcar às ' + hr + 'h"></div>';
+      });
+    });
+    $("#conteudo").innerHTML = h + '</div><div class="legenda"><span><i style="background:#2563a8"></i>Marcada</span><span><i style="background:#0f766e"></i>Confirmada</span><span><i style="background:#d68a00"></i>Chegou</span><span><i style="background:#9a9a9a"></i>Atendida</span><span><i style="background:#b42318"></i>Faltou</span><span>Clique num horário vazio para marcar.</span></div>';
+    $("#sel-prof").addEventListener("change", function () { profAtual = this.value; render(); });
+  }
+
+  function vPacientes() {
+    $("#barra").innerHTML = '<h1>Pacientes</h1><input class="busca" id="busca" placeholder="Buscar por nome ou telefone (Ctrl+F)" value="' + esc(buscaPac) + '"><span class="espaco"></span><button class="btn pri" data-nova>Nova consulta <kbd>F2</kbd></button>';
+    var q = buscaPac.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+    var lista = db.pac.filter(function (p) { return !q || (p.nome + " " + p.tel).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").indexOf(q) >= 0; }).sort(function (a, b) { return a.nome.localeCompare(b.nome); });
+    $("#conteudo").innerHTML = '<table class="grade"><thead><tr><th>Nome</th><th>Telefone</th><th>Idade</th><th>Convênio</th><th>Última consulta</th><th>Próxima</th><th class="acoes"></th></tr></thead><tbody>' +
+      lista.map(function (p) {
+        var cs = ativas().filter(function (c) { return c.pac === p.id; });
+        var ult = cs.filter(function (c) { return c.data < hojeIso && c.st === "atendida"; }).sort(function (a, b) { return b.data.localeCompare(a.data); })[0];
+        var prox = cs.filter(function (c) { return c.data >= hojeIso && c.st !== "atendida" && c.st !== "faltou"; }).sort(function (a, b) { return a.data.localeCompare(b.data) || a.h - b.h; })[0];
+        return "<tr><td><b>" + esc(p.nome) + "</b></td><td>" + esc(p.tel) + "</td><td>" + idade(p.nasc) + "</td><td>" + esc(p.conv || "Particular") + "</td><td>" + (ult ? deIso(ult.data).toLocaleDateString("pt-BR") : "—") + "</td><td>" + (prox ? deIso(prox.data).toLocaleDateString("pt-BR") + " " + prox.h + "h" : "—") + '</td><td class="acoes"><button data-pac="' + p.id + '">Ficha</button></td></tr>';
+      }).join("") + "</tbody></table>" + (lista.length ? "" : '<p class="info">Nenhum paciente encontrado.</p>');
+    var b = $("#busca");
+    b.addEventListener("input", function () { buscaPac = b.value; var pos = b.selectionStart; render(); var nb = $("#busca"); nb.focus(); nb.setSelectionRange(pos, pos); });
+  }
+
+  function vLembretes() {
+    var amanha = somaDias(new Date(), 1); if (amanha.getDay() === 0) amanha = somaDias(amanha, 1);
+    var data = iso(amanha);
+    var lista = ativas().filter(function (c) { return c.data === data; }).sort(function (a, b) { return a.h - b.h; });
+    $("#barra").innerHTML = '<h1>Lembretes</h1><span class="pill">' + dataLonga(data) + '</span><span class="espaco"></span><button class="btn pri" id="enviar-todos">Enviar todos agora</button>';
+    $("#conteudo").innerHTML = '<p class="info" style="margin:0 0 12px">Na versão real, os lembretes saem sozinhos às 18h da véspera pelo WhatsApp do consultório, e a resposta do paciente atualiza a situação aqui. Na demonstração nada é enviado.</p>' +
+      '<table class="grade"><thead><tr><th>Hora</th><th>Paciente</th><th>Telefone</th><th>Profissional</th><th>Situação</th><th class="acoes"></th></tr></thead><tbody>' +
+      lista.map(function (c) {
+        var p = pac(c.pac);
+        return '<tr><td class="n">' + c.h + "h</td><td>" + esc(p.nome) + "</td><td>" + esc(p.tel) + "</td><td>" + prof(c.prof).nome + '</td><td><span class="pill ' + pillClasse[c.st] + '">' + (c.lembrete ? "Lembrete enviado · " : "") + rotulo(c.st) + '</span></td><td class="acoes"><button data-abrir="' + c.id + '">Ver mensagem</button></td></tr>';
+      }).join("") + "</tbody></table>";
+    $("#enviar-todos").addEventListener("click", function () {
+      lista.forEach(function (c) { c.lembrete = true; }); salvar(); render();
+      aviso(lista.length + " lembretes marcados como enviados (simulação).");
+    });
+  }
+
+  function render() {
+    document.querySelectorAll(".lado [data-v]").forEach(function (b) { b.setAttribute("aria-current", b.dataset.v === vista); });
+    document.querySelectorAll(".lado [data-prof]").forEach(function (b) { b.setAttribute("aria-current", vista === "semana" && b.dataset.prof === profAtual); });
+    ({ hoje: vHoje, semana: vSemana, pacientes: vPacientes, lembretes: vLembretes })[vista]();
+    var hoje = ativas().filter(function (c) { return c.data === hojeIso; });
+    var amanha = iso(somaDias(new Date(), new Date().getDay() === 6 ? 2 : 1));
+    $("#n-hoje").textContent = hoje.length;
+    $("#n-pac").textContent = db.pac.length;
+    $("#n-lem").textContent = ativas().filter(function (c) { return c.data === amanha && !c.lembrete; }).length;
+    $("#st-1").textContent = hoje.length + " consultas hoje";
+    $("#st-2").textContent = db.pac.length + " pacientes cadastrados";
+  }
+
+  $("#profs").innerHTML = PROFS.map(function (p) { return '<button data-prof="' + p.id + '"><i class="prof-cor" style="background:' + p.cor + '"></i><span>' + p.nome + "</span></button>"; }).join("");
+  document.querySelector(".lado").addEventListener("click", function (e) {
+    var b = e.target.closest("button"); if (!b) return;
+    if (b.dataset.v) vista = b.dataset.v;
+    if (b.dataset.prof) { vista = "semana"; profAtual = b.dataset.prof; }
+    render();
+  });
+
+  /* ---------- Cliques na área ---------- */
+  document.addEventListener("click", function (e) {
+    var t;
+    if ((t = e.target.closest("[data-sem]"))) { var n = +t.dataset.sem; inicioSemana = n ? somaDias(inicioSemana, 7 * n) : somaDias(new Date(), 1 - (new Date().getDay() || 7)); render(); }
+    else if ((t = e.target.closest("[data-livre]"))) { var p = t.dataset.livre.split("|"); abrirNova({ data: p[0], h: +p[1], prof: profAtual }); }
+    else if ((t = e.target.closest("[data-nova]"))) abrirNova({});
+    else if ((t = e.target.closest("[data-abrir]"))) abrirConsulta(t.dataset.abrir);
+    else if ((t = e.target.closest("[data-pac]"))) { e.preventDefault(); abrirPaciente(t.dataset.pac); }
+    else if ((t = e.target.closest("[data-st]"))) { mudarEstado(t.dataset.c, t.dataset.st); }
+  });
+
+  function mudarEstado(id, st) {
+    var c = db.cons.filter(function (x) { return x.id === id; })[0]; if (!c) return;
+    c.st = st; salvar(); render();
+    aviso(pac(c.pac).nome.split(" ")[0] + ": " + rotulo(st).toLowerCase() + ".");
+  }
+
+  /* ---------- Nova consulta ---------- */
+  function horasLivres(data, profId, manter) {
+    var d = deIso(data);
+    var ocupadas = ativas().filter(function (c) { return c.data === data && c.prof === profId; }).map(function (c) { return c.h; });
+    return HORAS.filter(function (h) { return livreNaRegra(d, h) && (ocupadas.indexOf(h) < 0 || h === manter) && (data > hojeIso || (data === hojeIso && h > new Date().getHours())); });
+  }
+  function atualizarHoras(pref) {
+    var hs = horasLivres($("#n-data").value, $("#n-prof").value);
+    $("#n-hora").innerHTML = hs.length ? hs.map(function (h) { return '<option value="' + h + '"' + (h === pref ? " selected" : "") + ">" + h + ":00</option>"; }).join("") : '<option value="">Sem horário livre</option>';
+  }
+  function abrirNova(o) {
+    $("#n-erro").textContent = "";
+    $("#lista-pac").innerHTML = db.pac.map(function (p) { return '<option value="' + esc(p.nome) + '">'; }).join("");
+    $("#n-pac-nome").value = o.pacNome || ""; $("#n-tel").value = ""; $("#lbl-tel").hidden = true; $("#n-obs").value = "";
+    $("#n-prof").innerHTML = PROFS.map(function (p) { return '<option value="' + p.id + '"' + (p.id === (o.prof || profAtual) ? " selected" : "") + ">" + p.nome + " · " + p.area + "</option>"; }).join("");
+    var d = o.data || hojeIso; if (d === hojeIso && !horasLivres(d, $("#n-prof").value).length) d = iso(somaDias(new Date(), 1));
+    $("#n-data").value = d; $("#n-data").min = hojeIso;
+    atualizarHoras(o.h);
+    $("#d-nova").showModal(); $("#n-pac-nome").focus();
+  }
+  $("#n-data").addEventListener("change", function () { atualizarHoras(); });
+  $("#n-prof").addEventListener("change", function () { atualizarHoras(); });
+  $("#n-pac-nome").addEventListener("input", function () {
+    var v = this.value.trim().toLowerCase();
+    $("#lbl-tel").hidden = !v || db.pac.some(function (p) { return p.nome.toLowerCase() === v; });
+  });
+  $("#f-nova").addEventListener("submit", function (e) {
+    if (e.submitter && e.submitter.value !== "ok") return;
+    var nome = $("#n-pac-nome").value.trim(), h = $("#n-hora").value, data = $("#n-data").value;
+    var erro = !nome ? "Informe o paciente." : !data || data < hojeIso ? "Escolha um dia a partir de hoje." : !h ? "Não há horário livre nesse dia para esse profissional." : "";
+    var p = db.pac.filter(function (x) { return x.nome.toLowerCase() === nome.toLowerCase(); })[0];
+    if (!erro && !p && !$("#n-tel").value.trim()) erro = "Paciente novo: informe o telefone para o lembrete.";
+    if (erro) { e.preventDefault(); $("#n-erro").textContent = erro; return; }
+    if (!p) { p = { id: "p" + Date.now(), nome: nome, tel: $("#n-tel").value.trim(), conv: "Particular" }; db.pac.push(p); }
+    db.cons.push({ id: "c" + (++db.seq), pac: p.id, prof: $("#n-prof").value, data: data, h: +h, st: "marcada", obs: $("#n-obs").value.trim() });
+    salvar(); render();
+    aviso("Consulta marcada: " + p.nome.split(" ")[0] + ", " + deIso(data).toLocaleDateString("pt-BR") + " às " + h + "h.");
+  });
+
+  /* ---------- Consulta ---------- */
+  var consAberta = null;
+  function abrirConsulta(id) {
+    var c = db.cons.filter(function (x) { return x.id === id; })[0]; if (!c) return;
+    consAberta = c;
+    var p = pac(c.pac), pr = prof(c.prof);
+    $("#c-tit").textContent = "Consulta de " + p.nome;
+    $("#c-ficha").innerHTML = "<dt>Quando</dt><dd>" + dataLonga(c.data) + ", " + c.h + "h</dd><dt>Profissional</dt><dd>" + pr.nome + " · " + pr.area + "</dd><dt>Telefone</dt><dd>" + esc(p.tel) + "</dd><dt>Convênio</dt><dd>" + esc(p.conv || "Particular") + "</dd>" + (c.obs ? "<dt>Observação</dt><dd>" + esc(c.obs) + "</dd>" : "");
+    $("#c-estados").innerHTML = ESTADOS.map(function (s) { return '<button type="button" class="btn" aria-pressed="' + (c.st === s[0]) + '" data-est="' + s[0] + '">' + s[1] + "</button>"; }).join("");
+    $("#c-msg").textContent = lembrete(c);
+    $("#d-cons").showModal();
+  }
+  $("#c-estados").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-est]"); if (!b || !consAberta) return;
+    consAberta.st = b.dataset.est; salvar(); render();
+    document.querySelectorAll("#c-estados button").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+  });
+  $("#c-cancelar").addEventListener("click", function () {
+    if (!consAberta || !confirm("Desmarcar esta consulta? O horário fica livre de novo.")) return;
+    consAberta.st = "cancelada"; salvar(); $("#d-cons").close(); render(); aviso("Consulta desmarcada.");
+  });
+
+  /* ---------- Paciente ---------- */
+  var pacAberto = null;
+  function abrirPaciente(id) {
+    var p = pac(id); pacAberto = p;
+    $("#p-tit").textContent = p.nome;
+    $("#p-ficha").innerHTML = "<dt>Telefone</dt><dd>" + esc(p.tel) + "</dd><dt>Nascimento</dt><dd>" + (p.nasc ? deIso(p.nasc).toLocaleDateString("pt-BR") + " (" + idade(p.nasc) + ")" : "—") + "</dd><dt>Convênio</dt><dd>" + esc(p.conv || "Particular") + "</dd>";
+    var cs = db.cons.filter(function (c) { return c.pac === id; }).sort(function (a, b) { return b.data.localeCompare(a.data) || b.h - a.h; });
+    $("#p-hist").innerHTML = '<p class="info" style="margin-bottom:6px">Histórico de atendimentos</p><table class="grade"><tbody>' +
+      (cs.length ? cs.slice(0, 8).map(function (c) { return "<tr><td>" + deIso(c.data).toLocaleDateString("pt-BR") + " " + c.h + "h</td><td>" + prof(c.prof).area + '</td><td><span class="pill ' + (pillClasse[c.st] || "") + '">' + (c.st === "cancelada" ? "Desmarcada" : rotulo(c.st)) + "</span></td></tr>"; }).join("") : "<tr><td>Sem consultas.</td></tr>") + "</tbody></table>";
+    $("#d-pac").showModal();
+  }
+  $("#p-marcar").addEventListener("click", function () { $("#d-pac").close(); abrirNova({ pacNome: pacAberto.nome }); });
+
+  /* ---------- Teclado ---------- */
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "F2") { e.preventDefault(); if (!document.querySelector("dialog[open]")) abrirNova({}); }
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "f") { e.preventDefault(); vista = "pacientes"; render(); $("#busca").focus(); }
+  });
+
+  document.addEventListener("click", function (e) { var b = e.target.closest("[data-fechar]"); if (b) b.closest("dialog").close(); });
+  function aviso(t) { var el = $("#toast"); el.textContent = t; el.classList.add("on"); clearTimeout(aviso.t); aviso.t = setTimeout(function () { el.classList.remove("on"); }, 2800); }
+  function relogio() { $("#relogio").textContent = new Date().toLocaleString("pt-BR", { weekday: "short", day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" }); }
+  setInterval(relogio, 30000); relogio();
+  document.querySelectorAll(".wa").forEach(function (a) { a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(a.dataset.msg); a.target = "_blank"; a.rel = "noopener"; });
+  render();
+})();
+</script>
+</body>
+</html>
