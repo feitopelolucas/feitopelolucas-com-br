@@ -488,6 +488,7 @@ $ano = date('Y');
   <a class="name" href="./">Feito pelo Lucas</a>
   <nav>
     <a href="#servicos">O que eu faço</a>
+    <a href="#exemplos">Apps e programas</a>
     <a href="#catalogo">Modelos de site</a>
     <a href="#contato">Contato</a>
   </nav>

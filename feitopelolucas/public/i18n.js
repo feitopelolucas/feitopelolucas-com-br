@@ -13,6 +13,7 @@ window.I18N = {
 
     // Topo e abertura
     "nav.servicos": "What I do",
+    "nav.exemplos": "Apps and programs",
     "nav.catalogo": "Website templates",
     "nav.contato": "Contact",
     "intro.h1": "I make websites, apps <br>and <i>games</i>.",
