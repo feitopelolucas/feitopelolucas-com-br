@@ -49,6 +49,8 @@
 
     document.querySelectorAll(".ask").forEach((a) => { a.href = whatsLink(lang === "en" ? a.dataset.msgEn : a.dataset.msg); a.target = "_blank"; a.rel = "noopener"; });
     $("#cta-whats").href = whatsLink(T().msgContato);
+    // Esses dois podem faltar numa página antiga guardada no cache do navegador
+    ["#cta-hero", "#cta-fixo"].forEach((id) => { const el = $(id); if (el) el.href = whatsLink(T().msgContato); });
     $("#cta-mail").href = mailLink(T().assuntoEmail, T().corpoEmail);
 
     desenharFiltros();
@@ -67,7 +69,12 @@
   });
 
   /* ---------- Cartões ---------- */
-  function cover(s) {
+  // No cartão, a versão pequena (-p, 400px) serve na tela comum; a grande (-g) fica para telas densas e para a janela
+  function cover(s, cartao) {
+    if (s.imagem && cartao && /-g\.jpg$/.test(s.imagem)) {
+      const p = s.imagem.replace(/-g\.jpg$/, "-p.jpg");
+      return `<img src="${esc(p)}" srcset="${esc(p)} 400w, ${esc(s.imagem)} 1375w" sizes="(max-width:700px) calc(100vw - 32px), 340px" alt="${esc(T().fotoModelo)} ${esc(s.nome)}" loading="lazy">`;
+    }
     if (s.imagem) return `<img src="${esc(s.imagem)}" alt="${esc(T().fotoModelo)} ${esc(s.nome)}" loading="lazy">`;
     const bg = (s.cores && s.cores[0]) || "#2b2a26";
     return `<div class="flat" style="background:${esc(bg)};color:#f3efe6"><span>${esc(s.nome)}</span></div>`;
@@ -121,7 +128,7 @@
     $("#grid").innerHTML = list
       .map(
         (s) => `<button type="button" class="item${isSold(s) ? " sold" : ""}" data-id="${esc(s.id)}">
-          <div class="cover">${cover(s)}${stamp(s)}</div>
+          <div class="cover">${cover(s, true)}${stamp(s)}</div>
           <div class="item-line"><h3>${esc(s.nome)}</h3><span class="price">${isSold(s) ? "—" : priceHtml(s)}</span></div>
           <p>${esc(tx(s, "resumo"))}</p>
           <p class="meta">${esc(cat(s.categoria))}</p>
@@ -197,6 +204,18 @@
   });
 
   $("#y").textContent = new Date().getFullYear();
+
+  // Botão fixo de WhatsApp: aparece depois da abertura e some quando o contato está na tela
+  const fixo = $("#cta-fixo");
+  if (fixo && "IntersectionObserver" in window) {
+    const visivel = new Map();
+    const io = new IntersectionObserver((ents) => {
+      ents.forEach((en) => visivel.set(en.target, en.isIntersecting));
+      fixo.hidden = [...visivel.values()].some(Boolean);
+    });
+    io.observe($(".intro"));
+    io.observe($("#contato"));
+  }
 
   aplicarIdioma();
   // Link direto para um site: feitopelolucas.com.br/#site-<id>

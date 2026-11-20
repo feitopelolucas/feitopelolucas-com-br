@@ -7,6 +7,14 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Ismael Fernandes · Salão de Beleza · Campinas</title>
 <meta name="description" content="Prévia de site para o salão Ismael Fernandes, com unidades no Parque Prado e no Swiss Park, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/ismael/">
+<meta property="og:title" content="Prévia de site · Ismael Fernandes">
+<meta property="og:description" content="Salão de beleza no Parque Prado e no Swiss Park, em Campinas. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/ismael/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#16100c">
 <link rel="icon" href="fotos/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,8 +43,10 @@
   .escuro .sobre{color:var(--ouro)}
 
   /* Faixa de prévia */
-  .previa{background:#0d0907;color:#cbbba9;font-size:.78rem;font-weight:400;position:relative;z-index:40}
+  .previa{background:#0d0907;color:#ddd0c0;font-size:.85rem;font-weight:400;position:relative;z-index:40}
   .previa .wrap{display:flex;justify-content:space-between;align-items:center;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa-curto{display:none}
+  @media (max-width:640px){.previa-longo{display:none}.previa-curto{display:inline}}
   .previa strong{color:#fff;font-weight:600}
   .previa a{color:var(--ouro-claro);font-weight:500;text-decoration:none;white-space:nowrap}
 
@@ -227,8 +237,8 @@
 
 <div class="previa" role="note">
   <div class="wrap">
-    <span><strong>Prévia</strong> · Este não é o site oficial do salão Ismael Fernandes. É uma ideia de site montada por Lucas para apresentar ao salão.</span>
-    <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br →</a>
+    <span><strong>Prévia</strong> · <span class="previa-longo">Este não é o site oficial do salão Ismael Fernandes. É uma ideia de site montada por Lucas para apresentar ao salão.</span><span class="previa-curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20para%20o%20sal%C3%A3o%20Ismael%20Fernandes%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
   </div>
 </div>
 

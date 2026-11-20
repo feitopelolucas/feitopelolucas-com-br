@@ -19,6 +19,9 @@ window.I18N = {
     "intro.h1": "I make websites, apps <br>and <i>games</i>.",
     "intro.p": "I'm Lucas, from Campinas, Brazil, and I've been tinkering with computers and programming since I was 15. I build websites, mobile apps, desktop programs and games. This page has website templates for you to choose from; everything else is built to order, around what your business needs.",
     "intro.meta": "Every template can be made with your name, your colors and your information.",
+    "intro.cta1": "See website templates",
+    "intro.cta2": "Message me on WhatsApp",
+    "wa.fixo": "Message Lucas on WhatsApp",
     "intro.foto": "Photo of Lucas wearing glasses, a black suit and a gold bow tie",
 
     // Serviços
