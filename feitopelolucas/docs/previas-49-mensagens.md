@@ -42,3 +42,19 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, pessoal da Sabor Brasileiro! Sou o Lucas, faço sites aqui em Campinas. Vi no Instagram que o celular de vocês foi furtado e que os pedidos estão só pelo fixo. Um site ajuda justamente nessas horas, porque o cliente encontra o telefone certo na hora. Montei uma ideia para a padaria: https://feitopelolucas.com.br/previa/saborbrasileiro/
 > Tem o aviso do telefone, o horário com "aberta agora", o almoço caseiro e uma calculadora de bolo de festa por número de convidados. Se gostarem, a gente conversa!
+
+---
+
+## 5. Agrobel Vila Mimosa · pulado
+
+**Pelo que vi:** é uma rede de pet shops com várias unidades em Campinas, e **já tem site** (agrobelpet.com.br, "Shopping dos bichos") e Instagram @agrobelpet. Não fiz prévia, porque a abordagem "você não tem site" não serve aqui.
+
+---
+
+## 6. Acarajé da Ju · /previa/acarajedaju/
+
+**Pelo que vi:** Instagram **@dajuacaraje** com 7,8 mil seguidores e Facebook com 4,4 mil, mas nenhum site. Funciona dentro da Adega 180 Graus (loja 2). O horário mais recente (post de 2 meses atrás e Facebook) é quinta das 18h às 22h e sexta e sábado das 18h às 22h30. A bio do Instagram ainda diz "sexta e sábado das 18h às 22h", vale confirmar. Pedidos pelo WhatsApp (19) 98118-2980. Cardápio citado: acarajé no prato, na mão e "da Ju", caldo de quenga, porção de camarão, pastéis de 20 cm (camarão, carne seca e frango com catupiry, carne com queijo) e banana real. Ótimas fotos de clientes no Google. O site mostra se está aberto (só abre 3 dias) e tem um pedido para retirar que vai pronto no WhatsApp.
+**Por onde mandar:** WhatsApp (19) 98118-2980.
+
+> Oi, Ju! Sou o Lucas, faço sites aqui em Campinas. Vi que o Acarajé da Ju tem 4,7 no Google com mais de 600 avaliações, e uma delas diz "parecia que estava na Bahia". Montei uma ideia de site para vocês: https://feitopelolucas.com.br/previa/acarajedaju/
+> Ele mostra sozinho se está aberto (já que vocês abrem de quinta a sábado), tem o cardápio com as fotos dos clientes e um pedido para retirar que já chega pronto no seu WhatsApp. Se gostar, a gente conversa!
