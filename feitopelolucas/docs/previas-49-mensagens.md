@@ -322,3 +322,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, pessoal do Ô Açaí Ouro Verde! Sou o Lucas, faço sites aqui em Campinas. Vi que vocês têm 4,7 no Google, com gente dizendo que é o melhor açaí da região, e mais de 11 anos de casa. Montei uma ideia de site: https://feitopelolucas.com.br/previa/oacaiouroverde/
 > O cliente monta o açaí, escolhe retirar ou receber e manda o pedido pronto no WhatsApp de vocês. Tem também a batida na garrafa em destaque e o mapa. Se gostarem, a gente conversa!
+
+---
+
+## 35. Autracam Oficina Mecânica · /previa/autracam/
+
+**Pelo que vi:** existe **desde 1970**, no mesmo endereço e com o mesmo CNPJ. Hoje usa a marca "Autracam Centro Automotivo" (logo vermelho e branco sobre preto). Instagram **@autracam** (457 seguidores, com posts de homenagem na Câmara), Facebook e nenhum site. Tem 4,8 no Google com 187 avaliações. As palavras mais citadas são "preço" (23), "confiança" (19) e "honestos" (18). As avaliações elogiam a oficina limpa, os mecânicos uniformizados, a capa no banco, o cafezinho e o teste do carro na rua. Citam o Jonathan, a Cris e o Júnior. Fixo (19) 3272-0808 e WhatsApp (19) 97408-9393. Abre de segunda a sexta, das 7h30 às 11h30 e das 13h às 18h. **Atenção:** há uma avaliação negativa sobre troca de pneus, já respondida pelo dono. As fotos são do Google (fachada nova, oficina e freio). O site tem agendamento com carro, serviço, dia e período, mandando tudo no WhatsApp, e avisa se a pessoa escolher fim de semana.
+**Por onde mandar:** WhatsApp (19) 97408-9393.
+
+> Olá, pessoal da Autracam! Sou o Lucas, faço sites aqui em Campinas. 55 anos no mesmo endereço e 4,8 no Google com quase 200 avaliações falando de confiança e honestidade: isso merece um site à altura! Montei uma ideia: https://feitopelolucas.com.br/previa/autracam/
+> Tem os serviços, a história desde 1970 e um agendamento em que o cliente escolhe o serviço, o dia e o período e manda tudo pronto no WhatsApp de vocês. Se gostarem, a gente conversa!

@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Autracam Centro Automotivo · Oficina de confiança desde 1970</title>
+<meta name="description" content="Prévia de site para a Autracam Oficina Mecânica, no Parque Industrial, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/autracam/">
+<meta property="og:title" content="Prévia de site · Autracam Centro Automotivo">
+<meta property="og:description" content="Mecânica, freios, suspensão e revisão no mesmo endereço desde 1970. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/autracam/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#111111">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,600;0,800;1,800&display=swap" rel="stylesheet">
+<style>
+  :root{--preto:#111;--preto-2:#1c1c1c;--preto-3:#2a2a2a;--verm:#e3262e;--verm-2:#b91c23;--branco:#fff;--cinza:#f2f2f0;--tinta:#161616;--tinta-2:#5c5c5c;--fio:#e2e2de}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--cinza);color:var(--tinta);font:16.5px/1.6 "Archivo",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-weight:800;line-height:1.02;margin:0;letter-spacing:-.02em}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--verm);outline-offset:3px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  .wrap>*{min-width:0}
+
+  .previa{background:#000;color:#bbb;font-size:.8125rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:#ff6b70;font-weight:800;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .topo{background:var(--preto);color:#fff}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:72px}
+  .marca{text-decoration:none;display:flex;align-items:center;gap:10px}
+  .marca i{display:block;width:34px;height:26px;background:linear-gradient(115deg,transparent 0 18%,var(--verm) 18% 40%,transparent 40% 58%,var(--verm) 58% 80%,transparent 80%)}
+  .marca b{font:italic 800 1.55rem "Archivo",sans-serif;letter-spacing:-.01em;line-height:1}
+  .marca small{display:block;font-weight:600;font-size:.8125rem;color:var(--verm);font-style:normal;letter-spacing:.04em}
+  .status{font-weight:600;font-size:.875rem;display:inline-flex;align-items:center;gap:7px;color:#ccc}
+  .status i{width:10px;height:10px;border-radius:50%;background:#666}
+  .status.on i{background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.25)}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:12px 22px;border-radius:6px;font-weight:800;text-decoration:none;font-size:1rem;transition:transform .15s,background .15s;white-space:nowrap;border:0;cursor:pointer;font-family:inherit;text-transform:uppercase;letter-spacing:.03em}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.verm{background:var(--verm);color:#fff}
+  .btn.verm:hover{background:var(--verm-2)}
+  .btn.linha{border:2px solid currentColor;background:transparent}
+  .btn.preto{background:var(--preto);color:#fff}
+
+  .hero{background:var(--preto);color:#fff;position:relative;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding-top:40px;padding-bottom:74px}
+  .ano{font:italic 800 1rem "Archivo",sans-serif;color:var(--verm);letter-spacing:.12em;text-transform:uppercase}
+  .hero h1{font-size:clamp(2.8rem,6.6vw,5rem);margin:14px 0 18px}
+  .hero h1 em{color:var(--verm)}
+  .hero p{font-size:1.12rem;color:#bdbdbd;max-width:31em;margin:0 0 28px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .selos{display:flex;gap:26px;flex-wrap:wrap;margin-top:32px;border-top:1px solid #333;padding-top:22px}
+  .selos b{display:block;font:italic 800 2rem "Archivo",sans-serif;line-height:1}
+  .selos span{font-size:.875rem;color:#9a9a9a}
+  .fachada{position:relative}
+  .fachada img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+  .fachada::after{content:"";position:absolute;right:-12px;bottom:-12px;width:46%;height:46%;border-right:6px solid var(--verm);border-bottom:6px solid var(--verm);border-radius:0 0 10px 0;pointer-events:none}
+  @media (max-width:880px){.hero .wrap{grid-template-columns:1fr;padding-top:26px}.fachada::after{right:-6px;bottom:-8px}}
+
+  section{padding:76px 0}
+  .tit{max-width:660px;margin-bottom:28px}
+  .tit small{font:italic 800 .8125rem "Archivo",sans-serif;color:var(--verm);letter-spacing:.14em;text-transform:uppercase}
+  .tit h2{font-size:clamp(2.1rem,4.8vw,3.2rem);margin-top:8px}
+  .tit p{color:var(--tinta-2);margin:10px 0 0}
+
+  .servicos{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--fio);border:2px solid var(--fio);border-radius:8px;overflow:hidden}
+  .serv{background:#fff;padding:24px 22px}
+  .serv b{display:block;font-size:1.15rem;margin-bottom:4px}
+  .serv span{color:var(--tinta-2);font-size:.94rem}
+  .serv i{display:block;width:26px;height:4px;background:var(--verm);margin-bottom:14px}
+  @media (max-width:900px){.servicos{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.servicos{grid-template-columns:1fr}}
+
+  .cuidado{background:#fff}
+  .cuidado .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .cuidado .fotos{display:grid;grid-template-columns:1.3fr 1fr;gap:12px}
+  .cuidado .fotos img{width:100%;height:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px}
+  .lista{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+  .lista li{padding-left:30px;position:relative}
+  .lista li::before{content:"";position:absolute;left:0;top:.45em;width:16px;height:10px;border-left:3px solid var(--verm);border-bottom:3px solid var(--verm);transform:rotate(-45deg)}
+  .lista b{display:block}
+  .lista span{color:var(--tinta-2)}
+  @media (max-width:880px){.cuidado .wrap{grid-template-columns:1fr}}
+
+  /* Agendar */
+  .agenda{background:var(--preto);color:#ddd}
+  .agenda .tit h2{color:#fff}
+  .agenda .tit p{color:#aaa}
+  .form{display:grid;grid-template-columns:1fr 1fr;gap:16px 22px;background:var(--preto-2);border:1px solid #333;border-radius:10px;padding:26px}
+  .form label{display:block;font-weight:600;color:#fff;margin-bottom:6px}
+  .form input,.form select,.form textarea{width:100%;min-height:50px;border-radius:6px;border:1px solid #3a3a3a;background:#0b0b0b;color:#fff;font:inherit;padding:10px 12px}
+  .form textarea{min-height:90px;resize:vertical}
+  .form .full{grid-column:1/-1}
+  .form .btn{width:100%}
+  .form small{color:#999;font-size:.875rem}
+  @media (max-width:760px){.form{grid-template-columns:1fr;padding:18px}}
+
+  .falas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .falas blockquote{margin:0;background:#fff;border-left:5px solid var(--verm);border-radius:6px;padding:22px}
+  .falas cite{display:block;margin-top:10px;font-style:normal;font-weight:800;font-size:.875rem;color:var(--verm)}
+  @media (max-width:880px){.falas{grid-template-columns:1fr}}
+
+  .onde .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+  .horas{width:100%;border-collapse:collapse;margin-bottom:18px;background:#fff;border-radius:8px;overflow:hidden}
+  .horas td{padding:12px 16px;border-bottom:1px solid var(--fio)}
+  .horas td:last-child{text-align:right;font-weight:800}
+  .end{margin:0 0 22px}
+  .end a{white-space:nowrap;font-weight:800}
+  .mapa{border-radius:8px;overflow:hidden;min-height:380px;background:#ddd}
+  .mapa iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+  @media (max-width:880px){.onde .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:#000;color:#999;padding:24px 0 110px;font-size:.875rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:#ff6b70;font-weight:800;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:40;box-shadow:0 14px 30px -12px rgba(0,0,0,.6);transition:opacity .2s,transform .2s}
+  .fixo.some{opacity:0;transform:translateY(20px);pointer-events:none}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial da Autracam. É uma ideia de site montada por Lucas para apresentar à oficina.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20da%20Autracam%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Autracam, início"><i aria-hidden="true"></i><span><b>AUTRACAM</b><small>Centro Automotivo</small></span></a>
+    <span class="status" id="status"><i></i><span>Seg. a sex.</span></span>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="ano">Desde 1970 · mesmo endereço</span>
+        <h1 id="titulo">A oficina de <em>confiança</em> de três gerações.</h1>
+        <p>Mecânica geral, freios, suspensão, revisão e bateria no Parque Industrial. Oficina limpa, equipe uniformizada, capa no banco e o carro testado na rua antes de voltar para você.</p>
+        <div class="acoes">
+          <a class="btn verm" href="#agendar">Agendar serviço</a>
+          <a class="btn linha" href="tel:+551932720808">Ligar 3272-0808</a>
+        </div>
+        <div class="selos">
+          <div><b>55+</b><span>anos de oficina</span></div>
+          <div><b>4,8 ★</b><span>187 avaliações no Google</span></div>
+        </div>
+      </div>
+      <div class="fachada">
+        <img src="fotos/fachada.jpg" alt="Fachada da Autracam Centro Automotivo, com o letreiro preto e vermelho" width="1080" height="700">
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-serv">
+    <div class="wrap">
+      <div class="tit"><small>Serviços</small><h2 id="t-serv">O que a gente resolve</h2></div>
+      <div class="servicos">
+        <div class="serv"><i></i><b>Mecânica geral</b><span>Diagnóstico e reparo de motor, câmbio e arrefecimento.</span></div>
+        <div class="serv"><i></i><b>Freios</b><span>Pastilhas, discos, lonas e fluido.</span></div>
+        <div class="serv"><i></i><b>Suspensão</b><span>Amortecedores, bandejas, braços e bieletas.</span></div>
+        <div class="serv"><i></i><b>Revisão e óleo</b><span>Troca de óleo, filtros e revisão completa.</span></div>
+        <div class="serv"><i></i><b>Regulagem de motor</b><span>Motor falhando ou gastando demais.</span></div>
+        <div class="serv"><i></i><b>Baterias</b><span>Troca de bateria com marca de linha, como a Moura.</span></div>
+        <div class="serv"><i></i><b>Autoelétrica</b><span>Partida, carga e parte elétrica.</span></div>
+        <div class="serv"><i></i><b>Montagem de pneus</b><span>Traga os seus ou consulte.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cuidado" aria-labelledby="t-cuid">
+    <div class="wrap">
+      <div class="fotos">
+        <img src="fotos/oficina.jpg" alt="Interior da oficina com carros nos elevadores" loading="lazy" width="900" height="1200">
+        <img src="fotos/freio.jpg" alt="Disco e pinça de freio expostos durante o reparo" loading="lazy" width="900" height="1200">
+      </div>
+      <div>
+        <div class="tit"><small>O jeito Autracam</small><h2 id="t-cuid">Do jeito que você queria que todo mecânico fosse</h2></div>
+        <ul class="lista">
+          <li><b>Explica tudo com clareza</b><span>A equipe orienta e mostra o que o carro precisa antes do reparo.</span></li>
+          <li><b>Oficina limpa e organizada</b><span>Mecânicos uniformizados e capa protetora no banco.</span></li>
+          <li><b>Teste depois do serviço</b><span>O carro roda na rua antes da entrega.</span></li>
+          <li><b>Preço justo</b><span>"Preço", "confiança" e "honestos" são as palavras que mais aparecem nas avaliações.</span></li>
+          <li><b>E o cafezinho</b><span>Quem espera elogia o cafezinho da recepção.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="agenda" id="agendar" aria-labelledby="t-ag">
+    <div class="wrap">
+      <div class="tit"><small>Agendamento</small><h2 id="t-ag">Marque o seu horário</h2><p>Preencha e a mensagem vai pronta para o WhatsApp da oficina. Eles confirmam o dia.</p></div>
+      <form class="form" id="form" novalidate>
+        <div><label for="carro">Carro e ano</label><input id="carro" placeholder="Ex.: Onix 2019" autocomplete="off"></div>
+        <div><label for="serv">Serviço</label>
+          <select id="serv"><option>Revisão e troca de óleo</option><option>Freios</option><option>Suspensão</option><option>Barulho ou problema sem saber a causa</option><option>Regulagem de motor</option><option>Bateria ou parte elétrica</option><option>Montagem de pneus</option></select></div>
+        <div><label for="dia">Melhor dia</label><input id="dia" type="date"></div>
+        <div><label for="per">Período</label><select id="per"><option>Manhã (7h30 às 11h30)</option><option>Tarde (13h às 18h)</option></select></div>
+        <div class="full"><label for="obs">Conte o que está acontecendo (opcional)</label><textarea id="obs" placeholder="Ex.: barulho na roda da frente ao passar em lombada"></textarea></div>
+        <div class="full"><a class="btn verm" id="env" href="https://wa.me/5519974089393">Enviar pelo WhatsApp</a><small id="aviso"></small></div>
+      </form>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="tit"><small>4,8 · 187 avaliações no Google</small><h2 id="t-aval">Quem leva o carro, volta</h2></div>
+      <div class="falas">
+        <blockquote>A oficina é impecavelmente limpa e em ordem e os mecânicos sempre estão uniformizados. Até para sentar no banco do seu carro, eles colocam uma capa protetora.<cite>Ana · Google</cite></blockquote>
+        <blockquote>A equipe foi muito atenciosa, explicou tudo com clareza e realizou o reparo do carro com rapidez e honestidade.<cite>Jé · Google</cite></blockquote>
+        <blockquote>Preço justo para os reparos e consertos no carro.<cite>Resumo das avaliações · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:18px"><small>Onde fica</small><h2 id="t-onde">Parque Industrial, desde 1970</h2></div>
+        <table class="horas">
+          <tr><td>Segunda a sexta</td><td>7h30–11h30<br>13h–18h</td></tr>
+          <tr><td>Sábado e domingo</td><td>Fechado</td></tr>
+        </table>
+        <p class="end"><b>R. Ana Jacinta de Andrade Couto, 403</b> · Campinas (SP)<br>Fixo <a href="tel:+551932720808">(19) 3272-0808</a> · WhatsApp <a class="zap" href="https://wa.me/5519974089393">(19) 97408-9393</a></p>
+        <div class="acoes">
+          <a class="btn preto" href="https://www.google.com/maps/dir/?api=1&amp;destination=Autracam+Oficina+Mec%C3%A2nica,+R.+Ana+Jacinta+de+Andrade+Couto,+403,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn verm zap" href="https://wa.me/5519974089393">WhatsApp</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Autracam, R. Ana Jacinta de Andrade Couto, 403, Campinas" src="https://www.google.com/maps?q=Autracam+Oficina+Mec%C3%A2nica,+R.+Ana+Jacinta+de+Andrade+Couto,+403,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Autracam Centro Automotivo · desde 1970 · Campinas</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn verm fixo some zap" id="fixo" href="https://wa.me/5519974089393">WhatsApp</a>
+
+<script>
+(function () {
+  document.querySelectorAll(".zap").forEach(function(a){a.target="_blank";a.rel="noopener";});
+  var fixo = document.getElementById("fixo");
+  if ("IntersectionObserver" in window) new IntersectionObserver(function(e){ fixo.classList.toggle("some", e[0].isIntersecting); }).observe(document.querySelector(".hero"));
+
+  var p = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+  var g = function(t){ return (p.find(function(x){return x.type===t;})||{}).value; };
+  var dia = g("weekday"), m = (Number(g("hour"))%24)*60 + Number(g("minute"));
+  var st = document.getElementById("status"), txt = st.querySelector("span");
+  if (["Mon","Tue","Wed","Thu","Fri"].indexOf(dia) > -1) {
+    if ((m >= 450 && m < 690) || (m >= 780 && m < 1080)) { st.classList.add("on"); txt.textContent = "Aberto agora"; }
+    else if (m >= 690 && m < 780) txt.textContent = "Almoço · volta às 13h";
+    else txt.textContent = m < 450 ? "Abre às 7h30" : "Fechado · abre amanhã";
+  } else txt.textContent = "Fechado · abre segunda";
+
+  var env = document.getElementById("env"); env.target = "_blank"; env.rel = "noopener";
+  var diaI = document.getElementById("dia"), aviso = document.getElementById("aviso");
+  function at(){
+    var d = diaI.value, dtxt = "";
+    aviso.textContent = "";
+    if (d) {
+      var dt = new Date(d + "T12:00:00"), w = dt.getDay();
+      if (w === 0 || w === 6) aviso.textContent = " A oficina não abre aos fins de semana; escolha de segunda a sexta.";
+      dtxt = dt.toLocaleDateString("pt-BR",{weekday:"long",day:"2-digit",month:"2-digit"});
+    }
+    var obs = document.getElementById("obs").value.trim();
+    var msg = "Olá, Autracam! Quero agendar um serviço.\nCarro: " + (document.getElementById("carro").value.trim() || "(informar)") + "\nServiço: " + document.getElementById("serv").value + (dtxt ? "\nDia: " + dtxt : "") + "\nPeríodo: " + document.getElementById("per").value + (obs ? "\nObservação: " + obs : "");
+    env.href = "https://wa.me/5519974089393?text=" + encodeURIComponent(msg);
+  }
+  document.getElementById("form").addEventListener("input", at);
+  document.getElementById("form").addEventListener("change", at);
+  at();
+})();
+</script>
+</body>
+</html>
