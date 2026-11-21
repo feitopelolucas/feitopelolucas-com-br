@@ -394,3 +394,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, pessoal da Das Águas! Sou o Lucas, faço sites aqui em Campinas. Vi que a padaria tem 4,7 no Google, com muita gente elogiando o pão francês e o sonho, mas lá no Google ainda não aparece nem o telefone de vocês. Montei uma ideia de site: https://feitopelolucas.com.br/previa/dasaguas/
 > O cliente monta a cesta, escolhe a hora de retirar e manda o pedido pronto no WhatsApp. Também posso arrumar o perfil do Google. Se gostarem, a gente conversa!
+
+---
+
+## 43. Borracharia do Alemão · /previa/borrachariadoalemao/
+
+**Pelo que vi:** sem site e sem Instagram, e o perfil do Google **não foi reivindicado**. Tem 4,7 no Google com 166 avaliações, com "preço" citado 21 vezes e "honesto" 4. A placa diz **"Alemão Borracharia: consertos, compra e venda de pneus usados"**. Fica no fundo da Av. Joaquim Payolla, 610 (portão com placa amarela). WhatsApp (19) 97409-7949. Abre de segunda a sexta, das 8h às 18h, e sábado das 8h às 14h30. Existe há mais de 13 anos, pelo Solutudo. Atende carro, moto e caminhão (uma avaliação conta que socorreram um caminhão). As fotos são do Google (placa, ele montando pneu de moto, teste de vazamento na água). O site tem um orçamento rápido com veículo, o que precisa e a opção "estou parado na rua", que manda como urgente e pede a localização.
+**Por onde mandar:** WhatsApp (19) 97409-7949.
+
+> Olá, Alemão! Sou o Lucas, faço sites aqui em Campinas. Vi que a borracharia tem 4,7 no Google com 166 avaliações, todo mundo falando de serviço rápido e honesto, mas o perfil nem foi reivindicado ainda. Montei uma ideia de site: https://feitopelolucas.com.br/previa/borrachariadoalemao/
+> O cliente marca se é carro, moto ou caminhão, o que precisa, e se está parado na rua, e a mensagem chega pronta no seu WhatsApp. Também posso ajudar a assumir o perfil do Google. Se gostar, a gente conversa!
