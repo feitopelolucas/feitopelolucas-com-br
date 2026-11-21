@@ -384,3 +384,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Olá, Aerson! Sou o Lucas, faço sites aqui em Campinas. Vi que a Anabe tem nota 5,0 no Google com 168 avaliações, com gente contando que vocês acharam defeito que nem a autorizada achou. Isso merece um site! Montei uma ideia: https://feitopelolucas.com.br/previa/anabe/
 > O cliente toca na luz que acendeu no painel, entende o básico e já manda para vocês no WhatsApp com o modelo do carro. Tem também os serviços e casos reais da oficina. Se gostar, a gente conversa!
+
+---
+
+## 42. Das Águas Panificadora · /previa/dasaguas/
+
+**Pelo que vi:** sem site. O perfil do Google **não tem telefone cadastrado**: dá para oferecer a correção junto. Tem 4,7 no Google com 166 avaliações. O Instagram **@panificadoradasaguas** (1 mil seguidores) tem posts só até a Páscoa de 2024. Existe também um @panificadora_das_aguas, com 630 seguidores. WhatsApp (19) 98280-7189 e fixo (19) 3276-1982. Abre de segunda a sábado, das 6h às 20h30, e domingo das 6h30 às 14h. Os mais elogiados são o pão francês sempre fresco, o sonho, a bomba de chocolate, as carolinas, o pudim e os salgados. As fotos são do Google (fachada marrom com logo dourado, vitrines, torta, salgados) e do Instagram (bolo de pote). O site tem a "cesta" com quantidades (pão de 5 em 5) e horário de retirada, mandando o pedido no WhatsApp.
+**Por onde mandar:** WhatsApp (19) 98280-7189.
+
+> Oi, pessoal da Das Águas! Sou o Lucas, faço sites aqui em Campinas. Vi que a padaria tem 4,7 no Google, com muita gente elogiando o pão francês e o sonho, mas lá no Google ainda não aparece nem o telefone de vocês. Montei uma ideia de site: https://feitopelolucas.com.br/previa/dasaguas/
+> O cliente monta a cesta, escolhe a hora de retirar e manda o pedido pronto no WhatsApp. Também posso arrumar o perfil do Google. Se gostarem, a gente conversa!
