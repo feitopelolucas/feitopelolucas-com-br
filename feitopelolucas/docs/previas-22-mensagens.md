@@ -192,3 +192,12 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 > Fala, pessoal da Coffee Premium! Sou o Lucas, faço sites aqui em Campinas. Vi que o Instagram que aparece no Google de vocês não abre mais, e a barbearia tem nota 4,8 com mais de 150 avaliações. Montei uma ideia de site com a cara do lugar, café e tijolinho: https://feitopelolucas.com.br/previa/coffeepremium/
 > Tem os serviços num "cardápio", a equipe, e um agendamento em que o cliente escolhe serviço, barbeiro e dia e manda tudo certinho no WhatsApp. Se gostarem, a gente conversa!
 
+---
+
+## 22. Panificadora Sonho da Manhã · /previa/sonhodamanha/
+
+**Pelo que vi:** Instagram ativo (2,2 mil seguidores) com **três WhatsApp**: bolo confeitado (19) 99119-9303, balcão (19) 99010-5545 e administração (19) 99217-4686. O site organiza os três. Abre às 5h30 em dia de semana. Fazem bolos decorados, bento cake, cookies e guirlanda de Natal por encomenda. Uma avaliação diz literalmente "**só falta um cardápio para ver as opções**". Fiz o cardápio, mas sem preços, porque não achei a tabela. **Atenção ao endereço:** o Google mostra "Rua Paschoal Curcio, 79" e a bio do Instagram diz "R. Altino Arantes, 79". Usei o do Google; vale confirmar com eles.
+
+> Oi, pessoal da Sonho da Manhã! Sou o Lucas, faço sites aqui em Campinas. Vi uma avaliação de vocês no Google dizendo "só falta um cardápio para ver as opções", e montei uma ideia de site que resolve isso: https://feitopelolucas.com.br/previa/sonhodamanha/
+> Tem o cardápio do dia, a parte de bolos decorados com o WhatsApp da confeitaria, a guirlanda de Natal e os três contatos separados (bolo, balcão e administração), para cada cliente falar com a pessoa certa. Se gostarem, a gente conversa!
+

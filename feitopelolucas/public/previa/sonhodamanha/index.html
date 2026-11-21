@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Panificadora Sonho da Manhã · Jardim das Bandeiras, Campinas</title>
+<meta name="description" content="Prévia de site para a Panificadora Sonho da Manhã, no Jardim das Bandeiras, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/sonhodamanha/">
+<meta property="og:title" content="Prévia de site · Panificadora Sonho da Manhã">
+<meta property="og:description" content="Aberta desde as 5h30, com bolos decorados por encomenda. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/sonhodamanha/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#6e2635">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%236e2635'/%3E%3Cpath d='M7 20a9 9 0 0 1 18 0Z' fill='%23ffcf9e'/%3E%3Cpath d='M5 22h22' stroke='%23ffcf9e' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Quattrocento+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --vinho:#6e2635; --vinho-esc:#4f1a25; --pessego:#ffcf9e; --aurora-1:#ffe7cf; --aurora-2:#f8c7c0; --lilas:#d9c8e8;
+    --creme:#fffaf3; --tinta:#3b1f24; --tinta-2:#715a5e; --fio:#efdcd2; --ouro:#d39b4a;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--creme);color:var(--tinta);font:17.5px/1.65 "Quattrocento Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Yeseva One",Georgia,serif;font-weight:400;line-height:1.08;margin:0}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+
+  .previa{background:var(--vinho-esc);color:#f0d9d6;font-size:.82rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--pessego);font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  /* Aurora */
+  .aurora{background:linear-gradient(180deg,var(--lilas) 0%,var(--aurora-2) 38%,var(--aurora-1) 72%,var(--creme) 100%);position:relative;overflow:hidden}
+  .sol{position:absolute;left:50%;bottom:-160px;width:420px;height:420px;margin-left:-210px;border-radius:50%;background:radial-gradient(circle,#ffd9a8 0,#ffbf7a 55%,transparent 70%);opacity:.75}
+  .topo{position:relative;z-index:2}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:14px}
+  .marca{text-decoration:none;display:flex;align-items:center;gap:12px;color:var(--vinho)}
+  .marca .selo{width:50px;height:50px;border-radius:50%;border:2px solid var(--vinho);display:grid;place-items:center;font:400 .62rem/1.05 "Yeseva One",serif;text-align:center;background:rgba(255,255,255,.5)}
+  .marca b{font:400 1.35rem/1 "Yeseva One",serif}
+  .marca small{display:block;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;margin-top:3px}
+  .topo nav{display:flex;gap:22px;font-weight:700;font-size:.95rem}
+  .topo nav a{text-decoration:none;color:var(--vinho)}
+  @media (max-width:900px){.topo nav{display:none}}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:12px 24px;border-radius:999px;font-weight:700;text-decoration:none;transition:transform .15s,background .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn.vinho{background:var(--vinho);color:#fff}
+  .btn.vinho:hover{background:var(--vinho-esc)}
+  .btn.branco{background:#fff;color:var(--vinho)}
+  .btn.peq{min-height:44px;padding:9px 18px;font-size:.92rem}
+
+  .hero{position:relative;z-index:1;text-align:center;padding:50px 0 120px}
+  .relogio{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.65);padding:8px 18px;border-radius:999px;font-weight:700;color:var(--vinho)}
+  .relogio b{font:400 1.2rem "Yeseva One",serif}
+  .hero h1{font-size:clamp(2.8rem,7vw,5.4rem);color:var(--vinho);margin:22px auto 16px;max-width:12em}
+  .hero p{font-size:1.18rem;color:var(--tinta-2);max-width:34em;margin:0 auto 30px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+
+  section{padding:86px 0}
+  .tit{max-width:640px;margin-bottom:36px}
+  .tit small{font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;color:var(--ouro)}
+  .tit h2{font-size:clamp(2.1rem,4.6vw,3.2rem);color:var(--vinho);margin-top:8px}
+  .tit p{color:var(--tinta-2);margin:12px 0 0}
+  .centro{text-align:center;margin-left:auto;margin-right:auto}
+
+  /* Fachada destaque */
+  .vitrine{margin-top:-80px;position:relative;z-index:2}
+  .vitrine img{width:100%;max-height:520px;object-fit:cover;border-radius:28px;box-shadow:0 30px 60px -36px rgba(79,26,37,.6)}
+
+  /* Cardápio */
+  .menu{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .coluna{background:#fff;border:1px solid var(--fio);border-radius:24px;padding:26px}
+  .coluna h3{font-size:1.5rem;color:var(--vinho);margin-bottom:6px}
+  .coluna .quando{font-size:.85rem;color:var(--ouro);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+  .coluna ul{list-style:none;padding:0;margin:14px 0 0}
+  .coluna li{padding:9px 0;border-bottom:1px dotted var(--fio);display:flex;justify-content:space-between;gap:10px}
+  .coluna li em{font-style:normal;color:var(--tinta-2);font-size:.88rem}
+  .menu-nota{text-align:center;color:var(--tinta-2);margin-top:20px}
+  @media (max-width:900px){.menu{grid-template-columns:1fr}}
+
+  /* Bolos */
+  .bolos{background:var(--vinho);color:#f6e3df}
+  .bolos .tit h2{color:#fff}
+  .bolos .tit small{color:var(--pessego)}
+  .bolos .tit p{color:#ecc9c4}
+  .bolos .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:46px;align-items:center}
+  .fotos-b{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .fotos-b img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:20px}
+  .fotos-b img:nth-child(2){margin-top:40px}
+  .tipos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0 26px}
+  .tipos span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:12px 14px;font-weight:700}
+  @media (max-width:900px){.bolos .wrap{grid-template-columns:1fr}}
+
+  /* Natal */
+  .natal{padding:0}
+  .natal .caixa{display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;background:#fff;border:2px dashed var(--vinho);border-radius:26px;padding:22px 26px;margin-top:-1px}
+  .natal img{width:110px;height:110px;object-fit:cover;border-radius:50%}
+  .natal b{font:400 1.4rem "Yeseva One",serif;color:var(--vinho)}
+  @media (max-width:760px){.natal .caixa{grid-template-columns:1fr;text-align:center}.natal img{margin:0 auto}}
+
+  /* Contatos */
+  .contatos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .cont{background:#fff;border:1px solid var(--fio);border-radius:22px;padding:24px;text-align:center}
+  .cont .ic{width:56px;height:56px;border-radius:50%;margin:0 auto 12px;background:var(--aurora-1);display:grid;place-items:center;color:var(--vinho)}
+  .cont .ic svg{width:28px;height:28px}
+  .cont h3{font-size:1.3rem;color:var(--vinho)}
+  .cont p{color:var(--tinta-2);margin:6px 0 16px;font-size:.95rem}
+  @media (max-width:900px){.contatos{grid-template-columns:1fr}}
+
+  /* Avaliações */
+  .aval{background:var(--aurora-1)}
+  .falas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .falas blockquote{margin:0;background:#fff;border-radius:22px;padding:24px}
+  .falas blockquote::before{content:"★★★★★";display:block;color:var(--ouro);letter-spacing:3px;margin-bottom:8px}
+  .falas cite{display:block;margin-top:10px;font-style:normal;font-weight:700;font-size:.86rem;color:var(--tinta-2)}
+  @media (max-width:900px){.falas{grid-template-columns:1fr}}
+
+  /* Visita */
+  .visita .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:36px}
+  .horas{width:100%;border-collapse:collapse;margin:0 0 20px}
+  .horas td{padding:10px 0;border-bottom:1px dotted var(--fio)}
+  .horas td:last-child{text-align:right;font-weight:700}
+  .horas tr.hoje td{color:var(--vinho)}
+  .horas tr.hoje td:first-child::after{content:" · hoje";font-weight:400;color:var(--ouro)}
+  .mapa{border-radius:24px;overflow:hidden;border:1px solid var(--fio);min-height:400px}
+  .mapa iframe{width:100%;height:100%;min-height:400px;border:0;display:block}
+  @media (max-width:900px){.visita .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:var(--vinho-esc);color:#e6c8c4;padding:24px 0 100px;font-size:.88rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--pessego);font-weight:700;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 12px 26px -10px rgba(79,26,37,.7);transition:opacity .3s,transform .3s}
+  .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
+  @media (min-width:901px){footer{padding-bottom:24px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial da Panificadora Sonho da Manhã. É uma ideia de site montada por Lucas para apresentar à padaria.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20da%20Sonho%20da%20Manh%C3%A3%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<div class="aurora">
+  <span class="sol" aria-hidden="true"></span>
+  <header class="topo">
+    <div class="wrap">
+      <a class="marca" href="#inicio" aria-label="Panificadora Sonho da Manhã, início"><span class="selo" aria-hidden="true">Sonho<br>da<br>Manhã</span><span><b>Sonho da Manhã</b><small>Panificadora</small></span></a>
+      <nav aria-label="Seções">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#bolos">Bolos</a>
+        <a href="#contatos">Contatos</a>
+        <a href="#visita">Horários</a>
+      </nav>
+      <a class="btn vinho peq zap" href="https://wa.me/5519990105545">Balcão</a>
+    </div>
+  </header>
+  <section class="hero" id="inicio" aria-labelledby="titulo">
+    <div class="wrap">
+      <span class="relogio"><b id="rel">5h30</b><span id="rel-txt">a padaria já está aberta</span></span>
+      <h1 id="titulo">Quando o sol nasce, o pão já está na prateleira.</h1>
+      <p>Padaria de bairro no Jardim das Bandeiras com pão francês, pão de queijo, salgados, tortas, doces e bolos decorados por encomenda. Aberta desde as 5h30 nos dias de semana.</p>
+      <div class="acoes">
+        <a class="btn vinho" href="#cardapio">Ver o cardápio</a>
+        <a class="btn branco" href="#bolos">Encomendar bolo</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<main>
+  <div class="vitrine">
+    <div class="wrap"><img src="fotos/fachada.jpg" alt="Fachada da Panificadora Sonho da Manhã com toldo listrado, deck de madeira e mesas" width="1024" height="768"></div>
+  </div>
+
+  <section id="cardapio" aria-labelledby="t-card">
+    <div class="wrap">
+      <div class="tit centro"><small>O cardápio que faltava</small><h2 id="t-card">Do café da manhã ao lanche da tarde</h2><p>Um cliente pediu no Google: “só falta um cardápio para ver as opções”. Pronto, aqui está.</p></div>
+      <div class="menu">
+        <div class="coluna">
+          <span class="quando">Bem cedo</span>
+          <h3>Pães e café</h3>
+          <ul>
+            <li>Pão francês <em>quentinho</em></li>
+            <li>Pão de queijo <em>o queridinho</em></li>
+            <li>Café e café com leite <em>na hora</em></li>
+          </ul>
+        </div>
+        <div class="coluna">
+          <span class="quando">Meio do dia</span>
+          <h3>Salgados e tortas</h3>
+          <ul>
+            <li>Salgado de hambúrguer com cheddar <em>surpreende</em></li>
+            <li>Torta de frango <em>saborosa</em></li>
+            <li>Frango <em>elogiado</em></li>
+            <li>Salgados variados <em>na vitrine</em></li>
+          </ul>
+        </div>
+        <div class="coluna">
+          <span class="quando">À tarde</span>
+          <h3>Doces e bolos</h3>
+          <ul>
+            <li>Cookies recheados <em>com calda</em></li>
+            <li>Fatia de bolo de chocolate <em>bem alta</em></li>
+            <li>Bento cake <em>para presentear</em></li>
+            <li>Bolos decorados <em>por encomenda</em></li>
+          </ul>
+        </div>
+      </div>
+      <p class="menu-nota">Itens e valores mudam ao longo do dia. A tabela atualizada está no Instagram e no WhatsApp do balcão.</p>
+    </div>
+  </section>
+
+  <section class="bolos" id="bolos" aria-labelledby="t-bolos">
+    <div class="wrap">
+      <div class="fotos-b">
+        <img src="fotos/fatia.jpg" alt="Fatia alta de bolo de chocolate com cobertura de ganache" loading="lazy" width="481" height="640">
+        <img src="fotos/bolo-chocolate.jpg" alt="Bolo de chocolate recebendo cobertura branca" loading="lazy" width="360" height="550">
+      </div>
+      <div>
+        <div class="tit" style="margin-bottom:0"><small>Encomendas</small><h2 id="t-bolos">Bolos decorados para o seu dia</h2><p>Aniversário, chá, festa infantil ou só vontade de comemorar. A confeitaria da Sonho da Manhã tem um WhatsApp só para encomendas de bolo.</p></div>
+        <div class="tipos"><span>Bolos decorados</span><span>Bento cake</span><span>Bolos temáticos</span><span>Tortas e doces</span></div>
+        <a class="btn branco zap" href="https://wa.me/5519991199303?text=Ol%C3%A1%21%20Quero%20encomendar%20um%20bolo%20decorado.">Encomendar pelo WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="natal" id="natal">
+    <div class="wrap">
+      <div class="caixa">
+        <img src="fotos/guirlanda.jpg" alt="Guirlanda de chocolate com morangos, trufas e laço vermelho" loading="lazy" width="480" height="640">
+        <div><b>Guirlanda de Natal</b><br><span style="color:var(--tinta-2)">Chocolate, morango e trufas para a mesa da ceia. Encomende com antecedência.</span></div>
+        <a class="btn vinho zap" href="https://wa.me/5519991199303?text=Ol%C3%A1%21%20Quero%20encomendar%20a%20guirlanda%20de%20Natal.">Reservar</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="contatos" aria-labelledby="t-cont">
+    <div class="wrap">
+      <div class="tit centro"><small>Fale com a pessoa certa</small><h2 id="t-cont">Um WhatsApp para cada coisa</h2></div>
+      <div class="contatos">
+        <div class="cont"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h16M5 21V12h14v9M5 12c0-2 2-3 7-3s7 1 7 3"/><path d="M12 9V5M10 5h4"/></svg></div><h3>Bolos confeitados</h3><p>Encomendas de bolos decorados e bento cake.</p><a class="btn vinho peq zap" href="https://wa.me/5519991199303">(19) 99119-9303</a></div>
+        <div class="cont"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h16l-1 10H5Z"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div><h3>Balcão</h3><p>Pedidos do dia, pães, salgados e dúvidas.</p><a class="btn vinho peq zap" href="https://wa.me/5519990105545">(19) 99010-5545</a></div>
+        <div class="cont"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></div><h3>Administração</h3><p>Parcerias, fornecedores e assuntos da empresa.</p><a class="btn vinho peq zap" href="https://wa.me/5519992174686">(19) 99217-4686</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="aval" aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="tit centro"><small>4,7 · 151 avaliações no Google</small><h2 id="t-aval">O bairro recomenda</h2></div>
+      <div class="falas">
+        <blockquote>Atendimento sensacional, muito educados. Pães, café e outros muito bons.<cite>Ewerton · Google</cite></blockquote>
+        <blockquote>O frango é uma delícia e os doces também. Todos nos recebem com sorriso no rosto.<cite>Resumo das avaliações · Google</cite></blockquote>
+        <blockquote>Comprei um salgado de hambúrguer com cheddar e fiquei impressionado com o quão bom ele é.<cite>Paulo · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="visita" id="visita" aria-labelledby="t-vis">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:18px"><small>Visite</small><h2 id="t-vis">Abre cedinho todos os dias</h2></div>
+        <table class="horas" id="horas">
+          <tr data-g="sem"><td>Segunda a sexta</td><td>5h30 às 19h30</td></tr>
+          <tr data-g="sab"><td>Sábado</td><td>6h às 19h30</td></tr>
+          <tr data-g="dom"><td>Domingo</td><td>6h às 12h</td></tr>
+        </table>
+        <p style="color:var(--tinta-2);margin:0 0 22px"><b style="color:var(--tinta)">Rua Paschoal Curcio, 79</b> · Jardim das Bandeiras II, Campinas (SP)</p>
+        <a class="btn vinho" href="https://www.google.com/maps/dir/?api=1&amp;destination=Panificadora+Sonho+da+Manh%C3%A3,+Rua+Paschoal+Curcio,+79,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Panificadora Sonho da Manhã, Jardim das Bandeiras, Campinas" src="https://www.google.com/maps?q=Panificadora+Sonho+da+Manh%C3%A3,+Rua+Paschoal+Curcio,+79+-+Jardim+das+Bandeiras,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Panificadora Sonho da Manhã · <a href="https://www.instagram.com/panifsonhodamanha/" target="_blank" rel="noopener">@panifsonhodamanha</a></span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn vinho fixo some zap" href="https://wa.me/5519990105545" aria-label="Falar com o balcão pelo WhatsApp">WhatsApp</a>
+
+<script>
+(function () {
+  document.querySelectorAll(".zap").forEach(function(a){a.target="_blank";a.rel="noopener";});
+  var H = {0:[6,12],1:[5.5,19.5],2:[5.5,19.5],3:[5.5,19.5],4:[5.5,19.5],5:[5.5,19.5],6:[6,19.5]};
+  var fmt = function(h){var m=Math.round((h%1)*60);return Math.floor(h)+"h"+(m?m:"");};
+  try {
+    var p = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+    var g = function(t){return (p.find(function(x){return x.type===t})||{}).value};
+    var d = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"));
+    var h = (parseInt(g("hour"),10)%24) + parseInt(g("minute"),10)/60;
+    var tr = document.querySelector('#horas tr[data-g="' + (d===0 ? "dom" : d===6 ? "sab" : "sem") + '"]'); if (tr) tr.classList.add("hoje");
+    var rel = document.getElementById("rel"), txt = document.getElementById("rel-txt");
+    if (h >= H[d][0] && h < H[d][1]) { rel.textContent = "Aberta"; txt.textContent = "agora, até as " + fmt(H[d][1]); }
+    else if (h < H[d][0]) { rel.textContent = fmt(H[d][0]); txt.textContent = "é a hora que a padaria abre hoje"; }
+    else { var n = (d+1)%7; rel.textContent = fmt(H[n][0]); txt.textContent = "é a hora que a padaria abre amanhã"; }
+  } catch (e) {}
+  var f = document.querySelector(".fixo"), t = document.querySelector(".aurora");
+  if (f && t && "IntersectionObserver" in window) new IntersectionObserver(function(e){f.classList.toggle("some", e[0].isIntersecting)}).observe(t);
+})();
+</script>
+</body>
+</html>
