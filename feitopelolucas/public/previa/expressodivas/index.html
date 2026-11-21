@@ -28,7 +28,9 @@
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--preto);color:var(--texto);font:16.5px/1.65 "Plus Jakarta Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-  h1,h2,h3{font-family:"Syne",sans-serif;font-weight:800;line-height:1;margin:0;color:#fff;letter-spacing:-.02em}
+  h1,h2,h3{font-family:"Syne",sans-serif;font-weight:800;line-height:1;margin:0;color:#fff;letter-spacing:-.02em;overflow-wrap:anywhere;hyphens:auto}
+  .wrap>*{min-width:0}
+  @media (max-width:520px){.tit h2{font-size:1.85rem}.hero h1{font-size:2.5rem}}
   img{display:block;max-width:100%;height:auto}
   a{color:inherit}
   :focus-visible{outline:2px solid var(--neon);outline-offset:3px}
@@ -106,7 +108,7 @@
   .curso .foto{position:relative}
   .curso .foto img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:24px}
   .curso .foto span{position:absolute;right:16px;top:16px;background:var(--preto);color:#fff;font-weight:700;font-size:.85rem;padding:8px 14px;border-radius:999px}
-  @media (max-width:900px){.curso .wrap{grid-template-columns:1fr}}
+  @media (max-width:900px){.curso .wrap{grid-template-columns:minmax(0,1fr)}.curso .btn{white-space:normal;text-align:center}}
 
   /* Espaço */
   .espaco .wrap{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
@@ -115,7 +117,7 @@
   .espaco .duas img:last-child{margin-top:40px}
   .selos{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
   .selos span{border:1px solid var(--fio);border-radius:999px;padding:7px 14px;font-size:.88rem}
-  @media (max-width:900px){.espaco .wrap{grid-template-columns:1fr}}
+  @media (max-width:900px){.espaco .wrap{grid-template-columns:minmax(0,1fr)}}
 
   /* Avaliações */
   .aval{background:var(--osso);color:#2b302b}
