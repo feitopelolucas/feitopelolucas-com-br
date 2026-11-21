@@ -180,3 +180,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, pessoal do Açaí Sensação! Sou o Lucas, faço sites aqui em Campinas. Vocês têm 4,7 no Google e mais de 4 mil seguidores, mas quem procura "Açaí Sensação" no Google acaba achando até uma loja de mesmo nome no Rio. Montei uma ideia de site só de vocês: https://feitopelolucas.com.br/previa/acaisensacao/
 > O cliente monta o copo (tamanho, base e acompanhamentos) e o pedido chega pronto no WhatsApp de vocês. Tem também o horário de cada dia com aviso de aberto agora. Se gostarem, a gente conversa!
+
+---
+
+## 20. Barbearia Nicarágua · /previa/barbearianicaragua/
+
+**Pelo que vi:** Instagram **@barbearia_nicaragua** (3,7 mil seguidores, último post em 2024) e agendamento pelo Fresha, mas nenhum site. O Google a marca como **empresa de empreendedoras**. WhatsApp (19) 98728-5862. Horário do Google: segunda a sexta das 9h às 19h30 e sábado das 9h às 17h. **O Instagram diz outra coisa** (até 20h e sábado até 16h); usei o do Google, vale confirmar. Serviços: corte, barba, barboterapia, infantil, visagismo e plano mensal. Avaliações: "atravesso a cidade para cortar aqui", "levo meus filhos há anos, hoje vão sozinhos", cerveja gelada e boa música.
+**Por onde mandar:** WhatsApp (19) 98728-5862.
+
+> Oi, pessoal da Barbearia Nicarágua! Sou o Lucas, faço sites aqui em Campinas. Vocês têm 4,9 no Google, e tem cliente dizendo que atravessa a cidade só para cortar aí. Montei uma ideia de site para a barbearia: https://feitopelolucas.com.br/previa/barbearianicaragua/
+> Tem os serviços (incluindo a barboterapia e o plano mensal), o ambiente, o horário com aviso de aberta agora e o botão de agendar pelo WhatsApp. Se gostarem, a gente conversa!

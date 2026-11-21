@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Barbearia Nicarágua · Cabelo e barba no Nova Europa</title>
+<meta name="description" content="Prévia de site para a Barbearia Nicarágua, no Jardim Nova Europa, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/barbearianicaragua/">
+<meta property="og:title" content="Prévia de site · Barbearia Nicarágua">
+<meta property="og:description" content="Cabelo, barba e barboterapia, com cerveja gelada e boa música. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/barbearianicaragua/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#12213a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#12213a;--navy-2:#0b1628;--madeira:#9a6a42;--madeira-2:#7d5333;--verde:#2f6b3a;--areia:#f5efe6;--tinta:#151b26;--tinta-2:#5c6370;--fio:#e2d9cb;--ouro:#d9b26a}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--areia);color:var(--tinta);font:17px/1.6 "Manrope",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;line-height:.95;margin:0;letter-spacing:.01em}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  .wrap>*{min-width:0}
+
+  .previa{background:#050a14;color:#b6bfcd;font-size:.8125rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--ouro);font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .topo{background:var(--navy);color:#fff;border-bottom:4px solid var(--madeira)}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:76px}
+  .marca{text-decoration:none;line-height:1}
+  .marca b{font:400 1.9rem "Bebas Neue",sans-serif;letter-spacing:.04em;display:block}
+  .marca small{font-size:.8125rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ouro);font-weight:700}
+  .topo nav{display:flex;gap:22px;font-weight:700;color:#c3cad6}
+  .topo nav a{text-decoration:none}
+  .topo nav a:hover{color:var(--ouro)}
+  @media (max-width:860px){.topo nav{display:none}}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:12px 22px;border-radius:4px;font-weight:800;text-decoration:none;font-size:1rem;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn.ouro{background:var(--ouro);color:var(--navy-2)}
+  .btn.navy{background:var(--navy);color:#fff}
+  .btn.linha{border:2px solid currentColor}
+  .btn.peq{min-height:44px;padding:8px 16px;font-size:.94rem}
+
+  .hero{background:var(--navy);color:#cfd6e2;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding-top:44px;padding-bottom:70px}
+  .hero .kick{font-weight:800;color:var(--ouro);letter-spacing:.2em;text-transform:uppercase;font-size:.8125rem}
+  .hero h1{font-size:clamp(3.4rem,8.4vw,6.2rem);color:#fff;margin:12px 0 16px}
+  .hero h1 span{color:var(--ouro)}
+  .hero p{font-size:1.12rem;max-width:30em;margin:0 0 26px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .status{margin-top:20px;display:inline-flex;align-items:center;gap:10px;font-weight:700}
+  .status i{width:11px;height:11px;border-radius:50%;background:#6c7790;flex:none}
+  .status.on i{background:#5fd18b;box-shadow:0 0 0 5px rgba(95,209,139,.2)}
+  .moldura{position:relative}
+  .moldura img{width:100%;aspect-ratio:3/4;object-fit:cover;border:10px solid var(--madeira)}
+  .moldura .nota{position:absolute;left:-14px;bottom:24px;background:var(--areia);color:var(--tinta);padding:12px 16px;font-weight:700;box-shadow:0 16px 30px -14px rgba(0,0,0,.6)}
+  .moldura .nota b{display:block;font:400 2rem/1 "Bebas Neue",sans-serif;color:var(--navy)}
+  @media (max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:26px}.moldura{max-width:420px}.moldura .nota{left:10px}}
+
+  section{padding:80px 0}
+  .tit{max-width:640px;margin-bottom:30px}
+  .tit small{font-weight:800;color:var(--madeira-2);letter-spacing:.2em;text-transform:uppercase;font-size:.8125rem}
+  .tit h2{font-size:clamp(2.6rem,6vw,3.8rem);margin-top:6px;color:var(--navy)}
+  .tit p{color:var(--tinta-2);margin:10px 0 0}
+
+  /* Serviços */
+  .serv{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .sv{background:#fff;border:1px solid var(--fio);border-top:5px solid var(--navy);padding:22px}
+  .sv h3{font-size:1.9rem;color:var(--navy);margin-bottom:6px}
+  .sv p{margin:0;color:var(--tinta-2)}
+  .sv.plano{background:var(--verde);border-color:var(--verde);color:#dceee0}
+  .sv.plano h3{color:#fff}
+  .sv.plano p{color:#dceee0}
+  @media (max-width:860px){.serv{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.serv{grid-template-columns:1fr}}
+
+  /* Barboterapia */
+  .barbo{background:var(--navy-2);color:#cfd6e2}
+  .barbo .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center}
+  .barbo img{width:100%;aspect-ratio:3/4;object-fit:cover}
+  .barbo .tit h2{color:#fff}
+  .barbo .tit small{color:var(--ouro)}
+  .barbo ol{margin:0 0 24px;padding-left:20px}
+  .barbo li{margin:8px 0}
+  @media (max-width:880px){.barbo .wrap{grid-template-columns:1fr}.barbo img{aspect-ratio:4/3}}
+
+  /* Ambiente */
+  .amb{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  .amb img{width:100%;aspect-ratio:3/4;object-fit:cover}
+  .amb figure{margin:0}
+  .amb figcaption{font-size:.875rem;color:var(--tinta-2);margin-top:6px}
+  @media (max-width:760px){.amb{grid-template-columns:1fr 1fr}.amb figure:first-child{grid-column:1/-1}.amb figure:first-child img{aspect-ratio:4/3}}
+
+  /* Avaliações */
+  .falas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .falas blockquote{margin:0;background:#fff;border-left:5px solid var(--madeira);padding:22px;font-weight:600}
+  .falas cite{display:block;margin-top:10px;font-style:normal;font-weight:700;font-size:.875rem;color:var(--madeira-2)}
+  @media (max-width:880px){.falas{grid-template-columns:1fr}}
+
+  /* Onde */
+  .onde{background:#fff;border-top:1px solid var(--fio)}
+  .onde .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+  .onde .fach{width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:20px}
+  .horas{width:100%;border-collapse:collapse;margin-bottom:18px}
+  .horas td{padding:9px 0;border-bottom:1px solid var(--fio)}
+  .horas td:last-child{text-align:right;font-weight:700}
+  .horas tr.hoje td{color:var(--madeira-2)}
+  .end{margin:0 0 22px;color:var(--tinta-2)}
+  .end b{color:var(--tinta)}
+  .end a{white-space:nowrap;color:var(--navy);font-weight:700}
+  .mapa{overflow:hidden;min-height:400px;background:var(--areia)}
+  .mapa iframe{width:100%;height:100%;min-height:400px;border:0;display:block}
+  @media (max-width:880px){.onde .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:#050a14;color:#9aa4b5;padding:24px 0 100px;font-size:.875rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--ouro);font-weight:700;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 12px 26px -10px rgba(0,0,0,.5);transition:opacity .3s,transform .3s}
+  .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
+  @media (min-width:861px){footer{padding-bottom:24px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial da Barbearia Nicarágua. É uma ideia de site montada por Lucas para apresentar à barbearia.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20da%20Barbearia%20Nicar%C3%A1gua%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Barbearia Nicarágua, início"><b>Barbearia Nicarágua</b><small>Barba · cabelo · conceito</small></a>
+    <nav aria-label="Seções">
+      <a href="#servicos">Serviços</a>
+      <a href="#barboterapia">Barboterapia</a>
+      <a href="#onde">Onde fica</a>
+    </nav>
+    <a class="btn ouro peq zap" href="https://wa.me/5519987285862?text=Ol%C3%A1%21%20Quero%20agendar%20um%20hor%C3%A1rio.">Agendar</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="kick">Jardim Nova Europa · Campinas</span>
+        <h1 id="titulo">Tem cliente que <span>atravessa a cidade</span> pra cortar aqui.</h1>
+        <p>Cabelo, barba e barboterapia com profissionais caprichosos, cerveja gelada e boa música. Do pai ao filho: tem família que vem há anos e hoje os meninos já vêm sozinhos.</p>
+        <div class="acoes">
+          <a class="btn ouro zap" href="https://wa.me/5519987285862?text=Ol%C3%A1%21%20Quero%20agendar%20um%20hor%C3%A1rio."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>Agendar horário</a>
+          <a class="btn linha" href="#servicos">Ver serviços</a>
+        </div>
+        <p class="status" id="status"><i aria-hidden="true"></i><span id="status-t">Seg a sex 9h às 19h30 · sáb 9h às 17h</span></p>
+      </div>
+      <div class="moldura">
+        <img src="fotos/ig-ambiente.jpg" alt="Cadeiras de barbeiro azuis e a parede de folhagem verde com violão" width="354" height="640">
+        <div class="nota"><b>4,9 ★</b>243 avaliações</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos" aria-labelledby="t-serv">
+    <div class="wrap">
+      <div class="tit"><small>Serviços</small><h2 id="t-serv">Cabelo, barba e profissionalismo</h2><p>Agende com antecedência: quinta e sexta à tarde são os horários mais disputados.</p></div>
+      <div class="serv">
+        <div class="sv"><h3>Corte</h3><p>Do clássico ao degradê, com acabamento na navalha.</p></div>
+        <div class="sv"><h3>Barba</h3><p>Desenho, alinhamento e toalha quente.</p></div>
+        <div class="sv"><h3>Barboterapia</h3><p>Vapor, hidratação e cuidado com a pele do rosto.</p></div>
+        <div class="sv"><h3>Corte infantil</h3><p>Com paciência. Tem pai que traz o filho há anos.</p></div>
+        <div class="sv"><h3>Visagismo</h3><p>Corte e barba pensados para o formato do seu rosto.</p></div>
+        <div class="sv plano"><h3>Plano mensal</h3><p>Assinatura de cabelo e barba para quem não quer ficar sem.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="barbo" id="barboterapia" aria-labelledby="t-barbo">
+    <div class="wrap">
+      <img src="fotos/ig-barboterapia.jpg" alt="Cliente recebendo vapor no rosto durante a barboterapia" loading="lazy" width="360" height="640">
+      <div>
+        <div class="tit" style="margin-bottom:14px"><small>Barboterapia</small><h2 id="t-barbo">Meia hora só pra você</h2></div>
+        <ol>
+          <li>Vapor para abrir os poros e amaciar os fios.</li>
+          <li>Navalha com calma, no ritmo certo.</li>
+          <li>Finalização com produtos de primeira, que também estão à venda.</li>
+        </ol>
+        <a class="btn ouro zap" href="https://wa.me/5519987285862?text=Ol%C3%A1%21%20Quero%20agendar%20uma%20barboterapia.">Agendar barboterapia</a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-amb">
+    <div class="wrap">
+      <div class="tit"><small>Ambiente</small><h2 id="t-amb">Ambiente top e boa música</h2></div>
+      <div class="amb">
+        <figure><img src="fotos/cadeira.jpg" alt="Cadeira de barbeiro de couro, espelhos e quadros na parede" loading="lazy" width="1200" height="900"><figcaption>As cadeiras</figcaption></figure>
+        <figure><img src="fotos/ig-espera.jpg" alt="Sala de espera com três poltronas de veludo" loading="lazy" width="360" height="640"><figcaption>A espera</figcaption></figure>
+        <figure><img src="fotos/fachada.jpg" alt="Fachada azul-marinho com porta de madeira da Barbearia Nicarágua" loading="lazy" width="900" height="1200"><figcaption>A fachada</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0" aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="tit"><small>4,9 · 243 avaliações no Google</small><h2 id="t-aval">Cliente de anos</h2></div>
+      <div class="falas">
+        <blockquote>Levo meus filhos há anos. Hoje eles vão sozinhos. Confio e indico!<cite>Tatiana · Google</cite></blockquote>
+        <blockquote>Atravesso a cidade para ir dar um talento no cabelo e barba todos os meses.<cite>Resumo das avaliações · Google</cite></blockquote>
+        <blockquote>Ótimo atendimento, cerveja gelada, ambiente top e boa música.<cite>Resumo das avaliações · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:18px"><small>Onde fica</small><h2 id="t-onde">Rua Nicarágua, 685</h2></div>
+        <table class="horas" id="horas">
+          <tr data-d="semana"><td>Segunda a sexta</td><td>9h às 19h30</td></tr>
+          <tr data-d="6"><td>Sábado</td><td>9h às 17h</td></tr>
+          <tr data-d="0"><td>Domingo</td><td>Fechado</td></tr>
+        </table>
+        <p class="end"><b>Rua Nicarágua, 685</b> · Jardim Nova Europa, Campinas (SP)<br>WhatsApp <a class="zap" href="https://wa.me/5519987285862">(19) 98728-5862</a> · <a href="https://www.instagram.com/barbearia_nicaragua/" target="_blank" rel="noopener">@barbearia_nicaragua</a></p>
+        <div class="acoes">
+          <a class="btn navy" href="https://www.google.com/maps/dir/?api=1&amp;destination=Barbearia+Nicar%C3%A1gua,+Rua+Nicar%C3%A1gua,+685,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn ouro zap" href="https://wa.me/5519987285862?text=Ol%C3%A1%21%20Quero%20agendar%20um%20hor%C3%A1rio.">Agendar</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Barbearia Nicarágua, Rua Nicarágua, 685, Campinas" src="https://www.google.com/maps?q=Barbearia+Nicar%C3%A1gua,+Rua+Nicar%C3%A1gua,+685+-+Jardim+Nova+Europa,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Barbearia Nicarágua · Jardim Nova Europa, Campinas</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn ouro fixo some zap" href="https://wa.me/5519987285862?text=Ol%C3%A1%21%20Quero%20agendar%20um%20hor%C3%A1rio." aria-label="Agendar pelo WhatsApp">Agendar</a>
+
+<script>
+(function () {
+  document.querySelectorAll(".zap").forEach(function(a){a.target="_blank";a.rel="noopener";});
+  try {
+    var p = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+    var g = function(t){return (p.find(function(x){return x.type===t})||{}).value};
+    var d = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"));
+    var h = (parseInt(g("hour"),10)%24) + parseInt(g("minute"),10)/60;
+    var tr = document.querySelector('#horas tr[data-d="' + (d>=1&&d<=5 ? "semana" : d) + '"]'); if (tr) tr.classList.add("hoje");
+    var fe = d===6 ? 17 : 19.5, s = document.getElementById("status"), t = document.getElementById("status-t");
+    if (d===0) t.textContent = "Domingo fechado · abre segunda às 9h";
+    else if (h>=9 && h<fe) { s.classList.add("on"); t.textContent = "Aberta agora, até as " + (d===6 ? "17h" : "19h30"); }
+    else if (h<9) t.textContent = "Abre hoje às 9h";
+    else t.textContent = d===6 ? "Fechada agora · abre segunda às 9h" : "Fechada agora · abre amanhã às 9h";
+  } catch (e) {}
+  var f = document.querySelector(".fixo"), t2 = document.querySelector(".hero");
+  if (f && t2 && "IntersectionObserver" in window) new IntersectionObserver(function(e){f.classList.toggle("some", e[0].isIntersecting)}).observe(t2);
+})();
+</script>
+</body>
+</html>
