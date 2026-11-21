@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Barbearia e Coffee Premium · Parque Industrial, Campinas</title>
+<meta name="description" content="Prévia de site para a Barbearia e Coffee Premium, no Parque Industrial, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/coffeepremium/">
+<meta property="og:title" content="Prévia de site · Barbearia e Coffee Premium">
+<meta property="og:description" content="Corte, café e boa música, aberto até domingo. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/coffeepremium/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2a1a12">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232a1a12'/%3E%3Cpath d='M8 13h13v5a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6Z' fill='%23d9a066'/%3E%3Cpath d='M21 15h2a2 2 0 0 1 0 4h-2' stroke='%23d9a066' stroke-width='2' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --espresso:#2a1a12; --espresso-2:#3a261b; --creme:#f5ebdc; --leite:#fbf6ee; --caramelo:#d9a066; --tijolo:#a5502f;
+    --azul:#2f5d8a; --tinta:#2a1a12; --tinta-2:#6b5546; --fio:#e4d4bd;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--leite);color:var(--tinta);font:16.5px/1.65 "Space Grotesk",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"DM Serif Display",Georgia,serif;font-weight:400;line-height:1.05;margin:0}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--caramelo);outline-offset:3px}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+
+  .previa{background:#160e09;color:#cdb9a6;font-size:.82rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--caramelo);font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .escuro{background:var(--espresso);color:#e9dccb}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:14px}
+  .marca{text-decoration:none;display:flex;align-items:center;gap:12px}
+  .marca .xic{width:44px;height:44px;border-radius:50%;border:2px solid var(--caramelo);display:grid;place-items:center}
+  .marca .xic svg{width:24px;height:24px}
+  .marca b{font:400 1.35rem/1 "DM Serif Display",serif;color:#fff}
+  .marca small{display:block;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--caramelo);margin-top:3px}
+  .topo nav{display:flex;gap:22px;font-size:.92rem;font-weight:500}
+  .topo nav a{text-decoration:none;color:#cdb9a6}
+  .topo nav a:hover{color:#fff}
+  @media (max-width:900px){.topo nav{display:none}}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:12px 24px;border-radius:999px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-family:inherit;font-size:.98rem;transition:transform .15s,background .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn.caramelo{background:var(--caramelo);color:var(--espresso)}
+  .btn.caramelo:hover{background:#e6b27c}
+  .btn.linha{box-shadow:inset 0 0 0 1px rgba(255,255,255,.4);color:#fff}
+  .btn.esp{background:var(--espresso);color:#fff}
+  .btn.peq{min-height:44px;padding:9px 18px;font-size:.88rem}
+
+  .hero{padding:40px 0 90px;position:relative;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .vapor{display:inline-flex;align-items:center;gap:10px;font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;color:var(--caramelo)}
+  .vapor::before{content:"";width:36px;height:1px;background:var(--caramelo)}
+  .hero h1{font-size:clamp(2.8rem,6.6vw,5.2rem);color:#fff;margin:18px 0 18px}
+  .hero h1 i{color:var(--caramelo)}
+  .hero p{font-size:1.12rem;max-width:31em;margin:0 0 30px;color:#dcccb9}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .copos{display:grid;grid-template-columns:1fr 1fr;gap:14px;position:relative}
+  .copos img{width:100%;object-fit:cover;border-radius:200px 200px 16px 16px}
+  .copos img:first-child{aspect-ratio:3/5}
+  .copos img:last-child{aspect-ratio:3/4;margin-top:70px}
+  .copos .selo{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%) rotate(-8deg);width:120px;height:120px;border-radius:50%;background:var(--caramelo);color:var(--espresso);display:grid;place-items:center;text-align:center;font:400 1.05rem/1.1 "DM Serif Display",serif;border:4px solid var(--espresso);box-shadow:0 0 0 2px var(--caramelo)}
+  @media (max-width:880px){.hero .wrap{grid-template-columns:1fr}}
+
+  section{padding:88px 0}
+  .tit{max-width:640px;margin-bottom:38px}
+  .tit .vapor{color:var(--tijolo)}
+  .tit .vapor::before{background:var(--tijolo)}
+  .tit h2{font-size:clamp(2.2rem,4.6vw,3.3rem);margin-top:10px}
+  .tit p{color:var(--tinta-2);margin:12px 0 0}
+
+  /* Cardápio */
+  .cardapio{display:grid;grid-template-columns:1fr 1fr;gap:0 60px;background:var(--creme);border:1px solid var(--fio);border-radius:24px;padding:36px 40px}
+  .cardapio h3{grid-column:1/-1;font-size:1.6rem;text-align:center;margin-bottom:20px;color:var(--tijolo)}
+  .linha-c{display:flex;align-items:baseline;gap:10px;padding:14px 0;border-bottom:1px dashed #cfb998}
+  .linha-c b{font:400 1.25rem "DM Serif Display",serif}
+  .linha-c .pont{flex:1;border-bottom:2px dotted #bfa47e;transform:translateY(-5px)}
+  .linha-c small{color:var(--tinta-2);font-size:.88rem;white-space:nowrap}
+  .cortesia{grid-column:1/-1;margin-top:22px;text-align:center;font-family:"DM Serif Display",serif;font-style:italic;font-size:1.2rem;color:var(--tijolo)}
+  @media (max-width:760px){.cardapio{grid-template-columns:1fr;padding:26px 22px}}
+
+  /* Equipe */
+  .equipe{background:var(--espresso);color:#e9dccb}
+  .equipe .tit h2{color:#fff}
+  .equipe .tit p{color:#cdb9a6}
+  .equipe .tit .vapor{color:var(--caramelo)}
+  .equipe .tit .vapor::before{background:var(--caramelo)}
+  .barbeiros{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .barb{background:var(--espresso-2);border:1px solid #4a3326;border-radius:18px;padding:22px 14px;text-align:center}
+  .barb .ini{width:70px;height:70px;border-radius:50%;margin:0 auto 12px;background:var(--caramelo);color:var(--espresso);display:grid;place-items:center;font:400 1.8rem "DM Serif Display",serif}
+  .barb b{display:block;color:#fff;font-weight:600}
+  .barb span{font-size:.85rem;color:#bba590}
+  @media (max-width:900px){.barbeiros{grid-template-columns:repeat(3,1fr)}}
+  @media (max-width:520px){.barbeiros{grid-template-columns:1fr 1fr}}
+
+  /* Agendar */
+  .agendar .wrap{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+  .form{background:#fff;border:1px solid var(--fio);border-radius:24px;padding:26px;box-shadow:0 26px 50px -34px rgba(42,26,18,.6)}
+  .form label{display:block;font-weight:700;font-size:.92rem;margin:14px 0 6px}
+  .form label:first-child{margin-top:0}
+  .form select,.form input{width:100%;min-height:48px;border:1px solid var(--fio);border-radius:12px;padding:0 12px;font:500 16px "Space Grotesk",sans-serif;background:var(--leite);color:var(--tinta)}
+  .linha2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .form .btn{width:100%;margin-top:20px}
+  .form small{display:block;margin-top:10px;color:var(--tinta-2)}
+  .agendar img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px}
+  @media (max-width:880px){.agendar .wrap{grid-template-columns:1fr}}
+
+  /* Avaliações */
+  .aval{background:var(--creme)}
+  .falas{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .falas blockquote{margin:0;font:400 1.3rem/1.4 "DM Serif Display",serif;border-left:3px solid var(--caramelo);padding-left:18px}
+  .falas cite{display:block;margin-top:12px;font:600 .82rem "Space Grotesk",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--tinta-2);font-style:normal}
+  @media (max-width:880px){.falas{grid-template-columns:1fr}}
+
+  /* Visita */
+  .visita .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:36px}
+  .horas{width:100%;border-collapse:collapse;margin:0 0 22px}
+  .horas td{padding:10px 0;border-bottom:1px dashed var(--fio)}
+  .horas td:last-child{text-align:right;font-weight:700}
+  .horas tr.hoje td{color:var(--tijolo)}
+  .mapa{border-radius:20px;overflow:hidden;border:1px solid var(--fio);min-height:400px}
+  .mapa iframe{width:100%;height:100%;min-height:400px;border:0;display:block;filter:sepia(.25)}
+  @media (max-width:880px){.visita .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:var(--espresso);color:#bba590;padding:24px 0 100px;font-size:.88rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--caramelo);font-weight:700;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 12px 26px -10px rgba(42,26,18,.7);transition:opacity .3s,transform .3s}
+  .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
+  @media (min-width:881px){footer{padding-bottom:24px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial da Barbearia e Coffee Premium. É uma ideia de site montada por Lucas para apresentar à barbearia.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20da%20Barbearia%20e%20Coffee%20Premium%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<div class="escuro">
+  <header class="topo">
+    <div class="wrap">
+      <a class="marca" href="#inicio" aria-label="Barbearia e Coffee Premium, início">
+        <span class="xic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#d9a066" stroke-width="1.8" stroke-linecap="round"><path d="M4 9h12v4a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5Z"/><path d="M16 10h1.5a2 2 0 0 1 0 4H16M8 3c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3"/></svg></span>
+        <span><b>Barbearia &amp; Coffee</b><small>Premium</small></span>
+      </a>
+      <nav aria-label="Seções">
+        <a href="#cardapio">Serviços</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#agendar">Agendar</a>
+        <a href="#visita">Horários</a>
+      </nav>
+      <a class="btn caramelo peq" href="#agendar">Agendar</a>
+    </div>
+  </header>
+  <section class="hero" id="inicio" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="vapor">Parque Industrial · Campinas</span>
+        <h1 id="titulo">Um corte bem feito pede um <i>café</i> passado.</h1>
+        <p>Barbearia com cara de cafeteria: tijolinho, madeira, música boa e um cafezinho enquanto você espera. Corte na navalha, corte personalizado e corte infantil com paciência de sobra. Aberta até no domingo de manhã.</p>
+        <div class="acoes">
+          <a class="btn caramelo" href="#agendar">Escolher horário</a>
+          <a class="btn linha" href="#cardapio">Ver serviços</a>
+        </div>
+      </div>
+      <div class="copos">
+        <img src="fotos/poste.jpg" alt="Poste de barbeiro iluminado na parede de tijolos, com a bancada de trabalho ao lado" width="800" height="1069">
+        <img src="fotos/barbeiros.jpg" alt="Barbeiros atendendo clientes em frente a espelhos com moldura azul" width="800" height="1067">
+        <span class="selo" aria-hidden="true">tem<br>café</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<main>
+  <section id="cardapio" aria-labelledby="t-card">
+    <div class="wrap">
+      <div class="tit"><span class="vapor">O cardápio</span><h2 id="t-card">Escolha o seu, como numa cafeteria</h2><p>Valores e tempos combinados na hora do agendamento.</p></div>
+      <div class="cardapio">
+        <h3>Na cadeira</h3>
+        <div class="linha-c"><b>Corte personalizado</b><span class="pont"></span><small>do seu jeito</small></div>
+        <div class="linha-c"><b>Corte na navalha</b><span class="pont"></span><small>acabamento fino</small></div>
+        <div class="linha-c"><b>Barba</b><span class="pont"></span><small>bem alinhada</small></div>
+        <div class="linha-c"><b>Corte + barba</b><span class="pont"></span><small>o combo</small></div>
+        <div class="linha-c"><b>Corte infantil</b><span class="pont"></span><small>com paciência</small></div>
+        <p class="cortesia">Enquanto espera: um café e a playlist da casa.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="equipe" id="equipe" aria-labelledby="t-eq">
+    <div class="wrap">
+      <div class="tit"><span class="vapor">A equipe</span><h2 id="t-eq">Os meninos da navalha</h2><p>Educados, atenciosos e com padrão alto, é o que mais aparece nas avaliações. Escolha com quem quer cortar.</p></div>
+      <div class="barbeiros">
+        <div class="barb"><span class="ini">L</span><b>Lucas</b><span>Barbeiro</span></div>
+        <div class="barb"><span class="ini">G</span><b>Gabriel</b><span>Barbeiro</span></div>
+        <div class="barb"><span class="ini">V</span><b>Vitor</b><span>Barbeiro</span></div>
+        <div class="barb"><span class="ini">M</span><b>Matheus</b><span>Barbeiro</span></div>
+        <div class="barb"><span class="ini">N</span><b>Nicolas</b><span>Barbeiro</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="agendar" id="agendar" aria-labelledby="t-ag">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:22px"><span class="vapor">Agendar</span><h2 id="t-ag">Marque em 20 segundos</h2><p>Escolha o serviço, o barbeiro e o melhor horário. A mensagem vai pronta para o WhatsApp da barbearia, e a equipe confirma o horário com você.</p></div>
+        <form class="form" id="form-ag">
+          <label for="serv">Serviço</label>
+          <select id="serv"><option>Corte personalizado</option><option>Corte na navalha</option><option>Barba</option><option>Corte + barba</option><option>Corte infantil</option></select>
+          <label for="barb">Barbeiro</label>
+          <select id="barb"><option>Tanto faz</option><option>Lucas</option><option>Gabriel</option><option>Vitor</option><option>Matheus</option><option>Nicolas</option></select>
+          <div class="linha2">
+            <div><label for="dia">Dia</label><input id="dia" type="date"></div>
+            <div><label for="per">Período</label><select id="per"><option>Manhã</option><option>Tarde</option><option>Noite (até 20h)</option></select></div>
+          </div>
+          <button class="btn esp" type="submit">Enviar pelo WhatsApp</button>
+          <small>O horário só vale depois da confirmação da equipe.</small>
+        </form>
+      </div>
+      <img src="fotos/janela.jpg" alt="Cliente sentado perto da janela, com a bancada de madeira e produtos de barbearia" loading="lazy" width="800" height="1067">
+    </div>
+  </section>
+
+  <section class="aval" aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="tit"><span class="vapor">4,8 · 154 avaliações</span><h2 id="t-aval">Café, música e corte bom</h2></div>
+      <div class="falas">
+        <blockquote>Barbearia top e ainda tem um café e uma música.<cite>Resumo · Google</cite></blockquote>
+        <blockquote>Há mais de um ano corto com eles, super atenciosos e profissionais. Parabéns ao Gabriel, ao Vitor e especialmente ao Lucas.<cite>Marcos · Google</cite></blockquote>
+        <blockquote>Super atencioso com o meu filho. Profissionalismo e padrão alto.<cite>Giovanne · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="visita" id="visita" aria-labelledby="t-vis">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:18px"><span class="vapor">Visite</span><h2 id="t-vis">Aberta sete dias</h2></div>
+        <table class="horas" id="horas">
+          <tr data-g="sem"><td>Segunda a sexta</td><td>9h às 20h</td></tr>
+          <tr data-g="sab"><td>Sábado</td><td>9h às 18h</td></tr>
+          <tr data-g="dom"><td>Domingo</td><td>9h às 13h</td></tr>
+        </table>
+        <p style="color:var(--tinta-2);margin:0 0 22px"><b style="color:var(--tinta)">Rua Prof. Orestes Carlos Segalio, 355</b><br>Parque Industrial, Campinas (SP) · (19) 99514-9786</p>
+        <div class="acoes">
+          <a class="btn esp" href="https://www.google.com/maps/dir/?api=1&amp;destination=Barbearia+e+Coffee+Premium,+Rua+Professor+Orestes+Carlos+Segalio,+355,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn caramelo zap" href="https://wa.me/5519995149786">WhatsApp</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Barbearia e Coffee Premium, Rua Prof. Orestes Carlos Segalio, 355, Campinas" src="https://www.google.com/maps?q=Barbearia+e+Coffee+Premium,+Rua+Professor+Orestes+Carlos+Segalio,+355+-+Parque+Industrial,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Barbearia e Coffee Premium · Parque Industrial, Campinas</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn caramelo fixo some" href="#agendar">Agendar</a>
+
+<script>
+(function () {
+  document.querySelectorAll(".zap").forEach(function(a){a.target="_blank";a.rel="noopener";});
+  var dia = document.getElementById("dia");
+  try { var hoje = new Date(); dia.min = hoje.toISOString().slice(0,10); dia.value = dia.min; } catch (e) {}
+  document.getElementById("form-ag").addEventListener("submit", function(e){
+    e.preventDefault();
+    var d = dia.value ? dia.value.split("-").reverse().join("/") : "a combinar";
+    var txt = "Olá! Quero agendar um horário.\nServiço: " + document.getElementById("serv").value +
+      "\nBarbeiro: " + document.getElementById("barb").value + "\nDia: " + d + " · " + document.getElementById("per").value;
+    window.open("https://wa.me/5519995149786?text=" + encodeURIComponent(txt), "_blank", "noopener");
+  });
+  try {
+    var w = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short"}).format(new Date()));
+    var tr = document.querySelector('#horas tr[data-g="' + (w===0 ? "dom" : w===6 ? "sab" : "sem") + '"]'); if (tr) tr.classList.add("hoje");
+  } catch (e) {}
+  var f = document.querySelector(".fixo"), t = document.querySelector(".hero");
+  if (f && t && "IntersectionObserver" in window) new IntersectionObserver(function(e){f.classList.toggle("some", e[0].isIntersecting)}).observe(t);
+})();
+</script>
+</body>
+</html>

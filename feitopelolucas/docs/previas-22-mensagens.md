@@ -183,3 +183,12 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 > Oi, pessoal da Artesanal! Sou o Lucas, faço sites aqui em Campinas. Vi que o frango assado de domingo e os salgados para festa de vocês fazem sucesso, e montei uma ideia de site para receber essas encomendas: https://feitopelolucas.com.br/previa/artesanal/
 > Tem a reserva de frango assado, uma calculadora de salgados por convidado que já manda o pedido no WhatsApp, os pães e o iFood. Se gostarem, a gente conversa!
 
+---
+
+## 21. Barbearia e Coffee Premium · /previa/coffeepremium/
+
+**Pelo que vi:** o Instagram do Google (@barberecoffee_premium) não abre mais. O ambiente é de tijolinho, madeira e azul, com café e música (citados nas avaliações). Barbeiros citados: Lucas, Gabriel, Vitor, Matheus e Nicolas. Atende criança. Abre até domingo de manhã. WhatsApp (19) 99514-9786. **Atenção:** uma avaliação recente reclama de agendamento confirmado por atendente automático e de ninguém na barbearia na hora. O site traz um agendamento claro, com serviço, barbeiro e dia, que deixa a confirmação com a equipe. Não achei preços, então o "cardápio" não tem valores.
+
+> Fala, pessoal da Coffee Premium! Sou o Lucas, faço sites aqui em Campinas. Vi que o Instagram que aparece no Google de vocês não abre mais, e a barbearia tem nota 4,8 com mais de 150 avaliações. Montei uma ideia de site com a cara do lugar, café e tijolinho: https://feitopelolucas.com.br/previa/coffeepremium/
+> Tem os serviços num "cardápio", a equipe, e um agendamento em que o cliente escolhe serviço, barbeiro e dia e manda tudo certinho no WhatsApp. Se gostarem, a gente conversa!
+
