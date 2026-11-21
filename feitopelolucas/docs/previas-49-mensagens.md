@@ -434,3 +434,19 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Olá, pessoal da Casa de Carnes Valter! Sou o Lucas, faço sites aqui em Campinas. Vi que vocês estão aí desde 1982, têm o selo SISP e 4,9 no Google, com cliente de mais de 30 anos. Montei uma ideia de site: https://feitopelolucas.com.br/previa/valtercarnes/
 > Tem os cortes Angus, o selo, as fotos da loja e uma reserva do assado de domingo: o cliente escolhe frango, joelho e espetinhos, o horário, e manda pronto no WhatsApp de vocês. Ajuda a diminuir a fila de domingo. Se gostarem, a gente conversa!
+
+---
+
+## 47. Ponto do Açaí · pulado
+
+**Por que pulei:** o perfil do Google aparece como **"fechado temporariamente"** e sem horário. A última informação pública é do Facebook (@pontodoacaiv, 1 mil seguidores). Não faz sentido oferecer site agora; vale conferir mais para frente se reabriu (tinha 4,8 com 156 avaliações).
+
+---
+
+## 48. Novo Stilo Cabelos · /previa/novostilo/
+
+**Pelo que vi:** salão e barbearia, com 4,8 no Google (155 avaliações) e 98% de recomendação no Facebook (990 seguidores). Não tem site nem WhatsApp: **só o fixo (19) 3295-1039**, e uma das frases de destaque nas avaliações do Google é justamente **"Poderia ter um contato via WhatsApp para marcar horário"**. O perfil também não tem horário. Profissionais citados: **Dyosifer**, **Débora** (corte e balayage) e **Renan** (corte masculino). Há barbearia com fade e um tratamento de "equalização capilar". "Na minha família somos todos clientes" e "agenda lotada" aparecem nas avaliações. As fotos são do Google (balayage e luzes de costas, salão, letreiro). O site tem um agendamento que monta o pedido (para quem, serviço, período) e liga para o salão, com a observação de que vira WhatsApp quando tiverem número.
+**Por onde mandar:** ligar no (19) 3295-1039 ou pessoalmente (não achei WhatsApp nem Instagram próprio do salão).
+
+> Olá, pessoal do Novo Stilo! Sou o Lucas, faço sites aqui em Campinas. Vi que o salão tem 4,8 no Google com 155 avaliações e que um cliente até pediu lá um WhatsApp para marcar horário. Montei uma ideia de site: https://feitopelolucas.com.br/previa/novostilo/
+> O cliente escolhe o serviço e o período e já liga sabendo o que pedir. Se vocês criarem um WhatsApp, o botão passa a agendar direto por lá. Se gostarem, a gente conversa!
