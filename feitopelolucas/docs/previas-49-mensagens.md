@@ -120,3 +120,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, pessoal da Coco Doce! Sou o Lucas, faço sites aqui em Campinas. Vocês têm 4,9 no Google com quase 300 avaliações, mas lá não aparece telefone nem site, e muita gente procura pela pamonha e pelo caldo de cana. Montei uma ideia de site para vocês: https://feitopelolucas.com.br/previa/cocodoce/
 > Tem o que vocês vendem, o horário com aviso de aberto agora e o caminho até a loja. Se quiserem, dá para colocar um WhatsApp de pedidos também. Se gostarem, a gente conversa!
+
+---
+
+## 14. GelaGoela Açaí & Frozen · /previa/gelagoela/
+
+**Pelo que vi:** tem cardápio de delivery online (gelagoela.expressomenu.com.br) e Instagram **@gelagoelacampinas** (1,4 mil seguidores), mas nenhum site próprio. Segunda a sábado das 12h às 20h30 e domingo das 13h às 20h30. WhatsApp (19) 99287-7074. Preços do cardápio online: copo de 300/400/500/700 ml a R$ 15/18/20/26, garrafinha de 500 ml a R$ 20, fondue a R$ 17–22 e marmita a R$ 35. Avaliações elogiam o açaí recheado, o frozen natural e as mesas debaixo das árvores. O site usa o cardápio online deles como botão de pedido, sem substituí-lo.
+**Por onde mandar:** WhatsApp (19) 99287-7074.
+
+> Oi, pessoal da GelaGoela! Sou o Lucas, faço sites aqui em Campinas. Vi que vocês têm o cardápio online e 4,7 no Google, mas quem busca o nome não acha um site da loja. Montei uma ideia de como ele poderia ser: https://feitopelolucas.com.br/previa/gelagoela/
+> Ele mostra os tamanhos e preços, o fondue e a garrafinha, o horário com aviso de aberto agora, e todo botão de pedido leva para o cardápio online de vocês. Se gostarem, a gente conversa!

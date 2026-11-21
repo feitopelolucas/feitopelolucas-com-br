@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>GelaGoela · Açaí, frozen e fondue em Campinas</title>
+<meta name="description" content="Prévia de site para a GelaGoela, açaí e frozen no Jardim Santa Eudóxia, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/gelagoela/">
+<meta property="og:title" content="Prévia de site · GelaGoela">
+<meta property="og:description" content="Açaí no copo e na garrafinha, frozen natural e fondue de frutas, com delivery. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/gelagoela/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#6d3b8e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--roxo:#6d3b8e;--roxo-2:#552c70;--lilas:#efe4f7;--lilas-2:#dcc7ec;--verde:#8cc63f;--verde-2:#6fa52a;--morango:#e8384f;--tinta:#2a1838;--tinta-2:#6b5a78;--branco:#fff}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#fbf8fd;color:var(--tinta);font:16.5px/1.6 "Poppins",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Titan One",system-ui,sans-serif;font-weight:400;line-height:1.05;margin:0}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--verde);outline-offset:3px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  .wrap>*{min-width:0}
+
+  .previa{background:var(--tinta);color:#d8c9e4;font-size:.8125rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--verde);font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:74px}
+  .marca{text-decoration:none;font:400 1.7rem "Titan One",sans-serif;color:var(--roxo)}
+  .marca span{color:var(--verde-2)}
+  .topo nav{display:flex;gap:22px;font-weight:600;color:var(--tinta-2)}
+  .topo nav a{text-decoration:none}
+  .topo nav a:hover{color:var(--roxo)}
+  @media (max-width:860px){.topo nav{display:none}}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:12px 22px;border-radius:999px;font-weight:700;text-decoration:none;font-size:1rem;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn.roxo{background:var(--roxo);color:#fff}
+  .btn.roxo:hover{background:var(--roxo-2)}
+  .btn.verde{background:var(--verde);color:var(--tinta)}
+  .btn.verde:hover{background:var(--verde-2)}
+  .btn.linha{border:2px solid currentColor}
+  .btn.peq{min-height:44px;padding:8px 16px;font-size:.94rem}
+
+  .hero{background:var(--roxo);color:#eadcf3;border-radius:0 0 46px 46px;overflow:hidden;position:relative}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 20%,rgba(140,198,63,.22) 0 120px,transparent 121px),radial-gradient(circle at 90% 90%,rgba(232,56,79,.22) 0 160px,transparent 161px)}
+  .hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding-top:44px;padding-bottom:70px}
+  .hero .tag{display:inline-block;background:var(--verde);color:var(--tinta);border-radius:999px;padding:6px 14px;font-weight:700;font-size:.92rem}
+  .hero h1{font-size:clamp(2.6rem,6.4vw,4.6rem);color:#fff;margin:16px 0 14px}
+  .hero h1 em{font-style:normal;color:var(--verde)}
+  .hero p{font-size:1.1rem;max-width:30em;margin:0 0 26px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .status{margin-top:20px;display:inline-flex;align-items:center;gap:10px;font-weight:600}
+  .status i{width:11px;height:11px;border-radius:50%;background:#a58bb8;flex:none}
+  .status.on i{background:var(--verde);box-shadow:0 0 0 5px rgba(140,198,63,.25)}
+  .copos-hero{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:end}
+  .copos-hero img{width:100%;object-fit:cover;border-radius:26px;border:6px solid rgba(255,255,255,.15)}
+  .copos-hero img:first-child{aspect-ratio:9/15}
+  .copos-hero img:last-child{aspect-ratio:9/12;margin-bottom:30px}
+  @media (max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:28px}}
+
+  section{padding:80px 0}
+  .tit{max-width:640px;margin-bottom:32px}
+  .tit small{font-weight:700;color:var(--morango);letter-spacing:.12em;text-transform:uppercase;font-size:.8125rem}
+  .tit h2{font-size:clamp(2rem,4.6vw,3.1rem);margin-top:6px;color:var(--roxo)}
+  .tit p{color:var(--tinta-2);margin:10px 0 0}
+
+  /* Tamanhos */
+  .tamanhos{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;align-items:end}
+  .tam{background:#fff;border:2px solid var(--lilas-2);border-radius:22px;padding:18px 14px;text-align:center}
+  .tam .cp{margin:0 auto 12px;background:linear-gradient(var(--roxo) 0 0) bottom/100% 78% no-repeat,var(--lilas);border-radius:6px 6px 16px 16px;clip-path:polygon(0 0,100% 0,88% 100%,12% 100%)}
+  .tam b{display:block;font:400 1.4rem "Titan One",sans-serif;color:var(--roxo)}
+  .tam span{font-weight:700;font-size:1.1rem}
+  @media (max-width:700px){.tamanhos{grid-template-columns:1fr 1fr}}
+  .outros{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+  .out{background:var(--lilas);border-radius:22px;overflow:hidden;display:grid;grid-template-rows:auto 1fr}
+  .out img{width:100%;aspect-ratio:1;object-fit:cover}
+  .out div{padding:16px 18px 20px}
+  .out h3{font-size:1.35rem;color:var(--roxo);margin-bottom:4px}
+  .out p{margin:0;color:var(--tinta-2);font-size:.95rem}
+  .out .pr{display:inline-block;margin-top:8px;background:#fff;border-radius:999px;padding:3px 12px;font-weight:700;color:var(--roxo)}
+  @media (max-width:860px){.outros{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.outros{grid-template-columns:1fr}}
+  .aviso-p{font-size:.875rem;color:var(--tinta-2);margin-top:16px}
+
+  /* Pedido */
+  .pedir{background:var(--verde)}
+  .pedir .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding-top:10px;padding-bottom:10px}
+  .pedir h2{font-size:clamp(1.8rem,4vw,2.6rem);color:var(--tinta)}
+  .pedir p{margin:8px 0 0;font-weight:500}
+  .pedir .acoes{justify-content:flex-end}
+  @media (max-width:800px){.pedir .wrap{grid-template-columns:1fr}.pedir .acoes{justify-content:flex-start}}
+
+  /* Lugar */
+  .lugar .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .lugar .fotos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .lugar .fotos img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:22px}
+  .falas{display:grid;gap:14px}
+  .falas blockquote{margin:0;background:#fff;border:2px solid var(--lilas-2);border-radius:20px;padding:18px 20px;font-weight:500}
+  .falas cite{display:block;margin-top:6px;font-style:normal;font-weight:700;font-size:.875rem;color:var(--roxo)}
+  @media (max-width:880px){.lugar .wrap{grid-template-columns:1fr}}
+
+  /* Onde */
+  .onde{background:var(--roxo-2);color:#e3d3ee}
+  .onde .tit h2{color:#fff}
+  .onde .tit small{color:var(--verde)}
+  .onde .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+  .horas{width:100%;border-collapse:collapse;margin-bottom:18px}
+  .horas td{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+  .horas td:last-child{text-align:right;font-weight:700;color:#fff}
+  .horas tr.hoje td{color:var(--verde)}
+  .end{margin:0 0 22px}
+  .end b{color:#fff}
+  .end a{white-space:nowrap;color:#fff;font-weight:700}
+  .mapa{border-radius:22px;overflow:hidden;min-height:400px;background:#442257}
+  .mapa iframe{width:100%;height:100%;min-height:400px;border:0;display:block}
+  @media (max-width:880px){.onde .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:var(--tinta);color:#b9a8c7;padding:24px 0 100px;font-size:.875rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--verde);font-weight:700;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 12px 26px -10px rgba(0,0,0,.45);transition:opacity .3s,transform .3s}
+  .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
+  @media (min-width:861px){footer{padding-bottom:24px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial da GelaGoela. É uma ideia de site montada por Lucas para apresentar à loja.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20da%20GelaGoela%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="GelaGoela, início">Gela<span>Goela</span></a>
+    <nav aria-label="Seções">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#lugar">O lugar</a>
+      <a href="#onde">Onde fica</a>
+    </nav>
+    <a class="btn roxo peq" href="https://gelagoela.expressomenu.com.br" target="_blank" rel="noopener">Pedir</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="tag">Açaí &amp; frozen · delivery</span>
+        <h1 id="titulo">Açaí bem recheado e <em>frozen natural</em> pra gelar a goela.</h1>
+        <p>Copos de 300 a 700 ml, açaí na garrafinha, fondue de frutas com chocolate e sorvete. Peça pelo cardápio online ou venha sentar nas mesas debaixo das árvores no fim de tarde.</p>
+        <div class="acoes">
+          <a class="btn verde" href="https://gelagoela.expressomenu.com.br" target="_blank" rel="noopener">Pedir no cardápio online</a>
+          <a class="btn linha zap" href="https://wa.me/5519992877074">WhatsApp</a>
+        </div>
+        <p class="status" id="status"><i aria-hidden="true"></i><span id="status-t">Seg a sáb 12h às 20h30 · dom 13h às 20h30</span></p>
+      </div>
+      <div class="copos-hero">
+        <img src="fotos/ig-copo.jpg" alt="Copo de açaí com morangos e chocolate por cima" width="361" height="640">
+        <img src="fotos/ig-copos.jpg" alt="Dois copos de frozen com granola e bolinhas de chocolate" width="512" height="640">
+      </div>
+    </div>
+  </section>
+
+  <section id="cardapio" aria-labelledby="t-card">
+    <div class="wrap">
+      <div class="tit"><small>Cardápio</small><h2 id="t-card">Escolha o tamanho do copo</h2><p>Monte com as frutas e coberturas que quiser. Os valores abaixo são do cardápio online.</p></div>
+      <div class="tamanhos">
+        <div class="tam"><div class="cp" style="width:46px;height:62px" aria-hidden="true"></div><b>300 ml</b><span>R$ 15</span></div>
+        <div class="tam"><div class="cp" style="width:54px;height:76px" aria-hidden="true"></div><b>400 ml</b><span>R$ 18</span></div>
+        <div class="tam"><div class="cp" style="width:60px;height:88px" aria-hidden="true"></div><b>500 ml</b><span>R$ 20</span></div>
+        <div class="tam"><div class="cp" style="width:68px;height:104px" aria-hidden="true"></div><b>700 ml</b><span>R$ 26</span></div>
+      </div>
+      <div class="outros">
+        <article class="out"><img src="fotos/ig-garrafinhas.jpg" alt="Três garrafinhas de açaí com morango e banana na tampa" loading="lazy" width="640" height="640"><div><h3>Açaí na garrafinha</h3><p>500 ml com banana ou morango, leite em pó e leite condensado.</p><span class="pr">R$ 20</span></div></article>
+        <article class="out"><img src="fotos/ig-fondue.jpg" alt="Bandeja de fondue com frutas e dois tipos de chocolate" loading="lazy" width="361" height="640"><div><h3>Fondue de frutas</h3><p>Quatro frutas com cascata de chocolate cremoso. 300, 400 ou 500 ml.</p><span class="pr">R$ 17 a R$ 22</span></div></article>
+        <article class="out"><img src="fotos/copo.jpg" alt="Copo de açaí com banana e leite condensado na mão" loading="lazy" width="554" height="1200"><div><h3>Copo montado</h3><p>Com banana, morango e leite condensado, do jeito que você gosta.</p><span class="pr">a partir de R$ 15</span></div></article>
+      </div>
+      <p class="aviso-p">Também tem marmita de açaí (R$ 35), frozen iogurte, sorvetes, milkshakes e picolés. Preços conforme o cardápio online; podem mudar.</p>
+    </div>
+  </section>
+
+  <div class="pedir" role="note">
+    <div class="wrap">
+      <div><h2>Bateu a vontade?</h2><p>Monte o pedido no cardápio online e receba em casa, ou retire no balcão.</p></div>
+      <div class="acoes"><a class="btn roxo" href="https://gelagoela.expressomenu.com.br" target="_blank" rel="noopener">Abrir o cardápio</a></div>
+    </div>
+  </div>
+
+  <section class="lugar" id="lugar" aria-labelledby="t-lugar">
+    <div class="wrap">
+      <div class="fotos">
+        <img src="fotos/loja.jpg" alt="Balcão da GelaGoela com o painel de fotos dos produtos" loading="lazy" width="900" height="1200">
+        <img src="fotos/salao.jpg" alt="Área de mesas coberta em lilás, na frente da loja" loading="lazy" width="1200" height="901">
+      </div>
+      <div>
+        <div class="tit"><small>4,7 · 293 avaliações no Google</small><h2 id="t-lugar">Calmo, limpo e com sombra</h2></div>
+        <div class="falas">
+          <blockquote>Açaí maravilhoso, vem bem recheado. As mesas debaixo das árvores do outro lado da rua, num final de tarde, são bem gostosas!<cite>Mariana · Google</cite></blockquote>
+          <blockquote>Eu amo o frozen dessa sorveteria. Frozen natural, acompanhamentos com muita qualidade!<cite>Antonio · Google</cite></blockquote>
+          <blockquote>Variedades incríveis de sabores, frutas fresquinhas e atendimento impecável!<cite>Resumo das avaliações · Google</cite></blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:18px"><small>Onde fica</small><h2 id="t-onde">Jardim Santa Eudóxia</h2></div>
+        <table class="horas" id="horas">
+          <tr data-d="semana"><td>Segunda a sábado</td><td>12h às 20h30</td></tr>
+          <tr data-d="0"><td>Domingo</td><td>13h às 20h30</td></tr>
+        </table>
+        <p class="end"><b>Rua Luiz Chiodetto, 51</b> · Jardim Santa Eudóxia, Campinas (SP)<br>WhatsApp <a class="zap" href="https://wa.me/5519992877074">(19) 99287-7074</a> · <a href="https://www.instagram.com/gelagoelacampinas/" target="_blank" rel="noopener">@gelagoelacampinas</a></p>
+        <div class="acoes">
+          <a class="btn verde" href="https://www.google.com/maps/dir/?api=1&amp;destination=GelaGoela,+Rua+Luiz+Chiodetto,+51,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn linha zap" href="https://wa.me/5519992877074">WhatsApp</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: GelaGoela, Rua Luiz Chiodetto, 51, Campinas" src="https://www.google.com/maps?q=GELAGOELA,+Rua+Luiz+Chiodetto,+51+-+Jardim+Santa+Eudoxia,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© GelaGoela · Açaí &amp; Frozen · Campinas</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn roxo fixo some" href="https://gelagoela.expressomenu.com.br" target="_blank" rel="noopener">Pedir agora</a>
+
+<script>
+(function () {
+  document.querySelectorAll(".zap").forEach(function(a){a.target="_blank";a.rel="noopener";});
+  try {
+    var p = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+    var g = function(t){return (p.find(function(x){return x.type===t})||{}).value};
+    var d = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"));
+    var h = (parseInt(g("hour"),10)%24) + parseInt(g("minute"),10)/60;
+    var tr = document.querySelector('#horas tr[data-d="' + (d===0 ? 0 : "semana") + '"]'); if (tr) tr.classList.add("hoje");
+    var ab = d===0 ? 13 : 12, s = document.getElementById("status"), t = document.getElementById("status-t");
+    if (h>=ab && h<20.5) { s.classList.add("on"); t.textContent = "Aberto agora, até as 20h30"; }
+    else if (h<ab) t.textContent = "Abre hoje às " + ab + "h";
+    else t.textContent = "Fechado agora · abre amanhã às " + (d===6 ? "13h" : "12h");
+  } catch (e) {}
+  var f = document.querySelector(".fixo"), t2 = document.querySelector(".hero");
+  if (f && t2 && "IntersectionObserver" in window) new IntersectionObserver(function(e){f.classList.toggle("some", e[0].isIntersecting)}).observe(t2);
+})();
+</script>
+</body>
+</html>
