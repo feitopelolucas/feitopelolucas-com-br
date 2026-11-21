@@ -74,3 +74,19 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, Marcio! Sou o Lucas, faço sites aqui em Campinas. Vi que a palavra "honesto" aparece mais de 60 vezes nas avaliações da Mecânica Vasconcelos no Google, e montei uma ideia de site em cima disso: https://feitopelolucas.com.br/previa/vasconcelos/
 > O cliente marca o que o carro está fazendo (barulho, luz no painel, freio...), coloca modelo e ano e manda direto no WhatsApp de vocês. Se gostar, a gente conversa!
+
+---
+
+## 9. Joe Açaí Arymana · pulado
+
+**Pelo que vi:** no mesmo endereço (Av. Arymana, 1129) hoje aparece a **Will Açaí**, com Instagram @will_acai_e_sorvetes, duas lojas e cardápio online (willacai.seumenudigital.com.br). Parece que o Joe Açaí mudou de nome ou foi vendido. Não fiz prévia para não mandar um site com o nome errado. Vale ligar no (19) 97403-3749 e confirmar antes.
+
+---
+
+## 10. Borracharia Lopes · /previa/borracharialopes/
+
+**Pelo que vi:** Instagram @borracharialopescampinas (60 seguidores), sem site. Atende **linha leve e pesada**: conserto, vulcanização, alinhamento, balanceamento, pneus seminovos e recauchutados. Fica ao lado da Leroy Merlin e do Shopping Vila Destro (números 1914 e 1916, muro amarelo). Horário: segunda a sexta das 7h às 17h30 e sábado das 7h30 às 12h. WhatsApp (19) 99206-3265. **Atenção:** a placa no muro ainda mostra outro número, 97817-4653. Avaliações citam o Edson, o preço justo e a rapidez. O site tem abas "carro" e "linha pesada" e um botão "Pneu furou?" sempre à mão.
+**Por onde mandar:** WhatsApp (19) 99206-3265.
+
+> Oi, pessoal da Borracharia Lopes! Sou o Lucas, faço sites aqui em Campinas. Vi que vocês têm 4,8 no Google com mais de 300 avaliações elogiando o preço e a rapidez, e montei uma ideia de site para a borracharia: https://feitopelolucas.com.br/previa/borracharialopes/
+> Tem o "ao lado da Leroy Merlin" bem visível para quem procura, o horário com aviso de aberto agora, os serviços para carro e linha pesada e um botão de "pneu furou?" que já abre o WhatsApp. Se gostarem, a gente conversa!
