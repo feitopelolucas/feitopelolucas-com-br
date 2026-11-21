@@ -150,3 +150,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, Tati! Sou o Lucas, faço sites aqui em Campinas. Vi que a Bonna Pizza tem 4,6 no Google e é chamada de "melhor custo-benefício do Jambeiro", mas o perfil de vocês no Google nem foi reivindicado ainda e não tem site. Montei uma ideia: https://feitopelolucas.com.br/previa/bonnapizza/
 > Tem o forno a lenha em destaque, as pizzas, os dois telefones para pedir e o horário com aviso de "forno aceso". Também posso ajudar a assumir o perfil do Google. Se gostarem, a gente conversa!
+
+---
+
+## 17. Bar e Lanchonete Nosso Cantinho · /previa/nossocantinho/
+
+**Pelo que vi:** sem site, sem Instagram, **sem telefone**, e o perfil do Google **não foi reivindicado**. O logo no cardápio diz "desde 1999". Horário (Google): segunda a sexta das 16h à meia-noite, sábado e domingo das 12h às 20h30. Três fotos do Google mostram o cardápio com preços: espetinhos a R$ 10, porções, lanches, panceta só às sextas, e "aos domingos temos: assado, costela de boi, joelho de porco · aceitamos encomendas". Avaliações: samba de primeira, cerveja gelada, torresmo com pimenta biquinho, espetinho feito na hora. Apareceu num episódio de "Qual o melhor torresmo de Campinas?" (perfil Os Três Botequeiros). O site avisa que os preços podem ter mudado.
+**Por onde mandar:** pessoalmente, mostrando no celular (não há telefone nem Instagram). Dá para levar a mensagem abaixo como roteiro.
+
+> Oi, tudo bem? Sou o Lucas, faço sites aqui em Campinas. O Nosso Cantinho tem 4,7 no Google com mais de 270 avaliações, mas quem procura não acha telefone nem site, e o perfil do Google nem foi reivindicado ainda. Montei uma ideia de site para o bar: https://feitopelolucas.com.br/previa/nossocantinho/
+> Coloquei o cardápio com os espetinhos e as porções, o que tem em cada dia (panceta de sexta, costela no domingo) e o horário com aviso de aberto agora. Também posso ajudar a assumir o perfil do Google. Se gostarem, a gente conversa!

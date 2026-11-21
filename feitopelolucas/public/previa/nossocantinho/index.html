@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Nosso Cantinho · Bar e lanchonete desde 1999 no Jardim Leonor</title>
+<meta name="description" content="Prévia de site para o Bar e Lanchonete Nosso Cantinho, no Jardim Leonor, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/nossocantinho/">
+<meta property="og:title" content="Prévia de site · Bar Nosso Cantinho">
+<meta property="og:description" content="Espetinho na hora, torresmo, panceta de sexta e samba, desde 1999. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/nossocantinho/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#c8202f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Figtree:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--verm:#c8202f;--verm-2:#a3151f;--preto:#161412;--preto-2:#24201d;--ouro:#f2b632;--creme:#fbf5ea;--tinta:#1d1a17;--tinta-2:#6a5f57;--fio:#e9dcc6}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--creme);color:var(--tinta);font:17px/1.6 "Figtree",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Shrikhand",cursive;font-weight:400;line-height:1.05;margin:0}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  .wrap>*{min-width:0}
+
+  .previa{background:#000;color:#c8bcb2;font-size:.8125rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--ouro);font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .topo{background:var(--preto);color:#fff}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:74px}
+  .marca{text-decoration:none;display:flex;align-items:center;gap:10px}
+  .marca .fita{background:var(--verm);color:#fff;font:400 1.25rem/1 "Shrikhand",cursive;padding:8px 14px;border-radius:6px;transform:rotate(-2deg);box-shadow:0 0 0 2px var(--ouro)}
+  .marca small{font-size:.8125rem;color:#cfc4bb;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+  .topo nav{display:flex;gap:22px;font-weight:700;color:#d9cfc6}
+  .topo nav a{text-decoration:none}
+  .topo nav a:hover{color:var(--ouro)}
+  @media (max-width:860px){.topo nav{display:none}}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:12px 22px;border-radius:999px;font-weight:800;text-decoration:none;font-size:1rem;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.verm{background:var(--verm);color:#fff}
+  .btn.verm:hover{background:var(--verm-2)}
+  .btn.ouro{background:var(--ouro);color:var(--preto)}
+  .btn.linha{border:2px solid currentColor}
+  .btn.peq{min-height:44px;padding:8px 16px;font-size:.94rem}
+
+  .hero{background:var(--verm);color:#ffe6e2;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-80px;top:-80px;width:320px;height:320px;border-radius:50%;background:repeating-radial-gradient(circle,rgba(242,182,50,.25) 0 6px,transparent 6px 22px)}
+  .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding-top:48px;padding-bottom:70px}
+  .desde{display:inline-block;background:var(--ouro);color:var(--preto);font-weight:800;border-radius:999px;padding:6px 14px}
+  .hero h1{font-size:clamp(2.6rem,6.4vw,4.6rem);color:#fff;margin:18px 0 16px}
+  .hero p{font-size:1.14rem;max-width:30em;margin:0 0 26px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .status{margin-top:20px;display:inline-flex;align-items:center;gap:10px;font-weight:800}
+  .status i{width:11px;height:11px;border-radius:50%;background:#f3a49c;flex:none}
+  .status.on i{background:var(--ouro);box-shadow:0 0 0 6px rgba(242,182,50,.3)}
+  .fotos-h{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:end}
+  .fotos-h img{width:100%;object-fit:cover;border-radius:18px;border:6px solid #fff}
+  .fotos-h img:first-child{aspect-ratio:3/4}
+  .fotos-h img:last-child{aspect-ratio:4/5;margin-bottom:24px;transform:rotate(2deg)}
+  @media (max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:28px}}
+
+  section{padding:80px 0}
+  .tit{max-width:640px;margin-bottom:30px}
+  .tit small{font-weight:800;color:var(--verm);letter-spacing:.14em;text-transform:uppercase;font-size:.8125rem}
+  .tit h2{font-size:clamp(2rem,4.8vw,3.2rem);margin-top:6px}
+  .tit p{color:var(--tinta-2);margin:10px 0 0}
+
+  /* Semana */
+  .semana{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .dia{background:#fff;border:2px solid var(--fio);border-radius:20px;padding:22px}
+  .dia b{display:inline-block;background:var(--preto);color:var(--ouro);border-radius:999px;padding:4px 12px;font-weight:800;font-size:.875rem;letter-spacing:.06em;text-transform:uppercase}
+  .dia h3{font-size:1.6rem;margin:12px 0 6px;color:var(--verm)}
+  .dia p{margin:0;color:var(--tinta-2)}
+  .dia.hoje{border-color:var(--ouro);box-shadow:0 0 0 3px var(--ouro)}
+  @media (max-width:860px){.semana{grid-template-columns:1fr}}
+
+  /* Cardápio */
+  .cardapio{background:var(--preto);color:#e6ddd4}
+  .cardapio .tit h2{color:var(--ouro)}
+  .cardapio .tit small{color:#fff}
+  .cardapio .tit p{color:#b8aca2}
+  .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .bloco h3{color:#fff;font-size:1.5rem;margin-bottom:10px}
+  .bloco ul{list-style:none;margin:0;padding:0}
+  .bloco li{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px dashed #3d3631}
+  .bloco li span:last-child{white-space:nowrap;color:var(--ouro);font-weight:700}
+  .bloco li small{display:block;color:#a49890;font-size:.875rem}
+  @media (max-width:900px){.cols{grid-template-columns:1fr}}
+  .aviso-p{color:#a49890;font-size:.875rem;margin-top:22px}
+
+  /* Avaliações */
+  .aval .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center}
+  .aval img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:20px}
+  .falas{display:grid;gap:14px}
+  .falas blockquote{margin:0;background:#fff;border-left:6px solid var(--verm);border-radius:12px;padding:16px 18px;font-weight:600}
+  .falas cite{display:block;margin-top:6px;font-style:normal;font-weight:700;font-size:.875rem;color:var(--tinta-2)}
+  @media (max-width:880px){.aval .wrap{grid-template-columns:1fr}}
+
+  /* Onde */
+  .onde{background:var(--ouro)}
+  .onde .tit small{color:var(--preto)}
+  .onde .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+  .horas{width:100%;border-collapse:collapse;margin-bottom:18px}
+  .horas td{padding:9px 0;border-bottom:1px solid rgba(0,0,0,.15)}
+  .horas td:last-child{text-align:right;font-weight:800}
+  .horas tr.hoje td{color:var(--verm-2)}
+  .end{margin:0 0 22px}
+  .mapa{border-radius:20px;overflow:hidden;min-height:400px;background:#e0a520}
+  .mapa iframe{width:100%;height:100%;min-height:400px;border:0;display:block}
+  @media (max-width:880px){.onde .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:#000;color:#a49890;padding:24px 0 100px;font-size:.875rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--ouro);font-weight:700;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 12px 26px -10px rgba(0,0,0,.5);transition:opacity .3s,transform .3s}
+  .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
+  @media (min-width:861px){footer{padding-bottom:24px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial do Bar e Lanchonete Nosso Cantinho. É uma ideia de site montada por Lucas para apresentar ao bar.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20do%20Bar%20Nosso%20Cantinho%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Bar e Lanchonete Nosso Cantinho, início"><span class="fita">Nosso Cantinho</span><small>desde 1999</small></a>
+    <nav aria-label="Seções">
+      <a href="#semana">A semana</a>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#onde">Onde fica</a>
+    </nav>
+    <a class="btn ouro peq" href="https://www.google.com/maps/dir/?api=1&amp;destination=Bar+e+Lanc.+Nosso+Cantinho,+Rua+Padre+Leonel+Fran%C3%A7a,+181,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="desde">Bar raiz no Jardim Leonor · desde 1999</span>
+        <h1 id="titulo">Espetinho na hora, cerveja gelada e samba de primeira.</h1>
+        <p>Boteco de bairro com torresmo servido com pimenta biquinho, panceta de sexta, conservas no balcão e, no domingo, costela de boi e joelho de porco. Simples, aconchegante e com cara de casa.</p>
+        <div class="acoes">
+          <a class="btn ouro" href="#cardapio">Ver o cardápio</a>
+          <a class="btn linha" href="https://www.google.com/maps/dir/?api=1&amp;destination=Bar+e+Lanc.+Nosso+Cantinho,+Rua+Padre+Leonel+Fran%C3%A7a,+181,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+        </div>
+        <p class="status" id="status"><i aria-hidden="true"></i><span id="status-t">Seg a sex 16h à meia-noite · sáb e dom 12h às 20h30</span></p>
+      </div>
+      <div class="fotos-h">
+        <img src="fotos/chopp.jpg" alt="Capa do cardápio do Nosso Cantinho, com o logo e um copo de chopp" width="904" height="1200">
+        <img src="fotos/prato.jpg" alt="Prato com filé empanado e salada" width="1200" height="902">
+      </div>
+    </div>
+  </section>
+
+  <section id="semana" aria-labelledby="t-sem">
+    <div class="wrap">
+      <div class="tit"><small>A semana no Cantinho</small><h2 id="t-sem">Cada dia tem o seu motivo</h2></div>
+      <div class="semana">
+        <div class="dia" data-g="util"><b>Seg a qui · 16h</b><h3>Fim de expediente</h3><p>Espetinho feito na hora, porção de calabresa acebolada e a cerveja gelada que todo mundo elogia.</p></div>
+        <div class="dia" data-g="sex"><b>Sexta</b><h3>Dia de panceta</h3><p>Panceta com farofa e pimenta biquinho, só às sextas. É também a noite mais cheia.</p></div>
+        <div class="dia" data-g="fds"><b>Sáb e dom · 12h</b><h3>Almoço de boteco</h3><p>No domingo tem assado, costela de boi e joelho de porco. E dá para encomendar.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cardapio" id="cardapio" aria-labelledby="t-card">
+    <div class="wrap">
+      <div class="tit"><small>Cardápio</small><h2 id="t-card">Da brasa, da chapa e do balcão</h2><p>Alguns itens e preços do cardápio impresso da casa.</p></div>
+      <div class="cols">
+        <div class="bloco"><h3>Espetinhos</h3><ul>
+          <li><span>Frango, carne ou lombo</span><span>R$ 10</span></li>
+          <li><span>Coração, tulipa ou kafta</span><span>R$ 10</span></li>
+          <li><span>Queijo</span><span>R$ 10</span></li>
+          <li><span>Linguiça apimentada</span><span>R$ 10</span></li>
+          <li><span>Linguiça caipira</span><span>R$ 11</span></li>
+          <li><span>Pão de alho</span><span>R$ 7</span></li>
+          <li><span>Bife de contra filé<small>Cebola, pimenta biquinho, farofa e pão</small></span><span>R$ 55</span></li>
+          <li><span>Só carré (8 unid.)</span><span>R$ 85</span></li>
+        </ul></div>
+        <div class="bloco"><h3>Porções</h3><ul>
+          <li><span>Calabresa acebolada<small>Com vinagrete e pão</small></span><span>R$ 40</span></li>
+          <li><span>Contra filé<small>Com vinagrete e pão</small></span><span>R$ 55</span></li>
+          <li><span>Frango acebolado</span><span>R$ 40</span></li>
+          <li><span>Frango à passarinho<small>Meia R$ 37</small></span><span>R$ 48</span></li>
+          <li><span>Panceta (só sexta)<small>Meia R$ 13</small></span><span>R$ 25</span></li>
+          <li><span>Batata frita<small>Meia R$ 15</small></span><span>R$ 25</span></li>
+          <li><span>Mandioca<small>Meia R$ 15</small></span><span>R$ 20</span></li>
+          <li><span>Mini salgados (12 unid.)<small>Croquete, kibe, coxinha ou bolinha de queijo</small></span><span>R$ 28</span></li>
+        </ul></div>
+        <div class="bloco"><h3>Lanches</h3><ul>
+          <li><span>X-egg</span><span>R$ 18</span></li>
+          <li><span>Contra filé com queijo</span><span>R$ 23</span></li>
+          <li><span>Contra filé, queijo e salada</span><span>R$ 25</span></li>
+          <li><span>Filé de frango, queijo e presunto</span><span>R$ 20</span></li>
+          <li><span>Linguiça apimentada<small>Com queijo meia cura</small></span><span>R$ 25</span></li>
+          <li><span>Linguiça caipira<small>Com queijo meia cura</small></span><span>R$ 30</span></li>
+          <li><span>Caldos</span><span>consulte</span></li>
+        </ul></div>
+      </div>
+      <p class="aviso-p">Preços copiados do cardápio impresso; podem ter mudado. No balcão ainda tem conservas, provolone, tremoço, amendoim e salgados.</p>
+    </div>
+  </section>
+
+  <section class="aval" aria-labelledby="t-aval">
+    <div class="wrap">
+      <img src="fotos/porcao.jpg" alt="Porção servida na mesa do bar" loading="lazy" width="1200" height="675">
+      <div>
+        <div class="tit" style="margin-bottom:16px"><small>4,7 · 274 avaliações no Google</small><h2 id="t-aval">Bar raiz de verdade</h2></div>
+        <div class="falas">
+          <blockquote>Samba de primeira, cerveja gelada e bons preços!<cite>Resumo das avaliações · Google</cite></blockquote>
+          <blockquote>Destaque para a porção de torresmo deliciosa servida com pimenta biquinho.<cite>Resumo das avaliações · Google</cite></blockquote>
+          <blockquote>Ambiente simples e aconchegante. Dá para se sentir em casa, os espetinhos são feitos na hora. Para quem gosta de bar raiz, esse é o lugar certo!<cite>Daiane · Google</cite></blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:18px"><small>Onde fica</small><h2 id="t-onde">Jardim Leonor</h2></div>
+        <table class="horas" id="horas">
+          <tr data-d="semana"><td>Segunda a sexta</td><td>16h à meia-noite</td></tr>
+          <tr data-d="fds"><td>Sábado e domingo</td><td>12h às 20h30</td></tr>
+        </table>
+        <p class="end"><b>Rua Padre Leonel França, 181</b> · Jardim Leonor, Campinas (SP)<br>Estacionamento na rua · cartão e aproximação · fichas para o pebolim</p>
+        <div class="acoes">
+          <a class="btn verm" href="https://www.google.com/maps/dir/?api=1&amp;destination=Bar+e+Lanc.+Nosso+Cantinho,+Rua+Padre+Leonel+Fran%C3%A7a,+181,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Bar Nosso Cantinho, Rua Padre Leonel França, 181, Campinas" src="https://www.google.com/maps?q=Bar+e+Lanc.+Nosso+Cantinho,+Rua+Padre+Leonel+Fran%C3%A7a,+181+-+Jardim+Leonor,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Bar e Lanchonete Nosso Cantinho · desde 1999 · Jardim Leonor, Campinas</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn verm fixo some" href="https://www.google.com/maps/dir/?api=1&amp;destination=Bar+e+Lanc.+Nosso+Cantinho,+Rua+Padre+Leonel+Fran%C3%A7a,+181,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+
+<script>
+(function () {
+  try {
+    var p = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+    var g = function(t){return (p.find(function(x){return x.type===t})||{}).value};
+    var d = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"));
+    var h = (parseInt(g("hour"),10)%24) + parseInt(g("minute"),10)/60;
+    var fds = d===0 || d===6;
+    var tr = document.querySelector('#horas tr[data-d="' + (fds ? "fds" : "semana") + '"]'); if (tr) tr.classList.add("hoje");
+    var c = document.querySelector('.dia[data-g="' + (fds ? "fds" : (d===5 ? "sex" : "util")) + '"]'); if (c) c.classList.add("hoje");
+    var s = document.getElementById("status"), t = document.getElementById("status-t");
+    var ab = fds ? 12 : 16, fe = fds ? 20.5 : 24;
+    if (h>=ab && h<fe) { s.classList.add("on"); t.textContent = "Aberto agora, até " + (fds ? "as 20h30" : "a meia-noite"); }
+    else if (h<ab) t.textContent = "Abre hoje às " + ab + "h";
+    else t.textContent = "Fechado agora · abre amanhã às " + ((d===5||d===6) ? "12h" : "16h");
+  } catch (e) {}
+  var f = document.querySelector(".fixo"), t2 = document.querySelector(".hero");
+  if (f && t2 && "IntersectionObserver" in window) new IntersectionObserver(function(e){f.classList.toggle("some", e[0].isIntersecting)}).observe(t2);
+})();
+</script>
+</body>
+</html>
