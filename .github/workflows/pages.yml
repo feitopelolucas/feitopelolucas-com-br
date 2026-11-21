@@ -17,11 +17,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  publicar:
+  # 1) Monta o pacote do site e envia para o GitHub
+  montar:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v7
 
@@ -49,5 +47,14 @@ jobs:
         with:
           path: _site
 
+  # 2) Publica o pacote. Fica numa etapa separada, como no modelo oficial do GitHub,
+  # para o pacote já estar registrado quando a publicação for buscá-lo.
+  publicar:
+    needs: montar
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
       - id: deploy
         uses: actions/deploy-pages@v5
