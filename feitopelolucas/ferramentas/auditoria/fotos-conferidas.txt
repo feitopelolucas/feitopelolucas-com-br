@@ -1,0 +1,4 @@
+# Fotos com proporção 2:1 que já foram conferidas e NÃO são 360° do Street View.
+# A auditoria para de avisar sobre elas. Uma por linha: pasta/fotos/arquivo.jpg
+anabe/fotos/acc.jpg
+petoliveira/fotos/fachada.jpg
