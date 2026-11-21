@@ -332,3 +332,19 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Olá, pessoal da Autracam! Sou o Lucas, faço sites aqui em Campinas. 55 anos no mesmo endereço e 4,8 no Google com quase 200 avaliações falando de confiança e honestidade: isso merece um site à altura! Montei uma ideia: https://feitopelolucas.com.br/previa/autracam/
 > Tem os serviços, a história desde 1970 e um agendamento em que o cliente escolhe o serviço, o dia e o período e manda tudo pronto no WhatsApp de vocês. Se gostarem, a gente conversa!
+
+---
+
+## 36. La Panela Confeitaria · pulado
+
+**Por que pulei:** já tem site próprio, **lapanela.com.br**, com cardápio online (app.lapanela.com.br), bar de brigadeiros e encomendas, além de um Instagram com 29,6 mil seguidores. Um post recente no Facebook fala da "casinha da La Panela" no passado, então pode ser que a loja física tenha mudado.
+
+---
+
+## 37. Boutcar Funilaria e Pintura · /previa/boutcar/
+
+**Pelo que vi:** sem site e sem Instagram encontrado. Tem 4,9 no Google com 180 avaliações. O dono é o **Carlinhos** (mais de 20 anos de profissão); as avaliações citam também a Dona Denise e o Lucas no atendimento. Fixo (19) 3252-5997 e WhatsApp **(19) 97419-8134**, que é o do botão do Google. Abre de segunda a sexta, das 8h às 18h. A arte deles anuncia: atendem seguradoras, carros nacionais e importados, martelinho de ouro, micropintura, reparo de para-choque, polimento, cristalização 3M e **10x sem juros no cartão**. As fotos são do Google e mostram carros prontos no salão, bem bonitas. O site tem um orçamento por foto: o cliente marca o que aconteceu, onde e se vai pelo seguro, e manda no WhatsApp para depois enviar as fotos.
+**Por onde mandar:** WhatsApp (19) 97419-8134.
+
+> Olá, Carlinhos! Sou o Lucas, faço sites aqui em Campinas. Vi que a Boutcar tem 4,9 no Google com 180 avaliações e fotos de carros que saem daí brilhando. Montei uma ideia de site: https://feitopelolucas.com.br/previa/boutcar/
+> Tem os serviços, a galeria e um orçamento por foto: o cliente marca o dano e se é pelo seguro, e manda tudo pronto no WhatsApp de vocês. Se gostar, a gente conversa!

@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Boutcar · Funilaria, martelinho de ouro e pintura no Bosque</title>
+<meta name="description" content="Prévia de site para a Boutcar Funilaria e Pintura, no Bosque, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/boutcar/">
+<meta property="og:title" content="Prévia de site · Boutcar Funilaria e Pintura">
+<meta property="og:description" content="Martelinho de ouro, micropintura, polimento e funilaria completa. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/boutcar/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f1a3d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--azul:#0f1a3d;--azul-2:#091128;--azul-3:#1c2a5a;--verm:#e1252d;--verm-2:#b8171e;--amarelo:#ffd23f;--gelo:#f4f6fb;--tinta:#141a2b;--tinta-2:#5a6276;--fio:#dfe3ee}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--gelo);color:var(--tinta);font:16.5px/1.6 "Sora",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-weight:800;line-height:1.05;margin:0;letter-spacing:-.025em}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--amarelo);outline-offset:3px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  .wrap>*{min-width:0}
+
+  .previa{background:var(--azul-2);color:#b8c0d8;font-size:.8125rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--amarelo);font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .topo{background:#fff;border-bottom:1px solid var(--fio)}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:72px}
+  .marca{text-decoration:none;line-height:1}
+  .marca b{font:800 1.75rem "Sora",sans-serif;color:var(--verm);letter-spacing:-.03em}
+  .marca b span{color:var(--azul)}
+  .marca small{display:block;font-size:.8125rem;color:var(--tinta-2);font-weight:600;margin-top:2px}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:12px 22px;border-radius:12px;font-weight:700;text-decoration:none;font-size:1rem;transition:transform .15s,background .15s;white-space:nowrap;border:0;cursor:pointer;font-family:inherit}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.verm{background:var(--verm);color:#fff}
+  .btn.verm:hover{background:var(--verm-2)}
+  .btn.azul{background:var(--azul);color:#fff}
+  .btn.linha{border:2px solid currentColor;background:transparent}
+  .btn.peq{min-height:44px;padding:8px 16px;font-size:.94rem}
+
+  .hero{background:linear-gradient(160deg,var(--azul) 0 60%,var(--azul-3));color:#fff;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:center;padding-top:44px;padding-bottom:76px}
+  .tag{display:inline-flex;gap:8px;align-items:center;background:var(--amarelo);color:var(--azul-2);font-weight:800;font-size:.875rem;padding:6px 14px;border-radius:999px}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.6rem);margin:18px 0 16px}
+  .hero h1 span{color:var(--amarelo)}
+  .hero p{font-size:1.1rem;color:#c3cbe2;max-width:31em;margin:0 0 26px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .numeros{display:flex;gap:26px;flex-wrap:wrap;margin-top:30px}
+  .numeros b{display:block;font-size:1.9rem;line-height:1}
+  .numeros span{font-size:.875rem;color:#9fa9c7}
+  .vitrine{position:relative}
+  .vitrine img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:22px;box-shadow:0 30px 60px -30px #000}
+  .vitrine .selo{position:absolute;left:-12px;bottom:22px;background:#fff;color:var(--azul);border-radius:14px;padding:12px 16px;font-weight:800;box-shadow:0 14px 30px -14px rgba(0,0,0,.6);line-height:1.2}
+  .vitrine .selo small{display:block;font-weight:600;color:var(--tinta-2);font-size:.8125rem}
+  @media (max-width:880px){.hero .wrap{grid-template-columns:1fr;padding-top:28px}.vitrine .selo{left:10px}}
+
+  section{padding:76px 0}
+  .tit{max-width:660px;margin-bottom:28px}
+  .tit small{font-weight:800;color:var(--verm);letter-spacing:.14em;text-transform:uppercase;font-size:.8125rem}
+  .tit h2{font-size:clamp(2rem,4.6vw,3.1rem);margin-top:8px;color:var(--azul)}
+  .tit p{color:var(--tinta-2);margin:10px 0 0}
+
+  .servicos{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .serv{background:#fff;border:1px solid var(--fio);border-radius:18px;padding:22px}
+  .serv b{display:block;font-size:1.1rem;color:var(--azul);margin-bottom:6px}
+  .serv span{color:var(--tinta-2);font-size:.94rem}
+  .serv.destaque{background:var(--verm);border:0;color:#fff}
+  .serv.destaque b{color:#fff}
+  .serv.destaque span{color:#ffe1e2}
+  @media (max-width:920px){.servicos{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.servicos{grid-template-columns:1fr}}
+
+  .galeria{background:#fff;border-top:1px solid var(--fio);border-bottom:1px solid var(--fio)}
+  .grade{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:12px;grid-auto-flow:dense}
+  .grade img{width:100%;height:100%;object-fit:cover;border-radius:14px}
+  .grade .alto{grid-row:span 2}
+  .grade .largo{grid-column:span 2}
+  @media (max-width:820px){.grade{grid-template-columns:1fr 1fr;grid-auto-rows:170px}}
+
+  /* Orçamento */
+  .orc .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:start}
+  .passo{margin-bottom:22px}
+  .passo h3{font-size:1.15rem;color:var(--azul);margin-bottom:10px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips label{cursor:pointer}
+  .chips input{position:absolute;opacity:0;pointer-events:none}
+  .chips span{display:inline-flex;align-items:center;min-height:44px;padding:8px 14px;border-radius:10px;border:2px solid var(--fio);background:#fff;font-weight:600;font-size:.94rem;transition:all .15s}
+  .chips input:checked+span{background:var(--azul);border-color:var(--azul);color:#fff}
+  .chips input:focus-visible+span{outline:3px solid var(--amarelo);outline-offset:2px}
+  .campo input{width:100%;min-height:50px;border-radius:10px;border:2px solid var(--fio);font:inherit;padding:10px 12px;background:#fff}
+  .resumo{position:sticky;top:20px;background:var(--azul);color:#fff;border-radius:22px;padding:24px}
+  .resumo small{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.8125rem;color:var(--amarelo)}
+  .resumo p{margin:10px 0 16px;color:#dfe4f3;line-height:1.5}
+  .resumo ol{margin:0 0 18px;padding-left:20px;color:#c3cbe2;font-size:.94rem}
+  .resumo .btn{width:100%}
+  @media (max-width:880px){.orc .wrap{grid-template-columns:1fr}.resumo{position:static}}
+
+  .falas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .falas blockquote{margin:0;background:#fff;border:1px solid var(--fio);border-radius:18px;padding:22px}
+  .falas cite{display:block;margin-top:10px;font-style:normal;font-weight:800;font-size:.875rem;color:var(--verm)}
+  @media (max-width:880px){.falas{grid-template-columns:1fr}}
+
+  .onde{background:var(--azul);color:#c3cbe2}
+  .onde .tit h2{color:#fff}
+  .onde .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+  .onde img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;margin-bottom:18px}
+  .end{margin:0 0 22px}
+  .end b{color:#fff}
+  .end a{white-space:nowrap;font-weight:700;color:var(--amarelo)}
+  .mapa{border-radius:18px;overflow:hidden;min-height:380px;background:var(--azul-3)}
+  .mapa iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+  @media (max-width:880px){.onde .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:var(--azul-2);color:#9fa9c7;padding:24px 0 110px;font-size:.875rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--amarelo);font-weight:700;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:40;box-shadow:0 14px 30px -12px rgba(0,0,0,.5);transition:opacity .2s,transform .2s}
+  .fixo.some{opacity:0;transform:translateY(20px);pointer-events:none}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial da Boutcar. É uma ideia de site montada por Lucas para apresentar à oficina.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20da%20Boutcar%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Boutcar, início"><b>BOUT<span>CAR</span></b><small>Funilaria e pintura · Bosque</small></a>
+    <a class="btn verm peq zap" href="https://wa.me/5519974198134?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20um%20or%C3%A7amento.">Orçamento</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="tag">Parcela em até 10x sem juros no cartão</span>
+        <h1 id="titulo">Seu carro sai daqui <span>como novo</span>.</h1>
+        <p>Martelinho de ouro, micropintura, reparo de para-choque, polimento e funilaria completa, com o capricho do Carlinhos, há mais de 20 anos na profissão. Nacionais e importados. Atendemos seguradoras.</p>
+        <div class="acoes">
+          <a class="btn verm" href="#orcamento">Pedir orçamento por foto</a>
+          <a class="btn linha" href="tel:+551932525997">Ligar 3252-5997</a>
+        </div>
+        <div class="numeros">
+          <div><b>4,9 ★</b><span>180 avaliações no Google</span></div>
+          <div><b>20+</b><span>anos de experiência</span></div>
+        </div>
+      </div>
+      <div class="vitrine">
+        <img src="fotos/hrv.jpg" alt="Honda HR-V prata com a pintura brilhando, pronto para a entrega na loja" width="1199" height="850">
+        <div class="selo">Atendemos seguradoras<small>nacionais e importados</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-serv">
+    <div class="wrap">
+      <div class="tit"><small>Serviços</small><h2 id="t-serv">Do amassadinho à funilaria completa</h2></div>
+      <div class="servicos">
+        <div class="serv destaque"><b>Martelinho de ouro</b><span>Tira o amassado sem pintar, preservando a pintura original.</span></div>
+        <div class="serv"><b>Micropintura</b><span>Riscos e lascas pequenas corrigidos só no ponto.</span></div>
+        <div class="serv"><b>Reparo de para-choque</b><span>Recupera trincas e ralados sem trocar a peça.</span></div>
+        <div class="serv"><b>Pintura automotiva</b><span>De uma peça ao carro inteiro.</span></div>
+        <div class="serv"><b>Funilaria</b><span>Batidas maiores, com ou sem seguro.</span></div>
+        <div class="serv"><b>Polimento</b><span>Devolve o brilho e tira as marcas do dia a dia.</span></div>
+        <div class="serv"><b>Cristalização 3M</b><span>Proteção e brilho que duram mais.</span></div>
+        <div class="serv"><b>Vitrificação</b><span>Camada protetora para a pintura.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="galeria" aria-labelledby="t-gal">
+    <div class="wrap">
+      <div class="tit"><small>Na loja</small><h2 id="t-gal">Carros prontos para a entrega</h2><p>Oficina organizada e muito limpa: as fotos falam por si.</p></div>
+      <div class="grade">
+        <img class="largo" src="fotos/golf.jpg" alt="Volkswagen Golf preto com a pintura recuperada" loading="lazy" width="1024" height="768">
+        <img class="alto" src="fotos/roda.jpg" alt="Roda grafite com pinça de freio vermelha, depois do serviço" loading="lazy" width="900" height="1200">
+        <img src="fotos/capo.jpg" alt="Honda com o capô aberto no salão da oficina" loading="lazy" width="1200" height="1004">
+        <img class="largo" src="fotos/polimento.jpg" alt="Funcionário fazendo acabamento em um SUV preto" loading="lazy" width="1200" height="675">
+        <img src="fotos/fachada.jpg" alt="Fachada vermelha da Boutcar com uma picape na entrada" loading="lazy" width="1200" height="903">
+      </div>
+    </div>
+  </section>
+
+  <section class="orc" id="orcamento" aria-labelledby="t-orc">
+    <div class="wrap">
+      <div>
+        <div class="tit"><small>Orçamento por foto</small><h2 id="t-orc">Diga o que aconteceu</h2><p>Marque as opções e mande pelo WhatsApp. Depois é só enviar as fotos do dano na mesma conversa.</p></div>
+        <div class="passo"><h3>1. O que aconteceu?</h3><div class="chips" data-g="tipo">
+          <label><input type="checkbox" value="amassado"><span>Amassado</span></label>
+          <label><input type="checkbox" value="risco"><span>Risco</span></label>
+          <label><input type="checkbox" value="para-choque ralado ou trincado"><span>Para-choque ralado</span></label>
+          <label><input type="checkbox" value="batida"><span>Batida</span></label>
+          <label><input type="checkbox" value="pintura queimada ou sem brilho"><span>Pintura sem brilho</span></label></div></div>
+        <div class="passo"><h3>2. Onde no carro?</h3><div class="chips" data-g="onde">
+          <label><input type="checkbox" value="para-choque dianteiro"><span>Para-choque da frente</span></label>
+          <label><input type="checkbox" value="para-choque traseiro"><span>Para-choque de trás</span></label>
+          <label><input type="checkbox" value="porta"><span>Porta</span></label>
+          <label><input type="checkbox" value="para-lama"><span>Para-lama</span></label>
+          <label><input type="checkbox" value="capô"><span>Capô</span></label>
+          <label><input type="checkbox" value="teto"><span>Teto</span></label>
+          <label><input type="checkbox" value="tampa traseira"><span>Tampa traseira</span></label></div></div>
+        <div class="passo"><h3>3. Vai pelo seguro?</h3><div class="chips" data-g="seg">
+          <label><input type="radio" name="seg" value="particular" checked><span>Particular</span></label>
+          <label><input type="radio" name="seg" value="pelo seguro"><span>Pelo seguro</span></label>
+          <label><input type="radio" name="seg" value="sou terceiro no seguro de outra pessoa"><span>Sou terceiro</span></label></div></div>
+        <div class="passo campo"><h3>4. Carro</h3><input id="carro" placeholder="Ex.: Golf 2016 preto" autocomplete="off" aria-label="Modelo, ano e cor do carro"></div>
+      </div>
+      <aside class="resumo" aria-live="polite">
+        <small>Seu pedido</small>
+        <p id="resumo">Marque o que aconteceu e onde.</p>
+        <ol><li>Toque em enviar</li><li>Mande 2 ou 3 fotos do dano na conversa</li><li>A Boutcar responde com o orçamento</li></ol>
+        <a class="btn verm" id="env" href="https://wa.me/5519974198134">Enviar pelo WhatsApp</a>
+      </aside>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="tit"><small>4,9 · 180 avaliações no Google</small><h2 id="t-aval">Quem leva, recomenda</h2></div>
+      <div class="falas">
+        <blockquote>Carlinhos é excelente profissional, além de um atendimento agradável e personalizado. Serviço de alto nível, oficina organizada e muito limpa.<cite>Flavio · Google</cite></blockquote>
+        <blockquote>Sou cliente há anos. Atendimento impecável e profissionais extremamente cuidadosos. Vale cada centavo.<cite>Lucas · Google</cite></blockquote>
+        <blockquote>O serviço ficou ótimo, feito com muito cuidado e qualidade. Profissionais que transmitem confiança e comprometimento com o cliente.<cite>Marcilene · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:18px"><small>Onde fica</small><h2 id="t-onde">No Bosque, pertinho do Centro</h2></div>
+        <p class="end"><b>R. Uruguaiana, 1248</b> · Bosque · Campinas (SP)<br>Segunda a sexta, das 8h às 18h<br>Fixo <a href="tel:+551932525997">(19) 3252-5997</a> · WhatsApp <a class="zap" href="https://wa.me/5519974198134">(19) 97419-8134</a></p>
+        <div class="acoes">
+          <a class="btn verm zap" href="https://wa.me/5519974198134?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20um%20or%C3%A7amento.">WhatsApp</a>
+          <a class="btn linha" href="https://www.google.com/maps/dir/?api=1&amp;destination=Boutcar+Funilaria+e+Pintura,+R.+Uruguaiana,+1248,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Boutcar, R. Uruguaiana, 1248, Campinas" src="https://www.google.com/maps?q=Boutcar+Funilaria+e+Pintura,+R.+Uruguaiana,+1248,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Boutcar Funilaria e Pintura · Campinas</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn verm fixo some" id="fixo" href="#orcamento">Orçamento por foto</a>
+
+<script>
+(function () {
+  document.querySelectorAll(".zap").forEach(function(a){a.target="_blank";a.rel="noopener";});
+  var fixo = document.getElementById("fixo");
+  if ("IntersectionObserver" in window) new IntersectionObserver(function(e){ fixo.classList.toggle("some", e[0].isIntersecting); }).observe(document.querySelector(".hero"));
+
+  var env = document.getElementById("env"); env.target = "_blank"; env.rel = "noopener";
+  function lista(g){ return [].map.call(document.querySelectorAll('[data-g="' + g + '"] input:checked'), function(i){ return i.value; }); }
+  function junta(a){ return a.join(", ").replace(/, ([^,]*)$/, " e $1"); }
+  function at(){
+    var t = lista("tipo"), o = lista("onde"), s = lista("seg")[0], c = document.getElementById("carro").value.trim();
+    var txt = (t.length ? junta(t).charAt(0).toUpperCase() + junta(t).slice(1) : "Serviço a avaliar") + (o.length ? " (" + junta(o) + ")" : "") + ". " + s.charAt(0).toUpperCase() + s.slice(1) + "." + (c ? " Carro: " + c + "." : "");
+    document.getElementById("resumo").textContent = txt;
+    env.href = "https://wa.me/5519974198134?text=" + encodeURIComponent("Olá, Boutcar! Vim pelo site e queria um orçamento.\n" + txt + "\nVou mandar as fotos aqui.");
+  }
+  document.querySelector(".orc").addEventListener("change", at);
+  document.getElementById("carro").addEventListener("input", at);
+  at();
+})();
+</script>
+</body>
+</html>
