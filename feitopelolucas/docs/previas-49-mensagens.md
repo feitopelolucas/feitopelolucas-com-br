@@ -110,3 +110,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, pessoal do Karioka! Sou o Lucas, faço sites aqui em Campinas. Vocês têm 4,8 no Google com mais de 300 avaliações e não têm site, então montei uma ideia de como ele poderia ser: https://feitopelolucas.com.br/previa/karioka/
 > Coloquei o cardápio inteiro, os 39 lanches com preço, e o cliente vai tocando em "pedir", escolhe o pão e manda o pedido somado direto no WhatsApp de vocês. Se gostarem, a gente conversa!
+
+---
+
+## 13. Coco Doce · /previa/cocodoce/
+
+**Pelo que vi:** sem site e **sem telefone no Google**. O Instagram **@coco__doce** (1,3 mil seguidores) está parado desde dezembro de 2023 e diz "segunda a sábado das 9h às 18h". O letreiro diz "Pastéis · pamonha, curau e derivados do milho". Nas avaliações, as palavras que mais aparecem são pamonha, água de coco e caldo de cana; citam também a Dona Katia, o pastel sequinho e o suco de milho. Como não há telefone, o site leva para "Como chegar" e para o Instagram. Um site com WhatsApp resolveria justamente isso.
+**Por onde mandar:** direct no Instagram @coco__doce, ou levar impresso / mostrar no celular no balcão.
+
+> Oi, pessoal da Coco Doce! Sou o Lucas, faço sites aqui em Campinas. Vocês têm 4,9 no Google com quase 300 avaliações, mas lá não aparece telefone nem site, e muita gente procura pela pamonha e pelo caldo de cana. Montei uma ideia de site para vocês: https://feitopelolucas.com.br/previa/cocodoce/
+> Tem o que vocês vendem, o horário com aviso de aberto agora e o caminho até a loja. Se quiserem, dá para colocar um WhatsApp de pedidos também. Se gostarem, a gente conversa!

@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Coco Doce · Pastel, pamonha e caldo de cana em Campinas</title>
+<meta name="description" content="Prévia de site para a Coco Doce, no Jardim Nova Europa, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/cocodoce/">
+<meta property="og:title" content="Prévia de site · Coco Doce">
+<meta property="og:description" content="Pastel sequinho, pamonha, curau, caldo de cana e água de coco gelada. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/cocodoce/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2e7d3a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--milho:#f4c430;--milho-2:#e0ab12;--palha:#fff7dc;--folha:#2e7d3a;--folha-2:#22612c;--coco:#6b4a2b;--tinta:#2b2414;--tinta-2:#6b604a;--fio:#efe2b6}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--palha);color:var(--tinta);font:17px/1.6 "Nunito",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Fredoka",system-ui,sans-serif;font-weight:700;line-height:1.05;margin:0}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--folha);outline-offset:3px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  .wrap>*{min-width:0}
+
+  .previa{background:var(--tinta);color:#e2d8bd;font-size:.8125rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--milho);font-weight:800;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .topo{background:var(--folha);color:#fff}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:72px}
+  .marca{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .marca .bola{width:42px;height:42px;border-radius:50%;background:var(--milho);display:grid;place-items:center;flex:none}
+  .marca .bola svg{width:26px;height:26px;color:var(--folha)}
+  .marca b{font:700 1.5rem "Fredoka",sans-serif}
+  .topo nav{display:flex;gap:22px;font-weight:700;color:#d7ecd9}
+  .topo nav a{text-decoration:none}
+  @media (max-width:860px){.topo nav{display:none}}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:12px 22px;border-radius:999px;font-weight:800;text-decoration:none;font-size:1rem;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.milho{background:var(--milho);color:var(--tinta)}
+  .btn.milho:hover{background:var(--milho-2)}
+  .btn.folha{background:var(--folha);color:#fff}
+  .btn.linha{border:2px solid currentColor}
+  .btn.peq{min-height:44px;padding:8px 16px;font-size:.94rem}
+
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding-top:50px;padding-bottom:70px}
+  .hero .tag{display:inline-block;background:#fff;border:2px solid var(--fio);border-radius:999px;padding:6px 14px;font-weight:800;color:var(--folha)}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.4rem);margin:16px 0 14px;color:var(--folha-2)}
+  .hero h1 span{background:linear-gradient(transparent 58%,var(--milho) 58%)}
+  .hero p{font-size:1.14rem;max-width:30em;color:var(--tinta-2);margin:0 0 26px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .status{margin-top:20px;display:inline-flex;align-items:center;gap:10px;font-weight:800}
+  .status i{width:11px;height:11px;border-radius:50%;background:#b7ad8f;flex:none}
+  .status.on i{background:#2fa84b;box-shadow:0 0 0 5px rgba(47,168,75,.18)}
+  .trio{display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:auto auto;gap:12px}
+  .trio img{width:100%;height:100%;object-fit:cover;border-radius:22px}
+  .trio img:first-child{grid-row:span 2;aspect-ratio:3/5}
+  .trio img:not(:first-child){aspect-ratio:1}
+  @media (max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:30px}}
+
+  section{padding:80px 0}
+  .tit{max-width:640px;margin-bottom:32px}
+  .tit small{font-weight:800;color:var(--coco);letter-spacing:.14em;text-transform:uppercase;font-size:.8125rem}
+  .tit h2{font-size:clamp(2rem,4.6vw,3.1rem);margin-top:6px;color:var(--folha-2)}
+  .tit p{color:var(--tinta-2);margin:10px 0 0}
+
+  /* Do milho e do coco */
+  .colunas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .col{background:#fff;border:2px solid var(--fio);border-radius:24px;padding:24px}
+  .col h3{font-size:1.5rem;margin-bottom:12px;display:flex;gap:10px;align-items:center}
+  .col h3 span{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--milho);font-size:1.2rem}
+  .col ul{margin:0;padding:0;list-style:none}
+  .col li{padding:9px 0;border-bottom:1px dashed var(--fio);font-weight:700}
+  .col li small{display:block;font-weight:600;color:var(--tinta-2);font-size:.875rem}
+  .col.verde{background:var(--folha);border-color:var(--folha);color:#e5f3e7}
+  .col.verde h3{color:#fff}
+  .col.verde li{border-color:rgba(255,255,255,.2)}
+  .col.verde li small{color:#bfe0c5}
+  @media (max-width:880px){.colunas{grid-template-columns:1fr}}
+
+  /* Balcão */
+  .balcao{background:#fff;border-top:2px solid var(--fio);border-bottom:2px solid var(--fio)}
+  .balcao .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:46px;align-items:center}
+  .balcao img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px}
+  .falas{display:grid;gap:14px;margin-top:8px}
+  .falas blockquote{margin:0;background:var(--palha);border-radius:18px;padding:18px 20px;font-weight:700}
+  .falas cite{display:block;margin-top:6px;font-style:normal;font-weight:700;font-size:.875rem;color:var(--coco)}
+  @media (max-width:880px){.balcao .wrap{grid-template-columns:1fr}.balcao img{aspect-ratio:4/3}}
+
+  /* Visite */
+  .visite{background:var(--milho)}
+  .visite .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+  .visite .tit small{color:var(--folha-2)}
+  .visite .fach{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:20px;margin-bottom:20px}
+  .horas{width:100%;border-collapse:collapse;margin-bottom:16px}
+  .horas td{padding:9px 0;border-bottom:1px solid rgba(0,0,0,.14)}
+  .horas td:last-child{text-align:right;font-weight:800}
+  .horas tr.hoje td{color:var(--folha-2);font-weight:800}
+  .end{margin:0 0 20px}
+  .mapa{border-radius:20px;overflow:hidden;min-height:400px;background:var(--milho-2)}
+  .mapa iframe{width:100%;height:100%;min-height:400px;border:0;display:block}
+  @media (max-width:880px){.visite .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:var(--folha-2);color:#c7e1cb;padding:24px 0 100px;font-size:.875rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--milho);font-weight:800;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 12px 26px -10px rgba(0,0,0,.45);transition:opacity .3s,transform .3s}
+  .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
+  @media (min-width:861px){footer{padding-bottom:24px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial da Coco Doce. É uma ideia de site montada por Lucas para apresentar à loja.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20da%20Coco%20Doce%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Coco Doce, início"><span class="bola"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M13 23c-4 0-6-5-6-11S9 3 13 3s6 3 6 9-2 11-6 11Z"/><path d="M10 8h6M9.5 12h7M10 16h6"/></svg></span><b>Coco Doce</b></a>
+    <nav aria-label="Seções">
+      <a href="#cardapio">O que tem</a>
+      <a href="#balcao">O balcão</a>
+      <a href="#visite">Visite</a>
+    </nav>
+    <a class="btn milho peq" href="https://www.google.com/maps/dir/?api=1&amp;destination=Coco+Doce,+Av.+S%C3%A3o+Jos%C3%A9+dos+Campos,+1423,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="tag">4,9 ★ · 297 avaliações no Google</span>
+        <h1 id="titulo">Pastel sequinho e <span>pamonha de verdade.</span></h1>
+        <p>Pastéis, pamonha, curau e outros derivados do milho, caldo de cana e água de coco gelada no Jardim Nova Europa. Tudo feito com carinho, de segunda a sábado.</p>
+        <div class="acoes">
+          <a class="btn folha" href="https://www.google.com/maps/dir/?api=1&amp;destination=Coco+Doce,+Av.+S%C3%A3o+Jos%C3%A9+dos+Campos,+1423,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn linha" href="#cardapio">Ver o que tem</a>
+        </div>
+        <p class="status" id="status"><i aria-hidden="true"></i><span id="status-t">Segunda a sábado, das 9h às 18h</span></p>
+      </div>
+      <div class="trio">
+        <img src="fotos/ig-pamonha.jpg" alt="Pamonhas abertas na palha com recheio" width="410" height="410">
+        <img src="fotos/coco.jpg" alt="Coco verde gelado com canudo na mão de uma cliente" width="675" height="1200">
+        <img src="fotos/ig-pamonhas.jpg" alt="Mesa com pamonhas na palha, curau, sucos e bolos para levar" width="583" height="640">
+      </div>
+    </div>
+  </section>
+
+  <section id="cardapio" aria-labelledby="t-card">
+    <div class="wrap">
+      <div class="tit"><small>O que tem</small><h2 id="t-card">Do milho, do coco e da cana</h2><p>As palavras que mais aparecem nas avaliações são pamonha, água de coco e caldo de cana.</p></div>
+      <div class="colunas">
+        <div class="col"><h3><span aria-hidden="true">🌽</span>Do milho</h3><ul><li>Pamonha<small>A mais elogiada da casa</small></li><li>Curau<small>Cremoso, de colher</small></li><li>Suco de milho<small>"Delicioso", segundo os clientes</small></li><li>Outros derivados<small>Bolos e doces de milho</small></li></ul></div>
+        <div class="col verde"><h3><span aria-hidden="true">🥟</span>Pastéis</h3><ul><li>Pastel sequinho<small>Frito na hora</small></li><li>Pastel de queijo<small>Opção vegetariana</small></li><li>Outros sabores<small>Pergunte no balcão</small></li><li>Para levar<small>Retirada e delivery</small></li></ul></div>
+        <div class="col"><h3><span aria-hidden="true">🥥</span>Para beber</h3><ul><li>Água de coco<small>Gelada, no próprio coco</small></li><li>Caldo de cana<small>"O melhor da região", disse uma cliente</small></li><li>Cafezinho<small>Para acompanhar</small></li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="balcao" id="balcao" aria-labelledby="t-balcao">
+    <div class="wrap">
+      <img src="fotos/balcao.jpg" alt="Balcão da Coco Doce com azulejo vermelho e potes de doces" loading="lazy" width="900" height="1200">
+      <div>
+        <div class="tit" style="margin-bottom:14px"><small>O balcão</small><h2 id="t-balcao">Pequeno, limpo e com gente gentil</h2><p>Um lugar tranquilo para uma pausa rápida, sozinho ou com a família.</p></div>
+        <div class="falas">
+          <blockquote>O caldo de cana é o melhor que já tomei na região! Pastel sequinho e gostoso! Tem água de coco, pamonha, curau e até um cafezinho.<cite>Silvania · Google</cite></blockquote>
+          <blockquote>Ótimo atendimento, pastel maravilhoso, lugar limpo e preços justos!<cite>Resumo das avaliações · Google</cite></blockquote>
+          <blockquote>Pastel gostoso, pamonhas maravilhosas e água de coco gelada! Além de um atendimento sempre atencioso.<cite>Avaliação no Google</cite></blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visite" id="visite" aria-labelledby="t-visite">
+    <div class="wrap">
+      <div>
+        <img class="fach" src="fotos/fachada.jpg" alt="Fachada da Coco Doce com o letreiro verde: pastéis, pamonha, curau e derivados do milho" loading="lazy" width="1200" height="675">
+        <div class="tit" style="margin-bottom:16px"><small>Visite</small><h2 id="t-visite">Av. São José dos Campos, 1423</h2></div>
+        <table class="horas" id="horas">
+          <tr data-d="semana"><td>Segunda a sábado</td><td>9h às 18h</td></tr>
+          <tr data-d="0"><td>Domingo</td><td>Fechado</td></tr>
+        </table>
+        <p class="end">Jardim Nova Europa, Campinas (SP)<br>Peça pelo <a href="https://www.instagram.com/coco__doce/" target="_blank" rel="noopener" style="font-weight:800">Instagram @coco__doce</a> ou passe no balcão.</p>
+        <div class="acoes">
+          <a class="btn folha" href="https://www.google.com/maps/dir/?api=1&amp;destination=Coco+Doce,+Av.+S%C3%A3o+Jos%C3%A9+dos+Campos,+1423,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn linha" href="https://www.instagram.com/coco__doce/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Coco Doce, Av. São José dos Campos, 1423, Campinas" src="https://www.google.com/maps?q=Coco+Doce,+Av.+S%C3%A3o+Jos%C3%A9+dos+Campos,+1423+-+Jardim+Nova+Europa,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Coco Doce · Jardim Nova Europa, Campinas</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn folha fixo some" href="https://www.google.com/maps/dir/?api=1&amp;destination=Coco+Doce,+Av.+S%C3%A3o+Jos%C3%A9+dos+Campos,+1423,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+
+<script>
+(function () {
+  try {
+    var p = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+    var g = function(t){return (p.find(function(x){return x.type===t})||{}).value};
+    var d = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"));
+    var h = (parseInt(g("hour"),10)%24) + parseInt(g("minute"),10)/60;
+    var tr = document.querySelector('#horas tr[data-d="' + (d===0 ? 0 : "semana") + '"]'); if (tr) tr.classList.add("hoje");
+    var s = document.getElementById("status"), t = document.getElementById("status-t");
+    if (d===0) t.textContent = "Domingo fechado · abre segunda às 9h";
+    else if (h>=9 && h<18) { s.classList.add("on"); t.textContent = "Aberto agora, até as 18h"; }
+    else if (h<9) t.textContent = "Abre hoje às 9h";
+    else t.textContent = d===6 ? "Fechado agora · abre segunda às 9h" : "Fechado agora · abre amanhã às 9h";
+  } catch (e) {}
+  var f = document.querySelector(".fixo"), t2 = document.querySelector(".hero");
+  if (f && t2 && "IntersectionObserver" in window) new IntersectionObserver(function(e){f.classList.toggle("some", e[0].isIntersecting)}).observe(t2);
+})();
+</script>
+</body>
+</html>
