@@ -30,3 +30,12 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 > Oi, tudo bem? Sou o Lucas, faço sites aqui em Campinas. A Tropical é um clássico da rotatória da Unicamp e quase mil pessoas avaliaram vocês no Google, mas quem procura não acha um site. Montei uma ideia de como ele poderia ser: https://feitopelolucas.com.br/previa/tropical/
 > Ele mostra a promoção do dia sozinho (sexta do pastel, sábado do açaí), tem o cardápio, o horário de quem abre antes do sol e o botão de delivery. Se curtirem, me chama!
 
+---
+
+## 4. Pet Oliveira 1 · /previa/petoliveira/
+
+**Pelo que vi:** só Instagram (ativo, 3,2 mil seguidores). A bio fala em banho e tosa monitorado, veterinário, loja e 19 anos de experiência. WhatsApp (19) 99461-8071. Monta um cenário temático a cada data (Halloween, Natal). Tem um post de agenda de fim de ano. Há cliente que fala em 13 anos de casa.
+
+> Oi, pessoal do Pet Oliveira! Sou o Lucas, faço sites aqui em Campinas. Vocês têm 19 anos de história e mais de 600 avaliações no Google, mas não têm um site. Então montei uma ideia: https://feitopelolucas.com.br/previa/petoliveira/
+> Ele junta banho e tosa, veterinário e loja numa página, com agendamento pelo WhatsApp, aviso da agenda de fim de ano e uma passarela com os pets dos cenários temáticos. Se gostarem, a gente conversa!
+
