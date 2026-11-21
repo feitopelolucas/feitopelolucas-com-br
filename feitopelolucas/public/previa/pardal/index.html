@@ -47,7 +47,7 @@
   .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
   .logo svg{width:40px;height:40px}
   .logo b{font:400 1.5rem/1 "Young Serif",serif;color:var(--cereja)}
-  .logo small{display:block;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cafe-2);font-weight:700;margin-top:3px}
+  .logo small{display:block;font-size:.8125rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cafe-2);font-weight:700;margin-top:3px}
   .barra nav{display:flex;gap:24px;font-weight:600;font-size:.95rem}
   .barra nav a{text-decoration:none;color:var(--cafe-2)}
   .barra nav a:hover{color:var(--cereja)}
@@ -108,7 +108,7 @@
   .forno h3{font-size:1.35rem;margin-bottom:4px}
   .forno p{margin:0;color:var(--cafe-2);font-size:.95rem}
   @media (max-width:900px){.forno{grid-template-columns:1fr 1fr}}
-  @media (max-width:560px){.forno{grid-template-columns:1fr}}
+  @media (max-width:560px){.forno{gap:12px}.forno article{border-radius:16px}.forno div{padding:12px 12px 14px}.forno h3{font-size:1.08rem}.forno p{font-size:.875rem;line-height:1.45}}
 
   /* Kits */
   .kits{background:var(--cereja);color:#fff;position:relative;overflow:hidden}
@@ -143,6 +143,7 @@
   .visita{background:var(--leite)}
   .visita .wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px}
   .cartao{background:#fff;border-radius:24px;padding:30px;border:1px solid var(--fio)}
+  .cartao .fachada{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:16px;margin-bottom:22px}
   .horas{width:100%;border-collapse:collapse;margin:8px 0 14px}
   .horas td{padding:10px 0;border-bottom:1px dashed var(--fio)}
   .horas td:last-child{text-align:right;font-weight:700}
@@ -153,7 +154,7 @@
   .agora.sim::before{background:#2c9c58;box-shadow:0 0 0 4px rgba(44,156,88,.2)}
   .contato{list-style:none;padding:0;margin:10px 0 24px}
   .contato li{padding:10px 0;border-bottom:1px dashed var(--fio)}
-  .contato small{display:block;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cafe-2);font-weight:700}
+  .contato small{display:block;font-size:.8125rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cafe-2);font-weight:700}
   .contato a{font-weight:700;text-decoration:none}
   .mapa{grid-column:1/-1;border-radius:24px;overflow:hidden;border:1px solid var(--fio)}
   .mapa iframe{width:100%;height:360px;border:0;display:block}
@@ -233,7 +234,7 @@
         </ul>
       </div>
       <div class="lado">
-        <img src="fotos/salao.jpg" alt="Salão da Pardal com mesas de madeira, flores e parede de pastilhas" loading="lazy" width="1100" height="1466">
+        <img src="fotos/salao.jpg" alt="Salão da Pardal com mesas de madeira, flores e parede de pastilhas" loading="lazy" width="1050" height="1400">
         <img src="fotos/mesa-cafe.jpg" alt="Mesa com cappuccino, pão de queijo e pão na chapa" loading="lazy" width="1100" height="1466">
       </div>
     </div>
@@ -315,6 +316,7 @@
         <small style="color:var(--cafe-2)">Feriados podem ter horário diferente. Na dúvida, chame no WhatsApp.</small>
       </div>
       <div class="cartao">
+        <img class="fachada" src="fotos/fachada.jpg" alt="Fachada da Pardal Panificadora à noite, com o letreiro e o cordão de luzes acesos" loading="lazy" width="1400" height="940">
         <h2 style="font-size:2rem">Venha tomar um café</h2>
         <ul class="contato">
           <li><small>Endereço</small>R. Lorena, 60 · Vila Pompéia, Campinas (SP)</li>
