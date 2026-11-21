@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bar Santa Genebra · Boteco raiz desde 1976 em Barão Geraldo</title>
+<meta name="description" content="Prévia de site para o Bar Santa Genebra, boteco raiz em Barão Geraldo, Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/santagenebra/">
+<meta property="og:title" content="Prévia de site · Bar Santa Genebra">
+<meta property="og:description" content="Boteco raiz desde 1976: feijoada, rabada, costela e happy hour. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/santagenebra/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1f4d3a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bevan&family=Caveat:wght@600;700&family=Karla:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--verde:#1f4d3a;--verde-2:#173b2c;--verm:#b3261e;--verm-2:#8f1d17;--creme:#f6efe2;--creme-2:#efe4cf;--mostarda:#e8b23a;--tinta:#2a1d17;--tinta-2:#5e4d43;--fio:#e0d2b8;--giz:#2b2f2a}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--creme);color:var(--tinta);font:17px/1.6 "Karla",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Bevan",Georgia,serif;font-weight:400;line-height:1.08;margin:0}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--mostarda);outline-offset:3px}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  .wrap>*{min-width:0}
+
+  .previa{background:var(--tinta);color:#cdbfb3;font-size:.8125rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--mostarda);font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .topo{background:var(--verde);color:#fff;border-bottom:5px solid var(--verm)}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:76px}
+  .marca{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .marca .oval{width:54px;height:40px;border-radius:50%;border:2px solid var(--mostarda);display:grid;place-items:center;font:400 .8125rem "Bevan",serif;color:var(--mostarda);flex:none}
+  .marca b{font:400 1.25rem/1 "Bevan",serif;display:block}
+  .marca small{font-size:.8125rem;color:#cfe0d6;letter-spacing:.12em;text-transform:uppercase}
+  .topo nav{display:flex;gap:22px;font-weight:700}
+  .topo nav a{text-decoration:none;color:#dfeae3}
+  .topo nav a:hover{color:var(--mostarda)}
+  @media (max-width:860px){.topo nav{display:none}}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:12px 22px;border-radius:8px;font-weight:800;text-decoration:none;font-size:1rem;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn.verm{background:var(--verm);color:#fff}
+  .btn.verm:hover{background:var(--verm-2)}
+  .btn.mostarda{background:var(--mostarda);color:var(--tinta)}
+  .btn.linha{border:2px solid currentColor;color:inherit}
+  .btn.peq{min-height:44px;padding:8px 16px;font-size:.94rem}
+
+  /* Abertura */
+  .hero{background:var(--verde);color:#e7efe9;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 60px,rgba(255,255,255,.025) 60px 61px);pointer-events:none}
+  .hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding-top:56px;padding-bottom:70px}
+  .selo50{display:inline-flex;align-items:center;gap:12px;background:var(--creme);color:var(--verm);border-radius:999px;padding:6px 16px 6px 6px;font-weight:800}
+  .selo50 span{background:var(--verm);color:#fff;border-radius:50%;width:44px;height:44px;display:grid;place-items:center;font:400 1rem "Bevan",serif}
+  .hero h1{font-size:clamp(2.4rem,5.6vw,4.3rem);color:#fff;margin:22px 0 16px}
+  .hero h1 em{font-style:normal;color:var(--mostarda)}
+  .hero p{font-size:1.14rem;max-width:31em;margin:0 0 26px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .hh{margin-top:26px;display:inline-flex;align-items:center;gap:12px;background:rgba(0,0,0,.22);border:1px dashed rgba(255,255,255,.3);border-radius:10px;padding:12px 16px;font-weight:700}
+  .hh i{width:12px;height:12px;border-radius:50%;background:#8aa596;flex:none}
+  .hh.on i{background:var(--mostarda);box-shadow:0 0 0 6px rgba(232,178,58,.25)}
+  .hh small{display:block;font-weight:500;color:#b9cdc1}
+  .fotos-hero{position:relative;height:500px}
+  .fotos-hero img{position:absolute;object-fit:cover;border:8px solid var(--creme);box-shadow:0 26px 50px -24px rgba(0,0,0,.7)}
+  .fotos-hero .f1{left:0;top:0;width:78%;height:66%}
+  .fotos-hero .f2{right:0;bottom:0;width:52%;height:58%;transform:rotate(2.5deg)}
+  .fotos-hero .placa{position:absolute;left:8%;bottom:6%;background:var(--verm);color:#fff;font:400 1.05rem/1.25 "Bevan",serif;padding:14px 18px;transform:rotate(-3deg);box-shadow:0 14px 30px -14px rgba(0,0,0,.6)}
+  @media (max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:36px}.fotos-hero{height:400px}}
+  @media (max-width:480px){.fotos-hero{height:330px}}
+
+  .azulejo{height:22px;background:conic-gradient(from 45deg,var(--verm) 25%,var(--creme) 0 50%,var(--verm) 0 75%,var(--creme) 0) 0 0/22px 22px}
+
+  section{padding:84px 0}
+  .tit{max-width:640px;margin-bottom:36px}
+  .tit small{font-weight:800;color:var(--verm);letter-spacing:.16em;text-transform:uppercase;font-size:.8125rem}
+  .tit h2{font-size:clamp(1.9rem,4.4vw,2.9rem);margin-top:8px}
+  .tit p{color:var(--tinta-2);margin:12px 0 0}
+
+  /* Quadro de giz */
+  .cozinha .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:start}
+  .quadro{background:var(--giz);color:#f1efe6;border:14px solid #7a5232;border-radius:6px;padding:30px 30px 26px;box-shadow:inset 0 0 60px rgba(0,0,0,.45),0 24px 40px -26px rgba(0,0,0,.6)}
+  .quadro h3{font:700 2.2rem/1 "Caveat",cursive;color:var(--mostarda);margin-bottom:8px}
+  .quadro ul{list-style:none;margin:0 0 18px;padding:0}
+  .quadro li{font:600 1.45rem/1.3 "Caveat",cursive;padding:5px 0;border-bottom:1px dashed rgba(255,255,255,.18)}
+  .quadro li span{display:block;font:500 .9rem "Karla",sans-serif;color:#c8c5ba}
+  .quadro .nota{font:600 1.25rem "Caveat",cursive;color:#e7d7b8}
+  .pratos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .pratos figure{margin:0;background:#fff;border:1px solid var(--fio);padding:8px 8px 12px}
+  .pratos img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .pratos figcaption{font-weight:800;margin-top:8px;font-size:.95rem}
+  .pratos figcaption span{display:block;font-weight:500;color:var(--tinta-2);font-size:.875rem}
+  @media (max-width:900px){.cozinha .wrap{grid-template-columns:1fr}}
+  @media (max-width:420px){.quadro{padding:22px 18px;border-width:10px}}
+
+  /* Horários do dia */
+  .dia{background:var(--verm);color:#fff}
+  .dia .tit small{color:var(--mostarda)}
+  .linhas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .linha{background:rgba(0,0,0,.16);border-radius:12px;padding:24px}
+  .linha b{font:400 1.5rem "Bevan",serif;display:block;margin-bottom:6px}
+  .linha p{margin:0;color:#ffe4df}
+  .linha .h{display:inline-block;margin-top:12px;background:var(--creme);color:var(--verm);font-weight:800;border-radius:6px;padding:4px 10px}
+  @media (max-width:860px){.linhas{grid-template-columns:1fr}}
+
+  /* Casa */
+  .casa .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:46px;align-items:center}
+  .mosaico{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .mosaico img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4}
+  .itens{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .itens li{background:#fff;border:1px solid var(--fio);border-left:5px solid var(--verde);padding:14px 16px;font-weight:700}
+  .itens li span{display:block;font-weight:500;color:var(--tinta-2);font-size:.92rem}
+  @media (max-width:900px){.casa .wrap{grid-template-columns:1fr}}
+  @media (max-width:480px){.itens{grid-template-columns:1fr}}
+
+  /* Avaliações */
+  .aval{background:var(--creme-2)}
+  .falas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .falas blockquote{margin:0;background:#fff;border:1px solid var(--fio);padding:26px 24px;position:relative}
+  .falas blockquote::before{content:"“";position:absolute;top:-8px;left:18px;font:400 4rem/1 "Bevan",serif;color:var(--verm)}
+  .falas p{margin:18px 0 0}
+  .falas cite{display:block;margin-top:14px;font-style:normal;font-weight:800;font-size:.875rem;color:var(--verde)}
+  @media (max-width:880px){.falas{grid-template-columns:1fr}}
+
+  /* Onde */
+  .onde{background:var(--verde);color:#dfeae3}
+  .onde .tit h2{color:#fff}
+  .onde .tit small{color:var(--mostarda)}
+  .onde .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+  .horas{width:100%;border-collapse:collapse;margin-bottom:20px}
+  .horas td{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+  .horas td:last-child{text-align:right;font-weight:800;color:#fff}
+  .horas tr.hoje td{color:var(--mostarda)}
+  .end{margin:0 0 20px}
+  .end b{color:#fff}
+  .mapa{border-radius:10px;overflow:hidden;min-height:420px;background:#163a2b}
+  .mapa iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+  @media (max-width:880px){.onde .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:var(--tinta);color:#b9a99c;padding:24px 0 100px;font-size:.875rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--mostarda);font-weight:700;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 12px 26px -10px rgba(0,0,0,.6);transition:opacity .3s,transform .3s}
+  .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
+  @media (min-width:861px){footer{padding-bottom:24px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial do Bar Santa Genebra. É uma ideia de site montada por Lucas para apresentar ao bar.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20do%20Bar%20Santa%20Genebra%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Bar Santa Genebra, início"><span class="oval" aria-hidden="true">BSG</span><span><b>Santa Genebra</b><small>Bar raiz · desde 76</small></span></a>
+    <nav aria-label="Seções">
+      <a href="#cozinha">Cozinha</a>
+      <a href="#dia">Almoço e happy hour</a>
+      <a href="#casa">A casa</a>
+      <a href="#onde">Onde fica</a>
+    </nav>
+    <a class="btn mostarda peq zap" href="https://wa.me/5519996126459?text=Ol%C3%A1%21%20Quero%20fazer%20uma%20reserva%20no%20Bar%20Santa%20Genebra.">Reservar</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="selo50"><span>50</span>anos de Barão Geraldo</span>
+        <h1 id="titulo">Feijoada, rabada e <em>cerveja gelada</em> do jeito de 1976.</h1>
+        <p>Boteco raiz no Jardim Santa Genebra, com almoço caseiro todo dia, costela com mandioca, porções de boteco, cachaças e um happy hour de segunda a sexta. Tem varanda, estacionamento grátis e o pet pode vir junto.</p>
+        <div class="acoes">
+          <a class="btn verm zap" href="https://wa.me/5519996126459?text=Ol%C3%A1%21%20Quero%20fazer%20uma%20reserva%20no%20Bar%20Santa%20Genebra."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>Reservar mesa</a>
+          <a class="btn linha" href="#cozinha">Ver a cozinha</a>
+        </div>
+        <div class="hh" id="hh"><i aria-hidden="true"></i><span id="hh-t">Happy hour de segunda a sexta<small>das 16h30 às 19h30</small></span></div>
+      </div>
+      <div class="fotos-hero">
+        <img class="f1" src="fotos/fachada.jpg" alt="Fachada do Bar Santa Genebra à noite, com o letreiro oval e o balcão vermelho" width="1032" height="774">
+        <img class="f2" src="fotos/varanda.jpg" alt="Varanda do bar à noite, com mesas vermelhas e o letreiro iluminado" width="900" height="1200">
+        <div class="placa">Desde 76,<br>do mesmo jeito.</div>
+      </div>
+    </div>
+  </section>
+  <div class="azulejo" aria-hidden="true"></div>
+
+  <section class="cozinha" id="cozinha" aria-labelledby="t-coz">
+    <div class="wrap">
+      <div>
+        <div class="tit"><small>Da cozinha</small><h2 id="t-coz">O que o pessoal vem buscar</h2><p>Comida de boteco feita com tempero de casa. O cardápio completo e o prato do dia ficam no balcão e no Instagram.</p></div>
+        <div class="quadro">
+          <h3>Pratos da casa</h3>
+          <ul>
+            <li>Feijoada completa<span>Para dividir, como a casa gosta</span></li>
+            <li>Rabada<span>Uma das mais pedidas</span></li>
+            <li>Costela com mandioca<span>"De cortar com colher", diz quem provou</span></li>
+            <li>Joelho de porco<span>Para a mesa toda</span></li>
+            <li>PF com picanha<span>O tradicional prato feito</span></li>
+          </ul>
+          <h3>Pra beliscar</h3>
+          <ul>
+            <li>Bolinho de bacalhau e croquete de costela</li>
+            <li>Torresmo, porpeta e carne seca</li>
+            <li>Caldo de mocotó com torradas</li>
+          </ul>
+          <p class="nota">+ cachaças e caipirinhas da casa</p>
+        </div>
+      </div>
+      <div class="pratos">
+        <figure><img src="fotos/pf.jpg" alt="Prato feito com arroz, couve, banana e carne" loading="lazy" width="554" height="1200"><figcaption>Almoço caseiro<span>Todo dia, até no domingo</span></figcaption></figure>
+        <figure><img src="fotos/porcao.jpg" alt="Porção de petisco frito com limão" loading="lazy" width="900" height="1200"><figcaption>Porções<span>Para dividir na mesa</span></figcaption></figure>
+        <figure><img src="fotos/caipirinha.jpg" alt="Caipirinha com limão e frutas no copo alto" loading="lazy" width="900" height="1200"><figcaption>Caipirinhas<span>A de caju vai com rapadura</span></figcaption></figure>
+        <figure><img src="fotos/caldo.jpg" alt="Caldo com bolinhos" loading="lazy" width="900" height="1200"><figcaption>Caldos<span>Quentinho, com pimenta à parte</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="dia" id="dia" aria-labelledby="t-dia">
+    <div class="wrap">
+      <div class="tit"><small>O dia no Santa Genebra</small><h2 id="t-dia">Do café ao último copo</h2></div>
+      <div class="linhas">
+        <div class="linha"><b>Bar</b><p>Abre cedo e fecha tarde, de segunda a sábado. No domingo vai até o fim da tarde.</p><span class="h">8h às 22h · dom até 17h</span></div>
+        <div class="linha"><b>Almoço</b><p>Comida caseira com tempero elogiado, PF, feijoada e prato do dia.</p><span class="h">10h às 21h30 · dom até 16h30</span></div>
+        <div class="linha"><b>Happy hour</b><p>Cardápio especial de petiscos e promoção de caipirinha, de segunda a sexta.</p><span class="h">16h30 às 19h30</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="casa" id="casa" aria-labelledby="t-casa">
+    <div class="wrap">
+      <div class="mosaico">
+        <img src="fotos/salao.jpg" alt="Salão com bandeirinhas de festa e o balcão ao fundo" loading="lazy" width="676" height="1200">
+        <img src="fotos/mercearia.jpg" alt="Balcão da mercearia com prateleiras de bebidas e a bandeira do Brasil" loading="lazy" width="900" height="1200">
+      </div>
+      <div>
+        <div class="tit" style="margin-bottom:10px"><small>A casa</small><h2 id="t-casa">Bar e mercearia de bairro, há meio século</h2></div>
+        <p>Balcão com prateleira de cachaça, bandeirinhas no teto e mesas na varanda. É o tipo de lugar onde dá para conversar sem gritar, levar a família e chegar com o cachorro.</p>
+        <ul class="itens">
+          <li>Estacionamento grátis<span>Vagas na frente e na rua</span></li>
+          <li>Pet friendly<span>O cachorro é bem-vindo</span></li>
+          <li>Aniversários<span>Reserve a mesa pelo WhatsApp</span></li>
+          <li>Todos são bem-vindos<span>Casa que acolhe a comunidade LGBTQIA+</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="aval" aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="tit"><small>4,6 · 1.729 avaliações no Google</small><h2 id="t-aval">Quem senta, volta</h2></div>
+      <div class="falas">
+        <blockquote><p>O grande destaque foi o bolinho de bacalhau, tanto que acabamos pedindo outra porção. A caipirinha de caju com rapadura foi a melhor da noite.</p><cite>Vini · Google</cite></blockquote>
+        <blockquote><p>Ótimo lugar para uma comida caseira. O tempero da comida é, realmente, muito bom. O tempero da salada é incrível.</p><cite>Italo · Google</cite></blockquote>
+        <blockquote><p>Pensa num lugar completo: localização perfeita, comida deliciosa, bem frequentado e com um atendimento classe A.</p><cite>Vander · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:18px"><small>Onde fica</small><h2 id="t-onde">Em Barão Geraldo</h2></div>
+        <table class="horas" id="horas">
+          <tr data-d="1"><td>Segunda</td><td>8h às 22h</td></tr>
+          <tr data-d="2"><td>Terça</td><td>8h às 22h</td></tr>
+          <tr data-d="3"><td>Quarta</td><td>8h às 22h</td></tr>
+          <tr data-d="4"><td>Quinta</td><td>8h às 22h</td></tr>
+          <tr data-d="5"><td>Sexta</td><td>8h às 22h</td></tr>
+          <tr data-d="6"><td>Sábado</td><td>8h às 22h</td></tr>
+          <tr data-d="0"><td>Domingo</td><td>8h às 17h</td></tr>
+        </table>
+        <p class="end"><b>Rua Angelo Vicentim, 736</b> · Jardim Santa Genebra, Campinas (SP)<br>WhatsApp <a href="https://wa.me/5519996126459" class="zap" style="color:#fff;font-weight:800">(19) 99612-6459</a> · <a href="https://www.instagram.com/santagenebrabar/" target="_blank" rel="noopener" style="color:#fff;font-weight:800">@santagenebrabar</a></p>
+        <div class="acoes">
+          <a class="btn mostarda" href="https://www.google.com/maps/dir/?api=1&amp;destination=Bar+Santa+Genebra,+Rua+Angelo+Vicentim,+736,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn linha zap" href="https://wa.me/5519996126459?text=Ol%C3%A1%21%20Quero%20fazer%20uma%20reserva%20no%20Bar%20Santa%20Genebra.">Reservar mesa</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Bar Santa Genebra, Rua Angelo Vicentim, 736, Campinas" src="https://www.google.com/maps?q=Bar+Santa+Genebra,+Rua+Angelo+Vicentim,+736+-+Jardim+Santa+Genebra,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Bar Santa Genebra · Barão Geraldo, Campinas · desde 1976</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn verm fixo some zap" href="https://wa.me/5519996126459?text=Ol%C3%A1%21%20Quero%20fazer%20uma%20reserva%20no%20Bar%20Santa%20Genebra." aria-label="Reservar pelo WhatsApp">Reservar</a>
+
+<script>
+(function () {
+  document.querySelectorAll(".zap").forEach(function(a){a.target="_blank";a.rel="noopener";});
+  try {
+    var p = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+    var g = function(t){return (p.find(function(x){return x.type===t})||{}).value};
+    var d = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"));
+    var h = (parseInt(g("hour"),10)%24) + parseInt(g("minute"),10)/60;
+    var tr = document.querySelector('#horas tr[data-d="'+d+'"]'); if (tr) tr.classList.add("hoje");
+    if (d>=1 && d<=5) {
+      var hh = document.getElementById("hh"), t = document.getElementById("hh-t");
+      if (h>=16.5 && h<19.5) { hh.classList.add("on"); t.innerHTML = "Happy hour rolando agora<small>até as 19h30</small>"; }
+      else if (h<16.5) t.innerHTML = "Happy hour hoje<small>das 16h30 às 19h30</small>";
+    }
+  } catch (e) {}
+  var f = document.querySelector(".fixo"), t2 = document.querySelector(".hero");
+  if (f && t2 && "IntersectionObserver" in window) new IntersectionObserver(function(e){f.classList.toggle("some", e[0].isIntersecting)}).observe(t2);
+})();
+</script>
+</body>
+</html>
