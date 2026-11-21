@@ -147,3 +147,12 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 > Oi, Lucélia! Sou o Lucas, faço sites aqui em Campinas. O Expresso Divas tem nota 5,0 com mais de 200 avaliações (isso é raríssimo!) e ainda não tem site. Montei uma ideia com a cara do studio, com o verde da fachada: https://feitopelolucas.com.br/previa/expressodivas/
 > Tem os serviços com fotos de vocês, uma parte só para o curso de extensão de cílios (para captar alunas), as avaliações e o agendamento pelo WhatsApp. Se gostar, a gente conversa!
 
+---
+
+## 17. Aqui o Bicho Pega · /previa/aquiobichopega/
+
+**Pelo que vi:** só Instagram (2,5 mil seguidores) e um linktree. Fazem entrega. Os donos são o Cláudio e a Karina, e uma avaliação conta que eles **avisam quando a ração do pet está acabando** (o "cadastro do pet"). Usei isso como ideia central do site, com uma calculadora de quanto tempo dura o pacote e um botão que pede o lembrete pelo WhatsApp. Atendem cães, gatos, aves, coelhos e roedores. Abrem até domingo de manhã. No Google aparecem dois WhatsApp: (19) 99529-9529, da bio e do Google, e (19) 99168-7977, do botão. Usei o primeiro.
+
+> Oi, Cláudio e Karina! Sou o Lucas, faço sites aqui em Campinas. Li no Google que vocês avisam o cliente quando a ração do pet está acabando. Isso é ouro e merece estar num site! Montei uma ideia: https://feitopelolucas.com.br/previa/aquiobichopega/
+> Tem uma calculadora em que o cliente coloca o pacote e quanto o pet come, vê quando vai acabar e já pede para vocês lembrarem pelo WhatsApp. Também tem entrega, os bichos que vocês atendem e os horários. Se gostarem, a gente conversa!
+
