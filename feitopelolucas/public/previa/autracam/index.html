@@ -280,7 +280,7 @@
   if (["Mon","Tue","Wed","Thu","Fri"].indexOf(dia) > -1) {
     if ((m >= 450 && m < 690) || (m >= 780 && m < 1080)) { st.classList.add("on"); txt.textContent = "Aberto agora"; }
     else if (m >= 690 && m < 780) txt.textContent = "Almoço · volta às 13h";
-    else txt.textContent = m < 450 ? "Abre às 7h30" : "Fechado · abre amanhã";
+    else txt.textContent = m < 450 ? "Abre às 7h30" : (dia === "Fri" ? "Fechado · abre segunda" : "Fechado · abre amanhã às 7h30");
   } else txt.textContent = "Fechado · abre segunda";
 
   var env = document.getElementById("env"); env.target = "_blank"; env.rel = "noopener";

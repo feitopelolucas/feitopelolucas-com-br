@@ -178,6 +178,8 @@
   @media (min-width:901px){footer{padding-bottom:26px}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
   .previa a{display:inline-flex;align-items:center;min-height:32px}
+  /* aro claro: botão flutuante não some sobre o rodapé escuro */
+  .btn.fixo{box-shadow:0 0 0 2px rgba(255,255,255,.92),0 14px 28px -12px rgba(20,38,27,.7)}
 </style>
 </head>
 <body>
@@ -277,10 +279,7 @@
       <div class="tela" aria-hidden="true">
         <div class="topo-tela"><span>Sala de banho</span><span class="rec">monitorado</span></div>
         <div class="grade">
-          <img src="fotos/shih-tzu-2.jpg" alt="Shih tzu depois do banho e tosa" width="900" height="882">
-          <img src="fotos/cocker.jpg" alt="Cocker spaniel depois da tosa" width="640" height="640">
-          <img src="fotos/lulu.jpg" alt="Lulu da pomerânia tosado" width="480" height="640">
-          <img src="fotos/jack.jpg" alt="Jack russell depois do banho" width="480" height="640">
+          <img src="fotos/shih-tzu-2.jpg" alt="Shih tzu depois do banho e tosa" width="900" height="882" style="grid-column:1/-1;aspect-ratio:4/3.4">
         </div>
       </div>
       <div>
@@ -311,8 +310,6 @@
         <figure><img src="fotos/lulu.jpg" alt="Lulu da Pomerânia com gravata laranja no cenário de Halloween" loading="lazy" width="480" height="640"><figcaption>Lulu de gravata<span>Banho e acabamento</span></figcaption></figure>
         <figure><img src="fotos/cocker.jpg" alt="Cocker caramelo com gravata no cenário de Halloween" loading="lazy" width="640" height="640"><figcaption>Cocker escovado<span>Banho e escova</span></figcaption></figure>
         <figure><img src="fotos/jack.jpg" alt="Jack Russell com bandana vermelha" loading="lazy" width="480" height="640"><figcaption>Bandana nova<span>Banho tomado</span></figcaption></figure>
-        <figure><img src="fotos/spitz.jpg" alt="Lulu branco com gravata rosa" loading="lazy" width="900" height="1200"><figcaption>Branquinho<span>Banho e tosa</span></figcaption></figure>
-        <figure><img src="fotos/shih-tzu-2.jpg" alt="Shih-tzu bege com laço azul" loading="lazy" width="900" height="882"><figcaption>Fofura<span>Tosa bebê</span></figcaption></figure>
       </div>
       <p class="dica">Mais fotos no Instagram <a href="https://www.instagram.com/petoliveira1/" target="_blank" rel="noopener" style="color:var(--lima);font-weight:800">@petoliveira1</a></p>
     </div>
