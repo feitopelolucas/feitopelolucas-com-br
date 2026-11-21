@@ -120,3 +120,12 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 > Oi, pessoal do Jah do Campinas Shopping! Sou o Lucas, faço sites aqui em Campinas. Sei que vocês são franquia, então montei uma ideia de página só da unidade de vocês, para quem procura no Google "açaí sem açúcar" ou "sem lactose" perto do shopping: https://feitopelolucas.com.br/previa/jahdoacai/
 > Ela explica o self-service passo a passo, deixa claro que tem opção para quem tem restrição e mostra horário e onde fica. Se fizer sentido para vocês (ou para a franquia), a gente conversa!
 
+---
+
+## 14. Elegance Hair Studio · /previa/elegance/
+
+**Pelo que vi:** sem site. Agenda pela Gendo (elegance.gendo.app), onde tem uma lista enorme de serviços com preço: cabelo, botox e cronograma capilar, cílios, estética, unhas, depilação e visagismo. Passei para o site uma seleção com os preços "a partir de". O Instagram @elegancehairebeauty da lista é de um "Elegance Hair & Beauty" sem endereço, e não deu para confirmar que é o mesmo salão, então não usei as fotos de lá. Usei só as do Maps (a noiva na recepção e os cílios). Funciona de terça a sábado. As avaliações citam a Rubia (pés), a Silmara (unhas) e a recepção. Vale confirmar com eles qual é o Instagram oficial.
+
+> Olá, pessoal do Elegance! Sou o Lucas, faço sites aqui em Campinas. Vocês têm nota 4,8 com mais de 200 avaliações e uma agenda online cheia de serviços, mas sem um site que apresente o salão. Montei uma ideia: https://feitopelolucas.com.br/previa/elegance/
+> Os preços estão organizados por categoria (cabelo, tratamentos, cílios, estética, unhas), tem o combo promocional em destaque, uma parte para noivas, e o botão de agendar leva para a agenda que vocês já usam. Se gostarem, a gente conversa!
+
