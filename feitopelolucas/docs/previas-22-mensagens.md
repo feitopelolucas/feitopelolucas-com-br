@@ -174,3 +174,12 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 > Fala, pessoal do Seco! Sou o Lucas, faço sites aqui em Campinas. O Instagram de vocês é muito bom, mas quem procura "vitrificação" ou "PPF" em Campinas no Google não acha um site do Seco. Montei uma ideia: https://feitopelolucas.com.br/previa/seco/
 > Tem os serviços, uma comparação de vitrificação e PPF (para ajudar o cliente a decidir), galeria com os carros do estúdio e orçamento pelo WhatsApp, tudo no preto e amarelo da marca. Se curtirem, me chama!
 
+---
+
+## 20. Artesanal Padaria e Salgaderia · /previa/artesanal/
+
+**Pelo que vi:** Instagram com 1,1 mil seguidores, parado desde fevereiro. A bio diz "pães fresquinhos e salgados de verdade". As fotos boas são do frango assado, dos pães e dos salgados. As avaliações citam o frango assado e os domingos, salgados para festa, bolos baratos e o pão quentinho no **iFood**. WhatsApp (19) 99559-4605. Não achei a grade de horário completa: o Google diz que abre às 6h15, e um post de feriado mostra 6h às 20h. No site deixei "a partir das 6h15", sem inventar. O botão do iFood faz uma busca pelo nome, porque não achei o link direto da loja; vale trocar pelo link deles.
+
+> Oi, pessoal da Artesanal! Sou o Lucas, faço sites aqui em Campinas. Vi que o frango assado de domingo e os salgados para festa de vocês fazem sucesso, e montei uma ideia de site para receber essas encomendas: https://feitopelolucas.com.br/previa/artesanal/
+> Tem a reserva de frango assado, uma calculadora de salgados por convidado que já manda o pedido no WhatsApp, os pães e o iFood. Se gostarem, a gente conversa!
+
