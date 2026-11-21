@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Senhorita Pepis · Confeitaria e café vegano em Barão Geraldo</title>
+<meta name="description" content="Prévia de site para a Senhorita Pepis, confeitaria e café 100% vegano em Barão Geraldo, Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/senhoritapepis/">
+<meta property="og:title" content="Prévia de site · Senhorita Pepis">
+<meta property="og:description" content="Doces com recheio de vida: confeitaria e café 100% vegano. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/senhoritapepis/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b0305c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--amora:#b0305c;--amora-2:#8f2149;--rosa:#f8dede;--rosa-2:#fbeceb;--cacau:#4a2c24;--menta:#9fd3c0;--menta-2:#e3f3ed;--creme:#fffaf6;--tinta:#3a2420;--tinta-2:#7a5e57;--fio:#f0d9d6}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--creme);color:var(--tinta);font:16.5px/1.65 "Lexend",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Young Serif",Georgia,serif;font-weight:400;line-height:1.08;margin:0}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--menta);outline-offset:3px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  .wrap>*{min-width:0}
+
+  .previa{background:var(--cacau);color:#e8d4cf;font-size:.8125rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--rosa);font-weight:600;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:76px}
+  .marca{text-decoration:none;line-height:1.1}
+  .marca b{font:400 1.6rem "Young Serif",serif;color:var(--amora);display:block}
+  .marca small{font-size:.8125rem;color:var(--tinta-2);letter-spacing:.12em;text-transform:uppercase}
+  .topo nav{display:flex;gap:22px;font-weight:500;color:var(--tinta-2)}
+  .topo nav a{text-decoration:none}
+  .topo nav a:hover{color:var(--amora)}
+  @media (max-width:860px){.topo nav{display:none}}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;font-size:1rem;transition:transform .15s,background .15s;white-space:nowrap;border:0;cursor:pointer;font-family:inherit}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn.amora{background:var(--amora);color:#fff}
+  .btn.amora:hover{background:var(--amora-2)}
+  .btn.menta{background:var(--menta);color:var(--cacau)}
+  .btn.linha{border:1.5px solid currentColor;background:transparent}
+  .btn.peq{min-height:44px;padding:8px 16px;font-size:.94rem}
+
+  .hero{background:linear-gradient(180deg,var(--creme),var(--rosa-2))}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding-top:40px;padding-bottom:70px}
+  .selo-v{display:inline-flex;align-items:center;gap:8px;background:var(--menta-2);color:#2f6b55;border-radius:999px;padding:6px 14px;font-weight:600;font-size:.92rem}
+  .hero h1{font-size:clamp(2.5rem,6vw,4.3rem);margin:16px 0 16px;color:var(--cacau)}
+  .hero h1 em{font-style:normal;color:var(--amora)}
+  .hero p{font-size:1.1rem;color:var(--tinta-2);max-width:30em;margin:0 0 26px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .status{margin-top:20px;display:inline-flex;align-items:center;gap:10px;font-weight:600}
+  .status i{width:11px;height:11px;border-radius:50%;background:#d1b8b3;flex:none}
+  .status.on i{background:#3aa57a;box-shadow:0 0 0 5px rgba(58,165,122,.18)}
+  .mesa{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:center}
+  .mesa img{width:100%;object-fit:cover;border-radius:999px 999px 24px 24px}
+  .mesa img:first-child{aspect-ratio:3/5}
+  .mesa img:last-child{aspect-ratio:3/4;border-radius:24px 24px 999px 999px;margin-top:40px}
+  @media (max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:24px}}
+
+  section{padding:80px 0}
+  .tit{max-width:640px;margin-bottom:30px}
+  .tit small{font-weight:600;color:var(--amora);letter-spacing:.14em;text-transform:uppercase;font-size:.8125rem}
+  .tit h2{font-size:clamp(2rem,4.6vw,3rem);margin-top:6px;color:var(--cacau)}
+  .tit p{color:var(--tinta-2);margin:10px 0 0}
+
+  /* Vitrine */
+  .vit{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .vit figure{margin:0;background:#fff;border:1px solid var(--fio);border-radius:22px;overflow:hidden}
+  .vit img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .vit figcaption{padding:12px 14px 16px}
+  .vit b{display:block;font:400 1.1rem "Young Serif",serif;color:var(--cacau)}
+  .vit span{font-size:.9rem;color:var(--tinta-2)}
+  @media (max-width:860px){.vit{grid-template-columns:1fr 1fr}}
+  .lista{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .lista span{background:var(--rosa);color:var(--amora-2);border-radius:999px;padding:7px 14px;font-weight:500;font-size:.95rem}
+
+  /* Vegano */
+  .veg{background:var(--menta-2)}
+  .veg .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .veg div{background:#fff;border-radius:22px;padding:22px}
+  .veg h3{font-size:1.3rem;color:#2f6b55;margin-bottom:6px}
+  .veg p{margin:0;color:var(--tinta-2)}
+  @media (max-width:860px){.veg .wrap{grid-template-columns:1fr}}
+
+  /* Encomenda */
+  .enc .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .form{background:#fff;border:1px solid var(--fio);border-radius:24px;padding:26px}
+  .form label{display:block;font-weight:600;margin:14px 0 6px}
+  .form label:first-child{margin-top:0}
+  .form select,.form input[type=date]{width:100%;min-height:48px;border:1px solid var(--fio);border-radius:12px;padding:8px 12px;font:inherit;background:var(--creme)}
+  .form input[type=range]{width:100%;accent-color:var(--amora)}
+  .conta{display:flex;justify-content:space-between;align-items:center;background:var(--rosa-2);border-radius:14px;padding:12px 16px;margin:16px 0}
+  .conta b{font:400 1.8rem "Young Serif",serif;color:var(--amora)}
+  .form .btn{width:100%}
+  .form small{display:block;margin-top:10px;color:var(--tinta-2)}
+  .enc img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:24px}
+  @media (max-width:880px){.enc .wrap{grid-template-columns:1fr}}
+
+  /* Avaliações */
+  .aval{background:var(--rosa-2)}
+  .falas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .falas blockquote{margin:0;background:#fff;border-radius:22px;padding:24px;font:400 1.08rem/1.5 "Young Serif",serif;color:var(--cacau)}
+  .falas cite{display:block;margin-top:10px;font:600 .875rem "Lexend",sans-serif;font-style:normal;color:var(--amora)}
+  @media (max-width:880px){.falas{grid-template-columns:1fr}}
+
+  /* Onde */
+  .onde .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+  .onde .fach{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:22px;margin-bottom:20px}
+  .horas{width:100%;border-collapse:collapse;margin-bottom:18px}
+  .horas td{padding:9px 0;border-bottom:1px solid var(--fio)}
+  .horas td:last-child{text-align:right;font-weight:600}
+  .horas tr.hoje td{color:var(--amora)}
+  .end{margin:0 0 22px;color:var(--tinta-2)}
+  .end b{color:var(--tinta)}
+  .end a{white-space:nowrap;color:var(--amora);font-weight:600}
+  .mapa{border-radius:22px;overflow:hidden;min-height:400px;background:var(--rosa-2)}
+  .mapa iframe{width:100%;height:100%;min-height:400px;border:0;display:block}
+  @media (max-width:880px){.onde .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:var(--cacau);color:#cdb4ad;padding:24px 0 100px;font-size:.875rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--rosa);font-weight:600;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 12px 26px -10px rgba(0,0,0,.4);transition:opacity .3s,transform .3s}
+  .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
+  @media (min-width:861px){footer{padding-bottom:24px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial da Senhorita Pepis. É uma ideia de site montada por Lucas para apresentar à confeitaria.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20da%20Senhorita%20Pepis%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Senhorita Pepis, início"><b>Senhorita Pepis</b><small>Confeitaria e café vegano</small></a>
+    <nav aria-label="Seções">
+      <a href="#vitrine">Vitrine</a>
+      <a href="#encomendas">Encomendas</a>
+      <a href="#onde">Visite</a>
+    </nav>
+    <a class="btn amora peq zap" href="https://wa.me/5519998440308">WhatsApp</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="selo-v">🌱 100% vegano · Barão Geraldo</span>
+        <h1 id="titulo">Doces com <em>recheio de vida</em> e salgados com sabor.</h1>
+        <p>Bolos, fatias, sonhos, milkshakes, pastéis e cachorro-quente, tudo sem ingredientes de origem animal. Doce de verdade, sem pegada "fit", num cantinho acolhedor que recebe até o seu cachorro.</p>
+        <div class="acoes">
+          <a class="btn amora" href="#encomendas">Encomendar docinhos</a>
+          <a class="btn linha" href="#vitrine">Ver a vitrine</a>
+        </div>
+        <p class="status" id="status"><i aria-hidden="true"></i><span id="status-t">Quinta a sábado 13h às 19h · domingo 10h30 às 13h30</span></p>
+      </div>
+      <div class="mesa">
+        <img src="fotos/milkshake.jpg" alt="Milkshake vegano com cobertura de biscoito e caramelo" width="675" height="1200">
+        <img src="fotos/sonho.jpg" alt="Sonho recheado com creme ao lado de uma xícara de café" width="675" height="1200">
+      </div>
+    </div>
+  </section>
+
+  <section id="vitrine" aria-labelledby="t-vit">
+    <div class="wrap">
+      <div class="tit"><small>Vitrine</small><h2 id="t-vit">Ninguém diz que é vegano</h2><p>"Tem gosto de doce de verdade", resume uma cliente que é alérgica a laticínios.</p></div>
+      <div class="vit">
+        <figure><img src="fotos/doce.jpg" alt="Doce de chocolate coberto com bombons e avelãs" loading="lazy" width="900" height="1200"><figcaption><b>Chocolate</b><span>Para os dias de festa</span></figcaption></figure>
+        <figure><img src="fotos/sonho.jpg" alt="Sonho com creme" loading="lazy" width="675" height="1200"><figcaption><b>Sonho</b><span>Com café passado</span></figcaption></figure>
+        <figure><img src="fotos/milkshake.jpg" alt="Milkshake com biscoito" loading="lazy" width="675" height="1200"><figcaption><b>Milkshakes</b><span>Cremosos, sem leite</span></figcaption></figure>
+        <figure><img src="fotos/salgado.jpg" alt="Salgado assado com molho por cima" loading="lazy" width="675" height="1200"><figcaption><b>Salgados</b><span>Pastel e cachorro-quente</span></figcaption></figure>
+      </div>
+      <div class="lista"><span>Bolos inteiros</span><span>Fatias</span><span>Tortas</span><span>Brigadeiros</span><span>Docinhos para festas</span><span>Sanduíches</span><span>Cafés</span><span>Bolo de cenoura com chocolate</span></div>
+    </div>
+  </section>
+
+  <section class="veg" aria-label="Para quem é">
+    <div class="wrap">
+      <div><h3>Para veganos</h3><p>Nada de origem animal: sem leite, sem ovos, sem manteiga.</p></div>
+      <div><h3>Para quem tem restrição</h3><p>Quem não pode com lactose come sem medo. Outras alergias, avise no pedido.</p></div>
+      <div><h3>Para todo mundo</h3><p>"Uma das confeitarias mais gostosas que já provei, sendo vegano ou não."</p></div>
+    </div>
+  </section>
+
+  <section class="enc" id="encomendas" aria-labelledby="t-enc">
+    <div class="wrap">
+      <div>
+        <div class="tit"><small>Encomendas</small><h2 id="t-enc">Festa, casamento ou só vontade</h2><p>Docinhos para festas e casamentos, bolos inteiros e salgados. Conte quantos convidados e a data.</p></div>
+        <form class="form" id="form-e">
+          <label for="ev">Tipo de evento</label>
+          <select id="ev"><option>Aniversário</option><option>Casamento</option><option>Chá ou batizado</option><option>Evento da empresa</option><option>Em casa, sem ocasião</option></select>
+          <label for="cv">Convidados: <output id="cvn">40</output></label>
+          <input id="cv" type="range" min="10" max="200" step="5" value="40">
+          <div class="conta"><span>Docinhos sugeridos<br><small style="margin:0">uns 4 por convidado</small></span><b id="dc">160</b></div>
+          <label for="dt">Data</label>
+          <input id="dt" type="date">
+          <button class="btn amora" type="submit" style="margin-top:16px">Pedir orçamento no WhatsApp</button>
+          <small>A Senhorita Pepis confirma sabores, prazo e valores na conversa.</small>
+        </form>
+      </div>
+      <img src="fotos/interior.jpg" alt="Parede do café com prateleiras, raposinhas de pelúcia e a plaquinha Doceiro amigo vegano" loading="lazy" width="1200" height="675">
+    </div>
+  </section>
+
+  <section class="aval" aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="tit"><small>4,9 · 235 avaliações no Google</small><h2 id="t-aval">"Melhor confeitaria de Campinas. E é vegana!"</h2></div>
+      <div class="falas">
+        <blockquote>Para quem é alérgico ou intolerante a laticínios, a segurança de comer sem riscos é impagável. Tem gosto de doce de verdade, sem aquela pegada fit.<cite>Eve · Google</cite></blockquote>
+        <blockquote>Fui muito bem recepcionado, amei os pastéis. Tem até rede na garagem lateral.<cite>Antonio · Google</cite></blockquote>
+        <blockquote>Maravilhosos bolos, quitutes e salgados veganos que agradam a todos os públicos.<cite>Resumo das avaliações · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde">
+    <div class="wrap">
+      <div>
+        <img class="fach" src="fotos/fachada.jpg" alt="Casa de tijolinho da Senhorita Pepis com portas em arco e mesas na frente" loading="lazy" width="1200" height="675">
+        <div class="tit" style="margin-bottom:16px"><small>Visite</small><h2 id="t-onde">Na Galeria Flamboyant</h2></div>
+        <table class="horas" id="horas">
+          <tr data-d="fechado"><td>Segunda a quarta</td><td>Fechado</td></tr>
+          <tr data-d="qs"><td>Quinta a sábado</td><td>13h às 19h</td></tr>
+          <tr data-d="0"><td>Domingo</td><td>10h30 às 13h30</td></tr>
+        </table>
+        <p class="end"><b>R. Alzira de Aguiar Aranha, 354</b> · Barão Geraldo, Campinas (SP)<br>WhatsApp <a class="zap" href="https://wa.me/5519998440308">(19) 99844-0308</a> · <a href="https://www.instagram.com/senhorita_pepis/" target="_blank" rel="noopener">@senhorita_pepis</a><br>Pet friendly · wi-fi · acessível</p>
+        <div class="acoes">
+          <a class="btn amora" href="https://www.google.com/maps/dir/?api=1&amp;destination=Senhorita+Pepis,+R.+Alzira+de+%C3%81guiar+Aranha,+354,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn linha zap" href="https://wa.me/5519998440308">WhatsApp</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Senhorita Pepis, Barão Geraldo, Campinas" src="https://www.google.com/maps?q=Senhorita+Pepis,+R.+Alzira+de+%C3%81guiar+Aranha,+354+-+Bar%C3%A3o+Geraldo,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Senhorita Pepis · Confeitaria e café vegano · Barão Geraldo</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn amora fixo some zap" href="https://wa.me/5519998440308" aria-label="Chamar no WhatsApp">Encomendar</a>
+
+<script>
+(function () {
+  document.querySelectorAll(".zap").forEach(function(a){a.target="_blank";a.rel="noopener";});
+  var cv = document.getElementById("cv");
+  function c(){ document.getElementById("cvn").value = cv.value; document.getElementById("dc").textContent = cv.value*4; }
+  cv.addEventListener("input", c); c();
+  document.getElementById("form-e").addEventListener("submit", function(e){
+    e.preventDefault();
+    var dt = document.getElementById("dt").value, dtx = dt ? dt.split("-").reverse().join("/") : "a combinar";
+    var txt = "Olá, Senhorita Pepis! Quero um orçamento.\nEvento: " + document.getElementById("ev").value + "\nConvidados: " + cv.value + " (uns " + cv.value*4 + " docinhos)\nData: " + dtx;
+    window.open("https://wa.me/5519998440308?text=" + encodeURIComponent(txt), "_blank", "noopener");
+  });
+  try {
+    var p = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+    var g = function(t){return (p.find(function(x){return x.type===t})||{}).value};
+    var d = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"));
+    var h = (parseInt(g("hour"),10)%24) + parseInt(g("minute"),10)/60;
+    var k = d===0 ? "0" : (d>=4 ? "qs" : "fechado");
+    var tr = document.querySelector('#horas tr[data-d="'+k+'"]'); if (tr) tr.classList.add("hoje");
+    var s = document.getElementById("status"), t = document.getElementById("status-t");
+    var ab = d===0 ? 10.5 : 13, fe = d===0 ? 13.5 : 19;
+    if (k==="fechado") t.textContent = "Hoje fechado · abre quinta às 13h";
+    else if (h>=ab && h<fe) { s.classList.add("on"); t.textContent = "Aberta agora, até as " + (d===0 ? "13h30" : "19h"); }
+    else if (h<ab) t.textContent = "Abre hoje às " + (d===0 ? "10h30" : "13h");
+    else t.textContent = d===6 ? "Fechada agora · abre amanhã às 10h30" : (d===0 ? "Fechada agora · volta na quinta às 13h" : "Fechada agora · abre amanhã às 13h");
+  } catch (e) {}
+  var f = document.querySelector(".fixo"), t2 = document.querySelector(".hero");
+  if (f && t2 && "IntersectionObserver" in window) new IntersectionObserver(function(e){f.classList.toggle("some", e[0].isIntersecting)}).observe(t2);
+})();
+</script>
+</body>
+</html>

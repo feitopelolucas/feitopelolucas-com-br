@@ -190,3 +190,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, pessoal da Barbearia Nicarágua! Sou o Lucas, faço sites aqui em Campinas. Vocês têm 4,9 no Google, e tem cliente dizendo que atravessa a cidade só para cortar aí. Montei uma ideia de site para a barbearia: https://feitopelolucas.com.br/previa/barbearianicaragua/
 > Tem os serviços (incluindo a barboterapia e o plano mensal), o ambiente, o horário com aviso de aberta agora e o botão de agendar pelo WhatsApp. Se gostarem, a gente conversa!
+
+---
+
+## 21. Senhorita Pepis · /previa/senhoritapepis/
+
+**Pelo que vi:** confeitaria e café **100% vegano**, com Instagram **@senhorita_pepis** (9,5 mil seguidores) e um catálogo no Kyte (senhoritapepis.kyte.site, ainda com o endereço antigo), mas sem site próprio. Hoje fica na Galeria Flamboyant, R. Alzira de Aguiar Aranha, 354. Horário: **quinta a sábado das 13h às 19h e domingo das 10h30 às 13h30**. WhatsApp (19) 99844-0308. O Google a marca como empresa de empreendedoras e que acolhe LGBTQ+; é pet friendly. Bio: "Doces com recheio de Vida e Salgados com sabor". Avaliações: "melhor confeitaria de Campinas, e é vegana", doce de verdade sem pegada fit, pastéis, segurança para alérgicos a laticínios. O site tem um orçamento de docinhos por número de convidados que vai para o WhatsApp.
+**Por onde mandar:** WhatsApp (19) 99844-0308.
+
+> Oi, Senhorita Pepis! Sou o Lucas, faço sites aqui em Campinas. Vi que vocês têm 4,9 no Google e clientes dizendo que é a melhor confeitaria de Campinas, "e é vegana!". Montei uma ideia de site para vocês, com o endereço novo da Galeria Flamboyant: https://feitopelolucas.com.br/previa/senhoritapepis/
+> Tem a vitrine, o horário de quinta a domingo com aviso de aberta agora e um orçamento de docinhos para festa por número de convidados que chega pronto no WhatsApp. Se gostarem, a gente conversa!
