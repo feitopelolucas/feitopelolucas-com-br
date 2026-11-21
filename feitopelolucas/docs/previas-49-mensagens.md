@@ -240,3 +240,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, pessoal da Maresias! Sou o Lucas, faço sites aqui em Campinas. Vi que vocês têm 4,9 no Google e que o diferencial é ser tudo de fabricação própria, sem emulsificante. Isso merece aparecer bem quando alguém procura vocês. Montei uma ideia de site: https://feitopelolucas.com.br/previa/maresias/
 > Ele conta a história do produto, mostra os sabores e o horário com aviso de aberto agora, e todo botão de pedido leva para o cardápio online de vocês. Se gostarem, a gente conversa!
+
+---
+
+## 26. Borracharia Valdeci · /previa/borrachariavaldeci/
+
+**Pelo que vi:** sem site, sem Instagram e com o perfil do Google **não reivindicado**. Só o fixo (19) 3271-1726. Segunda a sexta das 7h às 18h e sábado das 7h às 14h. Há pouca informação: 5 fotos no Google, só da fachada (uma casa rosa na esquina, com "Borracharia" escrito à mão e uma placa de PARE na frente). As avaliações falam de preço justo, honestidade e de um pessoal "desenrolado". O site usa a casa rosa e o PARE como identidade. A lista de serviços é a básica de borracharia, com aviso para ligar e confirmar.
+**Por onde mandar:** ligar no (19) 3271-1726 ou pessoalmente.
+
+> Olá! Sou o Lucas, faço sites aqui em Campinas. A Borracharia Valdeci tem 4,9 no Google com mais de 200 avaliações, mas o perfil nem foi reivindicado ainda e quem procura só acha o telefone. Montei uma ideia de site com a cara da casa rosa da esquina: https://feitopelolucas.com.br/previa/borrachariavaldeci/
+> Tem o horário com aviso de aberta agora, os serviços e o botão de ligar. Também posso ajudar a assumir o perfil do Google. Se gostarem, a gente conversa!
