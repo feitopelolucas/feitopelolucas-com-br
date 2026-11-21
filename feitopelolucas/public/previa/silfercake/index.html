@@ -16,11 +16,12 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#f7c6d0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%23f7c6d0'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Arial%2CHelvetica%2Csans-serif'%20font-size='38'%20font-weight='700'%20text-anchor='middle'%20fill='%231a1a1a'%3ES%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{--creme:#fffaf0;--rosa:#f7c6d0;--rosa-2:#ec9fb1;--manteiga:#fbe38e;--fita:#1d1d1d;--cereja:#e2363c;--tinta:#2a2224;--tinta-2:#6e6264;--fio:#efe2d6}
+  :root{--creme:#fffaf0;--rosa:#f7c6d0;--rosa-2:#ec9fb1;--manteiga:#fbe38e;--fita:#1d1d1d;--cereja:#b0191f;--tinta:#2a2224;--tinta-2:#6e6264;--fio:#efe2d6}
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--creme);color:var(--tinta);font:16.5px/1.6 "Plus Jakarta Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -145,6 +146,7 @@
   .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
   @media (min-width:861px){footer{padding-bottom:24px}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -177,7 +179,7 @@
         <p class="status" id="status"><i aria-hidden="true"></i><span id="status-t">Somente encomendas · retirada agendada</span></p>
       </div>
       <div class="mural">
-        <img src="fotos/bento-flor.jpg" alt="Bento cake branco com desenho e a frase Parabéns na marmitinha" width="900" height="1200">
+        <img fetchpriority="high" src="fotos/bento-flor.jpg" alt="Bento cake branco com desenho e a frase Parabéns na marmitinha" width="900" height="1200">
         <img src="fotos/bentos.jpg" alt="Bolo de andares com laço preto e dois bento cakes" width="720" height="720">
         <img src="fotos/bento-rosa.jpg" alt="Bento cake rosa escrito Happee birthdae" width="900" height="1200">
         <img src="fotos/bento-amarelo.jpg" alt="Bento cake amarelo com florzinhas brancas" width="900" height="1200">

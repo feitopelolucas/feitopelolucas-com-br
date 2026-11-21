@@ -16,6 +16,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#f7c600">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%23f7c600'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Arial%2CHelvetica%2Csans-serif'%20font-size='38'%20font-weight='700'%20text-anchor='middle'%20fill='%231a1a1a'%3EC%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -123,6 +124,7 @@
   .fixo{position:fixed;right:16px;bottom:16px;z-index:40;box-shadow:0 14px 30px -12px rgba(0,0,0,.5);transition:opacity .2s,transform .2s}
   .fixo.some{opacity:0;transform:translateY(20px);pointer-events:none}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -153,7 +155,7 @@
         </div>
         <p class="info">4,9 ★ com 180 avaliações no Google</p>
       </div>
-      <img src="fotos/fachada.jpg" alt="Fachada da Giva Borracharia Chapadão, com letreiro amarelo e pneus na entrada" width="900" height="744">
+      <img fetchpriority="high" src="fotos/fachada.jpg" alt="Fachada da Giva Borracharia Chapadão, com letreiro amarelo e pneus na entrada" width="900" height="744">
     </div>
   </section>
 

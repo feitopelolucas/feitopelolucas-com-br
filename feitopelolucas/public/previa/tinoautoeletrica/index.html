@@ -15,12 +15,13 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#d62828">
+<meta name="theme-color" content="#cd2626">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%23cd2626'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Arial%2CHelvetica%2Csans-serif'%20font-size='38'%20font-weight='700'%20text-anchor='middle'%20fill='%23ffffff'%3ET%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Chivo:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
-  :root{--verm:#d62828;--verm-2:#a81d1d;--azul:#1d3a8a;--azul-2:#13286a;--cal:#fbfaf6;--cal-2:#f1eee5;--tinta:#16181f;--tinta-2:#5b5d66;--fio:#e4e0d4;--amar:#f4c430;--verde:#1f9d55}
+  :root{--verm:#cd2626;--verm-2:#a81d1d;--azul:#1d3a8a;--azul-2:#13286a;--cal:#fbfaf6;--cal-2:#f1eee5;--tinta:#16181f;--tinta-2:#5b5d66;--fio:#e4e0d4;--amar:#f4c430;--verde:#1f9d55}
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--cal);color:var(--tinta);font:17px/1.6 "Chivo",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -119,6 +120,7 @@
   .fixo{position:fixed;right:16px;bottom:16px;z-index:40;box-shadow:0 14px 30px -12px rgba(0,0,0,.5);transition:opacity .2s,transform .2s}
   .fixo.some{opacity:0;transform:translateY(20px);pointer-events:none}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -151,7 +153,7 @@
         </div>
         <p class="info">4,8 ★ com 153 avaliações no Google</p>
       </div>
-      <img src="fotos/muro-perto.jpg" alt="Muro branco pintado à mão: Auto Elétrica Tino, motor, partida, carga, bateria e alternador, fone 3268-7515" width="1200" height="900">
+      <img fetchpriority="high" src="fotos/muro-perto.jpg" alt="Muro branco pintado à mão: Auto Elétrica Tino, motor, partida, carga, bateria e alternador, fone 3268-7515" width="1200" height="900">
     </div>
   </section>
 

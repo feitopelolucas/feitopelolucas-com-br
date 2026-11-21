@@ -16,11 +16,12 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1d2b45">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d2b45'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Arial%2CHelvetica%2Csans-serif'%20font-size='38'%20font-weight='700'%20text-anchor='middle'%20fill='%23ffffff'%3ES%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{--azul:#1d2b45;--azul-2:#152036;--ouro:#e2a93b;--ouro-2:#c68c1f;--creme:#faf6ee;--creme-2:#f2eadb;--verde:#2e7d4f;--tinta:#1f2430;--tinta-2:#5a5f6b;--fio:#e6dccb}
+  :root{--azul:#1d2b45;--azul-2:#152036;--ouro:#e2a93b;--ouro-2:#986b18;--creme:#faf6ee;--creme-2:#f2eadb;--verde:#2b764a;--tinta:#1f2430;--tinta-2:#5a5f6b;--fio:#e6dccb}
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--creme);color:var(--tinta);font:17px/1.6 "DM Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -40,7 +41,7 @@
 
   .aviso{background:var(--ouro);color:var(--azul-2);font-weight:700;font-size:.95rem}
   .aviso .wrap{display:flex;align-items:center;gap:10px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
-  .aviso a{white-space:nowrap}
+  .aviso a{white-space:nowrap;display:inline-flex;align-items:center;min-height:44px;padding:0 16px;background:var(--azul-2);color:#fff;border-radius:999px;text-decoration:none}
 
   .topo{background:var(--azul);color:#fff}
   .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:78px}
@@ -110,7 +111,7 @@
   .calc{background:var(--azul);color:#dbe1ec;border-radius:20px;padding:28px}
   .calc h3{color:#fff;font-size:1.7rem;margin-bottom:14px}
   .calc label{display:block;font-weight:700;margin:14px 0 6px}
-  .calc input[type=range]{width:100%;accent-color:var(--ouro)}
+  .calc input[type=range]{width:100%;height:44px;accent-color:var(--ouro)}
   .calc select{width:100%;min-height:46px;border-radius:10px;border:0;padding:8px 10px;font:inherit}
   .calc .res{display:flex;gap:14px;margin:20px 0}
   .calc .res div{flex:1;background:rgba(255,255,255,.08);border-radius:12px;padding:14px}
@@ -149,6 +150,7 @@
   .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
   @media (min-width:861px){footer{padding-bottom:24px}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -191,7 +193,7 @@
         <p class="agora" id="agora"><i aria-hidden="true"></i><span id="agora-t">Seg a sáb 6h30 às 19h · dom 7h às 14h</span></p>
       </div>
       <div class="duas">
-        <img src="fotos/ig-paes.jpg" alt="Assadeira com pães franceses dourados saindo do forno" width="360" height="640">
+        <img fetchpriority="high" src="fotos/ig-paes.jpg" alt="Assadeira com pães franceses dourados saindo do forno" width="360" height="640">
         <img src="fotos/mesas.jpg" alt="Mesas da padaria com o salão e as prateleiras ao fundo" width="554" height="1200">
       </div>
     </div>
@@ -213,7 +215,7 @@
 
   <section class="almoco" id="almoco" aria-labelledby="t-alm">
     <div class="wrap">
-      <img src="fotos/ig-salgado.jpg" alt="Prato de almoço com filé empanado, ovo frito, arroz e couve" loading="lazy" width="360" height="640">
+      <img style="max-width:420px;margin-inline:auto" src="fotos/ig-salgado.jpg" alt="Prato de almoço com filé empanado, ovo frito, arroz e couve" loading="lazy" width="360" height="640">
       <div>
         <div class="tit" style="margin-bottom:12px"><small>Restaurante</small><h2 id="t-alm">Aqui tem comida caseira, todos os dias</h2></div>
         <p>Prato pronto no almoço, com tempero de casa, e caldos para os dias mais frios. Dá para comer no salão, que é limpo e organizado, ou ligar e retirar.</p>

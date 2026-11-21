@@ -16,11 +16,12 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#14213d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%2314213d'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Arial%2CHelvetica%2Csans-serif'%20font-size='38'%20font-weight='700'%20text-anchor='middle'%20fill='%23ffffff'%3EC%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{--noite:#14213d;--noite-2:#0d1730;--noite-3:#22325a;--laranja:#fca311;--laranja-2:#e08e00;--verm:#e63946;--creme:#fff8ec;--tinta:#1d2433;--tinta-2:#5b6478;--fio:#e6dcc8}
+  :root{--noite:#14213d;--noite-2:#0d1730;--noite-3:#22325a;--laranja:#fca311;--laranja-2:#e08e00;--verm:#dd1c2a;--creme:#fff8ec;--tinta:#1d2433;--tinta-2:#5b6478;--fio:#e6dcc8}
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--creme);color:var(--tinta);font:16.5px/1.6 "Nunito",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -87,6 +88,7 @@
   /* Cardápio */
   .cardapio{background:#fff;border-top:1px solid var(--fio)}
   .abas{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:10px;scrollbar-width:thin}
+  @media (min-width:821px){.abas{flex-wrap:wrap;overflow:visible}}
   .abas button{flex:none;border:2px solid var(--noite);background:#fff;color:var(--noite);font:800 .94rem "Nunito",sans-serif;padding:9px 16px;border-radius:999px;cursor:pointer;min-height:44px}
   .abas button[aria-selected="true"]{background:var(--noite);color:var(--laranja)}
   .itens{display:grid;grid-template-columns:1fr 1fr;gap:0 36px}
@@ -130,6 +132,7 @@
   footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   footer a{color:var(--laranja);font-weight:800;text-decoration:none}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -166,7 +169,7 @@
         </div>
       </div>
       <div class="fotohero">
-        <img src="fotos/dog.jpg" alt="Hot-dog prensado coberto de purê, com milho e ervilha" width="794" height="1200">
+        <img fetchpriority="high" src="fotos/dog.jpg" alt="Hot-dog prensado coberto de purê, com milho e ervilha" width="794" height="1200">
         <span class="tag">Hot-dog a partir de R$ 23</span>
       </div>
     </div>

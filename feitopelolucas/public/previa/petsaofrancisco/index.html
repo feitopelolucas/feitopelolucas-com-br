@@ -15,12 +15,13 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0f8b8d">
+<meta name="theme-color" content="#0b6264">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%230b6264'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Arial%2CHelvetica%2Csans-serif'%20font-size='38'%20font-weight='700'%20text-anchor='middle'%20fill='%23ffffff'%3ES%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
 <style>
-  :root{--teal:#0f8b8d;--teal-2:#0a6a6c;--teal-3:#e3f4f3;--amarelo:#ffcc29;--amarelo-2:#f2b705;--creme:#fffcf3;--tinta:#183232;--tinta-2:#55706f;--fio:#d9ebe9}
+  :root{--teal:#0b6264;--teal-2:#096365;--teal-3:#e3f4f3;--amarelo:#ffcc29;--amarelo-2:#f2b705;--creme:#fffcf3;--tinta:#183232;--tinta-2:#55706f;--fio:#d9ebe9}
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--creme);color:var(--tinta);font:16.5px/1.6 "Nunito Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -54,8 +55,8 @@
 
   .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding-top:20px;padding-bottom:70px}
   .tag{display:inline-block;background:var(--teal-3);color:var(--teal-2);font-weight:700;padding:6px 14px;border-radius:999px;font-size:.875rem}
-  .hero h1{font-size:clamp(2.8rem,6.8vw,4.9rem);color:var(--teal-2);margin:16px 0 14px}
-  .hero h1 span{background:linear-gradient(transparent 64%,var(--amarelo) 64%);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hero h1{font-size:clamp(2.8rem,6.8vw,4.9rem);color:var(--teal-2);margin:16px 0 22px;line-height:1.1}
+  .hero h1 span{background:linear-gradient(transparent 62%,var(--amarelo) 62% 90%,transparent 90%);-webkit-box-decoration-break:clone;box-decoration-break:clone}
   .hero p{font-size:1.12rem;color:var(--tinta-2);max-width:30em;margin:0 0 26px}
   .acoes{display:flex;gap:12px;flex-wrap:wrap}
   .info{margin-top:24px;font-weight:700;color:var(--tinta-2)}
@@ -131,6 +132,7 @@
   .fixo{position:fixed;right:16px;bottom:16px;z-index:40;box-shadow:0 14px 30px -12px rgba(10,106,108,.7);transition:opacity .2s,transform .2s}
   .fixo.some{opacity:0;transform:translateY(20px);pointer-events:none}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -163,7 +165,7 @@
         <p class="info">4,7 ★ com 175 avaliações no Google</p>
       </div>
       <div class="colagem">
-        <img src="fotos/creche-bolinhas.jpg" alt="Dois cães brincando na piscina de bolinhas da creche" width="759" height="759">
+        <img fetchpriority="high" src="fotos/creche-bolinhas.jpg" alt="Dois cães brincando na piscina de bolinhas da creche" width="759" height="759">
         <img src="fotos/banho.jpg" alt="Cãozinho enrolado na toalha depois do banho" width="1200" height="801">
         <img src="fotos/tosa.jpg" alt="Shih tzu recebendo laço depois da tosa" width="1200" height="801">
         <span class="balao" aria-hidden="true">Banho no capricho!</span>

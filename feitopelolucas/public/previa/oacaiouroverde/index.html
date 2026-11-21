@@ -16,11 +16,12 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#5b1a6e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%235b1a6e'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Arial%2CHelvetica%2Csans-serif'%20font-size='38'%20font-weight='700'%20text-anchor='middle'%20fill='%23ffffff'%3EO%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-  :root{--roxo:#5b1a6e;--roxo-2:#3f0f4e;--rosa:#ff3d8b;--rosa-2:#e02674;--lilas:#f3e6f7;--lilas-2:#fbf5fd;--amarelo:#ffc93c;--tinta:#2a1631;--tinta-2:#6c5874;--fio:#e7d3ee}
+  :root{--roxo:#5b1a6e;--roxo-2:#3f0f4e;--rosa:#e5005c;--rosa-2:#c61c63;--lilas:#f3e6f7;--lilas-2:#fbf5fd;--amarelo:#ffc93c;--tinta:#2a1631;--tinta-2:#6c5874;--fio:#e7d3ee}
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--lilas-2);color:var(--tinta);font:16.5px/1.6 "DM Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -126,6 +127,8 @@
   .fixo{position:fixed;right:16px;bottom:16px;z-index:40;transition:opacity .2s,transform .2s}
   .fixo.some{opacity:0;transform:translateY(20px);pointer-events:none}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
+  .marca span,.hero h1 span{color:#ff7aae}
 </style>
 </head>
 <body>
@@ -158,7 +161,7 @@
         <p class="info">4,7 ★ com 188 avaliações no Google</p>
       </div>
       <div class="copos">
-        <img src="fotos/copo-frutas.jpg" alt="Copo de açaí com banana, morango e sorvete por cima" width="675" height="1200">
+        <img fetchpriority="high" src="fotos/copo-frutas.jpg" alt="Copo de açaí com banana, morango e sorvete por cima" width="675" height="1200">
         <img src="fotos/copo.jpg" alt="Copo de açaí em camadas sobre a mesa de madeira da loja" width="674" height="1200">
       </div>
     </div>

@@ -16,11 +16,12 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#10237a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%2310237a'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Arial%2CHelvetica%2Csans-serif'%20font-size='38'%20font-weight='700'%20text-anchor='middle'%20fill='%23ffffff'%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;0,700;1,700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{--azul:#10237a;--azul-2:#0b1958;--azul-3:#1a3399;--verm:#e3262f;--verm-2:#c11b23;--ciano:#3dd6e8;--gelo:#f3f6fb;--tinta:#141a33;--tinta-2:#55607a;--fio:#dbe2ee}
+  :root{--azul:#10237a;--azul-2:#0b1958;--azul-3:#1a3399;--verm:#db1c25;--verm-2:#c11b23;--ciano:#3dd6e8;--gelo:#f3f6fb;--tinta:#141a33;--tinta-2:#55607a;--fio:#dbe2ee}
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--gelo);color:var(--tinta);font:17px/1.6 "Rubik",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -131,6 +132,7 @@
   .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
   @media (min-width:861px){footer{padding-bottom:24px}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -144,7 +146,7 @@
 
 <header class="topo">
   <div class="wrap">
-    <a class="logo" href="#inicio" aria-label="Auto Elétrica Marfá, início"><img src="fotos/logo.jpg" alt="Marfá Auto Elétrica" width="810" height="350"></a>
+    <a class="logo" href="#inicio" aria-label="Auto Elétrica Marfá, início"><img fetchpriority="high" src="fotos/logo.jpg" alt="Marfá Auto Elétrica" width="810" height="350"></a>
     <nav aria-label="Seções">
       <a href="#servicos">Serviços</a>
       <a href="#bateria">Bateria</a>

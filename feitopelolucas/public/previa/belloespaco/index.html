@@ -16,11 +16,12 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#4a2040">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%234a2040'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Arial%2CHelvetica%2Csans-serif'%20font-size='38'%20font-weight='700'%20text-anchor='middle'%20fill='%23ffffff'%3EB%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{--ameixa:#4a2040;--ameixa-2:#331529;--rosa:#e9c3c9;--rosa-2:#f6e4e6;--rosa-3:#fbf3f3;--ouro:#b98b4e;--tinta:#2b1d27;--tinta-2:#6e5a67;--fio:#ead4d8}
+  :root{--ameixa:#4a2040;--ameixa-2:#331529;--rosa:#e9c3c9;--rosa-2:#f6e4e6;--rosa-3:#fbf3f3;--ouro:#826033;--tinta:#2b1d27;--tinta-2:#6e5a67;--fio:#ead4d8}
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--rosa-3);color:var(--tinta);font:17px/1.65 "Jost",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -113,6 +114,9 @@
   .fixo{position:fixed;right:16px;bottom:16px;z-index:40;box-shadow:0 14px 30px -12px rgba(51,21,41,.7);transition:opacity .2s,transform .2s}
   .fixo.some{opacity:0;transform:translateY(20px);pointer-events:none}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  /* contraste */
+  .retoque .kicker{color:#e8c995}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -145,7 +149,7 @@
         <div class="nota"><b>5,0</b><span><i>★★★★★</i><br>189 avaliações no Google</span></div>
       </div>
       <div class="moldura">
-        <img src="fotos/loira.jpg" alt="Cliente de costas com cabelo loiro liso e alinhado após a progressiva" width="900" height="1200">
+        <img fetchpriority="high" src="fotos/loira.jpg" alt="Cliente de costas com cabelo loiro liso e alinhado após a progressiva" width="900" height="1200">
       </div>
     </div>
   </section>
@@ -170,7 +174,7 @@
       <div class="tit"><span class="kicker">Lembrete de retoque</span><h2 id="t-ret">Quando refazer a sua?</h2><p>Diga quando fez a última e como é o seu cabelo. A gente sugere a data e você já pede o horário.</p></div>
       <div class="calc">
         <div>
-          <div class="campo"><label for="ultima">Fiz a última progressiva em</label><input type="month" id="ultima"></div>
+          <div class="campo"><label for="u-mes">Fiz a última progressiva em</label><div style="display:grid;grid-template-columns:1.3fr 1fr;gap:10px"><select id="u-mes" aria-label="Mês da última progressiva"><option value="">Mês</option><option value="0">Janeiro</option><option value="1">Fevereiro</option><option value="2">Março</option><option value="3">Abril</option><option value="4">Maio</option><option value="5">Junho</option><option value="6">Julho</option><option value="7">Agosto</option><option value="8">Setembro</option><option value="9">Outubro</option><option value="10">Novembro</option><option value="11">Dezembro</option></select><select id="u-ano" aria-label="Ano da última progressiva"></select></div></div>
           <div class="campo"><label for="cresc">Meu cabelo cresce</label>
             <select id="cresc"><option value="7">No ritmo normal</option><option value="5">Rápido, a raiz aparece logo</option><option value="8">Devagar</option></select></div>
           <div class="campo"><label for="tipo">Meu cabelo é</label>
@@ -227,12 +231,13 @@
   var fixo = document.getElementById("fixo");
   if ("IntersectionObserver" in window) new IntersectionObserver(function(e){ fixo.classList.toggle("some", e[0].isIntersecting); }).observe(document.querySelector(".hero"));
 
+  (function(){ var y = new Date().getFullYear(); for (var k = y; k >= y - 3; k--) { var o = document.createElement("option"); o.value = k; o.textContent = k; document.getElementById("u-ano").appendChild(o); } })();
   var MES = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
-  var ult = document.getElementById("ultima"), cr = document.getElementById("cresc"), tp = document.getElementById("tipo");
+  var um = document.getElementById("u-mes"), ua = document.getElementById("u-ano"), cr = document.getElementById("cresc"), tp = document.getElementById("tipo");
   var zap = document.getElementById("r-zap"); zap.target = "_blank"; zap.rel = "noopener";
   function calc(){
-    if (!ult.value) return;
-    var p = ult.value.split("-"), a = +p[0], m = +p[1]-1;
+    if (um.value === "") return;
+    var a = +ua.value, m = +um.value;
     var meses = Math.max(4, +cr.value + (+tp.value));
     var d = new Date(a, m + meses, 1), hoje = new Date();
     var txt = MES[d.getMonth()] + " de " + d.getFullYear();
@@ -241,7 +246,7 @@
     document.getElementById("r-txt").textContent = atrasado ? "Já está na hora! Peça seu horário e deixe o cabelo alinhado de novo." : "Cerca de " + meses + " meses depois da última. Dá para reservar com antecedência.";
     zap.href = "https://wa.me/5519993997322?text=" + encodeURIComponent("Olá, Higor! Fiz minha última progressiva em " + MES[m] + " de " + a + ". Queria agendar o retoque para " + txt + ".");
   }
-  [ult, cr, tp].forEach(function(el){ el.addEventListener("change", calc); el.addEventListener("input", calc); });
+  [um, ua, cr, tp].forEach(function(el){ el.addEventListener("change", calc); el.addEventListener("input", calc); });
 })();
 </script>
 </body>

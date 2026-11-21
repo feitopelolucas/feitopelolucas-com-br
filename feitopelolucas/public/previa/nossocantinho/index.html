@@ -16,11 +16,12 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#c8202f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%23c8202f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Arial%2CHelvetica%2Csans-serif'%20font-size='38'%20font-weight='700'%20text-anchor='middle'%20fill='%23ffffff'%3EN%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Figtree:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{--verm:#c8202f;--verm-2:#a3151f;--preto:#161412;--preto-2:#24201d;--ouro:#f2b632;--creme:#fbf5ea;--tinta:#1d1a17;--tinta-2:#6a5f57;--fio:#e9dcc6}
+  :root{--verm:#c8202f;--verm-2:#9a141d;--preto:#161412;--preto-2:#24201d;--ouro:#f2b632;--creme:#fbf5ea;--tinta:#1d1a17;--tinta-2:#6a5f57;--fio:#e9dcc6}
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--creme);color:var(--tinta);font:17px/1.6 "Figtree",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -129,6 +130,7 @@
   .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
   @media (min-width:861px){footer{padding-bottom:24px}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -166,7 +168,7 @@
         <p class="status" id="status"><i aria-hidden="true"></i><span id="status-t">Seg a sex 16h à meia-noite · sáb e dom 12h às 20h30</span></p>
       </div>
       <div class="fotos-h">
-        <img src="fotos/chopp.jpg" alt="Capa do cardápio do Nosso Cantinho, com o logo e um copo de chopp" width="904" height="1200">
+        <img fetchpriority="high" src="fotos/chopp.jpg" alt="Capa do cardápio do Nosso Cantinho, com o logo e um copo de chopp" width="904" height="1200">
         <img src="fotos/prato.jpg" alt="Prato com filé empanado e salada" width="1200" height="902">
       </div>
     </div>

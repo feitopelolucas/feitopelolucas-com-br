@@ -16,11 +16,12 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#6e2f23">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%236e2f23'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Arial%2CHelvetica%2Csans-serif'%20font-size='38'%20font-weight='700'%20text-anchor='middle'%20fill='%23ffffff'%3EK%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Yellowtail&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{--marrom:#6e2f23;--marrom-2:#51211a;--laranja:#e2652a;--verm:#d8432c;--creme:#fbf4ea;--creme-2:#f4e6d2;--verde:#3aa655;--tinta:#2a1a15;--tinta-2:#6d5a51;--fio:#ead9c3}
+  :root{--marrom:#6e2f23;--marrom-2:#51211a;--laranja:#b84c19;--verm:#d8432c;--creme:#fbf4ea;--creme-2:#f4e6d2;--verde:#379e51;--tinta:#2a1a15;--tinta-2:#6d5a51;--fio:#ead9c3}
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--creme);color:var(--tinta);font:17px/1.55 "Source Sans 3",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -90,7 +91,7 @@
   .item p{margin:2px 0 0;color:var(--tinta-2);font-size:.92rem}
   .item .lado{text-align:right}
   .item .preco{font-weight:700;white-space:nowrap}
-  .item button{margin-top:6px;border:0;background:var(--creme-2);color:var(--marrom);font:700 .875rem "Source Sans 3",sans-serif;border-radius:8px;padding:7px 12px;cursor:pointer;min-height:36px}
+  .item button{margin-top:6px;border:0;background:var(--creme-2);color:var(--marrom);font:700 .875rem "Source Sans 3",sans-serif;border-radius:8px;padding:7px 12px;cursor:pointer;min-height:44px}
   .item button:hover{background:var(--laranja);color:#fff}
   .item.veg .n{color:var(--verde)}
   @media (max-width:820px){.menu{grid-template-columns:1fr}}
@@ -141,6 +142,7 @@
   footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   footer a{color:#ffb489;font-weight:700;text-decoration:none}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -178,7 +180,7 @@
         <p class="status" id="status"><i aria-hidden="true"></i><span id="status-t">Terça a domingo, a partir das 17h30</span></p>
       </div>
       <div class="pilha">
-        <img src="fotos/xsalada.jpg" alt="Lanche com bastante alface no pão de hambúrguer, ao lado de um suco" width="900" height="1200">
+        <img fetchpriority="high" src="fotos/xsalada.jpg" alt="Lanche com bastante alface no pão de hambúrguer, ao lado de um suco" width="900" height="1200">
         <img src="fotos/lanche.jpg" alt="Lanche aberto com batata frita na mesa" width="1200" height="900">
       </div>
     </div>

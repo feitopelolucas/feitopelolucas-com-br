@@ -16,6 +16,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#b0305c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%23b0305c'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Arial%2CHelvetica%2Csans-serif'%20font-size='38'%20font-weight='700'%20text-anchor='middle'%20fill='%23ffffff'%3ES%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -103,7 +104,7 @@
   .form label{display:block;font-weight:600;margin:14px 0 6px}
   .form label:first-child{margin-top:0}
   .form select,.form input[type=date]{width:100%;min-height:48px;border:1px solid var(--fio);border-radius:12px;padding:8px 12px;font:inherit;background:var(--creme)}
-  .form input[type=range]{width:100%;accent-color:var(--amora)}
+  .form input[type=range]{width:100%;height:44px;accent-color:var(--amora)}
   .conta{display:flex;justify-content:space-between;align-items:center;background:var(--rosa-2);border-radius:14px;padding:12px 16px;margin:16px 0}
   .conta b{font:400 1.8rem "Young Serif",serif;color:var(--amora)}
   .form .btn{width:100%}
@@ -139,6 +140,7 @@
   .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
   @media (min-width:861px){footer{padding-bottom:24px}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -176,7 +178,7 @@
         <p class="status" id="status"><i aria-hidden="true"></i><span id="status-t">Quinta a sábado 13h às 19h · domingo 10h30 às 13h30</span></p>
       </div>
       <div class="mesa">
-        <img src="fotos/milkshake.jpg" alt="Milkshake vegano com cobertura de biscoito e caramelo" width="675" height="1200">
+        <img fetchpriority="high" src="fotos/milkshake.jpg" alt="Milkshake vegano com cobertura de biscoito e caramelo" width="675" height="1200">
         <img src="fotos/sonho.jpg" alt="Sonho recheado com creme ao lado de uma xícara de café" width="675" height="1200">
       </div>
     </div>

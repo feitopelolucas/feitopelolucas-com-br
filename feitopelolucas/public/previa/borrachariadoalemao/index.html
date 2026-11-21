@@ -16,11 +16,12 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#c8281e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%23c8281e'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Arial%2CHelvetica%2Csans-serif'%20font-size='38'%20font-weight='700'%20text-anchor='middle'%20fill='%23ffffff'%3EA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{--verm:#c8281e;--verm-2:#9e1d15;--amar:#ffd54a;--amar-2:#f2c12e;--asfalto:#262626;--asfalto-2:#3a3a3a;--papel:#faf7f0;--tinta:#1f1f1f;--tinta-2:#5c5a55;--fio:#e7e1d3;--verde:#21a35a}
+  :root{--verm:#c8281e;--verm-2:#9e1d15;--amar:#ffd54a;--amar-2:#f2c12e;--asfalto:#262626;--asfalto-2:#3a3a3a;--papel:#faf7f0;--tinta:#1f1f1f;--tinta-2:#5c5a55;--fio:#e7e1d3;--verde:#1b854a}
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.6 "Source Sans 3",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -128,6 +129,7 @@
   .fixo{position:fixed;right:16px;bottom:16px;z-index:40;box-shadow:0 14px 30px -12px rgba(0,0,0,.6);transition:opacity .2s,transform .2s}
   .fixo.some{opacity:0;transform:translateY(20px);pointer-events:none}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -160,7 +162,7 @@
         <p class="info">4,7 ★ com 166 avaliações no Google</p>
       </div>
       <div class="fotos">
-        <img src="fotos/carro.jpg" alt="Roda sendo retirada de um carro escuro dentro da borracharia" width="1200" height="897">
+        <img fetchpriority="high" src="fotos/carro.jpg" alt="Roda sendo retirada de um carro escuro dentro da borracharia" width="1200" height="897">
         <img src="fotos/moto.jpg" alt="Alemão montando o pneu de uma moto no chão da oficina" width="900" height="1200">
         <img src="fotos/vazamento.jpg" alt="Pneu mergulhado na água para achar o furo" width="675" height="1200">
       </div>

@@ -15,12 +15,13 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#b84a5a">
+<meta name="theme-color" content="#ae4454">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%23ae4454'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Arial%2CHelvetica%2Csans-serif'%20font-size='38'%20font-weight='700'%20text-anchor='middle'%20fill='%23ffffff'%3EV%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Archivo:wght@400;500;600;800;900&display=swap" rel="stylesheet">
 <style>
-  :root{--rosa:#b84a5a;--rosa-2:#963848;--telha:#c86b3c;--creme:#fbf4ee;--asfalto:#23262b;--pare:#d42a2a;--tinta:#23262b;--tinta-2:#5f636b;--fio:#e8d9cf}
+  :root{--rosa:#ae4454;--rosa-2:#963848;--telha:#c86b3c;--creme:#fbf4ee;--asfalto:#23262b;--pare:#d42a2a;--tinta:#23262b;--tinta-2:#5f636b;--fio:#e8d9cf}
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--creme);color:var(--tinta);font:17px/1.6 "Archivo",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -117,6 +118,7 @@
   .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
   @media (min-width:861px){footer{padding-bottom:24px}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -150,7 +152,7 @@
         <p class="status" id="status"><i aria-hidden="true"></i><span id="status-t">Seg a sex 7h às 18h · sáb 7h às 14h</span></p>
       </div>
       <div class="esquina">
-        <img src="fotos/fachada.jpg" alt="Casa rosa da Borracharia Valdeci na esquina, com o letreiro escrito à mão e a placa de Pare" width="1200" height="900">
+        <img fetchpriority="high" src="fotos/fachada.jpg" alt="Casa rosa da Borracharia Valdeci na esquina, com o letreiro escrito à mão e a placa de Pare" width="1200" height="900">
         <div class="pare" aria-hidden="true"><span><b>PARE</b>e calibre</span></div>
       </div>
     </div>
