@@ -404,3 +404,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Olá, Alemão! Sou o Lucas, faço sites aqui em Campinas. Vi que a borracharia tem 4,7 no Google com 166 avaliações, todo mundo falando de serviço rápido e honesto, mas o perfil nem foi reivindicado ainda. Montei uma ideia de site: https://feitopelolucas.com.br/previa/borrachariadoalemao/
 > O cliente marca se é carro, moto ou caminhão, o que precisa, e se está parado na rua, e a mensagem chega pronta no seu WhatsApp. Também posso ajudar a assumir o perfil do Google. Se gostar, a gente conversa!
+
+---
+
+## 44. Led Motors Oficina Mecânica · /previa/ledmotors/
+
+**Pelo que vi:** a oficina não tem site. Existe o **ledmotorscampinas.com.br**, mas ele é só da loja de **seminovos** (Av. Mirandópolis, 309, com outro telefone e outro e-mail) e não fala da oficina. Também existe um "Led Motors Centro Automotivo" com 5,0 (14 avaliações) e telefone (19) 99513-8317. Parece ser o mesmo grupo; vale perguntar. A oficina tem 4,7 no Google com 164 avaliações, "mais de 10 anos no mercado", e as palavras mais citadas são "preço" (22) e "honestidade" (15). Cliente diz que confia "há uns 8 anos" e outro que só ali resolveram depois de 5 oficinas. WhatsApp (19) 97137-1667 (o do botão do Google) e fixo (19) 2513-2571. Abre de segunda a sexta, das 8h às 18h, e sábado das 8h às 12h. Pelo Facebook: mecânica geral para nacionais e importados, câmbio automático, direção hidráulica, alinhamento, balanceamento, borracharia e lava-jato. As fotos são do Google (fachada, salão, elevador e um Maverick). O site tem a checagem "sua revisão está em dia?": a pessoa digita o km atual e o da última troca, vê o que está vencendo e agenda no WhatsApp.
+**Por onde mandar:** WhatsApp (19) 97137-1667.
+
+> Olá, pessoal da Led Motors! Sou o Lucas, faço sites aqui em Campinas. Vi que a oficina tem 4,7 no Google com 164 avaliações, muita gente falando de honestidade, mas no Google só aparece o site da loja de seminovos, nada da oficina. Montei uma ideia: https://feitopelolucas.com.br/previa/ledmotors/
+> O cliente coloca a quilometragem, vê o que da revisão está vencendo e já agenda no WhatsApp de vocês. Tem também os serviços, as fotos e o mapa. Se gostarem, a gente conversa!

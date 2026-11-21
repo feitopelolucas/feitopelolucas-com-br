@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Led Motors · Oficina mecânica na Vila João Jorge</title>
+<meta name="description" content="Prévia de site para a Led Motors Oficina Mecânica, na Vila João Jorge, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/ledmotors/">
+<meta property="og:title" content="Prévia de site · Led Motors Oficina Mecânica">
+<meta property="og:description" content="Mecânica geral, câmbio automático, alinhamento e revisão, para nacionais e importados. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/ledmotors/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#14308a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--azul:#14308a;--azul-2:#0c1f5e;--azul-3:#e8edfb;--verm:#e0242f;--verm-2:#b81821;--branco:#fff;--cinza:#f4f5f8;--tinta:#141a2e;--tinta-2:#596079;--fio:#dfe2ea;--verde:#1fa65a;--amar:#f5a524}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--cinza);color:var(--tinta);font:16.5px/1.6 "Manrope",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Saira Condensed",Impact,sans-serif;font-weight:800;line-height:.98;margin:0;text-transform:uppercase;letter-spacing:.01em}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--amar);outline-offset:3px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  .wrap>*{min-width:0}
+
+  .previa{background:var(--azul-2);color:#b9c3e3;font-size:.8125rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:#ffd08a;font-weight:800;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .topo{background:#fff;border-bottom:4px solid var(--verm)}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:72px}
+  .marca{text-decoration:none;line-height:1}
+  .marca b{font:italic 800 2rem "Saira Condensed",sans-serif;color:var(--azul);text-transform:uppercase;letter-spacing:.02em}
+  .marca b span{color:var(--verm)}
+  .marca small{display:block;font-weight:700;font-size:.8125rem;color:var(--tinta-2);letter-spacing:.08em;text-transform:uppercase}
+  .status{font-weight:700;font-size:.875rem;display:inline-flex;align-items:center;gap:7px}
+  .status i{width:10px;height:10px;border-radius:50%;background:#9aa0b3}
+  .status.on i{background:var(--verde);box-shadow:0 0 0 4px rgba(31,166,90,.25)}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:12px 22px;border-radius:8px;font-weight:800;text-decoration:none;font-size:1rem;transition:transform .15s,background .15s;white-space:nowrap;border:0;cursor:pointer;font-family:inherit}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.verm{background:var(--verm);color:#fff}
+  .btn.verm:hover{background:var(--verm-2)}
+  .btn.azul{background:var(--azul);color:#fff}
+  .btn.verde{background:var(--verde);color:#fff}
+  .btn.linha{border:2px solid currentColor;background:transparent}
+
+  .hero{background:var(--azul);color:#fff;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-10%;top:0;bottom:0;width:45%;background:var(--verm);transform:skewX(-14deg);opacity:.95}
+  .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding-top:44px;padding-bottom:76px}
+  .k{display:inline-block;background:#fff;color:var(--azul);font:800 .9rem "Saira Condensed",sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:4px}
+  .hero h1{font-size:clamp(3rem,7.4vw,5.6rem);margin:16px 0 16px}
+  .hero p{font-size:1.1rem;color:#d4dbf2;max-width:30em;margin:0 0 26px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .numeros{display:flex;gap:28px;flex-wrap:wrap;margin-top:30px}
+  .numeros b{display:block;font:800 2.2rem "Saira Condensed",sans-serif;line-height:1}
+  .numeros span{font-size:.875rem;color:#b9c3e3}
+  .hero img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;border:5px solid #fff;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+  @media (max-width:880px){.hero::after{width:70%;right:-40%;opacity:.5}.hero .wrap{grid-template-columns:1fr;padding-top:26px}}
+
+  section{padding:76px 0}
+  .tit{max-width:660px;margin-bottom:28px}
+  .tit small{font-weight:800;color:var(--verm);letter-spacing:.14em;text-transform:uppercase;font-size:.8125rem}
+  .tit h2{font-size:clamp(2.4rem,5.4vw,3.6rem);margin-top:6px;color:var(--azul)}
+  .tit p{color:var(--tinta-2);margin:10px 0 0}
+
+  .servicos{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .serv{background:#fff;border:1px solid var(--fio);border-radius:12px;padding:20px;position:relative;overflow:hidden}
+  .serv::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--azul)}
+  .serv:nth-child(even)::before{background:var(--verm)}
+  .serv h3{font-size:1.45rem;color:var(--azul)}
+  .serv p{margin:4px 0 0;color:var(--tinta-2);font-size:.94rem}
+  @media (max-width:900px){.servicos{grid-template-columns:1fr 1fr}}
+  @media (max-width:480px){.servicos{grid-template-columns:1fr}}
+
+  /* Revisão */
+  .rev{background:#fff;border-top:1px solid var(--fio);border-bottom:1px solid var(--fio)}
+  .rev .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:start}
+  .campos label{display:block;font-weight:800;margin:0 0 6px}
+  .campos input,.campos select{width:100%;min-height:52px;border-radius:10px;border:2px solid var(--fio);font:inherit;font-size:1.05rem;padding:10px 14px;margin-bottom:16px;background:var(--cinza)}
+  .itens{display:grid;gap:10px;margin-bottom:16px}
+  .item{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;border:1px solid var(--fio);border-radius:12px;padding:14px 16px;background:var(--cinza)}
+  .item i{width:14px;height:14px;border-radius:50%;background:#9aa0b3}
+  .item.ok i{background:var(--verde)}
+  .item.logo i{background:var(--amar)}
+  .item.ja i{background:var(--verm)}
+  .item b{display:block}
+  .item small{color:var(--tinta-2)}
+  .item em{font-style:normal;font-weight:800;font-size:.875rem;white-space:nowrap}
+  .item.ja em{color:var(--verm)}
+  .item.logo em{color:#b26f00}
+  .item.ok em{color:var(--verde)}
+  .rev .btn{width:100%}
+  .rev .nota{font-size:.875rem;color:var(--tinta-2);margin:10px 0 0}
+  @media (max-width:880px){.rev .wrap{grid-template-columns:1fr}}
+
+  .galeria{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px}
+  .galeria figure{margin:0;position:relative;border-radius:14px;overflow:hidden}
+  .galeria img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4}
+  .galeria figure:first-child img{aspect-ratio:auto}
+  .galeria figcaption{position:absolute;left:10px;bottom:10px;background:rgba(12,31,94,.88);color:#fff;font-weight:700;font-size:.875rem;padding:5px 12px;border-radius:6px}
+  @media (max-width:760px){.galeria{grid-template-columns:1fr 1fr}.galeria figure:first-child{grid-column:1/-1}.galeria figure:first-child img{aspect-ratio:16/10}}
+
+  .falas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .falas blockquote{margin:0;background:#fff;border:1px solid var(--fio);border-radius:12px;padding:22px}
+  .falas cite{display:block;margin-top:10px;font-style:normal;font-weight:800;font-size:.875rem;color:var(--verm)}
+  @media (max-width:880px){.falas{grid-template-columns:1fr}}
+
+  .onde{background:var(--azul);color:#d4dbf2}
+  .onde .tit h2{color:#fff}
+  .onde .tit small{color:#ffb3b7}
+  .onde .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+  .horas{width:100%;border-collapse:collapse;margin-bottom:18px}
+  .horas td{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+  .horas td:last-child{text-align:right;font-weight:800;color:#fff}
+  .end{margin:0 0 22px}
+  .end b{color:#fff}
+  .end a{white-space:nowrap;font-weight:800;color:#fff}
+  .mapa{border-radius:14px;overflow:hidden;min-height:380px;background:var(--azul-2)}
+  .mapa iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+  @media (max-width:880px){.onde .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:var(--azul-2);color:#9fabd4;padding:24px 0 110px;font-size:.875rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:#ffd08a;font-weight:800;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:40;box-shadow:0 14px 30px -12px rgba(0,0,0,.5);transition:opacity .2s,transform .2s}
+  .fixo.some{opacity:0;transform:translateY(20px);pointer-events:none}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial da Led Motors. É uma ideia de site montada por Lucas para apresentar à oficina.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20da%20Led%20Motors%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Led Motors, início"><b>Led <span>Motors</span></b><small>Oficina mecânica</small></a>
+    <span class="status" id="status"><i></i><span>Seg. a sáb.</span></span>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="k">Nacionais e importados</span>
+        <h1 id="titulo">Oficina de confiança na Vila João Jorge</h1>
+        <p>Mecânica geral, câmbio automático, direção, alinhamento e balanceamento no mesmo lugar. Você acompanha o diagnóstico e sai sabendo o que foi feito.</p>
+        <div class="acoes">
+          <a class="btn verm" href="#revisao">Minha revisão está em dia?</a>
+          <a class="btn linha zap" href="https://wa.me/5519971371667?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20um%20or%C3%A7amento.">WhatsApp</a>
+        </div>
+        <div class="numeros">
+          <div><b>4,7 ★</b><span>164 avaliações no Google</span></div>
+          <div><b>10+</b><span>anos no mercado</span></div>
+        </div>
+      </div>
+      <img src="fotos/fachada.jpg" alt="Fachada azul, branca e vermelha da Led Motors com carros na frente" width="680" height="510">
+    </div>
+  </section>
+
+  <section aria-labelledby="t-serv">
+    <div class="wrap">
+      <div class="tit"><small>Serviços</small><h2 id="t-serv">Tudo para o seu carro</h2></div>
+      <div class="servicos">
+        <div class="serv"><h3>Mecânica geral</h3><p>Motor, suspensão, freios e arrefecimento.</p></div>
+        <div class="serv"><h3>Câmbio automático</h3><p>Diagnóstico e manutenção.</p></div>
+        <div class="serv"><h3>Direção hidráulica</h3><p>Vazamentos, barulhos e direção pesada.</p></div>
+        <div class="serv"><h3>Lava-jato</h3><p>Aproveite e leve o carro limpo.</p></div>
+        <div class="serv"><h3>Troca de óleo</h3><p>Óleo e filtros com revisão básica.</p></div>
+        <div class="serv"><h3>Alinhamento</h3><p>E balanceamento no mesmo lugar.</p></div>
+        <div class="serv"><h3>Borracharia</h3><p>Conserto e montagem de pneus.</p></div>
+        <div class="serv"><h3>Reparo elétrico</h3><p>Problemas que outras oficinas não acharam.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rev" id="revisao" aria-labelledby="t-rev">
+    <div class="wrap">
+      <div>
+        <div class="tit"><small>Checagem rápida</small><h2 id="t-rev">Sua revisão está em dia?</h2><p>Coloque a quilometragem e quando foi a última manutenção. A gente mostra o que já pode estar na hora.</p></div>
+        <div class="campos">
+          <label for="km">Quilometragem atual</label>
+          <input id="km" type="number" inputmode="numeric" min="0" step="500" value="62000">
+          <label for="kmo">Km da última troca de óleo</label>
+          <input id="kmo" type="number" inputmode="numeric" min="0" step="500" value="53000">
+          <label for="mes">Faz quanto tempo da última revisão?</label>
+          <select id="mes"><option value="3">Até 3 meses</option><option value="6" selected>Uns 6 meses</option><option value="12">Mais ou menos 1 ano</option><option value="24">2 anos ou mais</option></select>
+        </div>
+      </div>
+      <div aria-live="polite">
+        <div class="itens" id="itens"></div>
+        <a class="btn verde" id="env" href="https://wa.me/5519971371667">Agendar revisão no WhatsApp</a>
+        <p class="nota">Referência geral para carros de passeio. O manual do seu carro manda; a oficina confirma no diagnóstico.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-gal">
+    <div class="wrap">
+      <div class="tit"><small>Por dentro</small><h2 id="t-gal">Estrutura para todo tipo de carro</h2></div>
+      <div class="galeria">
+        <figure><img src="fotos/oficina.jpg" alt="Salão da oficina com vários carros em atendimento" loading="lazy" width="900" height="1200"><figcaption>Salão da oficina</figcaption></figure>
+        <figure><img src="fotos/elevador.jpg" alt="SUV Volkswagen no elevador com as rodas dianteiras desmontadas" loading="lazy" width="1200" height="900"><figcaption>Elevadores</figcaption></figure>
+        <figure><img src="fotos/maverick.jpg" alt="Ford Maverick azul clássico com o capô aberto" loading="lazy" width="1200" height="584"><figcaption>Até os clássicos</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-aval" style="padding-top:0">
+    <div class="wrap">
+      <div class="tit"><small>4,7 · 164 avaliações no Google</small><h2 id="t-aval">Honestidade em primeiro lugar</h2></div>
+      <div class="falas">
+        <blockquote>"Após ter levado em 5 mecânicas e não ter resolvido o problema, na Led Motors atendeu com qualidade e superou minhas expectativas."<cite>Leonardo · Google</cite></blockquote>
+        <blockquote>"Por isso há uns 8 anos confio nossos carros para a Led Motors."<cite>Avaliação no Google</cite></blockquote>
+        <blockquote>"Ótimos profissionais, preços excelentes e qualidade nos serviços."<cite>Resumo das avaliações · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:16px"><small>Onde fica</small><h2 id="t-onde">R. Vitoriano dos Anjos, 1093</h2></div>
+        <table class="horas">
+          <tr><td>Segunda a sexta</td><td>8h às 18h</td></tr>
+          <tr><td>Sábado</td><td>8h às 12h</td></tr>
+          <tr><td>Domingo</td><td>Fechado</td></tr>
+        </table>
+        <p class="end">Vila João Jorge · Campinas (SP) · tem sala de espera com ar-condicionado<br>WhatsApp <a class="zap" href="https://wa.me/5519971371667">(19) 97137-1667</a> · Fixo <a href="tel:+551925132571">(19) 2513-2571</a></p>
+        <div class="acoes">
+          <a class="btn verm zap" href="https://wa.me/5519971371667?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20um%20or%C3%A7amento.">WhatsApp</a>
+          <a class="btn linha" style="color:#fff" href="https://www.google.com/maps/dir/?api=1&amp;destination=Led+Motors+Oficina+Mec%C3%A2nica,+R.+Vitoriano+dos+Anjos,+1093,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Led Motors, R. Vitoriano dos Anjos, 1093, Campinas" src="https://www.google.com/maps?q=Led+Motors+Oficina+Mec%C3%A2nica,+R.+Vitoriano+dos+Anjos,+1093,+Campinas&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Led Motors Oficina Mecânica · Campinas</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn verm fixo some zap" id="fixo" href="https://wa.me/5519971371667?text=Ol%C3%A1%21%20Vim%20pelo%20site.">WhatsApp</a>
+
+<script>
+(function () {
+  document.querySelectorAll(".zap").forEach(function(a){a.target="_blank";a.rel="noopener";});
+  var fixo = document.getElementById("fixo");
+  if ("IntersectionObserver" in window) new IntersectionObserver(function(e){ fixo.classList.toggle("some", e[0].isIntersecting); }).observe(document.querySelector(".hero"));
+
+  var p = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",hour12:false}).formatToParts(new Date());
+  var d = p.find(function(x){return x.type==="weekday";}).value, h = Number(p.find(function(x){return x.type==="hour";}).value) % 24;
+  var ab = (["Mon","Tue","Wed","Thu","Fri"].indexOf(d) > -1 && h >= 8 && h < 18) || (d === "Sat" && h >= 8 && h < 12);
+  var st = document.getElementById("status");
+  if (ab) { st.classList.add("on"); st.querySelector("span").textContent = "Aberto agora"; } else st.querySelector("span").textContent = "Fechado agora";
+
+  var env = document.getElementById("env"); env.target = "_blank"; env.rel = "noopener";
+  function fmt(n){ return n.toLocaleString("pt-BR"); }
+  function at(){
+    var km = +document.getElementById("km").value || 0, kmo = +document.getElementById("kmo").value || 0, mes = +document.getElementById("mes").value;
+    var rodou = Math.max(0, km - kmo);
+    var L = [];
+    // óleo: 10.000 km ou 12 meses
+    var o = rodou >= 10000 || mes >= 12 ? "ja" : (rodou >= 8000 || mes >= 6 ? "logo" : "ok");
+    L.push(["Troca de óleo e filtro", "Rodou " + fmt(rodou) + " km desde a última", o]);
+    var a = mes >= 12 || rodou >= 10000 ? "ja" : (mes >= 6 ? "logo" : "ok");
+    L.push(["Alinhamento e balanceamento", "Indicado a cada 10 mil km ou se o volante puxar", a]);
+    var f = mes >= 24 ? "ja" : (mes >= 12 ? "logo" : "ok");
+    L.push(["Freios e fluido de freio", "Pastilhas a conferir; fluido a cada 2 anos", f]);
+    var ar = mes >= 12 || rodou >= 15000 ? "ja" : (mes >= 6 ? "logo" : "ok");
+    L.push(["Filtro de ar e de cabine", "Ar-condicionado com cheiro? Pode ser ele", ar]);
+    var rot = {ja:"Já está na hora", logo:"Em breve", ok:"Em dia"};
+    document.getElementById("itens").innerHTML = L.map(function(x){ return '<div class="item ' + x[2] + '"><i aria-hidden="true"></i><div><b>' + x[0] + '</b><small>' + x[1] + '</small></div><em>' + rot[x[2]] + '</em></div>'; }).join("");
+    var pend = L.filter(function(x){ return x[2] !== "ok"; }).map(function(x){ return x[0].toLowerCase(); });
+    env.href = "https://wa.me/5519971371667?text=" + encodeURIComponent("Olá, Led Motors! Vim pelo site. Meu carro está com " + fmt(km) + " km e queria agendar uma revisão" + (pend.length ? " (" + pend.join(", ") + ")" : "") + ".");
+  }
+  ["km","kmo","mes"].forEach(function(id){ var el = document.getElementById(id); el.addEventListener("input", at); el.addEventListener("change", at); });
+  at();
+})();
+</script>
+</body>
+</html>
