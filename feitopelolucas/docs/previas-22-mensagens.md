@@ -48,3 +48,12 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 > Olá, Fernando e equipe da A&F Car! Sou o Lucas, faço sites aqui em Campinas. Vocês têm 562 avaliações no Google (muita gente falando da entrega antes do prazo), mas ainda sem site. Montei uma ideia de como ele poderia ser: https://feitopelolucas.com.br/previa/afcar/
 > Tem antes e depois interativo, orçamento por foto no WhatsApp, os dois caminhos (particular ou seguradora) e o destaque de oficina Auto Premium da Porto. Se gostarem, a gente conversa!
 
+---
+
+## 6. Garagem do Pastel · /previa/garagemdopastel/
+
+**Pelo que vi:** o Instagram certo é **@garagemdoopastel** (com dois "o"), com 6,3 mil seguidores. Não é o @garagempastelaria1 da lista. O telefone é o mesmo do Google e o perfil está no panfleto que aparece no Maps. Pastel salgado de 30 cm e doce de 15 cm. Abre de quarta a sábado à noite e no domingo de manhã. O panfleto pede para antecipar o pedido. Completou 9 anos em setembro. Muitas artes do Instagram parecem feitas com IA e ficaram de fora. Usei só fotos reais de clientes do Maps.
+
+> Oi, tudo bem? Sou o Lucas, faço sites aqui em Campinas. A Garagem tem nota 4,9 com quase 500 avaliações e um pastel que é marca registrada, então montei uma ideia de site para vocês: https://feitopelolucas.com.br/previa/garagemdopastel/
+> Tem a régua dos 30 cm, os sabores e um botão de "antecipe seu pedido" que monta a mensagem pronta no WhatsApp de vocês. Se curtirem, me chama!
+

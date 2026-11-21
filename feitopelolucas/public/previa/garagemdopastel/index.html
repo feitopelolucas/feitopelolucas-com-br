@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Garagem do Pastel · Jardim Ouro Verde, Campinas</title>
+<meta name="description" content="Prévia de site para a Garagem do Pastel, no Jardim Ouro Verde, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/garagemdopastel/">
+<meta property="og:title" content="Prévia de site · Garagem do Pastel">
+<meta property="og:description" content="Pastel salgado de 30 cm, doce de 15 cm. O pastel do tamanho da sua fome. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/garagemdopastel/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#231a12">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='9' width='26' height='14' rx='4' fill='%23ffb703' stroke='%23231a12' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --noite:#231a12; --noite-2:#2f2419; --ouro:#ffb703; --ouro-claro:#ffe08a; --massa:#f2c77b; --brasa:#e85d04;
+    --creme:#fff7e6; --tinta:#231a12; --tinta-2:#6b5640; --fio:#f1dfbd; --rosa:#f28bb3;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--creme);color:var(--tinta);font:17px/1.6 "Rubik",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Bungee",Impact,sans-serif;font-weight:400;line-height:1.02;margin:0}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--brasa);outline-offset:3px}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+
+  .previa{background:#000;color:#d9cbb6;font-size:.82rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--ouro);font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  /* Portão */
+  .portao{background:var(--noite);color:#fff;position:relative;overflow:hidden}
+  .portao::before{content:"";position:absolute;inset:0 0 auto 0;height:100%;background:repeating-linear-gradient(180deg,rgba(255,255,255,.035) 0 3px,transparent 3px 22px);pointer-events:none}
+  .topo{position:relative;z-index:2}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:14px}
+  .marca{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .marca svg{width:48px;height:48px}
+  .marca b{font:400 1.25rem/1 "Bungee",sans-serif;color:var(--ouro)}
+  .marca small{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#cdbb9f;font-weight:700;margin-top:4px}
+  .status{font-weight:700;font-size:.9rem;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);padding:8px 14px;border-radius:999px}
+  .status::before{content:"";width:9px;height:9px;border-radius:50%;background:#a08d76}
+  .status.aberto::before{background:#5be37d;box-shadow:0 0 0 4px rgba(91,227,125,.2)}
+  @media (max-width:560px){.status{display:none}}
+
+  .hero{position:relative;z-index:1;padding:40px 0 0}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
+  .hero h1{font-size:clamp(2.6rem,7vw,5.2rem);color:var(--ouro);text-shadow:4px 4px 0 var(--brasa)}
+  .hero h1 span{display:block;color:#fff;text-shadow:none;font-size:.5em;margin-bottom:10px;letter-spacing:.04em}
+  .hero p{font-size:1.15rem;color:#eadbc4;max-width:30em;margin:22px 0 30px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:12px 24px;border-radius:10px;font-weight:800;text-decoration:none;font-size:1rem;border:0;cursor:pointer;font-family:inherit;transition:transform .15s,background .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn.ouro{background:var(--ouro);color:var(--noite)}
+  .btn.ouro:hover{background:var(--ouro-claro)}
+  .btn.linha{box-shadow:inset 0 0 0 2px rgba(255,255,255,.6);color:#fff}
+  .btn.escuro{background:var(--noite);color:var(--ouro)}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap;padding-bottom:56px}
+  .hero .foto{position:relative;align-self:stretch;display:flex;align-items:flex-end}
+  .hero .foto img{width:100%;max-height:520px;object-fit:cover;border-radius:22px 22px 0 0;border:6px solid var(--ouro);border-bottom:0}
+  .hero .foto .etq{position:absolute;top:18px;left:-18px;background:var(--brasa);color:#fff;font:400 1rem/1.1 "Bungee",sans-serif;padding:10px 14px;transform:rotate(-6deg);border-radius:6px}
+  @media (max-width:880px){.hero .wrap{grid-template-columns:1fr}.acoes{padding-bottom:10px}.hero .foto img{max-height:380px}.hero .foto .etq{left:10px}}
+
+  /* Régua */
+  .regua{background:var(--ouro);padding:64px 0;border-top:6px solid var(--noite)}
+  .regua h2{font-size:clamp(1.9rem,4.4vw,3rem);margin-bottom:8px}
+  .regua .sub{margin:0 0 36px;font-weight:500;color:#4a3a22}
+  .medida{display:grid;gap:26px}
+  .linha-med{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:center}
+  .linha-med b{font:400 1.1rem "Bungee",sans-serif}
+  .linha-med small{display:block;font-weight:600;color:#4a3a22}
+  .fita{position:relative;height:66px;background:var(--creme);border:3px solid var(--noite);border-radius:12px;overflow:hidden}
+  .fita .massa{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(180deg,#f7d48f,#e7a94a);border-right:3px dashed #b9772a;display:flex;align-items:center;padding-left:16px;font:400 1.2rem "Bungee",sans-serif;color:var(--noite)}
+  .fita .marcas{position:absolute;inset:auto 0 0 0;height:18px;background:repeating-linear-gradient(90deg,var(--noite) 0 2px,transparent 2px 3.333%)}
+  .s30 .massa{width:100%}
+  .s15 .massa{width:50%;background:linear-gradient(180deg,#f9c6d8,#ea8fb1);border-color:#b54a75}
+  .lado-a-lado{margin-top:30px;font-weight:600}
+  @media (max-width:640px){.linha-med{grid-template-columns:1fr;gap:8px}}
+
+  section{padding:86px 0}
+  .tit{max-width:640px;margin-bottom:36px}
+  .tit small{display:inline-block;background:var(--noite);color:var(--ouro);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.75rem;padding:5px 10px;border-radius:6px;margin-bottom:14px}
+  .tit h2{font-size:clamp(1.9rem,4.4vw,3rem)}
+  .tit p{color:var(--tinta-2);margin:12px 0 0}
+
+  /* Sabores */
+  .sabores{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .coluna{background:#fff;border:3px solid var(--noite);border-radius:20px;padding:26px 26px 22px}
+  .coluna h3{font-size:1.4rem;display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:14px}
+  .coluna h3 span{font:700 .9rem "Rubik",sans-serif;background:var(--ouro);padding:3px 10px;border-radius:999px}
+  .coluna.doce h3 span{background:var(--rosa)}
+  .coluna ul{list-style:none;margin:0;padding:0}
+  .coluna li{padding:11px 0;border-bottom:2px dotted var(--fio);font-weight:600;display:flex;justify-content:space-between;gap:10px}
+  .coluna li em{font-style:normal;font-weight:500;color:var(--tinta-2);font-size:.92rem}
+  .nota-sab{margin-top:16px;color:var(--tinta-2);font-size:.92rem}
+  @media (max-width:800px){.sabores{grid-template-columns:1fr}}
+
+  /* Fotos */
+  .fotos{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:14px;align-items:stretch}
+  .fotos img{width:100%;height:100%;object-fit:cover;border-radius:18px;border:3px solid var(--noite);max-height:460px}
+  @media (max-width:800px){.fotos{grid-template-columns:1fr 1fr}.fotos img:nth-child(2){grid-column:1/-1;order:-1;max-height:320px}}
+
+  /* Pedido */
+  .pedido{background:var(--noite);color:#fff}
+  .pedido .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:start}
+  .pedido .tit small{background:var(--ouro);color:var(--noite)}
+  .pedido .tit p{color:#d9cbb6}
+  .form{background:var(--noite-2);border:2px solid #4a3a2a;border-radius:22px;padding:26px}
+  .campo{margin-bottom:18px}
+  .campo>label,.campo>span{display:block;font-weight:700;margin-bottom:8px}
+  .qtd{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;background:#3a2d20;border-radius:12px;padding:10px 14px;margin-bottom:8px}
+  .qtd b{font-weight:600}
+  .qtd small{display:block;color:#bba98f;font-size:.82rem}
+  .contador{display:flex;align-items:center;gap:6px}
+  .contador button{width:44px;height:44px;border-radius:10px;border:0;background:var(--ouro);color:var(--noite);font:800 1.3rem "Rubik",sans-serif;cursor:pointer}
+  .contador output{min-width:30px;text-align:center;font-weight:800;font-size:1.15rem}
+  .form textarea,.form select{width:100%;border-radius:12px;border:2px solid #4a3a2a;background:#fff;color:var(--tinta);font:16px "Rubik",sans-serif;padding:12px}
+  .form textarea{min-height:84px;resize:vertical}
+  .form .btn{width:100%}
+  .form .aviso{font-size:.85rem;color:#bba98f;margin:12px 0 0}
+  .passos-p{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:14px}
+  .passos-p li{display:flex;gap:14px;align-items:flex-start;color:#eadbc4}
+  .passos-p li b{flex:none;width:38px;height:38px;border-radius:50%;background:var(--ouro);color:var(--noite);display:grid;place-items:center;font:400 1rem "Bungee",sans-serif}
+  @media (max-width:880px){.pedido .wrap{grid-template-columns:1fr}}
+
+  /* Avaliações */
+  .falas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .falas blockquote{margin:0;background:#fff;border:3px solid var(--noite);border-radius:18px;padding:22px;font-weight:500;box-shadow:6px 6px 0 var(--ouro)}
+  .falas cite{display:block;margin-top:10px;font-style:normal;font-weight:800;font-size:.85rem;color:var(--tinta-2)}
+  .grande{font:400 1.2rem "Bungee",sans-serif;margin-bottom:26px}
+  .grande b{font-size:2.6rem;color:var(--brasa)}
+  @media (max-width:880px){.falas{grid-template-columns:1fr}}
+
+  /* Onde */
+  .onde{background:var(--ouro-claro);border-top:6px solid var(--noite)}
+  .onde .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:36px}
+  .horas{width:100%;border-collapse:collapse;margin:4px 0 22px;background:#fff;border:3px solid var(--noite);border-radius:14px;overflow:hidden}
+  .horas td{padding:11px 14px;border-bottom:2px solid var(--fio);font-weight:600}
+  .horas td:last-child{text-align:right}
+  .horas tr.hoje td{background:var(--noite);color:var(--ouro)}
+  .horas tr:last-child td{border-bottom:0}
+  .end{font-weight:500;margin:0 0 18px}
+  .mapa{border:3px solid var(--noite);border-radius:20px;overflow:hidden;min-height:380px}
+  .mapa iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+  @media (max-width:880px){.onde .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:var(--noite);color:#bba98f;padding:24px 0 100px;font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--ouro);font-weight:700;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 10px 24px rgba(0,0,0,.35);transition:opacity .3s,transform .3s}
+  .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
+  @media (min-width:881px){footer{padding-bottom:24px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial da Garagem do Pastel. É uma ideia de site montada por Lucas para apresentar à pastelaria.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20da%20Garagem%20do%20Pastel%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<div class="portao">
+  <header class="topo">
+    <div class="wrap">
+      <a class="marca" href="#inicio" aria-label="Garagem do Pastel, início">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 22 24 8l20 14v20H4Z" fill="#ffb703" stroke="#000" stroke-width="2"/><path d="M10 26h28v16H10Z" fill="#231a12"/><path d="M10 30h28M10 34h28M10 38h28" stroke="#4a3a2a" stroke-width="2"/><rect x="14" y="27" width="20" height="9" rx="4" fill="#f2c77b" stroke="#b9772a" stroke-width="1.5"/><path d="M16 31.5h16" stroke="#b9772a" stroke-dasharray="2 2"/></svg>
+        <span><b>Garagem do Pastel</b><small>Jardim Ouro Verde · Campinas</small></span>
+      </a>
+      <span class="status" id="status">Quarta a domingo</span>
+    </div>
+  </header>
+
+  <section class="hero" id="inicio" style="padding-bottom:0" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <h1 id="titulo"><span>O pastel do tamanho</span>da sua fome.</h1>
+        <p>Pastel salgado de 30 centímetros e doce de 15, frito na hora e recheado até a ponta. Desde a primeira mordida já tem recheio. Há 9 anos no Ouro Verde, pertinho da Igreja Santo Expedito.</p>
+        <div class="acoes">
+          <a class="btn ouro" href="#pedido"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 7H6"/><circle cx="10" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg>Antecipar meu pedido</a>
+          <a class="btn linha" href="#sabores">Ver os sabores</a>
+        </div>
+      </div>
+      <div class="foto">
+        <img src="fotos/meio-a-meio.jpg" alt="Dois pastéis grandes no prato: um doce de Nutella com Ouro Branco e um de carne com azeitona" width="900" height="1600">
+        <span class="etq">30 cm!</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<main>
+  <section class="regua" aria-labelledby="t-regua">
+    <div class="wrap">
+      <h2 id="t-regua">Não é exagero. É régua.</h2>
+      <p class="sub">Compare com o pastel de feira que você conhece.</p>
+      <div class="medida">
+        <div class="linha-med"><div><b>Salgado</b><small>30 cm</small></div><div class="fita s30" role="img" aria-label="Pastel salgado com 30 centímetros"><div class="massa">30 cm de pastel</div><div class="marcas"></div></div></div>
+        <div class="linha-med"><div><b>Doce</b><small>15 cm</small></div><div class="fita s15" role="img" aria-label="Pastel doce com 15 centímetros"><div class="massa">15 cm</div><div class="marcas"></div></div></div>
+      </div>
+      <p class="lado-a-lado">Dica da casa: um salgado para matar a fome e um doce para fechar. Teve cliente que não aguentou o doce e já marcou de voltar.</p>
+    </div>
+  </section>
+
+  <section id="sabores" aria-labelledby="t-sab">
+    <div class="wrap">
+      <div class="tit">
+        <small>Cardápio</small>
+        <h2 id="t-sab">Sabores que saem da garagem</h2>
+        <p>Alguns dos queridinhos. O cardápio completo vem impresso no saquinho e no WhatsApp.</p>
+      </div>
+      <div class="sabores">
+        <div class="coluna">
+          <h3>Salgados <span>30 cm</span></h3>
+          <ul>
+            <li>Carne <em>clássico</em></li>
+            <li>Carne com azeitona <em>do panfleto</em></li>
+            <li>Quatro queijos <em>derretendo</em></li>
+            <li>E outros sabores <em>pergunte no Whats</em></li>
+          </ul>
+        </div>
+        <div class="coluna doce">
+          <h3>Doces <span>15 cm</span></h3>
+          <ul>
+            <li>Nutella com Ouro Branco <em>“o melhor”</em></li>
+            <li>Kinder Bueno <em>com chocolate</em></li>
+            <li>E outros sabores <em>pergunte no Whats</em></li>
+          </ul>
+        </div>
+      </div>
+      <p class="nota-sab">Aceitamos crédito e débito.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:0" aria-label="Fotos dos clientes">
+    <div class="wrap">
+      <div class="fotos">
+        <img src="fotos/mesa.jpg" alt="Mesa com pastéis no saquinho, refrigerantes e potes de vinagrete" loading="lazy" width="1200" height="900">
+        <img src="fotos/na-mao.jpg" alt="Pastel de carne mordido, recheado até a borda" loading="lazy" width="900" height="1200">
+        <img src="fotos/sacos.jpg" alt="Dois pastéis no saquinho com a lista de sabores impressa" loading="lazy" width="1200" height="1600">
+      </div>
+    </div>
+  </section>
+
+  <section class="pedido" id="pedido" aria-labelledby="t-ped">
+    <div class="wrap">
+      <div>
+        <div class="tit">
+          <small>Antecipe seu pedido</small>
+          <h2 id="t-ped" style="color:var(--ouro)">Chegue e já pegue quentinho</h2>
+          <p>Nas noites cheias a fila anda rápido, mas quem pede antes não espera nada. Monte o pedido aqui e ele vai pronto para o WhatsApp da Garagem.</p>
+        </div>
+        <ul class="passos-p">
+          <li><b>1</b><span>Escolha quantos salgados e doces.</span></li>
+          <li><b>2</b><span>Diga os sabores e o horário que você chega.</span></li>
+          <li><b>3</b><span>Envie no WhatsApp e confirme com a equipe.</span></li>
+        </ul>
+      </div>
+      <form class="form" id="form-pedido">
+        <div class="campo">
+          <span>Quantidade</span>
+          <div class="qtd"><div><b>Pastel salgado</b><small>30 cm</small></div><div class="contador"><button type="button" data-alvo="sal" data-d="-1" aria-label="Menos salgado">−</button><output id="sal">1</output><button type="button" data-alvo="sal" data-d="1" aria-label="Mais salgado">+</button></div></div>
+          <div class="qtd"><div><b>Pastel doce</b><small>15 cm</small></div><div class="contador"><button type="button" data-alvo="doce" data-d="-1" aria-label="Menos doce">−</button><output id="doce">0</output><button type="button" data-alvo="doce" data-d="1" aria-label="Mais doce">+</button></div></div>
+        </div>
+        <div class="campo">
+          <label for="sabores-txt">Sabores</label>
+          <textarea id="sabores-txt" placeholder="Ex.: 1 carne com azeitona, 1 Nutella com Ouro Branco"></textarea>
+        </div>
+        <div class="campo">
+          <label for="chegada">Que horas você chega?</label>
+          <select id="chegada">
+            <option>Assim que abrir</option><option>Daqui a 30 minutos</option><option>Daqui a 1 hora</option><option>Vou combinar pelo WhatsApp</option>
+          </select>
+        </div>
+        <button class="btn ouro" type="submit"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>Enviar pedido no WhatsApp</button>
+        <p class="aviso">O pedido só vale depois que a equipe confirmar pelo WhatsApp.</p>
+      </form>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="tit"><small>Quem já comeu</small><h2 id="t-aval">Nota 4,9. Sério.</h2></div>
+      <p class="grande"><b>4,9</b> com 484 avaliações no Google</p>
+      <div class="falas">
+        <blockquote>Pastel enorme, bem recheado, a primeira mordida já tem recheio. Fora o atendimento, que é maravilhoso.<cite>Eloa · Google</cite></blockquote>
+        <blockquote>Pessoas humildes, atendimento bom demais. Fora o pastel, o melhor de Campinas.<cite>Gabriel · Google</cite></blockquote>
+        <blockquote>Adorei o pastel. É um lugar ótimo, tem um parque lindo na frente.<cite>Resumo das avaliações · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:18px"><small>Onde e quando</small><h2 id="t-onde">A garagem abre à noite</h2></div>
+        <table class="horas" id="horas">
+          <tr data-d="1"><td>Segunda e terça</td><td>Fechado</td></tr>
+          <tr data-d="3"><td>Quarta a sábado</td><td>19h às 23h</td></tr>
+          <tr data-d="0"><td>Domingo</td><td>8h30 às 13h</td></tr>
+        </table>
+        <p class="end">Av. Jacaúna, 2381 · Jardim Ouro Verde, Campinas<br>Pertinho da Igreja Santo Expedito, com um parque em frente.</p>
+        <div class="acoes" style="padding:0">
+          <a class="btn escuro" href="https://www.google.com/maps/dir/?api=1&amp;destination=Garagem+do+Pastel,+Av.+Jaca%C3%BAna,+2381,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn ouro zap" href="https://wa.me/5519992992661">(19) 99299-2661</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Garagem do Pastel, Av. Jacaúna, 2381, Jardim Ouro Verde, Campinas" src="https://www.google.com/maps?q=Garagem+do+Pastel,+Av.+Jaca%C3%BAna,+2381+-+Jardim+Ouro+Verde,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Garagem do Pastel · Ouro Verde, Campinas · <a href="https://www.instagram.com/garagemdoopastel/" target="_blank" rel="noopener">@garagemdoopastel</a></span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn ouro fixo some" href="#pedido">Pedir</a>
+
+<script>
+(function () {
+  document.querySelectorAll(".zap").forEach(function(a){a.target="_blank";a.rel="noopener";});
+  var Q = {sal:1, doce:0};
+  document.querySelectorAll(".contador button").forEach(function(b){
+    b.addEventListener("click", function(){
+      var k = b.dataset.alvo; Q[k] = Math.max(0, Math.min(20, Q[k] + parseInt(b.dataset.d,10)));
+      document.getElementById(k).textContent = Q[k];
+    });
+  });
+  document.getElementById("form-pedido").addEventListener("submit", function(e){
+    e.preventDefault();
+    if (!Q.sal && !Q.doce) { alert("Escolha pelo menos um pastel."); return; }
+    var linhas = ["Olá! Quero antecipar um pedido:"];
+    if (Q.sal) linhas.push("• " + Q.sal + " pastel(éis) salgado(s) de 30 cm");
+    if (Q.doce) linhas.push("• " + Q.doce + " pastel(éis) doce(s) de 15 cm");
+    var s = document.getElementById("sabores-txt").value.trim(); if (s) linhas.push("Sabores: " + s);
+    linhas.push("Chegada: " + document.getElementById("chegada").value);
+    window.open("https://wa.me/5519992992661?text=" + encodeURIComponent(linhas.join("\n")), "_blank", "noopener");
+  });
+  var H = {0:[8.5,13],3:[19,23],4:[19,23],5:[19,23],6:[19,23]};
+  try {
+    var p = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+    var g = function(t){return (p.find(function(x){return x.type===t})||{}).value};
+    var d = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"));
+    var h = (parseInt(g("hour"),10)%24) + parseInt(g("minute"),10)/60;
+    var linha = d===0 ? 0 : (d<=2 ? 1 : 3);
+    var tr = document.querySelector('#horas tr[data-d="'+linha+'"]'); if (tr) tr.classList.add("hoje");
+    var st = document.getElementById("status");
+    if (H[d] && h >= H[d][0] && h < H[d][1]) { st.classList.add("aberto"); st.textContent = "Aberto agora · fritando"; }
+    else if (H[d] && h < H[d][0]) st.textContent = "Abre hoje às " + (d===0 ? "8h30" : "19h");
+    else st.textContent = "Fechado agora";
+  } catch (e) {}
+  var f = document.querySelector(".fixo"), t = document.querySelector(".portao");
+  if (f && t && "IntersectionObserver" in window) new IntersectionObserver(function(e){f.classList.toggle("some", e[0].isIntersecting)}).observe(t);
+})();
+</script>
+</body>
+</html>
