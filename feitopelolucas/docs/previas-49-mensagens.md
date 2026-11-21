@@ -250,3 +250,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Olá! Sou o Lucas, faço sites aqui em Campinas. A Borracharia Valdeci tem 4,9 no Google com mais de 200 avaliações, mas o perfil nem foi reivindicado ainda e quem procura só acha o telefone. Montei uma ideia de site com a cara da casa rosa da esquina: https://feitopelolucas.com.br/previa/borrachariavaldeci/
 > Tem o horário com aviso de aberta agora, os serviços e o botão de ligar. Também posso ajudar a assumir o perfil do Google. Se gostarem, a gente conversa!
+
+---
+
+## 27. Agromascote Pet Shop · /previa/agromascote/
+
+**Pelo que vi:** Instagram **@agromascote** (1,2 mil seguidores, posts de promoção) e Facebook @agromascotejambeiro, sem site. O perfil do Google **não foi reivindicado**. Um post fala em "Unidade 03 da Agromascote", então **devem ter 3 lojas**; o site cobre a do Parque Jambeiro, que é a da lista. Disk e WhatsApp (19) 3276-2910. Segunda a sexta das 8h às 18h20, sábado das 8h às 15h e domingo das 8h às 12h30. Vendem rações, medicamentos e acessórios, e fazem banho e tosa com entrega. O site tem um "pedido de ração em 20 segundos" que manda tudo pronto no WhatsApp. **Atenção:** avaliações antigas (4 anos) reclamam de entregas feitas pela Magalu, onde eles também vendem.
+**Por onde mandar:** WhatsApp (19) 3276-2910.
+
+> Oi, pessoal da Agromascote! Sou o Lucas, faço sites aqui em Campinas. Vi que a loja do Jambeiro tem 4,7 no Google com mais de 200 avaliações, mas o perfil ainda nem foi reivindicado e não tem site. Montei uma ideia: https://feitopelolucas.com.br/previa/agromascote/
+> O cliente escolhe para quem é a ração, escreve o produto e manda o pedido pronto no WhatsApp de vocês, com entrega ou retirada. Dá para incluir as outras unidades também. Se gostarem, a gente conversa!
