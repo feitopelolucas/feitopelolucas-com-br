@@ -130,3 +130,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, pessoal da GelaGoela! Sou o Lucas, faço sites aqui em Campinas. Vi que vocês têm o cardápio online e 4,7 no Google, mas quem busca o nome não acha um site da loja. Montei uma ideia de como ele poderia ser: https://feitopelolucas.com.br/previa/gelagoela/
 > Ele mostra os tamanhos e preços, o fondue e a garrafinha, o horário com aviso de aberto agora, e todo botão de pedido leva para o cardápio online de vocês. Se gostarem, a gente conversa!
+
+---
+
+## 15. Auto Elétrica Saudade · /previa/eletricasaudade/
+
+**Pelo que vi:** sem site, sem Instagram e **sem WhatsApp**; só o fixo **(19) 3238-8553**. Segunda a sexta das 8h às 18h e sábado das 8h às 12h. O número aparece como 679 no Google e 609 em vários guias; usei o do Google. Avaliações citam muito o **Paulo**: diagnóstico preciso, valor informado antes e "deixo de manhã e retiro à tarde". Um cliente dá a dica de ligar antes ou chegar cedo porque o movimento é grande. Todos os botões do site ligam para o fixo. **Atenção:** o resumo do Google destaca uma reclamação sobre carga de bateria; não usei.
+**Por onde mandar:** ligar no (19) 3238-8553 ou ir pessoalmente (não achei WhatsApp).
+
+> Oi, Paulo! Sou o Lucas, faço sites aqui em Campinas. A Auto Elétrica Saudade tem 4,7 no Google com quase 300 avaliações, e o que mais aparece é que você acha o defeito e fala o valor antes. Montei uma ideia de site em cima disso: https://feitopelolucas.com.br/previa/eletricasaudade/
+> Tem o horário com aviso de aberto agora, os serviços e um botão de ligar direto. Se quiser, dá para colocar um WhatsApp para orçamento também. Se gostar, a gente conversa!

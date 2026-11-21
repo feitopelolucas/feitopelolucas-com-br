@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Auto Elétrica Saudade · Na Baden Powell, Campinas</title>
+<meta name="description" content="Prévia de site para a Auto Elétrica Saudade, na Av. Baden Powell, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/eletricasaudade/">
+<meta property="og:title" content="Prévia de site · Auto Elétrica Saudade">
+<meta property="og:description" content="Diagnóstico preciso e valor combinado antes, na Baden Powell. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/eletricasaudade/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#173a63">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--azul:#173a63;--azul-2:#0f2846;--ocre:#f0a028;--ocre-2:#d4860f;--areia:#f7f1e6;--tinta:#16202c;--tinta-2:#596472;--fio:#e3dccd}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--areia);color:var(--tinta);font:17px/1.6 "Instrument Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;line-height:1;margin:0;letter-spacing:-.02em}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--ocre);outline-offset:3px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  .wrap>*{min-width:0}
+
+  .previa{background:var(--azul-2);color:#b9c6d6;font-size:.8125rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--ocre);font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:74px}
+  .marca{text-decoration:none;display:flex;align-items:center;gap:10px}
+  .marca .raio{width:40px;height:40px;border-radius:10px;background:var(--azul);display:grid;place-items:center;flex:none}
+  .marca .raio svg{width:22px;height:22px;color:var(--ocre)}
+  .marca b{font:800 1.25rem/1 "Bricolage Grotesque",sans-serif;display:block}
+  .marca small{font-size:.8125rem;color:var(--tinta-2);font-weight:600}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:12px 22px;border-radius:12px;font-weight:700;text-decoration:none;font-size:1rem;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn.ocre{background:var(--ocre);color:var(--azul-2)}
+  .btn.ocre:hover{background:var(--ocre-2)}
+  .btn.azul{background:var(--azul);color:#fff}
+  .btn.linha{border:2px solid currentColor}
+  .btn.peq{min-height:44px;padding:8px 16px;font-size:.94rem}
+
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding-top:36px;padding-bottom:70px}
+  .hero .kick{font-weight:700;color:var(--ocre-2);letter-spacing:.12em;text-transform:uppercase;font-size:.8125rem}
+  .hero h1{font-size:clamp(2.6rem,6.4vw,4.6rem);margin:14px 0 16px;color:var(--azul)}
+  .hero h1 span{color:var(--ocre-2)}
+  .hero p{font-size:1.14rem;color:var(--tinta-2);max-width:30em;margin:0 0 24px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .status{margin-top:20px;display:inline-flex;align-items:center;gap:10px;font-weight:700}
+  .status i{width:11px;height:11px;border-radius:50%;background:#aaa;flex:none}
+  .status.on i{background:#2a9d55;box-shadow:0 0 0 5px rgba(42,157,85,.18)}
+  .card-hero{background:var(--azul);color:#d8e2ee;border-radius:24px;overflow:hidden}
+  .card-hero img{width:100%;aspect-ratio:16/10;object-fit:cover}
+  .card-hero div{padding:20px 22px 24px}
+  .card-hero b{display:block;font:800 1.4rem "Bricolage Grotesque",sans-serif;color:#fff;margin-bottom:4px}
+  @media (max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:20px}}
+
+  section{padding:80px 0}
+  .tit{max-width:640px;margin-bottom:32px}
+  .tit small{font-weight:700;color:var(--ocre-2);letter-spacing:.12em;text-transform:uppercase;font-size:.8125rem}
+  .tit h2{font-size:clamp(2rem,4.6vw,3.1rem);margin-top:6px;color:var(--azul)}
+  .tit p{color:var(--tinta-2);margin:10px 0 0}
+
+  /* Como funciona */
+  .dia{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:#fff;border:1px solid var(--fio);border-radius:24px;overflow:hidden}
+  .etapa{padding:26px 24px;border-right:1px solid var(--fio)}
+  .etapa:last-child{border-right:0}
+  .etapa .h{font:800 2rem "Bricolage Grotesque",sans-serif;color:var(--ocre-2)}
+  .etapa h3{font-size:1.35rem;margin:8px 0 6px;color:var(--azul)}
+  .etapa p{margin:0;color:var(--tinta-2)}
+  @media (max-width:820px){.dia{grid-template-columns:1fr}.etapa{border-right:0;border-bottom:1px solid var(--fio)}}
+
+  /* Serviços */
+  .serv{background:var(--azul);color:#d8e2ee}
+  .serv .tit h2{color:#fff}
+  .serv .tit small{color:var(--ocre)}
+  .serv .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+  .lista{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .lista li{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px 16px;font-weight:600}
+  .lista li span{display:block;font-weight:400;font-size:.92rem;color:#a9b9cc}
+  .serv img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:22px}
+  @media (max-width:880px){.serv .wrap{grid-template-columns:1fr}.serv img{aspect-ratio:4/3}}
+  @media (max-width:480px){.lista{grid-template-columns:1fr}}
+
+  /* Avaliações */
+  .falas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .falas blockquote{margin:0;background:#fff;border:1px solid var(--fio);border-radius:20px;padding:24px;font-weight:500}
+  .falas blockquote::before{content:"★★★★★";display:block;color:var(--ocre-2);letter-spacing:2px;margin-bottom:8px}
+  .falas cite{display:block;margin-top:12px;font-style:normal;font-weight:700;font-size:.875rem;color:var(--azul)}
+  @media (max-width:880px){.falas{grid-template-columns:1fr}}
+
+  /* Onde */
+  .onde{background:#fff;border-top:1px solid var(--fio)}
+  .onde .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+  .dica{background:var(--ocre);color:var(--azul-2);border-radius:16px;padding:16px 18px;font-weight:600;margin-bottom:20px}
+  .horas{width:100%;border-collapse:collapse;margin-bottom:18px}
+  .horas td{padding:9px 0;border-bottom:1px solid var(--fio)}
+  .horas td:last-child{text-align:right;font-weight:700}
+  .horas tr.hoje td{color:var(--ocre-2)}
+  .end{margin:0 0 22px;color:var(--tinta-2)}
+  .end b{color:var(--tinta)}
+  .end a{white-space:nowrap;color:var(--azul);font-weight:700}
+  .mapa{border-radius:20px;overflow:hidden;min-height:400px;background:var(--areia)}
+  .mapa iframe{width:100%;height:100%;min-height:400px;border:0;display:block}
+  @media (max-width:880px){.onde .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:var(--azul-2);color:#a2b2c6;padding:24px 0 100px;font-size:.875rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--ocre);font-weight:700;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 12px 26px -10px rgba(0,0,0,.45);transition:opacity .3s,transform .3s}
+  .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
+  @media (min-width:861px){footer{padding-bottom:24px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial da Auto Elétrica Saudade. É uma ideia de site montada por Lucas para apresentar à oficina.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20da%20Auto%20El%C3%A9trica%20Saudade%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Auto Elétrica Saudade, início"><span class="raio"><svg viewBox="0 0 22 22" fill="currentColor" aria-hidden="true"><path d="M12.5 1 3 12.5h6.5L8 21l10-12h-6.5z"/></svg></span><span><b>Auto Elétrica Saudade</b><small>Baden Powell · Campinas</small></span></a>
+    <a class="btn ocre peq" href="tel:+551932388553">Ligar</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="kick">Auto elétrica no Jardim Nova Europa</span>
+        <h1 id="titulo">Diagnóstico certeiro e <span>valor dito antes.</span></h1>
+        <p>Farol, lâmpada, bateria e toda a parte elétrica do carro. O Paulo explica o problema, diz quanto vai ficar e entrega no combinado: deixa de manhã e busca à tarde.</p>
+        <div class="acoes">
+          <a class="btn azul" href="tel:+551932388553"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>Ligar (19) 3238-8553</a>
+          <a class="btn linha" href="https://www.google.com/maps/dir/?api=1&amp;destination=Auto+El%C3%A9trica+Saudade,+Av.+Baden+Powell,+679,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+        </div>
+        <p class="status" id="status"><i aria-hidden="true"></i><span id="status-t">Seg a sex 8h às 18h · sáb 8h às 12h</span></p>
+      </div>
+      <div class="card-hero">
+        <img src="fotos/macaco.jpg" alt="Carros com o capô aberto em atendimento no pátio da auto elétrica" width="1200" height="675">
+        <div><b>4,7 ★ · 283 avaliações</b>"Neste ramo, não existe em Campinas e região profissional melhor."</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:20px" aria-labelledby="t-dia">
+    <div class="wrap">
+      <div class="tit"><small>Como funciona</small><h2 id="t-dia">Sem surpresa na hora de pagar</h2></div>
+      <div class="dia">
+        <div class="etapa"><span class="h">1</span><h3>Ligue ou chegue cedo</h3><p>Coisa simples, como lâmpada, se resolve na hora. Para o resto, vale ligar antes: o movimento é grande.</p></div>
+        <div class="etapa"><span class="h">2</span><h3>Diagnóstico e valor</h3><p>O defeito é encontrado e o preço é informado com clareza antes de mexer.</p></div>
+        <div class="etapa"><span class="h">3</span><h3>Pronto no combinado</h3><p>Deixe pela manhã e retire à tarde, dentro do que foi combinado.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="serv" aria-labelledby="t-serv">
+    <div class="wrap">
+      <div>
+        <div class="tit"><small>Serviços</small><h2 id="t-serv">Da lâmpada à pane elétrica</h2></div>
+        <ul class="lista">
+          <li>Faróis<span>Conserto e regulagem</span></li>
+          <li>Lâmpadas<span>Troca rápida, na hora</span></li>
+          <li>Bateria<span>Teste, carga e troca</span></li>
+          <li>Partida e alternador<span>Carro que não pega</span></li>
+          <li>Pane elétrica<span>Curto, fusível, chicote</span></li>
+          <li>Acessórios<span>Vidros, travas e luzes</span></li>
+        </ul>
+      </div>
+      <img src="fotos/servico.jpg" alt="Carro com o capô aberto na calçada da oficina" loading="lazy" width="900" height="1200">
+    </div>
+  </section>
+
+  <section aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="tit"><small>O que dizem do Paulo</small><h2 id="t-aval">Correto e com preço justo</h2></div>
+      <div class="falas">
+        <blockquote>O diagnóstico é preciso e o valor já é informado com clareza. Deixo o carro pela manhã e retiro à tarde. Nunca tive surpresas.<cite>Bruno · Google</cite></blockquote>
+        <blockquote>O Paulo tem conhecimento e é correto no que faz. Excelente serviço a preço justo.<cite>Júlio César · Google</cite></blockquote>
+        <blockquote>Lâmpada do farol queimada: resolveu em segundos e, pelo preço, valeu muito a pena. Dica: ligue antes ou chegue cedo.<cite>Daniel · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:18px"><small>Onde fica</small><h2 id="t-onde">Av. Baden Powell, 679</h2></div>
+        <div class="dica">Sábado de manhã é o horário mais cheio. Se puder, venha durante a semana.</div>
+        <table class="horas" id="horas">
+          <tr data-d="semana"><td>Segunda a sexta</td><td>8h às 18h</td></tr>
+          <tr data-d="6"><td>Sábado</td><td>8h às 12h</td></tr>
+          <tr data-d="0"><td>Domingo</td><td>Fechado</td></tr>
+        </table>
+        <p class="end"><b>Av. Baden Powell, 679</b> · Jardim Nova Europa, Campinas (SP)<br>Telefone <a href="tel:+551932388553">(19) 3238-8553</a></p>
+        <div class="acoes">
+          <a class="btn azul" href="https://www.google.com/maps/dir/?api=1&amp;destination=Auto+El%C3%A9trica+Saudade,+Av.+Baden+Powell,+679,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn ocre" href="tel:+551932388553">Ligar</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Auto Elétrica Saudade, Av. Baden Powell, 679, Campinas" src="https://www.google.com/maps?q=Auto+El%C3%A9trica+Saudade,+Av.+Baden+Powell,+679+-+Jardim+Nova+Europa,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Auto Elétrica Saudade · Jardim Nova Europa, Campinas</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn ocre fixo some" href="tel:+551932388553" aria-label="Ligar para a auto elétrica">Ligar</a>
+
+<script>
+(function () {
+  try {
+    var p = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+    var g = function(t){return (p.find(function(x){return x.type===t})||{}).value};
+    var d = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"));
+    var h = (parseInt(g("hour"),10)%24) + parseInt(g("minute"),10)/60;
+    var tr = document.querySelector('#horas tr[data-d="' + (d>=1&&d<=5 ? "semana" : d) + '"]'); if (tr) tr.classList.add("hoje");
+    var fe = d===6 ? 12 : 18, s = document.getElementById("status"), t = document.getElementById("status-t");
+    if (d===0) t.textContent = "Domingo fechado · abre segunda às 8h";
+    else if (h>=8 && h<fe) { s.classList.add("on"); t.textContent = "Aberto agora, até as " + fe + "h"; }
+    else if (h<8) t.textContent = "Abre hoje às 8h";
+    else t.textContent = d===6 ? "Fechado agora · abre segunda às 8h" : "Fechado agora · abre amanhã às 8h";
+  } catch (e) {}
+  var f = document.querySelector(".fixo"), t2 = document.querySelector(".hero");
+  if (f && t2 && "IntersectionObserver" in window) new IntersectionObserver(function(e){f.classList.toggle("some", e[0].isIntersecting)}).observe(t2);
+})();
+</script>
+</body>
+</html>
