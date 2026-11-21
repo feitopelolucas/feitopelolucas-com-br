@@ -165,3 +165,12 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 > Olá, pessoal da GL! Sou o Lucas, faço sites aqui em Campinas. Vi que o Instagram que aparece no Google de vocês não abre mais. Com nota 4,9 e quase 200 avaliações, falta só um lugar para o cliente chegar. Montei uma ideia de site: https://feitopelolucas.com.br/previa/glreparacoes/
 > Tem o passo a passo do guincho até a entrega, a parte de seguradora e ProAuto, a franquia em 12x em destaque, fotos de antes e depois e o orçamento por foto no WhatsApp. Se gostarem, a gente conversa!
 
+---
+
+## 19. Seco Lava Jato · /previa/seco/
+
+**Pelo que vi:** Instagram forte (3,6 mil seguidores) com fotos de carros no estúdio de piso quadriculado amarelo e preto. A bio diz "Cuidamos do seu carro como se fosse nosso" e lista estética automotiva, lavagem completa, coating cerâmico, PPF, insulfilme, polimento e pequenos reparos. Também atende em eventos externos. WhatsApp (19) 97408-5903. Fica no mesmo bairro da Titan, então fiz um visual bem diferente (premium, preto e amarelo). Incluí uma tabela "Vitrificação ou PPF?", porque eles mesmos postaram sobre essa dúvida.
+
+> Fala, pessoal do Seco! Sou o Lucas, faço sites aqui em Campinas. O Instagram de vocês é muito bom, mas quem procura "vitrificação" ou "PPF" em Campinas no Google não acha um site do Seco. Montei uma ideia: https://feitopelolucas.com.br/previa/seco/
+> Tem os serviços, uma comparação de vitrificação e PPF (para ajudar o cliente a decidir), galeria com os carros do estúdio e orçamento pelo WhatsApp, tudo no preto e amarelo da marca. Se curtirem, me chama!
+
