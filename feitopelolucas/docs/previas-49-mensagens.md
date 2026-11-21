@@ -32,3 +32,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, pessoal da Il Panettiere! Sou o Lucas, faço sites aqui em Campinas. Vi que tem gente chamando vocês de "melhor pão italiano da região" e que de manhã forma fila, então montei uma ideia de site para a padaria: https://feitopelolucas.com.br/previa/ilpanettiere/
 > Tem os pães da casa e um "Separe o seu pão": o cliente escolhe o que quer e o horário e manda o pedido pronto no WhatsApp, para chegar e só buscar. Se gostarem, a gente conversa!
+
+---
+
+## 4. Padaria e Restaurante Sabor Brasileiro · /previa/saborbrasileiro/
+
+**Pelo que vi:** Instagram **@sabor.brasileiro.padaria** (969 seguidores), sem site. O site restaurantesaborbrasileiro.com.br que aparece no Google é de **outro** restaurante, em Águas Claras (DF). **Importante:** no post de 17/11/2026 eles avisam que o celular foi furtado e que estão **sem WhatsApp**; pedidos só pelo fixo **(19) 3268-1685**. O site põe esse aviso no topo e todos os botões ligam para o fixo. Horário: segunda a sábado das 6h30 às 19h e domingo das 7h às 14h. O endereço aparece como nº 299 no Google e nº 311 no Instagram; usei o 311. Avaliações elogiam o pão francês ("melhor da região"), os salgados, os bolos de festa e o almoço. Também vendem picolés Sergel. Tem calculadora de bolo por número de convidados. **Atenção:** existe outro perfil, @saborbrasileiro1.oficial, no Jd. Santa Cruz, que parece ser outra unidade ou outra padaria.
+**Por onde mandar:** ligar no (19) 3268-1685 ou direct do Instagram (sem WhatsApp no momento).
+
+> Oi, pessoal da Sabor Brasileiro! Sou o Lucas, faço sites aqui em Campinas. Vi no Instagram que o celular de vocês foi furtado e que os pedidos estão só pelo fixo. Um site ajuda justamente nessas horas, porque o cliente encontra o telefone certo na hora. Montei uma ideia para a padaria: https://feitopelolucas.com.br/previa/saborbrasileiro/
+> Tem o aviso do telefone, o horário com "aberta agora", o almoço caseiro e uma calculadora de bolo de festa por número de convidados. Se gostarem, a gente conversa!
