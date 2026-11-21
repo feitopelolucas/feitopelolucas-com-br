@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bonna Pizza · Pizza no forno a lenha no Parque Jambeiro</title>
+<meta name="description" content="Prévia de site para a Bonna Pizza, no Parque Jambeiro, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/bonnapizza/">
+<meta property="og:title" content="Prévia de site · Bonna Pizza">
+<meta property="og:description" content="Pizza caseira no forno a lenha, para retirar ou receber em casa. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/bonnapizza/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2a1a14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--lenha:#2a1a14;--lenha-2:#3a261d;--brasa:#e2582b;--brasa-2:#c4441a;--tomate:#b8282b;--queijo:#f6e3b4;--massa:#fbf3e3;--tinta:#2a1a14;--tinta-2:#6e5b50;--fio:#ead9bd}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--massa);color:var(--tinta);font:17px/1.6 "Archivo",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Rozha One",Georgia,serif;font-weight:400;line-height:1.02;margin:0}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--brasa);outline-offset:3px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  .wrap>*{min-width:0}
+
+  .previa{background:#120b08;color:#cfbcae;font-size:.8125rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--queijo);font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .topo{background:var(--lenha);color:#fff}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:74px}
+  .marca{text-decoration:none;font:400 1.8rem/1 "Rozha One",serif}
+  .marca span{color:var(--brasa)}
+  .topo nav{display:flex;gap:22px;font-weight:600;color:#d8c6b8}
+  .topo nav a{text-decoration:none}
+  .topo nav a:hover{color:var(--queijo)}
+  @media (max-width:860px){.topo nav{display:none}}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:12px 22px;border-radius:6px;font-weight:700;text-decoration:none;font-size:1rem;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn.brasa{background:var(--brasa);color:#fff}
+  .btn.brasa:hover{background:var(--brasa-2)}
+  .btn.queijo{background:var(--queijo);color:var(--lenha)}
+  .btn.linha{border:2px solid currentColor}
+  .btn.peq{min-height:44px;padding:8px 16px;font-size:.94rem}
+
+  .hero{background:var(--lenha);color:#e7d6c9;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding-top:40px;padding-bottom:70px}
+  .hero .kick{color:var(--queijo);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.8125rem}
+  .hero h1{font-size:clamp(2.8rem,6.6vw,5rem);color:#fff;margin:14px 0 16px}
+  .hero h1 em{font-style:normal;color:var(--brasa)}
+  .hero p{font-size:1.12rem;max-width:30em;margin:0 0 26px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .status{margin-top:20px;display:inline-flex;align-items:center;gap:10px;font-weight:700}
+  .status i{width:11px;height:11px;border-radius:50%;background:#8c7568;flex:none}
+  .status.on i{background:var(--brasa);box-shadow:0 0 0 6px rgba(226,88,43,.3);animation:brasa 1.6s ease-in-out infinite}
+  @keyframes brasa{50%{box-shadow:0 0 0 10px rgba(226,88,43,.08)}}
+  .forno{position:relative}
+  .forno img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50% 50% 12px 12px}
+  .forno .selo{position:absolute;right:0;bottom:16px;background:var(--queijo);color:var(--lenha);border-radius:10px;padding:12px 16px;font-weight:700;transform:rotate(3deg)}
+  .forno .selo b{display:block;font:400 1.6rem "Rozha One",serif}
+  @media (max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:26px}.forno{max-width:440px;margin:0 auto}}
+
+  section{padding:80px 0}
+  .tit{max-width:640px;margin-bottom:32px}
+  .tit small{font-weight:700;color:var(--brasa-2);letter-spacing:.14em;text-transform:uppercase;font-size:.8125rem}
+  .tit h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-top:6px}
+  .tit p{color:var(--tinta-2);margin:10px 0 0}
+
+  /* Pizzas */
+  .galeria{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .galeria figure{margin:0;position:relative}
+  .galeria img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px}
+  .galeria figcaption{position:absolute;left:8px;bottom:8px;background:rgba(42,26,20,.85);color:#fff;font-weight:600;font-size:.875rem;padding:4px 10px;border-radius:6px}
+  .galeria figure:first-child{grid-column:span 2;grid-row:span 2}
+  @media (max-width:760px){.galeria{grid-template-columns:1fr 1fr}}
+  .sabores{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .sabores span{background:#fff;border:1px solid var(--fio);border-radius:999px;padding:7px 14px;font-weight:600}
+
+  /* Como pedir */
+  .pedir{background:var(--queijo)}
+  .pedir .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .tel{display:grid;gap:12px}
+  .tel a{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--lenha);color:#fff;border-radius:12px;padding:16px 20px;text-decoration:none;font-weight:700}
+  .tel a b{font:400 1.6rem "Rozha One",serif;color:var(--queijo)}
+  .tel a:hover{background:var(--lenha-2)}
+  .passos{margin:0;padding-left:22px}
+  .passos li{margin:8px 0}
+  @media (max-width:820px){.pedir .wrap{grid-template-columns:1fr}}
+
+  /* Avaliações */
+  .falas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .falas blockquote{margin:0;background:#fff;border-top:5px solid var(--brasa);border-radius:8px;padding:22px;font-weight:500}
+  .falas cite{display:block;margin-top:10px;font-style:normal;font-weight:700;font-size:.875rem;color:var(--tinta-2)}
+  @media (max-width:880px){.falas{grid-template-columns:1fr}}
+
+  /* Onde */
+  .onde{background:var(--lenha);color:#e7d6c9}
+  .onde .tit h2{color:#fff}
+  .onde .tit small{color:var(--queijo)}
+  .onde .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+  .horas{width:100%;border-collapse:collapse;margin-bottom:18px}
+  .horas td{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+  .horas td:last-child{text-align:right;font-weight:700;color:#fff}
+  .horas tr.hoje td{color:var(--brasa)}
+  .end{margin:0 0 22px}
+  .end b{color:#fff}
+  .mapa{border-radius:12px;overflow:hidden;min-height:400px;background:var(--lenha-2)}
+  .mapa iframe{width:100%;height:100%;min-height:400px;border:0;display:block}
+  @media (max-width:880px){.onde .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:#120b08;color:#a8958a;padding:24px 0 100px;font-size:.875rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--queijo);font-weight:700;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 12px 26px -10px rgba(0,0,0,.5);transition:opacity .3s,transform .3s}
+  .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
+  @media (min-width:861px){footer{padding-bottom:24px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial da Bonna Pizza. É uma ideia de site montada por Lucas para apresentar à pizzaria.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20da%20Bonna%20Pizza%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Bonna Pizza, início">Bonna <span>Pizza</span></a>
+    <nav aria-label="Seções">
+      <a href="#pizzas">Pizzas</a>
+      <a href="#pedir">Como pedir</a>
+      <a href="#onde">Onde fica</a>
+    </nav>
+    <a class="btn brasa peq" href="tel:+551932714409">Pedir</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="kick">Parque Jambeiro · balcão e delivery</span>
+        <h1 id="titulo">Pizza caseira, <em>do forno a lenha</em> para a sua mesa.</h1>
+        <p>Massa no ponto, recheio caprichado e o melhor custo-benefício do Jambeiro, segundo quem pede. Retire no balcão ou receba em casa, de terça a domingo à noite.</p>
+        <div class="acoes">
+          <a class="btn brasa" href="tel:+551932714409"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>Ligar e pedir</a>
+          <a class="btn linha" href="#pizzas">Ver as pizzas</a>
+        </div>
+        <p class="status" id="status"><i aria-hidden="true"></i><span id="status-t">Terça a domingo, a partir das 18h</span></p>
+      </div>
+      <div class="forno">
+        <img src="fotos/ig-forno.jpg" alt="Forno a lenha aceso com uma pizza assando" width="591" height="640">
+        <div class="selo"><b>4,6 ★</b>279 avaliações</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pizzas" aria-labelledby="t-piz">
+    <div class="wrap">
+      <div class="tit"><small>Saindo do forno</small><h2 id="t-piz">Meia a meia do jeito que você gosta</h2><p>Pode pedir dois sabores na mesma pizza. Alguns dos que mais aparecem nas fotos dos clientes:</p></div>
+      <div class="galeria">
+        <figure><img src="fotos/ig-balcao.jpg" alt="Várias pizzas prontas enfileiradas no balcão de granito" loading="lazy" width="512" height="640"><figcaption>Fornada da noite</figcaption></figure>
+        <figure><img src="fotos/ig-meia.jpg" alt="Pizza meia milho, meia calabresa com cebola" loading="lazy" width="480" height="480"><figcaption>Meia a meia</figcaption></figure>
+        <figure><img src="fotos/pizza.jpg" alt="Pizza de frango com catupiry e brócolis" loading="lazy" width="900" height="1200"><figcaption>Brócolis</figcaption></figure>
+        <figure><img src="fotos/ig-pizza1.jpg" alt="Pizza com rúcula, tomate e azeitonas" loading="lazy" width="360" height="640"><figcaption>Rúcula</figcaption></figure>
+        <figure><img src="fotos/ig-pizza2.jpg" alt="Pizza de presunto, cebola e mussarela" loading="lazy" width="640" height="640"><figcaption>Clássica</figcaption></figure>
+      </div>
+      <div class="sabores"><span>Calabresa</span><span>Frango com catupiry e brócolis</span><span>Brócolis e parisiense</span><span>Calabresa e brócolis com catupiry</span><span>Rúcula</span><span>Guaçuana</span><span>Borda recheada</span></div>
+    </div>
+  </section>
+
+  <section class="pedir" id="pedir" aria-labelledby="t-ped">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:12px"><small>Como pedir</small><h2 id="t-ped">Liga, escolhe e a pizza vai</h2></div>
+        <ol class="passos">
+          <li>Ligue em um dos telefones ao lado.</li>
+          <li>Escolha o tamanho e até dois sabores.</li>
+          <li>Diga se vai retirar no balcão ou se é entrega.</li>
+          <li>Pagamento na entrega: confirme a forma ao pedir.</li>
+        </ol>
+      </div>
+      <div class="tel">
+        <a href="tel:+551932714409"><span>Telefone 1</span><b>(19) 3271-4409</b></a>
+        <a href="tel:+551932712585"><span>Telefone 2</span><b>(19) 3271-2585</b></a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="tit"><small>4,6 · 279 avaliações no Google</small><h2 id="t-aval">Simples e muito boa</h2></div>
+      <div class="falas">
+        <blockquote>Pizzas bem mais em conta, lugar simples e ótima pizza, com borda de catupiry.<cite>Resumo das avaliações · Google</cite></blockquote>
+        <blockquote>Atendimento espetacular e pizzas com um sabor especial.<cite>Leandro · Google</cite></blockquote>
+        <blockquote>Amo a alegria da Tati e adoro a pizza dela, uma delícia! Recomendo! Nota 10.<cite>Thelma · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:18px"><small>Onde fica</small><h2 id="t-onde">Parque Jambeiro</h2></div>
+        <table class="horas" id="horas">
+          <tr data-d="1"><td>Segunda</td><td>Fechado</td></tr>
+          <tr data-d="tq"><td>Terça a quinta</td><td>18h às 23h</td></tr>
+          <tr data-d="sd"><td>Sexta a domingo</td><td>18h às 23h30</td></tr>
+        </table>
+        <p class="end"><b>Av. Paulo Correa Viana, 680</b> · Parque Jambeiro, Campinas (SP)<br>Balcão para retirada e delivery na região.</p>
+        <div class="acoes">
+          <a class="btn queijo" href="tel:+551932714409">Ligar</a>
+          <a class="btn linha" href="https://www.google.com/maps/dir/?api=1&amp;destination=Bonna+pizza,+Av.+Paulo+Correa+Viana,+680,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Bonna Pizza, Av. Paulo Correa Viana, 680, Campinas" src="https://www.google.com/maps?q=Bonna+pizza,+Av.+Paulo+Correa+Viana,+680+-+Parque+Jambeiro,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Bonna Pizza · Parque Jambeiro, Campinas</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn brasa fixo some" href="tel:+551932714409" aria-label="Ligar para pedir pizza">Pedir pizza</a>
+
+<script>
+(function () {
+  try {
+    var p = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+    var g = function(t){return (p.find(function(x){return x.type===t})||{}).value};
+    var d = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"));
+    var h = (parseInt(g("hour"),10)%24) + parseInt(g("minute"),10)/60;
+    var k = d===1 ? "1" : (d>=2 && d<=4 ? "tq" : "sd");
+    var tr = document.querySelector('#horas tr[data-d="'+k+'"]'); if (tr) tr.classList.add("hoje");
+    var fe = (d>=2 && d<=4) ? 23 : 23.5, s = document.getElementById("status"), t = document.getElementById("status-t");
+    if (d===1) t.textContent = "Segunda é folga · volta amanhã às 18h";
+    else if (h>=18 && h<fe) { s.classList.add("on"); t.textContent = "Forno aceso · pedidos até as " + (fe===23 ? "23h" : "23h30"); }
+    else if (h<18) t.textContent = "Abre hoje às 18h";
+    else t.textContent = d===0 ? "Fechado agora · volta na terça às 18h" : "Fechado agora · abre amanhã às 18h";
+  } catch (e) {}
+  var f = document.querySelector(".fixo"), t2 = document.querySelector(".hero");
+  if (f && t2 && "IntersectionObserver" in window) new IntersectionObserver(function(e){f.classList.toggle("some", e[0].isIntersecting)}).observe(t2);
+})();
+</script>
+</body>
+</html>

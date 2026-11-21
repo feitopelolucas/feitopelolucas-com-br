@@ -140,3 +140,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, Paulo! Sou o Lucas, faço sites aqui em Campinas. A Auto Elétrica Saudade tem 4,7 no Google com quase 300 avaliações, e o que mais aparece é que você acha o defeito e fala o valor antes. Montei uma ideia de site em cima disso: https://feitopelolucas.com.br/previa/eletricasaudade/
 > Tem o horário com aviso de aberto agora, os serviços e um botão de ligar direto. Se quiser, dá para colocar um WhatsApp para orçamento também. Se gostar, a gente conversa!
+
+---
+
+## 16. Bonna Pizza · /previa/bonnapizza/
+
+**Pelo que vi:** sem site. O perfil do Google **não foi reivindicado** ("Reivindicar esta empresa"). Instagram @bonna_pizza00 (279 seguidores), parado desde 2023, com outro endereço (nº 561). Pizzaria só de balcão e delivery, com **forno a lenha** (foto no Instagram). Telefones (19) 3271-4409 e 3271-2585; não achei WhatsApp. Horário: segunda fechado, terça a quinta das 18h às 23h, sexta a domingo das 18h às 23h30. Elogios ao custo-benefício, à borda de catupiry e à "alegria da Tati". **Atenção:** uma avaliação recente reclama do catupiry; não usei. O cardápio com preços do Instagram é de 2023, então não coloquei preços.
+**Por onde mandar:** ligar no (19) 3271-4409, ou direct no Instagram (parado).
+
+> Oi, Tati! Sou o Lucas, faço sites aqui em Campinas. Vi que a Bonna Pizza tem 4,6 no Google e é chamada de "melhor custo-benefício do Jambeiro", mas o perfil de vocês no Google nem foi reivindicado ainda e não tem site. Montei uma ideia: https://feitopelolucas.com.br/previa/bonnapizza/
+> Tem o forno a lenha em destaque, as pizzas, os dois telefones para pedir e o horário com aviso de "forno aceso". Também posso ajudar a assumir o perfil do Google. Se gostarem, a gente conversa!
