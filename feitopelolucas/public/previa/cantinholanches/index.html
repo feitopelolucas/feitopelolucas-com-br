@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cantinho Lanches · Hot-dog, lanches e pastéis em Campinas</title>
+<meta name="description" content="Prévia de site para o Cantinho Lanches, na Av. Francisco de Paula Oliveira Nazareth, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/cantinholanches/">
+<meta property="og:title" content="Prévia de site · Cantinho Lanches">
+<meta property="og:description" content="Hot-dog caprichado, lanches e pastéis todo dia a partir das 18h. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/cantinholanches/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#14213d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--noite:#14213d;--noite-2:#0d1730;--noite-3:#22325a;--laranja:#fca311;--laranja-2:#e08e00;--verm:#e63946;--creme:#fff8ec;--tinta:#1d2433;--tinta-2:#5b6478;--fio:#e6dcc8}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--creme);color:var(--tinta);font:16.5px/1.6 "Nunito",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Anton",Impact,sans-serif;font-weight:400;line-height:1.02;margin:0;text-transform:uppercase;letter-spacing:.01em}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--laranja);outline-offset:3px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  .wrap>*{min-width:0}
+
+  .previa{background:#000;color:#c9cfdc;font-size:.8125rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--laranja);font-weight:800;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .topo{background:var(--noite);color:#fff;position:sticky;top:0;z-index:30;border-bottom:3px solid var(--laranja)}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:68px}
+  .marca{text-decoration:none;line-height:1}
+  .marca b{font:400 1.7rem "Anton",sans-serif;text-transform:uppercase;color:var(--laranja);display:block}
+  .marca small{font-weight:700;font-size:.8125rem;color:#aab3c8}
+  .status{font-weight:800;font-size:.875rem;display:inline-flex;align-items:center;gap:7px}
+  .status i{width:10px;height:10px;border-radius:50%;background:#7a8396}
+  .status.on i{background:#2ecc71;box-shadow:0 0 0 4px rgba(46,204,113,.25)}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:12px 22px;border-radius:999px;font-weight:800;text-decoration:none;font-size:1rem;transition:transform .15s;white-space:nowrap;border:0;cursor:pointer;font-family:inherit}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.laranja{background:var(--laranja);color:var(--noite)}
+  .btn.verm{background:var(--verm);color:#fff}
+  .btn.linha{border:2px solid currentColor;background:transparent}
+  .btn.noite{background:var(--noite);color:#fff}
+
+  .hero{background:var(--noite);color:#fff;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:46px;padding-bottom:70px}
+  .selo{display:inline-block;background:var(--verm);color:#fff;font-weight:800;padding:6px 14px;border-radius:999px;font-size:.875rem;letter-spacing:.04em}
+  .hero h1{font-size:clamp(2.9rem,7.4vw,5.6rem);margin:18px 0 16px}
+  .hero h1 span{color:var(--laranja)}
+  .hero p{font-size:1.12rem;color:#c9cfdc;max-width:31em;margin:0 0 26px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .numeros{display:flex;gap:28px;flex-wrap:wrap;margin-top:30px}
+  .numeros b{display:block;font:400 2rem "Anton",sans-serif;color:var(--laranja);line-height:1}
+  .numeros span{font-size:.875rem;color:#aab3c8;font-weight:700}
+  .fotohero{position:relative}
+  .fotohero img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:26px;box-shadow:0 30px 60px -30px #000}
+  .fotohero .tag{position:absolute;left:-14px;bottom:28px;background:var(--laranja);color:var(--noite);font:400 1.25rem "Anton",sans-serif;text-transform:uppercase;padding:10px 18px;border-radius:12px;transform:rotate(-4deg)}
+  @media (max-width:880px){.hero .wrap{grid-template-columns:1fr;padding-top:28px}.fotohero img{aspect-ratio:4/3}.fotohero .tag{left:10px}}
+
+  section{padding:76px 0}
+  .tit{max-width:660px;margin-bottom:26px}
+  .tit small{font-weight:800;color:var(--verm);letter-spacing:.14em;text-transform:uppercase;font-size:.8125rem}
+  .tit h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-top:6px;color:var(--noite)}
+  .tit p{color:var(--tinta-2);margin:10px 0 0}
+
+  /* Destaques */
+  .destaques{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .dest{background:#fff;border-radius:20px;overflow:hidden;border:1px solid var(--fio)}
+  .dest img{width:100%;aspect-ratio:1;object-fit:cover}
+  .dest div{padding:14px 16px 18px}
+  .dest h3{font-size:1.3rem;color:var(--noite)}
+  .dest p{margin:4px 0 0;color:var(--tinta-2);font-size:.94rem}
+  @media (max-width:900px){.destaques{grid-template-columns:1fr 1fr}}
+
+  /* Cardápio */
+  .cardapio{background:#fff;border-top:1px solid var(--fio)}
+  .abas{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:10px;scrollbar-width:thin}
+  .abas button{flex:none;border:2px solid var(--noite);background:#fff;color:var(--noite);font:800 .94rem "Nunito",sans-serif;padding:9px 16px;border-radius:999px;cursor:pointer;min-height:44px}
+  .abas button[aria-selected="true"]{background:var(--noite);color:var(--laranja)}
+  .itens{display:grid;grid-template-columns:1fr 1fr;gap:0 36px}
+  .item{display:grid;grid-template-columns:1fr auto auto;gap:4px 12px;align-items:center;padding:12px 0;border-bottom:1px dashed var(--fio)}
+  .item b{font-weight:800;color:var(--noite)}
+  .item small{grid-column:1;font-size:.875rem;color:var(--tinta-2);line-height:1.4}
+  .item .p{font-weight:800;white-space:nowrap;grid-row:1/3;grid-column:2}
+  .item button{grid-row:1/3;grid-column:3;border:0;background:var(--laranja);color:var(--noite);font:800 1.1rem "Nunito",sans-serif;border-radius:50%;width:44px;height:44px;cursor:pointer}
+  .item button:hover{background:var(--laranja-2)}
+  @media (max-width:820px){.itens{grid-template-columns:1fr}}
+  .aviso-p{font-size:.875rem;color:var(--tinta-2);margin-top:16px}
+
+  .sacola{position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:40;width:min(540px,calc(100% - 32px));background:var(--noite);color:#fff;border-radius:18px;padding:12px 14px;box-shadow:0 20px 40px -14px rgba(0,0,0,.6);display:none;border:2px solid var(--laranja)}
+  .sacola.on{display:block}
+  .sacola .l1{display:flex;justify-content:space-between;align-items:center;gap:10px}
+  .sacola b{font:400 1.25rem "Anton",sans-serif;color:var(--laranja)}
+  .sacola .lista{font-size:.875rem;color:#c9cfdc;margin:6px 0 10px;max-height:66px;overflow:auto}
+  .sacola .l2{display:flex;gap:8px}
+  .sacola .btn{flex:1;min-height:44px;font-size:.94rem}
+  .sacola .x{background:transparent;border:1px solid #3b4a72;color:#fff;border-radius:999px;padding:6px 14px;cursor:pointer;font:inherit;font-size:.875rem;min-height:44px}
+
+  .casa{background:var(--noite);color:#c9cfdc}
+  .casa .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .casa img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:22px}
+  .casa h2{color:#fff;font-size:clamp(2.2rem,5vw,3.4rem)}
+  .casa h2 span{color:var(--laranja)}
+  .casa blockquote{margin:18px 0 0;border-left:4px solid var(--laranja);padding:4px 0 4px 16px;font-weight:700;color:#fff;font-size:1.1rem}
+  .casa cite{display:block;font-style:normal;font-size:.875rem;color:#aab3c8;margin-top:4px;font-weight:600}
+  @media (max-width:880px){.casa .wrap{grid-template-columns:1fr}}
+
+  .onde .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+  .horas{background:#fff;border:1px solid var(--fio);border-radius:18px;padding:18px 20px;margin-bottom:18px;font-weight:700}
+  .horas b{font:400 1.6rem "Anton",sans-serif;color:var(--noite);display:block}
+  .end{margin:0 0 22px}
+  .end a{white-space:nowrap;font-weight:800}
+  .mapa{border-radius:20px;overflow:hidden;min-height:380px;background:#e9e2d2}
+  .mapa iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+  @media (max-width:880px){.onde .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:#000;color:#aab3c8;padding:24px 0 120px;font-size:.875rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--laranja);font-weight:800;text-decoration:none}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial do Cantinho Lanches. É uma ideia de site montada por Lucas para apresentar à lanchonete.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20do%20Cantinho%20Lanches%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Cantinho Lanches, início"><b>Cantinho Lanches</b><small>Parque Industrial · Campinas</small></a>
+    <span class="status" id="status"><i></i><span>Abre às 18h</span></span>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="selo">Todo dia a partir das 18h</span>
+        <h1 id="titulo">O hot-dog <span>completo</span> da Nazareth</h1>
+        <p>Purê, vinagrete, milho, ervilha, batata palha e as duas maioneses. Tem também X, filé mignon, boca de anjo, pastel e porção. Peça para retirar ou receber em casa.</p>
+        <div class="acoes">
+          <a class="btn laranja" href="#cardapio">Ver cardápio e pedir</a>
+          <a class="btn linha" href="tel:+551932732532">Ligar (19) 3273-2532</a>
+        </div>
+        <div class="numeros">
+          <div><b>4,6 ★</b><span>193 avaliações no Google</span></div>
+          <div><b>94%</b><span>recomendam no Facebook</span></div>
+          <div><b>+80</b><span>opções no cardápio</span></div>
+        </div>
+      </div>
+      <div class="fotohero">
+        <img src="fotos/dog.jpg" alt="Hot-dog prensado coberto de purê, com milho e ervilha" width="794" height="1200">
+        <span class="tag">Hot-dog a partir de R$ 23</span>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-dest">
+    <div class="wrap">
+      <div class="tit"><small>Os queridinhos</small><h2 id="t-dest">O que mais sai</h2></div>
+      <div class="destaques">
+        <article class="dest"><img src="fotos/dogaberto.jpg" alt="Hot-dog aberto com salsicha, vinagrete, milho e ervilha" loading="lazy" width="945" height="1200"><div><h3>Hot-dog</h3><p>Uma ou duas salsichas, ou no prato. A partir de R$ 23.</p></div></article>
+        <article class="dest"><img src="fotos/xburguer.jpg" alt="X-burguer com hambúrguer, queijo e salada" loading="lazy" width="900" height="1200"><div><h3>Os X</h3><p>Do X-Burguer ao X-Tudo duplo. A partir de R$ 22.</p></div></article>
+        <article class="dest"><img src="fotos/porcao.jpg" alt="Porção frita servida sobre alface" loading="lazy" width="900" height="1200"><div><h3>Porções</h3><p>Calabresa acebolada, filé aperitivo, kibinho e croquete.</p></div></article>
+        <article class="dest"><img src="fotos/fritas.jpg" alt="Batata frita com pote de maionese" loading="lazy" width="900" height="1200"><div><h3>Fritas</h3><p>Individual, meia ou inteira, com a maionese da casa.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cardapio" id="cardapio" aria-labelledby="t-card">
+    <div class="wrap">
+      <div class="tit"><small>Cardápio completo</small><h2 id="t-card">Monte seu pedido</h2><p>Escolha a categoria, toque no + e mande tudo somado no WhatsApp.</p></div>
+      <div class="abas" id="abas" role="tablist" aria-label="Categorias do cardápio"></div>
+      <div class="itens" id="itens" role="tabpanel"></div>
+      <p class="aviso-p">Valores do cardápio de delivery online (Anota AI). Podem mudar; a lanchonete confirma no pedido. Também dá para pedir pelo <a href="https://pedido.anota.ai/loja/cantinholanches" target="_blank" rel="noopener">pedido online</a>.</p>
+    </div>
+  </section>
+
+  <section class="casa" aria-labelledby="t-casa">
+    <div class="wrap">
+      <img src="fotos/espaco.jpg" alt="Balcão e área coberta do Cantinho Lanches à noite" loading="lazy" width="1200" height="674">
+      <div>
+        <h2 id="t-casa">Espaço de <span>família</span>, à noite</h2>
+        <p>Área coberta com mesas para comer aí mesmo, ou retire no balcão. Tem cliente que pede o hot-dog daqui há mais de 15 anos.</p>
+        <blockquote>Custo benefício, bons sabores e variedades.<cite>Resumo das avaliações · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:18px"><small>Onde fica</small><h2 id="t-onde">Av. Francisco de Paula Oliveira Nazareth, 829</h2></div>
+        <div class="horas"><b>Todo dia, a partir das 18h</b>Para comer aí, retirar ou delivery.</div>
+        <p class="end">Parque Industrial · Campinas (SP)<br>Telefone <a href="tel:+551932732532">(19) 3273-2532</a> · WhatsApp <a class="zap" href="https://wa.me/5519991859146">(19) 99185-9146</a></p>
+        <div class="acoes">
+          <a class="btn noite" href="https://www.google.com/maps/dir/?api=1&amp;destination=Cantinho+Lanches,+Av.+Francisco+de+Paula+Oliveira+Nazareth,+829,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn verm zap" href="https://wa.me/5519991859146">WhatsApp</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Cantinho Lanches, Av. Francisco de Paula Oliveira Nazareth, 829, Campinas" src="https://www.google.com/maps?q=Cantinho+Lanches,+Av.+Francisco+de+Paula+Oliveira+Nazareth,+829,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Cantinho Lanches · Campinas</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<div class="sacola" id="sacola" role="region" aria-label="Sua sacola">
+  <div class="l1"><b id="s-tot">Sacola</b><button class="x" id="s-limpa" type="button">Limpar</button></div>
+  <div class="lista" id="s-lista"></div>
+  <div class="l2"><a class="btn laranja" id="s-env" href="https://wa.me/5519991859146">Pedir no WhatsApp</a></div>
+</div>
+
+<script>
+(function () {
+  document.querySelectorAll(".zap").forEach(function(a){a.target="_blank";a.rel="noopener";});
+
+  // Aberto agora: todo dia a partir das 18h (fechamento não informado; considera até 23h)
+  var h = Number(new Intl.DateTimeFormat("pt-BR",{timeZone:"America/Sao_Paulo",hour:"numeric",hour12:false}).format(new Date())) % 24;
+  var st = document.getElementById("status");
+  if (h >= 18 && h < 23) { st.classList.add("on"); st.querySelector("span").textContent = "Aberto agora"; }
+
+  var C = [
+    ["Hot-dog",[["Hot-dog tradicional","1 salsicha, vinagrete, milho, ervilha, purê, batata palha, maioneses e queijo ralado",23],["Hot-dog com 2 salsichas","O completo com duas salsichas",24],["Hot-dog no prato","2 salsichas e todos os acompanhamentos no prato",25],["Pote de purê pequeno","Cerca de 300 g",10],["Pote de purê grande","Cerca de 600 g",14]]],
+    ["X",[["X-Burguer","Hambúrguer e queijo",22],["X-Salada","Hambúrguer, queijo, alface e tomate",23],["X-Egg","Hambúrguer, queijo, ovo e salada",25.5],["X-Vinagrete","Hambúrguer, queijo, vinagrete e salada",25.5],["X-Tropical","Hambúrguer, queijo, presunto, milho e salada",28],["X-Bacon","Hambúrguer, queijo, bacon e salada",29],["X-Presunto","Hambúrguer, queijo, presunto, ovo, milho e salada",30],["X-Tudo","Hambúrguer, queijo, presunto, ovo, bacon, milho e salada",33],["X-Tudo duplo","2 hambúrgueres e tudo o que tem direito",38]]],
+    ["Frango",[["Frango com queijo","Filé de frango e queijo",26.5],["Frango salada","Frango, queijo, alface e tomate",28],["Frango com vinagrete","Frango, queijo, vinagrete e salada",29],["Frango com ovo","Frango, queijo, ovo e salada",29.5],["Frango com presunto","Frango, queijo, presunto, milho e salada",31],["Frango com bacon","Frango, queijo, bacon e salada",33],["Frango completo","Frango, queijo, presunto, ovo, milho e salada",33],["Frangão","Frango, queijo, bacon, presunto, ovo, milho e salada",36],["Frangão duplo","O dobro de frango e tudo o que tem direito",41]]],
+    ["Filé mignon",[["Mignon com queijo","Filé e queijo",35],["Mignon salada","Filé, queijo e salada",36],["Mignon com vinagrete","Filé, queijo, vinagrete e salada",37.5],["Mignon com ovo","Filé, queijo, ovo e salada",38],["Mignon com presunto","Filé, queijo, presunto, milho e salada",40],["Mignon completo","Filé, queijo, presunto, ovo, milho e salada",42],["Mignon com bacon","Filé, queijo, bacon e salada",43],["Mignon tudo","Filé, queijo, presunto, ovo, bacon, milho e salada",48],["Mignon duplo","O dobro de filé e tudo o que tem direito",58]]],
+    ["Contra filé",[["Contra filé com queijo","Contra filé e queijo",33],["Contra filé salada","Contra filé, queijo e salada",34],["Contra filé com vinagrete","Contra filé, queijo, vinagrete e salada",35],["Contra filé com ovo","Contra filé, queijo, ovo e salada",36],["Contra filé com presunto","Contra filé, queijo, presunto, milho e salada",39],["Contra filé completo","Contra filé, queijo, presunto, ovo, milho e salada",39],["Contra filé com bacon","Contra filé, queijo, bacon e salada",40],["Contra filé tudo","Contra filé, queijo, presunto, ovo, bacon, milho e salada",43],["Contra filé duplo","O dobro de contra filé e tudo o que tem direito",48]]],
+    ["Calabresa",[["Calabresa com queijo","Calabresa e queijo",28],["Calabresa salada","Calabresa, queijo e salada",31],["Calabresa completa","Calabresa, queijo, presunto, bacon, ovo e salada",36],["Calabresa com requeijão","Calabresa, queijo, presunto, milho, requeijão e salada",37],["Calabresa com bacon","Calabresa, queijo, milho e bacon",37],["Calabresa da casa","Calabresa, queijo, presunto, requeijão, milho e azeitona preta",38]]],
+    ["Boca de anjo",[["Boca de anjo calabresa","Pão francês, calabresa, tomate, azeitona, ovo e queijo",39],["Boca de anjo linguiça","Pão francês, linguiça, vinagrete, cebola, ovo e queijo",40],["Churrasquinho simples","Pão francês, filé mignon e queijo",40],["Boca de anjo frango","Pão francês, frango, tomate, azeitona, ovo e queijo",41],["Churrasquinho de frango","Pão francês, frango, queijo, ovo, cebola e tomate",41],["Churrasquinho de contra filé","Pão francês, contra filé, queijo, ovo, cebola e tomate",41],["Boca de anjo mignon","Pão francês, filé, tomate, azeitona, ovo e queijo",45],["Churrasquinho de mignon","Pão francês, mignon, queijo, ovo, cebola e tomate",45]]],
+    ["Simples",[["Misto quente","Queijo e presunto",15],["Bauru","Queijo, presunto e tomate",16],["Americano","Queijo, presunto, ovo, alface e tomate",21]]],
+    ["Combos",[["Combo kids","Lanche kids, batata pequena e refri 350 ml",27.9],["Combo X-Egg","X-Egg, batata individual e refri 350 ml",42.9],["Combo X-Frango","Frango com ovo, batata individual e refri 350 ml",46.9],["Combo X-Tudo","X-Tudo, batata individual e refri 350 ml",49.9],["Combo X-Frangão","Frangão, batata individual e refri 350 ml",52.9]]],
+    ["Pastéis",[["Pastel de carne","",12],["Pastel de queijo","",12],["Pastel de pizza","",12],["Pastel de frango","",12],["Pastel de calabresa","",12],["Pastel de palmito","",14],["Pastel carne com queijo","",14],["Pastel carne com ovo","",14],["Pastel frango com queijo","",14],["Pastel frango com milho","",14],["Pastel frango com requeijão","",14],["Pastel carne com catupiry","",15],["Pastel frango com catupiry","",15],["Pastel calabresa com queijo","",15],["Pastel de chocolate","",15],["Pastel carne, queijo e ovo","",17.5]]],
+    ["Porções",[["Fritas individual","",13.5],["Fritas meia","200 g",19.5],["Fritas inteira","400 g",27.5],["Mini kibinho","20 unidades",32],["Croquete","20 unidades",32],["Calabresa com cebola","Grelhada na chapa, acompanha pão quentinho",35],["Filé aperitivo","",35]]]
+  ];
+  var R = function(v){return "R$ " + v.toFixed(2).replace(".", ",");};
+  var abas = document.getElementById("abas"), itens = document.getElementById("itens"), sac = {}, preco = {};
+  C.forEach(function(c){ c[1].forEach(function(it){ preco[it[0]] = it[2]; }); });
+  function mostra(i){
+    [].forEach.call(abas.children, function(b,j){ b.setAttribute("aria-selected", i===j ? "true" : "false"); });
+    var h = "";
+    C[i][1].forEach(function(it){ h += '<div class="item"><b>' + it[0] + '</b>' + (it[1] ? '<small>' + it[1] + '</small>' : '') + '<span class="p">' + R(it[2]) + '</span><button type="button" data-n="' + it[0] + '" aria-label="Adicionar ' + it[0] + '">+</button></div>'; });
+    itens.innerHTML = h;
+  }
+  C.forEach(function(c,i){ var b = document.createElement("button"); b.type = "button"; b.setAttribute("role","tab"); b.textContent = c[0]; b.addEventListener("click", function(){ mostra(i); }); abas.appendChild(b); });
+  mostra(0);
+
+  var S = document.getElementById("sacola"), env = document.getElementById("s-env");
+  function at(){
+    var t = 0, q = 0, l = [];
+    Object.keys(sac).forEach(function(k){ t += preco[k]*sac[k]; q += sac[k]; l.push(sac[k] + "x " + k); });
+    S.classList.toggle("on", q>0);
+    document.getElementById("s-tot").textContent = q + (q===1 ? " item · " : " itens · ") + R(t);
+    document.getElementById("s-lista").textContent = l.join(" · ");
+    env.href = "https://wa.me/5519991859146?text=" + encodeURIComponent("Olá, Cantinho Lanches! Quero pedir:\n" + l.join("\n") + "\nTotal pelo cardápio: " + R(t) + "\nÉ para: (retirar / entregar)");
+  }
+  itens.addEventListener("click", function(e){ var b = e.target.closest("button[data-n]"); if (!b) return; var n = b.getAttribute("data-n"); sac[n] = (sac[n]||0)+1; at(); });
+  document.getElementById("s-limpa").addEventListener("click", function(){ sac = {}; at(); });
+  env.target = "_blank"; env.rel = "noopener";
+})();
+</script>
+</body>
+</html>

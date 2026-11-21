@@ -286,3 +286,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, Gutão! Sou o Lucas, faço sites aqui em Campinas. Vi que o pastel de vocês tem 4,9 no Google com quase 200 avaliações, e todo mundo fala do vinagrete! Montei uma ideia de site: https://feitopelolucas.com.br/previa/pasteldogutao/
 > O cliente escolhe os pastéis no cardápio, vê o total e manda o pedido pronto no WhatsApp de vocês. Tem também a história desde 2002 e o mapa. Se gostarem, a gente conversa!
+
+---
+
+## 31. Cantinho Lanches · /previa/cantinholanches/
+
+**Pelo que vi:** sem site. Tem um Instagram novo, **@cantinholanches.campinas** (82 seguidores, 1 post), e um Facebook com 1,7 mil curtidas e 94% de recomendação. Pedido online pelo Anota AI, com cardápio enorme (mais de 80 itens), que usei inteiro no site. Fixo (19) 3273-2532 e WhatsApp (19) 99185-9146. O endereço é Av. Francisco de Paula Oliveira Nazareth, **829**; o Tripadvisor diz 859. Abre todo dia a partir das 18h, pela bio. O Google diz "abre às 10:00", o que provavelmente está errado. Tem 4,6 no Google com 193 avaliações, e o **hot-dog** é o assunto principal (21 menções). **Atenção:** há avaliações recentes negativas (purê salgado, lanche menor, "mudou a direção"). Não citei nenhuma no site, mas vale saber antes de conversar. As fotos são de clientes no Google.
+**Por onde mandar:** WhatsApp (19) 99185-9146.
+
+> Oi, pessoal do Cantinho Lanches! Sou o Lucas, faço sites aqui em Campinas. Vi que vocês têm um cardápio enorme no Anota AI e 4,6 no Google, mas quem procura no Google ainda cai sem site e com horário errado (lá diz que abre às 10h). Montei uma ideia: https://feitopelolucas.com.br/previa/cantinholanches/
+> O cardápio completo fica separado por categoria, o cliente monta o pedido e manda somado no WhatsApp de vocês. Se gostarem, a gente conversa!
