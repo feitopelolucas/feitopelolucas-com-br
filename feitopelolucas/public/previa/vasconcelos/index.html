@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mecânica Vasconcelos · Oficina na Ponte Preta, Campinas</title>
+<meta name="description" content="Prévia de site para a Mecânica Vasconcelos, oficina mecânica na Ponte Preta, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/vasconcelos/">
+<meta property="og:title" content="Prévia de site · Mecânica Vasconcelos">
+<meta property="og:description" content="Mecânica em geral com diagnóstico sincero, na Ponte Preta. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/vasconcelos/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1e1f22">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@700;800&family=Saira:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--amarelo:#f2c230;--amarelo-2:#d9a90f;--grafite:#1e1f22;--grafite-2:#2a2c30;--azul:#2364aa;--claro:#f4f4f1;--tinta:#1e1f22;--tinta-2:#5b5e66;--fio:#dfdfd8}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--claro);color:var(--tinta);font:17px/1.6 "Saira",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Saira Condensed",Impact,sans-serif;font-weight:800;line-height:1;margin:0;text-transform:uppercase;letter-spacing:.01em}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--azul);outline-offset:3px}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  .wrap>*{min-width:0}
+
+  .previa{background:#000;color:#bdbdbd;font-size:.8125rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--amarelo);font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .topo{background:var(--amarelo)}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:74px}
+  .marca{text-decoration:none;line-height:1}
+  .marca b{font:800 1.7rem "Saira Condensed",sans-serif;text-transform:uppercase;display:block}
+  .marca small{font-size:.8125rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+  .topo nav{display:flex;gap:22px;font-weight:700}
+  .topo nav a{text-decoration:none}
+  .topo nav a:hover{text-decoration:underline}
+  @media (max-width:860px){.topo nav{display:none}}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:12px 22px;border-radius:6px;font-weight:700;text-decoration:none;font-size:1rem;transition:transform .15s,background .15s;white-space:nowrap;border:0;cursor:pointer;font-family:inherit}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn.amarelo{background:var(--amarelo);color:var(--grafite)}
+  .btn.amarelo:hover{background:var(--amarelo-2)}
+  .btn.preto{background:var(--grafite);color:#fff}
+  .btn.linha{border:2px solid currentColor;background:transparent}
+  .btn.peq{min-height:44px;padding:8px 16px;font-size:.94rem}
+
+  .hero{background:var(--grafite);color:#d6d7db}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding-top:52px;padding-bottom:70px}
+  .selo{display:inline-flex;align-items:center;gap:10px;border:2px solid var(--amarelo);color:var(--amarelo);border-radius:6px;padding:6px 12px;font-weight:700;font-size:.92rem}
+  .hero h1{font-size:clamp(2.8rem,7vw,5.2rem);color:#fff;margin:18px 0 14px}
+  .hero h1 span{color:var(--amarelo)}
+  .hero p{font-size:1.14rem;max-width:30em;margin:0 0 26px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .numeros{display:flex;gap:28px;margin-top:30px;flex-wrap:wrap}
+  .numeros b{display:block;font:800 2.4rem/1 "Saira Condensed",sans-serif;color:var(--amarelo)}
+  .numeros span{font-size:.875rem;color:#a6a8ae}
+  .foto-hero{position:relative}
+  .foto-hero img{width:100%;aspect-ratio:4/3.4;object-fit:cover;border-radius:6px;border-bottom:8px solid var(--amarelo)}
+  .foto-hero .ficha{position:absolute;right:16px;top:16px;background:#fff;color:var(--tinta);border-radius:6px;padding:12px 14px;font-weight:600;max-width:220px;box-shadow:0 16px 30px -14px rgba(0,0,0,.6);font-size:.95rem}
+  .foto-hero .ficha b{display:block;font:800 1.15rem "Saira Condensed",sans-serif;text-transform:uppercase;color:var(--azul)}
+  @media (max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:32px}}
+
+  .listra{height:14px;background:repeating-linear-gradient(135deg,var(--amarelo) 0 16px,var(--grafite) 16px 32px)}
+
+  section{padding:84px 0}
+  .tit{max-width:660px;margin-bottom:34px}
+  .tit small{font-weight:700;color:var(--azul);letter-spacing:.16em;text-transform:uppercase;font-size:.8125rem}
+  .tit h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-top:8px}
+  .tit p{color:var(--tinta-2);margin:12px 0 0}
+
+  /* Honestidade */
+  .regras{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .regra{background:#fff;border:1px solid var(--fio);border-top:6px solid var(--amarelo);border-radius:6px;padding:24px}
+  .regra b{font:800 3rem/1 "Saira Condensed",sans-serif;color:var(--amarelo-2)}
+  .regra h3{font-size:1.5rem;margin:8px 0}
+  .regra p{margin:0;color:var(--tinta-2)}
+  @media (max-width:860px){.regras{grid-template-columns:1fr}}
+
+  /* Serviços */
+  .servicos{background:#fff;border-top:1px solid var(--fio);border-bottom:1px solid var(--fio)}
+  .servicos .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:center}
+  .serv{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .serv li{display:flex;gap:10px;align-items:center;background:var(--claro);border-radius:6px;padding:12px 14px;font-weight:600}
+  .serv li::before{content:"";width:10px;height:10px;background:var(--amarelo);transform:rotate(45deg);flex:none}
+  .servicos img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:6px}
+  @media (max-width:880px){.servicos .wrap{grid-template-columns:1fr}.servicos img{aspect-ratio:4/3}}
+  @media (max-width:480px){.serv{grid-template-columns:1fr}}
+
+  /* Sintoma */
+  .sintoma{background:var(--grafite);color:#d6d7db}
+  .sintoma .tit h2{color:#fff}
+  .sintoma .tit small{color:var(--amarelo)}
+  .sintoma .tit p{color:#b4b6bc}
+  .sintoma .wrap{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:start}
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chips label{cursor:pointer}
+  .chips input{position:absolute;opacity:0;pointer-events:none}
+  .chips span{display:inline-block;border:2px solid #4a4d55;border-radius:999px;padding:9px 16px;font-weight:600}
+  .chips input:checked+span{background:var(--amarelo);border-color:var(--amarelo);color:var(--grafite)}
+  .chips input:focus-visible+span{outline:3px solid var(--azul);outline-offset:2px}
+  .campo{margin-top:18px}
+  .campo label{display:block;font-weight:700;margin-bottom:6px;color:#fff}
+  .campo input{width:100%;min-height:48px;border-radius:6px;border:0;padding:10px 12px;font:inherit}
+  .sintoma .btn{margin-top:20px;width:100%}
+  .sintoma .obs{font-size:.875rem;color:#a6a8ae;margin:10px 0 0}
+  .pano{width:100%;aspect-ratio:2/1;object-fit:cover;border-radius:6px}
+  @media (max-width:880px){.sintoma .wrap{grid-template-columns:1fr}}
+
+  /* Avaliações */
+  .falas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .falas blockquote{margin:0;background:#fff;border:1px solid var(--fio);border-radius:6px;padding:24px;position:relative}
+  .falas blockquote::before{content:"★★★★★";display:block;color:var(--amarelo-2);letter-spacing:3px;margin-bottom:8px}
+  .falas cite{display:block;margin-top:12px;font-style:normal;font-weight:700;font-size:.875rem;color:var(--azul)}
+  @media (max-width:880px){.falas{grid-template-columns:1fr}}
+
+  /* Onde */
+  .onde{background:var(--amarelo)}
+  .onde .tit small{color:var(--grafite)}
+  .onde .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+  .onde .fach{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:6px;margin-bottom:22px}
+  .horas{width:100%;border-collapse:collapse;margin-bottom:18px}
+  .horas td{padding:9px 0;border-bottom:1px solid rgba(0,0,0,.15)}
+  .horas td:last-child{text-align:right;font-weight:700}
+  .horas tr.hoje td{font-weight:800;text-decoration:underline}
+  .end{margin:0 0 22px}
+  .end a{white-space:nowrap;font-weight:700}
+  .mapa{border-radius:6px;overflow:hidden;min-height:420px;background:var(--amarelo-2)}
+  .mapa iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+  @media (max-width:880px){.onde .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:#000;color:#9a9a9a;padding:24px 0 100px;font-size:.875rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--amarelo);font-weight:700;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 12px 26px -10px rgba(0,0,0,.5);transition:opacity .3s,transform .3s}
+  .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
+  @media (min-width:861px){footer{padding-bottom:24px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial da Mecânica Vasconcelos. É uma ideia de site montada por Lucas para apresentar à oficina.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20da%20Mec%C3%A2nica%20Vasconcelos%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Mecânica Vasconcelos, início"><b>Vasconcelos</b><small>Mecânica em geral</small></a>
+    <nav aria-label="Seções">
+      <a href="#confianca">Como trabalhamos</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#sintoma">Orçamento</a>
+      <a href="#onde">Onde fica</a>
+    </nav>
+    <a class="btn preto peq zap" href="https://wa.me/5519991985402">WhatsApp</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="selo">Ponte Preta · Campinas</span>
+        <h1 id="titulo">O mecânico que diz <span>"tá tudo certo"</span> quando tá tudo certo.</h1>
+        <p>Mecânica em geral, suspensão, freios, alinhamento, injeção e revisão na Avenida da Saudade. "Honesto" é a palavra que mais aparece nas avaliações dos clientes no Google.</p>
+        <div class="acoes">
+          <a class="btn amarelo" href="#sintoma">Pedir orçamento</a>
+          <a class="btn linha" href="tel:+551933073782">Ligar (19) 3307-3782</a>
+        </div>
+        <div class="numeros">
+          <div><b>4,8</b><span>no Google</span></div>
+          <div><b>395</b><span>avaliações</span></div>
+          <div><b>66×</b><span>a palavra "honesto"</span></div>
+        </div>
+      </div>
+      <div class="foto-hero">
+        <img src="fotos/salao.jpg" alt="Oficina da Mecânica Vasconcelos com piso claro, elevadores e carros em serviço" width="1200" height="675">
+        <div class="ficha"><b>Check-up sincero</b>"Não inventaram coisas a fazer, foi sincero ao dizer que estava tudo certo."</div>
+      </div>
+    </div>
+  </section>
+  <div class="listra" aria-hidden="true"></div>
+
+  <section id="confianca" aria-labelledby="t-conf">
+    <div class="wrap">
+      <div class="tit"><small>Como trabalhamos</small><h2 id="t-conf">Confiança vem antes do conserto</h2></div>
+      <div class="regras">
+        <div class="regra"><b>01</b><h3>Diagnóstico primeiro</h3><p>A gente olha o carro e explica o que tem, sem empurrar serviço que não precisa.</p></div>
+        <div class="regra"><b>02</b><h3>Orçamento antes</h3><p>Você sabe o que vai ser feito e quanto custa antes de começar.</p></div>
+        <div class="regra"><b>03</b><h3>Peça que precisa</h3><p>Se está tudo certo, a gente fala. Foi assim que a oficina ganhou os clientes que tem.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="servicos" id="servicos" aria-labelledby="t-serv">
+    <div class="wrap">
+      <div>
+        <div class="tit"><small>Serviços</small><h2 id="t-serv">Do óleo ao motor</h2></div>
+        <ul class="serv">
+          <li>Mecânica em geral</li>
+          <li>Revisão e check-up</li>
+          <li>Troca de óleo</li>
+          <li>Freios</li>
+          <li>Suspensão</li>
+          <li>Alinhamento e balanceamento</li>
+          <li>Cambagem e caster</li>
+          <li>Injeção eletrônica</li>
+          <li>Elétrica</li>
+          <li>Ar-condicionado</li>
+          <li>Revisão de motor</li>
+          <li>Pneus</li>
+        </ul>
+      </div>
+      <img src="fotos/entrada.jpg" alt="Portões da oficina com pintura de mecânico e o letreiro amarelo" loading="lazy" width="675" height="1200">
+    </div>
+  </section>
+
+  <section class="sintoma" id="sintoma" aria-labelledby="t-sint">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:20px"><small>Orçamento pelo WhatsApp</small><h2 id="t-sint">O que o carro está fazendo?</h2><p>Marque o que você percebeu e mande. A oficina responde com o próximo passo.</p></div>
+        <img class="pano" src="fotos/elevadores.jpg" alt="Vista ampla da oficina com dois elevadores e carros suspensos" loading="lazy" width="1200" height="600">
+      </div>
+      <form id="form-s">
+        <div class="chips" role="group" aria-label="Sintomas">
+          <label><input type="checkbox" value="Barulho estranho"><span>Barulho estranho</span></label>
+          <label><input type="checkbox" value="Luz acesa no painel"><span>Luz no painel</span></label>
+          <label><input type="checkbox" value="Freio diferente"><span>Freio diferente</span></label>
+          <label><input type="checkbox" value="Puxando para um lado"><span>Puxando para um lado</span></label>
+          <label><input type="checkbox" value="Ar-condicionado fraco"><span>Ar fraco</span></label>
+          <label><input type="checkbox" value="Esquentando"><span>Esquentando</span></label>
+          <label><input type="checkbox" value="Revisão ou troca de óleo"><span>Revisão / óleo</span></label>
+          <label><input type="checkbox" value="Alinhamento e balanceamento"><span>Alinhamento</span></label>
+        </div>
+        <div class="campo"><label for="carro">Carro e ano</label><input id="carro" type="text" placeholder="Ex.: HR-V 2016" autocomplete="off"></div>
+        <button class="btn amarelo" type="submit">Mandar no WhatsApp</button>
+        <p class="obs">Sábado de manhã é o horário mais cheio. Vale agendar.</p>
+      </form>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="tit"><small>4,8 · 395 avaliações no Google</small><h2 id="t-aval">Quem confia, indica</h2></div>
+      <div class="falas">
+        <blockquote>Deixei minha HRV 2016 para um checkup de rotina e não inventaram coisas a fazer, foi sincero ao dizer que estava tudo certo.<cite>Mayra · Google</cite></blockquote>
+        <blockquote>Já fiz alguns serviços com o Vasconcelos, um cara sempre muito honesto e com preço justo. Recomendo demais.<cite>Samuel · Google</cite></blockquote>
+        <blockquote>Ótimo lugar para fazer uma revisão no carro, pessoas honestas e ambiente limpo.<cite>Resumo das avaliações · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde">
+    <div class="wrap">
+      <div>
+        <img class="fach" src="fotos/fachada.jpg" alt="Fachada da Mecânica Vasconcelos na Avenida da Saudade, com o letreiro amarelo" loading="lazy" width="1200" height="927">
+        <div class="tit" style="margin-bottom:18px"><small>Onde fica</small><h2 id="t-onde">Av. da Saudade, 288</h2></div>
+        <table class="horas" id="horas">
+          <tr data-d="semana"><td>Segunda a sexta</td><td>a partir das 8h</td></tr>
+          <tr data-d="6"><td>Sábado</td><td>8h às 12h</td></tr>
+          <tr data-d="0"><td>Domingo</td><td>Fechado</td></tr>
+        </table>
+        <p class="end">Ponte Preta, Campinas (SP)<br>Fixo <a href="tel:+551933073782">(19) 3307-3782</a> · WhatsApp <a class="zap" href="https://wa.me/5519991985402">(19) 99198-5402</a> · <a href="https://www.instagram.com/mecanicavasco/" target="_blank" rel="noopener">@mecanicavasco</a></p>
+        <div class="acoes">
+          <a class="btn preto" href="https://www.google.com/maps/dir/?api=1&amp;destination=Mecanica+Vasconcelos,+Av.+da+Saudade,+288,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn linha zap" href="https://wa.me/5519991985402">WhatsApp</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Mecânica Vasconcelos, Av. da Saudade, 288, Ponte Preta, Campinas" src="https://www.google.com/maps?q=Mecanica+Vasconcelos,+Av.+da+Saudade,+288+-+Ponte+Preta,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Mecânica Vasconcelos · Ponte Preta, Campinas</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn amarelo fixo some zap" href="https://wa.me/5519991985402" aria-label="Chamar no WhatsApp">WhatsApp</a>
+
+<script>
+(function () {
+  document.querySelectorAll(".zap").forEach(function(a){a.target="_blank";a.rel="noopener";});
+  document.getElementById("form-s").addEventListener("submit", function(e){
+    e.preventDefault();
+    var s = [].map.call(document.querySelectorAll(".chips input:checked"), function(i){return i.value;});
+    var c = document.getElementById("carro").value.trim();
+    var txt = "Olá, Mecânica Vasconcelos! Queria um orçamento." + (c ? "\nCarro: " + c : "") + (s.length ? "\nO que percebi: " + s.join(", ") : "");
+    window.open("https://wa.me/5519991985402?text=" + encodeURIComponent(txt), "_blank", "noopener");
+  });
+  try {
+    var p = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short"}).formatToParts(new Date());
+    var d = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf((p.find(function(x){return x.type==="weekday"})||{}).value);
+    var tr = document.querySelector('#horas tr[data-d="' + (d>=1&&d<=5 ? "semana" : d) + '"]'); if (tr) tr.classList.add("hoje");
+  } catch (e) {}
+  var f = document.querySelector(".fixo"), t2 = document.querySelector(".hero");
+  if (f && t2 && "IntersectionObserver" in window) new IntersectionObserver(function(e){f.classList.toggle("some", e[0].isIntersecting)}).observe(t2);
+})();
+</script>
+</body>
+</html>

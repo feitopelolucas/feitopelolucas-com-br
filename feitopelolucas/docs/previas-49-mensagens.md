@@ -58,3 +58,19 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, Ju! Sou o Lucas, faço sites aqui em Campinas. Vi que o Acarajé da Ju tem 4,7 no Google com mais de 600 avaliações, e uma delas diz "parecia que estava na Bahia". Montei uma ideia de site para vocês: https://feitopelolucas.com.br/previa/acarajedaju/
 > Ele mostra sozinho se está aberto (já que vocês abrem de quinta a sábado), tem o cardápio com as fotos dos clientes e um pedido para retirar que já chega pronto no seu WhatsApp. Se gostar, a gente conversa!
+
+---
+
+## 7. Hélio Targa Auto Elétrica (Auto Elétrica Cambuí) · pulado
+
+**Pelo que vi:** **já tem site próprio**, o autoeletricacambui.com.br (desde 1969, Seu Hélio, baterias para condomínios). O site é antigo, feito num construtor modular e sem https. Não fiz prévia agora. Fica como possível cliente de **reforma** de site, numa abordagem diferente.
+
+---
+
+## 8. Mecânica Vasconcelos · /previa/vasconcelos/
+
+**Pelo que vi:** Instagram **@mecanicavasco** (2,4 mil seguidores) e Facebook (2,2 mil), sem site. Dono: Marcio Vasco(ncelos). Fixo (19) 3307-3782 e WhatsApp (19) 99198-5402. Sábado das 8h às 12h. **Não achei o horário de fechamento em dia de semana**, então o site diz "a partir das 8h"; vale confirmar. Nas avaliações, a palavra "honesto" aparece 66 vezes e "confiança" 44. O site é todo construído em cima disso e tem um orçamento por sintoma: o cliente marca o que o carro está fazendo, põe modelo e ano e manda no WhatsApp. **Atenção:** há uma avaliação negativa de 3 meses atrás ("Bola"), já respondida pelo dono.
+**Por onde mandar:** WhatsApp (19) 99198-5402.
+
+> Oi, Marcio! Sou o Lucas, faço sites aqui em Campinas. Vi que a palavra "honesto" aparece mais de 60 vezes nas avaliações da Mecânica Vasconcelos no Google, e montei uma ideia de site em cima disso: https://feitopelolucas.com.br/previa/vasconcelos/
+> O cliente marca o que o carro está fazendo (barulho, luz no painel, freio...), coloca modelo e ano e manda direto no WhatsApp de vocês. Se gostar, a gente conversa!
