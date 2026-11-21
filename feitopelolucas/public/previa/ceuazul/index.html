@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bar Céu Azul · Restaurante e boteco raiz desde 1998 · Centro de Campinas</title>
+<meta name="description" content="Prévia de site para o Bar Céu Azul, no Centro de Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/ceuazul/">
+<meta property="og:title" content="Prévia de site · Bar Céu Azul">
+<meta property="og:description" content="Caldos, almoço caseiro, boca de anjo e pastel desde 1998. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/ceuazul/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1f5fa8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='21' cy='12' r='6' fill='%23ffd54a'/%3E%3Cpath d='M8 24a5 5 0 0 1 1-10 7 7 0 0 1 13 2 4 4 0 0 1 1 8Z' fill='%234a9be0'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ceu:#4a9be0; --ceu-esc:#1f5fa8; --ceu-claro:#e6f2fc; --sol:#ffd54a; --nuvem:#ffffff; --papel:#fffbf0;
+    --tinta:#17324d; --tinta-2:#5a6d80; --fio:#dde8f2; --tijolo:#c4553a;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.6 "Nunito",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Bree Serif",Georgia,serif;font-weight:400;line-height:1.08;margin:0}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--sol);outline-offset:3px}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+
+  .previa{background:var(--tinta);color:#c9d8e6;font-size:.82rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--sol);font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  /* Céu */
+  .ceu{background:linear-gradient(180deg,#3f8fd6 0%,#6db3ec 70%,#9fd0f5 100%);color:#fff;position:relative;overflow:hidden}
+  .ceu .astro{position:absolute;left:50%;top:92px;width:110px;height:110px;border-radius:50%;background:var(--sol);box-shadow:0 0 0 22px rgba(255,213,74,.25),0 0 0 48px rgba(255,213,74,.12)}
+  .nuvem{position:absolute;background:#fff;border-radius:100px;opacity:.92}
+  .nuvem::before,.nuvem::after{content:"";position:absolute;background:#fff;border-radius:50%}
+  .n1{width:180px;height:52px;left:55%;top:170px}.n1::before{width:80px;height:80px;left:24px;top:-38px}.n1::after{width:60px;height:60px;left:90px;top:-26px}
+  .n2{width:130px;height:40px;left:30%;top:40px;opacity:.6}.n2::before{width:56px;height:56px;left:20px;top:-28px}.n2::after{width:44px;height:44px;left:64px;top:-18px}
+  .topo{position:relative;z-index:2}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:14px}
+  .marca{text-decoration:none;display:flex;align-items:center;gap:10px}
+  .marca svg{width:48px;height:40px}
+  .marca b{font:400 1.6rem/1 "Bree Serif",serif}
+  .marca small{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;opacity:.85;margin-top:2px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:12px 24px;border-radius:12px;font-weight:800;text-decoration:none;transition:transform .15s,background .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn.sol{background:var(--sol);color:var(--tinta)}
+  .btn.branco{background:#fff;color:var(--ceu-esc)}
+  .btn.azul{background:var(--ceu-esc);color:#fff}
+  .btn.ifood{background:#ea1d2c;color:#fff}
+  .btn.peq{min-height:44px;padding:9px 16px;font-size:.92rem}
+  .hero{position:relative;z-index:1;padding:50px 0 0}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
+  .hero .desde{display:inline-block;background:rgba(255,255,255,.2);padding:6px 14px;border-radius:999px;font-weight:800;font-size:.88rem}
+  .hero h1{font-size:clamp(2.6rem,6.2vw,4.6rem);margin:16px 0 16px;text-shadow:0 2px 0 rgba(23,50,77,.25)}
+  .hero p{font-size:1.15rem;max-width:30em;margin:0 0 28px;color:#f2f8ff}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap;padding-bottom:60px}
+  .hero .fach{border-radius:24px 24px 0 0;border:8px solid #fff;border-bottom:0;width:100%;aspect-ratio:4/3;object-fit:cover}
+  @media (max-width:880px){.hero .wrap{grid-template-columns:1fr}.acoes{padding-bottom:10px}.ceu .astro,.nuvem{display:none}}
+
+  section{padding:84px 0}
+  .tit{max-width:640px;margin-bottom:34px}
+  .tit small{font-weight:800;color:var(--tijolo);letter-spacing:.14em;text-transform:uppercase;font-size:.8rem}
+  .tit h2{font-size:clamp(2rem,4.4vw,3rem);margin-top:8px;color:var(--ceu-esc)}
+  .tit p{color:var(--tinta-2);margin:10px 0 0}
+
+  /* Caldos */
+  .caldos .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:start}
+  .caldos .lado{position:sticky;top:20px}
+  .caldos .lado img{border-radius:20px;width:100%;aspect-ratio:9/12;object-fit:cover}
+  .tamanhos{display:flex;gap:6px;background:var(--ceu-claro);padding:6px;border-radius:14px;margin-bottom:16px}
+  .tamanhos button{flex:1;min-height:46px;border:0;border-radius:10px;background:transparent;font:800 .95rem "Nunito",sans-serif;color:var(--tinta-2);cursor:pointer}
+  .tamanhos button[aria-pressed="true"]{background:#fff;color:var(--ceu-esc);box-shadow:0 4px 12px -6px rgba(23,50,77,.4)}
+  .lista-c{list-style:none;margin:0;padding:0}
+  .lista-c li{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:12px 0;border-bottom:1px dashed #cfdce8}
+  .lista-c b{font-weight:800}
+  .lista-c small{color:var(--tinta-2);font-size:.88rem}
+  .lista-c .p{grid-row:1/3;grid-column:2;align-self:center;font:400 1.15rem "Bree Serif",serif;color:var(--ceu-esc);white-space:nowrap}
+  .lista-c li.vg b::after{content:"vegano";margin-left:8px;font:800 .66rem "Nunito",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#2f8a4e;background:#e2f4e8;padding:2px 7px;border-radius:999px;vertical-align:middle}
+  .grupo{font:400 1.25rem "Bree Serif",serif;color:var(--tijolo);margin:24px 0 4px}
+  @media (max-width:880px){.caldos .wrap{grid-template-columns:1fr}.caldos .lado{position:static}.caldos .lado img{aspect-ratio:16/10}}
+
+  /* Do boteco */
+  .boteco{background:var(--ceu-claro)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 18px 36px -26px rgba(23,50,77,.5)}
+  .card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+  .card div{padding:18px 20px 20px}
+  .card h3{font-size:1.4rem;color:var(--ceu-esc);margin-bottom:6px}
+  .card p{margin:0 0 10px;color:var(--tinta-2);font-size:.95rem}
+  .card ul{margin:0;padding:0;list-style:none;font-size:.93rem}
+  .card li{display:flex;justify-content:space-between;gap:10px;padding:5px 0;border-top:1px dotted var(--fio)}
+  .card li span:last-child{font-weight:800;color:var(--tinta);white-space:nowrap}
+  @media (max-width:900px){.cards{grid-template-columns:1fr 1fr}}
+  @media (max-width:600px){.cards{grid-template-columns:1fr}}
+
+  /* Faixa de fotos */
+  .tira{display:grid;grid-template-columns:repeat(6,1fr);gap:0}
+  .tira img{width:100%;aspect-ratio:1;object-fit:cover}
+  @media (max-width:760px){.tira{grid-template-columns:repeat(3,1fr)}}
+
+  /* Avaliações */
+  .falas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .falas blockquote{margin:0;background:#fff;border:1px solid var(--fio);border-radius:20px;padding:24px;position:relative}
+  .falas blockquote::before{content:"★★★★★";display:block;color:#f2b01e;letter-spacing:3px;margin-bottom:8px}
+  .falas cite{display:block;margin-top:10px;font-style:normal;font-weight:800;font-size:.85rem;color:var(--tinta-2)}
+  @media (max-width:880px){.falas{grid-template-columns:1fr}}
+
+  /* Onde */
+  .onde{background:var(--ceu-esc);color:#e6f0fa}
+  .onde .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:36px}
+  .onde h2{color:#fff}
+  .onde .tit small{color:var(--sol)}
+  .dados{list-style:none;padding:0;margin:0 0 24px}
+  .dados li{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+  .dados small{display:block;font-weight:800;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:#a9c8ea}
+  .dados a{color:#fff;font-weight:800;text-decoration:none}
+  .mapa{border-radius:20px;overflow:hidden;min-height:400px;border:6px solid rgba(255,255,255,.15)}
+  .mapa iframe{width:100%;height:100%;min-height:400px;border:0;display:block}
+  @media (max-width:880px){.onde .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:var(--tinta);color:#a9bccc;padding:24px 0 100px;font-size:.88rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--sol);font-weight:800;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 12px 26px -10px rgba(23,50,77,.7);transition:opacity .3s,transform .3s}
+  .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
+  @media (min-width:881px){footer{padding-bottom:24px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial do Bar Céu Azul. É uma ideia de site montada por Lucas para apresentar ao bar.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20do%20Bar%20C%C3%A9u%20Azul%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<div class="ceu">
+  <span class="astro" aria-hidden="true"></span><span class="nuvem n1" aria-hidden="true"></span><span class="nuvem n2" aria-hidden="true"></span>
+  <header class="topo">
+    <div class="wrap">
+      <a class="marca" href="#inicio" aria-label="Bar Céu Azul, início">
+        <svg viewBox="0 0 48 40" aria-hidden="true"><circle cx="32" cy="14" r="9" fill="#ffd54a"/><path d="M10 34a7 7 0 0 1 1.5-13.8A10 10 0 0 1 30 22.5 6 6 0 0 1 31 34Z" fill="#fff"/></svg>
+        <span><b>Céu Azul</b><small>Bar e lanchonete</small></span>
+      </a>
+      <a class="btn sol peq zap" href="https://wa.me/551933675295">WhatsApp</a>
+    </div>
+  </header>
+  <section class="hero" id="inicio" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="desde">Desde 1998 · Centro de Campinas</span>
+        <h1 id="titulo">Restaurante e boteco raiz, com comida de casa.</h1>
+        <p>Almoço caseiro, caldos que aquecem a semana inteira, boca de anjo, pastel e cerveja gelada. Um bar tranquilo, de família, pertinho de você na Padre Vieira.</p>
+        <div class="acoes">
+          <a class="btn branco" href="#caldos">Ver os caldos</a>
+          <a class="btn ifood" href="https://www.ifood.com.br/delivery/campinas-sp/bar-e-lanchonete-ceu-azul-centro/dd647a2a-ecec-484a-b865-8cddfcd36873" target="_blank" rel="noopener">Pedir no iFood</a>
+        </div>
+      </div>
+      <img class="fach" src="fotos/fachada.jpg" alt="Fachada azul do Bar Céu Azul na Rua Padre Vieira" width="1073" height="810">
+    </div>
+  </section>
+</div>
+
+<main>
+  <section class="caldos" id="caldos" aria-labelledby="t-caldos">
+    <div class="wrap">
+      <div class="lado">
+        <div class="tit">
+          <small>A especialidade</small>
+          <h2 id="t-caldos">Caldos para comer aqui ou levar</h2>
+          <p>Mais de 20 opções, com versão vegana e vegetariana. Escolha o tamanho e veja o preço.</p>
+        </div>
+        <img src="fotos/caldo.jpg" alt="Caldo de feijão com calabresa na panela" loading="lazy" width="360" height="640">
+      </div>
+      <div>
+        <div class="tamanhos" role="group" aria-label="Tamanho do caldo">
+          <button type="button" data-t="0" aria-pressed="true">No prato (mesa)</button>
+          <button type="button" data-t="1" aria-pressed="false">Viagem 500 ml</button>
+          <button type="button" data-t="2" aria-pressed="false">Viagem 1 litro</button>
+        </div>
+        <ul class="lista-c" id="caldos-lista">
+          <li data-p="24,90|23,00|34,00"><b>Caldo verde</b><small>Batata com couve, bacon e calabresa</small><span class="p"></span></li>
+          <li data-p="25,90|27,00|36,00"><b>Caldo de Kenga</b><small>Mandioca com frango desfiado, bacon, calabresa e milho</small><span class="p"></span></li>
+          <li data-p="24,90|23,00|34,00"><b>Canja</b><small>Frango desfiado, arroz, batata e cenoura</small><span class="p"></span></li>
+          <li data-p="24,90|23,00|34,00"><b>Canjiquinha</b><small>Quirera de milho, bacon, calabresa e costelinha</small><span class="p"></span></li>
+          <li data-p="24,90|23,00|34,00"><b>Feijão com bacon e calabresa</b><small>Também tem de feijão preto</small><span class="p"></span></li>
+          <li data-p="24,90|23,00|34,00"><b>Lentilha</b><small>Com cenoura, batata, bacon e calabresa</small><span class="p"></span></li>
+          <li data-p="24,90|23,00|34,00"><b>Espinafre</b><small>Com bacon e calabresa</small><span class="p"></span></li>
+          <li data-p="24,90|23,00|34,00"><b>Legumes</b><small>Com carne em cubos ou frango desfiado e macarrão</small><span class="p"></span></li>
+          <li data-p="24,90|23,00|34,00"><b>Mandioca</b><small>Com frango, carne em cubos, carne moída ou bacon e calabresa</small><span class="p"></span></li>
+          <li data-p="28,90|27,00|40,00"><b>Mandioca com carne seca</b><small>Ou costela desfiada</small><span class="p"></span></li>
+          <li data-p="24,90|23,00|34,00"><b>Abóbora japonesa</b><small>Com frango, carne em cubos, carne moída ou bacon e calabresa</small><span class="p"></span></li>
+          <li data-p="28,90|27,00|40,00"><b>Abóbora com carne seca</b><small>Ou costela desfiada</small><span class="p"></span></li>
+          <li data-p="28,90|27,00|38,00"><b>Mandioquinha</b><small>Com frango, carne em cubos, carne moída ou bacon e calabresa</small><span class="p"></span></li>
+          <li data-p="32,90|31,00|45,00"><b>Mandioquinha com carne seca</b><small>Ou costela desfiada</small><span class="p"></span></li>
+        </ul>
+        <p class="grupo">Veganos e vegetarianos</p>
+        <ul class="lista-c">
+          <li class="vg" data-p="20,90|20,00|31,00"><b>Abóbora com couve ou brócolis</b><small>Também de mandioquinha ou batata</small><span class="p"></span></li>
+          <li class="vg" data-p="22,90|21,00|33,00"><b>Mandioca com couve ou brócolis</b><small>Cremoso e reforçado</small><span class="p"></span></li>
+          <li class="vg" data-p="20,90|20,00|31,00"><b>Feijão, lentilha, legumes ou espinafre</b><small>Versões sem carne</small><span class="p"></span></li>
+          <li data-p="20,90|20,00|31,00"><b>Legumes ou feijão com macarrão</b><small>Vegetariano</small><span class="p"></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="boteco" aria-labelledby="t-bot">
+    <div class="wrap">
+      <div class="tit"><small>Do boteco</small><h2 id="t-bot">Almoço, lanche e petisco</h2><p>Preços do cardápio publicado pelo bar.</p></div>
+      <div class="cards">
+        <article class="card"><img src="fotos/boquinha.jpg" alt="Duas bocas de anjo no prato com copos de cerveja" loading="lazy" width="800" height="1067"><div><h3>Boca de anjo</h3><p>No pão baguete, com filé mignon, contra-filé, frango ou pernil.</p><ul><li><span>Misto quente</span><span>R$ 17,90</span></li><li><span>Bauru</span><span>R$ 19,90</span></li><li><span>Céu Azul, a completa</span><span>no cardápio</span></li></ul></div></article>
+        <article class="card"><img src="fotos/almoco.jpg" alt="Bandejas do almoço com carnes e acompanhamentos" loading="lazy" width="595" height="640"><div><h3>Almoço caseiro</h3><p>Salada primeiro, depois o prato quente com feijão e farofa separada. Tempero de família.</p><ul><li><span>Pratos do dia</span><span>no balcão</span></li><li><span>Para levar</span><span>WhatsApp</span></li></ul></div></article>
+        <article class="card"><img src="fotos/pasteis.jpg" alt="Pastéis fritos na bandeja" loading="lazy" width="360" height="640"><div><h3>Hambúrguer e pastel</h3><p>Hambúrguer angus de 100 g no pão, e pastel que os clientes chamam de sensacional.</p><ul><li><span>X-Burguer</span><span>R$ 24,90</span></li><li><span>X-Salada</span><span>R$ 26,90</span></li><li><span>X-Tudo</span><span>R$ 32,90</span></li></ul></div></article>
+      </div>
+    </div>
+  </section>
+
+  <div class="tira" aria-hidden="true">
+    <img src="fotos/frango.jpg" alt="" loading="lazy" width="597" height="640">
+    <img src="fotos/caipi-morango.jpg" alt="" loading="lazy" width="640" height="640">
+    <img src="fotos/torresmo.jpg" alt="" loading="lazy" width="640" height="640">
+    <img src="fotos/calabresa.jpg" alt="" loading="lazy" width="589" height="640">
+    <img src="fotos/caipi-maracuja.jpg" alt="" loading="lazy" width="512" height="640">
+    <img src="fotos/bolinhos.jpg" alt="" loading="lazy" width="621" height="640">
+  </div>
+
+  <section aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="tit"><small>4,6 · 212 avaliações no Google</small><h2 id="t-aval">Descoberta de bairro</h2></div>
+      <div class="falas">
+        <blockquote>Comida com tempero de conforto, de família. Saborosa e bem servida. Caipirinha no capricho, no copo certo.<cite>Rodrigo · Google</cite></blockquote>
+        <blockquote>Descoberta maravilhosa, almoço e jantar. Caldos maravilhosos, pastel sensacional. Ambiente familiar e cerveja gelada.<cite>Renata · Google</cite></blockquote>
+        <blockquote>Comecei indo buscar caldo no inverno. Todos os caldos e sopas são maravilhosos. Indico sem medo de errar.<cite>Silvana · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde">
+    <div class="wrap">
+      <div>
+        <div class="tit"><small>Onde fica</small><h2 id="t-onde">Na Padre Vieira, no Centro</h2></div>
+        <ul class="dados">
+          <li><small>Endereço</small>Rua Padre Vieira, 891 · Centro, Campinas (SP)</li>
+          <li><small>Funcionamento</small>Almoço e jantar · abre às 9h e fecha às 22h em ponto</li>
+          <li><small>WhatsApp e telefone</small><a class="zap" href="https://wa.me/551933675295">(19) 3367-5295</a></li>
+        </ul>
+        <div class="acoes" style="padding:0">
+          <a class="btn sol" href="https://www.google.com/maps/dir/?api=1&amp;destination=Bar+C%C3%A9u+Azul,+Rua+Padre+Vieira,+891,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn ifood" href="https://www.ifood.com.br/delivery/campinas-sp/bar-e-lanchonete-ceu-azul-centro/dd647a2a-ecec-484a-b865-8cddfcd36873" target="_blank" rel="noopener">iFood</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Bar Céu Azul, Rua Padre Vieira, 891, Centro, Campinas" src="https://www.google.com/maps?q=Bar+C%C3%A9u+Azul,+Rua+Padre+Vieira,+891+-+Centro,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Bar e lanchonete Céu Azul · desde 1998 · <a href="https://www.instagram.com/barceuazul/" target="_blank" rel="noopener">@barceuazul</a></span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn azul fixo some" href="#caldos">Cardápio</a>
+
+<script>
+(function () {
+  document.querySelectorAll(".zap").forEach(function(a){a.target="_blank";a.rel="noopener";});
+  var bts = document.querySelectorAll(".tamanhos button");
+  function mostra(t){
+    document.querySelectorAll(".lista-c li").forEach(function(li){ li.querySelector(".p").textContent = "R$ " + li.dataset.p.split("|")[t]; });
+    bts.forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.t == t ? "true" : "false"); });
+  }
+  bts.forEach(function(b){ b.addEventListener("click", function(){ mostra(parseInt(b.dataset.t,10)); }); });
+  mostra(0);
+  var f = document.querySelector(".fixo"), t = document.querySelector(".ceu");
+  if (f && t && "IntersectionObserver" in window) new IntersectionObserver(function(e){f.classList.toggle("some", e[0].isIntersecting)}).observe(t);
+})();
+</script>
+</body>
+</html>

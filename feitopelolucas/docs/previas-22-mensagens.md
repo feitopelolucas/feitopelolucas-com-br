@@ -129,3 +129,12 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 > Olá, pessoal do Elegance! Sou o Lucas, faço sites aqui em Campinas. Vocês têm nota 4,8 com mais de 200 avaliações e uma agenda online cheia de serviços, mas sem um site que apresente o salão. Montei uma ideia: https://feitopelolucas.com.br/previa/elegance/
 > Os preços estão organizados por categoria (cabelo, tratamentos, cílios, estética, unhas), tem o combo promocional em destaque, uma parte para noivas, e o botão de agendar leva para a agenda que vocês já usam. Se gostarem, a gente conversa!
 
+---
+
+## 15. Bar Céu Azul · /previa/ceuazul/
+
+**Pelo que vi:** Instagram fraco (427 seguidores, parado desde 2025), mas com fotos de comida muito boas. A bio diz "desde 1998, restaurante e boteco raiz". Têm uma página de links (bio.site) com iFood, WhatsApp e um **cardápio em PDF no Google Drive**, com mais de 20 caldos (preço de mesa, viagem 500 ml e 1 L), lanches e boca de anjo. Passei os caldos com os preços para o site, com um botão que troca o tamanho. Não achei o horário de todos os dias; as avaliações dizem que abre às 9h e "fecha às 22h em ponto". Vale confirmar os dias.
+
+> Oi, pessoal do Céu Azul! Sou o Lucas, faço sites aqui em Campinas. Vi que o cardápio de vocês está num PDF do Drive. É bem completo, mas difícil de ler no celular. Montei uma ideia de site: https://feitopelolucas.com.br/previa/ceuazul/
+> Os caldos estão em lista, com o preço de mesa, 500 ml e 1 L num toque, e tem os veganos, a boca de anjo, o almoço e o botão do iFood. São 27 anos de bar (desde 1998!), e isso merece aparecer no Google. Se gostarem, a gente conversa!
+
