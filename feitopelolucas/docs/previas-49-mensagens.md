@@ -22,3 +22,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, pessoal da Pão do Bosque! Sou o Lucas, faço sites aqui em Campinas. Vocês têm quase 1.700 avaliações no Google, e uma delas diz que, hospedado ali perto, não compensa tomar café no hotel. Montei uma ideia de site para a padaria: https://feitopelolucas.com.br/previa/paodobosque/
 > Tem o horário com aviso de "aberta agora", a feijoada de sexta que aparece sozinha no dia, o balcão e um convite para quem está hospedado no Bosque. Se gostarem, a gente conversa!
+
+---
+
+## 3. Il Panettiere · /previa/ilpanettiere/
+
+**Pelo que vi:** nenhum site e nenhum perfil próprio no Instagram (o que aparece é página de localização, com posts de clientes). Padaria de tradição italiana. Avaliações citam "melhor pão italiano da região", pão de sal, pão integral, brownie, empadas e massa de pizza; um post fala do Pão de Altamura (trigo durum). No Tripadvisor dizem que de manhã tem fila. Horário (Guia da Semana + Google): segunda a sábado das 6h às 21h, domingo e feriado das 7h às 21h. WhatsApp (19) 99897-1693. Só achei 2 fotos boas no Google (vitrine e loja). O site tem um "Separe o seu pão": a pessoa escolhe as quantidades e o horário e manda pronto no WhatsApp, para fugir da fila. **Atenção:** há uma avaliação recente reclamando de grosseria com uma cliente que estava com a cachorra; não mexi nisso no site.
+**Por onde mandar:** WhatsApp (19) 99897-1693.
+
+> Oi, pessoal da Il Panettiere! Sou o Lucas, faço sites aqui em Campinas. Vi que tem gente chamando vocês de "melhor pão italiano da região" e que de manhã forma fila, então montei uma ideia de site para a padaria: https://feitopelolucas.com.br/previa/ilpanettiere/
+> Tem os pães da casa e um "Separe o seu pão": o cliente escolhe o que quer e o horário e manda o pedido pronto no WhatsApp, para chegar e só buscar. Se gostarem, a gente conversa!

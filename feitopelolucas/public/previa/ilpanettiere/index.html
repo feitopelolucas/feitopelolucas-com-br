@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Il Panettiere · Padaria italiana no Cambuí, Campinas</title>
+<meta name="description" content="Prévia de site para a Il Panettiere, padaria de tradição italiana no Cambuí, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/ilpanettiere/">
+<meta property="og:title" content="Prévia de site · Il Panettiere">
+<meta property="og:description" content="Pão italiano, integral, francês e massa de pizza feitos ali mesmo, no Cambuí. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/ilpanettiere/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2f5d46">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--verde:#2f5d46;--verde-2:#244a37;--terra:#b5422c;--terra-2:#943522;--farinha:#f7f2e8;--farinha-2:#efe6d4;--casca:#a8672f;--tinta:#2b241e;--tinta-2:#625649;--fio:#e3d7c2}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--farinha);color:var(--tinta);font:17px/1.65 "Work Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;line-height:1.02;margin:0}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--casca);outline-offset:3px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  .wrap>*{min-width:0}
+
+  .previa{background:var(--tinta);color:#d4c8ba;font-size:.8125rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:#f0c27a;font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .faixa{height:6px;background:linear-gradient(90deg,var(--verde) 0 33.3%,#fff 33.3% 66.6%,var(--terra) 66.6%)}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:78px}
+  .marca{text-decoration:none;line-height:1}
+  .marca b{font:italic 600 2rem "Cormorant Garamond",serif;color:var(--verde)}
+  .marca small{display:block;font-size:.8125rem;letter-spacing:.2em;text-transform:uppercase;color:var(--tinta-2);margin-top:4px}
+  .topo nav{display:flex;gap:24px;font-weight:600;color:var(--tinta-2)}
+  .topo nav a{text-decoration:none}
+  .topo nav a:hover{color:var(--terra)}
+  @media (max-width:860px){.topo nav{display:none}}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:12px 22px;border-radius:4px;font-weight:700;text-decoration:none;font-size:1rem;transition:transform .15s,background .15s;white-space:nowrap;border:0;cursor:pointer;font-family:inherit}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn.verde{background:var(--verde);color:#fff}
+  .btn.verde:hover{background:var(--verde-2)}
+  .btn.terra{background:var(--terra);color:#fff}
+  .btn.terra:hover{background:var(--terra-2)}
+  .btn.linha{border:1.5px solid var(--tinta);color:var(--tinta);background:transparent}
+  .btn.peq{min-height:44px;padding:8px 16px;font-size:.94rem}
+
+  .hero{position:relative}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:center;padding-top:40px;padding-bottom:76px}
+  .sobre-t{font-size:.8125rem;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);font-weight:700}
+  .hero h1{font-size:clamp(2.8rem,6.4vw,5rem);margin:14px 0 18px;color:var(--verde)}
+  .hero h1 i{color:var(--terra);font-weight:600}
+  .hero p{font-size:1.14rem;color:var(--tinta-2);max-width:30em;margin:0 0 26px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .agora{margin-top:22px;font-weight:600;color:var(--tinta-2);display:flex;gap:10px;align-items:center}
+  .agora i{width:11px;height:11px;border-radius:50%;background:#bbb;flex:none}
+  .agora.sim i{background:#3e9a5c;box-shadow:0 0 0 5px rgba(62,154,92,.18)}
+  .forno{position:relative}
+  .forno img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px;box-shadow:0 30px 60px -34px rgba(43,36,30,.7)}
+  .forno .carimbo{position:absolute;left:-18px;bottom:-22px;width:150px;height:150px;border-radius:50%;background:var(--terra);color:#fff;display:grid;place-items:center;text-align:center;font:italic 600 1.25rem/1.05 "Cormorant Garamond",serif;transform:rotate(-8deg);box-shadow:0 16px 30px -14px rgba(0,0,0,.5);border:3px dashed rgba(255,255,255,.6);outline:6px solid var(--terra)}
+  .forno .carimbo b{display:block;font:700 2.2rem/1 "Cormorant Garamond",serif;font-style:normal}
+  @media (max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:26px}.forno .carimbo{left:8px;width:120px;height:120px;font-size:1.05rem}.forno .carimbo b{font-size:1.8rem}}
+
+  section{padding:84px 0}
+  .tit{max-width:640px;margin-bottom:36px}
+  .tit small{font-size:.8125rem;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);font-weight:700}
+  .tit h2{font-size:clamp(2.2rem,4.8vw,3.4rem);margin-top:6px;color:var(--verde)}
+  .tit p{color:var(--tinta-2);margin:10px 0 0}
+
+  /* Pães */
+  .paes{background:#fff;border-top:1px solid var(--fio);border-bottom:1px solid var(--fio)}
+  .lista{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--fio)}
+  .pao{padding:26px 24px 26px 0;border-bottom:1px solid var(--fio)}
+  .pao:not(:nth-child(3n)){border-right:1px solid var(--fio);margin-right:0}
+  .pao:not(:nth-child(3n+1)){padding-left:24px}
+  .pao em{font:italic 600 1rem "Cormorant Garamond",serif;color:var(--casca)}
+  .pao h3{font-size:1.7rem;color:var(--tinta);margin:2px 0 6px}
+  .pao p{margin:0;color:var(--tinta-2);font-size:.95rem}
+  @media (max-width:860px){.lista{grid-template-columns:1fr 1fr}.pao{padding:20px 16px!important;border-right:0!important}.pao:nth-child(odd){border-right:1px solid var(--fio)!important}}
+  @media (max-width:520px){.lista{grid-template-columns:1fr}.lista .pao:nth-child(n){padding:18px 0!important;border-right:0!important}}
+
+  /* Separe */
+  .separe .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:46px;align-items:start}
+  .separe img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px}
+  .pedido{background:#fff;border:1px solid var(--fio);border-radius:6px;padding:26px}
+  .item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px dashed var(--fio)}
+  .item b{font-weight:600}
+  .item small{display:block;color:var(--tinta-2);font-size:.875rem}
+  .qtd{display:flex;align-items:center;gap:6px;flex:none}
+  .qtd button{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--verde);background:#fff;color:var(--verde);font:700 1.2rem "Work Sans";cursor:pointer}
+  .qtd output{min-width:26px;text-align:center;font-weight:700}
+  .pedido label{display:block;margin:18px 0 6px;font-weight:600}
+  .pedido select{width:100%;min-height:46px;border:1px solid var(--fio);border-radius:4px;padding:8px 10px;font:inherit;background:var(--farinha)}
+  .pedido .btn{width:100%;margin-top:18px}
+  .pedido .obs{font-size:.875rem;color:var(--tinta-2);margin:10px 0 0}
+  @media (max-width:880px){.separe .wrap{grid-template-columns:1fr}.separe img{aspect-ratio:4/3}}
+
+  /* Avaliações */
+  .aval{background:var(--verde);color:#e4ede7}
+  .aval .tit h2{color:#fff}
+  .aval .tit small{color:#f0c27a}
+  .falas{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .falas blockquote{margin:0;border-top:1px solid rgba(255,255,255,.3);padding-top:18px;font:italic 600 1.45rem/1.3 "Cormorant Garamond",serif;color:#fff}
+  .falas cite{display:block;margin-top:12px;font:600 .875rem "Work Sans",sans-serif;font-style:normal;color:#b8cfc1}
+  @media (max-width:860px){.falas{grid-template-columns:1fr}}
+
+  /* Visite */
+  .visite .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+  .horas{width:100%;border-collapse:collapse;margin-bottom:18px}
+  .horas td{padding:9px 0;border-bottom:1px solid var(--fio)}
+  .horas td:last-child{text-align:right;font-weight:700}
+  .horas tr.hoje td{color:var(--terra)}
+  .end{margin:0 0 22px;color:var(--tinta-2)}
+  .end b{color:var(--tinta)}
+  .end a{white-space:nowrap;font-weight:700;color:var(--verde)}
+  .mapa{border-radius:6px;overflow:hidden;min-height:420px;background:var(--farinha-2)}
+  .mapa iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+  @media (max-width:880px){.visite .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:var(--tinta);color:#b7aa9b;padding:24px 0 100px;font-size:.875rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:#f0c27a;font-weight:700;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 12px 26px -10px rgba(0,0,0,.5);transition:opacity .3s,transform .3s}
+  .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
+  @media (min-width:861px){footer{padding-bottom:24px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial da Il Panettiere. É uma ideia de site montada por Lucas para apresentar à padaria.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20da%20Il%20Panettiere%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+<div class="faixa" aria-hidden="true"></div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Il Panettiere, início"><b>Il Panettiere</b><small>Panificio · Cambuí</small></a>
+    <nav aria-label="Seções">
+      <a href="#paes">Os pães</a>
+      <a href="#separe">Separe o seu</a>
+      <a href="#visite">Visite</a>
+    </nav>
+    <a class="btn verde peq zap" href="https://wa.me/5519998971693">WhatsApp</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="sobre-t">Panificação de tradição italiana</span>
+        <h1 id="titulo">O pão que tem <i>fila</i> de manhã no Cambuí.</h1>
+        <p>Pão italiano, integral, francês e massa de pizza feitos ali mesmo, na Rua Maria Monteiro. E ainda salgados, bolos, o brownie que todo mundo comenta e café passado no capricho.</p>
+        <div class="acoes">
+          <a class="btn terra" href="#separe">Separar meu pão</a>
+          <a class="btn linha" href="#paes">Conhecer os pães</a>
+        </div>
+        <p class="agora" id="agora"><i aria-hidden="true"></i><span id="agora-t">Seg a sáb 6h às 21h · dom e feriado 7h às 21h</span></p>
+      </div>
+      <div class="forno">
+        <img src="fotos/vitrine.jpg" alt="Vitrine da Il Panettiere com pães italianos de casca dourada" width="1200" height="900">
+        <div class="carimbo"><span><b>4,7</b>mais de mil avaliações</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="paes" id="paes" aria-labelledby="t-paes">
+    <div class="wrap">
+      <div class="tit"><small>Dal forno</small><h2 id="t-paes">Os pães da casa</h2><p>Os mais citados por quem compra. Quer saber o que está saindo agora? Pergunte no WhatsApp.</p></div>
+      <div class="lista">
+        <div class="pao"><em>il classico</em><h3>Pão italiano</h3><p>Casca crocante e miolo macio. "O melhor pão italiano da região", segundo os clientes.</p></div>
+        <div class="pao"><em>antica ricetta</em><h3>Pão de Altamura</h3><p>Feito com trigo durum, numa receita que vem do século XVI.</p></div>
+        <div class="pao"><em>integrale</em><h3>Pão integral</h3><p>Um dos que mais aparece nas avaliações.</p></div>
+        <div class="pao"><em>di ogni giorno</em><h3>Pão francês</h3><p>"O melhor pão de sal que como em Campinas", disse um cliente.</p></div>
+        <div class="pao"><em>per la sera</em><h3>Massa de pizza</h3><p>Para levar e montar a pizza em casa.</p></div>
+        <div class="pao"><em>dolce</em><h3>Brownie</h3><p>O doce mais comentado da casa, ao lado dos bolos.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="separe" id="separe" aria-labelledby="t-sep">
+    <div class="wrap">
+      <img src="fotos/loja.jpg" alt="Interior da Il Panettiere com balcões de pães, doces e prateleiras de vinho" loading="lazy" width="900" height="1200">
+      <div>
+        <div class="tit" style="margin-bottom:20px"><small>Sem fila</small><h2 id="t-sep">Separe o seu pão</h2><p>Escolha o que quer, diga o horário e mande pelo WhatsApp. A equipe confirma e deixa separado.</p></div>
+        <form class="pedido" id="pedido">
+          <div class="item"><div><b>Pão italiano</b><small>unidade</small></div><div class="qtd"><button type="button" aria-label="Menos pão italiano">−</button><output>0</output><button type="button" aria-label="Mais pão italiano">+</button></div></div>
+          <div class="item"><div><b>Pão de Altamura</b><small>unidade</small></div><div class="qtd"><button type="button" aria-label="Menos pão de Altamura">−</button><output>0</output><button type="button" aria-label="Mais pão de Altamura">+</button></div></div>
+          <div class="item"><div><b>Pão integral</b><small>unidade</small></div><div class="qtd"><button type="button" aria-label="Menos pão integral">−</button><output>0</output><button type="button" aria-label="Mais pão integral">+</button></div></div>
+          <div class="item"><div><b>Pão francês</b><small>unidades</small></div><div class="qtd"><button type="button" aria-label="Menos pão francês">−</button><output>0</output><button type="button" aria-label="Mais pão francês">+</button></div></div>
+          <div class="item"><div><b>Massa de pizza</b><small>unidade</small></div><div class="qtd"><button type="button" aria-label="Menos massa de pizza">−</button><output>0</output><button type="button" aria-label="Mais massa de pizza">+</button></div></div>
+          <label for="hora">Quando você passa?</label>
+          <select id="hora"><option>Hoje de manhã</option><option>Hoje à tarde</option><option>Hoje à noite</option><option>Amanhã de manhã</option></select>
+          <button class="btn verde" type="submit">Mandar pedido no WhatsApp</button>
+          <p class="obs">A equipe confirma a disponibilidade antes de separar.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="aval" aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="tit"><small>4,7 · 1.086 avaliações no Google</small><h2 id="t-aval">Patrimônio do Cambuí</h2></div>
+      <div class="falas">
+        <blockquote>Padaria italiana em Campinas. Melhor pão italiano da região.<cite>Resumo das avaliações · Google</cite></blockquote>
+        <blockquote>O melhor pão de sal que como de Campinas! Gosto muito do ambiente.<cite>Leonardo · Google</cite></blockquote>
+        <blockquote>Experimentamos as empadas e elas estavam simplesmente deliciosas. Dá para perceber o cuidado no preparo.<cite>Ana Clara · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="visite" id="visite" aria-labelledby="t-visite">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:18px"><small>Visite</small><h2 id="t-visite">Rua Maria Monteiro, 1334</h2></div>
+        <table class="horas" id="horas">
+          <tr data-d="1"><td>Segunda</td><td>6h às 21h</td></tr>
+          <tr data-d="2"><td>Terça</td><td>6h às 21h</td></tr>
+          <tr data-d="3"><td>Quarta</td><td>6h às 21h</td></tr>
+          <tr data-d="4"><td>Quinta</td><td>6h às 21h</td></tr>
+          <tr data-d="5"><td>Sexta</td><td>6h às 21h</td></tr>
+          <tr data-d="6"><td>Sábado</td><td>6h às 21h</td></tr>
+          <tr data-d="0"><td>Domingo e feriado</td><td>7h às 21h</td></tr>
+        </table>
+        <p class="end"><b>R. Maria Monteiro, 1334</b> · Cambuí, Campinas (SP)<br>WhatsApp <a class="zap" href="https://wa.me/5519998971693">(19) 99897-1693</a></p>
+        <div class="acoes">
+          <a class="btn verde" href="https://www.google.com/maps/dir/?api=1&amp;destination=Il+Panettiere,+R.+Maria+Monteiro,+1334,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn linha zap" href="https://wa.me/5519998971693">Chamar no WhatsApp</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Il Panettiere, R. Maria Monteiro, 1334, Cambuí, Campinas" src="https://www.google.com/maps?q=Il+Panettiere,+R.+Maria+Monteiro,+1334+-+Cambu%C3%AD,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Il Panettiere · Cambuí, Campinas</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn verde fixo some zap" href="https://wa.me/5519998971693" aria-label="Chamar no WhatsApp">WhatsApp</a>
+
+<script>
+(function () {
+  document.querySelectorAll(".zap").forEach(function(a){a.target="_blank";a.rel="noopener";});
+  document.querySelectorAll(".qtd").forEach(function(q){
+    var b = q.querySelectorAll("button"), o = q.querySelector("output");
+    b[0].addEventListener("click", function(){ o.value = Math.max(0, (+o.value||0) - 1); });
+    b[1].addEventListener("click", function(){ o.value = Math.min(30, (+o.value||0) + 1); });
+  });
+  document.getElementById("pedido").addEventListener("submit", function(e){
+    e.preventDefault();
+    var linhas = [];
+    document.querySelectorAll(".item").forEach(function(i){ var n = +i.querySelector("output").value; if (n) linhas.push(n + "x " + i.querySelector("b").textContent); });
+    var txt = "Olá, Il Panettiere! Quero separar:\n" + (linhas.length ? linhas.join("\n") : "(vou escolher na conversa)") + "\nPasso: " + document.getElementById("hora").value.toLowerCase() + ".";
+    window.open("https://wa.me/5519998971693?text=" + encodeURIComponent(txt), "_blank", "noopener");
+  });
+  try {
+    var p = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+    var g = function(t){return (p.find(function(x){return x.type===t})||{}).value};
+    var d = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"));
+    var h = (parseInt(g("hour"),10)%24) + parseInt(g("minute"),10)/60;
+    var tr = document.querySelector('#horas tr[data-d="'+d+'"]'); if (tr) tr.classList.add("hoje");
+    var ab = d===0 ? 7 : 6, a = document.getElementById("agora"), t = document.getElementById("agora-t");
+    if (h>=ab && h<21) { a.classList.add("sim"); t.textContent = "Aberta agora, até as 21h"; }
+    else if (h<ab) t.textContent = "Abre hoje às " + ab + "h";
+    else t.textContent = "Fechada agora · abre amanhã às " + (d===6 ? "7h" : "6h");
+  } catch (e) {}
+  var f = document.querySelector(".fixo"), t2 = document.querySelector(".hero");
+  if (f && t2 && "IntersectionObserver" in window) new IntersectionObserver(function(e){f.classList.toggle("some", e[0].isIntersecting)}).observe(t2);
+})();
+</script>
+</body>
+</html>
