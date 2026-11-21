@@ -111,3 +111,12 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 > Fala, pessoal da The Barber's! Sou o Lucas, faço sites aqui em Campinas. Vocês têm nota 4,9 com quase 300 avaliações e uma especialidade forte, a prótese capilar, mas quem pesquisa no Google só cai na página genérica do AppBarber. Montei uma ideia de site próprio: https://feitopelolucas.com.br/previa/thebarbers/
 > Tem os preços organizados por categoria, uma parte só da prótese com antes e depois, o bar com chopp e sinuca, e o botão de agendar continua usando o AppBarber de vocês. Se curtirem, a gente conversa!
 
+---
+
+## 13. Jah do Açaí · Campinas Shopping · /previa/jahdoacai/
+
+**Pelo que vi:** é franquia, então o site principal pode ser decisão da marca. Por isso fiz uma **página da unidade** (está escrito assim na faixa), não um site da marca. O Instagram da unidade tem 520 seguidores e a bio diz "sem açúcar, sem lactose, sem glúten e veganas". É self-service com máquinas, com açaí, sorvetes, shakes, smoothies, fondue e picolés. WhatsApp (19) 99332-9800. As avaliações elogiam a Xaiane e a Verônica. Há duas reclamações antigas de higiene (chiclete na cobertura), por isso dei destaque ao atendimento e às restrições alimentares. Domingo: o Google diz 11h e a bio diz 12h. Usei o do Google; vale confirmar.
+
+> Oi, pessoal do Jah do Campinas Shopping! Sou o Lucas, faço sites aqui em Campinas. Sei que vocês são franquia, então montei uma ideia de página só da unidade de vocês, para quem procura no Google "açaí sem açúcar" ou "sem lactose" perto do shopping: https://feitopelolucas.com.br/previa/jahdoacai/
+> Ela explica o self-service passo a passo, deixa claro que tem opção para quem tem restrição e mostra horário e onde fica. Se fizer sentido para vocês (ou para a franquia), a gente conversa!
+
