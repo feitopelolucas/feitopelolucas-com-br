@@ -22,7 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --sol:#ffc72c; --sol-claro:#fff3c4; --laranja:#f47b20; --mata:#1f5c3a; --mata-esc:#143d26;
+    --sol:#ffc72c; --sol-claro:#fff3c4; --laranja:#e76a0b; --mata:#1d5636; --mata-esc:#143d26;
     --uva:#6b3fa0; --areia:#fffaf0; --tinta:#1d2a20; --tinta-2:#4b5a4f; --fio:#efe3c4;
   }
   *{box-sizing:border-box}
@@ -155,6 +155,7 @@
   .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
   @media (min-width:881px){footer{padding-bottom:26px}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -169,7 +170,7 @@
 <header class="topo">
   <div class="wrap">
     <a class="marca" href="#inicio" aria-label="Pastelaria Tropical, início">
-      <svg viewBox="0 0 42 42" aria-hidden="true"><circle cx="21" cy="21" r="19" fill="#1f5c3a" stroke="#1d2a20" stroke-width="2.5"/><path d="M9 25c0-7 5.4-12 12-12s12 5 12 12Z" fill="#ffc72c"/><path d="M14 25c1-3 2-5 4-6M21 25v-7M28 25c-1-3-2-5-4-6" stroke="#f47b20" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+      <svg viewBox="0 0 42 42" aria-hidden="true"><circle cx="21" cy="21" r="19" fill="#1d5636" stroke="#1d2a20" stroke-width="2.5"/><path d="M9 25c0-7 5.4-12 12-12s12 5 12 12Z" fill="#ffc72c"/><path d="M14 25c1-3 2-5 4-6M21 25v-7M28 25c-1-3-2-5-4-6" stroke="#e76a0b" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
       <span><b>Tropical</b><small>Pastelaria</small></span>
     </a>
     <nav aria-label="Seções">
@@ -195,7 +196,7 @@
         </div>
       </div>
       <div class="foto">
-        <img src="fotos/quiosque.jpg" alt="Quiosque amarelo da Pastelaria Tropical, com guarda-sol e mesas brancas na sombra das árvores" width="1000" height="563">
+        <img fetchpriority="high" src="fotos/quiosque.jpg" alt="Quiosque amarelo da Pastelaria Tropical, com guarda-sol e mesas brancas na sombra das árvores" width="1000" height="563">
         <div class="sol-selo" id="selo"><div><small>abre às</small><b id="selo-h">5h30</b><small>de seg. a sáb.</small></div></div>
       </div>
     </div>

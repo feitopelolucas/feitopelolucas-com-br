@@ -22,8 +22,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --uva:#4a1d5c; --uva-2:#6b2a85; --roxo-claro:#f1e6f6; --rosa:#ffb3d9; --rosa-forte:#ec4c97; --creme:#fffaf5;
-    --banana:#ffd97a; --morango:#e8334a; --tinta:#2a1233; --tinta-2:#6b5a72; --fio:#ead9ef;
+    --uva:#4a1d5c; --uva-2:#6b2a85; --roxo-claro:#f1e6f6; --rosa:#ffb3d9; --rosa-forte:#c71569; --creme:#fffaf5;
+    --banana:#ffd97a; --morango:#e51c36; --tinta:#2a1233; --tinta-2:#6b5a72; --fio:#ead9ef;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -105,8 +105,8 @@
   .item p{margin:6px 0 0;font-weight:500;opacity:.92}
   .item:nth-child(1){background:var(--uva)}
   .item:nth-child(2){background:var(--rosa-forte)}
-  .item:nth-child(3){background:#2f8f6a}
-  .item:nth-child(4){background:#c86b1e}
+  .item:nth-child(3){background:#2b8361}
+  .item:nth-child(4){background:#b25f1b}
   .item:nth-child(5){background:#6b2a85}
   .item:nth-child(6){background:var(--morango)}
   @media (max-width:880px){.cardapio{grid-template-columns:1fr 1fr}}
@@ -142,6 +142,7 @@
   .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
   @media (min-width:881px){footer{padding-bottom:24px}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -171,7 +172,7 @@
       </div>
     </div>
     <div class="copo-grande">
-      <img src="fotos/pote.jpg" alt="Pote de açaí com banana, morango e farofa de leite" width="959" height="1600">
+      <img fetchpriority="high" src="fotos/pote.jpg" alt="Pote de açaí com banana, morango e farofa de leite" width="959" height="1600">
       <span class="bolha b1">🚫 açúcar</span>
       <span class="bolha b2">🚫 lactose</span>
       <span class="bolha b3">🚫 glúten</span>

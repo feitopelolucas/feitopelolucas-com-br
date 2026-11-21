@@ -22,7 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --arara:#1aa0c8; --arara-esc:#0d4f6b; --mar:#e6f6fb; --bico:#e8433a; --girassol:#ffcc33; --areia:#fffdf7;
+    --arara:#147e9d; --arara-esc:#0d4f6b; --mar:#e6f6fb; --bico:#d62319; --girassol:#ffcc33; --areia:#fffdf7;
     --tinta:#12313d; --tinta-2:#4d6670; --fio:#d8e9ef; --folha:#2f9d68;
   }
   *{box-sizing:border-box}
@@ -86,7 +86,7 @@
   /* Lembrete */
   .lembrete .wrap{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
   .calc{background:#fff;border:2px solid var(--fio);border-radius:26px;padding:26px;box-shadow:0 24px 40px -30px rgba(18,49,61,.5)}
-  .calc h3{font-size:1.5rem;color:var(--arara-esc);margin-bottom:14px}
+  .calc h3,#t-lemb{font-size:1.5rem;color:var(--arara-esc);margin-bottom:14px}
   .campos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   .campos label{display:block;font-weight:800;font-size:.9rem;margin-bottom:6px}
   .campos input,.campos select{width:100%;min-height:48px;border:2px solid var(--fio);border-radius:12px;padding:0 12px;font:600 16px "Karla",sans-serif;color:var(--tinta);background:#fff}
@@ -147,6 +147,7 @@
   .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
   @media (min-width:881px){footer{padding-bottom:24px}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -161,7 +162,7 @@
 <header class="topo">
   <div class="wrap">
     <a class="marca" href="#inicio" aria-label="Aqui o Bicho Pega, início">
-      <svg viewBox="0 0 46 46" aria-hidden="true"><circle cx="23" cy="23" r="22" fill="#e6f6fb"/><path d="M11 30c0-9 6-15 14-15 5 0 9 3 9 7l-5 2c0 5-5 10-12 10-3 0-6-1-6-4Z" fill="#1aa0c8"/><path d="M14 33c3 4 9 6 14 3" stroke="#0d4f6b" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="27" cy="20" r="2.2" fill="#fff"/><circle cx="27.6" cy="20.2" r="1" fill="#12313d"/><path d="M33 21l7 2-6 3Z" fill="#e8433a"/></svg>
+      <svg viewBox="0 0 46 46" aria-hidden="true"><circle cx="23" cy="23" r="22" fill="#e6f6fb"/><path d="M11 30c0-9 6-15 14-15 5 0 9 3 9 7l-5 2c0 5-5 10-12 10-3 0-6-1-6-4Z" fill="#147e9d"/><path d="M14 33c3 4 9 6 14 3" stroke="#0d4f6b" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="27" cy="20" r="2.2" fill="#fff"/><circle cx="27.6" cy="20.2" r="1" fill="#12313d"/><path d="M33 21l7 2-6 3Z" fill="#d62319"/></svg>
       <span><b>Aqui o Bicho Pega</b><small>A loja dos bichos</small></span>
     </a>
     <nav aria-label="Seções">
@@ -186,7 +187,7 @@
         </div>
       </div>
       <div class="foto">
-        <img src="fotos/fachada.jpg" alt="Fachada do pet shop Aqui o Bicho Pega com a arara azul no letreiro" width="1200" height="900">
+        <img fetchpriority="high" src="fotos/fachada.jpg" alt="Fachada do pet shop Aqui o Bicho Pega com a arara azul no letreiro" width="1200" height="900">
         <div class="balao">“Eles sabem quando a ração está <b>acabando</b> e entram em contato antes.”</div>
       </div>
     </div>
@@ -195,7 +196,7 @@
   <section class="lembrete" id="lembrete" aria-labelledby="t-lemb">
     <div class="wrap">
       <div class="calc">
-        <h3 id="t-lemb">Quando a ração do seu pet acaba?</h3>
+        <h2 id="t-lemb">Quando a ração do seu pet acaba?</h2>
         <div class="campos">
           <div><label for="kg">Tamanho do pacote</label><select id="kg"><option value="1">1 kg</option><option value="3">3 kg</option><option value="7.5">7,5 kg</option><option value="10.1" selected>10,1 kg</option><option value="15">15 kg</option><option value="20">20 kg</option></select></div>
           <div><label for="g">Gramas por dia</label><input id="g" type="number" inputmode="numeric" min="10" max="2000" value="250"></div>

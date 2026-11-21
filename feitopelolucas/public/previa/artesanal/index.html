@@ -22,7 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Zilla+Slab:wght@600;700&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --kraft:#e9d6b4; --kraft-claro:#f6ead4; --papel:#fdf8ef; --casca:#b5762c; --casca-esc:#8a521b; --cafe:#4a2a17;
+    --kraft:#e9d6b4; --kraft-claro:#f6ead4; --papel:#fdf8ef; --casca:#a06927; --casca-esc:#8a521b; --cafe:#4a2a17;
     --tinta:#3a2416; --tinta-2:#6e5440; --fio:#e0cba7; --verde:#4e7a3a;
   }
   *{box-sizing:border-box}
@@ -59,7 +59,7 @@
   .btn.cafe{background:var(--cafe);color:#fff}
   .btn.casca{background:var(--casca);color:#fff}
   .btn.casca:hover{background:var(--casca-esc)}
-  .btn.ifood{background:#ea1d2c;color:#fff}
+  .btn.ifood{background:#e71525;color:#fff}
   .btn.borda{box-shadow:inset 0 0 0 2px var(--cafe);color:var(--cafe)}
   .btn.peq{min-height:44px;padding:9px 16px;font-size:.92rem}
 
@@ -121,7 +121,7 @@
   .pao h3{font-size:1.35rem;color:var(--cafe);margin-bottom:4px}
   .pao p{margin:0;color:var(--tinta-2);font-size:.95rem}
   @media (max-width:880px){.paes{grid-template-columns:1fr}}
-  .ifood-faixa{margin-top:26px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;background:#fff;border:2px dashed #ea1d2c;border-radius:16px;padding:18px 22px}
+  .ifood-faixa{margin-top:26px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;background:#fff;border:2px dashed #e71525;border-radius:16px;padding:18px 22px}
   .ifood-faixa b{font:700 1.2rem "Zilla Slab",serif}
 
   /* Avaliações */
@@ -149,6 +149,7 @@
   .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
   @media (min-width:881px){footer{padding-bottom:24px}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -189,7 +190,7 @@
       </div>
       <div class="papelao">
         <span class="fita" aria-hidden="true"></span>
-        <img src="fotos/pao-2.jpg" alt="Pãezinhos dourados com queijo ralado na assadeira" width="640" height="409">
+        <img fetchpriority="high" src="fotos/pao-2.jpg" alt="Pãezinhos dourados com queijo ralado na assadeira" width="640" height="409">
         <div class="nota"><b>4,7 ★</b>164 avaliações</div>
       </div>
     </div>

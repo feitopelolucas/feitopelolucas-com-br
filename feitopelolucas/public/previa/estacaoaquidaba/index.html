@@ -23,7 +23,7 @@
 <style>
   :root{
     --trilho:#14161c; --vagao:#1d2029; --vagao-2:#272b37; --ambar:#ffb000; --ambar-claro:#ffd36b;
-    --vermelho:#d7262e; --creme:#f4ecdd; --texto:#cfd3dc; --cinza:#8b91a0; --fio:#323745;
+    --vermelho:#cc242c; --creme:#f4ecdd; --texto:#cfd3dc; --cinza:#8b91a0; --fio:#323745;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -153,6 +153,9 @@
   .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
   @media (min-width:901px){footer{padding-bottom:26px}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  /* contraste */
+  .falas cite{color:#a9afbc}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -201,10 +204,10 @@
   </section>
 
   <div class="faixa-fotos" aria-hidden="true">
-    <img src="fotos/porcao-mista.jpg" alt="" width="1000" height="1250">
-    <img src="fotos/drink.jpg" alt="" width="900" height="1125">
-    <img src="fotos/cerveja.jpg" alt="" width="900" height="1200">
-    <img src="fotos/salao.jpg" alt="" width="1200" height="675">
+    <img fetchpriority="high" src="fotos/porcao-mista.jpg" alt="Porção mista do bar" width="1000" height="1250">
+    <img src="fotos/drink.jpg" alt="Drink servido no bar" width="900" height="1125">
+    <img src="fotos/cerveja.jpg" alt="Cerveja gelada servida na mesa" width="900" height="1200">
+    <img src="fotos/salao.jpg" alt="Salão do bar com mesas" width="1200" height="675">
   </div>
 
   <section id="cardapio" aria-labelledby="t-card">

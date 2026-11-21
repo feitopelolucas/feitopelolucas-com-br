@@ -22,7 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --noite:#0d1b2a; --noite-2:#14273b; --luz:#ffd447; --luz-fria:#e8f4ff; --amarelado:#c9a34a; --vermelho:#e63946;
+    --noite:#0d1b2a; --noite-2:#14273b; --luz:#ffd447; --luz-fria:#e8f4ff; --amarelado:#c9a34a; --vermelho:#db1c2a;
     --papel:#f5f7fa; --tinta:#0d1b2a; --tinta-2:#4a5a6b; --fio:#dbe2ea;
   }
   *{box-sizing:border-box}
@@ -155,6 +155,7 @@
   .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
   @media (min-width:901px){footer{padding-bottom:24px}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -204,7 +205,7 @@
   <section class="ad" id="antes-depois" aria-labelledby="t-ad">
     <div class="wrap">
       <div class="par">
-        <figure class="antes"><img src="fotos/hilux-antes.jpg" alt="Frente de Toyota Hilux com os faróis amarelados e opacos" width="1063" height="556"><figcaption>Antes</figcaption></figure>
+        <figure class="antes"><img fetchpriority="high" src="fotos/hilux-antes.jpg" alt="Frente de Toyota Hilux com os faróis amarelados e opacos" width="1063" height="556"><figcaption>Antes</figcaption></figure>
         <figure class="depois"><img src="fotos/hilux-depois.jpg" alt="A mesma Hilux com os faróis transparentes depois da restauração" width="1063" height="556"><figcaption>Depois</figcaption></figure>
       </div>
       <div>

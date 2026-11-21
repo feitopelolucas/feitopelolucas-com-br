@@ -22,13 +22,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --preto:#0b0d0b; --preto-2:#151815; --preto-3:#1f241f; --neon:#39ff88; --neon-esc:#1ccf63; --rosa:#ff8fb8; --rosa-claro:#ffe3ee;
+    --preto:#0b0d0b; --preto-2:#151815; --preto-3:#1f241f; --neon:#39ff88; --neon-esc:#117e3c; --rosa:#ff8fb8; --rosa-claro:#ffe3ee;
     --osso:#f6f4f1; --texto:#d4d8d4; --cinza:#8b928b; --fio:#2a302a;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--preto);color:var(--texto);font:16.5px/1.65 "Plus Jakarta Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-  h1,h2,h3{font-family:"Syne",sans-serif;font-weight:800;line-height:1;margin:0;color:#fff;letter-spacing:-.02em;overflow-wrap:anywhere;hyphens:auto}
+  h1,h2,h3{font-family:"Syne",sans-serif;font-weight:800;line-height:1;margin:0;color:#fff;letter-spacing:-.02em;overflow-wrap:break-word;hyphens:manual}
   .wrap>*{min-width:0}
   img{display:block;max-width:100%;height:auto}
   a{color:inherit}
@@ -67,7 +67,7 @@
   .estrelas{display:inline-flex;align-items:center;gap:12px;background:var(--preto-2);border:1px solid var(--fio);border-radius:999px;padding:8px 16px 8px 8px}
   .estrelas b{background:var(--neon);color:var(--preto);border-radius:999px;padding:4px 12px;font-family:"Syne",sans-serif}
   .estrelas span{font-size:.9rem}
-  .hero h1{font-size:clamp(2.8rem,7vw,5.6rem);margin:22px 0 20px}
+  .hero h1{font-size:clamp(2.4rem,5.2vw,4.3rem);margin:22px 0 20px}
   .hero h1 em{font-style:normal;color:var(--neon);text-shadow:0 0 30px rgba(57,255,136,.35)}
   .hero p{font-size:1.12rem;max-width:31em;margin:0 0 30px}
   .acoes{display:flex;gap:12px;flex-wrap:wrap}
@@ -79,7 +79,7 @@
   section{padding:88px 0}
   .tit{max-width:660px;margin-bottom:40px}
   .tit small{font-weight:700;color:var(--neon);letter-spacing:.2em;text-transform:uppercase;font-size:.8125rem}
-  .tit h2{font-size:clamp(2.2rem,5vw,3.6rem);margin-top:12px}
+  .tit h2{font-size:clamp(2rem,3.8vw,2.9rem);margin-top:12px}
   .tit p{margin:14px 0 0}
 
   /* Serviços */
@@ -152,6 +152,7 @@
   @media (min-width:901px){footer{padding-bottom:24px}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
   @media (max-width:520px){.tit h2{font-size:1.6rem}.hero h1{font-size:2.2rem}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -189,7 +190,7 @@
         </div>
       </div>
       <div class="vitrine">
-        <img src="fotos/sobrancelha-2.jpg" alt="Rosto com sobrancelha desenhada e cílios marcados" width="626" height="640">
+        <img fetchpriority="high" src="fotos/sobrancelha-2.jpg" alt="Rosto com sobrancelha desenhada e cílios marcados" width="626" height="640">
         <img class="cola" src="fotos/lifting.jpg" alt="Close de olho com lifting de cílios" width="480" height="640">
       </div>
     </div>

@@ -22,7 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --preto:#101010; --preto-2:#1a1a1a; --preto-3:#262626; --ouro:#f5c518; --ouro-esc:#d6a800; --gelo:#f4f4f2;
+    --preto:#101010; --preto-2:#1a1a1a; --preto-3:#262626; --ouro:#f5c518; --ouro-esc:#876a00; --gelo:#f4f4f2;
     --texto:#d6d6d2; --cinza:#8f8f8a; --fio:#2e2e2e;
   }
   *{box-sizing:border-box}
@@ -149,6 +149,7 @@
   .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
   @media (min-width:901px){footer{padding-bottom:24px}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -176,7 +177,7 @@
 
 <main id="inicio">
   <section class="hero" style="padding:0" aria-labelledby="titulo">
-    <img src="fotos/ig-opala.jpg" alt="Opala azul clássico brilhando no piso quadriculado amarelo e preto do Seco" width="518" height="640">
+    <img fetchpriority="high" src="fotos/ig-opala.jpg" alt="Opala azul clássico brilhando no piso quadriculado amarelo e preto do Seco" width="518" height="640">
     <div class="wrap">
       <span class="lema">Cuidamos do seu carro como se fosse nosso</span>
       <h1 id="titulo">Brilho de <span>vitrine.</span> Todo dia.</h1>

@@ -15,15 +15,15 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#1f5fa8">
+<meta name="theme-color" content="#1a508e">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='21' cy='12' r='6' fill='%23ffd54a'/%3E%3Cpath d='M8 24a5 5 0 0 1 1-10 7 7 0 0 1 13 2 4 4 0 0 1 1 8Z' fill='%234a9be0'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ceu:#4a9be0; --ceu-esc:#1f5fa8; --ceu-claro:#e6f2fc; --sol:#ffd54a; --nuvem:#ffffff; --papel:#fffbf0;
-    --tinta:#17324d; --tinta-2:#5a6d80; --fio:#dde8f2; --tijolo:#c4553a;
+    --ceu:#4a9be0; --ceu-esc:#1a508e; --ceu-claro:#e6f2fc; --sol:#ffd54a; --nuvem:#ffffff; --papel:#fffbf0;
+    --tinta:#17324d; --tinta-2:#5a6d80; --fio:#dde8f2; --tijolo:#b24d35;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -42,7 +42,7 @@
   @media (max-width:640px){.longo{display:none}.curto{display:inline}}
 
   /* Céu */
-  .ceu{background:linear-gradient(180deg,#3f8fd6 0%,#6db3ec 70%,#9fd0f5 100%);color:#fff;position:relative;overflow:hidden}
+  .ceu{background:linear-gradient(180deg,#1f66ad 0%,#2a74bd 70%,#4a9be0 100%);color:#fff;position:relative;overflow:hidden}
   .ceu .astro{position:absolute;left:50%;top:92px;width:110px;height:110px;border-radius:50%;background:var(--sol);box-shadow:0 0 0 22px rgba(255,213,74,.25),0 0 0 48px rgba(255,213,74,.12)}
   .nuvem{position:absolute;background:#fff;border-radius:100px;opacity:.92}
   .nuvem::before,.nuvem::after{content:"";position:absolute;background:#fff;border-radius:50%}
@@ -60,7 +60,7 @@
   .btn.sol{background:var(--sol);color:var(--tinta)}
   .btn.branco{background:#fff;color:var(--ceu-esc)}
   .btn.azul{background:var(--ceu-esc);color:#fff}
-  .btn.ifood{background:#ea1d2c;color:#fff}
+  .btn.ifood{background:#e71525;color:#fff}
   .btn.peq{min-height:44px;padding:9px 16px;font-size:.92rem}
   .hero{position:relative;z-index:1;padding:50px 0 0}
   .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
@@ -139,6 +139,7 @@
   .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
   @media (min-width:881px){footer{padding-bottom:24px}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -172,7 +173,7 @@
           <a class="btn ifood" href="https://www.ifood.com.br/delivery/campinas-sp/bar-e-lanchonete-ceu-azul-centro/dd647a2a-ecec-484a-b865-8cddfcd36873" target="_blank" rel="noopener">Pedir no iFood</a>
         </div>
       </div>
-      <img class="fach" src="fotos/fachada.jpg" alt="Fachada azul do Bar Céu Azul na Rua Padre Vieira" width="1073" height="810">
+      <img fetchpriority="high" class="fach" src="fotos/fachada.jpg" alt="Fachada azul do Bar Céu Azul na Rua Padre Vieira" width="1073" height="810">
     </div>
   </section>
 </div>
@@ -233,12 +234,12 @@
   </section>
 
   <div class="tira" aria-hidden="true">
-    <img src="fotos/frango.jpg" alt="" loading="lazy" width="597" height="640">
-    <img src="fotos/caipi-morango.jpg" alt="" loading="lazy" width="640" height="640">
-    <img src="fotos/torresmo.jpg" alt="" loading="lazy" width="640" height="640">
-    <img src="fotos/calabresa.jpg" alt="" loading="lazy" width="589" height="640">
-    <img src="fotos/caipi-maracuja.jpg" alt="" loading="lazy" width="512" height="640">
-    <img src="fotos/bolinhos.jpg" alt="" loading="lazy" width="621" height="640">
+    <img src="fotos/frango.jpg" alt="Porção de frango à passarinho" loading="lazy" width="597" height="640">
+    <img src="fotos/caipi-morango.jpg" alt="Caipirinha de morango" loading="lazy" width="640" height="640">
+    <img src="fotos/torresmo.jpg" alt="Porção de torresmo" loading="lazy" width="640" height="640">
+    <img src="fotos/calabresa.jpg" alt="Porção de calabresa acebolada" loading="lazy" width="589" height="640">
+    <img src="fotos/caipi-maracuja.jpg" alt="Caipirinha de maracujá" loading="lazy" width="512" height="640">
+    <img src="fotos/bolinhos.jpg" alt="Porção de bolinhos" loading="lazy" width="621" height="640">
   </div>
 
   <section aria-labelledby="t-aval">

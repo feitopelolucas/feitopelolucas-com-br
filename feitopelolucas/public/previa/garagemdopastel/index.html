@@ -22,7 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --noite:#231a12; --noite-2:#2f2419; --ouro:#ffb703; --ouro-claro:#ffe08a; --massa:#f2c77b; --brasa:#e85d04;
+    --noite:#231a12; --noite-2:#2f2419; --ouro:#ffb703; --ouro-claro:#ffe08a; --massa:#f2c77b; --brasa:#c54f03;
     --creme:#fff7e6; --tinta:#231a12; --tinta-2:#6b5640; --fio:#f1dfbd; --rosa:#f28bb3;
   }
   *{box-sizing:border-box}
@@ -69,7 +69,7 @@
   .btn.escuro{background:var(--noite);color:var(--ouro)}
   .acoes{display:flex;gap:12px;flex-wrap:wrap;padding-bottom:56px}
   .hero .foto{position:relative;align-self:stretch;display:flex;align-items:flex-end}
-  .hero .foto img{width:100%;max-height:520px;object-fit:cover;border-radius:22px 22px 0 0;border:6px solid var(--ouro);border-bottom:0}
+  .hero .foto img{width:100%;max-height:520px;object-fit:cover;object-position:center 22%;border-radius:22px 22px 0 0;border:6px solid var(--ouro);border-bottom:0}
   .hero .foto .etq{position:absolute;top:18px;left:-18px;background:var(--brasa);color:#fff;font:400 1rem/1.1 "Bungee",sans-serif;padding:10px 14px;transform:rotate(-6deg);border-radius:6px}
   @media (max-width:880px){.hero .wrap{grid-template-columns:1fr}.acoes{padding-bottom:10px}.hero .foto img{max-height:380px}.hero .foto .etq{left:10px}}
 
@@ -163,6 +163,7 @@
   .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
   @media (min-width:881px){footer{padding-bottom:24px}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -196,7 +197,7 @@
         </div>
       </div>
       <div class="foto">
-        <img src="fotos/meio-a-meio.jpg" alt="Dois pastéis grandes no prato: um doce de Nutella com Ouro Branco e um de carne com azeitona" width="900" height="1600">
+        <img fetchpriority="high" src="fotos/meio-a-meio.jpg" alt="Dois pastéis grandes no prato: um doce de Nutella com Ouro Branco e um de carne com azeitona" width="900" height="1600">
         <span class="etq">30 cm!</span>
       </div>
     </div>

@@ -23,7 +23,7 @@
 <style>
   :root{
     --salvia:#3d5c57; --salvia-esc:#2b4440; --salvia-clara:#e3ebe8; --linho:#f6f1e8; --papel:#fbf8f2;
-    --latao:#c9a25e; --latao-claro:#e8c98f; --tinta:#1f2a28; --tinta-2:#55635f; --fio:#e2dccf;
+    --latao:#87662d; --latao-claro:#e8c98f; --tinta:#1f2a28; --tinta-2:#55635f; --fio:#e2dccf;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -149,6 +149,7 @@
   .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
   @media (min-width:941px){footer{padding-bottom:26px}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -163,7 +164,7 @@
 <header class="abre" id="inicio">
   <div class="txt">
     <div class="topo">
-      <img src="fotos/logo.jpg" alt="Padaria Villa Genebra, desde 2007" width="354" height="354">
+      <img fetchpriority="high" src="fotos/logo.jpg" alt="Padaria Villa Genebra, desde 2007" width="354" height="354">
       <nav aria-label="Seções">
         <a href="#cafes">Cafés</a>
         <a href="#padaria">Padaria</a>

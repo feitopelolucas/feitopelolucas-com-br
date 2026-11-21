@@ -23,7 +23,7 @@
 <style>
   :root{
     --vinho:#6e2635; --vinho-esc:#4f1a25; --pessego:#ffcf9e; --aurora-1:#ffe7cf; --aurora-2:#f8c7c0; --lilas:#d9c8e8;
-    --creme:#fffaf3; --tinta:#3b1f24; --tinta-2:#715a5e; --fio:#efdcd2; --ouro:#d39b4a;
+    --creme:#fffaf3; --tinta:#3b1f24; --tinta-2:#715a5e; --fio:#efdcd2; --ouro:#8b6022;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -145,6 +145,7 @@
   .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
   @media (min-width:901px){footer{padding-bottom:24px}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .previa a{display:inline-flex;align-items:center;min-height:32px}
 </style>
 </head>
 <body>
@@ -185,7 +186,7 @@
 
 <main>
   <div class="vitrine">
-    <div class="wrap"><img src="fotos/fachada.jpg" alt="Fachada da Panificadora Sonho da Manhã com toldo listrado, deck de madeira e mesas" width="1024" height="768"></div>
+    <div class="wrap"><img fetchpriority="high" src="fotos/fachada.jpg" alt="Fachada da Panificadora Sonho da Manhã com toldo listrado, deck de madeira e mesas" width="1024" height="768"></div>
   </div>
 
   <section id="cardapio" aria-labelledby="t-card">
