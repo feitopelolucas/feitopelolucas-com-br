@@ -414,3 +414,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Olá, pessoal da Led Motors! Sou o Lucas, faço sites aqui em Campinas. Vi que a oficina tem 4,7 no Google com 164 avaliações, muita gente falando de honestidade, mas no Google só aparece o site da loja de seminovos, nada da oficina. Montei uma ideia: https://feitopelolucas.com.br/previa/ledmotors/
 > O cliente coloca a quilometragem, vê o que da revisão está vencendo e já agenda no WhatsApp de vocês. Tem também os serviços, as fotos e o mapa. Se gostarem, a gente conversa!
+
+---
+
+## 45. Salão Unike Hair · /previa/unikehair/
+
+**Pelo que vi:** Instagram **@unikehairstudio** (3 mil seguidores, posts semanais) e o do dono, **Fábio Ribeiro** (@fabiomechas.campinas). O Google descreve como "Unike Hair Studio by Fábio Ribeiro". Não tem site. Especialidade: **mechas e alisamentos (loiras, morenas iluminadas, ruivas)**; também faz corte, unhas (a nail designer Luana é elogiada) e sobrancelhas. Tem 4,7 no Google com 161 avaliações. WhatsApp (19) 99361-8192. Abre de segunda a sábado, das 8h às 19h. **Atenção:** há 2 avaliações negativas recentes (mechas que saíram alaranjadas e um corte), sem resposta pública. Vale tocar no assunto com cuidado, porque um site com avaliação antes do orçamento ajuda nisso. **Fotos:** as do Instagram são de clientes de rosto; usei só uma de costas e recortes do cabelo, sem rosto, mais as do salão (interior, produtos, unhas). A foto da fachada no Google mostra o número 253 e o telefone 3276-1388, talvez de um endereço antigo; não usei. O site tem a "avaliação pelo WhatsApp": a cliente escolhe o que quer, como está o cabelo e o comprimento.
+**Por onde mandar:** WhatsApp (19) 99361-8192 ou direct no @unikehairstudio.
+
+> Oi, Fábio! Sou o Lucas, faço sites aqui em Campinas. Vi o trabalho de mechas de vocês no Instagram (os loiros e ruivos estão lindos) e que o Unike tem 4,7 no Google. Montei uma ideia de site: https://feitopelolucas.com.br/previa/unikehair/
+> A cliente conta como está o cabelo e o que quer, e a mensagem chega pronta no WhatsApp para você avaliar antes do orçamento. Isso evita expectativa desalinhada e já filtra o pedido. Se gostar, a gente conversa!
