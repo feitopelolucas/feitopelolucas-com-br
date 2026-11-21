@@ -140,6 +140,8 @@
   .fixo.some{opacity:0;transform:translateY(20px);pointer-events:none}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
   .previa a{display:inline-flex;align-items:center;min-height:32px}
+  /* Celular: abertura sem vão no topo, botões na primeira tela */
+  @media (max-width:640px){section.hero{padding-top:28px!important}}
 </style>
 </head>
 <body>
@@ -223,7 +225,7 @@
       <div class="falas">
         <blockquote>"Eu e minha família somos clientes há mais de 30 anos. A qualidade do atendimento e das carnes são impecáveis. E aos domingos, frango e demais assados com sabor irresistível."<cite>Ricardo · Google</cite></blockquote>
         <blockquote>"Açougue do Valter, conheço há 35 anos, sempre top de linha, carnes frescas e preço sempre competitivo. Os meninos são super atenciosos!"<cite>Silvio · Google</cite></blockquote>
-        <blockquote>"Excelente atendimento, colocam no porta-malas, não precisei sair do carro."<cite>Resumo das avaliações · Google</cite></blockquote>
+        <blockquote>"Excelente atendimento, colocam no porta-malas, não precisei sair do carro."<cite>Avaliação no Google</cite></blockquote>
       </div>
     </div>
   </section>

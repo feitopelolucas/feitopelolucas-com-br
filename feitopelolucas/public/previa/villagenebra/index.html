@@ -46,6 +46,10 @@
   .abre .txt{padding:46px max(22px,calc((100vw - 1160px)/2 + 22px)) 56px;padding-right:56px;display:flex;flex-direction:column}
   .topo{display:flex;align-items:center;justify-content:space-between;gap:16px}
   .topo img{width:68px;height:68px;border-radius:50%}
+  .nome{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff}
+  .nome b{display:block;font:400 1.45rem/1.05 "Gloock",serif}
+  .nome small{display:block;font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--latao-claro);margin-top:4px;font-weight:600}
+  @media (max-width:520px){.topo img{width:56px;height:56px}.nome b{font-size:1.25rem}}
   .topo nav{display:flex;gap:22px;font-size:.92rem;font-weight:600}
   .topo nav a{text-decoration:none;color:#d6e2de}
   .topo nav a:hover{color:#fff}
@@ -164,7 +168,7 @@
 <header class="abre" id="inicio">
   <div class="txt">
     <div class="topo">
-      <img fetchpriority="high" src="fotos/logo.jpg" alt="Padaria Villa Genebra, desde 2007" width="354" height="354">
+      <a class="nome" href="#inicio" aria-label="Padaria Villa Genebra, início"><img fetchpriority="high" src="fotos/logo.jpg" alt="" width="354" height="354"><span><b>Villa Genebra</b><small>Padaria e café</small></span></a>
       <nav aria-label="Seções">
         <a href="#cafes">Cafés</a>
         <a href="#padaria">Padaria</a>
@@ -277,7 +281,7 @@
       <div class="falas">
         <blockquote>Padaria super bonitinha, ampla, com várias mesas. Preços justos, diferente do que vemos em muitas outras padarias.<cite>Giane · Google</cite></blockquote>
         <blockquote>Melhor pão com requeijão do mundo e melhor cappuccino também.<cite>Cliente · Google</cite></blockquote>
-        <blockquote>Lugar aconchegante, produtos com qualidade e um ótimo café com leite.<cite>Resumo · Google</cite></blockquote>
+        <blockquote>Lugar aconchegante, produtos com qualidade e um ótimo café com leite.<cite>Avaliação no Google</cite></blockquote>
       </div>
     </div>
   </section>

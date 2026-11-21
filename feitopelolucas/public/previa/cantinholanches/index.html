@@ -133,6 +133,8 @@
   footer a{color:var(--laranja);font-weight:800;text-decoration:none}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
   .previa a{display:inline-flex;align-items:center;min-height:32px}
+  /* Celular: abertura sem vão no topo, botões na primeira tela */
+  @media (max-width:640px){section.hero{padding-top:28px!important}}
 </style>
 </head>
 <body>
@@ -202,7 +204,7 @@
       <div>
         <h2 id="t-casa">Espaço de <span>família</span>, à noite</h2>
         <p>Área coberta com mesas para comer aí mesmo, ou retire no balcão. Tem cliente que pede o hot-dog daqui há mais de 15 anos.</p>
-        <blockquote>Custo benefício, bons sabores e variedades.<cite>Resumo das avaliações · Google</cite></blockquote>
+        <blockquote>Custo benefício, bons sabores e variedades.<cite>Avaliação no Google</cite></blockquote>
       </div>
     </div>
   </section>

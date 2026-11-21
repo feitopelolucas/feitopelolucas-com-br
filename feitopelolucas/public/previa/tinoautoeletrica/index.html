@@ -121,6 +121,8 @@
   .fixo.some{opacity:0;transform:translateY(20px);pointer-events:none}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
   .previa a{display:inline-flex;align-items:center;min-height:32px}
+  /* Celular: abertura sem vão no topo, botões na primeira tela */
+  @media (max-width:640px){section.hero{padding-top:28px!important}}
 </style>
 </head>
 <body>
@@ -201,9 +203,9 @@
     <div class="wrap">
       <div class="tit"><small>4,8 · 153 avaliações no Google</small><h2 id="t-aval">"Honesto" é a palavra mais usada</h2></div>
       <div class="falas">
-        <blockquote>"Indiscutível melhor auto elétrica da região, o cara é ninja e gente boa demais."<cite>Resumo das avaliações · Google</cite></blockquote>
+        <blockquote>"Indiscutível melhor auto elétrica da região, o cara é ninja e gente boa demais."<cite>Avaliação no Google</cite></blockquote>
         <blockquote>"Excelente profissional, educado, honesto e preço justo, podem ir sem medo."<cite>Isabella · Google</cite></blockquote>
-        <blockquote>"Resolve os problemas eletrônicos veiculares sem enrolação e com custo acessível."<cite>Resumo das avaliações · Google</cite></blockquote>
+        <blockquote>"Resolve os problemas eletrônicos veiculares sem enrolação e com custo acessível."<cite>Avaliação no Google</cite></blockquote>
       </div>
     </div>
   </section>

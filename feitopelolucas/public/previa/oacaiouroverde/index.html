@@ -129,6 +129,8 @@
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
   .previa a{display:inline-flex;align-items:center;min-height:32px}
   .marca span,.hero h1 span{color:#ff7aae}
+  /* Celular: abertura sem vão no topo, botões na primeira tela */
+  @media (max-width:640px){section.hero{padding-top:28px!important}}
 </style>
 </head>
 <body>
@@ -214,7 +216,7 @@
       <div class="falas">
         <blockquote>"Açaí excelente, o melhor da região do Ouro Verde, super recomendo."<cite>Ivan · Google</cite></blockquote>
         <blockquote>"Simplesmente maravilhoso. Ótimo atendimento e tempo de espera. Frutas frescas, tudo perfeito."<cite>Rafaela · Google</cite></blockquote>
-        <blockquote>"Atendimento bom, ambiente agradável, melhor açaí da região e preço justo."<cite>Resumo das avaliações · Google</cite></blockquote>
+        <blockquote>"Atendimento bom, ambiente agradável, melhor açaí da região e preço justo."<cite>Avaliação no Google</cite></blockquote>
       </div>
     </div>
   </section>

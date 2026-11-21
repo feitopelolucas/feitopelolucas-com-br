@@ -56,7 +56,7 @@
 
   .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding-top:40px;padding-bottom:66px}
   .desde{display:inline-block;background:var(--tomate);color:#fff;font:400 1.1rem "Luckiest Guy",sans-serif;padding:6px 14px;border-radius:8px;transform:rotate(-3deg)}
-  .hero h1{font-size:clamp(2.8rem,7vw,5.2rem);color:var(--marrom);margin:18px 0 14px}
+  .hero h1{font-size:clamp(2.8rem,5.4vw,4.2rem);color:var(--marrom);margin:18px 0 14px}
   .hero h1 span{color:var(--tomate)}
   .hero p{font-size:1.12rem;color:var(--tinta-2);max-width:30em;margin:0 0 26px}
   .acoes{display:flex;gap:14px;flex-wrap:wrap}
@@ -127,6 +127,8 @@
   footer a{color:var(--mostarda);font-weight:700;text-decoration:none}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
   .previa a{display:inline-flex;align-items:center;min-height:32px}
+  /* Celular: abertura sem vão no topo, botões na primeira tela */
+  @media (max-width:640px){section.hero{padding-top:28px!important}}
 </style>
 </head>
 <body>
@@ -193,7 +195,7 @@
       <div class="falas">
         <blockquote>Mais de 20 anos tenho o prazer de frequentar o melhor pastel de Campinas. Ambiente familiar, pastel perfeito, no capricho.<cite>Juliana · Google</cite></blockquote>
         <blockquote>Pastel muito saboroso, massa gostosa e generosa, sequinho e muito bem temperado.<cite>Avaliação no Google</cite></blockquote>
-        <blockquote>Quem não experimentou, experimente e peça o de milho, catupiry e queijo.<cite>Resumo das avaliações · Google</cite></blockquote>
+        <blockquote>Quem não experimentou, experimente e peça o de milho, catupiry e queijo.<cite>Avaliação no Google</cite></blockquote>
       </div>
     </div>
   </section>
