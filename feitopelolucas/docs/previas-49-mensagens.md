@@ -90,3 +90,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, pessoal da Borracharia Lopes! Sou o Lucas, faço sites aqui em Campinas. Vi que vocês têm 4,8 no Google com mais de 300 avaliações elogiando o preço e a rapidez, e montei uma ideia de site para a borracharia: https://feitopelolucas.com.br/previa/borracharialopes/
 > Tem o "ao lado da Leroy Merlin" bem visível para quem procura, o horário com aviso de aberto agora, os serviços para carro e linha pesada e um botão de "pneu furou?" que já abre o WhatsApp. Se gostarem, a gente conversa!
+
+---
+
+## 11. Auto Elétrica Marfá · /previa/marfa/
+
+**Pelo que vi:** Instagram @marfaautoeletrica (90 seguidores), sem site. Auto elétrica em geral, baterias, injeção eletrônica, limpeza de bicos e peças, para linha leve, utilitário e caminhão. Segunda a sexta das 8h às 17h30, **fechado sábado e domingo**. Fixo (19) 3278-2702 e WhatsApp (19) 97417-1003. Avaliações elogiam o preço e dizem que "promete e cumpre o que orça". **Atenção:** há duas avaliações negativas recentes (uma de 9 meses atrás fala em falta de honestidade num diagnóstico); não usei nada disso. O site tem um teste rápido "sua bateria está pedindo socorro?" que leva ao WhatsApp. Logo recortado da foto do Google.
+**Por onde mandar:** WhatsApp (19) 97417-1003.
+
+> Oi, pessoal da Marfá! Sou o Lucas, faço sites aqui em Campinas. Vi que vocês têm 4,7 no Google com mais de 300 avaliações, e muita gente diz que a Marfá "promete e cumpre o que orça". Montei uma ideia de site para a auto elétrica: https://feitopelolucas.com.br/previa/marfa/
+> Tem os serviços, um teste rápido de bateria que leva o cliente direto para o WhatsApp de vocês e o horário com aviso de aberto ou fechado. Se gostarem, a gente conversa!
