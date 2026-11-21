@@ -170,3 +170,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Olá, pessoal do Cacareco! Sou o Lucas, faço sites aqui em Campinas. Vi que o Cacareco está na Rua Conceição desde os anos 50 e que o nome homenageia o rinoceronte famoso. É uma história bonita, mas quem busca no Google não encontra um site de vocês. Montei uma ideia: https://feitopelolucas.com.br/previa/cacareco/
 > Tem como funciona o buffet, o horário com aviso de aberto agora, a história do nome e um botão para pedir marmita por telefone. Se gostarem, a gente conversa!
+
+---
+
+## 19. Açaí Sensação · /previa/acaisensacao/
+
+**Pelo que vi:** Instagram **@acai_sensacao_oficial** (4,2 mil seguidores), sem site. Existe desde 2015 (visão geral do Google). Delivery pelo WhatsApp (19) 99382-8863 e iFood. Horário do Google: segunda das 14h às 20h, terça e quarta das 12h30 às 20h, quinta das 12h30 às 20h30, sexta das 11h30 às 20h, sábado e domingo das 14h às 20h. Vale confirmar, porque varia muito. Açaí e cupuaçu de 300 a 700 ml, "melhorado", pitaya, tapiocas doces e salgadas e sucos. O site tem um **monte seu copo** (tamanho, base e acompanhamentos) que manda o pedido pronto no WhatsApp. **Atenção:** o cardápio "Açaí Sensação" no ola.click é de **outra loja**, de Nova Iguaçu (RJ). Um cliente reclama que não aceitam vale-refeição.
+**Por onde mandar:** WhatsApp (19) 99382-8863.
+
+> Oi, pessoal do Açaí Sensação! Sou o Lucas, faço sites aqui em Campinas. Vocês têm 4,7 no Google e mais de 4 mil seguidores, mas quem procura "Açaí Sensação" no Google acaba achando até uma loja de mesmo nome no Rio. Montei uma ideia de site só de vocês: https://feitopelolucas.com.br/previa/acaisensacao/
+> O cliente monta o copo (tamanho, base e acompanhamentos) e o pedido chega pronto no WhatsApp de vocês. Tem também o horário de cada dia com aviso de aberto agora. Se gostarem, a gente conversa!

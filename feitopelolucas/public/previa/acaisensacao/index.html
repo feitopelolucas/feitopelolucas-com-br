@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Açaí Sensação · Açaí, cupuaçu e tapioca no Joaquim Inácio</title>
+<meta name="description" content="Prévia de site para o Açaí Sensação, na Vila Joaquim Inácio, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/acaisensacao/">
+<meta property="og:title" content="Prévia de site · Açaí Sensação">
+<meta property="og:description" content="Monte seu copo de açaí, cupuaçu ou pitaya e peça pelo WhatsApp. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/acaisensacao/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#3b1450">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--uva:#3b1450;--uva-2:#2a0d3a;--roxo:#7a2fa0;--manga:#ffc21a;--manga-2:#f0a800;--rosa:#ff5fa2;--gelo:#faf6fd;--tinta:#22102e;--tinta-2:#64527a;--fio:#e8dcf2}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--gelo);color:var(--tinta);font:17px/1.6 "Outfit",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Bungee",Impact,sans-serif;font-weight:400;line-height:1.02;margin:0}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--manga);outline-offset:3px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  .wrap>*{min-width:0}
+
+  .previa{background:var(--uva-2);color:#d8c8e6;font-size:.8125rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--manga);font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .topo{background:var(--uva);color:#fff}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:72px}
+  .marca{text-decoration:none;line-height:1}
+  .marca b{font:400 1.35rem "Bungee",sans-serif;color:var(--manga);display:block}
+  .marca small{font-size:.8125rem;color:#d6c4e6;font-weight:600;letter-spacing:.06em}
+  .topo nav{display:flex;gap:22px;font-weight:600;color:#d6c4e6}
+  .topo nav a{text-decoration:none}
+  .topo nav a:hover{color:var(--manga)}
+  @media (max-width:860px){.topo nav{display:none}}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:12px 22px;border-radius:14px;font-weight:800;text-decoration:none;font-size:1rem;transition:transform .15s,background .15s;white-space:nowrap;border:0;cursor:pointer;font-family:inherit}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn.manga{background:var(--manga);color:var(--uva-2)}
+  .btn.manga:hover{background:var(--manga-2)}
+  .btn.uva{background:var(--uva);color:#fff}
+  .btn.linha{border:2px solid currentColor;background:transparent}
+  .btn.peq{min-height:44px;padding:8px 16px;font-size:.94rem}
+
+  .hero{background:var(--uva);color:#e6d8f2;overflow:hidden;position:relative}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding-top:40px;padding-bottom:70px}
+  .hero .kick{display:inline-block;background:var(--manga);color:var(--uva-2);font-weight:800;border-radius:8px;padding:5px 12px;transform:rotate(-2deg)}
+  .hero h1{font-size:clamp(2.4rem,6vw,4.2rem);color:#fff;margin:18px 0 16px}
+  .hero h1 span{color:var(--manga)}
+  .hero p{font-size:1.12rem;max-width:30em;margin:0 0 26px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .status{margin-top:20px;display:inline-flex;align-items:center;gap:10px;font-weight:700}
+  .status i{width:11px;height:11px;border-radius:50%;background:#9a84ad;flex:none}
+  .status.on i{background:var(--manga);box-shadow:0 0 0 6px rgba(255,194,26,.25)}
+  .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;align-items:end}
+  .trio img{width:100%;aspect-ratio:3/4.4;object-fit:cover;border-radius:18px}
+  .trio img:nth-child(2){aspect-ratio:3/5;margin-bottom:26px}
+  @media (max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:26px}}
+
+  section{padding:80px 0}
+  .tit{max-width:640px;margin-bottom:30px}
+  .tit small{font-weight:800;color:var(--roxo);letter-spacing:.12em;text-transform:uppercase;font-size:.8125rem}
+  .tit h2{font-size:clamp(1.9rem,4.4vw,2.9rem);margin-top:6px;color:var(--uva)}
+  .tit p{color:var(--tinta-2);margin:10px 0 0}
+
+  /* Monte */
+  .monte .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+  .passo{margin-bottom:22px}
+  .passo h3{font-size:1.05rem;color:var(--uva);margin-bottom:10px}
+  .opts{display:flex;flex-wrap:wrap;gap:8px}
+  .opts label{cursor:pointer}
+  .opts input{position:absolute;opacity:0;pointer-events:none}
+  .opts span{display:inline-block;border:2px solid var(--fio);background:#fff;border-radius:12px;padding:9px 14px;font-weight:700}
+  .opts input:checked+span{background:var(--uva);border-color:var(--uva);color:#fff}
+  .opts input:focus-visible+span{outline:3px solid var(--manga);outline-offset:2px}
+  .resumo{background:var(--uva);color:#e6d8f2;border-radius:22px;padding:24px;position:sticky;top:20px}
+  .resumo h3{color:var(--manga);font-size:1.3rem;margin-bottom:10px}
+  .resumo p{margin:0 0 6px}
+  .resumo #r-ac{color:#fff;font-weight:600}
+  .resumo .btn{width:100%;margin-top:14px}
+  .resumo small{display:block;margin-top:10px;color:#b9a5cb}
+  @media (max-width:880px){.monte .wrap{grid-template-columns:1fr}.resumo{position:static}}
+
+  /* Mais */
+  .mais{background:#fff;border-top:1px solid var(--fio);border-bottom:1px solid var(--fio)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .cd{border-radius:22px;overflow:hidden;background:var(--gelo);border:1px solid var(--fio)}
+  .cd img{width:100%;aspect-ratio:1;object-fit:cover}
+  .cd div{padding:16px 18px 20px}
+  .cd h3{font-size:1.15rem;color:var(--uva);margin-bottom:4px}
+  .cd p{margin:0;color:var(--tinta-2)}
+  .cd.tap{background:var(--manga);border-color:var(--manga);display:flex;align-items:flex-end}
+  .cd.tap div{padding:26px}
+  .cd.tap h3{font-size:1.6rem}
+  .cd.tap p{color:var(--uva-2)}
+  @media (max-width:860px){.cards{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.cards{grid-template-columns:1fr}}
+
+  /* Avaliações */
+  .aval .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+  .aval img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:22px}
+  .falas{display:grid;gap:14px}
+  .falas blockquote{margin:0;background:#fff;border:2px solid var(--fio);border-radius:18px;padding:18px 20px;font-weight:500}
+  .falas cite{display:block;margin-top:6px;font-style:normal;font-weight:700;font-size:.875rem;color:var(--roxo)}
+  @media (max-width:880px){.aval .wrap{grid-template-columns:1fr}.aval img{aspect-ratio:4/3}}
+
+  /* Onde */
+  .onde{background:var(--uva-2);color:#e0d0ee}
+  .onde .tit h2{color:#fff}
+  .onde .tit small{color:var(--manga)}
+  .onde .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+  .onde .fach{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;margin-bottom:20px}
+  .horas{width:100%;border-collapse:collapse;margin-bottom:18px}
+  .horas td{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .horas td:last-child{text-align:right;font-weight:700;color:#fff}
+  .horas tr.hoje td{color:var(--manga)}
+  .end{margin:0 0 22px}
+  .end b{color:#fff}
+  .end a{white-space:nowrap;color:#fff;font-weight:700}
+  .mapa{border-radius:18px;overflow:hidden;min-height:400px;background:#3a1a4e}
+  .mapa iframe{width:100%;height:100%;min-height:400px;border:0;display:block}
+  @media (max-width:880px){.onde .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:#160720;color:#a993bd;padding:24px 0 100px;font-size:.875rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--manga);font-weight:700;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 12px 26px -10px rgba(0,0,0,.5);transition:opacity .3s,transform .3s}
+  .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
+  @media (min-width:861px){footer{padding-bottom:24px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial do Açaí Sensação. É uma ideia de site montada por Lucas para apresentar à loja.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20do%20A%C3%A7a%C3%AD%20Sensa%C3%A7%C3%A3o%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Açaí Sensação, início"><b>Açaí Sensação</b><small>Vila Joaquim Inácio · desde 2015</small></a>
+    <nav aria-label="Seções">
+      <a href="#monte">Monte o seu</a>
+      <a href="#mais">Cardápio</a>
+      <a href="#onde">Onde fica</a>
+    </nav>
+    <a class="btn manga peq zap" href="https://wa.me/5519993828863">Delivery</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="kick">Aqui tem açaí</span>
+        <h1 id="titulo">Cremoso, gelado e <span>do seu jeito.</span></h1>
+        <p>Açaí, cupuaçu e pitaya em copos de 300 a 700 ml, com um monte de acompanhamentos fresquinhos. Tem tapioca doce e salgada, salão com mesas na calçada e delivery pelo WhatsApp.</p>
+        <div class="acoes">
+          <a class="btn manga" href="#monte">Montar meu copo</a>
+          <a class="btn linha zap" href="https://wa.me/5519993828863">Pedir delivery</a>
+        </div>
+        <p class="status" id="status"><i aria-hidden="true"></i><span id="status-t">Todos os dias, à tarde</span></p>
+      </div>
+      <div class="trio">
+        <img src="fotos/ig-uva.jpg" alt="Copo de açaí com uvas verdes e granola" width="480" height="640">
+        <img src="fotos/ig-copo.jpg" alt="Copo de açaí com banana na frente do guarda-sol amarelo da loja" width="480" height="640">
+        <img src="fotos/ig-garrafa.jpg" alt="Garrafinha de açaí com creme branco na parede roxa da loja" width="512" height="640">
+      </div>
+    </div>
+  </section>
+
+  <section class="monte" id="monte" aria-labelledby="t-monte">
+    <div class="wrap">
+      <div>
+        <div class="tit"><small>Monte o seu</small><h2 id="t-monte">Três toques e o pedido vai pronto</h2></div>
+        <div class="passo"><h3>1. Tamanho</h3><div class="opts" data-g="tam">
+          <label><input type="radio" name="tam" value="300 ml"><span>300 ml</span></label>
+          <label><input type="radio" name="tam" value="400 ml"><span>400 ml</span></label>
+          <label><input type="radio" name="tam" value="500 ml" checked><span>500 ml</span></label>
+          <label><input type="radio" name="tam" value="700 ml"><span>700 ml</span></label>
+        </div></div>
+        <div class="passo"><h3>2. Base</h3><div class="opts">
+          <label><input type="radio" name="base" value="Açaí" checked><span>Açaí</span></label>
+          <label><input type="radio" name="base" value="Cupuaçu"><span>Cupuaçu</span></label>
+          <label><input type="radio" name="base" value="Pitaya"><span>Pitaya</span></label>
+          <label><input type="radio" name="base" value="Meio açaí, meio cupuaçu"><span>Meio a meio</span></label>
+        </div></div>
+        <div class="passo"><h3>3. Acompanhamentos</h3><div class="opts" id="acomp">
+          <label><input type="checkbox" value="banana"><span>Banana</span></label>
+          <label><input type="checkbox" value="morango"><span>Morango</span></label>
+          <label><input type="checkbox" value="uva"><span>Uva</span></label>
+          <label><input type="checkbox" value="kiwi"><span>Kiwi</span></label>
+          <label><input type="checkbox" value="granola"><span>Granola</span></label>
+          <label><input type="checkbox" value="leite em pó"><span>Leite em pó</span></label>
+          <label><input type="checkbox" value="leite condensado"><span>Leite condensado</span></label>
+          <label><input type="checkbox" value="paçoca"><span>Paçoca</span></label>
+          <label><input type="checkbox" value="creme de ninho"><span>Creme de ninho</span></label>
+          <label><input type="checkbox" value="confetes"><span>Confetes</span></label>
+        </div></div>
+      </div>
+      <aside class="resumo" aria-live="polite">
+        <h3>Seu copo</h3>
+        <p id="r-base">500 ml de açaí</p>
+        <p id="r-ac">Escolha os acompanhamentos</p>
+        <a class="btn manga" id="r-env" href="https://wa.me/5519993828863">Pedir no WhatsApp</a>
+        <small>Os acompanhamentos do dia e os valores a loja confirma na conversa.</small>
+      </aside>
+    </div>
+  </section>
+
+  <section class="mais" id="mais" aria-labelledby="t-mais">
+    <div class="wrap">
+      <div class="tit"><small>Cardápio</small><h2 id="t-mais">Além do copo</h2></div>
+      <div class="cards">
+        <article class="cd"><img src="fotos/ig-tigela.jpg" alt="Bandeja de açaí com morango, creme, paçoca e confetes" loading="lazy" width="360" height="640"><div><h3>Combinados</h3><p>Bandeja para dividir, com vários acompanhamentos.</p></div></article>
+        <article class="cd"><img src="fotos/copo1.jpg" alt="Copo de açaí com uvas e banana na mão do cliente" loading="lazy" width="561" height="776"><div><h3>O melhorado</h3><p>O clássico da casa, caprichado no recheio.</p></div></article>
+        <article class="cd tap"><div><h3>Tapiocas</h3><p>Doces, como leite moça com morango, e salgadas, como frango com catupiry. Tem também sucos naturais e sorvete.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="aval" aria-labelledby="t-aval">
+    <div class="wrap">
+      <img src="fotos/salao.jpg" alt="Salão comprido da loja com mesas de madeira e bandeirinhas verdes e amarelas" loading="lazy" width="900" height="1200">
+      <div>
+        <div class="tit" style="margin-bottom:16px"><small>4,7 · 264 avaliações no Google</small><h2 id="t-aval">Sensacional, como o nome</h2></div>
+        <div class="falas">
+          <blockquote>O açaí é sensacional! Cremoso, bem gelado e com várias opções de acompanhamentos. Sempre que quero um açaí de qualidade, é aqui que eu venho.<cite>Leonardo · Google</cite></blockquote>
+          <blockquote>Ambiente agradável, muitas opções de complementos, e tanto a moça como o rapaz atendem super bem.<cite>Brayan · Google</cite></blockquote>
+          <blockquote>Açaí muito bom, lugar limpo e aconchegante, ótimo atendimento.<cite>Resumo das avaliações · Google</cite></blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde">
+    <div class="wrap">
+      <div>
+        <img class="fach" src="fotos/fachada.jpg" alt="Fachada roxa do Açaí Sensação com guarda-sóis amarelos na calçada" loading="lazy" width="900" height="1200">
+        <div class="tit" style="margin-bottom:16px"><small>Onde fica</small><h2 id="t-onde">Rua da Abolição, 2860</h2></div>
+        <table class="horas" id="horas">
+          <tr data-d="1"><td>Segunda</td><td>14h às 20h</td></tr>
+          <tr data-d="2"><td>Terça</td><td>12h30 às 20h</td></tr>
+          <tr data-d="3"><td>Quarta</td><td>12h30 às 20h</td></tr>
+          <tr data-d="4"><td>Quinta</td><td>12h30 às 20h30</td></tr>
+          <tr data-d="5"><td>Sexta</td><td>11h30 às 20h</td></tr>
+          <tr data-d="6"><td>Sábado</td><td>14h às 20h</td></tr>
+          <tr data-d="0"><td>Domingo</td><td>14h às 20h</td></tr>
+        </table>
+        <p class="end"><b>R. da Abolição, 2860</b> · Vila Joaquim Inácio, Campinas (SP)<br>Delivery e WhatsApp <a class="zap" href="https://wa.me/5519993828863">(19) 99382-8863</a> · <a href="https://www.instagram.com/acai_sensacao_oficial/" target="_blank" rel="noopener">Instagram</a></p>
+        <div class="acoes">
+          <a class="btn manga" href="https://www.google.com/maps/dir/?api=1&amp;destination=A%C3%A7ai+Sensa%C3%A7%C3%A3o,+R.+da+Aboli%C3%A7%C3%A3o,+2860,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn linha zap" href="https://wa.me/5519993828863">WhatsApp</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Açaí Sensação, R. da Abolição, 2860, Campinas" src="https://www.google.com/maps?q=A%C3%A7ai+Sensa%C3%A7%C3%A3o,+R.+da+Aboli%C3%A7%C3%A3o,+2860+-+Vila+Joaquim+In%C3%A1cio,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Açaí Sensação · Vila Joaquim Inácio, Campinas</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn manga fixo some zap" href="https://wa.me/5519993828863" aria-label="Pedir delivery pelo WhatsApp">Delivery</a>
+
+<script>
+(function () {
+  document.querySelectorAll(".zap").forEach(function(a){a.target="_blank";a.rel="noopener";});
+  var env = document.getElementById("r-env");
+  function atualiza(){
+    var tam = (document.querySelector('input[name=tam]:checked')||{}).value || "500 ml";
+    var base = (document.querySelector('input[name=base]:checked')||{}).value || "Açaí";
+    var ac = [].map.call(document.querySelectorAll('#acomp input:checked'), function(i){return i.value;});
+    document.getElementById("r-base").textContent = tam + " de " + base.toLowerCase();
+    document.getElementById("r-ac").textContent = ac.length ? "Com " + ac.join(", ") : "Escolha os acompanhamentos";
+    var txt = "Olá, Açaí Sensação! Quero um copo de " + tam + " de " + base.toLowerCase() + (ac.length ? " com " + ac.join(", ") : "") + ".";
+    env.href = "https://wa.me/5519993828863?text=" + encodeURIComponent(txt);
+  }
+  document.querySelectorAll(".monte input").forEach(function(i){ i.addEventListener("change", atualiza); });
+  atualiza();
+  try {
+    var p = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+    var g = function(t){return (p.find(function(x){return x.type===t})||{}).value};
+    var d = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"));
+    var h = (parseInt(g("hour"),10)%24) + parseInt(g("minute"),10)/60;
+    var H = {0:[14,20],1:[14,20],2:[12.5,20],3:[12.5,20],4:[12.5,20.5],5:[11.5,20],6:[14,20]}[d];
+    var f = function(x){var hh=Math.floor(x), m=Math.round((x-hh)*60); return hh + "h" + (m ? m : "");};
+    var tr = document.querySelector('#horas tr[data-d="'+d+'"]'); if (tr) tr.classList.add("hoje");
+    var s = document.getElementById("status"), t = document.getElementById("status-t");
+    if (h>=H[0] && h<H[1]) { s.classList.add("on"); t.textContent = "Aberto agora, até as " + f(H[1]); }
+    else if (h<H[0]) t.textContent = "Abre hoje às " + f(H[0]);
+    else t.textContent = "Fechado agora · volta amanhã à tarde";
+  } catch (e) {}
+  var fx = document.querySelector(".fixo"), t2 = document.querySelector(".hero");
+  if (fx && t2 && "IntersectionObserver" in window) new IntersectionObserver(function(e){fx.classList.toggle("some", e[0].isIntersecting)}).observe(t2);
+})();
+</script>
+</body>
+</html>
