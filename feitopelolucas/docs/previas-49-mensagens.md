@@ -260,3 +260,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, pessoal da Agromascote! Sou o Lucas, faço sites aqui em Campinas. Vi que a loja do Jambeiro tem 4,7 no Google com mais de 200 avaliações, mas o perfil ainda nem foi reivindicado e não tem site. Montei uma ideia: https://feitopelolucas.com.br/previa/agromascote/
 > O cliente escolhe para quem é a ração, escreve o produto e manda o pedido pronto no WhatsApp de vocês, com entrega ou retirada. Dá para incluir as outras unidades também. Se gostarem, a gente conversa!
+
+---
+
+## 28. Açaí da Nalva · /previa/acaidanalva/
+
+**Pelo que vi:** Instagram **@acaidanalva** (840 seguidores) e Facebook, sem site; pedidos pelo iFood ou WhatsApp (19) 99833-5002 para retirar. **Atenção ao endereço:** o Google mostra "R. Oscar Leite, 200 – Vila João Jorge", mas o pino do mapa e a bio do Instagram indicam **Rua Celeste, 179 – Jardim Morumbi (perto da Fac 4)**. Usei o do Instagram e o mapa pelo nome; vale confirmar. Horário: quinta e domingo das 15h às 21h e sexta e sábado das 15h às 22h. O grande diferencial é que os **complementos não custam a mais**. Tem copo de 300 e 550 ml, barca de 600 ml, uma opção de mangaba elogiada, lanches e sucos naturais. O site tem um "monte o seu" que manda o pedido pronto no WhatsApp.
+**Por onde mandar:** WhatsApp (19) 99833-5002.
+
+> Oi, Nalva! Sou o Lucas, faço sites aqui em Campinas. Vi que o Açaí da Nalva tem 4,8 no Google e que aí os complementos são à vontade, sem pagar a mais. Isso é um baita diferencial e merece aparecer! Montei uma ideia de site: https://feitopelolucas.com.br/previa/acaidanalva/
+> O cliente monta o açaí, vê que os complementos saem R$ 0,00 e manda o pedido pronto no seu WhatsApp para retirar. Também notei que o endereço do Google está diferente do Instagram; dá para acertar isso junto. Se gostar, a gente conversa!
