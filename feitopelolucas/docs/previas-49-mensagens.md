@@ -348,3 +348,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Olá, Carlinhos! Sou o Lucas, faço sites aqui em Campinas. Vi que a Boutcar tem 4,9 no Google com 180 avaliações e fotos de carros que saem daí brilhando. Montei uma ideia de site: https://feitopelolucas.com.br/previa/boutcar/
 > Tem os serviços, a galeria e um orçamento por foto: o cliente marca o dano e se é pelo seguro, e manda tudo pronto no WhatsApp de vocês. Se gostar, a gente conversa!
+
+---
+
+## 38. Borracharia Chapadão · /previa/borrachariachapadao/
+
+**Pelo que vi:** sem site e sem Instagram. O letreiro diz **"Giva Borracharia Chapadão"** e o dono é o **Giva** (Givaldo). Tem 4,9 no Google com 180 avaliações, com "preço" citado 25 vezes e "honesto" 7. O pessoal diz que ele explica tudo e dá dicas. WhatsApp (19) 99956-0055 e fixo (19) 3241-4920. Abre de segunda a sexta, das 8h às 18h, e sábado das 8h às 12h. Serviços: conserto, montagem, balanceamento e **venda de pneus usados**. Tem estacionamento. As fotos são do Google (fachada amarela, salão limpo e pneus). O site tem a cotação "qual é a medida do seu pneu?": a pessoa escolhe largura, altura e aro (com um desenho mostrando onde ler) e pergunta no WhatsApp se tem e quanto está.
+**Por onde mandar:** WhatsApp (19) 99956-0055.
+
+> Olá, Giva! Sou o Lucas, faço sites aqui em Campinas. Vi que a Borracharia Chapadão tem 4,9 no Google com 180 avaliações, e todo mundo fala do preço justo e da honestidade. Montei uma ideia de site: https://feitopelolucas.com.br/previa/borrachariachapadao/
+> O cliente escolhe a medida do pneu e já te pergunta no WhatsApp se tem e quanto está. Tem também o horário com aviso de aberto agora e o mapa. Se gostar, a gente conversa!
