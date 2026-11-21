@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ô Açaí Ouro Verde · O açaí do Jardim Cristina há mais de 11 anos</title>
+<meta name="description" content="Prévia de site para o Ô Açaí Ouro Verde, no Jardim Cristina, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/oacaiouroverde/">
+<meta property="og:title" content="Prévia de site · Ô Açaí Ouro Verde">
+<meta property="og:description" content="Açaí no copo, na taça e batida na garrafa, no Jardim Cristina. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/oacaiouroverde/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5b1a6e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--roxo:#5b1a6e;--roxo-2:#3f0f4e;--rosa:#ff3d8b;--rosa-2:#e02674;--lilas:#f3e6f7;--lilas-2:#fbf5fd;--amarelo:#ffc93c;--tinta:#2a1631;--tinta-2:#6c5874;--fio:#e7d3ee}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--lilas-2);color:var(--tinta);font:16.5px/1.6 "DM Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Fredoka",system-ui,sans-serif;font-weight:700;line-height:1.02;margin:0}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--rosa);outline-offset:3px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  .wrap>*{min-width:0}
+
+  .previa{background:var(--roxo-2);color:#dcc8e3;font-size:.8125rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--amarelo);font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .topo{background:var(--roxo);color:#fff}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:72px}
+  .marca{text-decoration:none;font:700 1.7rem "Fredoka",sans-serif;line-height:1}
+  .marca span{color:var(--rosa)}
+  .marca small{display:block;font:500 .8125rem "DM Sans",sans-serif;color:#d6bfe0;margin-top:2px}
+  .status{font-weight:700;font-size:.875rem;display:inline-flex;align-items:center;gap:7px}
+  .status i{width:10px;height:10px;border-radius:50%;background:#a58aaf}
+  .status.on i{background:#4ade80;box-shadow:0 0 0 4px rgba(74,222,128,.25)}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:12px 22px;border-radius:16px;font-weight:700;text-decoration:none;font-size:1rem;transition:transform .15s;white-space:nowrap;border:0;cursor:pointer;font-family:inherit}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.rosa{background:var(--rosa);color:#fff;box-shadow:0 6px 0 var(--rosa-2)}
+  .btn.roxo{background:var(--roxo);color:#fff}
+  .btn.linha{border:2px solid var(--roxo);color:var(--roxo);background:transparent}
+
+  .hero{background:var(--roxo);color:#fff;border-radius:0 0 40px 40px;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:34px;padding-bottom:70px}
+  .selo{display:inline-block;background:var(--amarelo);color:var(--roxo-2);font:700 .94rem "Fredoka",sans-serif;padding:6px 14px;border-radius:999px}
+  .hero h1{font-size:clamp(2.9rem,7vw,5.2rem);margin:18px 0 16px}
+  .hero h1 span{color:var(--rosa)}
+  .hero p{font-size:1.12rem;color:#e3d2ea;max-width:30em;margin:0 0 26px}
+  .acoes{display:flex;gap:14px;flex-wrap:wrap}
+  .hero .btn.linha{border-color:#fff;color:#fff}
+  .info{margin-top:24px;font-weight:700;color:#e3d2ea}
+  .copos{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:end}
+  .copos img{width:100%;object-fit:cover;border-radius:24px;border:4px solid rgba(255,255,255,.15)}
+  .copos img:first-child{aspect-ratio:3/5}
+  .copos img:last-child{aspect-ratio:3/4;margin-bottom:30px}
+  @media (max-width:880px){.hero .wrap{grid-template-columns:1fr;padding-top:24px}.copos{max-width:460px}}
+
+  section{padding:76px 0}
+  .tit{max-width:640px;margin-bottom:26px}
+  .tit small{font-weight:700;color:var(--rosa-2);letter-spacing:.14em;text-transform:uppercase;font-size:.8125rem}
+  .tit h2{font-size:clamp(2.2rem,5vw,3.3rem);margin-top:6px;color:var(--roxo)}
+  .tit p{color:var(--tinta-2);margin:10px 0 0}
+
+  .jeitos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .jeito{background:#fff;border:1px solid var(--fio);border-radius:24px;overflow:hidden}
+  .jeito img{width:100%;aspect-ratio:4/3;object-fit:cover}
+  .jeito div{padding:16px 18px 20px}
+  .jeito h3{font-size:1.45rem;color:var(--roxo)}
+  .jeito p{margin:4px 0 0;color:var(--tinta-2)}
+  .jeito.garrafa{background:var(--amarelo);border:0;display:flex;flex-direction:column;justify-content:center;padding:26px}
+  .jeito.garrafa h3{font-size:1.9rem;color:var(--roxo-2)}
+  .jeito.garrafa b{font:700 3rem "Fredoka",sans-serif;color:var(--rosa-2);line-height:1;margin:12px 0 4px}
+  .jeito.garrafa p{color:var(--roxo-2)}
+  @media (max-width:880px){.jeitos{grid-template-columns:1fr}}
+
+  /* Monte */
+  .monte{background:#fff;border-top:1px solid var(--fio);border-bottom:1px solid var(--fio)}
+  .monte .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:start}
+  .passo{margin-bottom:22px}
+  .passo h3{font-size:1.25rem;color:var(--roxo);margin-bottom:10px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips label{cursor:pointer}
+  .chips input{position:absolute;opacity:0;pointer-events:none}
+  .chips span{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;border-radius:999px;border:2px solid var(--fio);background:var(--lilas-2);font-weight:700;color:var(--tinta);transition:all .15s}
+  .chips input:checked+span{background:var(--roxo);border-color:var(--roxo);color:#fff}
+  .chips input:focus-visible+span{outline:3px solid var(--rosa);outline-offset:2px}
+  .resumo{position:sticky;top:20px;background:var(--roxo);color:#fff;border-radius:24px;padding:24px}
+  .resumo small{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.8125rem;color:var(--amarelo)}
+  .resumo p{margin:10px 0 18px;font-size:1.05rem;line-height:1.5;min-height:3em}
+  .resumo .btn{width:100%}
+  .resumo .obs{font-size:.875rem;color:#d6bfe0;margin:12px 0 0}
+  @media (max-width:880px){.monte .wrap{grid-template-columns:1fr}.resumo{position:static}}
+
+  .falas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .falas blockquote{margin:0;background:#fff;border:1px solid var(--fio);border-radius:22px;padding:22px;font-weight:500}
+  .falas cite{display:block;margin-top:10px;font-style:normal;font-weight:700;font-size:.875rem;color:var(--rosa-2)}
+  @media (max-width:880px){.falas{grid-template-columns:1fr}}
+
+  .onde{background:var(--lilas)}
+  .onde .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+  .horas{background:#fff;border-radius:20px;padding:18px 20px;margin-bottom:18px;font-weight:700}
+  .horas b{font:700 1.5rem "Fredoka",sans-serif;color:var(--roxo);display:block}
+  .horas span{font-weight:500;color:var(--tinta-2);font-size:.94rem}
+  .end{margin:0 0 22px}
+  .end a{white-space:nowrap;font-weight:700;color:var(--roxo)}
+  .mapa{border-radius:22px;overflow:hidden;min-height:380px;background:var(--fio)}
+  .mapa iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+  @media (max-width:880px){.onde .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:var(--roxo-2);color:#cdb7d6;padding:24px 0 110px;font-size:.875rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--amarelo);font-weight:700;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:40;transition:opacity .2s,transform .2s}
+  .fixo.some{opacity:0;transform:translateY(20px);pointer-events:none}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial do Ô Açaí Ouro Verde. É uma ideia de site montada por Lucas para apresentar à loja.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20do%20%C3%94%20A%C3%A7a%C3%AD%20Ouro%20Verde%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Ô Açaí Ouro Verde, início">Ô <span>Açaí</span><small>Ouro Verde · Jardim Cristina</small></a>
+    <span class="status" id="status"><i></i><span>Abre às 14h</span></span>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="selo">Mais de 11 anos no Ouro Verde</span>
+        <h1 id="titulo">O açaí que o <span>Ouro Verde</span> já conhece.</h1>
+        <p>No copo, na taça ou batido na garrafa, com fruta fresca e capricho. Venha tomar aqui, retire no balcão ou peça para receber em casa.</p>
+        <div class="acoes">
+          <a class="btn rosa" href="#monte">Montar meu açaí</a>
+          <a class="btn linha zap" href="https://wa.me/5519989897831">WhatsApp</a>
+        </div>
+        <p class="info">4,7 ★ com 188 avaliações no Google</p>
+      </div>
+      <div class="copos">
+        <img src="fotos/copo-frutas.jpg" alt="Copo de açaí com banana, morango e sorvete por cima" width="675" height="1200">
+        <img src="fotos/copo.jpg" alt="Copo de açaí em camadas sobre a mesa de madeira da loja" width="674" height="1200">
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-jeitos">
+    <div class="wrap">
+      <div class="tit"><small>Do seu jeito</small><h2 id="t-jeitos">Três jeitos de tomar</h2></div>
+      <div class="jeitos">
+        <article class="jeito"><img src="fotos/copo-loja.jpg" alt="Copo de açaí em camadas com creme, na loja" loading="lazy" width="675" height="1200"><div><h3>No copo</h3><p>Em camadas, com os acompanhamentos que você escolher.</p></div></article>
+        <article class="jeito"><img src="fotos/tacas.jpg" alt="Duas taças de açaí com creme, morango e granola" loading="lazy" width="608" height="662"><div><h3>Na taça</h3><p>Com creme, morango e granola, para tomar com calma na loja.</p></div></article>
+        <article class="jeito garrafa"><h3>Batida de açaí na garrafa</h3><b>R$ 18,90</b><p>Para levar e tomar gelada no caminho. Peça pelo WhatsApp.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="monte" id="monte" aria-labelledby="t-monte">
+    <div class="wrap">
+      <div>
+        <div class="tit"><small>Pedido rápido</small><h2 id="t-monte">Monte o seu açaí</h2><p>Escolha e mande pronto no WhatsApp. A loja confirma o valor.</p></div>
+        <div class="passo"><h3>1. Como você quer?</h3><div class="chips" data-g="forma" data-tipo="radio">
+          <label><input type="radio" name="forma" value="No copo" checked><span>No copo</span></label>
+          <label><input type="radio" name="forma" value="Na tigela"><span>Na tigela</span></label>
+          <label><input type="radio" name="forma" value="Batida na garrafa"><span>Batida na garrafa</span></label></div></div>
+        <div class="passo"><h3>2. Tamanho</h3><div class="chips" data-g="tam" data-tipo="radio">
+          <label><input type="radio" name="tam" value="pequeno"><span>Pequeno</span></label>
+          <label><input type="radio" name="tam" value="médio" checked><span>Médio</span></label>
+          <label><input type="radio" name="tam" value="grande"><span>Grande</span></label></div></div>
+        <div class="passo"><h3>3. Acompanhamentos</h3><div class="chips" data-g="acomp">
+          <label><input type="checkbox" value="banana"><span>Banana</span></label>
+          <label><input type="checkbox" value="morango"><span>Morango</span></label>
+          <label><input type="checkbox" value="granola"><span>Granola</span></label>
+          <label><input type="checkbox" value="creme"><span>Creme</span></label></div></div>
+        <div class="passo"><h3>4. Como recebe?</h3><div class="chips" data-g="rec" data-tipo="radio">
+          <label><input type="radio" name="rec" value="retirar na loja" checked><span>Retiro na loja</span></label>
+          <label><input type="radio" name="rec" value="entrega"><span>Entrega</span></label></div></div>
+      </div>
+      <aside class="resumo" aria-live="polite">
+        <small>Seu açaí</small>
+        <p id="resumo">Açaí no copo, médio.</p>
+        <a class="btn rosa" id="enviar" href="https://wa.me/5519989897831">Pedir no WhatsApp</a>
+        <p class="obs">Quer outro acompanhamento? Escreva na conversa; a loja diz o que tem no dia.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="tit"><small>4,7 · 188 avaliações no Google</small><h2 id="t-aval">O melhor da região, dizem por aí</h2></div>
+      <div class="falas">
+        <blockquote>"Açaí excelente, o melhor da região do Ouro Verde, super recomendo."<cite>Ivan · Google</cite></blockquote>
+        <blockquote>"Simplesmente maravilhoso. Ótimo atendimento e tempo de espera. Frutas frescas, tudo perfeito."<cite>Rafaela · Google</cite></blockquote>
+        <blockquote>"Atendimento bom, ambiente agradável, melhor açaí da região e preço justo."<cite>Resumo das avaliações · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:18px"><small>Onde fica</small><h2 id="t-onde">Jardim Cristina, Ouro Verde</h2></div>
+        <div class="horas"><b>A partir das 14h</b><span>Aqui na loja, retirada ou delivery. Confirme o horário do dia pelo WhatsApp.</span></div>
+        <p class="end"><b>R. Maria Rita Maciel Colombari, 178</b> · Campinas (SP)<br>WhatsApp <a class="zap" href="https://wa.me/5519989897831">(19) 98989-7831</a> · Fixo <a href="tel:+551932242920">(19) 3224-2920</a><br>Instagram <a href="https://www.instagram.com/oacaiouroverde/" target="_blank" rel="noopener">@oacaiouroverde</a></p>
+        <div class="acoes">
+          <a class="btn roxo" href="https://www.google.com/maps/dir/?api=1&amp;destination=%C3%94+A%C3%A7a%C3%AD+Ouro+Verde,+R.+Maria+Rita+Maciel+Colombari,+178,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn rosa zap" href="https://wa.me/5519989897831">WhatsApp</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Ô Açaí Ouro Verde, R. Maria Rita Maciel Colombari, 178, Campinas" src="https://www.google.com/maps?q=%C3%94+A%C3%A7a%C3%AD+Ouro+Verde,+R.+Maria+Rita+Maciel+Colombari,+178,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Ô Açaí Ouro Verde · Campinas</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn rosa fixo some zap" id="fixo" href="https://wa.me/5519989897831">Pedir açaí</a>
+
+<script>
+(function () {
+  document.querySelectorAll(".zap").forEach(function(a){a.target="_blank";a.rel="noopener";});
+  var fixo = document.getElementById("fixo");
+  if ("IntersectionObserver" in window) new IntersectionObserver(function(e){ fixo.classList.toggle("some", e[0].isIntersecting); }).observe(document.querySelector(".hero"));
+
+  var h = Number(new Intl.DateTimeFormat("pt-BR",{timeZone:"America/Sao_Paulo",hour:"numeric",hour12:false}).format(new Date())) % 24;
+  var st = document.getElementById("status");
+  if (h >= 14 && h < 19) { st.classList.add("on"); st.querySelector("span").textContent = "Aberto agora"; }
+
+  var env = document.getElementById("enviar"); env.target = "_blank"; env.rel = "noopener";
+  function v(n){ var e = document.querySelector('input[name="' + n + '"]:checked'); return e ? e.value : ""; }
+  function at(){
+    var forma = v("forma"), tam = v("tam"), rec = v("rec");
+    var ac = [].map.call(document.querySelectorAll('[data-g="acomp"] input:checked'), function(i){ return i.value; });
+    var garrafa = forma === "Batida na garrafa";
+    document.querySelectorAll('[data-g="tam"] input,[data-g="acomp"] input').forEach(function(i){ i.disabled = garrafa; i.parentNode.style.opacity = garrafa ? .4 : 1; });
+    var txt = garrafa ? "Batida de açaí na garrafa" : "Açaí " + forma.toLowerCase() + ", " + tam + (ac.length ? ", com " + ac.join(", ").replace(/, ([^,]*)$/, " e $1") : "");
+    txt += ". Para " + rec + ".";
+    document.getElementById("resumo").textContent = txt;
+    env.href = "https://wa.me/5519989897831?text=" + encodeURIComponent("Olá, Ô Açaí! Quero pedir: " + txt);
+  }
+  document.querySelector(".monte").addEventListener("change", at); at();
+})();
+</script>
+</body>
+</html>

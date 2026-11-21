@@ -312,3 +312,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, Higor! Sou o Lucas, faço sites aqui em Campinas. Vi que o Bello Espaço tem nota 5,0 no Google, com cliente dizendo que faz progressiva com você há 15 anos, e fiquei impressionado! Montei uma ideia de site: https://feitopelolucas.com.br/previa/belloespaco/
 > Tem uma calculadora em que a cliente coloca quando fez a última progressiva e já pede o horário do retoque no seu WhatsApp. Também vi que ainda existe o perfil antigo da Donna da Beleza no mesmo endereço; posso ajudar a organizar isso. Se gostar, a gente conversa!
+
+---
+
+## 34. Ô Açaí Ouro Verde · /previa/oacaiouroverde/
+
+**Pelo que vi:** sem site. Instagram **@oacaiouroverde** (676 seguidores, "+11 anos servindo o melhor açaí da região") e Facebook com 2,2 mil. **Não é** a rede Ô.AÇAÍ (@o.acaioficial, unidades no Chapadão e Campos Elíseos): é uma loja independente. Tem 4,7 no Google com 188 avaliações. Fixo (19) 3224-2920 e WhatsApp (19) 98989-7831, que aparece nos posts. O delivery é pelo 99Food. O Google diz que abre às 14h (terça a domingo, das 14h às 19h, pela visão da IA), mas a bio diz "aberto todos os dias". No site pus "a partir das 14h" e pedi para confirmar. Os posts do Instagram são artes com fotos de banco, então usei só as fotos de clientes do Google. Produto confirmado: **batida de açaí na garrafa por R$ 18,90**. O site tem um "monte o seu açaí" que manda o pedido no WhatsApp.
+**Por onde mandar:** WhatsApp (19) 98989-7831.
+
+> Oi, pessoal do Ô Açaí Ouro Verde! Sou o Lucas, faço sites aqui em Campinas. Vi que vocês têm 4,7 no Google, com gente dizendo que é o melhor açaí da região, e mais de 11 anos de casa. Montei uma ideia de site: https://feitopelolucas.com.br/previa/oacaiouroverde/
+> O cliente monta o açaí, escolhe retirar ou receber e manda o pedido pronto no WhatsApp de vocês. Tem também a batida na garrafa em destaque e o mapa. Se gostarem, a gente conversa!
