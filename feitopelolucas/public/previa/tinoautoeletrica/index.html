@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Auto Elétrica Tino · Partida, carga e bateria no Jardim do Lago</title>
+<meta name="description" content="Prévia de site para a Tino Auto Elétrica, no Jardim do Lago, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/tinoautoeletrica/">
+<meta property="og:title" content="Prévia de site · Auto Elétrica Tino">
+<meta property="og:description" content="Motor de partida, carga, bateria e alternador, desde 1993. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/tinoautoeletrica/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#d62828">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Chivo:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{--verm:#d62828;--verm-2:#a81d1d;--azul:#1d3a8a;--azul-2:#13286a;--cal:#fbfaf6;--cal-2:#f1eee5;--tinta:#16181f;--tinta-2:#5b5d66;--fio:#e4e0d4;--amar:#f4c430;--verde:#1f9d55}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--cal);color:var(--tinta);font:17px/1.6 "Chivo",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Alfa Slab One",Georgia,serif;font-weight:400;line-height:1.02;margin:0;text-transform:uppercase;letter-spacing:.01em}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--amar);outline-offset:3px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  .wrap>*{min-width:0}
+
+  .previa{background:var(--azul-2);color:#c6cfe8;font-size:.8125rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--amar);font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .topo{background:#fff;border-bottom:6px solid var(--verm)}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:74px}
+  .marca{text-decoration:none;line-height:1;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .marca b{font:400 1.35rem "Alfa Slab One",serif;color:var(--verm);text-transform:uppercase}
+  .marca strong{font:400 2rem "Alfa Slab One",serif;color:var(--azul);letter-spacing:.04em}
+  .status{font-weight:700;font-size:.875rem;display:inline-flex;align-items:center;gap:7px}
+  .status i{width:10px;height:10px;border-radius:50%;background:#9a9aa3}
+  .status.on i{background:var(--verde);box-shadow:0 0 0 4px rgba(31,157,85,.25)}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:12px 22px;border-radius:8px;font-weight:900;text-decoration:none;font-size:1rem;transition:transform .15s,background .15s;white-space:nowrap;border:0;cursor:pointer;font-family:inherit;text-transform:uppercase;letter-spacing:.03em}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.verm{background:var(--verm);color:#fff}
+  .btn.verm:hover{background:var(--verm-2)}
+  .btn.azul{background:var(--azul);color:#fff}
+  .btn.linha{border:2px solid currentColor;background:transparent}
+
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding-top:40px;padding-bottom:74px}
+  .desde{display:inline-block;background:var(--azul);color:#fff;font:400 1rem "Alfa Slab One",serif;padding:6px 14px;border-radius:4px;letter-spacing:.04em}
+  .hero h1{font-size:clamp(2.7rem,6.6vw,4.8rem);color:var(--verm);margin:16px 0 8px}
+  .hero h1 span{color:var(--azul);display:block}
+  .lista-muro{font:900 1.05rem "Chivo",sans-serif;text-transform:uppercase;color:var(--azul);letter-spacing:.04em;margin:0 0 18px}
+  .hero p{font-size:1.12rem;color:var(--tinta-2);max-width:30em;margin:0 0 26px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .info{margin-top:22px;font-weight:700;color:var(--tinta-2)}
+  .hero img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;box-shadow:0 24px 50px -28px rgba(0,0,0,.5)}
+  @media (max-width:880px){.hero .wrap{grid-template-columns:1fr;padding-top:26px}}
+
+  section{padding:76px 0}
+  .tit{max-width:660px;margin-bottom:26px}
+  .tit small{font-weight:900;color:var(--verm);letter-spacing:.14em;text-transform:uppercase;font-size:.8125rem}
+  .tit h2{font-size:clamp(2.1rem,4.8vw,3.2rem);margin-top:6px;color:var(--azul)}
+  .tit p{color:var(--tinta-2);margin:10px 0 0}
+
+  .servicos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .serv{background:#fff;border:2px solid var(--fio);border-radius:10px;padding:22px}
+  .serv h3{font-size:1.35rem;color:var(--verm)}
+  .serv p{margin:6px 0 0;color:var(--tinta-2)}
+  @media (max-width:880px){.servicos{grid-template-columns:1fr 1fr}}
+  @media (max-width:480px){.servicos{grid-template-columns:1fr}}
+
+  /* Vistoria */
+  .vistoria{background:var(--azul);color:#dfe5f5}
+  .vistoria .tit h2{color:#fff}
+  .vistoria .tit small{color:var(--amar)}
+  .vistoria .tit p{color:#bfc9e6}
+  .vistoria .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:start}
+  .checks{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .checks label{display:flex;gap:12px;align-items:center;background:var(--azul-2);border:2px solid #2a4598;border-radius:10px;padding:12px 14px;cursor:pointer;font-weight:700;min-height:54px}
+  .checks input{width:22px;height:22px;accent-color:var(--verm);flex:none}
+  .checks label:has(input:checked){border-color:var(--verm);background:#3a1f3a}
+  .ficha{background:#fff;color:var(--tinta);border-radius:14px;padding:24px;position:sticky;top:20px;border-top:8px solid var(--verm)}
+  .ficha small{font-weight:900;letter-spacing:.14em;text-transform:uppercase;font-size:.8125rem;color:var(--verm)}
+  .ficha p{margin:10px 0 14px;font-size:1.05rem;line-height:1.5}
+  .ficha .btn{width:100%}
+  .ficha .obs{font-size:.875rem;color:var(--tinta-2);margin:12px 0 0}
+  @media (max-width:880px){.vistoria .grid{grid-template-columns:1fr}.ficha{position:static}}
+  @media (max-width:480px){.checks{grid-template-columns:1fr}}
+
+  .falas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .falas blockquote{margin:0;background:#fff;border:2px solid var(--fio);border-radius:10px;padding:22px;font-weight:700}
+  .falas cite{display:block;margin-top:10px;font-style:normal;font-weight:900;font-size:.875rem;color:var(--verm)}
+  @media (max-width:880px){.falas{grid-template-columns:1fr}}
+
+  .onde{background:var(--cal-2)}
+  .onde .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+  .onde img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;margin-bottom:18px}
+  .horas{width:100%;border-collapse:collapse;margin-bottom:18px}
+  .horas td{padding:10px 0;border-bottom:1px solid var(--fio)}
+  .horas td:last-child{text-align:right;font-weight:900}
+  .end{margin:0 0 22px}
+  .end a{white-space:nowrap;font-weight:900;color:var(--azul)}
+  .mapa{border-radius:12px;overflow:hidden;min-height:380px;background:var(--fio)}
+  .mapa iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+  @media (max-width:880px){.onde .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:var(--azul-2);color:#aab6da;padding:24px 0 110px;font-size:.875rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--amar);font-weight:700;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:40;box-shadow:0 14px 30px -12px rgba(0,0,0,.5);transition:opacity .2s,transform .2s}
+  .fixo.some{opacity:0;transform:translateY(20px);pointer-events:none}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial da Auto Elétrica Tino. É uma ideia de site montada por Lucas para apresentar à oficina.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20da%20Auto%20El%C3%A9trica%20Tino%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Auto Elétrica Tino, início"><b>Auto Elétrica</b><strong>TINO</strong></a>
+    <span class="status" id="status"><i></i><span>Seg. a sex.</span></span>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="desde">Desde 1993</span>
+        <h1 id="titulo">Carro não pega? <span>Fala com o Tino.</span></h1>
+        <p class="lista-muro">Motor · Partida · Carga · Bateria · Alternador</p>
+        <p>Auto elétrica no Jardim do Lago desde 1993. Resolve sem enrolação, explica o que o carro tem e cobra preço justo.</p>
+        <div class="acoes">
+          <a class="btn verm" href="tel:+551932687515">Ligar 3268-7515</a>
+          <a class="btn linha" style="color:var(--azul)" href="#vistoria">Vai fazer vistoria?</a>
+        </div>
+        <p class="info">4,8 ★ com 153 avaliações no Google</p>
+      </div>
+      <img src="fotos/muro-perto.jpg" alt="Muro branco pintado à mão: Auto Elétrica Tino, motor, partida, carga, bateria e alternador, fone 3268-7515" width="1200" height="900">
+    </div>
+  </section>
+
+  <section aria-labelledby="t-serv" style="padding-top:20px">
+    <div class="wrap">
+      <div class="tit"><small>Serviços</small><h2 id="t-serv">O que está no muro (e mais)</h2></div>
+      <div class="servicos">
+        <div class="serv"><h3>Motor de partida</h3><p>Carro que não dá partida ou faz "tec-tec".</p></div>
+        <div class="serv"><h3>Carga e alternador</h3><p>Bateria que descarrega e luz da bateria acesa.</p></div>
+        <div class="serv"><h3>Bateria</h3><p>Teste e troca.</p></div>
+        <div class="serv"><h3>Ventoinha</h3><p>Ventoinha que não liga e motor esquentando.</p></div>
+        <div class="serv"><h3>Elétrica geral</h3><p>Faróis, lanternas, setas, buzina e fusíveis.</p></div>
+        <div class="serv"><h3>Revisão para vistoria</h3><p>Deixa a parte elétrica em dia antes da inspeção.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vistoria" id="vistoria" aria-labelledby="t-vis">
+    <div class="wrap">
+      <div class="tit"><small>Checklist rápido</small><h2 id="t-vis">O que não está funcionando?</h2><p>Marque o que você notou no carro. Na ligação, o Tino já sabe por onde começar.</p></div>
+      <div class="grid">
+        <div class="checks" id="checks">
+          <label><input type="checkbox" value="não dá partida"> Não dá partida</label>
+          <label><input type="checkbox" value="bateria descarregando"> Bateria descarrega</label>
+          <label><input type="checkbox" value="luz da bateria acesa"> Luz da bateria acesa</label>
+          <label><input type="checkbox" value="ventoinha não liga"> Ventoinha não liga</label>
+          <label><input type="checkbox" value="farol queimado ou fraco"> Farol fraco ou queimado</label>
+          <label><input type="checkbox" value="lanterna ou luz de freio"> Lanterna / luz de freio</label>
+          <label><input type="checkbox" value="seta ou pisca-alerta"> Seta / pisca-alerta</label>
+          <label><input type="checkbox" value="buzina"> Buzina</label>
+          <label><input type="checkbox" value="limpador de para-brisa"> Limpador</label>
+          <label><input type="checkbox" value="revisão elétrica para vistoria"> Preciso passar na vistoria</label>
+        </div>
+        <aside class="ficha" aria-live="polite">
+          <small>Sua lista</small>
+          <p id="resumo">Nada marcado ainda.</p>
+          <a class="btn verm" href="tel:+551932687515">Ligar (19) 3268-7515</a>
+          <p class="obs">Com o site no ar, essa lista pode ir direto para o WhatsApp da oficina.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="tit"><small>4,8 · 153 avaliações no Google</small><h2 id="t-aval">"Honesto" é a palavra mais usada</h2></div>
+      <div class="falas">
+        <blockquote>"Indiscutível melhor auto elétrica da região, o cara é ninja e gente boa demais."<cite>Resumo das avaliações · Google</cite></blockquote>
+        <blockquote>"Excelente profissional, educado, honesto e preço justo, podem ir sem medo."<cite>Isabella · Google</cite></blockquote>
+        <blockquote>"Resolve os problemas eletrônicos veiculares sem enrolação e com custo acessível."<cite>Resumo das avaliações · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde">
+    <div class="wrap">
+      <div>
+        <img src="fotos/muro.jpg" alt="Muro branco da Auto Elétrica Tino na Rua Nazareno Mingone, número 500" loading="lazy" width="1200" height="900">
+        <div class="tit" style="margin-bottom:14px"><small>Onde fica</small><h2 id="t-onde">Procure o muro branco</h2></div>
+        <table class="horas">
+          <tr><td>Segunda a sexta</td><td>8h às 18h</td></tr>
+          <tr><td>Sábado e domingo</td><td>Fechado</td></tr>
+        </table>
+        <p class="end"><b>R. Nazareno Mingone, 500</b> · Jardim do Lago · Campinas (SP)<br>Telefone <a href="tel:+551932687515">(19) 3268-7515</a></p>
+        <div class="acoes">
+          <a class="btn verm" href="tel:+551932687515">Ligar</a>
+          <a class="btn azul" href="https://www.google.com/maps/dir/?api=1&amp;destination=Tino+Auto+Eletrica,+R.+Nazareno+Mingone,+500,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Auto Elétrica Tino, R. Nazareno Mingone, 500, Campinas" src="https://www.google.com/maps?q=Tino+Auto+Eletrica,+R.+Nazareno+Mingone,+500,+Jardim+do+Lago,+Campinas&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Auto Elétrica Tino · desde 1993 · Campinas</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn verm fixo some" id="fixo" href="tel:+551932687515">Ligar para o Tino</a>
+
+<script>
+(function () {
+  var fixo = document.getElementById("fixo");
+  if ("IntersectionObserver" in window) new IntersectionObserver(function(e){ fixo.classList.toggle("some", e[0].isIntersecting); }).observe(document.querySelector(".hero"));
+  var p = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",hour12:false}).formatToParts(new Date());
+  var d = p.find(function(x){return x.type==="weekday";}).value, h = Number(p.find(function(x){return x.type==="hour";}).value) % 24;
+  var st = document.getElementById("status");
+  if (["Mon","Tue","Wed","Thu","Fri"].indexOf(d) > -1 && h >= 8 && h < 18) { st.classList.add("on"); st.querySelector("span").textContent = "Aberto agora"; }
+  else st.querySelector("span").textContent = "Fechado agora";
+
+  function at(){
+    var l = [].map.call(document.querySelectorAll("#checks input:checked"), function(i){ return i.value; });
+    document.getElementById("resumo").textContent = l.length ? l.join(", ").replace(/, ([^,]*)$/, " e $1").replace(/^./, function(c){ return c.toUpperCase(); }) + "." : "Nada marcado ainda.";
+  }
+  document.getElementById("checks").addEventListener("change", at);
+})();
+</script>
+</body>
+</html>

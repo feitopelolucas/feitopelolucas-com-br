@@ -450,3 +450,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Olá, pessoal do Novo Stilo! Sou o Lucas, faço sites aqui em Campinas. Vi que o salão tem 4,8 no Google com 155 avaliações e que um cliente até pediu lá um WhatsApp para marcar horário. Montei uma ideia de site: https://feitopelolucas.com.br/previa/novostilo/
 > O cliente escolhe o serviço e o período e já liga sabendo o que pedir. Se vocês criarem um WhatsApp, o botão passa a agendar direto por lá. Se gostarem, a gente conversa!
+
+---
+
+## 49. Tino Auto Elétrica · /previa/tinoautoeletrica/
+
+**Pelo que vi:** sem site, sem Instagram e sem WhatsApp; **só o fixo (19) 3268-7515**. O CNPJ está ativo **desde 1993** (Justino Laurentino, o "Tino"). Tem 4,8 no Google com 153 avaliações, e as palavras mais usadas são **"honesto" (16)** e "preço" (13). "O cara é ninja", "resolve sem enrolação". Abre de segunda a sexta, das 8h às 18h. As 8 fotos do Google são todas do **muro branco pintado à mão** ("Auto Elétrica Tino: Motor, Partida, Carga, Bateria, Alternador · Fone 3268-7515"), e isso virou a identidade do site, em vermelho e azul. Uma avaliação conta que ele fez a **revisão elétrica para uma vistoria**. O site tem um checklist "o que não está funcionando?" (partida, bateria, ventoinha, faróis, setas, buzina, vistoria) que monta a lista para a ligação.
+**Por onde mandar:** ligar no (19) 3268-7515 ou passar pessoalmente (não tem WhatsApp público).
+
+> Olá, Tino! Sou o Lucas, faço sites aqui em Campinas. Vi que a sua auto elétrica tem 4,8 no Google com mais de 150 avaliações, e "honesto" é a palavra que mais aparece. Montei uma ideia de site com a cara do seu muro: https://feitopelolucas.com.br/previa/tinoautoeletrica/
+> O cliente marca o que não está funcionando no carro e já liga sabendo o que falar. Se quiser, dá para colocar um WhatsApp também. Se gostar, a gente conversa!
