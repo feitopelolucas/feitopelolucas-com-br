@@ -84,3 +84,12 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 > Olá, pessoal da Auto House! Sou o Lucas, faço sites aqui em Campinas. Vi que o Instagram que aparece no Google de vocês não abre mais, então quem procura "restauração de farol" fica sem ter onde clicar. Montei uma ideia de site: https://feitopelolucas.com.br/previa/autohouse/
 > Tem uma simulação do farol amarelado contra o restaurado, o antes e depois da Hilux, orçamento por foto no WhatsApp e os 28 anos de loja em destaque. Se gostarem, a gente conversa!
 
+---
+
+## 10. Cidão Borracharia · /previa/cidao/
+
+**Pelo que vi:** o Instagram @centroautomotivo.cidao da lista é de outro Cidão, em Piraquara (PR), e ficou de fora. A faixa da loja mostra **cidaoborracharia.com.br**: o site existe, mas ainda está com o texto de exemplo do modelo ("Isto é um subtítulo...", fotos de banco). Ele nem aparece no Google Maps deles. Abre todos os dias, inclusive domingo (7h às 18h). O WhatsApp é o (19) 3272-5175. Atende de bicicleta a trator. A logo e o mascote vieram do site deles.
+
+> Oi, pessoal do Cidão! Sou o Lucas, faço sites aqui em Campinas. Vi na faixa da loja o endereço cidaoborracharia.com.br, mas o site ainda está com o texto de exemplo do modelo ("Isto é um subtítulo..."). Montei uma ideia de como ele poderia ficar: https://feitopelolucas.com.br/previa/cidao/
+> Tem o "aberto agora" (o domingo aberto é ouro para quem fura pneu), os veículos que vocês atendem, os serviços, a prateleira de seminovos e os quase 50 anos de história. Se gostarem, dá até para usar o mesmo endereço. A gente conversa!
+
