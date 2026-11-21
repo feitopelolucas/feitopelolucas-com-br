@@ -102,3 +102,12 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 > Oi, pessoal da Titan! Sou o Lucas, faço sites aqui em Campinas. Vi que vocês agendam tudo pelo WhatsApp e têm 300 avaliações no Google, mas não têm um site para quem procura "lava-rápido" ou "polimento" na região. Montei uma ideia: https://feitopelolucas.com.br/previa/titan/
 > O cliente marca os serviços que quer (lavagem, higienização, polimento, leva e traz…) e a mensagem chega pronta no WhatsApp de vocês. Até o lixinho rosa ganhou destaque, rs. Se curtirem, me chama!
 
+---
+
+## 12. The Barber's Barbearia · /previa/thebarbers/
+
+**Pelo que vi:** usa o AppBarber para agendar (sites.appbarber.com.br/thebarbers-41ro), com mais de 45 serviços e preços, e o Instagram (3,4 mil seguidores). Não tem site próprio. A bio diz "especialista em prótese capilar" e atende por ordem de chegada ou com agendamento. É bar e barbearia: chopp, sinuca e deck. As avaliações citam muito a Carol e o chopp trincando. Passei os preços "a partir de" do AppBarber para o site e mantive o botão de agendar levando para a agenda deles.
+
+> Fala, pessoal da The Barber's! Sou o Lucas, faço sites aqui em Campinas. Vocês têm nota 4,9 com quase 300 avaliações e uma especialidade forte, a prótese capilar, mas quem pesquisa no Google só cai na página genérica do AppBarber. Montei uma ideia de site próprio: https://feitopelolucas.com.br/previa/thebarbers/
+> Tem os preços organizados por categoria, uma parte só da prótese com antes e depois, o bar com chopp e sinuca, e o botão de agendar continua usando o AppBarber de vocês. Se curtirem, a gente conversa!
+
