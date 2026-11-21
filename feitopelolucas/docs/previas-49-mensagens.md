@@ -100,3 +100,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, pessoal da Marfá! Sou o Lucas, faço sites aqui em Campinas. Vi que vocês têm 4,7 no Google com mais de 300 avaliações, e muita gente diz que a Marfá "promete e cumpre o que orça". Montei uma ideia de site para a auto elétrica: https://feitopelolucas.com.br/previa/marfa/
 > Tem os serviços, um teste rápido de bateria que leva o cliente direto para o WhatsApp de vocês e o horário com aviso de aberto ou fechado. Se gostarem, a gente conversa!
+
+---
+
+## 12. Karioka Lanches · /previa/karioka/
+
+**Pelo que vi:** sem site e sem Instagram próprio (só uma menção de um perfil de botecos). Uma foto do Google mostra o **cardápio impresso completo**: 39 lanches com preço, adicionais e três opções de pão (de hambúrguer, francês e boquinha de anjo). Pus tudo no site, com uma sacola que soma o pedido e manda pronto no WhatsApp. Abre de **terça a domingo a partir das 17h30**; não achei o horário de fechamento. Fixo (19) 3305-0025 e WhatsApp (19) 99421-1861. Avaliações: cerveja gelada, sucos, porções, ambiente tranquilo e de família, e as duas atendentes. **Atenção:** os preços são da foto do cardápio e podem ter mudado; o site avisa isso.
+**Por onde mandar:** WhatsApp (19) 99421-1861.
+
+> Oi, pessoal do Karioka! Sou o Lucas, faço sites aqui em Campinas. Vocês têm 4,8 no Google com mais de 300 avaliações e não têm site, então montei uma ideia de como ele poderia ser: https://feitopelolucas.com.br/previa/karioka/
+> Coloquei o cardápio inteiro, os 39 lanches com preço, e o cliente vai tocando em "pedir", escolhe o pão e manda o pedido somado direto no WhatsApp de vocês. Se gostarem, a gente conversa!
