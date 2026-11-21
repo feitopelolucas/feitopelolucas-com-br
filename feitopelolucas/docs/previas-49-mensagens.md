@@ -424,3 +424,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, Fábio! Sou o Lucas, faço sites aqui em Campinas. Vi o trabalho de mechas de vocês no Instagram (os loiros e ruivos estão lindos) e que o Unike tem 4,7 no Google. Montei uma ideia de site: https://feitopelolucas.com.br/previa/unikehair/
 > A cliente conta como está o cabelo e o que quer, e a mensagem chega pronta no WhatsApp para você avaliar antes do orçamento. Isso evita expectativa desalinhada e já filtra o pedido. Se gostar, a gente conversa!
+
+---
+
+## 46. Casa de Carnes Valter · /previa/valtercarnes/
+
+**Pelo que vi:** açougue, empório e assados **desde 1982**, com **selo SISP Artesanal** (inspeção do Estado de SP, 2023). Instagram **@valtercarnes** (2,3 mil seguidores, ativo, com destaques de Black Angus, Picanha Angus, Ancho e Cupim recheado). Não tem site. Tem 4,9 no Google com 157 avaliações, e há clientes de **30 a 35 anos**. Elogiam que colocam a compra no porta-malas, o kit hambúrguer, os espetinhos e a picanha. Telefone e **WhatsApp no fixo (19) 3278-3448** (o link do Instagram é wa.me/551932783448). Abre de segunda a sábado, das 7h às 18h30, e domingo das 7h às 12h30; os **assados (frango, joelho) saem no fim de semana** e a entrega é de segunda a sexta. As fotos são do Google (loja, vitrine, Angus a vácuo, espetos e frangos na brasa, fachada) e do Instagram. O site tem a **reserva do assado de domingo** com quantidades e horário de retirada, mandando tudo no WhatsApp.
+**Por onde mandar:** WhatsApp (19) 3278-3448.
+
+> Olá, pessoal da Casa de Carnes Valter! Sou o Lucas, faço sites aqui em Campinas. Vi que vocês estão aí desde 1982, têm o selo SISP e 4,9 no Google, com cliente de mais de 30 anos. Montei uma ideia de site: https://feitopelolucas.com.br/previa/valtercarnes/
+> Tem os cortes Angus, o selo, as fotos da loja e uma reserva do assado de domingo: o cliente escolhe frango, joelho e espetinhos, o horário, e manda pronto no WhatsApp de vocês. Ajuda a diminuir a fila de domingo. Se gostarem, a gente conversa!
