@@ -230,3 +230,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Olá, pessoal da Natan! Sou o Lucas, faço sites aqui em Campinas. Vi que a Natan tem 4,8 no Google e clientes que compram aí há mais de 30 anos. Montei uma ideia de site para o açougue: https://feitopelolucas.com.br/previa/natancarnes/
 > Tem o horário com aviso de aberto agora, os cortes e uma calculadora de churrasco que diz quantos quilos levar para a turma. Também dá para colocar um WhatsApp de encomendas. Se gostarem, a gente conversa!
+
+---
+
+## 25. Maresias Açaí e Sorvetes · /previa/maresias/
+
+**Pelo que vi:** açaí e sorvete de **fabricação própria**, com Instagram **@maresias.oficial** (1,5 mil seguidores) e cardápio de pedidos online (maresias.deeliv.app; o Google aponta um cardapioweb). Eles chamam o cardápio de "nosso site", mas não têm site institucional. Segunda a sexta das 12h às 21h e fim de semana e feriado das 13h às 22h. WhatsApp (19) 98374-8039. Aceitam vales. Sabores citados: iogurte com amarena, Ninho trufado, torta de maracujá; açaí sem adição de açúcar e cupuaçu; taças Sundae, Banana Split e Ula Ula. Avaliações elogiam "sem emulsificante" e o delivery bem embalado. Os botões de pedido levam ao cardápio deles.
+**Por onde mandar:** WhatsApp (19) 98374-8039.
+
+> Oi, pessoal da Maresias! Sou o Lucas, faço sites aqui em Campinas. Vi que vocês têm 4,9 no Google e que o diferencial é ser tudo de fabricação própria, sem emulsificante. Isso merece aparecer bem quando alguém procura vocês. Montei uma ideia de site: https://feitopelolucas.com.br/previa/maresias/
+> Ele conta a história do produto, mostra os sabores e o horário com aviso de aberto agora, e todo botão de pedido leva para o cardápio online de vocês. Se gostarem, a gente conversa!
