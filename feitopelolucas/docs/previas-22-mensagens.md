@@ -21,3 +21,12 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 > Oi, tudo bem? Sou o Lucas, faço sites aqui em Campinas. A Pardal tem mais de mil avaliações no Google e as pessoas sempre falam das flores na mesa e do café de domingo, então montei uma ideia de site para vocês: https://feitopelolucas.com.br/previa/pardal/
 > Tem os kits de presente com pedido pelo WhatsApp, o horário de cada dia e o que o pessoal mais pede. Se gostarem, a gente conversa. Se não, tudo bem também!
 
+---
+
+## 3. Pastelaria Tropical · /previa/tropical/
+
+**Pelo que vi:** nenhum site. O Instagram é ativo, mas só com artes de promoção (sexta do pastel, sábado do açaí, quarta do lanche). Delivery pelo WhatsApp (11) 93354-6117. O telefone do Google é outro: (19) 99356-2559. Abre às 5h30, e às 4h30 na sexta. As avaliações chamam de "um clássico da Unicamp" e elogiam o pão de queijo, o pastel frito na hora e a sombra.
+
+> Oi, tudo bem? Sou o Lucas, faço sites aqui em Campinas. A Tropical é um clássico da rotatória da Unicamp e quase mil pessoas avaliaram vocês no Google, mas quem procura não acha um site. Montei uma ideia de como ele poderia ser: https://feitopelolucas.com.br/previa/tropical/
+> Ele mostra a promoção do dia sozinho (sexta do pastel, sábado do açaí), tem o cardápio, o horário de quem abre antes do sol e o botão de delivery. Se curtirem, me chama!
+
