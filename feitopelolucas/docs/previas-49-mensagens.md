@@ -296,3 +296,19 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, pessoal do Cantinho Lanches! Sou o Lucas, faço sites aqui em Campinas. Vi que vocês têm um cardápio enorme no Anota AI e 4,6 no Google, mas quem procura no Google ainda cai sem site e com horário errado (lá diz que abre às 10h). Montei uma ideia: https://feitopelolucas.com.br/previa/cantinholanches/
 > O cardápio completo fica separado por categoria, o cliente monta o pedido e manda somado no WhatsApp de vocês. Se gostarem, a gente conversa!
+
+---
+
+## 32. Donna da Beleza - By Gabriella · pulado (mesmo salão do #33)
+
+**Por que pulei:** fica no mesmo endereço do Bello Espaço (Av. Francisco de Paula Oliveira Nazareth, 1041). As avaliações (4,9 com 193) são de **3 anos atrás** e já citam o **Higor** e a progressiva dele. O CNPJ da Donna da Beleza consta como **baixado**, e o Instagram "@donnadabeleza.cp" que o Google sugere é de outra loja, em Goiás. Tudo indica que o salão virou **Bello Espaço** e o perfil antigo continua no ar com outro telefone, (19) 98123-8215, da Gabriella. Fiz um site só, o do Bello Espaço. Vale perguntar se a Gabi ainda atende aí (unhas e sobrancelhas). Se sim, dá para incluí-la no mesmo site.
+
+---
+
+## 33. Bello Espaço Salão de Beleza · /previa/belloespaco/
+
+**Pelo que vi:** nota **5,0 com 189 avaliações** e um link-na-bio (lynkabio.site/@belloespaco), mas sem site e sem Instagram ativo. O carro-chefe é a **progressiva do Higor**: as clientes contam de 5 a 8 meses de cabelo alinhado e algumas são fiéis há 14 ou 15 anos. O perfil não tem horário. WhatsApp (19) 99399-7322. O site tem a calculadora "quando refazer a minha?", que sugere o mês do retoque e já manda o pedido de horário no WhatsApp. **Extra:** existe um segundo perfil no Google (Donna da Beleza) no mesmo endereço, com telefone diferente. Dá para oferecer a unificação.
+**Por onde mandar:** WhatsApp (19) 99399-7322.
+
+> Oi, Higor! Sou o Lucas, faço sites aqui em Campinas. Vi que o Bello Espaço tem nota 5,0 no Google, com cliente dizendo que faz progressiva com você há 15 anos, e fiquei impressionado! Montei uma ideia de site: https://feitopelolucas.com.br/previa/belloespaco/
+> Tem uma calculadora em que a cliente coloca quando fez a última progressiva e já pede o horário do retoque no seu WhatsApp. Também vi que ainda existe o perfil antigo da Donna da Beleza no mesmo endereço; posso ajudar a organizar isso. Se gostar, a gente conversa!
