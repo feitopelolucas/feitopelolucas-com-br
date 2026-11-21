@@ -358,3 +358,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Olá, Giva! Sou o Lucas, faço sites aqui em Campinas. Vi que a Borracharia Chapadão tem 4,9 no Google com 180 avaliações, e todo mundo fala do preço justo e da honestidade. Montei uma ideia de site: https://feitopelolucas.com.br/previa/borrachariachapadao/
 > O cliente escolhe a medida do pneu e já te pergunta no WhatsApp se tem e quanto está. Tem também o horário com aviso de aberto agora e o mapa. Se gostar, a gente conversa!
+
+---
+
+## 39. Pet São Francisco · /previa/petsaofrancisco/
+
+**Pelo que vi:** Instagram ativo, **@petsaofranciscocampinas** (3,8 mil seguidores, com link agregador), e um segundo perfil para o **hotel** (@petsaofranciscohotel, na divisa entre Campinas e Valinhos). Não tem site. Tem 4,7 no Google com 175 avaliações. WhatsApp (19) 99206-6111. Abre de segunda a sexta, das 8h às 18h, e sábado das 8h30 às 16h30. Serviços: banho e tosa com "atendimento humanizado", creche (day care), consultório veterinário, rações, medicamentos (vendem também pelo iFood) e táxi dog. **Atenção:** há avaliação negativa sobre tosa e sobre o atendimento eletrônico pelo WhatsApp. Usei fotos reais do Google (creche, banho, tosa e fachada amarela de bolinhas); muitas artes do Instagram usam fotos de banco. O site tem agendamento com serviço, porte, táxi dog e nome do pet, mandando tudo no WhatsApp.
+**Por onde mandar:** WhatsApp (19) 99206-6111 ou direct do Instagram.
+
+> Oi, pessoal do Pet São Francisco! Sou o Lucas, faço sites aqui em Campinas. Adoro o cuidado de vocês com o atendimento humanizado; dá para ver nas fotos da creche e nas 175 avaliações do Google. Montei uma ideia de site: https://feitopelolucas.com.br/previa/petsaofrancisco/
+> O tutor escolhe o serviço, o porte e se quer táxi dog e manda o pedido de horário pronto no WhatsApp. Tem também a creche em destaque e o link para o hotel. Se gostarem, a gente conversa!
