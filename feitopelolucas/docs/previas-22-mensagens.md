@@ -156,3 +156,12 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 > Oi, Cláudio e Karina! Sou o Lucas, faço sites aqui em Campinas. Li no Google que vocês avisam o cliente quando a ração do pet está acabando. Isso é ouro e merece estar num site! Montei uma ideia: https://feitopelolucas.com.br/previa/aquiobichopega/
 > Tem uma calculadora em que o cliente coloca o pacote e quanto o pet come, vê quando vai acabar e já pede para vocês lembrarem pelo WhatsApp. Também tem entrega, os bichos que vocês atendem e os horários. Se gostarem, a gente conversa!
 
+---
+
+## 18. GL Reparações Automobilísticas · /previa/glreparacoes/
+
+**Pelo que vi:** o Instagram do Google (@glreparacoesauto) não abre mais. O nome no Google já diz tudo: funilaria, estética automotiva, guincho, atende seguradoras e é credenciada ProAuto. A faixa da fachada (foto do Maps) anuncia **"parcelamos sua franquia em 12x sem juros"**. WhatsApp no fixo (19) 3367-5800. As avaliações destacam o dono conversando pessoalmente e a entrega antes do prazo. Funciona de segunda a sexta, com pausa no almoço.
+
+> Olá, pessoal da GL! Sou o Lucas, faço sites aqui em Campinas. Vi que o Instagram que aparece no Google de vocês não abre mais. Com nota 4,9 e quase 200 avaliações, falta só um lugar para o cliente chegar. Montei uma ideia de site: https://feitopelolucas.com.br/previa/glreparacoes/
+> Tem o passo a passo do guincho até a entrega, a parte de seguradora e ProAuto, a franquia em 12x em destaque, fotos de antes e depois e o orçamento por foto no WhatsApp. Se gostarem, a gente conversa!
+
