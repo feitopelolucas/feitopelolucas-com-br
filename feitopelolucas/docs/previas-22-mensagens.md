@@ -93,3 +93,12 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 > Oi, pessoal do Cidão! Sou o Lucas, faço sites aqui em Campinas. Vi na faixa da loja o endereço cidaoborracharia.com.br, mas o site ainda está com o texto de exemplo do modelo ("Isto é um subtítulo..."). Montei uma ideia de como ele poderia ficar: https://feitopelolucas.com.br/previa/cidao/
 > Tem o "aberto agora" (o domingo aberto é ouro para quem fura pneu), os veículos que vocês atendem, os serviços, a prateleira de seminovos e os quase 50 anos de história. Se gostarem, dá até para usar o mesmo endereço. A gente conversa!
 
+---
+
+## 11. Titan Estética Automotiva · /previa/titan/
+
+**Pelo que vi:** só Instagram (1 mil seguidores). A bio fala em especialista em polimento, leva e traz e agendamento pelo WhatsApp (19) 98835-4573. Faz polimento técnico cristalizado, higienização, lavagem de motor, farol e enceramento, também em motos. O saquinho de lixo rosa ou azul com a marca aparece nas avaliações. O Google marca como empresa de empreendedoras.
+
+> Oi, pessoal da Titan! Sou o Lucas, faço sites aqui em Campinas. Vi que vocês agendam tudo pelo WhatsApp e têm 300 avaliações no Google, mas não têm um site para quem procura "lava-rápido" ou "polimento" na região. Montei uma ideia: https://feitopelolucas.com.br/previa/titan/
+> O cliente marca os serviços que quer (lavagem, higienização, polimento, leva e traz…) e a mensagem chega pronta no WhatsApp de vocês. Até o lixinho rosa ganhou destaque, rs. Se curtirem, me chama!
+
