@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Pão do Bosque · Padaria de bairro desde 1998 em Campinas</title>
+<meta name="description" content="Prévia de site para a Pão do Bosque, padaria no Bosque, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/paodobosque/">
+<meta property="og:title" content="Prévia de site · Pão do Bosque">
+<meta property="og:description" content="Padaria de bairro desde 1998, com café da manhã, lanche de pernil e feijoada na sexta. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/paodobosque/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#9d5158">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--rosa:#9d5158;--rosa-2:#7f3d44;--rosa-cl:#f3dfdc;--creme:#fbf6ef;--trigo:#d9a55b;--cafe:#3b2a24;--cafe-2:#6b574d;--fio:#eadbcf;--salvia:#5f7a64}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--creme);color:var(--cafe);font:17px/1.65 "Nunito Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:700;line-height:1.08;margin:0;letter-spacing:-.01em}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--trigo);outline-offset:3px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  .wrap>*{min-width:0}
+
+  .previa{background:var(--cafe);color:#d8c8bd;font-size:.8125rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--trigo);font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .topo{background:var(--creme);border-bottom:1px solid var(--fio);position:sticky;top:0;z-index:20}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:72px}
+  .marca{text-decoration:none;display:flex;align-items:center;gap:10px}
+  .marca svg{width:40px;height:40px;color:var(--rosa);flex:none}
+  .marca b{font:800 1.3rem/1 "Fraunces",serif;display:block}
+  .marca small{font-size:.8125rem;color:var(--cafe-2);font-weight:700}
+  .topo nav{display:flex;gap:22px;font-weight:700;color:var(--cafe-2)}
+  .topo nav a{text-decoration:none}
+  .topo nav a:hover{color:var(--rosa)}
+  @media (max-width:860px){.topo nav{display:none}}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:12px 22px;border-radius:999px;font-weight:800;text-decoration:none;font-size:1rem;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn.rosa{background:var(--rosa);color:#fff}
+  .btn.rosa:hover{background:var(--rosa-2)}
+  .btn.linha{border:2px solid var(--cafe);color:var(--cafe)}
+  .btn.peq{min-height:44px;padding:8px 16px;font-size:.94rem}
+
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding-top:56px;padding-bottom:70px}
+  .desde{display:inline-block;font-weight:800;color:var(--rosa);letter-spacing:.14em;text-transform:uppercase;font-size:.8125rem;border-bottom:2px solid var(--trigo);padding-bottom:4px}
+  .hero h1{font-size:clamp(2.4rem,5.4vw,4rem);margin:18px 0 16px}
+  .hero h1 em{font-style:italic;color:var(--rosa)}
+  .hero p{font-size:1.14rem;color:var(--cafe-2);max-width:30em;margin:0 0 26px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .agora{display:flex;align-items:center;gap:10px;margin-top:24px;font-weight:700;color:var(--cafe-2)}
+  .agora i{width:11px;height:11px;border-radius:50%;background:#bbb;flex:none}
+  .agora.sim i{background:#3e9a5c;box-shadow:0 0 0 5px rgba(62,154,92,.18)}
+  .casinha{position:relative}
+  .casinha img{width:100%;aspect-ratio:4/3.3;object-fit:cover;border-radius:220px 220px 18px 18px;border:10px solid #fff;box-shadow:0 30px 60px -34px rgba(59,42,36,.6)}
+  .casinha .tag{position:absolute;right:-6px;bottom:28px;background:var(--rosa);color:#fff;border-radius:14px;padding:12px 16px;font-weight:800;line-height:1.3;max-width:220px;box-shadow:0 14px 30px -14px rgba(0,0,0,.45)}
+  .casinha .tag b{font:800 1.5rem "Fraunces",serif;display:block}
+  @media (max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:32px}.casinha .tag{right:10px}}
+
+  section{padding:84px 0}
+  .tit{max-width:640px;margin-bottom:36px}
+  .tit small{font-weight:800;color:var(--rosa);letter-spacing:.14em;text-transform:uppercase;font-size:.8125rem}
+  .tit h2{font-size:clamp(1.9rem,4.2vw,2.8rem);margin-top:8px}
+  .tit p{color:var(--cafe-2);margin:12px 0 0}
+
+  /* Hoje */
+  .hoje-box{background:var(--rosa);color:#fff}
+  .hoje-box .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:26px;align-items:center;padding-top:28px;padding-bottom:28px}
+  .hoje-box .dia{font:800 1.05rem "Fraunces",serif;background:#fff;color:var(--rosa);border-radius:12px;padding:12px 16px;text-align:center;line-height:1.1}
+  .hoje-box .dia span{display:block;font:800 .8125rem "Nunito Sans",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--cafe-2)}
+  .hoje-box h2{font-size:1.6rem}
+  .hoje-box p{margin:4px 0 0;color:#f8e6e3}
+  .hoje-box .btn{background:var(--creme);color:var(--rosa)}
+  @media (max-width:760px){.hoje-box .wrap{grid-template-columns:1fr;gap:14px}.hoje-box .dia{justify-self:start}}
+
+  /* Do balcão */
+  .grade{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .card{background:#fff;border:1px solid var(--fio);border-radius:18px;overflow:hidden}
+  .card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+  .card div{padding:16px 18px 20px}
+  .card h3{font-size:1.3rem;margin-bottom:4px}
+  .card p{margin:0;color:var(--cafe-2);font-size:.95rem}
+  @media (max-width:900px){.grade{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.grade{gap:12px}.card div{padding:12px 12px 14px}.card h3{font-size:1.08rem}.card p{font-size:.875rem}}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .chips span{background:var(--rosa-cl);color:var(--rosa-2);font-weight:800;border-radius:999px;padding:7px 14px;font-size:.92rem}
+
+  /* Hotel */
+  .hotel{background:#fff;border-top:1px solid var(--fio);border-bottom:1px solid var(--fio)}
+  .hotel .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:46px;align-items:center}
+  .hotel img{border-radius:18px;width:100%;aspect-ratio:1;object-fit:cover}
+  .passos{list-style:none;margin:20px 0 0;padding:0}
+  .passos li{display:flex;gap:14px;padding:12px 0;border-bottom:1px dashed var(--fio)}
+  .passos b{font:800 1.3rem "Fraunces",serif;color:var(--trigo);min-width:30px}
+  @media (max-width:880px){.hotel .wrap{grid-template-columns:1fr}.hotel img{aspect-ratio:4/3}}
+
+  /* Equipe e avaliações */
+  .gente .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:46px;align-items:start}
+  .gente figure{margin:0}
+  .gente figure img{border-radius:18px;width:100%;aspect-ratio:3/4;object-fit:cover}
+  .gente figcaption{font-size:.9rem;color:var(--cafe-2);margin-top:8px}
+  .falas{display:grid;gap:16px}
+  .falas blockquote{margin:0;background:#fff;border:1px solid var(--fio);border-left:5px solid var(--trigo);border-radius:14px;padding:20px 22px;font:500 1.12rem/1.5 "Fraunces",serif}
+  .falas cite{display:block;margin-top:8px;font:800 .875rem "Nunito Sans",sans-serif;font-style:normal;color:var(--cafe-2)}
+  @media (max-width:880px){.gente .wrap{grid-template-columns:1fr}.gente figure img{aspect-ratio:4/3}}
+
+  /* Visite */
+  .visite{background:var(--cafe);color:#e9ddd4}
+  .visite .tit h2{color:#fff}
+  .visite .tit small{color:var(--trigo)}
+  .visite .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+  .horas{width:100%;border-collapse:collapse;margin-bottom:18px}
+  .horas td{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+  .horas td:last-child{text-align:right;font-weight:800;color:#fff}
+  .horas tr.hoje td{color:var(--trigo)}
+  .end{margin:0 0 6px}
+  .end b{color:#fff}
+  .end a{white-space:nowrap}
+  .extras{color:#cbb9ad;font-size:.95rem;margin:0 0 22px}
+  .visite .btn.linha{border-color:#fff;color:#fff}
+  .mapa{border-radius:16px;overflow:hidden;min-height:420px;background:#2c1f1a}
+  .mapa iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+  @media (max-width:880px){.visite .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:#2a1e19;color:#b6a397;padding:24px 0 100px;font-size:.875rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--trigo);font-weight:700;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 12px 26px -10px rgba(0,0,0,.5);transition:opacity .3s,transform .3s}
+  .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
+  @media (min-width:861px){footer{padding-bottom:24px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial da Pão do Bosque. É uma ideia de site montada por Lucas para apresentar à padaria.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20da%20P%C3%A3o%20do%20Bosque%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Pão do Bosque, início"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 22c0-8 7-13 15-13s15 5 15 13v6a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3z"/><path d="M13 15l3 6M20 13v7M27 15l-3 6"/></svg><span><b>Pão do Bosque</b><small>padaria desde 1998</small></span></a>
+    <nav aria-label="Seções">
+      <a href="#balcao">Do balcão</a>
+      <a href="#cafe">Café da manhã</a>
+      <a href="#gente">A gente</a>
+      <a href="#visite">Visite</a>
+    </nav>
+    <a class="btn rosa peq zap" href="https://wa.me/5519998678130">WhatsApp</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="desde">Bosque · Campinas · desde 1998</span>
+        <h1 id="titulo">A padaria com <em>jeito de interior</em> no meio do Bosque.</h1>
+        <p>Pão quentinho desde as 6h30, café passado, pão de queijo, lanche de pernil e almoço caseiro, com feijoada na sexta. Tem estacionamento grátis na frente e atendimento que chama o cliente pelo nome.</p>
+        <div class="acoes">
+          <a class="btn rosa zap" href="https://wa.me/5519998678130?text=Ol%C3%A1%2C%20P%C3%A3o%20do%20Bosque%21"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>Fazer pedido</a>
+          <a class="btn linha" href="#balcao">Ver o balcão</a>
+        </div>
+        <p class="agora" id="agora"><i aria-hidden="true"></i><span id="agora-t">Seg a sáb 6h30 às 20h · dom 7h às 13h</span></p>
+      </div>
+      <div class="casinha">
+        <img src="fotos/fachada.jpg" alt="Fachada rosa da Pão do Bosque, com telhado de casinha e vitrine" width="1200" height="900">
+        <div class="tag"><b>4,6 ★</b>1.687 avaliações no Google</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hoje-box" role="note">
+    <div class="wrap">
+      <div class="dia" id="hoje-dia"><span>Hoje</span>no Bosque</div>
+      <div><h2 id="hoje-t">Almoço caseiro todo dia</h2><p id="hoje-p">E na sexta-feira tem feijoada, com aquele sabor caprichado para começar o fim de semana.</p></div>
+      <a class="btn zap" href="https://wa.me/5519998678130?text=Ol%C3%A1%21%20Qual%20%C3%A9%20o%20almo%C3%A7o%20de%20hoje%3F">Perguntar o almoço</a>
+    </div>
+  </div>
+
+  <section id="balcao" aria-labelledby="t-balcao">
+    <div class="wrap">
+      <div class="tit"><small>Do balcão</small><h2 id="t-balcao">Muita opção, do pão à torta</h2><p>Doces, salgados, pães, tortas, bolos, cafés e comida, como resumem os clientes no Google.</p></div>
+      <div class="grade">
+        <article class="card"><img src="fotos/rocambole.jpg" alt="Rocamboles com morango na vitrine" loading="lazy" width="1200" height="675"><div><h3>Doces da vitrine</h3><p>Rocambole, tortas e o que sair do forno no dia.</p></div></article>
+        <article class="card"><img src="fotos/ig-bolo.jpg" alt="Bolo de chocolate coberto com morangos" loading="lazy" width="360" height="640"><div><h3>Bolos</h3><p>Inteiros ou na fatia, para levar.</p></div></article>
+        <article class="card"><img src="fotos/ig-doces.jpg" alt="Pães doces com cobertura de chocolate" loading="lazy" width="360" height="640"><div><h3>Pães doces</h3><p>E broas, quando é época.</p></div></article>
+        <article class="card"><img src="fotos/cappuccino.jpg" alt="Cappuccino com canela e lanche na mão" loading="lazy" width="900" height="1200"><div><h3>Lanches</h3><p>O lanche de pernil é um dos mais citados.</p></div></article>
+      </div>
+      <div class="chips"><span>Pão de queijo</span><span>Pernil pururuca</span><span>Caldos e sopas</span><span>Salgados</span><span>Feijoada de sexta</span><span>Delivery e retirada</span></div>
+    </div>
+  </section>
+
+  <section class="hotel" id="cafe" aria-labelledby="t-cafe">
+    <div class="wrap">
+      <img src="fotos/cafe-omelete.jpg" alt="Café da manhã no balcão da padaria" loading="lazy" width="1200" height="900">
+      <div>
+        <div class="tit" style="margin-bottom:6px"><small>Café da manhã</small><h2 id="t-cafe">Hospedado no Bosque? Desce para tomar café aqui.</h2></div>
+        <p>Tem cliente de hotel da região que diz que não compensa tomar café no hotel tendo a Pão do Bosque ali pertinho. A partir das 6h30 já tem pão quente, café e a vitrine cheia.</p>
+        <ol class="passos">
+          <li><b>1</b><span>Chegue a partir das 6h30 (no domingo, das 7h).</span></li>
+          <li><b>2</b><span>Escolha no balcão: pão na chapa, pão de queijo, omelete, doces.</span></li>
+          <li><b>3</b><span>Sente com calma. O lugar é pequeno, acolhedor e silencioso de manhã.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="gente" id="gente" aria-labelledby="t-gente">
+    <div class="wrap">
+      <figure><img src="fotos/ig-equipe.jpg" alt="Equipe da Pão do Bosque de avental, comemorando na festa junina da padaria" loading="lazy" width="360" height="640"><figcaption>A equipe na festa junina da padaria.</figcaption></figure>
+      <div>
+        <div class="tit"><small>A gente do Bosque</small><h2 id="t-gente">Atendimento que faz voltar</h2></div>
+        <div class="falas">
+          <blockquote>Padaria no estilo acolhedor. Cardápio completo e variado, com ótima opção de doces e pães. Excelente atendimento.<cite>Lucca · Google</cite></blockquote>
+          <blockquote>Local pequeno, acolhedor e com ares de cidade do interior. Comida muito bem feitinha e preços justos.<cite>Edson · Google</cite></blockquote>
+          <blockquote>Ambiente muito aconchegante. Todos os funcionários simpáticos e, principalmente, o café é muito bom.<cite>Rafael · Google</cite></blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visite" id="visite" aria-labelledby="t-visite">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:18px"><small>Visite</small><h2 id="t-visite">Na Uruguaiana, no Bosque</h2></div>
+        <table class="horas" id="horas">
+          <tr data-d="1"><td>Segunda</td><td>6h30 às 20h</td></tr>
+          <tr data-d="2"><td>Terça</td><td>6h30 às 20h</td></tr>
+          <tr data-d="3"><td>Quarta</td><td>6h30 às 20h</td></tr>
+          <tr data-d="4"><td>Quinta</td><td>6h30 às 20h</td></tr>
+          <tr data-d="5"><td>Sexta</td><td>6h30 às 20h</td></tr>
+          <tr data-d="6"><td>Sábado</td><td>6h30 às 20h</td></tr>
+          <tr data-d="0"><td>Domingo</td><td>7h às 13h</td></tr>
+        </table>
+        <p class="end"><b>R. Uruguaiana, 531</b> · Bosque, Campinas (SP)<br>Telefone <a href="tel:+551932341150" style="color:#fff;font-weight:800">(19) 3234-1150</a> · WhatsApp <a class="zap" href="https://wa.me/5519998678130" style="color:#fff;font-weight:800">(19) 99867-8130</a></p>
+        <p class="extras">Estacionamento grátis em frente · entrada e banheiro acessíveis · aceita cartão, aproximação e Pluxee</p>
+        <div class="acoes">
+          <a class="btn rosa" href="https://www.google.com/maps/dir/?api=1&amp;destination=P%C3%A3o+do+Bosque,+R.+Uruguaiana,+531,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn linha" href="https://www.instagram.com/padariapaodobosque/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Pão do Bosque, R. Uruguaiana, 531, Bosque, Campinas" src="https://www.google.com/maps?q=P%C3%A3o+do+Bosque,+R.+Uruguaiana,+531+-+Bosque,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Pão do Bosque · Bosque, Campinas · desde 1998</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn rosa fixo some zap" href="https://wa.me/5519998678130" aria-label="Chamar no WhatsApp">WhatsApp</a>
+
+<script>
+(function () {
+  document.querySelectorAll(".zap").forEach(function(a){a.target="_blank";a.rel="noopener";});
+  try {
+    var p = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+    var g = function(t){return (p.find(function(x){return x.type===t})||{}).value};
+    var d = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"));
+    var h = (parseInt(g("hour"),10)%24) + parseInt(g("minute"),10)/60;
+    var tr = document.querySelector('#horas tr[data-d="'+d+'"]'); if (tr) tr.classList.add("hoje");
+    var ab = d===0 ? 7 : 6.5, fe = d===0 ? 13 : 20, abT = d===0 ? "7h" : "6h30", feT = d===0 ? "13h" : "20h";
+    var a = document.getElementById("agora"), t = document.getElementById("agora-t");
+    if (h>=ab && h<fe) { a.classList.add("sim"); t.textContent = "Aberta agora, até as " + feT; }
+    else if (h<ab) t.textContent = "Abre hoje às " + abT;
+    else t.textContent = "Fechada agora · abre amanhã às " + (d===6 ? "7h" : "6h30");
+    var nomes = ["Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado"];
+    document.getElementById("hoje-dia").innerHTML = "<span>Hoje</span>" + nomes[d];
+    if (d===5) { document.getElementById("hoje-t").textContent = "Hoje tem feijoada"; document.getElementById("hoje-p").textContent = "Sexta é dia de feijoada caprichada no Pão do Bosque. Vem cedo ou pede para retirar."; }
+    else if (d===0) { document.getElementById("hoje-t").textContent = "Domingo até as 13h"; document.getElementById("hoje-p").textContent = "Dá tempo do pão quentinho e do café da manhã sem pressa."; }
+  } catch (e) {}
+  var f = document.querySelector(".fixo"), t2 = document.querySelector(".hero");
+  if (f && t2 && "IntersectionObserver" in window) new IntersectionObserver(function(e){f.classList.toggle("some", e[0].isIntersecting)}).observe(t2);
+})();
+</script>
+</body>
+</html>
