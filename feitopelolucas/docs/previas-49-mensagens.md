@@ -270,3 +270,19 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, Nalva! Sou o Lucas, faço sites aqui em Campinas. Vi que o Açaí da Nalva tem 4,8 no Google e que aí os complementos são à vontade, sem pagar a mais. Isso é um baita diferencial e merece aparecer! Montei uma ideia de site: https://feitopelolucas.com.br/previa/acaidanalva/
 > O cliente monta o açaí, vê que os complementos saem R$ 0,00 e manda o pedido pronto no seu WhatsApp para retirar. Também notei que o endereço do Google está diferente do Instagram; dá para acertar isso junto. Se gostar, a gente conversa!
+
+---
+
+## 29. Pastelaria Yamada · pulado
+
+**Por que pulei:** a marca já tem site próprio (pastelariayamada.com.br) e essa unidade aparece na lista de lojas de lá. Não faz sentido oferecer uma prévia.
+
+---
+
+## 30. Pastel do Gutão · /previa/pasteldogutao/
+
+**Pelo que vi:** Instagram **@pasteldogutao** (620 seguidores) e Facebook (1,2 mil), sem site. Abriu em **2002**. Tem 4,9 no Google com 198 avaliações, e o **vinagrete** é o item mais elogiado. Recomendam muito o de milho com catupiry. Delivery pelo Anota AI (pedido.anota.ai/loja/pastel-do-gutao), com cardápio completo e preços, que usei no site. **Atenção ao horário:** a bio diz segunda a sexta das 8h às 22h e sábado das 18h30 às 22h30, mas o Google mostra abertura às 18h30 e movimento das 18h às 23h. No site pus "à noite, até as 22h" para dias úteis; vale confirmar. O site tem o cardápio com sacola, que soma o total e manda o pedido no WhatsApp (19) 99161-2817 já pedindo o vinagrete.
+**Por onde mandar:** WhatsApp (19) 99161-2817.
+
+> Oi, Gutão! Sou o Lucas, faço sites aqui em Campinas. Vi que o pastel de vocês tem 4,9 no Google com quase 200 avaliações, e todo mundo fala do vinagrete! Montei uma ideia de site: https://feitopelolucas.com.br/previa/pasteldogutao/
+> O cliente escolhe os pastéis no cardápio, vê o total e manda o pedido pronto no WhatsApp de vocês. Tem também a história desde 2002 e o mapa. Se gostarem, a gente conversa!
