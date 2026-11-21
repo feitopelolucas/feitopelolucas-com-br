@@ -220,3 +220,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, pessoal da Spasso Pet! Sou o Lucas, faço sites aqui em Campinas. Vocês têm 4,9 no Google com mais de 220 avaliações, muitas falando do Dr. Jaime e da tosa de Spitz e gatos peludos. Montei uma ideia de site para a clínica: https://feitopelolucas.com.br/previa/spassopet/
 > Tem a parte da clínica e a do banho e tosa, o horário com aviso de aberta agora e o botão de agendar no WhatsApp de vocês. Se gostarem, a gente conversa!
+
+---
+
+## 24. Natan Casa de Carnes · /previa/natancarnes/
+
+**Pelo que vi:** sem site e **sem Instagram**. Cuidado: o @natancasadecarnes é de outra Natan, em Sombrio (SC). Só o fixo (19) 3278-3804. Segunda a sábado das 7h às 18h30 e domingo das 7h às 12h40. Clientes há mais de 30 anos ("desde a minha avó"), carnes fracionadas e temperadas, higiene e indicação de preparo. Só achei 2 fotos no Google, então o site é mais tipográfico e tem uma **calculadora de churrasco** (adultos, crianças e apetite) com a lista pronta para ligar ou copiar.
+**Por onde mandar:** ligar no (19) 3278-3804 ou pessoalmente (não achei WhatsApp).
+
+> Olá, pessoal da Natan! Sou o Lucas, faço sites aqui em Campinas. Vi que a Natan tem 4,8 no Google e clientes que compram aí há mais de 30 anos. Montei uma ideia de site para o açougue: https://feitopelolucas.com.br/previa/natancarnes/
+> Tem o horário com aviso de aberto agora, os cortes e uma calculadora de churrasco que diz quantos quilos levar para a turma. Também dá para colocar um WhatsApp de encomendas. Se gostarem, a gente conversa!
