@@ -82,7 +82,7 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 **Pelo que vi:** o link do Instagram no Google leva a um perfil que não existe mais. O letreiro da loja (foto do Maps) diz "desde 1997, pioneiro em restauração de faróis" e traz o WhatsApp (19) 99370-6179. Também vende acessórios: calotas, lâmpadas, cabos. No Maps tem um antes e depois de uma Hilux. As avaliações elogiam o preço justo e a honestidade ("não querem só vender").
 
 > Olá, pessoal da Auto House! Sou o Lucas, faço sites aqui em Campinas. Vi que o Instagram que aparece no Google de vocês não abre mais, então quem procura "restauração de farol" fica sem ter onde clicar. Montei uma ideia de site: https://feitopelolucas.com.br/previa/autohouse/
-> Tem uma simulação do farol amarelado contra o restaurado, o antes e depois da Hilux, orçamento por foto no WhatsApp e os 28 anos de loja em destaque. Se gostarem, a gente conversa!
+> Tem uma simulação do farol amarelado contra o restaurado, o antes e depois da Hilux, orçamento por foto no WhatsApp e os 29 anos de loja em destaque. Se gostarem, a gente conversa!
 
 ---
 
@@ -136,5 +136,14 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 **Pelo que vi:** Instagram fraco (427 seguidores, parado desde 2025), mas com fotos de comida muito boas. A bio diz "desde 1998, restaurante e boteco raiz". Têm uma página de links (bio.site) com iFood, WhatsApp e um **cardápio em PDF no Google Drive**, com mais de 20 caldos (preço de mesa, viagem 500 ml e 1 L), lanches e boca de anjo. Passei os caldos com os preços para o site, com um botão que troca o tamanho. Não achei o horário de todos os dias; as avaliações dizem que abre às 9h e "fecha às 22h em ponto". Vale confirmar os dias.
 
 > Oi, pessoal do Céu Azul! Sou o Lucas, faço sites aqui em Campinas. Vi que o cardápio de vocês está num PDF do Drive. É bem completo, mas difícil de ler no celular. Montei uma ideia de site: https://feitopelolucas.com.br/previa/ceuazul/
-> Os caldos estão em lista, com o preço de mesa, 500 ml e 1 L num toque, e tem os veganos, a boca de anjo, o almoço e o botão do iFood. São 27 anos de bar (desde 1998!), e isso merece aparecer no Google. Se gostarem, a gente conversa!
+> Os caldos estão em lista, com o preço de mesa, 500 ml e 1 L num toque, e tem os veganos, a boca de anjo, o almoço e o botão do iFood. São 28 anos de bar (desde 1998!), e isso merece aparecer no Google. Se gostarem, a gente conversa!
+
+---
+
+## 16. Studio Expresso Divas · /previa/expressodivas/
+
+**Pelo que vi:** nota 5,0 com 210 avaliações. Instagram com 1,6 mil seguidores. A bio cita a dona, **Lucélia Arcanjo**, que tem um **curso de especialização em extensão de cílios**, e um destaque "EPTV" (já apareceu na TV). Agenda pelo WhatsApp (19) 99296-0354. A fachada é verde neon, e usei essa cor no site. As avaliações citam a Luzia (unhas) e a Lucélia (sobrancelha). Funciona de terça a sábado (sábado até 14h). Não pus detalhes do curso (duração, certificado) porque não achei; o site manda perguntar pelo WhatsApp.
+
+> Oi, Lucélia! Sou o Lucas, faço sites aqui em Campinas. O Expresso Divas tem nota 5,0 com mais de 200 avaliações (isso é raríssimo!) e ainda não tem site. Montei uma ideia com a cara do studio, com o verde da fachada: https://feitopelolucas.com.br/previa/expressodivas/
+> Tem os serviços com fotos de vocês, uma parte só para o curso de extensão de cílios (para captar alunas), as avaliações e o agendamento pelo WhatsApp. Se gostar, a gente conversa!
 
