@@ -210,3 +210,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, Silvana! Sou o Lucas, faço sites aqui em Campinas. Vi que a SilFér Cake tem nota 5,0 no Google com mais de 230 avaliações, e todo mundo elogia a embalagem e o capricho. Montei uma ideia de site para você: https://feitopelolucas.com.br/previa/silfercake/
 > O cliente escolhe o tipo de bolo e a cor, digita a frase e vê na hora como fica no bentinho. Depois manda o pedido pronto no seu WhatsApp. Se gostar, a gente conversa!
+
+---
+
+## 23. Spasso Pet · /previa/spassopet/
+
+**Pelo que vi:** clínica veterinária com banho e tosa, há mais de 12 anos no Jardim do Lago. Instagram **@spasso.pet** (1,9 mil seguidores), com agendamento por WhatsApp (link curto wa.me/message na bio), sem site. Terça a sexta das 8h às 18h e sábado das 8h às 16h; fechado domingo e segunda. Telefone (19) 3304-2004. Avaliações citam o **Dr. Jaime** e a experiência na tosa de Spitz Alemão e gatos peludos. Os botões de agendar usam o link de WhatsApp da bio deles. As artes do Instagram parecem feitas com IA, então só usei fotos reais do Google.
+**Por onde mandar:** WhatsApp pelo link da bio do Instagram, ou ligar no (19) 3304-2004.
+
+> Oi, pessoal da Spasso Pet! Sou o Lucas, faço sites aqui em Campinas. Vocês têm 4,9 no Google com mais de 220 avaliações, muitas falando do Dr. Jaime e da tosa de Spitz e gatos peludos. Montei uma ideia de site para a clínica: https://feitopelolucas.com.br/previa/spassopet/
+> Tem a parte da clínica e a do banho e tosa, o horário com aviso de aberta agora e o botão de agendar no WhatsApp de vocês. Se gostarem, a gente conversa!
