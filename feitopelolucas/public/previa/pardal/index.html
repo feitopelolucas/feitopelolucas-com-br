@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Pardal Panificadora · Vila Pompéia, Campinas</title>
+<meta name="description" content="Prévia de site para a Pardal Panificadora, na Vila Pompéia, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/pardal/">
+<meta property="og:title" content="Prévia de site · Pardal Panificadora">
+<meta property="og:description" content="Café, pão na chapa e flores na mesa na Vila Pompéia. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/pardal/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#c8102e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23c8102e'/%3E%3Cpath d='M8 19c3-6 9-8 15-5l3-2-1 4c-3 5-10 6-17 3Z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cereja:#c8102e; --cereja-esc:#9e1027; --rosa:#fde8e4; --papel:#fffdf8; --leite:#f7f0e6;
+    --cafe:#3a2620; --cafe-2:#6d554b; --fio:#eadfd2; --mostarda:#f2b33d;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--papel);color:var(--cafe);font:17px/1.6 "Figtree",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Young Serif",Georgia,serif;font-weight:400;line-height:1.08;margin:0}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--mostarda);outline-offset:3px}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  .mao{font-family:"Caveat",cursive;font-weight:600}
+
+  .previa{background:var(--cafe);color:#efe3da;font-size:.82rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:#ffc2b5;font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .barra{border-bottom:1px solid var(--fio);background:var(--papel)}
+  .barra .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .logo svg{width:40px;height:40px}
+  .logo b{font:400 1.5rem/1 "Young Serif",serif;color:var(--cereja)}
+  .logo small{display:block;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cafe-2);font-weight:700;margin-top:3px}
+  .barra nav{display:flex;gap:24px;font-weight:600;font-size:.95rem}
+  .barra nav a{text-decoration:none;color:var(--cafe-2)}
+  .barra nav a:hover{color:var(--cereja)}
+  @media (max-width:900px){.barra nav{display:none}}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 22px;border-radius:999px;font-weight:700;text-decoration:none;transition:transform .15s,background .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn.verm{background:var(--cereja);color:#fff}
+  .btn.verm:hover{background:var(--cereja-esc)}
+  .btn.cont{border:2px solid var(--cafe);color:var(--cafe)}
+  .btn.peq{min-height:44px;padding:10px 18px;font-size:.92rem}
+
+  /* Abertura */
+  .abre{padding:64px 0 90px;position:relative;overflow:hidden}
+  .abre .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .abre .mao{font-size:1.8rem;color:var(--cereja);display:block;margin-bottom:6px;transform:rotate(-2deg);transform-origin:left}
+  .abre h1{font-size:clamp(2.7rem,6vw,4.6rem);letter-spacing:-.01em}
+  .abre h1 span{color:var(--cereja)}
+  .abre p{font-size:1.14rem;color:var(--cafe-2);margin:20px 0 30px;max-width:30em}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .selos{display:flex;gap:18px;flex-wrap:wrap;margin-top:34px;font-size:.92rem;color:var(--cafe-2)}
+  .selos b{color:var(--cafe);font-size:1.05rem}
+  .fotos{position:relative;height:540px}
+  .polar{position:absolute;background:#fff;padding:10px 10px 38px;box-shadow:0 18px 40px -18px rgba(58,38,32,.45);border-radius:3px}
+  .polar img{width:100%;height:100%!important;object-fit:cover}
+  .polar figcaption{position:absolute;left:0;right:0;bottom:6px;text-align:center;font:600 1.3rem "Caveat",cursive;color:var(--cafe-2)}
+  .polar::before{content:"";position:absolute;top:-12px;left:50%;width:90px;height:24px;margin-left:-45px;background:rgba(242,179,61,.55);transform:rotate(-3deg)}
+  .p1{width:58%;height:70%;left:0;top:4%;transform:rotate(-4deg)}
+  .p2{width:50%;height:56%;right:0;top:0;transform:rotate(3deg)}
+  .p3{width:52%;height:52%;right:6%;bottom:0;transform:rotate(-1.5deg)}
+
+  @media (max-width:900px){.abre{padding:40px 0 60px}.abre .wrap{grid-template-columns:1fr}.fotos{height:420px}}
+  @media (max-width:480px){.fotos{height:360px}}
+
+  section{padding:88px 0}
+  .tit{max-width:640px;margin-bottom:44px}
+  .tit .mao{font-size:1.6rem;color:var(--cereja);display:block}
+  .tit h2{font-size:clamp(2.1rem,4.4vw,3.1rem)}
+  .tit p{color:var(--cafe-2);margin:14px 0 0}
+
+  /* Casa */
+  .casa{background:var(--rosa)}
+  .casa .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+  .casa .lado{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .casa .lado img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:18px}
+  .casa .lado img:last-child{margin-top:44px}
+  .casa ul{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:14px}
+  .casa li{display:flex;gap:14px;align-items:flex-start}
+  .casa li i{flex:none;width:34px;height:34px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--cereja);font-style:normal;font-weight:800}
+  @media (max-width:900px){.casa .wrap{grid-template-columns:1fr}}
+
+  /* Forno */
+  .forno{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .forno article{background:#fff;border:1px solid var(--fio);border-radius:20px;overflow:hidden}
+  .forno img{width:100%;aspect-ratio:4/3;object-fit:cover}
+  .forno div{padding:18px 20px 20px}
+  .forno h3{font-size:1.35rem;margin-bottom:4px}
+  .forno p{margin:0;color:var(--cafe-2);font-size:.95rem}
+  @media (max-width:900px){.forno{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.forno{grid-template-columns:1fr}}
+
+  /* Kits */
+  .kits{background:var(--cereja);color:#fff;position:relative;overflow:hidden}
+  .kits .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+  .kits img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:24px;border:10px solid #fff;transform:rotate(-2deg)}
+  .kits .mao{font-size:1.7rem;color:#ffd7a8}
+  .kits h2{font-size:clamp(2.1rem,4.4vw,3.1rem)}
+  .kits p{color:#ffe4de}
+  .kits .btn{background:#fff;color:var(--cereja)}
+  .kits ol{padding-left:22px;margin:18px 0 28px;color:#ffe4de}
+  .kits li{margin:6px 0}
+  @media (max-width:900px){.kits .wrap{grid-template-columns:1fr}.kits img{max-width:420px}}
+
+  /* Entrega */
+  .entrega{padding:0}
+  .entrega .caixa{margin-top:-1px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;background:var(--leite);border-radius:0 0 24px 24px;padding:26px 32px}
+  .entrega b{font:400 1.4rem "Young Serif",serif}
+  .entrega span{color:var(--cafe-2)}
+  .apps{display:flex;gap:10px}
+  .apps em{font-style:normal;font-weight:800;padding:8px 16px;border-radius:999px;background:#fff;border:1px solid var(--fio);font-size:.9rem}
+
+  /* Avaliações */
+  .falas{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .falas blockquote{margin:0;background:#fff;border:1px solid var(--fio);border-radius:20px;padding:26px;font-size:1.06rem;position:relative}
+  .falas blockquote::before{content:"“";font:400 4rem/1 "Young Serif",serif;color:var(--cereja);display:block;height:34px}
+  .falas cite{display:block;margin-top:14px;font-style:normal;font-weight:700;font-size:.85rem;color:var(--cafe-2)}
+  .nota{display:inline-flex;gap:10px;align-items:center;background:var(--rosa);padding:8px 16px;border-radius:999px;font-weight:700;margin-top:16px}
+  .nota span{color:var(--mostarda);letter-spacing:2px}
+  @media (max-width:900px){.falas{grid-template-columns:1fr}}
+
+  /* Visita */
+  .visita{background:var(--leite)}
+  .visita .wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+  .cartao{background:#fff;border-radius:24px;padding:30px;border:1px solid var(--fio)}
+  .horas{width:100%;border-collapse:collapse;margin:8px 0 14px}
+  .horas td{padding:10px 0;border-bottom:1px dashed var(--fio)}
+  .horas td:last-child{text-align:right;font-weight:700}
+  .horas tr.hoje td{color:var(--cereja)}
+  .horas tr.hoje td:first-child::after{content:" · hoje";font-size:.85rem;font-weight:600}
+  .agora{display:inline-flex;align-items:center;gap:8px;font-weight:700;margin-bottom:6px}
+  .agora::before{content:"";width:10px;height:10px;border-radius:50%;background:#b9a99f}
+  .agora.sim::before{background:#2c9c58;box-shadow:0 0 0 4px rgba(44,156,88,.2)}
+  .contato{list-style:none;padding:0;margin:10px 0 24px}
+  .contato li{padding:10px 0;border-bottom:1px dashed var(--fio)}
+  .contato small{display:block;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cafe-2);font-weight:700}
+  .contato a{font-weight:700;text-decoration:none}
+  .mapa{grid-column:1/-1;border-radius:24px;overflow:hidden;border:1px solid var(--fio)}
+  .mapa iframe{width:100%;height:360px;border:0;display:block}
+  @media (max-width:900px){.visita .wrap{grid-template-columns:1fr}}
+
+  footer{padding:30px 0 100px;font-size:.9rem;color:var(--cafe-2)}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--cereja);font-weight:700;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 12px 26px -10px rgba(158,16,39,.7);transition:opacity .3s,transform .3s}
+  .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
+  @media (min-width:901px){footer{padding-bottom:30px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial da Pardal Panificadora. É uma ideia de site montada por Lucas para apresentar à padaria.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20da%20Pardal%20Panificadora%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<header class="barra">
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="Pardal Panificadora, início">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#c8102e"/><path d="M9 24c4-8 11-10 19-6l4-3-1 5c-4 6-13 8-22 4Z" fill="#fff"/><circle cx="26" cy="18.5" r="1.3" fill="#c8102e"/><path d="M15 27l-2 4M19 28l-1 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <span><b>Pardal</b><small>Panificadora</small></span>
+    </a>
+    <nav aria-label="Seções">
+      <a href="#casa">A casa</a>
+      <a href="#forno">Do forno</a>
+      <a href="#kits">Kits</a>
+      <a href="#visita">Horários</a>
+    </nav>
+    <a class="btn verm peq zap" href="https://wa.me/5519984401215">WhatsApp</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="abre" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="mao">bom dia, Vila Pompéia!</span>
+        <h1 id="titulo">Café passado, pão na chapa e <span>flor na mesa.</span></h1>
+        <p>A Pardal é a padaria do bairro onde as donas estão sempre por perto, as meninas do balcão sabem o seu pedido e o domingo começa com cappuccino.</p>
+        <div class="acoes">
+          <a class="btn verm zap" href="https://wa.me/5519984401215"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>Pedir pelo WhatsApp</a>
+          <a class="btn cont" href="#visita">Ver horários</a>
+        </div>
+        <div class="selos">
+          <span><b>4,7 ★</b> no Google</span>
+          <span><b>1.004</b> avaliações</span>
+          <span><b>Todo dia</b> a partir das 6h</span>
+        </div>
+      </div>
+      <div class="fotos" aria-hidden="true">
+        <figure class="polar p1"><img src="fotos/mesa-chapa.jpg" alt="" width="1100" height="1466"><figcaption>café de domingo</figcaption></figure>
+        <figure class="polar p2"><img src="fotos/flores.jpg" alt="" width="1100" height="1466"><figcaption>flor em toda mesa</figcaption></figure>
+        <figure class="polar p3"><img src="fotos/cafe-pastel.jpg" alt="" width="640" height="640"><figcaption>xícara da casa</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="casa" id="casa" aria-labelledby="t-casa">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:0">
+          <span class="mao">a casa</span>
+          <h2 id="t-casa">Padaria de bairro tocada por mulheres</h2>
+          <p>Quem vem uma vez repara nos detalhes: o salão limpo, as flores frescas em cada mesa e as donas atendendo junto com a equipe.</p>
+        </div>
+        <ul>
+          <li><i>1</i><span><b>Salão para sentar.</b> Mesas de madeira para o café da manhã sem pressa.</span></li>
+          <li><i>2</i><span><b>Preço justo.</b> Os clientes citam isso nas avaliações, junto com o sabor.</span></li>
+          <li><i>3</i><span><b>Todos são bem-vindos.</b> Lugar acolhedor para a comunidade LGBTQIA+.</span></li>
+        </ul>
+      </div>
+      <div class="lado">
+        <img src="fotos/salao.jpg" alt="Salão da Pardal com mesas de madeira, flores e parede de pastilhas" loading="lazy" width="1100" height="1466">
+        <img src="fotos/mesa-cafe.jpg" alt="Mesa com cappuccino, pão de queijo e pão na chapa" loading="lazy" width="1100" height="1466">
+      </div>
+    </div>
+  </section>
+
+  <section id="forno" aria-labelledby="t-forno">
+    <div class="wrap">
+      <div class="tit">
+        <span class="mao">do forno e do balcão</span>
+        <h2 id="t-forno">O que o pessoal mais pede</h2>
+        <p>Pão, doce e salgado feitos para o dia a dia. Pergunte o que está saindo agora pelo WhatsApp.</p>
+      </div>
+      <div class="forno">
+        <article><img src="fotos/pao-frances.jpg" alt="Pães franceses dourados" loading="lazy" width="543" height="543"><div><h3>Pãozinho francês</h3><p>Casquinha que estala, saindo em várias fornadas.</p></div></article>
+        <article><img src="fotos/cappuccino.jpg" alt="Cappuccino com desenho de flor e pães na chapa" loading="lazy" width="640" height="640"><div><h3>Cappuccino e pão na chapa</h3><p>A dupla do café de domingo, com requeijão se quiser.</p></div></article>
+        <article><img src="fotos/misto.jpg" alt="Misto quente com suco vermelho" loading="lazy" width="640" height="640"><div><h3>Misto quente e suco</h3><p>Lanche rápido no balcão ou na mesa.</p></div></article>
+        <article><img src="fotos/rosquinhas.jpg" alt="Rosquinhas fritas passadas no açúcar" loading="lazy" width="640" height="640"><div><h3>Rosquinhas</h3><p>Passadas no açúcar, do jeito de padaria antiga.</p></div></article>
+        <article><img src="fotos/quindim.jpg" alt="Bandeja de quindins amarelinhos" loading="lazy" width="640" height="640"><div><h3>Quindim</h3><p>Brilhante e amarelinho, um dos doces da vitrine.</p></div></article>
+        <article><img src="fotos/mesa-chapa.jpg" alt="Mesa com pães, sanduíche e cappuccino" loading="lazy" width="1100" height="1466"><div><h3>Café da manhã</h3><p>Pão de queijo, sanduíche e café para começar o dia.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="kits" id="kits" aria-labelledby="t-kits">
+    <div class="wrap">
+      <img src="fotos/kit.jpg" alt="Caixa de presente azul com bolo de chocolate, docinhos e bandeirinhas" loading="lazy" width="640" height="640">
+      <div>
+        <span class="mao">para presentear</span>
+        <h2 id="t-kits">Kits que chegam como um abraço</h2>
+        <p>Caixas montadas com bolo, doces e mimos para Dia das Mães, Dia dos Pais, aniversário ou só para agradecer alguém.</p>
+        <ol>
+          <li>Chame no WhatsApp e conte a ocasião.</li>
+          <li>A Pardal monta o kit e combina a data.</li>
+          <li>É só combinar a retirada e entregar a surpresa.</li>
+        </ol>
+        <a class="btn zap" href="https://wa.me/5519984401215?text=Ol%C3%A1%21%20Gostaria%20de%20encomendar%20um%20kit.">Encomendar um kit</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="entrega">
+    <div class="wrap">
+      <div class="caixa">
+        <div><b>Sem tempo de vir?</b><br><span>A Pardal também entrega pelos aplicativos.</span></div>
+        <div class="apps"><em>iFood</em><em>Rappi</em></div>
+      </div>
+    </div>
+  </div>
+
+  <section aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="tit">
+        <span class="mao">quem já veio</span>
+        <h2 id="t-aval">O que dizem da Pardal</h2>
+        <span class="nota"><span>★★★★★</span>4,7 · 1.004 avaliações no Google</span>
+      </div>
+      <div class="falas">
+        <blockquote>Uma das melhores padarias que já frequentei. Sempre tem flores na mesa e os detalhes tornam a experiência muito agradável.<cite>Katemann · Google</cite></blockquote>
+        <blockquote>As meninas que trabalham lá são uns amores, e os donos estão sempre presentes, o que passa confiança.<cite>Joana · Google</cite></blockquote>
+        <blockquote>Sempre vamos tomar café aos domingos. A comida é muito boa!<cite>Guilherme · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="visita" id="visita" aria-labelledby="t-visita">
+    <div class="wrap">
+      <div class="cartao">
+        <span class="agora" id="agora">Horários</span>
+        <h2 id="t-visita" style="font-size:2rem;margin-bottom:8px">Quando a Pardal está aberta</h2>
+        <table class="horas" id="horas">
+          <tr data-d="1"><td>Segunda</td><td>6h às 19h30</td></tr>
+          <tr data-d="2"><td>Terça</td><td>6h às 19h30</td></tr>
+          <tr data-d="3"><td>Quarta</td><td>6h às 19h30</td></tr>
+          <tr data-d="4"><td>Quinta</td><td>6h às 19h30</td></tr>
+          <tr data-d="5"><td>Sexta</td><td>6h às 19h30</td></tr>
+          <tr data-d="6"><td>Sábado</td><td>6h às 19h</td></tr>
+          <tr data-d="0"><td>Domingo</td><td>6h30 às 13h</td></tr>
+        </table>
+        <small style="color:var(--cafe-2)">Feriados podem ter horário diferente. Na dúvida, chame no WhatsApp.</small>
+      </div>
+      <div class="cartao">
+        <h2 style="font-size:2rem">Venha tomar um café</h2>
+        <ul class="contato">
+          <li><small>Endereço</small>R. Lorena, 60 · Vila Pompéia, Campinas (SP)</li>
+          <li><small>WhatsApp</small><a class="zap" href="https://wa.me/5519984401215">(19) 98440-1215</a></li>
+          <li><small>Telefone</small><a href="tel:+551933670679">(19) 3367-0679</a></li>
+          <li><small>Instagram</small><a href="https://www.instagram.com/pardal_panificadora/" target="_blank" rel="noopener">@pardal_panificadora</a></li>
+        </ul>
+        <a class="btn verm" href="https://www.google.com/maps/dir/?api=1&amp;destination=Pardal+Panificadora,+R.+Lorena,+60,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Pardal Panificadora, R. Lorena, 60, Vila Pompéia, Campinas" src="https://www.google.com/maps?q=Pardal+Panificadora,+R.+Lorena,+60+-+Vila+Pomp%C3%A9ia,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Pardal Panificadora · Vila Pompéia, Campinas</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn verm fixo some zap" href="https://wa.me/5519984401215" aria-label="Pedir pelo WhatsApp">WhatsApp</a>
+
+<script>
+(function () {
+  document.querySelectorAll(".zap").forEach(function(a){a.target="_blank";a.rel="noopener";});
+  var H = {0:[6.5,13],1:[6,19.5],2:[6,19.5],3:[6,19.5],4:[6,19.5],5:[6,19.5],6:[6,19]};
+  var fmt = function(h){var m=Math.round((h%1)*60);return Math.floor(h)+"h"+(m?m:"");};
+  try {
+    var p = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+    var g = function(t){return (p.find(function(x){return x.type===t})||{}).value};
+    var d = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"));
+    var h = (parseInt(g("hour"),10)%24) + parseInt(g("minute"),10)/60;
+    var tr = document.querySelector('#horas tr[data-d="'+d+'"]'); if (tr) tr.classList.add("hoje");
+    var a = document.getElementById("agora");
+    if (h >= H[d][0] && h < H[d][1]) { a.classList.add("sim"); a.textContent = "Aberto agora · até " + fmt(H[d][1]); }
+    else if (h < H[d][0]) a.textContent = "Abre hoje às " + fmt(H[d][0]);
+    else a.textContent = "Fechado agora · abre amanhã às " + fmt(H[(d+1)%7][0]);
+  } catch (e) {}
+  var f = document.querySelector(".fixo"), t = document.querySelector(".abre");
+  if (f && t && "IntersectionObserver" in window) new IntersectionObserver(function(e){f.classList.toggle("some", e[0].isIntersecting)}).observe(t);
+})();
+</script>
+</body>
+</html>
