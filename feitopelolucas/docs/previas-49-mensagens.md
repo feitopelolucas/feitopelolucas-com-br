@@ -200,3 +200,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, Senhorita Pepis! Sou o Lucas, faço sites aqui em Campinas. Vi que vocês têm 4,9 no Google e clientes dizendo que é a melhor confeitaria de Campinas, "e é vegana!". Montei uma ideia de site para vocês, com o endereço novo da Galeria Flamboyant: https://feitopelolucas.com.br/previa/senhoritapepis/
 > Tem a vitrine, o horário de quinta a domingo com aviso de aberta agora e um orçamento de docinhos para festa por número de convidados que chega pronto no WhatsApp. Se gostarem, a gente conversa!
+
+---
+
+## 22. Bolo e Bento Cake Campinas (SilFér Cake) · /previa/silfercake/
+
+**Pelo que vi:** Instagram **@silfercake** (5,4 mil seguidores) e Linktree com os cardápios, sem site. Confeiteira: **Silvana**. Trabalha só sob encomenda, com **retirada agendada** num condomínio do Parque das Águas; dá para mandar por Uber. Horário: terça a sexta das 11h às 18h e sábado das 10h às 13h, só retirada. WhatsApp (19) 98846-0905. **Nota 5,0** com 231 avaliações. Elogios: embalagem (a palavra mais citada), prazo, bolo molhadinho e decorações temáticas. O Google a marca como empresa de empreendedoras. O site tem um **"monte seu bento"** com prévia ao vivo (a frase aparece desenhada no bolinho e dá para trocar a cor), que manda o pedido pronto no WhatsApp.
+**Por onde mandar:** WhatsApp (19) 98846-0905.
+
+> Oi, Silvana! Sou o Lucas, faço sites aqui em Campinas. Vi que a SilFér Cake tem nota 5,0 no Google com mais de 230 avaliações, e todo mundo elogia a embalagem e o capricho. Montei uma ideia de site para você: https://feitopelolucas.com.br/previa/silfercake/
+> O cliente escolhe o tipo de bolo e a cor, digita a frase e vê na hora como fica no bentinho. Depois manda o pedido pronto no seu WhatsApp. Se gostar, a gente conversa!
