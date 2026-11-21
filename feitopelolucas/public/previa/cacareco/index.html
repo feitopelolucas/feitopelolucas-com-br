@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cacareco · Comida caseira no Centro de Campinas desde os anos 50</title>
+<meta name="description" content="Prévia de site para o Restaurante e Lanchonete Cacareco, na Rua Conceição, Centro de Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/cacareco/">
+<meta property="og:title" content="Prévia de site · Restaurante Cacareco">
+<meta property="og:description" content="Buffet de comida caseira, marmita e salgados na Rua Conceição. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/cacareco/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#d94a2b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Libre+Franklin:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--tomate:#d94a2b;--tomate-2:#b83a1f;--laranja:#f08a24;--creme:#fff6e9;--creme-2:#fbe9d1;--marrom:#3a2418;--tinta:#2b1e17;--tinta-2:#6d5848;--fio:#efd9bd;--verde:#3f7d4e}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--creme);color:var(--tinta);font:17px/1.6 "Libre Franklin",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Abril Fatface",Georgia,serif;font-weight:400;line-height:1.04;margin:0}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--laranja);outline-offset:3px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  .wrap>*{min-width:0}
+
+  .previa{background:var(--marrom);color:#e5d2c2;font-size:.8125rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:#ffc27d;font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .toldo{height:18px;background:repeating-linear-gradient(90deg,var(--tomate) 0 34px,#fff 34px 68px);border-bottom:3px solid var(--tomate-2)}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:76px}
+  .marca{text-decoration:none;display:flex;align-items:center;gap:10px}
+  .marca svg{width:52px;height:34px;color:var(--tomate);flex:none}
+  .marca b{font:400 1.7rem/1 "Abril Fatface",serif;color:var(--tomate)}
+  .marca small{display:block;font-size:.8125rem;color:var(--tinta-2);font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+  .topo nav{display:flex;gap:22px;font-weight:700;color:var(--tinta-2)}
+  .topo nav a{text-decoration:none}
+  .topo nav a:hover{color:var(--tomate)}
+  @media (max-width:860px){.topo nav{display:none}}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:12px 22px;border-radius:8px;font-weight:800;text-decoration:none;font-size:1rem;transition:transform .15s,background .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn.tomate{background:var(--tomate);color:#fff}
+  .btn.tomate:hover{background:var(--tomate-2)}
+  .btn.linha{border:2px solid currentColor}
+  .btn.peq{min-height:44px;padding:8px 16px;font-size:.94rem}
+
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;padding-top:40px;padding-bottom:70px}
+  .ano{display:inline-flex;align-items:center;gap:10px;font-weight:800;color:var(--tomate);letter-spacing:.12em;text-transform:uppercase;font-size:.8125rem}
+  .ano::before{content:"";width:28px;height:3px;background:var(--laranja)}
+  .hero h1{font-size:clamp(2.6rem,6.4vw,4.6rem);margin:14px 0 16px;color:var(--marrom)}
+  .hero h1 em{font-style:normal;color:var(--tomate)}
+  .hero p{font-size:1.14rem;color:var(--tinta-2);max-width:31em;margin:0 0 26px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .status{margin-top:20px;display:inline-flex;align-items:center;gap:10px;font-weight:700}
+  .status i{width:11px;height:11px;border-radius:50%;background:#c9b7a6;flex:none}
+  .status.on i{background:var(--verde);box-shadow:0 0 0 5px rgba(63,125,78,.18)}
+  .vitrine{position:relative}
+  .vitrine img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:14px;border:8px solid #fff;box-shadow:0 30px 60px -34px rgba(58,36,24,.7)}
+  .vitrine .placa{position:absolute;left:-16px;bottom:30px;background:var(--marrom);color:#fff;border-radius:10px;padding:14px 16px;max-width:220px;box-shadow:0 16px 30px -14px rgba(0,0,0,.5)}
+  .vitrine .placa b{display:block;font:400 1.4rem "Abril Fatface",serif;color:#ffc27d}
+  @media (max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:24px}.vitrine{max-width:420px}.vitrine .placa{left:10px}}
+
+  section{padding:80px 0}
+  .tit{max-width:640px;margin-bottom:30px}
+  .tit small{font-weight:800;color:var(--tomate);letter-spacing:.12em;text-transform:uppercase;font-size:.8125rem}
+  .tit h2{font-size:clamp(2rem,4.6vw,3.1rem);margin-top:6px;color:var(--marrom)}
+  .tit p{color:var(--tinta-2);margin:10px 0 0}
+
+  /* Do dia */
+  .dia{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .hora{background:#fff;border:1px solid var(--fio);border-radius:16px;padding:22px;position:relative;overflow:hidden}
+  .hora .h{font:400 2.2rem/1 "Abril Fatface",serif;color:var(--laranja)}
+  .hora h3{font-size:1.45rem;margin:10px 0 6px;color:var(--marrom)}
+  .hora p{margin:0;color:var(--tinta-2)}
+  .hora.destaque{background:var(--tomate);border-color:var(--tomate);color:#ffe6dc}
+  .hora.destaque h3{color:#fff}
+  .hora.destaque .h{color:#ffc27d}
+  .hora.destaque p{color:#ffe6dc}
+  @media (max-width:860px){.dia{grid-template-columns:1fr}}
+
+  /* Buffet */
+  .buffet{background:#fff;border-top:1px solid var(--fio);border-bottom:1px solid var(--fio)}
+  .buffet .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .duo{display:grid;grid-template-columns:1.3fr 1fr;gap:12px}
+  .duo img{width:100%;height:100%;object-fit:cover;border-radius:14px;aspect-ratio:3/4}
+  .duo img:first-child{aspect-ratio:auto}
+  .regras{list-style:none;margin:18px 0 22px;padding:0}
+  .regras li{display:flex;gap:12px;padding:10px 0;border-bottom:1px dashed var(--fio)}
+  .regras b{color:var(--tomate);min-width:22px}
+  @media (max-width:880px){.buffet .wrap{grid-template-columns:1fr}}
+
+  /* História */
+  .hist{background:var(--marrom);color:#ecdccd}
+  .hist .wrap{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center}
+  .hist svg{width:180px;height:120px;color:#ffc27d}
+  .hist h2{color:#fff;font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:10px}
+  .hist p{margin:0 0 10px;max-width:40em}
+  @media (max-width:760px){.hist .wrap{grid-template-columns:1fr}.hist svg{width:140px;height:94px}}
+
+  /* Avaliações */
+  .falas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .falas blockquote{margin:0;background:#fff;border:1px solid var(--fio);border-radius:16px;padding:22px;font-weight:500}
+  .falas cite{display:block;margin-top:10px;font-style:normal;font-weight:700;font-size:.875rem;color:var(--tomate)}
+  @media (max-width:880px){.falas{grid-template-columns:1fr}}
+
+  /* Onde */
+  .onde{background:var(--creme-2)}
+  .onde .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+  .horas{width:100%;border-collapse:collapse;margin-bottom:18px}
+  .horas td{padding:9px 0;border-bottom:1px solid var(--fio)}
+  .horas td:last-child{text-align:right;font-weight:700}
+  .horas tr.hoje td{color:var(--tomate)}
+  .end{margin:0 0 22px;color:var(--tinta-2)}
+  .end b{color:var(--tinta)}
+  .end a{white-space:nowrap;color:var(--tomate);font-weight:700}
+  .mapa{border-radius:16px;overflow:hidden;min-height:400px;background:#f2dcc0}
+  .mapa iframe{width:100%;height:100%;min-height:400px;border:0;display:block}
+  @media (max-width:880px){.onde .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:var(--marrom);color:#c7ae9b;padding:24px 0 100px;font-size:.875rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:#ffc27d;font-weight:700;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 12px 26px -10px rgba(0,0,0,.45);transition:opacity .3s,transform .3s}
+  .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
+  @media (min-width:861px){footer{padding-bottom:24px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial do Restaurante e Lanchonete Cacareco. É uma ideia de site montada por Lucas para apresentar ao restaurante.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20do%20Restaurante%20Cacareco%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+<div class="toldo" aria-hidden="true"></div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Restaurante e Lanchonete Cacareco, início"><svg viewBox="0 0 52 34" fill="currentColor" aria-hidden="true"><path d="M5 22c0-7 7-12 17-12 6 0 10 2 14 3l5-6c1-1 2 0 2 1l-2 7 4 2 2-5c1-1 2 0 2 1v6c0 2-2 3-4 3h-3l-2 6h-4l-1-5H17l-1 5h-4l-1-6c-4-1-6-0-6 0Z"/><circle cx="42" cy="19" r="1.3" fill="#fff"/></svg><span><b>Cacareco</b><small>Restaurante e lanchonete</small></span></a>
+    <nav aria-label="Seções">
+      <a href="#dia">O dia</a>
+      <a href="#buffet">Buffet</a>
+      <a href="#historia">A história</a>
+      <a href="#onde">Onde fica</a>
+    </nav>
+    <a class="btn tomate peq" href="tel:+551932320704">Ligar</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="ano">Rua Conceição · Centro de Campinas</span>
+        <h1 id="titulo">Almoço caseiro que <em>ninguém faz igual</em>, no coração do Centro.</h1>
+        <p>Buffet de comida brasileira com mistura, marmita para levar, lanches e salgados desde cedo. Simples, rápido e com preço justo, do jeito que o Centro precisa.</p>
+        <div class="acoes">
+          <a class="btn tomate" href="tel:+551932320704"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>Ligar e pedir marmita</a>
+          <a class="btn linha" href="#buffet">Como funciona o buffet</a>
+        </div>
+        <p class="status" id="status"><i aria-hidden="true"></i><span id="status-t">Seg a sex 7h às 20h · fim de semana até 15h</span></p>
+      </div>
+      <div class="vitrine">
+        <img src="fotos/fachada.jpg" alt="Fachada laranja do Restaurante e Lanchonete Cacareco na Rua Conceição" width="675" height="1200">
+        <div class="placa"><b>4,6 ★</b>271 avaliações no Google</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="dia" style="padding-top:10px" aria-labelledby="t-dia">
+    <div class="wrap">
+      <div class="tit"><small>O dia no Cacareco</small><h2 id="t-dia">Do café ao fim da tarde</h2></div>
+      <div class="dia">
+        <div class="hora"><span class="h">7h</span><h3>Café e salgado</h3><p>Abre cedo para quem passa a caminho do trabalho. Os salgados são dos mais elogiados.</p></div>
+        <div class="hora destaque"><span class="h">Meio-dia</span><h3>Almoço</h3><p>Buffet de comida caseira com a mistura do dia, ou marmita para levar.</p></div>
+        <div class="hora"><span class="h">Tarde</span><h3>Lanches</h3><p>Lanche e salgado até o fim do dia, de segunda a sexta até as 20h.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="buffet" id="buffet" aria-labelledby="t-buf">
+    <div class="wrap">
+      <div class="duo">
+        <img src="fotos/prato.jpg" alt="Dois pratos do buffet com frango, purê, arroz, salada e vagem" loading="lazy" width="1200" height="675">
+        <img src="fotos/salao.jpg" alt="Salão com mesas de madeira e o balcão do buffet ao fundo" loading="lazy" width="675" height="1200">
+      </div>
+      <div>
+        <div class="tit" style="margin-bottom:6px"><small>Buffet</small><h2 id="t-buf">Uma mistura, o resto à vontade</h2></div>
+        <ul class="regras">
+          <li><b>1</b><span>Escolha a mistura do dia: bife, frango, carne de panela...</span></li>
+          <li><b>2</b><span>Sirva-se à vontade do arroz, feijão, guarnições e saladas.</span></li>
+          <li><b>3</b><span>Com pressa? Peça a marmita por telefone e passe para buscar.</span></li>
+        </ul>
+        <a class="btn tomate" href="tel:+551932320704">Pedir marmita: (19) 3232-0704</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="hist" id="historia" aria-labelledby="t-hist">
+    <div class="wrap">
+      <svg viewBox="0 0 52 34" fill="currentColor" aria-hidden="true"><path d="M5 22c0-7 7-12 17-12 6 0 10 2 14 3l5-6c1-1 2 0 2 1l-2 7 4 2 2-5c1-1 2 0 2 1v6c0 2-2 3-4 3h-3l-2 6h-4l-1-5H17l-1 5h-4l-1-6c-4-1-6-0-6 0Z"/></svg>
+      <div>
+        <h2 id="t-hist">Um rinoceronte no nome, décadas na Rua Conceição</h2>
+        <p>O nome é uma homenagem ao Cacareco, o rinoceronte que ficou famoso no Brasil nos anos 1950. E a casa também é dessa época: segundo quem conta a história do Centro, o Cacareco está na Rua Conceição desde a década de 1950.</p>
+        <p>De lá para cá, a tradição continua a mesma: comida brasileira caseira, servida com simpatia.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="tit"><small>4,6 · 271 avaliações no Google</small><h2 id="t-aval">O Centro aprova</h2></div>
+      <div class="falas">
+        <blockquote>Atendimento de qualidade, preço justo e o almoço, ninguém faz igual.<cite>Resumo das avaliações · Google</cite></blockquote>
+        <blockquote>Comida caseira excelente, muito saborosa e preço justo. O atendimento é muito bom, todos simpáticos e bem educados.<cite>Aigline · Google</cite></blockquote>
+        <blockquote>Comida simples e saborosa: uma mistura e o restante do buffet à vontade.<cite>Ícaro · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:18px"><small>Onde fica</small><h2 id="t-onde">Rua Conceição, 211</h2></div>
+        <table class="horas" id="horas">
+          <tr data-d="semana"><td>Segunda a sexta</td><td>7h às 20h</td></tr>
+          <tr data-d="fds"><td>Sábado e domingo</td><td>7h às 15h</td></tr>
+        </table>
+        <p class="end"><b>R. Conceição, 211</b> · Shopping Conceição · Centro, Campinas (SP)<br>Telefone <a href="tel:+551932320704">(19) 3232-0704</a> · <a href="https://www.instagram.com/restaurantecacareco/" target="_blank" rel="noopener">@restaurantecacareco</a></p>
+        <div class="acoes">
+          <a class="btn tomate" href="https://www.google.com/maps/dir/?api=1&amp;destination=Restaurante+e+Lanchonete+Cacareco,+R.+Concei%C3%A7%C3%A3o,+211,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn linha" href="tel:+551932320704">Ligar</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Restaurante Cacareco, R. Conceição, 211, Centro, Campinas" src="https://www.google.com/maps?q=Restaurante+e+Lanchonete+Cacareco,+R.+Concei%C3%A7%C3%A3o,+211+-+Centro,+Campinas+-+SP&amp;z=17&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Restaurante e Lanchonete Cacareco · Centro de Campinas</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn tomate fixo some" href="tel:+551932320704" aria-label="Ligar para o restaurante">Pedir marmita</a>
+
+<script>
+(function () {
+  try {
+    var p = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+    var g = function(t){return (p.find(function(x){return x.type===t})||{}).value};
+    var d = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"));
+    var h = (parseInt(g("hour"),10)%24) + parseInt(g("minute"),10)/60;
+    var fds = d===0 || d===6, fe = fds ? 15 : 20;
+    var tr = document.querySelector('#horas tr[data-d="' + (fds ? "fds" : "semana") + '"]'); if (tr) tr.classList.add("hoje");
+    var s = document.getElementById("status"), t = document.getElementById("status-t");
+    if (h>=7 && h<fe) { s.classList.add("on"); t.textContent = "Aberto agora, até as " + fe + "h"; }
+    else if (h<7) t.textContent = "Abre hoje às 7h";
+    else t.textContent = "Fechado agora · abre amanhã às 7h";
+  } catch (e) {}
+  var f = document.querySelector(".fixo"), t2 = document.querySelector(".hero");
+  if (f && t2 && "IntersectionObserver" in window) new IntersectionObserver(function(e){f.classList.toggle("some", e[0].isIntersecting)}).observe(t2);
+})();
+</script>
+</body>
+</html>

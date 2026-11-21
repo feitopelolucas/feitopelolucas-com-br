@@ -160,3 +160,13 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, tudo bem? Sou o Lucas, faço sites aqui em Campinas. O Nosso Cantinho tem 4,7 no Google com mais de 270 avaliações, mas quem procura não acha telefone nem site, e o perfil do Google nem foi reivindicado ainda. Montei uma ideia de site para o bar: https://feitopelolucas.com.br/previa/nossocantinho/
 > Coloquei o cardápio com os espetinhos e as porções, o que tem em cada dia (panceta de sexta, costela no domingo) e o horário com aviso de aberto agora. Também posso ajudar a assumir o perfil do Google. Se gostarem, a gente conversa!
+
+---
+
+## 18. Restaurante e Lanchonete Cacareco · /previa/cacareco/
+
+**Pelo que vi:** sem site. Instagram @restaurantecacareco (80 seguidores), cuja bio diz que o nome **homenageia o rinoceronte Cacareco**. Uma página sobre a história de Campinas diz que o Cacareco está na Rua Conceição **desde a década de 1950**. Fica no Shopping Conceição. Telefone (19) 3232-0704 e e-mail cacareco.restaurante@gmail.com. Horário: dias de semana das 7h às 20h e fim de semana até as 15h (guia local; o Google confirma abertura às 7h). Buffet com uma mistura e o resto à vontade, marmita para levar e salgados elogiados. Não achei WhatsApp, então os botões ligam para o fixo. **Atenção:** uma avaliação reclama do tamanho do bife na marmita; não usei.
+**Por onde mandar:** ligar no (19) 3232-0704, e-mail cacareco.restaurante@gmail.com ou pessoalmente.
+
+> Olá, pessoal do Cacareco! Sou o Lucas, faço sites aqui em Campinas. Vi que o Cacareco está na Rua Conceição desde os anos 50 e que o nome homenageia o rinoceronte famoso. É uma história bonita, mas quem busca no Google não encontra um site de vocês. Montei uma ideia: https://feitopelolucas.com.br/previa/cacareco/
+> Tem como funciona o buffet, o horário com aviso de aberto agora, a história do nome e um botão para pedir marmita por telefone. Se gostarem, a gente conversa!
