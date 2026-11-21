@@ -66,3 +66,12 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 > Oi, pessoal da Villa Genebra! Sou o Lucas, faço sites aqui em Campinas. Vi que hoje o link da bio leva para uma página de botões e o cardápio fica num arquivo do Canva. Montei uma ideia de site de verdade para vocês: https://feitopelolucas.com.br/previa/villagenebra/
 > O cardápio de cafés está em texto, com preço, separado em quentes e geladas (aparece no Google e abre rápido no celular). Tem também a vitrine, os horários e o mapa. Se fizer sentido, a gente conversa!
 
+---
+
+## 8. Lanchonete Estação Aquidabã · /previa/estacaoaquidaba/
+
+**Pelo que vi:** só Instagram (1,3 mil seguidores, ativo), que se chama de "a estação mais completa de Campinas". Abre das 16h às 6h todos os dias. A estrela é a boquinha de anjo de churrasco. Tem lanche de costela no pão francês, porções, espetinhos, caldos e drinks. As avaliações citam a madrugada e a cerveja gelada. Usei fotos do Maps e do Instagram, sem rostos.
+
+> Oi, tudo bem? Sou o Lucas, faço sites aqui em Campinas. A Estação Aquidabã fica aberta a madrugada inteira, e quem procura "lanchonete aberta agora" no Centro merece achar vocês. Então montei uma ideia de site: https://feitopelolucas.com.br/previa/estacaoaquidaba/
+> Tem um painel de estação que mostra na hora se está aberto, o cardápio separado em "plataformas", a boquinha de anjo em destaque e a rota até a Aquidabã. Se curtirem, me chama!
+

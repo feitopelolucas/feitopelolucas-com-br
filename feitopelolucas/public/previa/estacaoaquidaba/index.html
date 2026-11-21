@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lanchonete Estação Aquidabã · Das 16h às 6h · Centro de Campinas</title>
+<meta name="description" content="Prévia de site para a Lanchonete Estação Aquidabã, no Centro de Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/estacaoaquidaba/">
+<meta property="og:title" content="Prévia de site · Estação Aquidabã">
+<meta property="og:description" content="Lanches, porções, espetinhos e drinks das 16h às 6h, todo dia. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/estacaoaquidaba/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#14161c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2314161c' stroke='%23ffb000' stroke-width='2'/%3E%3Cpath d='M9 19h14v-6a4 4 0 0 0-4-4h-6a4 4 0 0 0-4 4Z' fill='%23ffb000'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --trilho:#14161c; --vagao:#1d2029; --vagao-2:#272b37; --ambar:#ffb000; --ambar-claro:#ffd36b;
+    --vermelho:#d7262e; --creme:#f4ecdd; --texto:#cfd3dc; --cinza:#8b91a0; --fio:#323745;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--trilho);color:var(--texto);font:17px/1.6 "IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;line-height:.95;margin:0;text-transform:uppercase;color:#fff}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--ambar);outline-offset:3px}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+  .previa{background:#000;color:var(--cinza);font-size:.82rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--ambar);font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .topo{border-bottom:1px solid var(--fio)}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:14px}
+  .emblema{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .emblema i{width:48px;height:48px;border-radius:50%;border:2px solid var(--ambar);display:grid;place-items:center;font-style:normal}
+  .emblema i svg{width:28px;height:28px}
+  .emblema b{font:900 1.5rem/1 "Big Shoulders Display",sans-serif;text-transform:uppercase;color:#fff;letter-spacing:.04em}
+  .emblema small{display:block;font:500 .7rem "IBM Plex Mono",monospace;color:var(--ambar);letter-spacing:.14em;margin-top:3px}
+  .topo nav{display:flex;gap:24px;font:600 .82rem "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.08em}
+  .topo nav a{text-decoration:none;color:var(--cinza)}
+  .topo nav a:hover{color:var(--ambar)}
+  @media (max-width:900px){.topo nav{display:none}}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:12px 22px;font:700 .95rem "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;border-radius:4px;transition:transform .15s,background .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:19px;height:19px;flex:none}
+  .btn.ambar{background:var(--ambar);color:var(--trilho)}
+  .btn.ambar:hover{background:var(--ambar-claro)}
+  .btn.linha{box-shadow:inset 0 0 0 2px var(--fio);color:#fff}
+  .btn.linha:hover{box-shadow:inset 0 0 0 2px var(--ambar)}
+  .btn.peq{min-height:44px;padding:9px 16px;font-size:.82rem}
+
+  /* Abertura com painel */
+  .hero{padding:56px 0 70px}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .hero h1{font-size:clamp(3.2rem,8vw,6.4rem)}
+  .hero h1 span{color:var(--ambar);display:block}
+  .hero p{font-size:1.15rem;margin:22px 0 30px;max-width:30em}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .painel{background:#0b0c10;border:2px solid var(--fio);border-radius:10px;padding:18px;box-shadow:0 30px 60px -30px #000}
+  .painel .cab{display:flex;justify-content:space-between;align-items:center;font:600 .78rem "IBM Plex Mono",monospace;color:var(--cinza);text-transform:uppercase;letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--fio);margin-bottom:12px}
+  .painel .relogio{color:var(--ambar);font-size:1rem}
+  .placa{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:9px 0;border-bottom:1px dashed #23262f}
+  .placa:last-child{border-bottom:0}
+  .placa .hr{font:600 1rem "IBM Plex Mono",monospace;color:var(--ambar);background:#16181f;padding:4px 8px;border-radius:3px;letter-spacing:.06em}
+  .placa .dest{font:600 1rem "IBM Plex Mono",monospace;color:#fff;text-transform:uppercase;letter-spacing:.04em}
+  .placa .st{font:600 .78rem "IBM Plex Mono",monospace;padding:4px 8px;border-radius:3px;text-transform:uppercase}
+  .st.ok{background:#173a26;color:#7dffaa}
+  .st.esp{background:#3a2e0d;color:var(--ambar)}
+  .st.fim{background:#2a1416;color:#ff8a8f}
+  @media (max-width:940px){.hero .wrap{grid-template-columns:1fr}}
+
+  .faixa-fotos{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.3fr;grid-template-rows:300px;overflow:hidden}
+  .faixa-fotos img{width:100%;height:100%;object-fit:cover;filter:saturate(1.05)}
+  @media (max-width:760px){.faixa-fotos{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px}}
+
+  section{padding:90px 0}
+  .tit{max-width:680px;margin-bottom:40px}
+  .tit small{font:600 .8rem "IBM Plex Mono",monospace;color:var(--ambar);letter-spacing:.18em;text-transform:uppercase}
+  .tit h2{font-size:clamp(2.6rem,6vw,4.4rem);margin-top:10px}
+  .tit p{margin:14px 0 0}
+
+  /* Plataformas (cardápio) */
+  .plataformas{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .plat{background:var(--vagao);border:1px solid var(--fio);border-radius:12px;overflow:hidden;display:grid;grid-template-columns:200px 1fr}
+  .plat img{width:100%;height:100%;object-fit:cover;min-height:220px}
+  .plat div{padding:22px 22px 20px}
+  .plat .num{font:600 .78rem "IBM Plex Mono",monospace;color:var(--ambar);letter-spacing:.16em}
+  .plat h3{font-size:2.2rem;margin:6px 0 10px}
+  .plat ul{margin:0;padding:0;list-style:none}
+  .plat li{padding:6px 0;border-bottom:1px dashed var(--fio);font-size:.96rem}
+  .plat li:last-child{border-bottom:0}
+  @media (max-width:980px){.plataformas{grid-template-columns:1fr}}
+  @media (max-width:520px){.plat{grid-template-columns:1fr}.plat img{height:200px;min-height:0}}
+
+  /* Estrela */
+  .estrela{background:var(--creme);color:#2a2a2a}
+  .estrela .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .estrela h2{color:var(--trilho);font-size:clamp(2.6rem,6vw,4.6rem)}
+  .estrela h2 em{font-style:normal;color:var(--vermelho)}
+  .estrela .tit small{color:var(--vermelho)}
+  .estrela .duas{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .estrela .duas img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px}
+  .estrela .duas img:last-child{margin-top:40px}
+  .ticket{display:inline-flex;margin-top:24px;background:var(--trilho);color:#fff;border-radius:8px;overflow:hidden}
+  .ticket span{padding:14px 18px;font:600 .9rem "IBM Plex Mono",monospace}
+  .ticket span:last-child{background:var(--ambar);color:var(--trilho);border-left:2px dashed var(--trilho)}
+  @media (max-width:900px){.estrela .wrap{grid-template-columns:1fr}}
+
+  /* Por que */
+  .motivos{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .mot{border-top:3px solid var(--ambar);padding-top:16px}
+  .mot b{display:block;font:800 1.6rem/1 "Big Shoulders Display",sans-serif;text-transform:uppercase;color:#fff;margin-bottom:6px}
+  .mot span{font-size:.95rem}
+  @media (max-width:900px){.motivos{grid-template-columns:1fr 1fr}}
+
+  /* Avaliações */
+  .aval{background:var(--vagao)}
+  .falas{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .falas blockquote{margin:0;background:var(--vagao-2);border-radius:10px;padding:24px;color:#e6e8ee}
+  .falas blockquote::before{content:"★★★★★";display:block;color:var(--ambar);letter-spacing:3px;margin-bottom:10px;font-size:.9rem}
+  .falas cite{display:block;margin-top:12px;font:600 .8rem "IBM Plex Mono",monospace;color:var(--cinza);font-style:normal;text-transform:uppercase;letter-spacing:.08em}
+  @media (max-width:900px){.falas{grid-template-columns:1fr}}
+
+  /* Onde */
+  .onde .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:40px}
+  .grande-h{font:900 clamp(4rem,10vw,7rem)/.9 "Big Shoulders Display",sans-serif;color:var(--ambar)}
+  .grande-h small{display:block;font:600 .9rem "IBM Plex Mono",monospace;color:var(--cinza);letter-spacing:.14em;margin-top:10px}
+  .end{margin:24px 0}
+  .end b{color:#fff}
+  .mapa{border:1px solid var(--fio);border-radius:12px;overflow:hidden;min-height:400px}
+  .mapa iframe{width:100%;height:100%;min-height:400px;border:0;display:block;filter:invert(.9) hue-rotate(180deg) saturate(.6)}
+  @media (max-width:900px){.onde .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{border-top:1px solid var(--fio);padding:26px 0 100px;font-size:.88rem;color:var(--cinza)}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--ambar);font-weight:700;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:30;transition:opacity .3s,transform .3s}
+  .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
+  @media (min-width:901px){footer{padding-bottom:26px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial da Estação Aquidabã. É uma ideia de site montada por Lucas para apresentar à lanchonete.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20da%20Esta%C3%A7%C3%A3o%20Aquidab%C3%A3%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="emblema" href="#inicio" aria-label="Estação Aquidabã, início">
+      <i aria-hidden="true"><svg viewBox="0 0 28 28" fill="none" stroke="#ffb000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="16" height="15" rx="3"/><path d="M6 12h16M10 23l-2 3M18 23l2 3M9 19v2h10v-2"/><circle cx="10" cy="16" r="1" fill="#ffb000"/><circle cx="18" cy="16" r="1" fill="#ffb000"/></svg></i>
+      <span><b>Estação Aquidabã</b><small>LANCHONETE · CENTRO</small></span>
+    </a>
+    <nav aria-label="Seções">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#boquinha">Boquinha de anjo</a>
+      <a href="#onde">Onde fica</a>
+    </nav>
+    <a class="btn ambar peq" href="tel:+551933050805">Ligar</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <h1 id="titulo">A estação que <span>não dorme.</span></h1>
+        <p>Lanches, porções, espetinhos, cerveja trincando e drinks no Centro de Campinas, das 16h às 6h, todos os dias. Saiu tarde do trabalho, do show ou da festa? A Estação está aberta.</p>
+        <div class="acoes">
+          <a class="btn ambar" href="#cardapio">Ver o cardápio</a>
+          <a class="btn linha" href="https://www.google.com/maps/dir/?api=1&amp;destination=Lanchonete+Esta%C3%A7%C3%A3o+Aquidab%C3%A3,+Av.+Aquidab%C3%A3,+276,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+        </div>
+      </div>
+      <div class="painel" aria-label="Painel de horários">
+        <div class="cab"><span>Painel de partidas</span><span class="relogio mono" id="relogio">--:--</span></div>
+        <div class="placa"><span class="hr">16:00</span><span class="dest">Abertura · happy hour</span><span class="st" id="s1">—</span></div>
+        <div class="placa"><span class="hr">20:00</span><span class="dest">Jantar · lanches e porções</span><span class="st" id="s2">—</span></div>
+        <div class="placa"><span class="hr">00:00</span><span class="dest">Madrugada · caldo e boquinha</span><span class="st" id="s3">—</span></div>
+        <div class="placa"><span class="hr">06:00</span><span class="dest">Último trem · fechamento</span><span class="st" id="s4">—</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faixa-fotos" aria-hidden="true">
+    <img src="fotos/porcao-mista.jpg" alt="" width="1000" height="1250">
+    <img src="fotos/drink.jpg" alt="" width="900" height="1125">
+    <img src="fotos/cerveja.jpg" alt="" width="900" height="1200">
+    <img src="fotos/salao.jpg" alt="" width="1200" height="675">
+  </div>
+
+  <section id="cardapio" aria-labelledby="t-card">
+    <div class="wrap">
+      <div class="tit">
+        <small>Plataformas</small>
+        <h2 id="t-card">Escolha o seu destino</h2>
+        <p>O cardápio completo está no balcão e no Instagram. Aqui vai o que mais sai.</p>
+      </div>
+      <div class="plataformas">
+        <article class="plat"><img src="fotos/burger.jpg" alt="Hambúrguer duplo com bacon, presunto, ovo e queijo" loading="lazy" width="1000" height="1250"><div><span class="num">PLATAFORMA 1</span><h3>Lanches</h3><ul><li>Boquinha de anjo de churrasco</li><li>Lanche de costela no pão francês</li><li>Hambúrgueres caprichados</li><li>Sanduíches variados</li></ul></div></article>
+        <article class="plat"><img src="fotos/porcao-com-pao.jpg" alt="Porção de carne acebolada com fritas, linguiça e pão" loading="lazy" width="720" height="1280"><div><span class="num">PLATAFORMA 2</span><h3>Porções</h3><ul><li>Carne acebolada com fritas</li><li>Porção mista para a mesa toda</li><li>Mandioca frita</li><li>Coxinhas e salgados</li></ul></div></article>
+        <article class="plat"><img src="fotos/porcao-mandioca.jpg" alt="Porção de petisco frito com mandioca e limão" loading="lazy" width="1000" height="750"><div><span class="num">PLATAFORMA 3</span><h3>Espetinhos e caldos</h3><ul><li>Espetinhos na brasa</li><li>Caldos para a madrugada</li><li>Petiscos de boteco</li></ul></div></article>
+        <article class="plat"><img src="fotos/ig-drinks.jpg" alt="Drinks coloridos com guarda-chuvinha sendo brindados" loading="lazy" width="512" height="640"><div><span class="num">PLATAFORMA 4</span><h3>Bebidas</h3><ul><li>Cerveja trincando no balde</li><li>Drinks da casa</li><li>Sucos e refrigerantes</li></ul></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="estrela" id="boquinha" aria-labelledby="t-boq">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:0">
+          <small>A estrela da casa</small>
+          <h2 id="t-boq">Boquinha de <em>anjo</em></h2>
+          <p>Macia, caprichada e perfeita para dividir (ou não dividir com ninguém). A de churrasco é a que o pessoal mais comenta. Combina com uma Original bem gelada e uma boa conversa.</p>
+        </div>
+        <div class="ticket"><span>BILHETE: 1 boquinha + 1 gelada</span><span>EMBARQUE</span></div>
+      </div>
+      <div class="duas">
+        <img src="fotos/boquinha-de-anjo.jpg" alt="Boquinha de anjo fatiada servida na bandeja" loading="lazy" width="1000" height="1250">
+        <img src="fotos/ig-sanduiche.jpg" alt="Pratos com boquinha de anjo fatiada" loading="lazy" width="360" height="640">
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Por que vir">
+    <div class="wrap">
+      <div class="motivos">
+        <div class="mot"><b>16h às 6h</b><span>Todos os dias, inclusive domingo.</span></div>
+        <div class="mot"><b>Centro</b><span>Na Av. Aquidabã, fácil de chegar de qualquer canto.</span></div>
+        <div class="mot"><b>Ambiente familiar</b><span>Mesa grande para a turma e espaço para todos.</span></div>
+        <div class="mot"><b>Reserva</b><span>Vai com a galera? Ligue e garanta a mesa.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="aval" aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="tit"><small>4,6 · 387 avaliações no Google</small><h2 id="t-aval">Passageiros satisfeitos</h2></div>
+      <div class="falas">
+        <blockquote>Tomei uma Original trincando com um lanche boquinha de anjo de churrasco, uma delícia. Fica aberto de madrugada, vale a pena conhecer!<cite>Evandro · Google</cite></blockquote>
+        <blockquote>O garçom nos indicou um lanche de costela servido no pão francês. Uma delícia. Dois dias depois voltamos.<cite>Vinicius · Google</cite></blockquote>
+        <blockquote>Ambiente familiar, os melhores drinks de todos, boa comida, tudo uma delícia.<cite>Resumo · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:22px"><small>Onde fica</small><h2 id="t-onde">Desça na Aquidabã</h2></div>
+        <div class="grande-h">16h→6h<small>TODOS OS DIAS DA SEMANA</small></div>
+        <p class="end"><b>Av. Aquidabã, 276</b> · Centro, Campinas (SP)<br>Telefone: <a href="tel:+551933050805" style="color:var(--ambar);font-weight:700">(19) 3305-0805</a></p>
+        <div class="acoes">
+          <a class="btn ambar" href="https://www.google.com/maps/dir/?api=1&amp;destination=Lanchonete+Esta%C3%A7%C3%A3o+Aquidab%C3%A3,+Av.+Aquidab%C3%A3,+276,+Campinas" target="_blank" rel="noopener">Traçar rota</a>
+          <a class="btn linha" href="https://www.instagram.com/estacaoaquidaban/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Lanchonete Estação Aquidabã, Av. Aquidabã, 276, Centro, Campinas" src="https://www.google.com/maps?q=Lanchonete+Esta%C3%A7%C3%A3o+Aquidab%C3%A3,+Av.+Aquidab%C3%A3,+276+-+Centro,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Lanchonete Estação Aquidabã · Centro, Campinas</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn ambar fixo some" href="tel:+551933050805" aria-label="Ligar para a Estação Aquidabã">Ligar</a>
+
+<script>
+(function () {
+  function hora() {
+    try {
+      var p = new Intl.DateTimeFormat("en-GB",{timeZone:"America/Sao_Paulo",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date());
+      var g = function(t){return (p.find(function(x){return x.type===t})||{}).value};
+      var hh = parseInt(g("hour"),10)%24, mm = parseInt(g("minute"),10);
+      document.getElementById("relogio").textContent = (hh<10?"0":"")+hh+":"+(mm<10?"0":"")+mm;
+      var h = hh + mm/60, aberto = (h >= 16 || h < 6);
+      var faixas = [[16,20],[20,24],[0,6],[6,6.01]];
+      var ids = ["s1","s2","s3","s4"];
+      ids.forEach(function(id,i){
+        var el = document.getElementById(id), f = faixas[i];
+        el.className = "st";
+        if (i===3) { el.textContent = aberto ? "às 6h" : "fechado"; el.classList.add(aberto ? "esp" : "fim"); return; }
+        if (h >= f[0] && h < f[1]) { el.textContent = "agora"; el.classList.add("ok"); }
+        else if (!aberto && i===0) { el.textContent = "abre às 16h"; el.classList.add("esp"); }
+        else if ((i===0 && h>=20) || (i===1 && (h<6)) ) { el.textContent = "passou"; el.classList.add("fim"); }
+        else { el.textContent = "em breve"; el.classList.add("esp"); }
+      });
+    } catch (e) {}
+  }
+  hora(); setInterval(hora, 30000);
+  var f = document.querySelector(".fixo"), t = document.querySelector(".hero");
+  if (f && t && "IntersectionObserver" in window) new IntersectionObserver(function(e){f.classList.toggle("some", e[0].isIntersecting)}).observe(t);
+})();
+</script>
+</body>
+</html>
