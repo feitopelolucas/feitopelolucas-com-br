@@ -1,0 +1,40 @@
+{
+  "_leia": "Ficha de um negócio. Uma por negócio em <Cidade - UF>/_controle/fichas/<pasta>.json. Campos vazios ficam como \"\". Nada inventado: só o que foi apurado.",
+  "ordem": 1,
+  "pasta": "pardal",
+  "nome": "Pardal Panificadora",
+  "ramo": "Padaria",
+  "cidade": "Campinas",
+  "uf": "SP",
+  "bairro": "Vila Pompéia",
+  "endereco": "R. Lorena, 60 - Vila Pompéia, Campinas - SP",
+  "nota": "4,7",
+  "avaliacoes": "1.004",
+  "prioridade": "A",
+  "siteHoje": "nenhum (só Instagram)",
+  "desde": "",
+  "dono": "",
+  "horario": "Seg a sex 6h-19h30 · sáb 6h-19h · dom 6h30-13h",
+  "googleMaps": "https://www.google.com/maps/place/...",
+  "contatos": {
+    "whatsapp": "(19) 98440-1215",
+    "telefone": "(19) 3367-0679",
+    "instagram": "@pardal_panificadora",
+    "email": "",
+    "facebook": "",
+    "outros": ""
+  },
+  "melhorCanal": "WhatsApp",
+  "situacao": "mensagem pronta",
+  "motivoPulado": "",
+  "previa": "https://feitopelolucas.com.br/previa/pardal/",
+  "peloQueVi": "O que foi apurado e ajuda na conversa (Instagram, desde quando, de onde vieram as fotos, o que o site tem de especial).",
+  "atencao": "Pendências: dados divergentes, avaliação negativa recente, perfil não reivindicado...",
+  "mensagem": "Oi, pessoal da Pardal! Sou o Lucas, faço sites aqui em Campinas. ...",
+  "auditoria": {
+    "rodadas": 0,
+    "erros": 0,
+    "avisosJustificados": [],
+    "revisaoVisual": ""
+  }
+}

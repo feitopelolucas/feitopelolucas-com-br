@@ -14,7 +14,9 @@ com as fotos em `fotos/`. O nível de referência são as 63 prévias de Campina
 
 Fontes: perfil do Google Maps, Instagram (bio, destaques, posts recentes), Facebook, iFood/cardápio online, busca na web.
 Junte e confira:
-- **Ainda vale?** Tem site próprio, é rede, fechou, mudou de nome → `pulado: <motivo>` no `lote.md` e passe ao próximo.
+- **Ainda vale?** Tem site próprio, é rede, fechou, mudou de nome → na ficha `situacao: "pulado"` e `motivoPulado`, no `lote.md` também, e passe ao próximo.
+- Comece pela ficha do negócio (`<Cidade - UF>\_controle\fichas\<pasta>.json`): complete nela tudo o que apurar (contatos, horário, endereço, dono, desde).
+  A página e a ficha têm que dizer a mesma coisa: a auditoria compara as duas.
 - Nome como o negócio se apresenta, desde quando existe, bairro e endereço (se Google e Instagram divergirem, use o mais recente e anote).
 - Horário de cada dia (o post/bio mais recente vale mais que o Google; anote divergência).
 - WhatsApp e telefone. Sem WhatsApp público: os botões ligam para o fixo e a mensagem oferece criar um WhatsApp.
@@ -70,7 +72,7 @@ avaliações · horário + endereço + mapa + contatos. Textos curtos, concretos
 
 ## 5. Antes de dar como pronta
 
-Rode `node ferramentas/auditoria/auditar.mjs <pasta>` (na pasta `feitopelolucas`) e corrija o que aparecer. A auditoria completa
-do lote acontece depois, mas não deixe erro conhecido para trás. Marque `prévia criada` no `lote.md` e guarde, para a mensagem,
-o que foi apurado: o detalhe real que inspirou o conceito, as pendências (divergências, avaliações negativas, perfil não reivindicado)
-e por onde mandar (WhatsApp, direct, ligação).
+Rode `node ferramentas/auditoria/auditar.mjs <pasta> --sem-fotos` (na pasta `feitopelolucas`) e corrija os erros. A auditoria completa
+do lote acontece depois, mas não deixe erro conhecido para trás. Na ficha: `situacao: "prévia criada"`, `previa` com o link,
+`peloQueVi` (o que foi apurado, de onde vieram as fotos, o detalhe real que inspirou o conceito), `atencao` (divergências,
+avaliações negativas recentes, perfil não reivindicado, decisões que você tomou sozinho) e `melhorCanal`. Atualize o `lote.md`.
