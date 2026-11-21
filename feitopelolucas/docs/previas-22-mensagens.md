@@ -39,3 +39,12 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 > Oi, pessoal do Pet Oliveira! Sou o Lucas, faço sites aqui em Campinas. Vocês têm 19 anos de história e mais de 600 avaliações no Google, mas não têm um site. Então montei uma ideia: https://feitopelolucas.com.br/previa/petoliveira/
 > Ele junta banho e tosa, veterinário e loja numa página, com agendamento pelo WhatsApp, aviso da agenda de fim de ano e uma passarela com os pets dos cenários temáticos. Se gostarem, a gente conversa!
 
+---
+
+## 5. A&F Car Funilaria e Pintura · /previa/afcar/
+
+**Pelo que vi:** Instagram quase parado (264 seguidores). A bio diz que atende particular e é credenciada em seguradoras. Um post anuncia "a primeira oficina Auto Premium em Campinas", da Porto. WhatsApp (19) 98386-0771. Fecha no almoço (11h45 às 13h). As avaliações citam muito o Fernando, a entrega antes do prazo e as seguradoras. No Maps achei fotos de antes e depois de um Civic.
+
+> Olá, Fernando e equipe da A&F Car! Sou o Lucas, faço sites aqui em Campinas. Vocês têm 562 avaliações no Google (muita gente falando da entrega antes do prazo), mas ainda sem site. Montei uma ideia de como ele poderia ser: https://feitopelolucas.com.br/previa/afcar/
+> Tem antes e depois interativo, orçamento por foto no WhatsApp, os dois caminhos (particular ou seguradora) e o destaque de oficina Auto Premium da Porto. Se gostarem, a gente conversa!
+
