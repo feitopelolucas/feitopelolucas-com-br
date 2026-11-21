@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Auto House · Restauração de faróis desde 1997 · Vila Maria, Campinas</title>
+<meta name="description" content="Prévia de site para a Auto House, restauradora de faróis e acessórios automotivos na Vila Maria, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/autohouse/">
+<meta property="og:title" content="Prévia de site · Auto House">
+<meta property="og:description" content="Pioneira em restauração de faróis desde 1997. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/autohouse/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0d1b2a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1b2a'/%3E%3Cpath d='M6 12c6-3 14-3 20 0v8c-6 3-14 3-20 0Z' fill='%23ffd447'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --noite:#0d1b2a; --noite-2:#14273b; --luz:#ffd447; --luz-fria:#e8f4ff; --amarelado:#c9a34a; --vermelho:#e63946;
+    --papel:#f5f7fa; --tinta:#0d1b2a; --tinta-2:#4a5a6b; --fio:#dbe2ea;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.6 "Sarabun",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Chakra Petch",sans-serif;font-weight:700;line-height:1.05;margin:0}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--luz);outline-offset:3px}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+
+  .previa{background:#050b12;color:#9fb0c2;font-size:.82rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--luz);font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .xadrez{height:10px;background:repeating-conic-gradient(#fff 0 25%,#111 0 50%) 0 0/20px 20px}
+
+  /* Noite */
+  .noite{background:radial-gradient(ellipse at 75% 40%,#1c3653 0%,var(--noite) 60%);color:#dce6f0;position:relative;overflow:hidden}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:14px}
+  .marca{text-decoration:none;display:flex;align-items:center;gap:10px}
+  .marca b{font:700 1.5rem/1 "Chakra Petch",sans-serif;letter-spacing:.02em;color:#fff;font-style:italic}
+  .marca b span{color:var(--vermelho)}
+  .marca small{display:block;font-size:.72rem;color:#8ea2b6;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:12px 22px;border-radius:8px;font-weight:700;text-decoration:none;transition:transform .15s,background .15s;font-size:1rem}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn.luz{background:var(--luz);color:var(--noite)}
+  .btn.luz:hover{background:#ffe27e}
+  .btn.vidro{background:rgba(255,255,255,.08);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+  .btn.escuro{background:var(--noite);color:#fff}
+  .btn.peq{min-height:44px;padding:9px 16px;font-size:.92rem}
+
+  .hero{padding:40px 0 80px}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:center}
+  .tag{display:inline-block;font:700 .8rem "Chakra Petch",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--luz);border:1px solid rgba(255,212,71,.4);padding:6px 12px;border-radius:4px}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.6rem);color:#fff;margin:18px 0 18px}
+  .hero h1 em{font-style:normal;color:var(--luz);text-shadow:0 0 34px rgba(255,212,71,.55)}
+  .hero p{font-size:1.14rem;max-width:31em;margin:0 0 28px;color:#c3d0dd}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+
+  /* Demonstração da luz */
+  .demo{background:#0a1520;border:1px solid #23384e;border-radius:18px;padding:18px}
+  .estrada{position:relative;height:260px;border-radius:12px;overflow:hidden;background:linear-gradient(180deg,#0b1622 0%,#0e1c2b 55%,#1a232d 55%,#141b23 100%)}
+  .estrada::after{content:"";position:absolute;left:50%;bottom:0;width:6px;height:45%;transform:translateX(-50%) perspective(200px) rotateX(55deg);background:repeating-linear-gradient(180deg,#e8e2c8 0 18px,transparent 18px 40px);opacity:.6}
+  .feixe{position:absolute;bottom:-10px;width:62%;height:78%;clip-path:polygon(46% 100%,54% 100%,92% 0,8% 0);transition:opacity .35s,filter .35s;filter:blur(6px);mix-blend-mode:screen;opacity:.85}
+  .feixe.e{left:4%}.feixe.d{right:4%}
+  .feixe{background:linear-gradient(0deg,rgba(255,240,180,.95),rgba(255,240,180,0) 92%)}
+  .estrada[data-modo="amarelado"] .feixe{opacity:.32;filter:sepia(1) saturate(2.4) blur(5px)}
+  .placa-r{position:absolute;right:16%;top:22%;width:58px;height:58px;background:#ffd447;transform:rotate(45deg);border:3px solid #111;transition:opacity .35s}
+  .placa-r::after{content:"!";position:absolute;inset:0;display:grid;place-items:center;transform:rotate(-45deg);font:700 1.6rem "Chakra Petch",sans-serif;color:#111}
+  .estrada[data-modo="amarelado"] .placa-r{opacity:.18}
+  .chaves{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+  .chaves button{min-height:48px;border-radius:10px;border:1px solid #2b4560;background:#0f2133;color:#c3d0dd;font:700 .95rem "Sarabun",sans-serif;cursor:pointer}
+  .chaves button[aria-pressed="true"]{background:var(--luz);color:var(--noite);border-color:var(--luz)}
+  .demo p{font-size:.88rem;color:#8ea2b6;margin:10px 2px 0}
+  @media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+
+  section{padding:88px 0}
+  .tit{max-width:660px;margin-bottom:40px}
+  .tit small{font:700 .8rem "Chakra Petch",sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--vermelho)}
+  .tit h2{font-size:clamp(2.1rem,4.4vw,3.1rem);margin-top:10px}
+  .tit p{color:var(--tinta-2);margin:12px 0 0}
+
+  /* Antes e depois */
+  .ad .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+  .par{display:grid;gap:10px}
+  .par figure{margin:0;position:relative;border-radius:14px;overflow:hidden}
+  .par img{width:100%;aspect-ratio:2/1;object-fit:cover}
+  .par figcaption{position:absolute;left:12px;top:12px;font:700 .8rem "Chakra Petch",sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:4px}
+  .par .antes figcaption{background:var(--amarelado);color:#2b2208}
+  .par .depois figcaption{background:var(--luz-fria);color:var(--noite)}
+  .porque{list-style:none;padding:0;margin:22px 0 0}
+  .porque li{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--fio)}
+  .porque li b{flex:none;width:34px;height:34px;border-radius:8px;background:var(--noite);color:var(--luz);display:grid;place-items:center;font-family:"Chakra Petch",sans-serif}
+  @media (max-width:900px){.ad .wrap{grid-template-columns:1fr}}
+
+  /* Serviços */
+  .serv{background:#fff;border-top:1px solid var(--fio);border-bottom:1px solid var(--fio)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{border:1px solid var(--fio);border-radius:16px;padding:26px;background:var(--papel)}
+  .card .ico{width:50px;height:50px;border-radius:12px;background:var(--noite);color:var(--luz);display:grid;place-items:center;margin-bottom:16px}
+  .card .ico svg{width:26px;height:26px}
+  .card h3{font-size:1.35rem;margin-bottom:8px}
+  .card p{margin:0;color:var(--tinta-2)}
+  .card.dest{background:var(--noite);color:#c3d0dd;border-color:var(--noite)}
+  .card.dest h3{color:#fff}
+  .card.dest p{color:#c3d0dd}
+  .card.dest .ico{background:var(--luz);color:var(--noite)}
+  @media (max-width:900px){.cards{grid-template-columns:1fr}}
+
+  /* Loja */
+  .loja .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .loja img{width:100%;border-radius:16px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .chips span{background:#fff;border:1px solid var(--fio);border-radius:999px;padding:7px 14px;font-weight:600;font-size:.92rem}
+  @media (max-width:900px){.loja .wrap{grid-template-columns:1fr}}
+
+  /* Avaliações */
+  .aval{background:var(--noite);color:#c3d0dd}
+  .aval .tit h2{color:#fff}
+  .aval .tit small{color:var(--luz)}
+  .falas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .falas blockquote{margin:0;background:var(--noite-2);border:1px solid #23384e;border-radius:14px;padding:24px;color:#e2eaf2}
+  .falas blockquote::before{content:"★★★★★";display:block;color:var(--luz);letter-spacing:3px;margin-bottom:8px;font-size:.9rem}
+  .falas cite{display:block;margin-top:12px;font-style:normal;font-weight:700;font-size:.85rem;color:#8ea2b6}
+  @media (max-width:900px){.falas{grid-template-columns:1fr}}
+
+  /* Contato */
+  .contato .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:36px}
+  .horas{width:100%;border-collapse:collapse;margin:0 0 22px}
+  .horas td{padding:10px 0;border-bottom:1px solid var(--fio)}
+  .horas td:last-child{text-align:right;font-weight:700}
+  .horas tr.hoje td{color:var(--vermelho)}
+  .dados{list-style:none;margin:0 0 22px;padding:0}
+  .dados li{padding:8px 0}
+  .dados small{display:block;font-weight:700;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-2)}
+  .dados a{font-weight:700;text-decoration:none}
+  .mapa{border-radius:16px;overflow:hidden;border:1px solid var(--fio);min-height:400px}
+  .mapa iframe{width:100%;height:100%;min-height:400px;border:0;display:block}
+  @media (max-width:900px){.contato .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:var(--noite);color:#8ea2b6;padding:24px 0 100px;font-size:.88rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--luz);font-weight:700;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 12px 26px -10px rgba(0,0,0,.5);transition:opacity .3s,transform .3s}
+  .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
+  @media (min-width:901px){footer{padding-bottom:24px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial da Auto House. É uma ideia de site montada por Lucas para apresentar à loja.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20da%20Auto%20House%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<div class="noite">
+  <header class="topo">
+    <div class="wrap">
+      <a class="marca" href="#inicio" aria-label="Auto House, início"><span><b>AUTO <span>HOUSE</span></b><small>Faróis e acessórios · desde 1997</small></span></a>
+      <a class="btn luz peq zap" href="https://wa.me/5519993706179">WhatsApp</a>
+    </div>
+  </header>
+  <section class="hero" id="inicio" style="padding-top:40px" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="tag">Pioneira em restauração de faróis</span>
+        <h1 id="titulo">Farol amarelado? Volta a <em>enxergar</em> à noite.</h1>
+        <p>Desde 1997 a Auto House restaura faróis opacos e amarelados na Vila Maria. Antes de trocar a peça, traga o carro: na maioria das vezes dá para recuperar a lente, gastando bem menos que numa peça nova.</p>
+        <div class="acoes">
+          <a class="btn luz zap" href="https://wa.me/5519993706179?text=Ol%C3%A1%21%20Quero%20um%20or%C3%A7amento%20para%20restaurar%20meus%20far%C3%B3is.%20Segue%20foto."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>Orçamento por foto</a>
+          <a class="btn vidro" href="#antes-depois">Ver antes e depois</a>
+        </div>
+      </div>
+      <div class="demo">
+        <div class="estrada" id="estrada" data-modo="restaurado" role="img" aria-label="Simulação do alcance da luz do farol">
+          <div class="placa-r"></div>
+          <div class="feixe e"></div><div class="feixe d"></div>
+        </div>
+        <div class="chaves">
+          <button type="button" data-modo="amarelado" aria-pressed="false">Farol amarelado</button>
+          <button type="button" data-modo="restaurado" aria-pressed="true">Farol restaurado</button>
+        </div>
+        <p>Simulação: com a lente opaca, a luz se espalha e alcança menos. Restaurada, ela volta a iluminar a pista e as placas.</p>
+      </div>
+    </div>
+  </section>
+  <div class="xadrez" aria-hidden="true"></div>
+</div>
+
+<main>
+  <section class="ad" id="antes-depois" aria-labelledby="t-ad">
+    <div class="wrap">
+      <div class="par">
+        <figure class="antes"><img src="fotos/hilux-antes.jpg" alt="Frente de Toyota Hilux com os faróis amarelados e opacos" width="1063" height="556"><figcaption>Antes</figcaption></figure>
+        <figure class="depois"><img src="fotos/hilux-depois.jpg" alt="A mesma Hilux com os faróis transparentes depois da restauração" width="1063" height="557"><figcaption>Depois</figcaption></figure>
+      </div>
+      <div>
+        <div class="tit" style="margin-bottom:0">
+          <small>Antes e depois</small>
+          <h2 id="t-ad">Mesma Hilux, outro olhar</h2>
+          <p>O sol e o tempo deixam a lente de policarbonato amarelada. Isso não é só estética: a luz perde alcance e o carro pode até reprovar na vistoria.</p>
+        </div>
+        <ul class="porque">
+          <li><b>1</b><span><strong>Mais segurança</strong> à noite e na chuva.</span></li>
+          <li><b>2</b><span><strong>Mais barato</strong> que trocar o farol inteiro.</span></li>
+          <li><b>3</b><span><strong>Carro valorizado</strong> na hora de vender.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="serv" aria-labelledby="t-serv">
+    <div class="wrap">
+      <div class="tit"><small>Serviços</small><h2 id="t-serv">Tudo para o carro enxergar e ser visto</h2></div>
+      <div class="cards">
+        <article class="card dest">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9c4-2 8-2 11 0v6c-3 2-7 2-11 0Z"/><path d="M17 8l4-1M17 12h4M17 16l4 1"/></svg></div>
+          <h3>Restauração de faróis</h3>
+          <p>Lixamento, polimento e proteção da lente para tirar o amarelado e devolver a transparência.</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3Z"/></svg></div>
+          <h3>Lâmpadas automotivas</h3>
+          <p>Troca e orientação sobre a lâmpada certa para o seu carro, sem ofuscar ninguém.</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/></svg></div>
+          <h3>Acessórios</h3>
+          <p>Calotas, luzes, cabos e peças de reposição rápida para resolver na hora.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="loja" aria-labelledby="t-loja">
+    <div class="wrap">
+      <img src="fotos/fachada.jpg" alt="Loja Auto House na Av. Marechal Carmona, com calotas expostas e carros na frente" loading="lazy" width="1600" height="900">
+      <div>
+        <div class="tit" style="margin-bottom:0">
+          <small>A loja</small>
+          <h2 id="t-loja">A fachada quadriculada da Marechal Carmona</h2>
+          <p>Fácil de achar: é a loja com a bandeira de corrida e a parede de calotas. Tem espaço para parar o carro bem na frente da loja.</p>
+        </div>
+        <div class="chips"><span>Calotas</span><span>Faróis</span><span>Lanternas</span><span>Lâmpadas</span><span>Cabos</span><span>Acessórios</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="aval" aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="tit"><small>4,7 · 310 avaliações no Google</small><h2 id="t-aval">Quem trouxe o farol, recomenda</h2></div>
+      <div class="falas">
+        <blockquote>Não imaginava que o resultado ficaria tão bom. Deixaram os meus faróis como novos, a um preço justo.<cite>Felipe · Google</cite></blockquote>
+        <blockquote>Não estão preocupados só em vender. A sugestão deles foi mais barata e eficiente do que eu queria fazer nos faróis. Nota 10!<cite>Eduardo · Google</cite></blockquote>
+        <blockquote>Além do serviço ter ficado ótimo, me ajudaram em outra coisa no carro.<cite>Resumo · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="contato" id="contato" aria-labelledby="t-cont">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:20px"><small>Contato</small><h2 id="t-cont">Traga o carro</h2></div>
+        <table class="horas" id="horas">
+          <tr data-g="semana"><td>Segunda a sexta</td><td>8h às 18h</td></tr>
+          <tr data-g="sab"><td>Sábado</td><td>8h30 às 12h30</td></tr>
+          <tr data-g="dom"><td>Domingo</td><td>Fechado</td></tr>
+        </table>
+        <ul class="dados">
+          <li><small>WhatsApp</small><a class="zap" href="https://wa.me/5519993706179">(19) 99370-6179</a></li>
+          <li><small>Telefone</small><a href="tel:+551932329279">(19) 3232-9279</a></li>
+          <li><small>Endereço</small>Av. Marechal Carmona, 1110 · Vila Maria, Campinas (SP)</li>
+        </ul>
+        <a class="btn escuro" href="https://www.google.com/maps/dir/?api=1&amp;destination=Auto+House,+Av.+Marechal+Carmona,+1110,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Auto House, Av. Marechal Carmona, 1110, Vila Maria, Campinas" src="https://www.google.com/maps?q=Auto+House+Restauradora+de+Far%C3%B3is,+Av.+Marechal+Carmona,+1110+-+Vila+Maria,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Auto House Acessórios · desde 1997 · Vila Maria, Campinas</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn luz fixo some zap" href="https://wa.me/5519993706179" aria-label="Pedir orçamento pelo WhatsApp">Orçamento</a>
+
+<script>
+(function () {
+  document.querySelectorAll(".zap").forEach(function(a){a.target="_blank";a.rel="noopener";});
+  var est = document.getElementById("estrada"), bts = document.querySelectorAll(".chaves button");
+  bts.forEach(function(b){ b.addEventListener("click", function(){
+    est.dataset.modo = b.dataset.modo;
+    bts.forEach(function(x){ x.setAttribute("aria-pressed", x===b ? "true" : "false"); });
+  }); });
+  try {
+    var d = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short"}).format(new Date()));
+    var g = d===0 ? "dom" : (d===6 ? "sab" : "semana");
+    var tr = document.querySelector('#horas tr[data-g="'+g+'"]'); if (tr) tr.classList.add("hoje");
+  } catch (e) {}
+  var f = document.querySelector(".fixo"), t = document.querySelector(".noite");
+  if (f && t && "IntersectionObserver" in window) new IntersectionObserver(function(e){f.classList.toggle("some", e[0].isIntersecting)}).observe(t);
+})();
+</script>
+</body>
+</html>

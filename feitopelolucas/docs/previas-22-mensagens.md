@@ -75,3 +75,12 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 > Oi, tudo bem? Sou o Lucas, faço sites aqui em Campinas. A Estação Aquidabã fica aberta a madrugada inteira, e quem procura "lanchonete aberta agora" no Centro merece achar vocês. Então montei uma ideia de site: https://feitopelolucas.com.br/previa/estacaoaquidaba/
 > Tem um painel de estação que mostra na hora se está aberto, o cardápio separado em "plataformas", a boquinha de anjo em destaque e a rota até a Aquidabã. Se curtirem, me chama!
 
+---
+
+## 9. Auto House · /previa/autohouse/
+
+**Pelo que vi:** o link do Instagram no Google leva a um perfil que não existe mais. O letreiro da loja (foto do Maps) diz "desde 1997, pioneiro em restauração de faróis" e traz o WhatsApp (19) 99370-6179. Também vende acessórios: calotas, lâmpadas, cabos. No Maps tem um antes e depois de uma Hilux. As avaliações elogiam o preço justo e a honestidade ("não querem só vender").
+
+> Olá, pessoal da Auto House! Sou o Lucas, faço sites aqui em Campinas. Vi que o Instagram que aparece no Google de vocês não abre mais, então quem procura "restauração de farol" fica sem ter onde clicar. Montei uma ideia de site: https://feitopelolucas.com.br/previa/autohouse/
+> Tem uma simulação do farol amarelado contra o restaurado, o antes e depois da Hilux, orçamento por foto no WhatsApp e os 28 anos de loja em destaque. Se gostarem, a gente conversa!
+
