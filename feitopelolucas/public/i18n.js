@@ -7,7 +7,7 @@
 window.I18N = {
   en: {
     // Página
-    "titulo": "Feito pelo Lucas — websites, apps and games",
+    "titulo": "Feito pelo Lucas — websites, apps and games in Campinas, Brazil",
     "descricao": "Website templates, mobile apps, desktop programs and games. Made by Lucas, in Campinas, Brazil.",
     "lang.atual": "You are viewing the site in English",
 
@@ -104,7 +104,9 @@ window.I18N = {
     "p.fotos": "Photos",
     "p.textos": "Text",
     "p.dominio": "Domain",
-    "p.enviar": "Send via WhatsApp"
+    "p.enviar": "Send via WhatsApp",
+    "p.ok": "I opened WhatsApp with your message ready. Now just tap send.",
+    "p.okLink": "Didn't open? Tap here."
   },
 
   // Textos montados pelo app.js, nas duas línguas

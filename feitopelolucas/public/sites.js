@@ -45,7 +45,7 @@ window.SITES = [
     preco: 990,
     status: "encomenda",
     demo: "/modelos/brisa-higienizacao/",
-    imagem: "/img/modelos/1686178827149-6d55c72d81df-g.jpg",
+    imagem: "/img/modelos/1686178827149-6d55c72d81df-m.jpg",
     cores: ["#1F6FEB"],
     recursos: ["Feito primeiro para o celular", "Botão de WhatsApp por serviço", "Botão fixo de WhatsApp", "Galeria de fotos", "Horário e contato", "Link para o Instagram"],
     en: {
@@ -63,7 +63,7 @@ window.SITES = [
     preco: 1990,
     status: "encomenda",
     demo: "/modelos/casa-verde-vasos/",
-    imagem: "/img/modelos/1621512367176-03782e847fa2-g.jpg",
+    imagem: "/img/modelos/1621512367176-03782e847fa2-m.jpg",
     cores: ["#2f5d46"],
     recursos: ["Catálogo de até 6 produtos", "Página de cada produto", "Carrinho salvo no celular", "Produtos em falta", "Pagamento pela Stripe", "Pedidos guardados no banco"],
     en: {
@@ -81,7 +81,7 @@ window.SITES = [
     preco: 1490,
     status: "encomenda",
     demo: "/modelos/cantinho-do-sabor/",
-    imagem: "/img/modelos/1765894711215-ba5b1bd6d1f7-g.jpg",
+    imagem: "/img/modelos/1765894711215-ba5b1bd6d1f7-m.jpg",
     cores: ["#7a1f1f"],
     recursos: ["Abre pelo QR code", "Categorias e preços", "Itens indisponíveis no dia", "Pedido de reserva validado", "Dias, horários e máximo de pessoas", "Tudo enviado pelo WhatsApp"],
     en: {
@@ -99,7 +99,7 @@ window.SITES = [
     preco: 1490,
     status: "encomenda",
     demo: "/modelos/esquina-do-lanche/",
-    imagem: "/img/modelos/1568901346375-23c9450c58cd-g.jpg",
+    imagem: "/img/modelos/1568901346375-23c9450c58cd-m.jpg",
     cores: ["#2b211b"],
     recursos: ["Combos em destaque", "Carrinho fixo com o total", "Bairros de entrega", "Pagamento e troco", "Pedido escrito no WhatsApp", "Dados num bloco só"],
     en: {
@@ -118,7 +118,7 @@ window.SITES = [
     status: "encomenda",
     destaque: true,
     demo: "/modelos/sabor-e-brasa/",
-    imagem: "/img/modelos/1679711246825-1f2bd51b16d0-g.jpg",
+    imagem: "/img/modelos/1679711246825-1f2bd51b16d0-m.jpg",
     cores: ["#3a1c0f", "#c2410c"],
     recursos: ["Quadro do que está no fogo hoje", "Preparo contado hora a hora", "Preços do balcão e para levar", "Encomenda pelo WhatsApp", "Reserva de mesa", "Espaço para fotos"],
     en: {
@@ -136,7 +136,7 @@ window.SITES = [
     preco: 1190,
     status: "encomenda",
     demo: "/modelos/clinica-vida/",
-    imagem: "/img/modelos/1631217868264-e5b90bb7e133-g.jpg",
+    imagem: "/img/modelos/1631217868264-e5b90bb7e133-m.jpg",
     cores: ["#0c4a6e", "#14b8a6"],
     recursos: ["Quem atende hoje", "Quadro semanal por especialidade", "Profissionais e registros", "Orientações antes da consulta", "Convênios aceitos", "Marcação pelo WhatsApp"],
     en: {
@@ -154,7 +154,7 @@ window.SITES = [
     preco: 1190,
     status: "encomenda",
     demo: "/modelos/lex-advocacia/",
-    imagem: "/img/modelos/1505664194779-8beaceb93744-g.jpg",
+    imagem: "/img/modelos/1505664194779-8beaceb93744-m.jpg",
     cores: ["#1c1917", "#a16207"],
     recursos: ["Áreas em artigos numerados", "Sócios com assinatura e OAB", "Lista de artigos do escritório", "Primeira conversa pelo WhatsApp", "Visual de papel timbrado", "Texto sóbrio, sem promessas"],
     en: {
@@ -173,7 +173,7 @@ window.SITES = [
     status: "encomenda",
     destaque: true,
     demo: "/modelos/navalha-barbearia/",
-    imagem: "/img/modelos/1585747860715-2ba37e788b70-g.jpg",
+    imagem: "/img/modelos/1585747860715-2ba37e788b70-m.jpg",
     cores: ["#111827", "#b91c1c"],
     recursos: ["Tabela em quadro de letras", "Agenda por barbeiro", "Fila com e sem hora marcada", "Fotos dos cortes", "Horários e endereço"],
     en: {
@@ -191,7 +191,7 @@ window.SITES = [
     preco: 1190,
     status: "encomenda",
     demo: "/modelos/lente-portfolio/",
-    imagem: "/img/modelos/1772989665252-7cb41ae759cc-g.jpg",
+    imagem: "/img/modelos/1772989665252-7cb41ae759cc-m.jpg",
     cores: ["#27272a", "#71717a"],
     recursos: ["Trabalhos em tiras de filme", "Fotos escolhidas em destaque", "Foto ampliada ao tocar", "Tabela de valores", "Consulta de datas pelo WhatsApp"],
     en: {
@@ -210,7 +210,7 @@ window.SITES = [
     status: "encomenda",
     destaque: true,
     demo: "/modelos/forca-fit/",
-    imagem: "/img/modelos/1689877020200-403d8542d95d-g.jpg",
+    imagem: "/img/modelos/1689877020200-403d8542d95d-m.jpg",
     cores: ["#052e16", "#65a30d"],
     recursos: ["Grade de aulas do dia", "Próxima aula com contagem", "Grade de cada dia da semana", "Aula experimental com horário", "Modalidades e planos"],
     en: {
@@ -228,7 +228,7 @@ window.SITES = [
     preco: 490,
     status: "encomenda",
     demo: "/modelos/flor-de-lis/",
-    imagem: "/img/modelos/1718568698986-eb9045432622-g.jpg",
+    imagem: "/img/modelos/1718568698986-eb9045432622-m.jpg",
     cores: ["#6d2e46"],
     recursos: ["Uma tela, feita para o celular", "Aberto ou fechado agora", "Carrossel de produtos com preço", "Pedido de cada produto no WhatsApp", "Horário do dia destacado"],
     en: {
@@ -246,7 +246,7 @@ window.SITES = [
     preco: 990,
     status: "encomenda",
     demo: "/modelos/julia-mendes-psicologa/",
-    imagem: "/img/modelos/1754037783933-c25ff9f68f87-g.jpg",
+    imagem: "/img/modelos/1754037783933-c25ff9f68f87-m.jpg",
     cores: ["#4b5a4a"],
     recursos: ["Apresentação em forma de carta", "Presencial e online", "Pagamento e reembolso", "Dúvidas da primeira sessão", "Contato pelo WhatsApp"],
     en: {
@@ -265,7 +265,7 @@ window.SITES = [
     status: "encomenda",
     destaque: true,
     demo: "/modelos/trio-sereno/",
-    imagem: "/img/modelos/1632054553195-bfd7034fee25-g.jpg",
+    imagem: "/img/modelos/1632054553195-bfd7034fee25-m.jpg",
     cores: ["#121212", "#ff5a3c"],
     recursos: ["Repertório com busca", "Filtro por momento do evento", "Setlist montado pelo cliente", "Formações e valores por hora", "Orçamento pelo WhatsApp"],
     en: {
@@ -284,7 +284,7 @@ window.SITES = [
     status: "encomenda",
     destaque: true,
     demo: "/modelos/panela-da-semana/",
-    imagem: "/img/modelos/1543352632-5a4b24e4d2a6-g.jpg",
+    imagem: "/img/modelos/1543352632-5a4b24e4d2a6-m.jpg",
     cores: ["#2d3a2e", "#d8532f"],
     recursos: ["Lousa do prato do dia", "Kits de 5, 10 ou 20", "Montagem por sabor", "Prazo do pedido com contagem", "Entrega por bairro"],
     en: {
@@ -302,7 +302,7 @@ window.SITES = [
     preco: 1490,
     status: "encomenda",
     demo: "/modelos/atelie-cereja/",
-    imagem: "/img/modelos/1632345031435-8727f6897d53-g.jpg",
+    imagem: "/img/modelos/1632345031435-8727f6897d53-m.jpg",
     cores: ["#5b1a2b"],
     recursos: ["Ficha que soma tempo e valor", "Cartela de cores clicável", "Escolha da profissional", "Carrossel de trabalhos", "Pedido de horário no WhatsApp"],
     en: {
@@ -320,7 +320,7 @@ window.SITES = [
     preco: 1490,
     status: "encomenda",
     demo: "/modelos/pelo-e-banho/",
-    imagem: "/img/modelos/1719464454959-9cf304ef4774-g.jpg",
+    imagem: "/img/modelos/1719464454959-9cf304ef4774-m.jpg",
     cores: ["#24507a", "#f6c945"],
     recursos: ["Preço por porte e pelo", "Carteirinha com vacinas", "Leva e traz por bairro", "Tabela completa", "Carrossel de pets atendidos"],
     en: {
@@ -339,7 +339,7 @@ window.SITES = [
     status: "encomenda",
     destaque: true,
     demo: "/modelos/forno-velho/",
-    imagem: "/img/modelos/1763647836753-e06fe1f8707b-g.jpg",
+    imagem: "/img/modelos/1763647836753-e06fe1f8707b-m.jpg",
     cores: ["#1f1813", "#c0321f"],
     recursos: ["Meio a meio desenhado", "Preço pelo sabor mais caro", "Bordas e tamanhos", "Várias pizzas no pedido", "Faixa de fotos em movimento"],
     en: {
@@ -357,7 +357,7 @@ window.SITES = [
     preco: 1490,
     status: "encomenda",
     demo: "/modelos/prumo-contabil/",
-    imagem: "/img/modelos/1626266061368-46a8f578ddd6-g.jpg",
+    imagem: "/img/modelos/1626266061368-46a8f578ddd6-m.jpg",
     cores: ["#0f3d2e"],
     recursos: ["Simulador de mensalidade", "Aviso de limite do MEI", "Vencimentos do mês", "Apresentação do contador", "Abertura de CNPJ"],
     en: {
@@ -375,7 +375,7 @@ window.SITES = [
     preco: 1490,
     status: "encomenda",
     demo: "/modelos/doce-oficio/",
-    imagem: "/img/modelos/1606890737304-57a1ca8a5b62-g.jpg",
+    imagem: "/img/modelos/1606890737304-57a1ca8a5b62-m.jpg",
     cores: ["#3b2a22", "#c2405a"],
     recursos: ["Montagem passo a passo", "Preço que muda na hora", "Antecedência e datas lotadas", "Carrossel de bolos", "Encomenda pelo WhatsApp"],
     en: {
@@ -393,7 +393,7 @@ window.SITES = [
     preco: 1790,
     status: "encomenda",
     demo: "/modelos/oficina-pistao/",
-    imagem: "/img/modelos/1615906655593-ad0386982a0f-g.jpg",
+    imagem: "/img/modelos/1615906655593-ad0386982a0f-m.jpg",
     cores: ["#16191d", "#f26b1d"],
     recursos: ["Ordem de serviço pelo site", "Andamento pelo número da OS", "Preços por tipo de motor", "Fotos da oficina", "Garantia e pagamento"],
     en: {
@@ -411,7 +411,7 @@ window.SITES = [
     preco: 1490,
     status: "encomenda",
     demo: "/modelos/babel-idiomas/",
-    imagem: "/img/modelos/1758270704763-22072a90d3b6-g.jpg",
+    imagem: "/img/modelos/1758270704763-22072a90d3b6-m.jpg",
     cores: ["#1d2f6f", "#d23b2f"],
     recursos: ["Teste de nível com correção", "Turma sugerida destacada", "Vagas por turma", "Método e mensalidades", "Aula experimental com o resultado"],
     en: {
@@ -429,7 +429,7 @@ window.SITES = [
     preco: 1790,
     status: "encomenda",
     demo: "/modelos/espaco-jequitiba/",
-    imagem: "/img/modelos/1768851142332-75f3d1b47452-g.jpg",
+    imagem: "/img/modelos/1768851142332-75f3d1b47452-m.jpg",
     cores: ["#2f3b2a", "#b8955a"],
     recursos: ["Capa com fotos que se alternam", "Agenda com datas reservadas", "Orçamento por convidado", "Pacotes de buffet", "Pedido com a data escolhida"],
     en: {
@@ -447,7 +447,7 @@ window.SITES = [
     preco: 1790,
     status: "encomenda",
     demo: "/modelos/morada-imoveis/",
-    imagem: "/img/modelos/1523217582562-09d0def993a6-g.jpg",
+    imagem: "/img/modelos/1523217582562-09d0def993a6-m.jpg",
     cores: ["#173a35", "#c7a356"],
     recursos: ["Filtros de aluguel e venda", "Ficha de cada imóvel", "Carrossel de fotos", "Condomínio e IPTU", "Visita com o código do imóvel"],
     en: {

@@ -26,9 +26,9 @@ i{font-family:var(--serif);font-style:italic}
 
 /* Topo */
 .top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-top:28px;padding-bottom:28px}
-.name{font-family:var(--serif);font-size:1.5rem;text-decoration:none}
-.top nav{display:flex;gap:22px;flex-wrap:wrap;font-size:.95rem}
-.top nav a{text-decoration:none;color:var(--soft)}
+.name{font-family:var(--serif);font-size:1.5rem;text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
+.top nav{display:flex;gap:0 22px;flex-wrap:wrap;font-size:1rem}
+.top nav a{text-decoration:none;color:var(--soft);display:inline-flex;align-items:center;min-height:44px}
 .top nav a:hover{color:var(--ink);text-decoration:underline}
 @media (max-width:640px){.top{flex-direction:column;gap:6px}.top nav{gap:16px}}
 
@@ -43,7 +43,8 @@ h1 i{color:var(--mark)}
 .portrait figcaption{font:13px var(--mono);color:var(--soft);padding:10px 2px 2px;display:flex;justify-content:space-between}
 .portrait figcaption::after{content:"";width:28px;height:10px;margin-top:4px;background:var(--gold);clip-path:polygon(0 0,50% 40%,100% 0,100% 100%,50% 60%,0 100%)}
 .intro-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin:28px 0 0}
-.intro-ctas .btn{padding:13px 22px}
+.intro-ctas .btn{padding:13px 22px;min-height:48px}
+.intro-ctas .link{display:inline-flex;align-items:center;min-height:44px}
 @media (max-width:860px){.intro{grid-template-columns:1fr;gap:36px;padding-top:32px}.portrait{max-width:220px}}
 @media (max-width:480px){.lang-atual{display:none}.lang-bar .wrap{justify-content:flex-end}}
 .wa-fixo{position:fixed;right:16px;bottom:16px;z-index:20;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--paper);box-shadow:0 10px 24px -8px rgba(0,0,0,.5);transition:background .15s}
@@ -61,7 +62,7 @@ h2{font-size:clamp(2.1rem,4.6vw,3.2rem);margin-bottom:28px}
 .service h3{font-size:1.9rem}
 .service p{margin:0;color:var(--soft);max-width:560px}
 .service p a,.service p b{color:var(--ink)}
-.ask{font-size:.95rem;font-weight:500;text-decoration:underline;cursor:pointer;white-space:nowrap}
+.ask{font-size:1rem;font-weight:500;text-decoration:underline;cursor:pointer;white-space:nowrap;display:inline-flex;align-items:center;min-height:44px}
 .ask:hover{color:var(--mark)}
 @media (max-width:860px){
   .service{grid-template-columns:40px 1fr;gap:6px 16px}
@@ -83,15 +84,15 @@ h2{font-size:clamp(2.1rem,4.6vw,3.2rem);margin-bottom:28px}
 .catalog-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:36px}
 .catalog-head h2{margin-bottom:8px}
 .sub{margin:0;color:var(--soft)}
-.filters{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:.95rem}
+.filters{display:flex;flex-wrap:wrap;gap:0 18px;font-size:1rem}
 @media (max-width:640px){
   .catalog-head{display:block}
   .filters{flex-wrap:nowrap;overflow-x:auto;gap:8px;margin:20px -16px 0;padding:0 16px 6px;scrollbar-width:none}
   .filters::-webkit-scrollbar{display:none}
-  .catalog .filters button{flex:none;padding:8px 14px;border:1px solid var(--rule);border-radius:999px;white-space:nowrap}
+  .catalog .filters button{flex:none;padding:0 16px;border:1px solid var(--rule);border-radius:999px;white-space:nowrap}
   .catalog .filters button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink);text-decoration:none}
 }
-.filters button{border:0;background:none;padding:0;font:inherit;color:var(--soft);cursor:pointer}
+.filters button{border:0;background:none;padding:0;font:inherit;color:var(--soft);cursor:pointer;min-height:44px;display:inline-flex;align-items:center}
 .filters button:hover{color:var(--ink)}
 .filters button[aria-pressed="true"]{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
 .filters sup{font:11px var(--mono);margin-left:2px}
@@ -108,9 +109,9 @@ h2{font-size:clamp(2.1rem,4.6vw,3.2rem);margin-bottom:28px}
 .item:hover .cover{outline:1px solid var(--ink);outline-offset:-1px}
 .item-line{display:flex;flex-direction:column;gap:2px;margin-top:14px}
 .item h3{font-size:1.6rem}
-.item .price{font:500 15px var(--mono);white-space:nowrap}
+.item .price{font:500 16px var(--mono);white-space:nowrap}
 .item .price s{color:var(--soft);font-weight:400;margin-right:6px}
-.item p{margin:6px 0 0;color:var(--soft);font-size:.95rem}
+.item p{margin:6px 0 0;color:var(--soft);font-size:1rem}
 .item .meta{margin-top:10px}
 .item.sold .cover>:not(.stamp){filter:grayscale(1);opacity:.55}
 .item.sold h3,.item.sold .price{color:var(--soft)}
@@ -144,12 +145,13 @@ h2{font-size:clamp(2.1rem,4.6vw,3.2rem);margin-bottom:28px}
 .contact-links a:hover{color:var(--mark)}
 
 /* Rodapé */
-.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:24px;padding-bottom:40px;border-top:1px solid var(--rule);font:13px var(--mono);color:var(--soft)}
+.foot a{display:inline-flex;align-items:center;min-height:44px}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-top:14px;padding-bottom:40px;border-top:1px solid var(--rule);font:13px var(--mono);color:var(--soft)}
 
 /* Janela de detalhes */
 .modal{width:min(760px,calc(100% - 32px));max-height:calc(100% - 32px);padding:0;border:1px solid var(--rule);border-radius:2px;background:var(--paper);color:var(--ink)}
 .modal::backdrop{background:rgba(20,18,14,.55)}
-.modal-close{position:sticky;top:12px;float:right;margin:12px 12px -48px 0;z-index:2;border:1px solid var(--rule);background:var(--paper);color:var(--ink);font:13px var(--mono);padding:6px 10px;cursor:pointer}
+.modal-close{position:sticky;top:12px;float:right;margin:12px 12px -48px 0;z-index:2;border:1px solid var(--rule);background:var(--paper);color:var(--ink);font:13px var(--mono);padding:0 14px;min-height:44px;cursor:pointer}
 .modal-media{position:relative;aspect-ratio:16/7;overflow:hidden;border-bottom:1px solid var(--rule)}
 .modal-media img{width:100%;height:100%;object-fit:cover;object-position:center}
 .modal-body{padding:28px}
@@ -166,36 +168,39 @@ h2{font-size:clamp(2.1rem,4.6vw,3.2rem);margin-bottom:28px}
 
 /* Pedido dentro da janela */
 .pedido{margin-top:32px;padding-top:24px;border-top:1px solid var(--rule);scroll-margin-top:16px}
-.pedido-intro{color:var(--soft);margin:0 0 18px!important;font-size:.95rem}
+.pedido-intro{color:var(--soft);margin:0 0 18px!important;font-size:1rem}
 .campos{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px}
-.campos label{display:grid;gap:6px;font-size:.88rem;font-weight:500}
+.campos label{display:grid;gap:6px;font-size:1rem;font-weight:500}
 .campos .largo{grid-column:1/-1}
 .campos input,.campos textarea{width:100%;font:inherit;font-size:1rem;font-weight:400;color:var(--ink);background:var(--paper-2);border:1px solid var(--rule);border-radius:2px;padding:11px 12px;min-height:46px}
 .campos textarea{resize:vertical}
 .campos input:focus,.campos textarea:focus{outline:2px solid var(--mark);outline-offset:0;border-color:var(--mark)}
 .campos input.invalido{border-color:var(--mark);outline:1px solid var(--mark)}
 .tenho{border:0;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px}
-.tenho legend{font-size:.88rem;font-weight:500;margin-bottom:8px;padding:0}
-.tenho label{display:flex;align-items:center;gap:8px;min-height:40px;cursor:pointer}
+.tenho legend{font-size:1rem;font-weight:500;margin-bottom:8px;padding:0}
+.tenho label{display:flex;align-items:center;gap:8px;min-height:44px;cursor:pointer}
 .tenho input{width:18px;height:18px;accent-color:var(--mark)}
 .pedido-erro{color:var(--mark);font-weight:500;margin:14px 0 0!important}
 .pedido-erro:empty{display:none}
+.pedido-ok{margin:14px 0 0!important;padding:12px 14px;background:var(--paper-2);border-left:2px solid var(--gold);color:var(--ink)!important}
+.pedido-ok[hidden]{display:none}
+.pedido-ok a{font-weight:500;display:inline-flex;align-items:center;min-height:44px}
 .pedido .btn{margin-top:18px;border:0;font:inherit;font-weight:500}
 @media (max-width:560px){.campos{grid-template-columns:1fr}}
 
 /* 404 */
-.center{min-height:100vh;display:grid;place-content:center;text-align:center;padding:16px;gap:12px}
+.center{min-height:100vh;min-height:100dvh;display:grid;place-content:center;text-align:center;padding:16px;gap:12px}
 .center h1{max-width:none}
 
 /* Barra de idioma */
 .lang-bar{background:var(--ink);color:var(--paper);font:13px/1.4 var(--mono)}
-.lang-bar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+.lang-bar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-top:6px;padding-bottom:6px}
 .lang-atual{opacity:.8}
 .lang-switch{display:flex;border:1px solid currentColor;border-radius:999px;overflow:hidden}
-.lang-switch button{border:0;background:none;color:inherit;font:inherit;padding:5px 14px;cursor:pointer}
+.lang-switch button{border:0;background:none;color:inherit;font:inherit;padding:0 16px;min-height:44px;cursor:pointer}
 .lang-switch button[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
 .lang-switch button:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
-.m-aviso{font-size:.9rem;color:var(--soft);border-left:2px solid var(--gold);padding:4px 0 4px 12px;margin:16px 0 0}
+.m-aviso{font-size:1rem;color:var(--soft);border-left:2px solid var(--gold);padding:4px 0 4px 12px;margin:16px 0 0}
 
 /* Exemplos de aplicativos e programas */
 .examples{padding-top:72px;padding-bottom:72px;border-bottom:1px solid var(--rule)}
@@ -209,7 +214,7 @@ h2{font-size:clamp(2.1rem,4.6vw,3.2rem);margin-bottom:28px}
 .ex:hover{border-color:var(--ink)}
 .ex img{width:48px;height:48px;border-radius:12px}
 .ex b{display:block;font-family:var(--serif);font-weight:400;font-size:1.45rem;line-height:1.1;margin-bottom:4px}
-.ex span span{display:block;color:var(--soft);font-size:.93rem;line-height:1.45}
-.ex-abrir{grid-column:2;font-size:.9rem;font-weight:500;text-decoration:underline}
+.ex span span{display:block;color:var(--soft);font-size:1rem;line-height:1.45}
+.ex-abrir{grid-column:2;font-size:1rem;font-weight:500;text-decoration:underline}
 .ex:hover .ex-abrir{color:var(--mark)}
 @media (max-width:860px){.ex-grupo{grid-template-columns:1fr}}

@@ -161,6 +161,7 @@
     atual = s;
     preencher(s);
     $("#p-erro").textContent = "";
+    $("#p-ok").hidden = true;
     modal.querySelectorAll(".invalido").forEach((el) => el.classList.remove("invalido"));
     modal.showModal();
     modal.scrollTop = 0;
@@ -200,7 +201,11 @@
     if (v("#p-cores")) linhas.push(`${t.rotCores}: ${v("#p-cores")}`);
     linhas.push(`${t.rotTenho}: ${tenho.length ? tenho.join(", ") : t.nadaAinda}`);
     if (v("#p-info")) linhas.push("", t.rotInfo, v("#p-info"));
-    window.open(whatsLink(linhas.join("\n")), "_blank", "noopener");
+    // Abre o WhatsApp e mostra a confirmação, com o link de reserva caso o navegador bloqueie a janela
+    const link = whatsLink(linhas.join("\n"));
+    $("#p-ok-link").href = link;
+    $("#p-ok").hidden = false;
+    window.open(link, "_blank", "noopener");
   });
 
   $("#y").textContent = new Date().getFullYear();
