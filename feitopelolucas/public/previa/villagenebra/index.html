@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Padaria Villa Genebra · Cafés especiais · Santa Genebra, Campinas</title>
+<meta name="description" content="Prévia de site para a Padaria Villa Genebra, no Jardim Santa Genebra, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/villagenebra/">
+<meta property="og:title" content="Prévia de site · Padaria Villa Genebra">
+<meta property="og:description" content="Padaria e cafés especiais desde 2007, aberta todos os dias. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/villagenebra/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#3d5c57">
+<link rel="icon" href="fotos/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --salvia:#3d5c57; --salvia-esc:#2b4440; --salvia-clara:#e3ebe8; --linho:#f6f1e8; --papel:#fbf8f2;
+    --latao:#c9a25e; --latao-claro:#e8c98f; --tinta:#1f2a28; --tinta-2:#55635f; --fio:#e2dccf;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.65 "Albert Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Gloock",Georgia,serif;font-weight:400;line-height:1.06;margin:0}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:2px solid var(--latao);outline-offset:3px}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+
+  .previa{background:var(--salvia-esc);color:#d2ddd9;font-size:.82rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--latao-claro);font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  /* Abertura */
+  .abre{display:grid;grid-template-columns:1fr 1fr;min-height:min(88vh,760px);background:var(--salvia);color:#fff}
+  .abre .txt{padding:46px max(22px,calc((100vw - 1160px)/2 + 22px)) 56px;padding-right:56px;display:flex;flex-direction:column}
+  .topo{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .topo img{width:68px;height:68px;border-radius:50%}
+  .topo nav{display:flex;gap:22px;font-size:.92rem;font-weight:600}
+  .topo nav a{text-decoration:none;color:#d6e2de}
+  .topo nav a:hover{color:#fff}
+  .abre .meio{margin:auto 0}
+  .linha-fina{display:flex;align-items:center;gap:12px;color:var(--latao-claro);font-size:.82rem;letter-spacing:.24em;text-transform:uppercase;font-weight:600}
+  .linha-fina::after{content:"";height:1px;width:60px;background:var(--latao-claro);opacity:.6}
+  .abre h1{font-size:clamp(2.8rem,5.6vw,4.6rem);margin:18px 0 20px}
+  .abre h1 em{font-style:normal;color:var(--latao-claro)}
+  .abre p{font-size:1.12rem;color:#dbe5e2;max-width:30em;margin:0 0 30px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 24px;border-radius:2px;font-weight:700;text-decoration:none;letter-spacing:.02em;transition:background .15s,color .15s}
+  .btn svg{width:19px;height:19px;flex:none}
+  .btn.latao{background:var(--latao-claro);color:var(--salvia-esc)}
+  .btn.latao:hover{background:#f1d9aa}
+  .btn.borda{box-shadow:inset 0 0 0 1px rgba(255,255,255,.55);color:#fff}
+  .btn.borda:hover{background:rgba(255,255,255,.08)}
+  .btn.salvia{background:var(--salvia);color:#fff}
+  .btn.salvia:hover{background:var(--salvia-esc)}
+  .rodape-abre{display:flex;gap:28px;flex-wrap:wrap;margin-top:40px;font-size:.9rem;color:#cbd8d4}
+  .rodape-abre b{display:block;color:#fff;font-size:1rem}
+  .abre .foto{position:relative}
+  .abre .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .abre .foto .cartao{position:absolute;left:-40px;bottom:46px;background:var(--papel);color:var(--tinta);padding:18px 22px;max-width:270px;box-shadow:0 24px 50px -24px rgba(0,0,0,.6)}
+  .abre .foto .cartao b{font:400 1.2rem "Gloock",serif;display:block}
+  .abre .foto .cartao span{font-size:.9rem;color:var(--tinta-2)}
+  @media (max-width:940px){.abre{grid-template-columns:1fr}.abre .txt{padding:28px 22px 40px}.topo nav{display:none}.abre .meio{margin:36px 0 0}.abre .foto{min-height:360px}.abre .foto .cartao{left:16px;bottom:16px}}
+
+  section{padding:96px 0}
+  .tit{max-width:640px;margin-bottom:44px}
+  .tit .linha-fina{color:var(--latao)}
+  .tit .linha-fina::after{background:var(--latao)}
+  .tit h2{font-size:clamp(2.2rem,4.4vw,3.2rem);margin-top:14px}
+  .tit p{margin:14px 0 0;color:var(--tinta-2)}
+
+  /* Cardápio de cafés */
+  .cafes .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+  .cafes .lado{position:sticky;top:24px}
+  .cafes .duo{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+  .cafes .duo img{width:100%;aspect-ratio:3/4;object-fit:cover}
+  .abas{display:flex;gap:0;border-bottom:1px solid var(--fio);margin-bottom:8px}
+  .abas button{flex:1;background:none;border:0;border-bottom:2px solid transparent;padding:14px 10px;font:600 1rem "Albert Sans",sans-serif;color:var(--tinta-2);cursor:pointer}
+  .abas button[aria-selected="true"]{color:var(--salvia);border-color:var(--salvia)}
+  .menu{list-style:none;margin:0;padding:0}
+  .menu li{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:15px 0;border-bottom:1px dashed var(--fio)}
+  .menu b{font:400 1.18rem "Gloock",serif}
+  .menu small{grid-column:1;color:var(--tinta-2);font-size:.88rem}
+  .menu .preco{grid-row:1/3;grid-column:2;align-self:center;font-weight:700;color:var(--salvia);white-space:nowrap}
+  .menu .ml{font-weight:500;color:var(--latao);font-size:.8rem;margin-left:6px;font-family:"Albert Sans",sans-serif}
+  .menu li.dest b::after{content:"da casa";font:600 .66rem "Albert Sans",sans-serif;letter-spacing:.14em;text-transform:uppercase;background:var(--salvia-clara);color:var(--salvia);padding:2px 7px;margin-left:8px;vertical-align:middle}
+  .obs{font-size:.86rem;color:var(--tinta-2);margin-top:16px}
+  @media (max-width:940px){.cafes .wrap{grid-template-columns:1fr;gap:30px}.cafes .lado{position:static}}
+
+  /* Padaria */
+  .padaria{background:var(--linho)}
+  .grade{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+  .grade figure{margin:0;position:relative;overflow:hidden;background:#ddd}
+  .grade img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+  .grade figure:hover img{transform:scale(1.04)}
+  .grade figcaption{position:absolute;left:12px;bottom:12px;background:var(--papel);padding:6px 12px;font-size:.84rem;font-weight:600}
+  .g1{grid-column:span 7;height:380px}.g2{grid-column:span 5;height:380px}
+  .g3{grid-column:span 4;height:280px}.g4{grid-column:span 4;height:280px}.g5{grid-column:span 4;height:280px}
+  @media (max-width:820px){.grade{grid-template-columns:1fr 1fr}.grade figure{grid-column:span 1!important;height:200px!important}.g1{grid-column:1/-1!important;height:260px!important}}
+  .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .tags span{border:1px solid var(--fio);background:var(--papel);padding:8px 14px;font-size:.92rem}
+
+  /* Visita */
+  .info{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--fio);border-bottom:1px solid var(--fio)}
+  .info div{padding:26px 22px;border-left:1px solid var(--fio)}
+  .info div:first-child{border-left:0}
+  .info b{font:400 1.3rem "Gloock",serif;display:block;margin-bottom:4px}
+  .info span{color:var(--tinta-2);font-size:.95rem}
+  @media (max-width:820px){.info{grid-template-columns:1fr 1fr}.info div:nth-child(3){border-left:0}.info div{border-top:1px solid var(--fio)}}
+
+  /* Avaliações */
+  .aval{background:var(--salvia);color:#fff}
+  .aval .tit .linha-fina{color:var(--latao-claro)}
+  .aval .tit .linha-fina::after{background:var(--latao-claro)}
+  .falas{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:34px}
+  .falas blockquote{margin:0;font:400 1.35rem/1.4 "Gloock",serif}
+  .falas blockquote:first-child{font-size:1.7rem}
+  .falas cite{display:block;margin-top:14px;font:600 .82rem "Albert Sans",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--latao-claro);font-style:normal}
+  @media (max-width:900px){.falas{grid-template-columns:1fr}}
+
+  /* Onde */
+  .onde .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:44px}
+  .horas{width:100%;border-collapse:collapse;margin:0 0 24px}
+  .horas td{padding:11px 0;border-bottom:1px solid var(--fio)}
+  .horas td:last-child{text-align:right;font-weight:600}
+  .horas tr.hoje td{color:var(--salvia);font-weight:700}
+  .horas tr.hoje td:first-child::after{content:" · hoje";font-weight:500;color:var(--latao)}
+  .end{margin:0 0 22px;color:var(--tinta-2)}
+  .end b{color:var(--tinta)}
+  .mapa{min-height:420px;border:1px solid var(--fio)}
+  .mapa iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+  @media (max-width:900px){.onde .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{border-top:1px solid var(--fio);padding:26px 0 100px;font-size:.88rem;color:var(--tinta-2)}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--salvia);font-weight:700;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 12px 26px -10px rgba(0,0,0,.5);transition:opacity .3s,transform .3s}
+  .fixo.some{opacity:0;transform:translateY(14px);pointer-events:none}
+  @media (min-width:941px){footer{padding-bottom:26px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial da Padaria Villa Genebra. É uma ideia de site montada por Lucas para apresentar à padaria.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20da%20Villa%20Genebra%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<header class="abre" id="inicio">
+  <div class="txt">
+    <div class="topo">
+      <img src="fotos/logo.jpg" alt="Padaria Villa Genebra, desde 2007" width="354" height="354">
+      <nav aria-label="Seções">
+        <a href="#cafes">Cafés</a>
+        <a href="#padaria">Padaria</a>
+        <a href="#onde">Horários</a>
+      </nav>
+    </div>
+    <div class="meio">
+      <span class="linha-fina">Desde 2007 · Santa Genebra</span>
+      <h1>Pão quentinho e <em>café especial</em>, todo dia.</h1>
+      <p>Padaria clássica com cara de cafeteria: pão francês, pão de queijo, doces da vitrine e um cardápio de cafés que vai do coado no V60 ao Nutella Coffee Bliss.</p>
+      <div class="acoes">
+        <a class="btn latao" href="#cafes">Ver o cardápio de cafés</a>
+        <a class="btn borda zap" href="https://wa.me/551932083770"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>Encomendas</a>
+      </div>
+      <div class="rodape-abre">
+        <span><b id="hoje-txt">Aberto todos os dias</b>a partir das 6h</span>
+        <span><b>4,7 no Google</b>483 avaliações</span>
+      </div>
+    </div>
+  </div>
+  <div class="foto">
+    <img src="fotos/fachada.jpg" alt="Fachada da Padaria Villa Genebra com mesas na varanda" width="1008" height="600">
+    <div class="cartao"><b>Estacionamento grátis</b><span>e mesas na varanda para o café da manhã ao ar livre.</span></div>
+  </div>
+</header>
+
+<main>
+  <section class="cafes" id="cafes" aria-labelledby="t-cafes">
+    <div class="wrap">
+      <div class="lado">
+        <div class="tit" style="margin-bottom:0">
+          <span class="linha-fina">Cafés especiais</span>
+          <h2 id="t-cafes">Do espresso ao coado na mesa</h2>
+          <p>Café especial moído na hora, coado no método V60 na frente de quem pediu. O cappuccino da casa é suave e adocicado, do jeito que os clientes pedem de novo.</p>
+        </div>
+        <div class="duo">
+          <img src="fotos/ig-coado.jpg" alt="Café coado no método V60 com chaleira de bico fino" loading="lazy" width="360" height="640">
+          <img src="fotos/ig-espresso.jpg" alt="Espresso saindo da máquina numa xícara branca" loading="lazy" width="640" height="601">
+        </div>
+      </div>
+      <div>
+        <div class="abas" role="tablist" aria-label="Tipo de bebida">
+          <button role="tab" aria-selected="true" aria-controls="quentes" id="aba-q">Quentes</button>
+          <button role="tab" aria-selected="false" aria-controls="geladas" id="aba-g">Geladas</button>
+        </div>
+        <ul class="menu" id="quentes" role="tabpanel" aria-labelledby="aba-q">
+          <li class="dest"><b>Nutella Coffee Bliss<span class="ml">250 ml</span></b><small>Espresso, leite cremoso e Nutella</small><span class="preco">R$ 22,00</span></li>
+          <li><b>Mocha<span class="ml">250 ml</span></b><small>Quatro camadas: calda de chocolate, leite, café e espuma</small><span class="preco">R$ 17,90</span></li>
+          <li><b>Caramelo Macchiato<span class="ml">250 ml</span></b><small>Quatro camadas: calda de caramelo, leite, café e espuma</small><span class="preco">R$ 17,90</span></li>
+          <li><b>Latte Macchiato<span class="ml">250 ml</span></b><small>Três camadas: leite, café e espuma</small><span class="preco">R$ 15,90</span></li>
+          <li><b>Café de coador especial</b><small>Café especial frutado, coado na mesa no método V60</small><span class="preco">R$ 14,90</span></li>
+          <li><b>Bebida Nescafé<span class="ml">180 ml</span></b><small>Cappuccino, Alpino, Kit Kat ou Dois Frades</small><span class="preco">R$ 14,90</span></li>
+          <li class="dest"><b>Cappuccino da casa<span class="ml">250 ml</span></b><small>Suave e adocicado</small><span class="preco">R$ 12,90</span></li>
+          <li><b>Chocolate quente<span class="ml">250 ml</span></b><small>Chocolate 50%</small><span class="preco">R$ 12,90</span></li>
+          <li><b>Espresso chantilly<span class="ml">180 ml</span></b><small>Espresso com chantilly</small><span class="preco">R$ 11,90</span></li>
+          <li><b>Café espresso duplo<span class="ml">180 ml</span></b><small>Café especial moído na hora</small><span class="preco">R$ 11,50</span></li>
+          <li><b>Café com leite<span class="ml">180 ml</span></b><small>Espresso com leite vaporizado</small><span class="preco">R$ 9,50</span></li>
+          <li><b>Café macchiato<span class="ml">50 ml</span></b><small>Espresso com espuma de leite no topo</small><span class="preco">R$ 8,50</span></li>
+          <li><b>Café espresso<span class="ml">50 ml</span></b><small>Café especial moído na hora</small><span class="preco">R$ 7,90</span></li>
+          <li><b>Chá quente<span class="ml">180 ml</span></b><small>Para quem prefere sem café</small><span class="preco">R$ 7,50</span></li>
+        </ul>
+        <ul class="menu" id="geladas" role="tabpanel" aria-labelledby="aba-g" hidden>
+          <li class="dest"><b>Viennense<span class="ml">400 ml</span></b><small>Espresso, leite, chantilly e gelo</small><span class="preco">R$ 26,00</span></li>
+          <li><b>Frapuccino chantilly<span class="ml">400 ml</span></b><small>Chocolate, caramelo ou morango. Espresso opcional</small><span class="preco">R$ 24,00</span></li>
+          <li><b>Mocha gelado<span class="ml">400 ml</span></b><small>Espresso, chocolate 50%, calda de chocolate e leite</small><span class="preco">R$ 19,00</span></li>
+          <li><b>Orange coffee<span class="ml">330 ml</span></b><small>Espresso, suco de laranja e gelo</small><span class="preco">R$ 16,00</span></li>
+          <li><b>Ice coffee<span class="ml">400 ml</span></b><small>Espresso, leite e gelo</small><span class="preco">R$ 14,90</span></li>
+          <li><b>Chocolate gelado<span class="ml">350 ml</span></b><small>Chocolate 50%</small><span class="preco">R$ 14,90</span></li>
+          <li><b>Cappuccino gelado<span class="ml">250 ml</span></b><small>O da casa, servido frio</small><span class="preco">R$ 14,90</span></li>
+        </ul>
+        <p class="obs">Preços do cardápio publicado pela padaria. Os pedidos são feitos no balcão.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="padaria" id="padaria" aria-labelledby="t-pad">
+    <div class="wrap">
+      <div class="tit">
+        <span class="linha-fina">Da padaria</span>
+        <h2 id="t-pad">Vitrine cheia do começo ao fim do dia</h2>
+        <p>Pão francês que os clientes elogiam, brioche com parmesão, roscas, bolos e doces como bomba de creme e canoli de chocolate.</p>
+      </div>
+      <div class="grade">
+        <figure class="g1"><img src="fotos/paes.jpg" alt="Pães doces e roscas embalados na vitrine" loading="lazy" width="1100" height="825"><figcaption>Pães e roscas</figcaption></figure>
+        <figure class="g2"><img src="fotos/ig-bolo.jpg" alt="Bolo com cobertura branca e raspas de limão" loading="lazy" width="640" height="613"><figcaption>Bolos</figcaption></figure>
+        <figure class="g3"><img src="fotos/ig-pao-de-queijo.jpg" alt="Pão de queijo dourado saído do forno" loading="lazy" width="640" height="640"><figcaption>Pão de queijo</figcaption></figure>
+        <figure class="g4"><img src="fotos/brigadeiro.jpg" alt="Brigadeiros gourmet em forminhas" loading="lazy" width="900" height="600"><figcaption>Docinhos</figcaption></figure>
+        <figure class="g5"><img src="fotos/doces.jpg" alt="Vitrine com doces e bolos fatiados" loading="lazy" width="1100" height="825"><figcaption>Doces</figcaption></figure>
+      </div>
+      <div class="tags" aria-label="Também tem">
+        <span>Pão com ovo</span><span>Queijo branco quente</span><span>Pão na chapa com requeijão</span><span>Brioche com parmesão</span><span>Bomba de creme</span><span>Canoli</span><span>Opções vegetarianas</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:60px 0" aria-label="Facilidades">
+    <div class="wrap">
+      <div class="info">
+        <div><b>Todo dia</b><span>Inclusive domingo, a partir das 7h</span></div>
+        <div><b>Estacionamento</b><span>Gratuito, com bastante vaga</span></div>
+        <div><b>Aceita vales</b><span>Segundo quem já foi</span></div>
+        <div><b>Encomendas</b><span>Pelo WhatsApp da padaria</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="aval" aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="tit"><span class="linha-fina">4,7 · 483 avaliações</span><h2 id="t-aval">O que dizem no Google</h2></div>
+      <div class="falas">
+        <blockquote>Padaria super bonitinha, ampla, com várias mesas. Preços justos, diferente do que vemos em muitas outras padarias.<cite>Giane · Google</cite></blockquote>
+        <blockquote>Melhor pão com requeijão do mundo e melhor cappuccino também.<cite>Cliente · Google</cite></blockquote>
+        <blockquote>Lugar aconchegante, produtos com qualidade e um ótimo café com leite.<cite>Resumo · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde">
+    <div class="wrap">
+      <div>
+        <div class="tit" style="margin-bottom:22px"><span class="linha-fina">Visite</span><h2 id="t-onde">Aberta os sete dias</h2></div>
+        <table class="horas" id="horas">
+          <tr data-d="1"><td>Segunda</td><td>6h às 21h</td></tr>
+          <tr data-d="2"><td>Terça</td><td>6h às 21h</td></tr>
+          <tr data-d="3"><td>Quarta</td><td>6h às 21h</td></tr>
+          <tr data-d="4"><td>Quinta</td><td>6h às 21h</td></tr>
+          <tr data-d="5"><td>Sexta</td><td>6h às 21h</td></tr>
+          <tr data-d="6"><td>Sábado</td><td>6h às 21h</td></tr>
+          <tr data-d="0"><td>Domingo</td><td>7h às 21h</td></tr>
+        </table>
+        <p class="end"><b>Rua Dr. João Valente do Couto, 43</b><br>Jardim Santa Genebra, Campinas (SP) · (19) 3208-3770</p>
+        <div class="acoes">
+          <a class="btn salvia" href="https://www.google.com/maps/dir/?api=1&amp;destination=Padaria+Villa+Genebra,+Rua+Dr.+Jo%C3%A3o+Valente+do+Couto,+43,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn borda zap" style="color:var(--salvia);box-shadow:inset 0 0 0 1px var(--salvia)" href="https://wa.me/551932083770">WhatsApp</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Padaria Villa Genebra, Rua Dr. João Valente do Couto, 43, Campinas" src="https://www.google.com/maps?q=Padaria+Villa+Genebra,+Rua+Dr.+Jo%C3%A3o+Valente+do+Couto,+43+-+Jardim+Santa+Genebra,+Campinas+-+SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Padaria Villa Genebra · desde 2007 · <a href="https://www.instagram.com/villagenebra/" target="_blank" rel="noopener">@villagenebra</a></span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn salvia fixo some" href="#cafes">Cardápio</a>
+
+<script>
+(function () {
+  document.querySelectorAll(".zap").forEach(function(a){a.target="_blank";a.rel="noopener";});
+  var abas = document.querySelectorAll(".abas button");
+  abas.forEach(function(b){ b.addEventListener("click", function(){
+    abas.forEach(function(x){ x.setAttribute("aria-selected", x===b ? "true" : "false"); document.getElementById(x.getAttribute("aria-controls")).hidden = x!==b; });
+  }); });
+  var H = {0:[7,21],1:[6,21],2:[6,21],3:[6,21],4:[6,21],5:[6,21],6:[6,21]};
+  try {
+    var p = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+    var g = function(t){return (p.find(function(x){return x.type===t})||{}).value};
+    var d = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"));
+    var h = (parseInt(g("hour"),10)%24) + parseInt(g("minute"),10)/60;
+    var tr = document.querySelector('#horas tr[data-d="'+d+'"]'); if (tr) tr.classList.add("hoje");
+    var t = document.getElementById("hoje-txt");
+    if (h >= H[d][0] && h < H[d][1]) t.textContent = "Aberto agora, até as 21h";
+    else if (h < H[d][0]) t.textContent = "Abre hoje às " + H[d][0] + "h";
+    else t.textContent = "Abre amanhã às " + H[(d+1)%7][0] + "h";
+  } catch (e) {}
+  var f = document.querySelector(".fixo"), a = document.querySelector(".abre");
+  if (f && a && "IntersectionObserver" in window) new IntersectionObserver(function(e){f.classList.toggle("some", e[0].isIntersecting)}).observe(a);
+})();
+</script>
+</body>
+</html>

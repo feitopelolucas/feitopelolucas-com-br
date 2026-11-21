@@ -57,3 +57,12 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 > Oi, tudo bem? Sou o Lucas, faço sites aqui em Campinas. A Garagem tem nota 4,9 com quase 500 avaliações e um pastel que é marca registrada, então montei uma ideia de site para vocês: https://feitopelolucas.com.br/previa/garagemdopastel/
 > Tem a régua dos 30 cm, os sabores e um botão de "antecipe seu pedido" que monta a mensagem pronta no WhatsApp de vocês. Se curtirem, me chama!
 
+---
+
+## 7. Padaria Villa Genebra · /previa/villagenebra/
+
+**Pelo que vi:** hoje eles têm só uma página de links (villagenebra.netlify.app), com o cardápio num arquivo do Canva e o WhatsApp (19) 3208-3770. O logo diz "desde 2007". Abre todos os dias. Tem cafés especiais (V60), estacionamento grátis e mesas na varanda. Passei o cardápio de bebidas com os preços para o site. Fotos do Instagram são profissionais e do Maps.
+
+> Oi, pessoal da Villa Genebra! Sou o Lucas, faço sites aqui em Campinas. Vi que hoje o link da bio leva para uma página de botões e o cardápio fica num arquivo do Canva. Montei uma ideia de site de verdade para vocês: https://feitopelolucas.com.br/previa/villagenebra/
+> O cardápio de cafés está em texto, com preço, separado em quentes e geladas (aparece no Google e abre rápido no celular). Tem também a vitrine, os horários e o mapa. Se fizer sentido, a gente conversa!
+
