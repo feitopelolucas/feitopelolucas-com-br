@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Anabe Reparações · Auto elétrica e eletrônica embarcada</title>
+<meta name="description" content="Prévia de site para a Elétrica de Autos Anabe Reparações, na Vila Georgina, em Campinas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://feitopelolucas.com.br/previa/anabe/">
+<meta property="og:title" content="Prévia de site · Anabe Reparações Automobilísticas">
+<meta property="og:description" content="Injeção, airbag, ABS, direção elétrica e ACC, com especialização em Volkswagen. Uma ideia de site feita por Lucas.">
+<meta property="og:image" content="https://feitopelolucas.com.br/previa/anabe/fotos/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b1426">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--noite:#0b1426;--noite-2:#060c18;--noite-3:#152442;--azul:#2f7bff;--ciano:#35d0ff;--verde:#35d07f;--amar:#ffc233;--verm:#ff4d4d;--gelo:#f3f6fb;--tinta:#111a2c;--tinta-2:#56627a;--fio:#dde3ee}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--gelo);color:var(--tinta);font:16.5px/1.6 "Inter",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Rajdhani",system-ui,sans-serif;font-weight:700;line-height:1;margin:0;letter-spacing:.005em}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--ciano);outline-offset:3px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  .wrap>*{min-width:0}
+
+  .previa{background:var(--noite-2);color:#aab6cc;font-size:.8125rem}
+  .previa .wrap{display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .previa strong{color:#fff}
+  .previa a{color:var(--ciano);font-weight:700;text-decoration:none}
+  .curto{display:none}
+  @media (max-width:640px){.longo{display:none}.curto{display:inline}}
+
+  .topo{background:var(--noite);color:#fff;border-bottom:1px solid #1d2c4d}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:72px}
+  .marca{text-decoration:none;display:flex;align-items:center;gap:10px;line-height:1}
+  .marca i{width:40px;height:22px;border-radius:40px 40px 0 0;background:conic-gradient(from -90deg at 50% 100%,var(--verm) 0 45deg,var(--amar) 45deg 90deg,var(--verde) 90deg 135deg,var(--ciano) 135deg 180deg,transparent 180deg);flex:none;-webkit-mask:radial-gradient(circle at 50% 100%,transparent 9px,#000 10px);mask:radial-gradient(circle at 50% 100%,transparent 9px,#000 10px)}
+  .marca b{font:700 1.7rem "Rajdhani",sans-serif;letter-spacing:.08em;display:block}
+  .marca small{font-size:.8125rem;color:#8fa0bf;letter-spacing:.04em}
+  .status{font-weight:600;font-size:.875rem;display:inline-flex;align-items:center;gap:7px;color:#c8d2e4}
+  .status i{width:10px;height:10px;border-radius:50%;background:#56627a}
+  .status.on i{background:var(--verde);box-shadow:0 0 0 4px rgba(53,208,127,.25)}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;font-size:1rem;transition:transform .15s,background .15s;white-space:nowrap;border:0;cursor:pointer;font-family:inherit}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.azul{background:var(--azul);color:#fff}
+  .btn.verde{background:var(--verde);color:#062514}
+  .btn.linha{border:2px solid currentColor;background:transparent}
+  .btn.noite{background:var(--noite);color:#fff}
+
+  .hero{background:radial-gradient(120% 90% at 85% 10%,#1b3263 0,var(--noite) 55%);color:#fff}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding-top:44px;padding-bottom:76px}
+  .esp{display:inline-flex;gap:8px;align-items:center;border:1px solid #2c4170;color:var(--ciano);font-weight:600;font-size:.875rem;padding:6px 14px;border-radius:999px}
+  .hero h1{font-size:clamp(2.8rem,6.8vw,5rem);margin:18px 0 16px}
+  .hero h1 span{color:var(--ciano)}
+  .hero p{font-size:1.1rem;color:#b9c4d8;max-width:31em;margin:0 0 26px}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap}
+  .numeros{display:flex;gap:28px;flex-wrap:wrap;margin-top:30px}
+  .numeros b{display:block;font:700 2.1rem "Rajdhani",sans-serif;line-height:1;color:#fff}
+  .numeros span{font-size:.875rem;color:#8fa0bf}
+  .hero .foto{position:relative}
+  .hero .foto img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:22px;border:1px solid #2c4170}
+  .hero .foto figcaption{position:absolute;left:14px;bottom:14px;right:14px;background:rgba(6,12,24,.82);border:1px solid #2c4170;border-radius:12px;padding:10px 14px;font-size:.875rem;color:#c8d2e4}
+  @media (max-width:880px){.hero .wrap{grid-template-columns:1fr;padding-top:26px}.hero .foto img{aspect-ratio:4/3}}
+
+  section{padding:76px 0}
+  .tit{max-width:660px;margin-bottom:28px}
+  .tit small{font-weight:700;color:var(--azul);letter-spacing:.14em;text-transform:uppercase;font-size:.8125rem}
+  .tit h2{font-size:clamp(2.3rem,5vw,3.4rem);margin-top:6px;color:var(--noite)}
+  .tit p{color:var(--tinta-2);margin:10px 0 0}
+
+  /* Painel */
+  .luzes{background:var(--noite);color:#c8d2e4}
+  .luzes .tit h2{color:#fff}
+  .luzes .tit small{color:var(--ciano)}
+  .luzes .tit p{color:#8fa0bf}
+  .painel{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start}
+  .icones{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:#050a14;border:1px solid #1d2c4d;border-radius:20px;padding:16px}
+  .icones button{background:#0d1830;border:2px solid #1d2c4d;border-radius:14px;color:#c8d2e4;font:600 .875rem "Inter",sans-serif;padding:12px 6px 10px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:8px;min-height:96px}
+  .icones button svg{width:38px;height:38px}
+  .icones button[aria-pressed="true"]{border-color:var(--ciano);background:#10223f;color:#fff}
+  .explica{background:#0d1830;border:1px solid #1d2c4d;border-radius:20px;padding:24px}
+  .explica h3{font-size:1.9rem;color:#fff}
+  .explica p{margin:10px 0 14px}
+  .explica .urg{display:inline-block;font-weight:700;font-size:.875rem;padding:4px 12px;border-radius:999px;margin-bottom:12px}
+  .explica input{width:100%;min-height:50px;border-radius:10px;border:1px solid #2c4170;background:#050a14;color:#fff;font:inherit;padding:10px 12px;margin-bottom:12px}
+  .explica .btn{width:100%}
+  .explica small{display:block;margin-top:10px;color:#6f80a0;font-size:.8125rem}
+  @media (max-width:880px){.painel{grid-template-columns:1fr}.icones{grid-template-columns:repeat(4,1fr)}}
+  @media (max-width:420px){.icones{grid-template-columns:repeat(2,1fr)}}
+
+  .servicos{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .serv{background:#fff;border:1px solid var(--fio);border-radius:16px;padding:20px}
+  .serv h3{font-size:1.4rem;color:var(--noite)}
+  .serv p{margin:4px 0 0;color:var(--tinta-2);font-size:.94rem}
+  @media (max-width:900px){.servicos{grid-template-columns:1fr 1fr}}
+  @media (max-width:480px){.servicos{grid-template-columns:1fr}}
+
+  .caso{background:#fff;border-top:1px solid var(--fio);border-bottom:1px solid var(--fio)}
+  .caso .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .caso img{width:100%;aspect-ratio:2/1;object-fit:cover;border-radius:18px}
+  .caso .fotos{display:grid;gap:12px}
+  @media (max-width:880px){.caso .wrap{grid-template-columns:1fr}}
+
+  .falas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .falas blockquote{margin:0;background:#fff;border:1px solid var(--fio);border-top:4px solid var(--azul);border-radius:14px;padding:22px}
+  .falas cite{display:block;margin-top:10px;font-style:normal;font-weight:700;font-size:.875rem;color:var(--azul)}
+  @media (max-width:880px){.falas{grid-template-columns:1fr}}
+
+  .onde .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px}
+  .onde img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;margin-bottom:18px}
+  .end{margin:0 0 22px}
+  .end a{white-space:nowrap;font-weight:700}
+  .mapa{border-radius:18px;overflow:hidden;min-height:380px;background:#dde3ee}
+  .mapa iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+  @media (max-width:880px){.onde .wrap{grid-template-columns:1fr}.mapa,.mapa iframe{min-height:300px}}
+
+  footer{background:var(--noite-2);color:#8fa0bf;padding:24px 0 110px;font-size:.875rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--ciano);font-weight:700;text-decoration:none}
+  .fixo{position:fixed;right:16px;bottom:16px;z-index:40;box-shadow:0 14px 30px -12px rgba(0,0,0,.6);transition:opacity .2s,transform .2s}
+  .fixo.some{opacity:0;transform:translateY(20px);pointer-events:none}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="previa" role="note">
+  <div class="wrap">
+    <span><strong>Prévia</strong> · <span class="longo">Este não é o site oficial da Anabe Reparações. É uma ideia de site montada por Lucas para apresentar à oficina.</span><span class="curto">Ideia de site feita por Lucas. Não é o site oficial.</span></span>
+    <a href="https://wa.me/5519996515563?text=Ol%C3%A1%2C%20Lucas%21%20Vi%20a%20pr%C3%A9via%20do%20site%20da%20Anabe%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Gostou? Fale com o Lucas →</a>
+  </div>
+</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Anabe Reparações, início"><i aria-hidden="true"></i><span><b>ANABE</b><small>Reparações automobilísticas</small></span></a>
+    <span class="status" id="status"><i></i><span>Seg. a sex.</span></span>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <div class="wrap">
+      <div>
+        <span class="esp">Especializada Volkswagen · multimarcas</span>
+        <h1 id="titulo">O defeito que <span>ninguém achou</span>, a gente acha.</h1>
+        <p>Auto elétrica e eletrônica embarcada: injeção, airbag, ABS, direção elétrica e calibração de ACC. Diagnóstico com calma antes de trocar qualquer peça.</p>
+        <div class="acoes">
+          <a class="btn azul" href="#painel">Que luz acendeu no painel?</a>
+          <a class="btn linha zap" href="https://wa.me/5519994306810?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20agendar%20um%20diagn%C3%B3stico.">WhatsApp</a>
+        </div>
+        <div class="numeros">
+          <div><b>5,0 ★</b><span>168 avaliações no Google</span></div>
+          <div><b>20+</b><span>anos em reparação</span></div>
+        </div>
+      </div>
+      <figure class="foto" style="margin:0">
+        <img src="fotos/painel.jpg" alt="Painel digital de um carro com o mapa e os mostradores acesos" width="750" height="937">
+        <figcaption>Painel digital, eletrônica embarcada e módulos: o dia a dia da oficina.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="luzes" id="painel" aria-labelledby="t-luz">
+    <div class="wrap">
+      <div class="tit"><small>Diagnóstico rápido</small><h2 id="t-luz">Que luz acendeu no seu painel?</h2><p>Toque no símbolo parecido com o do seu carro. A gente explica o básico e você já manda para a oficina.</p></div>
+      <div class="painel">
+        <div class="icones" id="icones">
+          <button type="button" data-k="injecao" aria-pressed="true"><svg viewBox="0 0 40 40" fill="none" stroke="#ffc233" stroke-width="2.4" stroke-linejoin="round"><path d="M6 16h6l3-4h8v4h5l3 3v8h-3l-2 3H13l-3-4H6z"/><path d="M2 19v6M38 19v6"/></svg>Injeção</button>
+          <button type="button" data-k="abs" aria-pressed="false"><svg viewBox="0 0 40 40" fill="none" stroke="#ffc233" stroke-width="2.4"><circle cx="20" cy="20" r="11"/><path d="M7 10a17 17 0 0 0 0 20M33 10a17 17 0 0 1 0 20"/><text x="20" y="24" fill="#ffc233" stroke="none" font-size="10" font-family="Inter" font-weight="700" text-anchor="middle">ABS</text></svg>ABS</button>
+          <button type="button" data-k="airbag" aria-pressed="false"><svg viewBox="0 0 40 40" fill="none" stroke="#ff4d4d" stroke-width="2.4" stroke-linecap="round"><circle cx="15" cy="9" r="3"/><path d="M15 13v9h8l3 9M12 18l-4 10M26 14a6 6 0 1 1 0 9"/></svg>Airbag</button>
+          <button type="button" data-k="bateria" aria-pressed="false"><svg viewBox="0 0 40 40" fill="none" stroke="#ff4d4d" stroke-width="2.4"><rect x="6" y="12" width="28" height="18" rx="2"/><path d="M11 12V9h5v3M24 12V9h5v3M11 21h5M24 21h6M27 18v6"/></svg>Bateria</button>
+          <button type="button" data-k="direcao" aria-pressed="false"><svg viewBox="0 0 40 40" fill="none" stroke="#ffc233" stroke-width="2.4"><circle cx="20" cy="20" r="11"/><circle cx="20" cy="20" r="3"/><path d="M9 20h8M23 20h8M20 23v8"/><path d="M33 8l3 3M36 8l-3 3"/></svg>Direção</button>
+          <button type="button" data-k="oleo" aria-pressed="false"><svg viewBox="0 0 40 40" fill="none" stroke="#ff4d4d" stroke-width="2.4" stroke-linejoin="round"><path d="M5 20h6l4-4h12l9-4-7 12H15l-4-4"/><path d="M34 26c0 2-1 3-2 3s-2-1-2-3 2-4 2-4 2 2 2 4z"/></svg>Óleo</button>
+          <button type="button" data-k="temp" aria-pressed="false"><svg viewBox="0 0 40 40" fill="none" stroke="#ff4d4d" stroke-width="2.4" stroke-linecap="round"><path d="M20 6v18"/><circle cx="20" cy="28" r="4"/><path d="M20 10h5M20 15h5M20 20h5M8 34c3-2 5 2 8 0s5 2 8 0 5 2 8 0"/></svg>Temperatura</button>
+          <button type="button" data-k="outra" aria-pressed="false"><svg viewBox="0 0 40 40" fill="none" stroke="#35d0ff" stroke-width="2.4" stroke-linecap="round"><path d="M20 5l16 28H4z"/><path d="M20 15v8M20 28v.5"/></svg>Outra</button>
+        </div>
+        <div class="explica" aria-live="polite">
+          <span class="urg" id="urg"></span>
+          <h3 id="e-tit"></h3>
+          <p id="e-txt"></p>
+          <input id="carro" placeholder="Seu carro e ano (ex.: Polo 2020)" autocomplete="off" aria-label="Carro e ano">
+          <a class="btn verde" id="env" href="https://wa.me/5519994306810">Mandar para a Anabe</a>
+          <small>Orientação geral, não substitui o diagnóstico com scanner na oficina.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-serv">
+    <div class="wrap">
+      <div class="tit"><small>Serviços</small><h2 id="t-serv">Elétrica e eletrônica do carro</h2></div>
+      <div class="servicos">
+        <div class="serv"><h3>Injeção eletrônica</h3><p>Falhas, luz acesa, consumo alto e partida difícil.</p></div>
+        <div class="serv"><h3>Airbag</h3><p>Luz do airbag acesa e módulos.</p></div>
+        <div class="serv"><h3>ABS e estabilidade</h3><p>Sensores, módulo e chicote.</p></div>
+        <div class="serv"><h3>Direção elétrica</h3><p>Direção pesada ou com aviso no painel.</p></div>
+        <div class="serv"><h3>Calibração de ACC</h3><p>Piloto automático adaptativo e radar.</p></div>
+        <div class="serv"><h3>Elétrica geral</h3><p>Partida, carga, fusíveis, relés, buzina e chicote.</p></div>
+        <div class="serv"><h3>Eletrônica embarcada</h3><p>Painéis digitais e módulos de conforto.</p></div>
+        <div class="serv"><h3>Troca de óleo</h3><p>Aproveite a visita para a manutenção.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="caso" aria-labelledby="t-caso">
+    <div class="wrap">
+      <div class="fotos">
+        <img src="fotos/acc.jpg" alt="Volkswagen Jetta branco diante do painel de calibração do ACC" loading="lazy" width="1200" height="600">
+        <img src="fotos/oficina.jpg" alt="Carros em atendimento dentro da oficina" loading="lazy" width="1200" height="675">
+      </div>
+      <div>
+        <div class="tit"><small>Caso real</small><h2 id="t-caso">Volkswagen Tera que não pegava</h2></div>
+        <p>Um problema intermitente na bomba de combustível queimava o fusível e impedia a partida. Depois do diagnóstico na parte elétrica e no chicote, a bomba e o relé foram trocados. Resultado: carro funcionando e cliente satisfeito.</p>
+        <p style="color:var(--tinta-2)">Em outro caso, um Cruze com luz de injeção, ABS e airbag acesas: o problema era uma folga no conector do sensor. Resolvido sem trocar nenhuma peça.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="tit"><small>5,0 · 168 avaliações no Google</small><h2 id="t-aval">Honestidade que aparece nas avaliações</h2></div>
+      <div class="falas">
+        <blockquote>Acharam o defeito no airbag que ninguém conseguiu corrigir. Equipe nota 1000, com atendimento honesto, rápido e profissional.<cite>Thiago · Google</cite></blockquote>
+        <blockquote>Ele insistiu em testar tudo com calma antes de qualquer troca. Profissional diferenciado: honesto, paciente, responsável e muito técnico.<cite>Neilton · Google</cite></blockquote>
+        <blockquote>Educação acima de tudo, lugar limpo e aconchegante com sala de espera.<cite>Resumo das avaliações · Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde" style="padding-top:0">
+    <div class="wrap">
+      <div>
+        <img src="fotos/fachada.jpg" alt="Fachada da Anabe com o letreiro Especializada Volkswagen Auto Elétrica" loading="lazy" width="1190" height="896">
+        <div class="tit" style="margin-bottom:14px"><small>Onde fica</small><h2 id="t-onde">Vila Georgina</h2></div>
+        <p class="end"><b>Av. Eng. Antônio Francisco de Paula Souza, 2728</b> · Campinas (SP)<br>Segunda a sexta, das 8h às 18h · com agendamento<br>WhatsApp <a class="zap" href="https://wa.me/5519994306810">(19) 99430-6810</a> · <a href="https://www.instagram.com/anabereparacoesauto/" target="_blank" rel="noopener">@anabereparacoesauto</a></p>
+        <div class="acoes">
+          <a class="btn azul zap" href="https://wa.me/5519994306810?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20agendar%20um%20diagn%C3%B3stico.">Agendar</a>
+          <a class="btn noite" href="https://www.google.com/maps/dir/?api=1&amp;destination=El%C3%A9trica+de+Autos+Anabe+Repara%C3%A7%C3%B5es,+Av.+Eng.+Ant%C3%B4nio+Francisco+de+Paula+Souza,+2728,+Campinas" target="_blank" rel="noopener">Como chegar</a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Anabe Reparações, Av. Eng. Antônio Francisco de Paula Souza, 2728, Campinas" src="https://www.google.com/maps?q=El%C3%A9trica+de+Autos+Anabe+Repara%C3%A7%C3%B5es,+Av.+Eng.+Ant%C3%B4nio+Francisco+de+Paula+Souza,+2728,+Campinas&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Anabe Reparações Automobilísticas · Campinas</span>
+    <span>Prévia de site por <a href="https://feitopelolucas.com.br/">feitopelolucas.com.br</a></span>
+  </div>
+</footer>
+
+<a class="btn verde fixo some zap" id="fixo" href="https://wa.me/5519994306810?text=Ol%C3%A1%21%20Vim%20pelo%20site.">WhatsApp</a>
+
+<script>
+(function () {
+  document.querySelectorAll(".zap").forEach(function(a){a.target="_blank";a.rel="noopener";});
+  var fixo = document.getElementById("fixo");
+  if ("IntersectionObserver" in window) new IntersectionObserver(function(e){ fixo.classList.toggle("some", e[0].isIntersecting); }).observe(document.querySelector(".hero"));
+
+  var p = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",hour12:false}).formatToParts(new Date());
+  var dia = p.find(function(x){return x.type==="weekday";}).value, h = Number(p.find(function(x){return x.type==="hour";}).value) % 24;
+  var st = document.getElementById("status");
+  if (["Mon","Tue","Wed","Thu","Fri"].indexOf(dia) > -1 && h >= 8 && h < 18) { st.classList.add("on"); st.querySelector("span").textContent = "Aberto agora"; }
+  else st.querySelector("span").textContent = "Fechado agora";
+
+  var L = {
+    injecao:["Luz da injeção","Atenção","#ffc233","Indica falha registrada no sistema do motor: sensor, bobina, vela, mistura ou conector. Se estiver piscando ou o carro falhar, evite rodar e traga para o scanner."],
+    abs:["Luz do ABS","Atenção","#ffc233","O freio comum continua funcionando, mas o antitravamento pode estar desligado. Normalmente é sensor de roda, chicote ou módulo."],
+    airbag:["Luz do airbag","Importante","#ff4d4d","Com essa luz acesa, o airbag pode não abrir numa batida. Costuma ser conector sob o banco, mola do volante ou módulo."],
+    bateria:["Luz da bateria","Importante","#ff4d4d","O carro pode não estar carregando a bateria: alternador, regulador, correia ou cabos. Se acender rodando, ele pode apagar no caminho."],
+    direcao:["Aviso da direção elétrica","Atenção","#ffc233","A direção pode ficar pesada. Pode ser sensor de ângulo, motor da coluna, módulo ou tensão baixa da bateria."],
+    oleo:["Luz do óleo","Pare o carro","#ff4d4d","Pressão do óleo baixa pode danificar o motor. Desligue assim que puder, confira o nível e chame a oficina antes de seguir."],
+    temp:["Temperatura do motor","Pare o carro","#ff4d4d","Superaquecimento: pare com segurança e espere esfriar. Pode ser ventoinha, sensor, válvula termostática ou falta de água."],
+    outra:["Outra luz ou aviso","Vamos ver","#35d0ff","Mande uma foto do painel aceso pelo WhatsApp junto com o modelo do carro. A equipe orienta o próximo passo."]
+  };
+  var atual = "injecao", env = document.getElementById("env"); env.target = "_blank"; env.rel = "noopener";
+  function at(){
+    var d = L[atual], c = document.getElementById("carro").value.trim();
+    var u = document.getElementById("urg"); u.textContent = d[1]; u.style.background = d[2]; u.style.color = "#08101f";
+    document.getElementById("e-tit").textContent = d[0];
+    document.getElementById("e-txt").textContent = d[3];
+    env.href = "https://wa.me/5519994306810?text=" + encodeURIComponent("Olá, Anabe! Vim pelo site. Acendeu no painel: " + d[0].toLowerCase() + "." + (c ? " Meu carro: " + c + "." : "") + " Posso agendar um diagnóstico? Vou mandar uma foto do painel.");
+  }
+  document.getElementById("icones").addEventListener("click", function(e){
+    var b = e.target.closest("button[data-k]"); if (!b) return;
+    atual = b.getAttribute("data-k");
+    [].forEach.call(this.children, function(x){ x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+    at();
+  });
+  document.getElementById("carro").addEventListener("input", at);
+  at();
+})();
+</script>
+</body>
+</html>

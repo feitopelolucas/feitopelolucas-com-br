@@ -368,3 +368,19 @@ Link de cada prévia: https://feitopelolucas.com.br/previa/<pasta>/
 
 > Oi, pessoal do Pet São Francisco! Sou o Lucas, faço sites aqui em Campinas. Adoro o cuidado de vocês com o atendimento humanizado; dá para ver nas fotos da creche e nas 175 avaliações do Google. Montei uma ideia de site: https://feitopelolucas.com.br/previa/petsaofrancisco/
 > O tutor escolhe o serviço, o porte e se quer táxi dog e manda o pedido de horário pronto no WhatsApp. Tem também a creche em destaque e o link para o hotel. Se gostarem, a gente conversa!
+
+---
+
+## 40. Rick's Barbearia Nova Europa · pulado
+
+**Por que pulei:** a rede já tem site próprio, **ricksbarbearia.com**, com a página dessa unidade (Av. Baden Powell, 843), agendamento pelo AppBarber e Instagram da unidade (@ricksbarbearia.novaeuropa, 2,6 mil seguidores).
+
+---
+
+## 41. Elétrica de Autos Anabe Reparações · /previa/anabe/
+
+**Pelo que vi:** nota **5,0 com 168 avaliações**. As palavras mais citadas são "preço" (25) e "honesto" (20). O técnico citado é o **Aerson**. É **especializada em Volkswagen** e multimarcas: eletrônica embarcada, airbag, ABS, injeção, direção elétrica, ACC e troca de óleo. Diz ter mais de 20 anos no ramo (pelo Facebook). O Instagram **@anabereparacoesauto** aparece no letreiro e o Facebook tem 70 seguidores. Não tem site. WhatsApp (19) 99430-6810. Abre de segunda a sexta, das 8h às 18h, com agendamento. As avaliações contam casos fortes, como um airbag que "autorizadas não conseguiram" e um Cruze resolvido sem troca de peça. Eles postam casos no perfil do Google (VW Tera). As fotos são do Google (fachada, painel digital, calibração de ACC). O site tem o recurso **"Que luz acendeu no painel?"**: a pessoa toca no símbolo, lê uma orientação geral e manda para a oficina pelo WhatsApp.
+**Por onde mandar:** WhatsApp (19) 99430-6810.
+
+> Olá, Aerson! Sou o Lucas, faço sites aqui em Campinas. Vi que a Anabe tem nota 5,0 no Google com 168 avaliações, com gente contando que vocês acharam defeito que nem a autorizada achou. Isso merece um site! Montei uma ideia: https://feitopelolucas.com.br/previa/anabe/
+> O cliente toca na luz que acendeu no painel, entende o básico e já manda para vocês no WhatsApp com o modelo do carro. Tem também os serviços e casos reais da oficina. Se gostar, a gente conversa!
